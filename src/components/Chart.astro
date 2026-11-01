@@ -28,13 +28,15 @@ const { dataset } = Astro.props;
       observer.unobserve(target);
       const el = target as HTMLElement;
       const ds = JSON.parse(el.dataset.dataset!);
+      const long = (ds.series[0]?.points.length ?? 0) > 12;
       const chart = echarts.init(el, dark ? 'dark' : undefined, { renderer: 'canvas' });
       chart.setOption({
         backgroundColor: 'transparent',
         tooltip: { trigger: 'axis' },
         legend: { top: 0 },
-        grid: { left: 50, right: 20, top: 40, bottom: 60 },
-        dataZoom: [{ type: 'inside' }, { type: 'slider' }],
+        // Bara de zoom apare doar la serii lungi; la câteva puncte ar acoperi etichetele axei.
+        grid: { left: 60, right: 20, top: 40, bottom: long ? 80 : 40 },
+        dataZoom: long ? [{ type: 'inside' }, { type: 'slider', bottom: 10 }] : [],
         xAxis: { type: 'category', data: ds.series[0]?.points.map((p: [string, number]) => p[0]) ?? [] },
         yAxis: { type: 'value', name: ds.unit },
         series: ds.series.map((s: { name: string; points: [string, number][] }) => ({

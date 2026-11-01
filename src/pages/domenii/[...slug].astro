@@ -3,10 +3,22 @@ import Base from '../../layouts/Base.astro';
 import DomainCard from '../../components/DomainCard.astro';
 import Chart from '../../components/Chart.astro';
 import { domains, childrenOf, breadcrumbs } from '../../data/domains';
-import { datasetsFor, datasetById } from '../../data/datasets';
+import { datasets, datasetsFor, datasetById } from '../../data/datasets';
 import type { Domain } from '../../data/types';
 
 export function getStaticPaths() {
+  // Build-ul eșuează dacă o interpretare citează un set de date inexistent
+  // sau dacă un set de date aparține unui domeniu nedefinit.
+  for (const d of domains) {
+    for (const i of d.interpretations ?? []) {
+      for (const id of i.basedOn) {
+        if (!datasetById(id)) throw new Error(`Interpretarea „${i.title}” (${d.slug}) citează setul inexistent „${id}”.`);
+      }
+    }
+  }
+  for (const ds of datasets) {
+    if (!domains.some((d) => d.slug === ds.domain)) throw new Error(`Setul „${ds.id}” are domeniul inexistent „${ds.domain}”.`);
+  }
   return domains.map((domain) => ({ params: { slug: domain.slug }, props: { domain } }));
 }
 

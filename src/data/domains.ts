@@ -56,6 +56,13 @@ export const domains: Domain[] = [
       'Cât de volatile sunt principalele active comparativ cu acțiunile și aurul?',
       'Ce indicatori de adopție sunt verificabili public?',
     ],
+    interpretations: [
+      {
+        title: 'Piața e dominată de Bitcoin',
+        text: 'Bitcoin are 57,7% din capitalizarea totală, de peste cinci ori ponderea Ethereum (10,2%). Toate celelalte criptoactive la un loc cântăresc circa o treime. Practic, direcția Bitcoin decide în mare măsură direcția întregii piețe, iar un activ mic poate crește spectaculos doar dacă iese din această corelație.',
+        basedOn: ['crypto-dominanta'],
+      },
+    ],
   },
   {
     slug: 'marfuri',
@@ -65,6 +72,23 @@ export const domains: Domain[] = [
     questions: [
       'Cum au evoluat prețurile principalelor mărfuri?',
       'Ce factori de ofertă și cerere explică mișcările recente?',
+    ],
+    interpretations: [
+      {
+        title: 'Energia: șoc de preț în Europa, nu și în SUA',
+        text: 'În septembrie 2026, petrolul Brent a ajuns la 116,8 USD/baril, cu 69% peste media din 2025. Gazul european a urcat la 25,42 USD/mmbtu, mai mult decât dublu față de media 2025, în timp ce gazul american (2,95) e chiar sub media de anul trecut. Diferența dintre cele două piețe a crescut de la circa 3,4 ori în 2025 la 8,6 ori.',
+        basedOn: ['marfuri-petrol-brent', 'marfuri-gaz-sua-europa'],
+      },
+      {
+        title: 'Metalele: cuprul și argintul conduc',
+        text: 'Față de media 2025, cuprul a crescut cu 45% (14.474 USD/tonă), argintul cu 62%, platina cu 40% și aurul cu 26%. Aurul costă acum de peste două ori cât în 2023. Nichelul (+8%) și minereul de fier (în scădere ușoară) rămân în urmă: oferta lor e abundentă.',
+        basedOn: ['marfuri-metale-industriale', 'marfuri-aur-platina', 'marfuri-argint', 'marfuri-minereu-fier'],
+      },
+      {
+        title: 'Agricultura: cerealele urcă, cacaoa și portocalele coboară',
+        text: 'Grâul american e cu 43% peste media 2025, iar porumbul cu 18%. În sens opus, cacaoa a scăzut cu 24% după vârful crizei din 2024, iar portocalele au ajuns la circa o treime din media 2024. Mărfurile agricole se pot mișca puternic în ambele direcții în doar câteva luni.',
+        basedOn: ['marfuri-cereale', 'marfuri-softs'],
+      },
     ],
   },
 
