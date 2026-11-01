@@ -1,0 +1,131 @@
+---
+import Chart from './Chart.astro';
+import type { Dataset, Source } from '../data/types';
+import scores from '../data/sp500/scores.json';
+import macro from '../data/sp500/macro.json';
+import { CRITERIA } from '../data/criteria';
+
+const base = import.meta.env.BASE_URL;
+type Row = { id: string; name: string; score: number; met: number; criteria: (number | null)[]; inputs: Record<string, string>; gaps: string[]; why: string };
+const rows = scores.rows as unknown as Row[];
+const crit = CRITERIA.sp500;
+const SNAP = scores.judgmentDate;
+const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const num = (x: number, d = 1) => x.toLocaleString('ro-RO', { maximumFractionDigits: d, minimumFractionDigits: d });
+const pct = (x: number | undefined) => (x === undefined ? '—' : `${x > 0 ? '+' : ''}${num(x)}%`);
+const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
+const QUANT = new Set(['C1', 'C2', 'C3', 'C7', 'C10', 'C12']);
+
+const src = (s: { name: string; url: string; retrievedAt: string }): Source => s;
+const prices = macro.prices as unknown as Record<string, { points: [string, number][]; symbol: string; url: string }>;
+const order = rows.map((r) => r.id);
+const num1 = (s?: string) => (s ? s.match(/(-?[\d,]+)%/g)?.at(-1) ?? '—' : '—');
+
+const growth: Dataset = {
+  id: 'sp-crestere', domain: 'sp500', title: 'Creșterea veniturilor în ultimul an fiscal (rapoarte 10-K)', unit: '%', chart: 'bar',
+  series: [{ name: 'Creșterea veniturilor', points: rows.filter((r) => r.inputs.C1).map((r) => [r.id, +num1(r.inputs.C1).replace('%', '').replace(',', '.')]) }],
+  source: src(macro.sources.sec),
+  notes: 'Fiecare companie are propriul an fiscal; data de închidere apare în detaliile companiei.',
+};
+const fcf: Dataset = {
+  id: 'sp-marja-fcf', domain: 'sp500', title: 'Marja fluxului de numerar liber (flux din exploatare minus investiții, raportat la venituri)', unit: '%', chart: 'bar',
+  series: [{ name: 'Marja fluxului liber', points: rows.filter((r) => r.inputs.C7).map((r) => [r.id, +num1(r.inputs.C7).replace('%', '').replace(',', '.')]) }],
+  source: src(macro.sources.sec),
+};
+const markets: Dataset = {
+  id: 'sp-preturi', domain: 'sp500', title: 'Prețul acțiunilor, săptămânal, față de indicele S&P 500', unit: 'indice, prima săptămână = 100', chart: 'line',
+  series: [...order, '^GSPC'].filter((c) => prices[c]?.points.length).map((c) => ({
+    name: c === '^GSPC' ? 'S&P 500 (reper)' : c,
+    points: prices[c].points.map(([d, v]) => [d, +((v / prices[c].points[0][1]) * 100).toFixed(2)] as [string, number]),
+  })),
+  source: src(macro.sources.prices),
+};
+
+const top = rows[0];
+const neg = fcf.series[0].points.filter((p) => p[1] < 0).map((p) => p[0]);
+const fastest = [...growth.series[0].points].sort((a, b) => b[1] - a[1]).slice(0, 3);
+const strong = rows.filter((r) => r.met >= 10);
+---
+<section id="radar">
+  <h2>Companiile de pe radar</h2>
+  <p>
+    {rows.length} dintre cele mai mari companii din S&P 500, notate pe 14 condiții. Șase condiții se calculează automat din rapoartele anuale depuse la SEC (autoritatea bursieră americană) și din prețul acțiunii, după formule publice;
+    celelalte opt sunt judecată, cu justificare pentru fiecare companie. Notele sunt înghețate în{' '}
+    <a href={`${base}snapshots/sp500-${SNAP}.json`}>instantaneul din {fmtDate(SNAP)}</a>{' '}
+    (amprenta SHA-256 în <a href={`${base}snapshots/sp500-${SNAP}.sha256`}>fișierul .sha256</a>). Datele de intrare se actualizează automat în fiecare vineri.
+  </p>
+  <div class="table-wrap">
+    <table class="radar fx">
+      <thead><tr><th>#</th><th>Compania</th><th>Condiții</th><th>Scor</th><th>Creștere venituri</th><th>Marja fluxului liber</th><th>Randament flux liber</th><th>Acțiunea, 2 luni</th></tr></thead>
+      <tbody>
+        {rows.map((r, i) => (
+          <tr>
+            <td class="muted">{i + 1}</td>
+            <td><b>{r.id}</b> <span class="muted">{r.name}</span></td>
+            <td><span class:list={['k', zone(r.met)]}>{r.met}/14</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 14) * 100}%`} class={zone(r.met)}></i></span></td>
+            <td>{num(r.score, 2)}</td>
+            <td class="num">{num1(r.inputs.C1)}</td>
+            <td class="num">{num1(r.inputs.C7)}</td>
+            <td class="num">{num1(r.inputs.C10)}</td>
+            <td class="num">{num1(r.inputs.C12)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Fiecare companie, condiție cu condiție</h3>
+  <p class="muted">Deschide o companie ca să vezi nota la fiecare condiție, datele din spatele notelor calculate și justificarea notelor de judecată. Condițiile fără date primesc 5 (neutru) în scor și nu sunt considerate îndeplinite.</p>
+  {rows.map((r) => (
+    <details class="fxd">
+      <summary><b>{r.id}</b> · {r.name} · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · scor {num(r.score, 2)}{r.gaps.length > 0 && <span class="muted"> · fără date: {r.gaps.join(', ')}</span>}</summary>
+      <p>{r.why} {(r as Row & { filing?: string }).filing && <a href={(r as Row & { filing?: string }).filing} target="_blank" rel="noopener">Rapoartele 10-K la SEC</a>}</p>
+      <div class="table-wrap">
+        <table class="radar criteria">
+          <thead><tr><th>#</th><th>Condiție</th><th>Notă</th><th>Cum</th></tr></thead>
+          <tbody>
+            {crit.map(([name], i) => {
+              const k = `C${i + 1}`;
+              const v = r.criteria[i];
+              return (
+                <tr>
+                  <td class="muted">{k}</td>
+                  <td>{name}</td>
+                  <td><span class:list={['k', v == null ? 'slab' : v >= 7 ? 'puternic' : v >= 5 ? 'observatie' : 'slab']}>{v ?? '—'}</span></td>
+                  <td class="muted">{QUANT.has(k) ? <>Calculat: {r.inputs[k] ?? 'date lipsă la sursă'}</> : 'Judecată (vezi justificarea)'}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </details>
+  ))}
+
+  <h3>Formulele condițiilor calculate</h3>
+  <ul class="formulas">
+    {Object.entries(scores.formulas).map(([k, f]) => <li><b>{k}</b>: {f}</li>)}
+  </ul>
+</section>
+
+<section>
+  <h2>Datele din spatele notelor</h2>
+  <Chart dataset={growth} />
+  <Chart dataset={fcf} />
+  <Chart dataset={markets} height={460} />
+</section>
+
+<section>
+  <h2>Ce arată datele</h2>
+  <p class="muted">Paragraf calculat automat din datele de mai sus; se actualizează odată cu ele.</p>
+  <p>
+    <b>{top.name} ({top.id})</b> îndeplinește cele mai multe condiții ({top.met} din 14).{' '}
+    {strong.length > 0 ? <>{strong.length} {strong.length === 1 ? 'companie are' : 'companii au'} 10 sau mai multe condiții îndeplinite.{' '}</> : <>Nicio companie nu ajunge la 10 condiții îndeplinite.{' '}</>}
+    Cea mai rapidă creștere a veniturilor: {fastest.map(([n, v]) => `${n} (+${num(v)}%)`).join(', ')}.{' '}
+    {neg.length > 0 && <>Flux de numerar liber negativ în ultimul an fiscal (investesc mai mult decât generează): {neg.join(', ')}.</>}
+  </p>
+  <p class="notice">
+    Cele mai mari companii din indice sunt și cele mai urmărite: atenția mediatică și aglomerarea investitorilor scad nota, chiar dacă afacerea e excelentă.
+    O companie foarte bună la un preț prea mare poate fi o investiție slabă. Nu este o recomandare de investiții.
+  </p>
+</section>

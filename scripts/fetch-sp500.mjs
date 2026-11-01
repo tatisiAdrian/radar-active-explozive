@@ -77,8 +77,13 @@ function shares(facts) {
 const errors = [];
 const out = { updatedAt: day(Date.now()), start: START, sources: {}, companies: {}, prices: {}, errors };
 
-const tickers = await get('https://www.sec.gov/files/company_tickers.json', SEC_UA);
-const cikOf = Object.fromEntries(Object.values(tickers).map((t) => [t.ticker, String(t.cik_str).padStart(10, '0')]));
+// Codurile CIK (identificatorii SEC) ale companiilor; sunt publice și nu se schimbă.
+const cikOf = {
+  AAPL: '0000320193', MSFT: '0000789019', NVDA: '0001045810', AMZN: '0001018724', GOOGL: '0001652044',
+  META: '0001326801', AVGO: '0001730168', TSLA: '0001318605', LLY: '0000059478', V: '0001403161',
+  XOM: '0000034088', WMT: '0000104169', UNH: '0000731766', JNJ: '0000200406', PG: '0000080424',
+  ORCL: '0001341439', COST: '0000909832', NFLX: '0001065280', AMD: '0000002488', PLTR: '0001321655',
+};
 
 for (const [tk, name] of Object.entries(COMPANIES)) {
   try {
