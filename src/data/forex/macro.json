@@ -3708,12 +3708,20 @@
    }
   },
   "EUR": {
+   "policyRate": {
+    "period": "2026-10-27",
+    "value": 2.5
+   },
    "cpiYoY": {
     "period": "2026-09",
     "value": 3.770869
    }
   },
   "JPY": {
+   "policyRate": {
+    "period": "2026-10-27",
+    "value": 1.25
+   },
    "cpiYoY": {
     "period": "2026-09",
     "value": 2.097902
@@ -3750,12 +3758,20 @@
    }
   },
   "AUD": {
+   "policyRate": {
+    "period": "2026-10-22",
+    "value": 4.6
+   },
    "cpiYoY": {
     "period": "2026-06",
     "value": 3.941849
    }
   },
   "CAD": {
+   "policyRate": {
+    "period": "2026-10-26",
+    "value": 2.25
+   },
    "cpiYoY": {
     "period": "2026-09",
     "value": 3.092784
@@ -3772,6 +3788,10 @@
    }
   },
   "PLN": {
+   "policyRate": {
+    "period": "2026-10-27",
+    "value": 3.75
+   },
    "cpiYoY": {
     "period": "2026-09",
     "value": 3.968551
@@ -3788,12 +3808,20 @@
    }
   },
   "BRL": {
+   "policyRate": {
+    "period": "2026-10-27",
+    "value": 13.75
+   },
    "cpiYoY": {
     "period": "2026-09",
     "value": 4.5761196628
    }
   },
   "MXN": {
+   "policyRate": {
+    "period": "2026-10-27",
+    "value": 6.5
+   },
    "cpiYoY": {
     "period": "2026-09",
     "value": 3.454748
@@ -4476,7 +4504,7 @@
    ],
    "high52": 0.0238677,
    "low52": 0.0200229,
-   "last": 0.0200258,
+   "last": 0.0200254,
    "oneYearAgo": 0.0238677
   },
   "ZAR": {
@@ -4527,20 +4555,5 @@
    "oneYearAgo": 0.0582659
   }
  },
- "errors": [
-  "BIS policyRate EUR: fără observații",
-  "BIS policyRateDaily EUR: fără observații",
-  "BIS policyRate JPY: fără observații",
-  "BIS policyRateDaily JPY: fără observații",
-  "BIS policyRate AUD: fără observații",
-  "BIS policyRateDaily AUD: fără observații",
-  "BIS policyRate CAD: fără observații",
-  "BIS policyRateDaily CAD: fără observații",
-  "BIS policyRate PLN: fără observații",
-  "BIS policyRateDaily PLN: fără observații",
-  "BIS policyRate BRL: fără observații",
-  "BIS policyRateDaily BRL: fără observații",
-  "BIS policyRate MXN: fără observații",
-  "BIS policyRateDaily MXN: fără observații"
- ]
+ "errors": []
 }
