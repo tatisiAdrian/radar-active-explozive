@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL;
+---
+<Base title="Cum ne finanțăm" description="Radarul rămâne gratuit. Ne finanțăm din cursuri, servicii pentru companii și sponsorizări declarate, cu reguli scrise care protejează independența notelor.">
+  <h1>Cum ne finanțăm</h1>
+  <p class="lede-f">Radarul rămâne gratuit, pentru toată lumea. Ne finanțăm din cursuri, servicii pentru companii și sponsorizări declarate. Nu vindem semnale și nu facem recomandări personale.</p>
+
+  <section>
+    <h2>De unde vin banii</h2>
+    <div class="table-wrap">
+      <table class="radar">
+        <thead><tr><th>Sursă</th><th>Ce înseamnă</th></tr></thead>
+        <tbody>
+          <tr><td><b>Cursuri și workshop-uri</b></td><td>Învățăm metoda celor 14 condiții și cum cauți fondul din spatele formei. Nu dăm ponturi și nu spunem ce să cumperi.</td></tr>
+          <tr><td><b>Servicii pentru companii</b></td><td>Licența datelor săptămânale, rapoarte la comandă pe un domeniu și workshop-uri pentru echipe.</td></tr>
+          <tr><td><b>Sponsorizări declarate</b></td><td>Firme, inclusiv brokeri autorizați în UE, pot sponsoriza un domeniu sau newsletter-ul. Apar marcate clar cu „Sponsor”.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Regulile care protejează notele</h2>
+    <ol>
+      <li><b>Notele apar întâi public și gratuit.</b> Nimeni nu plătește pentru informații ascunse.</li>
+      <li><b>Sponsorii nu văd notele înainte de publicare și nu le pot influența.</b> O notă proastă pentru un activ legat de un sponsor rămâne publică.</li>
+      <li><b>Acceptăm ca sponsori doar brokeri autorizați în UE</b>, verificați în registrul public al regulatorului.</li>
+      <li><b>Lângă orice material al unui broker care oferă CFD-uri</b> apare avertismentul de risc cerut de autoritatea europeană (ESMA).</li>
+      <li><b>Fiecare sponsor activ e listat pe această pagină</b>, cu perioada sponsorizării.</li>
+      <li><b>Notele rămân înghețate în instantanee cu amprentă SHA-256</b>, deci nu pot fi schimbate retroactiv, indiferent cine plătește.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Sponsori activi</h2>
+    <p class="notice">Niciunul deocamdată. Când semnăm primul contract, sponsorul apare aici, cu perioada și domeniul sponsorizat.</p>
+  </section>
+
+  <section>
+    <h2>Conflicte de interese</h2>
+    <p>Autorul deține sau a deținut poziții în Lighter (LIT) și folosește Polymarket. Nu modificăm notele în funcție de pozițiile noastre.</p>
+  </section>
+
+  <section>
+    <h2>Cine facturează și cum ne contactezi</h2>
+    <p>EtiQ Events SRL · CUI RO 30586107 · <a href="mailto:nitadanielcristian@gmail.com">nitadanielcristian@gmail.com</a></p>
+    <p class="muted">Conținutul are scop informativ și educațional și nu reprezintă recomandări de investiții. <a href={`${base}fond/`}>De ce căutăm fondul, nu forma</a> · <a href={`${base}metodologie/`}>Metodologie</a></p>
+  </section>
+</Base>
+
+<style>
+  .lede-f { font-size: 1.12rem; color: var(--muted); max-width: 760px; }
+  ol li { margin: .45rem 0; }
+</style>
