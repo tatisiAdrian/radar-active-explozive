@@ -58,3 +58,14 @@ details.fxd { border: 1px solid var(--border); border-radius: var(--radius); bac
 details.fxd summary { cursor: pointer; }
 details.fxd[open] summary { margin-bottom: .5rem; }
 ul.formulas li { margin: .3rem 0; }
+
+.fond { display: inline-block; font-size: .74rem; font-weight: 600; padding: .12rem .5rem; border-radius: 999px; white-space: nowrap; border: 1px solid currentColor; }
+.fond.fond-fara-forma { color: #1f9d63; background: rgba(31, 157, 99, .1); }
+.fond.fond-confirmat { color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.fond.forma-fara-fond { color: #d64545; background: rgba(214, 69, 69, .08); }
+.fond.in-confirmare { color: var(--muted); }
+table.radar.explain td:last-child { min-width: 260px; }
+@media (max-width: 700px) {
+  header.site nav { flex-wrap: nowrap; overflow-x: auto; width: 100%; margin-left: 0; gap: 1rem; padding-bottom: .15rem; scrollbar-width: none; }
+  header.site nav a { white-space: nowrap; }
+}

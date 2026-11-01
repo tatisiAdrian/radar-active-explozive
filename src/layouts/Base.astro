@@ -1,9 +1,11 @@
 ---
 import '../styles/global.css';
-interface Props { title: string; description?: string }
-const { title, description = 'Analize argumentate, bazate pe date statistice reale și surse verificabile.' } = Astro.props;
+interface Props { title: string; description?: string; image?: string }
+const { title, description = 'Analize argumentate, bazate pe date statistice reale și surse verificabile.', image = 'images/crypto-1600.jpg' } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const path = Astro.url.pathname;
+const site = Astro.site ? new URL(base, Astro.site).href : base;
+const canonical = Astro.site ? new URL(path, Astro.site).href : path;
 ---
 <!doctype html>
 <html lang="ro">
@@ -12,6 +14,16 @@ const path = Astro.url.pathname;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title} · Radar Active Explozive</title>
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Radar Active Explozive" />
+    <meta property="og:title" content={`${title} · Radar Active Explozive`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${site}${image}`} />
+    <meta property="og:locale" content="ro_RO" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="sitemap" href={`${base}sitemap.xml`} />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230f1d2e'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%236f8dff' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='4' fill='none' stroke='%236f8dff' stroke-width='1.5'/%3E%3Cpath d='M16 16 L27 9' stroke='%236f8dff' stroke-width='2'/%3E%3Ccircle cx='21' cy='12' r='2' fill='%2345c48a'/%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,6 +39,7 @@ const path = Astro.url.pathname;
         <nav aria-label="Navigare principală">
           <a href={base} aria-current={path === base ? 'page' : undefined}>Acasă</a>
           <a href={`${base}domenii/`} aria-current={path.startsWith(`${base}domenii/`) ? 'page' : undefined}>Domenii</a>
+          <a href={`${base}fond/`} aria-current={path.startsWith(`${base}fond/`) ? 'page' : undefined}>Fond, nu formă</a>
           <a href={`${base}radar/`}>Radarul inițial</a>
           <a href={`${base}metodologie/`} aria-current={path.startsWith(`${base}metodologie/`) ? 'page' : undefined}>Metodologie</a>
         </nav>

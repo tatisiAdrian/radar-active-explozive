@@ -1,0 +1,6 @@
+---
+import { fondTag, FOND_LABEL, FOND_HINT } from '../data/explain';
+interface Props { values: (number | null | undefined)[] }
+const tag = fondTag(Astro.props.values);
+---
+<span class:list={['fond', tag]} title={FOND_HINT[tag]}>{FOND_LABEL[tag]}</span>

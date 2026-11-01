@@ -1,19 +1,18 @@
 ---
 import Chart from './Chart.astro';
+import CriteriaDetail from './CriteriaDetail.astro';
+import FondBadge from './FondBadge.astro';
 import type { Dataset, Source } from '../data/types';
 import scores from '../data/sp500/scores.json';
 import macro from '../data/sp500/macro.json';
-import { CRITERIA } from '../data/criteria';
 
 const base = import.meta.env.BASE_URL;
 type Row = { id: string; name: string; score: number; met: number; criteria: (number | null)[]; inputs: Record<string, string>; gaps: string[]; why: string };
 const rows = scores.rows as unknown as Row[];
-const crit = CRITERIA.sp500;
 const SNAP = scores.judgmentDate;
 const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 const num = (x: number, d = 1) => x.toLocaleString('ro-RO', { maximumFractionDigits: d, minimumFractionDigits: d });
 const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
-const QUANT = new Set(['C1', 'C2', 'C3', 'C7', 'C10', 'C12']);
 
 const src = (s: { name: string; url: string; retrievedAt: string }): Source => s;
 const prices = macro.prices as unknown as Record<string, { points: [string, number][]; symbol: string; url: string }>;
@@ -55,7 +54,7 @@ const strong = rows.filter((r) => r.met >= 10);
   </p>
   <div class="table-wrap">
     <table class="radar fx">
-      <thead><tr><th>#</th><th>Compania</th><th>Condiții</th><th>Scor</th><th>Creștere venituri</th><th>Marja fluxului liber</th><th>Randament flux liber</th><th>Acțiunea, 2 luni</th></tr></thead>
+      <thead><tr><th>#</th><th>Compania</th><th>Condiții</th><th>Scor</th><th>Fond / formă</th><th>Creștere venituri</th><th>Marja fluxului liber</th><th>Randament flux liber</th><th>Acțiunea, 2 luni</th></tr></thead>
       <tbody>
         {rows.map((r, i) => (
           <tr>
@@ -63,6 +62,7 @@ const strong = rows.filter((r) => r.met >= 10);
             <td><b>{r.id}</b> <span class="muted">{r.name}</span></td>
             <td><span class:list={['k', zone(r.met)]}>{r.met}/14</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 14) * 100}%`} class={zone(r.met)}></i></span></td>
             <td>{num(r.score, 2)}</td>
+            <td><FondBadge values={r.criteria} /></td>
             <td class="num">{num1(r.inputs.C1)}</td>
             <td class="num">{num1(r.inputs.C7)}</td>
             <td class="num">{num1(r.inputs.C10)}</td>
@@ -77,27 +77,9 @@ const strong = rows.filter((r) => r.met >= 10);
   <p class="muted">Deschide o companie ca să vezi nota la fiecare condiție, datele din spatele notelor calculate și justificarea notelor de judecată. Condițiile fără date primesc 5 (neutru) în scor și nu sunt considerate îndeplinite.</p>
   {rows.map((r) => (
     <details class="fxd">
-      <summary><b>{r.id}</b> · {r.name} · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · scor {num(r.score, 2)}{r.gaps.length > 0 && <span class="muted"> · fără date: {r.gaps.join(', ')}</span>}</summary>
+      <summary><b>{r.id}</b> · {r.name} · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · scor {num(r.score, 2)} · <FondBadge values={r.criteria} />{r.gaps.length > 0 && <span class="muted"> · fără date: {r.gaps.join(', ')}</span>}</summary>
       <p>{r.why} {(r as Row & { filing?: string }).filing && <a href={(r as Row & { filing?: string }).filing} target="_blank" rel="noopener">Rapoartele 10-K la SEC</a>}</p>
-      <div class="table-wrap">
-        <table class="radar criteria">
-          <thead><tr><th>#</th><th>Condiție</th><th>Notă</th><th>Cum</th></tr></thead>
-          <tbody>
-            {crit.map(([name], i) => {
-              const k = `C${i + 1}`;
-              const v = r.criteria[i];
-              return (
-                <tr>
-                  <td class="muted">{k}</td>
-                  <td>{name}</td>
-                  <td><span class:list={['k', v == null ? 'slab' : v >= 7 ? 'puternic' : v >= 5 ? 'observatie' : 'slab']}>{v ?? '—'}</span></td>
-                  <td class="muted">{QUANT.has(k) ? <>Calculat: {r.inputs[k] ?? 'date lipsă la sursă'}</> : 'Judecată (vezi justificarea)'}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+      <CriteriaDetail set="sp500" values={r.criteria} inputs={r.inputs} />
     </details>
   ))}
 

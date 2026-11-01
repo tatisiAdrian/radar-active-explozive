@@ -1,0 +1,36 @@
+---
+import type { Photo } from '../data/photos';
+interface Props { photo: Photo; title: string; eyebrow?: string; summary?: string; position?: string }
+const { photo, title, eyebrow, summary, position = 'center' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<header class="ph">
+  <img
+    src={`${base}images/${photo.key}-1600.jpg`}
+    srcset={`${base}images/${photo.key}-800.jpg 800w, ${base}images/${photo.key}-1600.jpg 1600w`}
+    sizes="(max-width: 800px) 100vw, 1180px"
+    alt={photo.alt}
+    style={`object-position:${position}`}
+    fetchpriority="high"
+    decoding="async"
+  />
+  <div class="ph-text">
+    {eyebrow && <p class="ph-eyebrow">{eyebrow}</p>}
+    <h1>{title}</h1>
+    {summary && <p class="ph-sum">{summary}</p>}
+    <slot />
+  </div>
+  <a class="ph-credit" href={photo.page} target="_blank" rel="noopener">Foto: {photo.author} / Unsplash</a>
+</header>
+
+<style>
+  .ph { position: relative; border-radius: var(--radius); overflow: hidden; min-height: 300px; display: flex; align-items: flex-end; margin: .5rem 0 1rem; background: var(--scope); }
+  img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .ph::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7, 14, 23, .05) 20%, rgba(7, 14, 23, .82) 100%); }
+  .ph-text { position: relative; z-index: 1; padding: 1.75rem 1.75rem 1.5rem; color: #fff; max-width: 820px; }
+  .ph-eyebrow { font: 500 .75rem var(--f-mono); letter-spacing: .08em; text-transform: uppercase; opacity: .85; margin: 0 0 .4rem; }
+  h1 { font: 800 clamp(1.9rem, 4vw, 3rem)/1.05 var(--f-display); margin: 0 0 .5rem; color: #fff; }
+  .ph-sum { margin: 0; font-size: 1.05rem; opacity: .92; }
+  .ph-credit { position: absolute; z-index: 1; right: .75rem; top: .6rem; font-size: .7rem; color: rgba(255, 255, 255, .8); text-decoration: none; background: rgba(0, 0, 0, .35); padding: .1rem .45rem; border-radius: 4px; }
+  @media (max-width: 600px) { .ph { min-height: 240px; } .ph-text { padding: 1.25rem; } }
+</style>

@@ -3,6 +3,8 @@ import Base from '../layouts/Base.astro';
 import HomeRadar from '../components/HomeRadar.astro';
 import { OVERVIEW, ALL, UPDATED } from '../data/overview';
 import { domains } from '../data/domains';
+import { photoForDomain } from '../data/photos';
+import { fondTag } from '../data/explain';
 
 const base = import.meta.env.BASE_URL;
 const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
@@ -25,6 +27,8 @@ const cards = OVERVIEW.map((d) => {
     watch: d.items.filter((x) => x.met >= 6 && x.met < 10).length,
     top: sorted.slice(0, 3),
     summary: domains.find((x) => x.slug === d.slug)?.summary ?? '',
+    ph: photoForDomain(d.slug),
+    fff: d.items.filter((x) => fondTag(x.c) === 'fond-fara-forma').length,
   };
 });
 const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.includes('/'));
@@ -56,13 +60,14 @@ const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.inclu
     <div class="dgrid">
       {cards.map((c) => (
         <a class="dcard" href={`${base}domenii/${c.d.slug}/`} style={`--c:${c.d.color}`}>
-          <span class="dbar"></span>
+          {c.ph ? <img class="dimg" src={`${base}images/${c.ph.key}-800.jpg`} alt={c.ph.alt} loading="lazy" decoding="async" width="800" height="533" style={c.ph.key === 'romania' ? 'object-position:center 35%' : undefined} /> : <span class="dbar"></span>}
           <h3>{c.d.title}</h3>
           <p class="muted">{c.summary}</p>
           <div class="dstats">
             <span><b>{c.d.items.length}</b> active</span>
             <span class="strong"><b>{c.strong}</b> cu 10+</span>
             <span class="watch"><b>{c.watch}</b> în observație</span>
+            <span class="fff" title="Fond solid, încă neumflat de preț, presă sau aglomerație"><b>{c.fff}</b> fond fără formă</span>
           </div>
           <ol class="dtop">
             {c.top.map((t) => <li><span>{t.name}</span><b>{t.met}/14</b></li>)}
@@ -79,7 +84,8 @@ const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.inclu
     <div class="sgrid">
       <div><b>1</b><h3>Aceleași 14 condiții</h3><p>Fiecare activ primește o notă de la 0 la 10 la fiecare condiție, adaptată domeniului: cerere reală, finanțe sănătoase, evaluare, aglomerație, riscuri. O condiție e îndeplinită de la nota 7.</p></div>
       <div><b>2</b><h3>Date, nu impresii</h3><p>Unde există date oficiale (FMI, BIS, Banca Mondială, rapoarte anuale, prețuri publice), notele se calculează după formule publicate. Restul sunt judecată, cu justificare și surse.</p></div>
-      <div><b>3</b><h3>Înghețat și verificat</h3><p>Notele se îngheață într-un fișier datat, cu amprentă digitală. Prețurile se actualizează automat în fiecare vineri, iar rezultatul se măsoară public, inclusiv greșelile.</p></div>
+      <div><b>3</b><h3>Fond, nu formă</h3><p>Căutăm ce susține prețul (utilizare, clienți, finanțe), nu doar ce se vede (listare, evaluare, presă). Activele cu fond solid, încă neumflate de piață, sunt cele mai interesante. <a href={`${base}fond/`}>De ce căutăm fondul, nu forma →</a></p></div>
+      <div><b>4</b><h3>Înghețat și verificat</h3><p>Notele se îngheață într-un fișier datat, cu amprentă digitală. Prețurile se actualizează automat în fiecare vineri, iar rezultatul se măsoară public, inclusiv greșelile.</p></div>
     </div>
   </section>
 
@@ -124,7 +130,9 @@ const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.inclu
   .dcard { position: relative; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.25rem 1rem; color: var(--text); text-decoration: none; overflow: hidden; transition: transform .15s, border-color .15s, box-shadow .15s; }
   .dcard:hover { transform: translateY(-3px); border-color: var(--c); box-shadow: 0 10px 28px rgba(15, 29, 46, .1); }
   .dbar { position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--c); }
+  .dimg { display: block; width: calc(100% + 2.5rem); margin: -1.25rem -1.25rem 1rem; height: 150px; object-fit: cover; border-bottom: 3px solid var(--c); }
   .dcard h3 { font: 700 1.25rem var(--f-display); margin: .25rem 0 .35rem; }
+  .dstats .fff b { color: #1f9d63; }
   .dcard p { margin: 0 0 .9rem; font-size: .92rem; }
   .dstats { display: flex; gap: .9rem; flex-wrap: wrap; font-size: .85rem; color: var(--muted); margin-bottom: .75rem; }
   .dstats b { color: var(--text); font-size: 1.05rem; }
@@ -134,7 +142,7 @@ const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.inclu
   .dtop li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .dtop b { font: 600 .85rem var(--f-mono); }
   .dcta { margin-top: auto; color: var(--c); font-weight: 600; font-size: .92rem; }
-  .sgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .sgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
   .sgrid div { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; }
   .sgrid b { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--accent); color: #fff; font: 700 1rem var(--f-display); }
   .sgrid h3 { font: 700 1.1rem var(--f-display); margin: .6rem 0 .4rem; }
@@ -144,6 +152,9 @@ const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.inclu
   @media (max-width: 900px) {
     .home-hero { grid-template-columns: 1fr; gap: 1.5rem; }
     .hh-radar { order: -1; }
+    .sgrid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
     .sgrid { grid-template-columns: 1fr; }
   }
   @media (max-width: 520px) {

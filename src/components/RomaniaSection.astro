@@ -1,14 +1,14 @@
 ---
 import Chart from './Chart.astro';
+import CriteriaDetail from './CriteriaDetail.astro';
+import FondBadge from './FondBadge.astro';
 import type { Dataset } from '../data/types';
 import data from '../data/startups-ro/scores.json';
-import { CRITERIA } from '../data/criteria';
 import { dbSource, db } from '../data/radar';
 
 const base = import.meta.env.BASE_URL;
 type Row = { id: string; name: string; stage: string; sector: string; c: (number | null)[]; why: string; sources: [string, string][]; inputs: Record<string, string>; score: number; met: number; price?: { symbol: string; url: string; points: [string, number][] } };
 const rows = data.rows as unknown as Row[];
-const crit = CRITERIA.general;
 const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 const num = (x: number, d = 2) => x.toLocaleString('ro-RO', { maximumFractionDigits: d, minimumFractionDigits: d });
 const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
@@ -42,7 +42,7 @@ const priv = rows.filter((r) => !r.price).length;
   </p>
   <div class="table-wrap">
     <table class="radar fx">
-      <thead><tr><th>#</th><th>Compania</th><th>Stadiu</th><th>Domeniu</th><th>Condiții</th><th>Scor</th></tr></thead>
+      <thead><tr><th>#</th><th>Compania</th><th>Stadiu</th><th>Domeniu</th><th>Condiții</th><th>Scor</th><th>Fond / formă</th></tr></thead>
       <tbody>
         {rows.map((r, i) => (
           <tr>
@@ -52,6 +52,7 @@ const priv = rows.filter((r) => !r.price).length;
             <td class="muted">{r.sector}</td>
             <td><span class:list={['k', zone(r.met)]}>{r.met}/14</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 14) * 100}%`} class={zone(r.met)}></i></span></td>
             <td>{num(r.score)}</td>
+            <td><FondBadge values={r.c} /></td>
           </tr>
         ))}
       </tbody>
@@ -61,27 +62,9 @@ const priv = rows.filter((r) => !r.price).length;
   <h3>Fiecare companie, condiție cu condiție</h3>
   {rows.map((r) => (
     <details class="fxd">
-      <summary><b>{r.name}</b> · {r.stage} · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · scor {num(r.score)}</summary>
+      <summary><b>{r.name}</b> · {r.stage} · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · scor {num(r.score)} · <FondBadge values={r.c} /></summary>
       <p>{r.why}</p>
-      <div class="table-wrap">
-        <table class="radar criteria">
-          <thead><tr><th>#</th><th>Condiție</th><th>Notă</th><th>Cum</th></tr></thead>
-          <tbody>
-            {crit.map(([name], i) => {
-              const k = `C${i + 1}`;
-              const v = r.c[i];
-              return (
-                <tr>
-                  <td class="muted">{k}</td>
-                  <td>{name}</td>
-                  <td><span class:list={['k', v == null ? 'slab' : v >= 7 ? 'puternic' : v >= 5 ? 'observatie' : 'slab']}>{v ?? '—'}</span></td>
-                  <td class="muted">{r.inputs[k] ? <>Calculat: {r.inputs[k]}</> : v == null ? 'Nu se tranzacționează public' : 'Judecată pe sursele de mai jos'}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+      <CriteriaDetail set="general" values={r.c} inputs={r.inputs} />
       <p class="muted">Surse: {r.sources.map(([t, u], i) => <>{i > 0 && '; '}<a href={u} target="_blank" rel="noopener">{t}</a></>)}</p>
     </details>
   ))}

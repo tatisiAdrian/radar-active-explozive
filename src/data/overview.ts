@@ -5,7 +5,7 @@ import sp500 from './sp500/scores.json';
 import ro from './startups-ro/scores.json';
 
 /** Un punct pe radarul de pe Home: un activ dintr-un domeniu, cu numărul de condiții îndeplinite. */
-export interface Dot { name: string; met: number; score: number }
+export interface Dot { name: string; met: number; score: number; c: (number | null)[] }
 export interface DomainOverview {
   slug: string;
   title: string;
@@ -16,11 +16,11 @@ export interface DomainOverview {
   items: Dot[];
 }
 
-type Scored = { rows: { name: string; id: string; met: number; score: number }[] };
+type Scored = { rows: { name: string; id: string; met: number; score: number; criteria?: (number | null)[]; c?: (number | null)[] }[] };
 const fromScores = (s: Scored, label?: (r: { name: string; id: string }) => string): Dot[] =>
-  s.rows.map((r) => ({ name: label ? label(r) : r.name, met: r.met, score: r.score }));
+  s.rows.map((r) => ({ name: label ? label(r) : r.name, met: r.met, score: r.score, c: r.criteria ?? r.c ?? [] }));
 const fromRadar = (m: 'crypto' | 'comp' | 'comm'): Dot[] =>
-  assets.filter((a) => a.m === m).map((a) => ({ name: a.n.ro, met: a.k, score: a.s }));
+  assets.filter((a) => a.m === m).map((a) => ({ name: a.n.ro, met: a.k, score: a.s, c: a.c }));
 
 export const OVERVIEW: DomainOverview[] = [
   { slug: 'crypto', title: 'Criptoactive', short: 'Cripto', what: 'tokenuri lansate și nelansate', color: '#2b59ff', snapshot: '2026-10-29.json', items: fromRadar('crypto') },

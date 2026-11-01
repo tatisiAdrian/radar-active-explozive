@@ -1,19 +1,18 @@
 ---
 import Chart from './Chart.astro';
+import CriteriaDetail from './CriteriaDetail.astro';
+import FondBadge from './FondBadge.astro';
 import type { Dataset, Source } from '../data/types';
 import scores from '../data/forex/scores.json';
 import macro from '../data/forex/macro.json';
-import { CRITERIA } from '../data/criteria';
 
 const base = import.meta.env.BASE_URL;
 type Row = { id: string; name: string; score: number; met: number; criteria: (number | null)[]; inputs: Record<string, string>; gaps: string[]; why: string };
 const rows = scores.rows as unknown as Row[];
-const crit = CRITERIA.forex;
 const SNAP = scores.judgmentDate;
 const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 const num = (x: number, d = 1) => x.toLocaleString('ro-RO', { maximumFractionDigits: d, minimumFractionDigits: d });
 const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
-const QUANT = new Set(['C1', 'C2', 'C3', 'C7', 'C10', 'C12']);
 
 const src = (s: { name: string; url: string; retrievedAt: string }): Source => s;
 const bis = macro.bis as unknown as Record<string, { policyRate?: { period: string; value: number }; cpiYoY?: { period: string; value: number } }>;
@@ -58,7 +57,7 @@ const ron = rows.find((r) => r.id === 'RON');
   </p>
   <div class="table-wrap">
     <table class="radar fx">
-      <thead><tr><th>#</th><th>Moneda</th><th>Condiții</th><th>Scor</th><th>Dobândă reală</th><th>Cont curent 2026</th><th>Curs, 2 luni</th></tr></thead>
+      <thead><tr><th>#</th><th>Moneda</th><th>Condiții</th><th>Scor</th><th>Fond / formă</th><th>Dobândă reală</th><th>Cont curent 2026</th><th>Curs, 2 luni</th></tr></thead>
       <tbody>
         {rows.map((r, i) => (
           <tr>
@@ -66,6 +65,7 @@ const ron = rows.find((r) => r.id === 'RON');
             <td><b>{r.id}</b> <span class="muted">{r.name}</span></td>
             <td><span class:list={['k', zone(r.met)]}>{r.met}/14</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 14) * 100}%`} class={zone(r.met)}></i></span></td>
             <td>{num(r.score, 2)}</td>
+            <td><FondBadge values={r.criteria} /></td>
             <td class="num">{r.inputs.C7 ? r.inputs.C7.split('= ')[1] : '—'}</td>
             <td class="num">{imf.BCA_NGDPD.values[r.id]?.['2026'] !== undefined ? `${num(imf.BCA_NGDPD.values[r.id]['2026'])}%` : '—'}</td>
             <td class="num">{r.inputs.C12 ? r.inputs.C12.replace(' în două luni', '') : '—'}</td>
@@ -79,27 +79,9 @@ const ron = rows.find((r) => r.id === 'RON');
   <p class="muted">Deschide o monedă ca să vezi nota la fiecare condiție, datele din spatele notelor calculate și justificarea notelor de judecată.</p>
   {rows.map((r) => (
     <details class="fxd">
-      <summary><b>{r.id}</b> · {r.name} · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · scor {num(r.score, 2)}</summary>
+      <summary><b>{r.id}</b> · {r.name} · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · scor {num(r.score, 2)} · <FondBadge values={r.criteria} /></summary>
       <p>{r.why}</p>
-      <div class="table-wrap">
-        <table class="radar criteria">
-          <thead><tr><th>#</th><th>Condiție</th><th>Notă</th><th>Cum</th></tr></thead>
-          <tbody>
-            {crit.map(([name], i) => {
-              const k = `C${i + 1}`;
-              const v = r.criteria[i];
-              return (
-                <tr>
-                  <td class="muted">{k}</td>
-                  <td>{name}</td>
-                  <td><span class:list={['k', v == null ? 'slab' : v >= 7 ? 'puternic' : v >= 5 ? 'observatie' : 'slab']}>{v ?? '—'}</span></td>
-                  <td class="muted">{QUANT.has(k) ? <>Calculat: {r.inputs[k] ?? 'date lipsă'}</> : k === 'C13' ? 'Neutru (5) până integrăm datele CFTC' : 'Judecată (vezi justificarea)'}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+      <CriteriaDetail set="forex" values={r.criteria} inputs={r.inputs} />
     </details>
   ))}
 

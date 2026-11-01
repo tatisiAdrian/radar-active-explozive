@@ -7,6 +7,8 @@ import ForexSection from '../../components/ForexSection.astro';
 import EmergingSection from '../../components/EmergingSection.astro';
 import SP500Section from '../../components/SP500Section.astro';
 import RomaniaSection from '../../components/RomaniaSection.astro';
+import PhotoHeader from '../../components/PhotoHeader.astro';
+import { photoForDomain } from '../../data/photos';
 import spMacro from '../../data/sp500/macro.json';
 import emMacro from '../../data/emerging/macro.json';
 import forexMacro from '../../data/forex/macro.json';
@@ -39,6 +41,7 @@ const data = datasetsFor(domain.slug);
 const subdomains = childrenOf(domain.slug);
 const crumbs = breadcrumbs(domain.slug);
 const sources = [...new Map(data.map((d) => [d.source.url, d.source])).values()];
+const ph = photoForDomain(domain.slug);
 const radarRows = domain.radarMarket ? radarView(domain.radarMarket, domain.countries).rows.length : 0;
 if (radarRows) sources.push(dbSource);
 if (domain.slug === 'forex') sources.push(forexMacro.sources.imf, forexMacro.sources.bis, forexMacro.sources.fx);
@@ -49,14 +52,20 @@ if (domain.slug === 'startups/europa/romania') sources.push(dbSource);
 const criteria = domain.criteria ? CRITERIA[domain.criteria] : undefined;
 if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domain.criteria}” nu există (${domain.slug}).`);
 ---
-<Base title={domain.title} description={domain.summary}>
+<Base title={domain.title} description={domain.summary} image={ph ? `images/${ph.key}-1600.jpg` : undefined}>
   <p class="crumbs">
     <a href={base}>Acasă</a> / <a href={`${base}domenii/`}>Domenii</a>
     {crumbs.map((c) => <> / <a href={`${base}domenii/${c.slug}/`}>{c.title}</a></>)}
   </p>
-  <span class:list={['badge', domain.status]}>{domain.status === 'activ' ? 'Activ' : 'Planificat'}</span>
-  <h1>{domain.title}</h1>
-  <p>{domain.summary}</p>
+  {ph ? (
+    <PhotoHeader photo={ph} title={domain.title} eyebrow={domain.status === 'activ' ? 'Analiză activă' : 'În pregătire'} summary={domain.summary} position={ph.key === 'romania' ? 'center 35%' : 'center'} />
+  ) : (
+    <>
+      <span class:list={['badge', domain.status]}>{domain.status === 'activ' ? 'Activ' : 'Planificat'}</span>
+      <h1>{domain.title}</h1>
+      <p>{domain.summary}</p>
+    </>
+  )}
 
   <section>
     <h2>Întrebări la care răspunde analiza</h2>

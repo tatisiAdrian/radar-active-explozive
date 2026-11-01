@@ -45,6 +45,12 @@ Conflicte de interese: autorul deține sau a deținut poziții în Lighter (LIT)
 
 8 companii tech fondate în România, notate pe cele 14 condiții generale, cu sursele fiecărei note în `scripts/startups-ro.json`; UiPath (singura listată) primește trendul prețului din baza săptămânală (`scripts/score-startups-ro.mjs`). Instantaneu: `public/snapshots/startups-ro-2026-11-01.json`.
 
+## Explicații, fond și formă, fotografii
+
+- `src/data/explain.ts`: o propoziție pe înțelesul oricui pentru fiecare notă (mică, medie, mare), pe fiecare set de condiții, și eticheta „fond / formă” calculată din note (fond fără formă, fond confirmat, fond în confirmare, formă fără fond).
+- Pagina `/fond/` („De ce căutăm fondul, nu forma”) explică fundamentul metodei.
+- Fotografiile (licența Unsplash) sunt descrise în `scripts/photos.json` și descărcate în `public/images/` de workflow-ul `photos.yml`.
+
 ## Tehnologie
 
 - **Astro**: pagini statice, rapide, cu JavaScript doar unde e nevoie
