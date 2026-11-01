@@ -63,6 +63,8 @@ for (const [cur, j] of Object.entries(judg.currencies)) {
   const filled = vec.map((v) => v ?? 5);
   const score = +(filled.reduce((s, v, i) => s + v * W[i], 0) / 100).toFixed(2);
   const met = vec.filter((v) => v !== undefined && v >= 7).length;
+  // Zecimale cu virgulă, ca în restul site-ului (datele calendaristice nu sunt afectate).
+  for (const k of Object.keys(inputs)) inputs[k] = inputs[k].replace(/(\d)\.(\d)/g, '$1,$2');
   rows.push({ id: cur, name: j.name, score, met, criteria: vec, inputs, gaps, why: j.why });
 }
 rows.sort((a, b) => b.met - a.met || b.score - a.score);

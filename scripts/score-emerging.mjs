@@ -44,7 +44,7 @@ for (const [cur, j] of Object.entries(judg.countries)) {
     c.C7 = clamp(5 + real - 0.3 * Math.max(0, cpi - 5));
     inputs.C7 = `dobândă ${rate}% (${bis.policyRate.period}) − inflație ${cpi.toFixed(1)}% = ${real.toFixed(1)} pp`;
   }
-  if (fx) {
+  if (fx && fx.points.length >= 4) {
     const pos = (fx.last - fx.low52) / (fx.high52 - fx.low52 || 1);
     c.C10 = clamp(10 * (1 - pos));
     inputs.C10 = `bursa la ${Math.round(pos * 100)}% din intervalul de 52 de săptămâni (${fx.symbol})`;
@@ -63,6 +63,8 @@ for (const [cur, j] of Object.entries(judg.countries)) {
   const filled = vec.map((v) => v ?? 5);
   const score = +(filled.reduce((s, v, i) => s + v * W[i], 0) / 100).toFixed(2);
   const met = vec.filter((v) => v !== undefined && v >= 7).length;
+  // Zecimale cu virgulă, ca în restul site-ului (datele calendaristice nu sunt afectate).
+  for (const k of Object.keys(inputs)) inputs[k] = inputs[k].replace(/(\d)\.(\d)/g, '$1,$2');
   rows.push({ id: cur, name: j.name, score, met, criteria: vec, inputs, gaps, why: j.why });
 }
 rows.sort((a, b) => b.met - a.met || b.score - a.score);

@@ -34,7 +34,8 @@ const { dataset, height } = Astro.props;
       const x: string[] = [];
       for (const s of ds.series) for (const [k] of s.points) if (!x.includes(k)) x.push(k);
       if (ds.series.every((s) => s.points.every(([k]) => /^\d{4}-\d{2}-\d{2}$/.test(k)))) x.sort();
-      const long = x.length > 12;
+      const long = x.length > 12 && ds.chart === 'line';
+      const rotate = ds.chart === 'bar' && x.length > 8;
       const many = ds.series.length > 6;
       const chart = echarts.init(el, dark ? 'dark' : undefined, { renderer: 'canvas' });
       const fmt = (v: unknown) => (typeof v === 'number' ? v.toLocaleString('ro-RO', { maximumFractionDigits: 2 }) : '—');
@@ -42,9 +43,9 @@ const { dataset, height } = Astro.props;
         backgroundColor: 'transparent',
         tooltip: { trigger: 'axis', valueFormatter: fmt, confine: true },
         legend: { top: 0, type: many ? 'scroll' : 'plain' },
-        grid: { left: 60, right: 20, top: 44, bottom: long ? 80 : 40 },
+        grid: { left: 60, right: 20, top: 44, bottom: long ? 80 : rotate ? 90 : 40 },
         dataZoom: long ? [{ type: 'inside' }, { type: 'slider', bottom: 10 }] : [],
-        xAxis: { type: 'category', data: x },
+        xAxis: { type: 'category', data: x, axisLabel: rotate ? { interval: 0, rotate: 40 } : {} },
         yAxis: { type: 'value', name: ds.unit, scale: ds.chart === 'line' },
         series: ds.series.map((s) => {
           const m = new Map(s.points);

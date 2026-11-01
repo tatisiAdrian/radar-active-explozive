@@ -49,12 +49,12 @@
     9
    ],
    "inputs": {
-    "C1": "cont curent 6.2% din PIB",
-    "C2": "inflație 1.0% (2026-09)",
-    "C3": "datorie 38.3%, sold bugetar -0.2%, cont curent 6.2% din PIB",
-    "C7": "dobândă 0% (2026-10-27) − inflație 1.0% = -1.0 pp",
+    "C1": "cont curent 6,2% din PIB",
+    "C2": "inflație 1,0% (2026-09)",
+    "C3": "datorie 38,3%, sold bugetar -0,2%, cont curent 6,2% din PIB",
+    "C7": "dobândă 0% (2026-10-27) − inflație 1,0% = -1,0 pp",
     "C10": "la 14% din intervalul de 52 de săptămâni",
-    "C12": "-2.0% în două luni"
+    "C12": "-2,0% în două luni"
    },
    "gaps": [],
    "why": "Cele mai solide fundamente din listă: excedent de cont curent, datorie mică, inflație sub 1%. Dobânda zero și intervențiile BNS limitează aprecierea."
@@ -81,12 +81,12 @@
     7
    ],
    "inputs": {
-    "C1": "cont curent 1.2% din PIB",
-    "C2": "inflație 3.8% (2026-09)",
-    "C3": "datorie 88%, sold bugetar -3.6%, cont curent 1.2% din PIB",
-    "C7": "dobândă 2.5% (2026-10-27) − inflație 3.8% = -1.3 pp",
+    "C1": "cont curent 1,2% din PIB",
+    "C2": "inflație 3,8% (2026-09)",
+    "C3": "datorie 88%, sold bugetar -3,6%, cont curent 1,2% din PIB",
+    "C7": "dobândă 2,5% (2026-10-27) − inflație 3,8% = -1,3 pp",
     "C10": "la 6% din intervalul de 52 de săptămâni",
-    "C12": "-3.8% în două luni"
+    "C12": "-3,8% în două luni"
    },
    "gaps": [],
    "why": "A doua monedă de rezervă; BCE independentă. Câștigă din diversificarea rezervelor și euro digital. Riscul vine din creșterea slabă și din șocul energetic din 2026."
@@ -113,12 +113,12 @@
     8
    ],
    "inputs": {
-    "C1": "cont curent 4.6% din PIB",
-    "C2": "inflație 2.1% (2026-09)",
-    "C3": "datorie 199.4%, sold bugetar -1.4%, cont curent 4.6% din PIB",
-    "C7": "dobândă 1.25% (2026-10-27) − inflație 2.1% = -0.8 pp",
+    "C1": "cont curent 4,6% din PIB",
+    "C2": "inflație 2,1% (2026-09)",
+    "C3": "datorie 199,4%, sold bugetar -1,4%, cont curent 4,6% din PIB",
+    "C7": "dobândă 1,25% (2026-10-27) − inflație 2,1% = -0,8 pp",
     "C10": "la 51% din intervalul de 52 de săptămâni",
-    "C12": "-1.4% în două luni"
+    "C12": "-1,4% în două luni"
    },
    "gaps": [],
    "why": "Refugiu tradițional și monedă de finanțare pentru carry trade, deci fluxurile sunt parțial speculative. Datoria publică de circa 200% din PIB e principalul punct slab."
@@ -146,11 +146,11 @@
    ],
    "inputs": {
     "C1": "cont curent 4% din PIB",
-    "C2": "inflație 0.9% (2026-09)",
-    "C3": "datorie 104.4%, sold bugetar -8%, cont curent 4% din PIB",
-    "C7": "dobândă 3% (2026-10-19) − inflație 0.9% = 2.1 pp",
+    "C2": "inflație 0,9% (2026-09)",
+    "C3": "datorie 104,4%, sold bugetar -8%, cont curent 4% din PIB",
+    "C7": "dobândă 3% (2026-10-19) − inflație 0,9% = 2,1 pp",
     "C10": "la 100% din intervalul de 52 de săptămâni",
-    "C12": "+0.9% în două luni"
+    "C12": "+0,9% în două luni"
    },
    "gaps": [],
    "why": "Curs administrat și controale de capital, deci fluxuri predominant comerciale. Câștigă teren în decontări (CIPS), dar riscul geopolitic și deflația rămân mari."
@@ -177,12 +177,12 @@
     8
    ],
    "inputs": {
-    "C1": "cont curent -0.1% din PIB",
-    "C2": "inflație 3.1% (2026-09)",
-    "C3": "datorie 115.6%, sold bugetar -2.5%, cont curent -0.1% din PIB",
-    "C7": "dobândă 2.25% (2026-10-26) − inflație 3.1% = -0.8 pp",
+    "C1": "cont curent -0,1% din PIB",
+    "C2": "inflație 3,1% (2026-09)",
+    "C3": "datorie 115,6%, sold bugetar -2,5%, cont curent -0,1% din PIB",
+    "C7": "dobândă 2,25% (2026-10-26) − inflație 3,1% = -0,8 pp",
     "C10": "la 38% din intervalul de 52 de săptămâni",
-    "C12": "-1.4% în două luni"
+    "C12": "-1,4% în două luni"
    },
    "gaps": [],
    "why": "Bancă centrală credibilă; dependent de petrol și de relația comercială cu SUA."
@@ -209,12 +209,12 @@
     6
    ],
    "inputs": {
-    "C1": "cont curent -1.9% din PIB",
-    "C2": "inflație 4.0% (2026-09)",
-    "C3": "datorie 66.6%, sold bugetar -7.2%, cont curent -1.9% din PIB",
-    "C7": "dobândă 3.75% (2026-10-27) − inflație 4.0% = -0.2 pp",
+    "C1": "cont curent -1,9% din PIB",
+    "C2": "inflație 4,0% (2026-09)",
+    "C3": "datorie 66,6%, sold bugetar -7,2%, cont curent -1,9% din PIB",
+    "C7": "dobândă 3,75% (2026-10-27) − inflație 4,0% = -0,2 pp",
     "C10": "la 1% din intervalul de 52 de săptămâni",
-    "C12": "-5.3% în două luni"
+    "C12": "-5,3% în două luni"
    },
    "gaps": [],
    "why": "Economie diversificată și cu cea mai rapidă creștere din Europa din listă; deficitul bugetar și apropierea de războiul din Ucraina sunt riscurile."
@@ -241,12 +241,12 @@
     6
    ],
    "inputs": {
-    "C1": "cont curent -3.9% din PIB",
-    "C2": "inflație 3.7% (2026-09)",
-    "C3": "datorie 126.8%, sold bugetar -8.5%, cont curent -3.9% din PIB",
-    "C7": "dobândă 3.875% (2026-10-27) − inflație 3.7% = 0.1 pp",
+    "C1": "cont curent -3,9% din PIB",
+    "C2": "inflație 3,7% (2026-09)",
+    "C3": "datorie 126,8%, sold bugetar -8,5%, cont curent -3,9% din PIB",
+    "C7": "dobândă 3,875% (2026-10-27) − inflație 3,7% = 0,1 pp",
     "C10": "la 89% din intervalul de 52 de săptămâni",
-    "C12": "+2.7% în două luni"
+    "C12": "+2,7% în două luni"
    },
    "gaps": [],
    "why": "Moneda de rezervă a lumii și refugiul principal în crize. Presiunile politice asupra Fed și deficitul bugetar mare (FMI: -8,5% din PIB în 2026) slăbesc credibilitatea; diversificarea rezervelor spre alte monede limitează rolurile noi."
@@ -273,12 +273,12 @@
     8
    ],
    "inputs": {
-    "C1": "cont curent -3.1% din PIB",
-    "C2": "inflație 3.9% (2026-06)",
-    "C3": "datorie 52.6%, sold bugetar -3.2%, cont curent -3.1% din PIB",
-    "C7": "dobândă 4.6% (2026-10-22) − inflație 3.9% = 0.7 pp",
+    "C1": "cont curent -3,1% din PIB",
+    "C2": "inflație 3,9% (2026-06)",
+    "C3": "datorie 52,6%, sold bugetar -3,2%, cont curent -3,1% din PIB",
+    "C7": "dobândă 4,6% (2026-10-22) − inflație 3,9% = 0,7 pp",
     "C10": "la 72% din intervalul de 52 de săptămâni",
-    "C12": "-2.4% în două luni"
+    "C12": "-2,4% în două luni"
    },
    "gaps": [],
    "why": "Instituții solide, dar economie legată de exporturile de materii prime și de cererea Chinei; se mișcă odată cu apetitul global pentru risc."
@@ -305,12 +305,12 @@
     7
    ],
    "inputs": {
-    "C1": "cont curent -3.3% din PIB",
-    "C2": "inflație 3.4% (2026-09)",
-    "C3": "datorie 102%, sold bugetar -3.8%, cont curent -3.3% din PIB",
-    "C7": "dobândă 3.75% (2026-10-26) − inflație 3.4% = 0.3 pp",
+    "C1": "cont curent -3,3% din PIB",
+    "C2": "inflație 3,4% (2026-09)",
+    "C3": "datorie 102%, sold bugetar -3,8%, cont curent -3,3% din PIB",
+    "C7": "dobândă 3,75% (2026-10-26) − inflație 3,4% = 0,3 pp",
     "C10": "la 46% din intervalul de 52 de săptămâni",
-    "C12": "-1.1% în două luni"
+    "C12": "-1,1% în două luni"
    },
    "gaps": [],
    "why": "Bancă centrală credibilă și piață financiară profundă, dar deficit de cont curent și de buget persistente."
@@ -337,12 +337,12 @@
     5
    ],
    "inputs": {
-    "C1": "cont curent -0.3% din PIB",
-    "C2": "inflație 3.5% (2026-09)",
-    "C3": "datorie 62.1%, sold bugetar -4.2%, cont curent -0.3% din PIB",
-    "C7": "dobândă 6.5% (2026-10-27) − inflație 3.5% = 3.0 pp",
+    "C1": "cont curent -0,3% din PIB",
+    "C2": "inflație 3,5% (2026-09)",
+    "C3": "datorie 62,1%, sold bugetar -4,2%, cont curent -0,3% din PIB",
+    "C7": "dobândă 6,5% (2026-10-27) − inflație 3,5% = 3,0 pp",
     "C10": "la 3% din intervalul de 52 de săptămâni",
-    "C12": "-10.3% în două luni"
+    "C12": "-10,3% în două luni"
    },
    "gaps": [],
    "why": "Câștigă din relocarea producției spre America de Nord (nearshoring), dar e o monedă clasică de carry trade și e expusă tarifelor SUA."
@@ -369,12 +369,12 @@
     7
    ],
    "inputs": {
-    "C1": "cont curent -1.5% din PIB",
-    "C2": "inflație 5.5% (2026-09)",
-    "C3": "datorie 83.1%, sold bugetar -7.5%, cont curent -1.5% din PIB",
-    "C7": "dobândă 5.5% (2026-10-19) − inflație 5.5% = -0.0 pp",
+    "C1": "cont curent -1,5% din PIB",
+    "C2": "inflație 5,5% (2026-09)",
+    "C3": "datorie 83,1%, sold bugetar -7,5%, cont curent -1,5% din PIB",
+    "C7": "dobândă 5,5% (2026-10-19) − inflație 5,5% = -0,0 pp",
     "C10": "la 21% din intervalul de 52 de săptămâni",
-    "C12": "-0.7% în două luni"
+    "C12": "-0,7% în două luni"
    },
    "gaps": [],
    "why": "Cea mai rapidă creștere din listă (FMI: 7% în 2026) și decontări comerciale tot mai dese în rupii. Inflația a urcat în 2026, iar dobânda reală e ușor negativă."
@@ -401,12 +401,12 @@
     3
    ],
    "inputs": {
-    "C1": "cont curent -2.9% din PIB",
-    "C2": "inflație 29.7% (2026-09)",
-    "C3": "datorie 22.5%, sold bugetar -3.1%, cont curent -2.9% din PIB",
-    "C7": "dobândă 36% (2026-10-23) − inflație 29.7% = 6.3 pp",
+    "C1": "cont curent -2,9% din PIB",
+    "C2": "inflație 29,7% (2026-09)",
+    "C3": "datorie 22,5%, sold bugetar -3,1%, cont curent -2,9% din PIB",
+    "C7": "dobândă 36% (2026-10-23) − inflație 29,7% = 6,3 pp",
     "C10": "la 0% din intervalul de 52 de săptămâni",
-    "C12": "-3.0% în două luni"
+    "C12": "-3,0% în două luni"
    },
    "gaps": [],
    "why": "Inflație de aproape 30% și istoric de politici monetare schimbătoare. Dobânda reală pozitivă de acum atrage capital speculativ, nu încredere pe termen lung."
@@ -433,12 +433,12 @@
     5
    ],
    "inputs": {
-    "C1": "cont curent -2.4% din PIB",
-    "C2": "inflație 4.6% (2026-09)",
-    "C3": "datorie 97%, sold bugetar -8.1%, cont curent -2.4% din PIB",
-    "C7": "dobândă 13.75% (2026-10-27) − inflație 4.6% = 9.2 pp",
+    "C1": "cont curent -2,4% din PIB",
+    "C2": "inflație 4,6% (2026-09)",
+    "C3": "datorie 97%, sold bugetar -8,1%, cont curent -2,4% din PIB",
+    "C7": "dobândă 13,75% (2026-10-27) − inflație 4,6% = 9,2 pp",
     "C10": "la 20% din intervalul de 52 de săptămâni",
-    "C12": "-5.3% în două luni"
+    "C12": "-5,3% în două luni"
    },
    "gaps": [],
    "why": "Dobânzi reale mari care atrag carry trade, deci fluxuri parțial speculative; deficit bugetar ridicat și dependență de materii prime."
@@ -466,11 +466,11 @@
    ],
    "inputs": {
     "C1": "cont curent -7% din PIB",
-    "C2": "inflație 6.6% (2026-09)",
-    "C3": "datorie 62.6%, sold bugetar -6.2%, cont curent -7% din PIB",
-    "C7": "dobândă 6.5% (2026-10-27) − inflație 6.6% = -0.1 pp",
+    "C2": "inflație 6,6% (2026-09)",
+    "C3": "datorie 62,6%, sold bugetar -6,2%, cont curent -7% din PIB",
+    "C7": "dobândă 6,5% (2026-10-27) − inflație 6,6% = -0,1 pp",
     "C10": "la 3% din intervalul de 52 de săptămâni",
-    "C12": "-5.4% în două luni"
+    "C12": "-5,4% în două luni"
    },
    "gaps": [],
    "why": "Cel mai mare deficit de cont curent din listă (FMI: -7% din PIB) și deficit bugetar mare, cu o economie care se contractă în 2026. BNR ține cursul stabil, dar dobânda reală e aproape zero."
@@ -497,12 +497,12 @@
     5
    ],
    "inputs": {
-    "C1": "cont curent -0.7% din PIB",
-    "C2": "inflație 4.5% (2026-09)",
-    "C3": "datorie 78%, sold bugetar -4.4%, cont curent -0.7% din PIB",
-    "C7": "dobândă 7.25% (2026-10-26) − inflație 4.5% = 2.7 pp",
+    "C1": "cont curent -0,7% din PIB",
+    "C2": "inflație 4,5% (2026-09)",
+    "C3": "datorie 78%, sold bugetar -4,4%, cont curent -0,7% din PIB",
+    "C7": "dobândă 7,25% (2026-10-26) − inflație 4,5% = 2,7 pp",
     "C10": "la 42% din intervalul de 52 de săptămâni",
-    "C12": "-3.8% în două luni"
+    "C12": "-3,8% în două luni"
    },
    "gaps": [],
    "why": "Dobândă reală ridicată și bancă centrală respectată, dar creștere slabă, probleme de infrastructură și dependență de minerit."

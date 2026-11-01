@@ -260,9 +260,13 @@ export const domains: Domain[] = [
     slug: 'economii-emergente',
     criteria: 'economii-emergente',
     title: 'Economii emergente',
-    summary: 'Creștere, inflație, datorie și riscuri pentru economiile emergente din lume.',
-    status: 'planificat',
-    questions: ['Care economii emergente au cele mai solide fundamente macro?'],
+    summary: '15 economii emergente, inclusiv România, notate pe aceleași 14 condiții, cu date FMI, BIS și bursa fiecărei țări.',
+    status: 'activ',
+    questions: [
+      'Care economii emergente au cele mai solide fundamente macro?',
+      'Unde e creșterea susținută de finanțe publice sănătoase și unde de datorie?',
+      'Cum se compară România cu Polonia și cu restul piețelor emergente?',
+    ],
   },
   {
     slug: 'sp500',

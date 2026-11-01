@@ -32,6 +32,10 @@ Conflicte de interese: autorul deține sau a deținut poziții în Lighter (LIT)
 
 15 monede notate pe cele 14 condiții. Șase condiții se calculează din date oficiale (FMI World Economic Outlook, BIS: dobânzi și inflație, Yahoo Finance: cursuri) după formulele din `scripts/score-forex.mjs`; opt sunt judecată, cu justificare, în `scripts/forex-judgment.json`. Datele se descarcă săptămânal (`scripts/fetch-forex.mjs`). Instantaneul înghețat: `public/snapshots/forex-2026-11-01.json`.
 
+## Economii emergente
+
+15 economii (China, India, Brazilia, Mexic, Indonezia, Turcia, Africa de Sud, Polonia, România, Vietnam, Arabia Saudită, Argentina, Egipt, Filipine, Chile), după aceeași metodă ca Forex: date în `scripts/fetch-emerging.mjs`, formule în `scripts/score-emerging.mjs`, judecată în `scripts/emerging-judgment.json`. Instantaneu: `public/snapshots/emergente-2026-11-01.json`.
+
 ## Tehnologie
 
 - **Astro**: pagini statice, rapide, cu JavaScript doar unde e nevoie

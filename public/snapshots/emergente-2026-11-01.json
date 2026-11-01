@@ -1,0 +1,515 @@
+{
+ "domain": "economii-emergente",
+ "date": "2026-11-01",
+ "weights": [
+  16,
+  6,
+  6,
+  8,
+  6,
+  8,
+  8,
+  4,
+  6,
+  6,
+  6,
+  6,
+  6,
+  8
+ ],
+ "met_threshold": 7,
+ "formulas": {
+  "C1": "Creșterea PIB real în 2026 (FMI): nota = 2 + 1,2 × creșterea în %.",
+  "C2": "Soldul bugetar în 2026 (FMI, % din PIB): nota = 10 + soldul (un deficit de 3% dă 7).",
+  "C3": "Datoria publică și contul curent (FMI 2026): nota = 10 − datorie/15 + 0,4 × deficitul de cont curent.",
+  "C7": "Dobânda reală (BIS): nota = 5 + dobânda reală − 0,3 × inflația care depășește 5%.",
+  "C10": "Poziția bursei (ETF de țară sau indice local) în intervalul de 52 de săptămâni: aproape de minim = ieftină = notă mare. Aproximare până integrăm raportul preț/profit.",
+  "C12": "Trendul bursei pe două luni (de la 4 septembrie): nota = 5 + variația în %."
+ },
+ "sources": {
+  "imf": {
+   "name": "FMI, World Economic Outlook (API DataMapper)",
+   "url": "https://www.imf.org/external/datamapper/datasets/WEO",
+   "retrievedAt": "2026-11-01"
+  },
+  "bis": {
+   "name": "BIS, Central bank policy rates și Consumer prices",
+   "url": "https://data.bis.org/topics/CBPOL",
+   "retrievedAt": "2026-11-01"
+  },
+  "fx": {
+   "name": "Yahoo Finance (ETF-uri de țară, indicele BET)",
+   "url": "https://finance.yahoo.com/",
+   "retrievedAt": "2026-11-01"
+  }
+ },
+ "rows": [
+  {
+   "id": "CL",
+   "name": "Chile",
+   "score": 5.92,
+   "met": 9,
+   "criteria": [
+    3,
+    8,
+    7,
+    7,
+    7,
+    8,
+    5,
+    4,
+    8,
+    10,
+    7,
+    0,
+    5,
+    7
+   ],
+   "inputs": {
+    "C1": "creștere 0.6% în 2026",
+    "C2": "sold bugetar -2% din PIB",
+    "C3": "datorie 42.8% din PIB, cont curent -0.3%",
+    "C7": "dobândă 4.5% (2026-10-27) − inflație 4.1% = 0.4 pp",
+    "C10": "bursa la 2% din intervalul de 52 de săptămâni (ECH)",
+    "C12": "bursa -15.0% în două luni"
+   },
+   "gaps": []
+  },
+  {
+   "id": "VN",
+   "name": "Vietnam",
+   "score": 6.88,
+   "met": 7,
+   "criteria": [
+    10,
+    9,
+    8,
+    8,
+    8,
+    5,
+    null,
+    6,
+    7,
+    9,
+    6,
+    0,
+    5,
+    6
+   ],
+   "inputs": {
+    "C1": "creștere 8.4% în 2026",
+    "C2": "sold bugetar -0.8% din PIB",
+    "C3": "datorie 28.3% din PIB, cont curent 0.3%",
+    "C10": "bursa la 9% din intervalul de 52 de săptămâni (VNM)",
+    "C12": "bursa -8.3% în două luni"
+   },
+   "gaps": [
+    "C7"
+   ]
+  },
+  {
+   "id": "ID",
+   "name": "Indonezia",
+   "score": 6.5,
+   "met": 7,
+   "criteria": [
+    8,
+    7,
+    7,
+    8,
+    6,
+    5,
+    7,
+    5,
+    8,
+    10,
+    6,
+    0,
+    5,
+    6
+   ],
+   "inputs": {
+    "C1": "creștere 5.1% în 2026",
+    "C2": "sold bugetar -2.9% din PIB",
+    "C3": "datorie 41.7% din PIB, cont curent -1.6%",
+    "C7": "dobândă 5.75% (2026-10-19) − inflație 3.3% = 2.5 pp",
+    "C10": "bursa la 4% din intervalul de 52 de săptămâni (EIDO)",
+    "C12": "bursa -23.7% în două luni"
+   },
+   "gaps": []
+  },
+  {
+   "id": "IN",
+   "name": "India",
+   "score": 6.3,
+   "met": 7,
+   "criteria": [
+    10,
+    3,
+    4,
+    8,
+    7,
+    6,
+    5,
+    7,
+    7,
+    8,
+    4,
+    1,
+    5,
+    7
+   ],
+   "inputs": {
+    "C1": "creștere 7% în 2026",
+    "C2": "sold bugetar -7.5% din PIB",
+    "C3": "datorie 83.1% din PIB, cont curent -1.5%",
+    "C7": "dobândă 5.5% (2026-10-19) − inflație 5.5% = -0.0 pp",
+    "C10": "bursa la 24% din intervalul de 52 de săptămâni (INDA)",
+    "C12": "bursa -4.4% în două luni"
+   },
+   "gaps": []
+  },
+  {
+   "id": "CN",
+   "name": "China",
+   "score": 5.66,
+   "met": 6,
+   "criteria": [
+    7,
+    2,
+    3,
+    8,
+    5,
+    5,
+    7,
+    9,
+    9,
+    10,
+    5,
+    0,
+    5,
+    3
+   ],
+   "inputs": {
+    "C1": "creștere 4.5% în 2026",
+    "C2": "sold bugetar -8% din PIB",
+    "C3": "datorie 104.4% din PIB, cont curent 4%",
+    "C7": "dobândă 3% (2026-10-19) − inflație 0.9% = 2.1 pp",
+    "C10": "bursa la 1% din intervalul de 52 de săptămâni (MCHI)",
+    "C12": "bursa -10.6% în două luni"
+   },
+   "gaps": []
+  },
+  {
+   "id": "MX",
+   "name": "Mexic",
+   "score": 5.38,
+   "met": 4,
+   "criteria": [
+    4,
+    6,
+    6,
+    8,
+    7,
+    4,
+    8,
+    6,
+    7,
+    4,
+    6,
+    2,
+    5,
+    4
+   ],
+   "inputs": {
+    "C1": "creștere 1.5% în 2026",
+    "C2": "sold bugetar -4.2% din PIB",
+    "C3": "datorie 62.1% din PIB, cont curent -0.3%",
+    "C7": "dobândă 6.5% (2026-10-27) − inflație 3.5% = 3.0 pp",
+    "C10": "bursa la 57% din intervalul de 52 de săptămâni (EWW)",
+    "C12": "bursa -2.8% în două luni"
+   },
+   "gaps": []
+  },
+  {
+   "id": "PL",
+   "name": "Polonia",
+   "score": 5.36,
+   "met": 4,
+   "criteria": [
+    6,
+    3,
+    5,
+    6,
+    8,
+    7,
+    5,
+    8,
+    5,
+    2,
+    7,
+    1,
+    5,
+    6
+   ],
+   "inputs": {
+    "C1": "creștere 3.4% în 2026",
+    "C2": "sold bugetar -7.2% din PIB",
+    "C3": "datorie 66.6% din PIB, cont curent -1.9%",
+    "C7": "dobândă 3.75% (2026-10-27) − inflație 4.0% = -0.2 pp",
+    "C10": "bursa la 82% din intervalul de 52 de săptămâni (EPOL)",
+    "C12": "bursa -3.8% în două luni"
+   },
+   "gaps": []
+  },
+  {
+   "id": "BR",
+   "name": "Brazilia",
+   "score": 5.28,
+   "met": 3,
+   "criteria": [
+    5,
+    2,
+    3,
+    5,
+    6,
+    5,
+    10,
+    5,
+    7,
+    9,
+    6,
+    0,
+    5,
+    5
+   ],
+   "inputs": {
+    "C1": "creștere 2.2% în 2026",
+    "C2": "sold bugetar -8.1% din PIB",
+    "C3": "datorie 97% din PIB, cont curent -2.4%",
+    "C7": "dobândă 13.75% (2026-10-27) − inflație 4.6% = 9.2 pp",
+    "C10": "bursa la 12% din intervalul de 52 de săptămâni (EWZ)",
+    "C12": "bursa -14.3% în două luni"
+   },
+   "gaps": []
+  },
+  {
+   "id": "TR",
+   "name": "Turcia",
+   "score": 4.74,
+   "met": 3,
+   "criteria": [
+    5,
+    7,
+    7,
+    4,
+    3,
+    3,
+    4,
+    6,
+    6,
+    10,
+    5,
+    0,
+    5,
+    3
+   ],
+   "inputs": {
+    "C1": "creștere 2.7% în 2026",
+    "C2": "sold bugetar -3.1% din PIB",
+    "C3": "datorie 22.5% din PIB, cont curent -2.9%",
+    "C7": "dobândă 36% (2026-10-23) − inflație 29.7% = 6.3 pp",
+    "C10": "bursa la 0% din intervalul de 52 de săptămâni (TUR)",
+    "C12": "bursa -24.7% în două luni"
+   },
+   "gaps": []
+  },
+  {
+   "id": "SA",
+   "name": "Arabia Saudită",
+   "score": 4.56,
+   "met": 3,
+   "criteria": [
+    0,
+    4,
+    6,
+    6,
+    5,
+    5,
+    8,
+    2,
+    9,
+    9,
+    6,
+    0,
+    5,
+    4
+   ],
+   "inputs": {
+    "C1": "creștere -3.3% în 2026",
+    "C2": "sold bugetar -6.5% din PIB",
+    "C3": "datorie 35.4% din PIB, cont curent -3.5%",
+    "C7": "dobândă 4.5% (2026-10-13) − inflație 1.9% = 2.6 pp",
+    "C10": "bursa la 8% din intervalul de 52 de săptămâni (KSA)",
+    "C12": "bursa -11.1% în două luni"
+   },
+   "gaps": []
+  },
+  {
+   "id": "PH",
+   "name": "Filipine",
+   "score": 5.2,
+   "met": 2,
+   "criteria": [
+    6,
+    6,
+    4,
+    5,
+    6,
+    5,
+    3,
+    5,
+    4,
+    10,
+    7,
+    0,
+    5,
+    6
+   ],
+   "inputs": {
+    "C1": "creștere 3.4% în 2026",
+    "C2": "sold bugetar -4.2% din PIB",
+    "C3": "datorie 60.5% din PIB, cont curent -4.8%",
+    "C7": "dobândă 5.5% (2026-10-23) − inflație 7.2% = -1.7 pp",
+    "C10": "bursa la 1% din intervalul de 52 de săptămâni (EPHE)",
+    "C12": "bursa -7.9% în două luni"
+   },
+   "gaps": []
+  },
+  {
+   "id": "ZA",
+   "name": "Africa de Sud",
+   "score": 4.94,
+   "met": 2,
+   "criteria": [
+    3,
+    6,
+    5,
+    4,
+    4,
+    6,
+    8,
+    4,
+    6,
+    9,
+    6,
+    0,
+    5,
+    5
+   ],
+   "inputs": {
+    "C1": "creștere 1% în 2026",
+    "C2": "sold bugetar -4.4% din PIB",
+    "C3": "datorie 78% din PIB, cont curent -0.7%",
+    "C7": "dobândă 7.25% (2026-10-26) − inflație 4.5% = 2.7 pp",
+    "C10": "bursa la 6% din intervalul de 52 de săptămâni (EZA)",
+    "C12": "bursa -13.8% în două luni"
+   },
+   "gaps": []
+  },
+  {
+   "id": "AR",
+   "name": "Argentina",
+   "score": 4.58,
+   "met": 2,
+   "criteria": [
+    5,
+    10,
+    5,
+    6,
+    3,
+    3,
+    0,
+    4,
+    6,
+    10,
+    4,
+    0,
+    5,
+    4
+   ],
+   "inputs": {
+    "C1": "creștere 2.1% în 2026",
+    "C2": "sold bugetar 0.4% din PIB",
+    "C3": "datorie 69.3% din PIB, cont curent 0.6%",
+    "C7": "dobândă 29% (2025-06) − inflație 33.5% = -4.5 pp",
+    "C10": "bursa la 0% din intervalul de 52 de săptămâni (ARGT)",
+    "C12": "bursa -17.9% în două luni"
+   },
+   "gaps": []
+  },
+  {
+   "id": "RO",
+   "name": "România",
+   "score": 4.14,
+   "met": 2,
+   "criteria": [
+    1,
+    4,
+    3,
+    5,
+    6,
+    5,
+    4,
+    6,
+    4,
+    1,
+    7,
+    7,
+    5,
+    5
+   ],
+   "inputs": {
+    "C1": "creștere -0.5% în 2026",
+    "C2": "sold bugetar -6.2% din PIB",
+    "C3": "datorie 62.6% din PIB, cont curent -7%",
+    "C7": "dobândă 6.5% (2026-10-27) − inflație 6.6% = -0.1 pp",
+    "C10": "bursa la 90% din intervalul de 52 de săptămâni (TVBETETF.RO)",
+    "C12": "bursa +2.3% în două luni"
+   },
+   "gaps": []
+  },
+  {
+   "id": "EG",
+   "name": "Egipt",
+   "score": 4.54,
+   "met": 1,
+   "criteria": [
+    8,
+    0,
+    3,
+    3,
+    4,
+    3,
+    null,
+    4,
+    6,
+    null,
+    5,
+    null,
+    5,
+    3
+   ],
+   "inputs": {
+    "C1": "creștere 5.1% în 2026",
+    "C2": "sold bugetar -11.4% din PIB",
+    "C3": "datorie 84% din PIB, cont curent -4.4%"
+   },
+   "gaps": [
+    "C7",
+    "C10",
+    "C12"
+   ]
+  }
+ ]
+}

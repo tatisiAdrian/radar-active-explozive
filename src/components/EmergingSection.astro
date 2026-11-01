@@ -1,0 +1,138 @@
+---
+import Chart from './Chart.astro';
+import type { Dataset, Source } from '../data/types';
+import scores from '../data/emerging/scores.json';
+import macro from '../data/emerging/macro.json';
+import { CRITERIA } from '../data/criteria';
+
+const base = import.meta.env.BASE_URL;
+type Row = { id: string; name: string; score: number; met: number; criteria: (number | null)[]; inputs: Record<string, string>; gaps: string[]; why: string };
+const rows = scores.rows as unknown as Row[];
+const crit = CRITERIA['economii-emergente'];
+const SNAP = scores.judgmentDate;
+const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const num = (x: number, d = 1) => x.toLocaleString('ro-RO', { maximumFractionDigits: d, minimumFractionDigits: d });
+const pct = (x: number | undefined) => (x === undefined ? '—' : `${x > 0 ? '+' : ''}${num(x)}%`);
+const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
+const QUANT = new Set(['C1', 'C2', 'C3', 'C7', 'C10', 'C12']);
+
+const src = (s: { name: string; url: string; retrievedAt: string }): Source => s;
+const fx = macro.fx as unknown as Record<string, { points: [string, number][]; unit: string; symbol: string; url: string }>;
+const imf = macro.imf as unknown as Record<string, { label: string; values: Record<string, Record<string, number>> }>;
+const y26 = (ind: string, c: string) => imf[ind]?.values[c]?.['2026'];
+const order = rows.map((r) => r.id);
+const nameOf = Object.fromEntries(rows.map((r) => [r.id, r.name]));
+
+const growth: Dataset = {
+  id: 'em-crestere', domain: 'economii-emergente', title: 'Creșterea PIB real în 2026 (estimare FMI)', unit: '%', chart: 'bar',
+  series: [{ name: 'Creștere PIB real', points: order.filter((c) => y26('NGDP_RPCH', c) !== undefined).map((c) => [nameOf[c], y26('NGDP_RPCH', c)!]) }],
+  source: src(macro.sources.imf),
+};
+const fiscal: Dataset = {
+  id: 'em-buget-datorie', domain: 'economii-emergente', title: 'Soldul bugetar și contul curent în 2026 (estimări FMI)', unit: '% din PIB', chart: 'bar',
+  series: [
+    { name: 'Sold bugetar', points: order.filter((c) => y26('GGXCNL_NGDP', c) !== undefined).map((c) => [nameOf[c], y26('GGXCNL_NGDP', c)!]) },
+    { name: 'Cont curent', points: order.filter((c) => y26('BCA_NGDPD', c) !== undefined).map((c) => [nameOf[c], y26('BCA_NGDPD', c)!]) },
+  ],
+  source: src(macro.sources.imf),
+  notes: 'Valori negative = deficit. Când ambele sunt negative (deficite gemene), țara depinde de finanțare externă.',
+};
+const markets: Dataset = {
+  id: 'em-burse', domain: 'economii-emergente', title: 'Bursa fiecărei țări, săptămânal (ETF de țară în USD; pentru România, ETF-ul pe indicele BET, în lei)', unit: 'indice, prima săptămână = 100', chart: 'line',
+  series: [...order, 'EM'].filter((c) => fx[c]?.points.length).map((c) => ({
+    name: c === 'EM' ? 'Toate piețele emergente (EEM, reper)' : `${nameOf[c]} (${fx[c].symbol})`,
+    points: fx[c].points.map(([d, v]) => [d, +((v / fx[c].points[0][1]) * 100).toFixed(2)] as [string, number]),
+  })),
+  source: src(macro.sources.fx),
+  notes: 'ETF-urile de țară sunt cotate în dolari, deci includ și mișcarea monedei locale; ETF-ul românesc (TVBETETF.RO) e cotat în lei. Egipt: fără date bursiere zilnice la sursă.',
+};
+
+const g = growth.series[0].points;
+const twin = order.filter((c) => (y26('GGXCNL_NGDP', c) ?? 0) < -3 && (y26('BCA_NGDPD', c) ?? 0) < -3).map((c) => nameOf[c]);
+const top = rows[0];
+const ro = rows.find((r) => r.id === 'RO');
+const fastest = [...g].sort((a, b) => b[1] - a[1]).slice(0, 3);
+---
+<section id="radar">
+  <h2>Economiile de pe radar</h2>
+  <p>
+    {rows.length} economii emergente notate pe 14 condiții. Șase condiții se calculează automat din date oficiale (FMI, BIS, bursa fiecărei țări), după formule publice;
+    celelalte opt sunt judecată, cu justificare pentru fiecare țară. Notele sunt înghețate în{' '}
+    <a href={`${base}snapshots/emergente-${SNAP}.json`}>instantaneul din {fmtDate(SNAP)}</a>{' '}
+    (amprenta SHA-256 în <a href={`${base}snapshots/emergente-${SNAP}.sha256`}>fișierul .sha256</a>). Datele de intrare se actualizează automat în fiecare vineri.
+  </p>
+  <div class="table-wrap">
+    <table class="radar fx">
+      <thead><tr><th>#</th><th>Țara</th><th>Condiții</th><th>Scor</th><th>Creștere 2026</th><th>Sold bugetar</th><th>Datorie publică</th><th>Bursa, 2 luni</th></tr></thead>
+      <tbody>
+        {rows.map((r, i) => (
+          <tr>
+            <td class="muted">{i + 1}</td>
+            <td><b>{r.name}</b></td>
+            <td><span class:list={['k', zone(r.met)]}>{r.met}/14</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 14) * 100}%`} class={zone(r.met)}></i></span></td>
+            <td>{num(r.score, 2)}</td>
+            <td class="num">{pct(y26('NGDP_RPCH', r.id))}</td>
+            <td class="num">{pct(y26('GGXCNL_NGDP', r.id))}</td>
+            <td class="num">{y26('GGXWDG_NGDP', r.id) !== undefined ? `${num(y26('GGXWDG_NGDP', r.id)!, 0)}%` : '—'}</td>
+            <td class="num">{r.inputs.C12 ? r.inputs.C12.replace('bursa ', '').replace(' în două luni', '') : '—'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Fiecare țară, condiție cu condiție</h3>
+  <p class="muted">Deschide o țară ca să vezi nota la fiecare condiție, datele din spatele notelor calculate și justificarea notelor de judecată. Condițiile fără date primesc 5 (neutru) în scor și nu sunt considerate îndeplinite.</p>
+  {rows.map((r) => (
+    <details class="fxd">
+      <summary><b>{r.name}</b> · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · scor {num(r.score, 2)}{r.gaps.length > 0 && <span class="muted"> · fără date: {r.gaps.join(', ')}</span>}</summary>
+      <p>{r.why}</p>
+      <div class="table-wrap">
+        <table class="radar criteria">
+          <thead><tr><th>#</th><th>Condiție</th><th>Notă</th><th>Cum</th></tr></thead>
+          <tbody>
+            {crit.map(([name], i) => {
+              const k = `C${i + 1}`;
+              const v = r.criteria[i];
+              return (
+                <tr>
+                  <td class="muted">{k}</td>
+                  <td>{name}</td>
+                  <td><span class:list={['k', v == null ? 'slab' : v >= 7 ? 'puternic' : v >= 5 ? 'observatie' : 'slab']}>{v ?? '—'}</span></td>
+                  <td class="muted">{QUANT.has(k) ? <>Calculat: {r.inputs[k] ?? 'date lipsă la sursă'}</> : k === 'C13' ? 'Neutru (5) până integrăm fluxurile fondurilor' : 'Judecată (vezi justificarea)'}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </details>
+  ))}
+
+  <h3>Formulele condițiilor calculate</h3>
+  <ul class="formulas">
+    {Object.entries(scores.formulas).map(([k, f]) => <li><b>{k}</b>: {f}</li>)}
+  </ul>
+</section>
+
+<section>
+  <h2>Datele din spatele notelor</h2>
+  <Chart dataset={growth} />
+  <Chart dataset={fiscal} />
+  <Chart dataset={markets} height={460} />
+</section>
+
+<section>
+  <h2>Ce arată datele</h2>
+  <p class="muted">Paragraf calculat automat din datele de mai sus; se actualizează odată cu ele.</p>
+  <p>
+    <b>{top.name}</b> îndeplinește cele mai multe condiții ({top.met} din 14).{' '}
+    Cea mai rapidă creștere estimată de FMI pentru 2026: {fastest.map(([n, v]) => `${n} (${pct(v)})`).join(', ')}.{' '}
+    {twin.length > 0 && <>Deficite gemene de peste 3% din PIB (buget și cont curent): {twin.join(', ')}.{' '}</>}
+    {ro && <>România e pe locul {rows.indexOf(ro) + 1} din {rows.length}, cu {ro.met} {ro.met === 1 ? 'condiție îndeplinită' : 'condiții îndeplinite'}: {ro.inputs.C1}, {ro.inputs.C2}, {ro.inputs.C3}.</>}
+  </p>
+  <p class="notice">
+    Creșterea rapidă nu e suficientă: o economie cu deficite mari depinde de investitorii străini și e vulnerabilă când aceștia pleacă.
+    De aceea notăm împreună creșterea, finanțele publice, instituțiile și riscul geopolitic. Nu este o recomandare de investiții.
+  </p>
+</section>
