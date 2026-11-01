@@ -1,0 +1,686 @@
+{
+ "date": "2026-11-01",
+ "judgmentDate": "2026-11-01",
+ "formulas": {
+  "C1": "Creșterea veniturilor în ultimul an fiscal (raport 10-K): nota = 5 + creșterea în % / 3. O creștere de 15% dă 10.",
+  "C2": "Variația numărului de acțiuni în ultimul an (SEC): nota = 6 − 1,5 × variația în %. Răscumpărările care reduc numărul de acțiuni cresc nota; emisiunile o scad.",
+  "C3": "Datoria netă (datorie pe termen lung − numerar) raportată la fluxul de numerar din exploatare: nota = 10 − 2 × raport. Numerar mai mult decât datorie = 10.",
+  "C7": "Marja fluxului de numerar liber = (flux din exploatare − investiții) / venituri: nota = marja în % / 3. O marjă de 30% dă 10.",
+  "C10": "Randamentul fluxului de numerar liber = flux liber / capitalizare (preț Yahoo × acțiuni SEC): nota = 2 × randamentul în %. Un randament de 5% dă 10.",
+  "C12": "Trendul acțiunii pe două luni (de la 4 septembrie): nota = 5 + variația în % / 2."
+ },
+ "sources": {
+  "sec": {
+   "name": "SEC EDGAR, rapoarte anuale 10-K (XBRL companyfacts)",
+   "url": "https://www.sec.gov/edgar/search/",
+   "retrievedAt": "2026-11-01"
+  },
+  "prices": {
+   "name": "Yahoo Finance (prețuri de închidere)",
+   "url": "https://finance.yahoo.com/",
+   "retrievedAt": "2026-11-01"
+  }
+ },
+ "rows": [
+  {
+   "id": "PG",
+   "name": "PG",
+   "score": 6.32,
+   "met": 8,
+   "criteria": [
+    null,
+    null,
+    null,
+    3,
+    9,
+    8,
+    null,
+    8,
+    8,
+    null,
+    7,
+    10,
+    7,
+    7
+   ],
+   "inputs": {
+    "C12": "acțiunea +10,3% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Produse de consum de bază cumpărate repetat (Pampers, Gillette, Tide); stabilitate mare, creștere mică."
+  },
+  {
+   "id": "V",
+   "name": "V",
+   "score": 6.56,
+   "met": 6,
+   "criteria": [
+    null,
+    null,
+    null,
+    6,
+    9,
+    9,
+    null,
+    8,
+    9,
+    null,
+    7,
+    10,
+    6,
+    6
+   ],
+   "inputs": {
+    "C12": "acțiunea +10,3% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Rețea globală de plăți cu marje foarte mari și venituri din fiecare tranzacție; riscurile sunt reglementarea comisioanelor și plățile instant concurente."
+  },
+  {
+   "id": "WMT",
+   "name": "WMT",
+   "score": 6.32,
+   "met": 6,
+   "criteria": [
+    null,
+    null,
+    null,
+    6,
+    9,
+    8,
+    null,
+    8,
+    8,
+    null,
+    6,
+    10,
+    4,
+    7
+   ],
+   "inputs": {
+    "C12": "acțiunea +15,3% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Cel mai mare comerciant din lume, cu publicitate și comerț online în creștere; marje mici, dar stabile, și evaluare ridicată pentru un retailer."
+  },
+  {
+   "id": "MSFT",
+   "name": "MSFT",
+   "score": 6.3,
+   "met": 6,
+   "criteria": [
+    null,
+    null,
+    null,
+    9,
+    9,
+    9,
+    null,
+    9,
+    9,
+    null,
+    4,
+    7,
+    3,
+    6
+   ],
+   "inputs": {
+    "C12": "acțiunea +4,4% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Cloud (Azure), software de birou și AI cu clienți corporativi pe abonament; poziție dominantă, dar una dintre cele mai aglomerate acțiuni din lume."
+  },
+  {
+   "id": "COST",
+   "name": "COST",
+   "score": 6.28,
+   "met": 6,
+   "criteria": [
+    null,
+    null,
+    null,
+    4,
+    10,
+    9,
+    null,
+    7,
+    8,
+    null,
+    6,
+    10,
+    3,
+    8
+   ],
+   "inputs": {
+    "C12": "acțiunea +10,5% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Model pe abonament cu reînnoire de peste 90%; una dintre cele mai bine conduse companii, dar și una dintre cele mai scumpe raportat la profit."
+  },
+  {
+   "id": "JNJ",
+   "name": "JNJ",
+   "score": 5.74,
+   "met": 6,
+   "criteria": [
+    null,
+    null,
+    null,
+    5,
+    8,
+    7,
+    null,
+    8,
+    7,
+    null,
+    7,
+    5,
+    7,
+    4
+   ],
+   "inputs": {
+    "C12": "acțiunea -0,7% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Medicamente și dispozitive medicale diversificate, bilanț solid; procesele legate de talc și expirarea unor brevete sunt riscurile."
+  },
+  {
+   "id": "LLY",
+   "name": "LLY",
+   "score": 6.16,
+   "met": 5,
+   "criteria": [
+    null,
+    null,
+    null,
+    9,
+    7,
+    8,
+    null,
+    6,
+    8,
+    null,
+    4,
+    10,
+    4,
+    6
+   ],
+   "inputs": {
+    "C12": "acțiunea +23,3% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Lider în tratamentele pentru obezitate și diabet; creștere foarte rapidă, dar dependentă de o singură familie de medicamente și de prețurile negociate cu statul."
+  },
+  {
+   "id": "AMZN",
+   "name": "AMZN",
+   "score": 5.76,
+   "met": 5,
+   "criteria": [
+    null,
+    null,
+    null,
+    8,
+    8,
+    8,
+    null,
+    9,
+    9,
+    null,
+    5,
+    1,
+    4,
+    5
+   ],
+   "inputs": {
+    "C12": "acțiunea -7,0% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Comerț online, cloud (AWS) și publicitate; afaceri diversificate cu efecte de rețea. Investițiile foarte mari în centre de date apasă fluxul de numerar."
+  },
+  {
+   "id": "GOOGL",
+   "name": "GOOGL",
+   "score": 5.26,
+   "met": 5,
+   "criteria": [
+    null,
+    null,
+    null,
+    8,
+    7,
+    7,
+    null,
+    7,
+    8,
+    null,
+    5,
+    0,
+    4,
+    3
+   ],
+   "inputs": {
+    "C12": "acțiunea -17,3% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Căutare, YouTube și cloud, cu modele AI proprii. Procesele antitrust din SUA și UE sunt cel mai mare risc din listă pentru afacerea principală."
+  },
+  {
+   "id": "AAPL",
+   "name": "AAPL",
+   "score": 5.88,
+   "met": 4,
+   "criteria": [
+    null,
+    null,
+    null,
+    5,
+    8,
+    8,
+    null,
+    6,
+    9,
+    null,
+    5,
+    9,
+    4,
+    5
+   ],
+   "inputs": {
+    "C12": "acțiunea +7,7% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Ecosistem greu de părăsit și venituri recurente din servicii, dar dependență mare de iPhone, de producția din China și procese antitrust (App Store)."
+  },
+  {
+   "id": "XOM",
+   "name": "XOM",
+   "score": 5.86,
+   "met": 4,
+   "criteria": [
+    null,
+    null,
+    null,
+    4,
+    7,
+    7,
+    null,
+    6,
+    6,
+    null,
+    7,
+    10,
+    6,
+    6
+   ],
+   "inputs": {
+    "C12": "acțiunea +17,4% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Cel mai mare producător privat de petrol din SUA; câștigă din prețul ridicat al petrolului din 2026, dar rezultatele urmează ciclul materiei prime."
+  },
+  {
+   "id": "PLTR",
+   "name": "PLTR",
+   "score": 5.54,
+   "met": 4,
+   "criteria": [
+    null,
+    null,
+    null,
+    9,
+    7,
+    6,
+    null,
+    5,
+    7,
+    null,
+    2,
+    8,
+    2,
+    6
+   ],
+   "inputs": {
+    "C12": "acțiunea +5,6% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Software de analiză pentru guverne și companii, cu creștere rapidă din AI; evaluarea e printre cele mai mari din indice, iar atenția mediatică e foarte mare."
+  },
+  {
+   "id": "NFLX",
+   "name": "NFLX",
+   "score": 5.42,
+   "met": 4,
+   "criteria": [
+    null,
+    null,
+    null,
+    6,
+    8,
+    8,
+    null,
+    5,
+    7,
+    null,
+    5,
+    0,
+    4,
+    7
+   ],
+   "inputs": {
+    "C12": "acțiunea -20,7% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Lider în streaming, cu abonamente și publicitate în creștere; concurența pentru timpul utilizatorilor rămâne intensă."
+  },
+  {
+   "id": "AMD",
+   "name": "AMD",
+   "score": 5.86,
+   "met": 3,
+   "criteria": [
+    null,
+    null,
+    null,
+    9,
+    6,
+    8,
+    null,
+    6,
+    6,
+    null,
+    4,
+    8,
+    4,
+    6
+   ],
+   "inputs": {
+    "C12": "acțiunea +5,7% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Principalul concurent al Nvidia în cipurile AI și lider în procesoare pentru servere; trebuie încă să dovedească vânzări mari de acceleratoare AI."
+  },
+  {
+   "id": "AVGO",
+   "name": "AVGO",
+   "score": 5.5,
+   "met": 3,
+   "criteria": [
+    null,
+    null,
+    null,
+    9,
+    6,
+    8,
+    null,
+    6,
+    8,
+    null,
+    4,
+    1,
+    3,
+    6
+   ],
+   "inputs": {
+    "C12": "acțiunea -8,9% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Cipuri personalizate pentru AI și software de infrastructură (VMware); creștere puternică, dar concentrată pe câțiva clienți mari din cloud."
+  },
+  {
+   "id": "META",
+   "name": "META",
+   "score": 5.4,
+   "met": 3,
+   "criteria": [
+    null,
+    null,
+    null,
+    7,
+    7,
+    6,
+    null,
+    5,
+    8,
+    null,
+    5,
+    5,
+    4,
+    4
+   ],
+   "inputs": {
+    "C12": "acțiunea -0,3% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Peste trei miliarde de utilizatori și publicitate foarte profitabilă; cheltuielile mari pentru AI și realitate virtuală și presiunea de reglementare sunt riscurile."
+  },
+  {
+   "id": "ORCL",
+   "name": "ORCL",
+   "score": 5.28,
+   "met": 3,
+   "criteria": [
+    null,
+    null,
+    null,
+    9,
+    8,
+    6,
+    null,
+    6,
+    7,
+    null,
+    3,
+    0,
+    3,
+    6
+   ],
+   "inputs": {
+    "C12": "acțiunea -17,7% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Contracte uriașe de cloud pentru AI, dar finanțate cu datorie în creștere rapidă; investiția în centre de date face fluxul de numerar liber negativ."
+  },
+  {
+   "id": "NVDA",
+   "name": "NVDA",
+   "score": 5.18,
+   "met": 3,
+   "criteria": [
+    null,
+    null,
+    null,
+    10,
+    5,
+    8,
+    null,
+    4,
+    9,
+    null,
+    2,
+    0,
+    2,
+    5
+   ],
+   "inputs": {
+    "C12": "acțiunea -11,2% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Lider absolut în cipurile pentru AI, dar veniturile vin de la câțiva clienți foarte mari, iar controalele de export spre China și euforia mediatică sunt riscuri."
+  },
+  {
+   "id": "UNH",
+   "name": "UNH",
+   "score": 5.04,
+   "met": 3,
+   "criteria": [
+    null,
+    null,
+    null,
+    4,
+    8,
+    4,
+    null,
+    7,
+    7,
+    null,
+    4,
+    6,
+    6,
+    2
+   ],
+   "inputs": {
+    "C12": "acțiunea +2,5% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Cea mai mare companie de asigurări de sănătate din SUA, lovită de costuri medicale în creștere, anchete federale și schimbări de conducere."
+  },
+  {
+   "id": "TSLA",
+   "name": "TSLA",
+   "score": 4.88,
+   "met": 2,
+   "criteria": [
+    null,
+    null,
+    null,
+    7,
+    5,
+    3,
+    null,
+    4,
+    5,
+    null,
+    2,
+    10,
+    3,
+    4
+   ],
+   "inputs": {
+    "C12": "acțiunea +12,9% în două luni"
+   },
+   "gaps": [
+    "C1",
+    "C2",
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Evaluare legată mai ales de promisiuni (robotaxi, roboți), în timp ce vânzările de mașini scad. Guvernanța și atenția mediatică extremă reduc nota."
+  }
+ ]
+}

@@ -181,7 +181,7 @@
     "C2": "inflație 3,1% (2026-09)",
     "C3": "datorie 115,6%, sold bugetar -2,5%, cont curent -0,1% din PIB",
     "C7": "dobândă 2,25% (2026-10-26) − inflație 3,1% = -0,8 pp",
-    "C10": "la 38% din intervalul de 52 de săptămâni",
+    "C10": "la 39% din intervalul de 52 de săptămâni",
     "C12": "-1,4% în două luni"
    },
    "gaps": [],
@@ -213,7 +213,7 @@
     "C2": "inflație 4,0% (2026-09)",
     "C3": "datorie 66,6%, sold bugetar -7,2%, cont curent -1,9% din PIB",
     "C7": "dobândă 3,75% (2026-10-27) − inflație 4,0% = -0,2 pp",
-    "C10": "la 1% din intervalul de 52 de săptămâni",
+    "C10": "la 2% din intervalul de 52 de săptămâni",
     "C12": "-5,3% în două luni"
    },
    "gaps": [],
@@ -341,7 +341,7 @@
     "C2": "inflație 3,5% (2026-09)",
     "C3": "datorie 62,1%, sold bugetar -4,2%, cont curent -0,3% din PIB",
     "C7": "dobândă 6,5% (2026-10-27) − inflație 3,5% = 3,0 pp",
-    "C10": "la 3% din intervalul de 52 de săptămâni",
+    "C10": "la 4% din intervalul de 52 de săptămâni",
     "C12": "-10,3% în două luni"
    },
    "gaps": [],
@@ -414,7 +414,7 @@
   {
    "id": "BRL",
    "name": "Real brazilian",
-   "score": 4.44,
+   "score": 4.38,
    "met": 2,
    "criteria": [
     3,
@@ -426,7 +426,7 @@
     10,
     5,
     1,
-    8,
+    7,
     6,
     0,
     5,
@@ -437,7 +437,7 @@
     "C2": "inflație 4,6% (2026-09)",
     "C3": "datorie 97%, sold bugetar -8,1%, cont curent -2,4% din PIB",
     "C7": "dobândă 13,75% (2026-10-27) − inflație 4,6% = 9,2 pp",
-    "C10": "la 20% din intervalul de 52 de săptămâni",
+    "C10": "la 28% din intervalul de 52 de săptămâni",
     "C12": "-5,3% în două luni"
    },
    "gaps": [],
