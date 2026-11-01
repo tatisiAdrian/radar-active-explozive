@@ -3,13 +3,13 @@ import Chart from './Chart.astro';
 import type { Dataset } from '../data/types';
 import {
   radarView, rebased, pct, median, dbSource, db, GROUP, ZONE_LABEL, SNAPSHOT_DATE, BASELINE,
-  type Market, type Zone,
+  COUNTRY, COUNTRY_NAME, type Market, type Zone,
 } from '../data/radar';
 
-interface Props { market: Market; domain: string }
-const { market, domain } = Astro.props;
+interface Props { market: Market; domain: string; countries?: string[] }
+const { market, domain, countries } = Astro.props;
 const base = import.meta.env.BASE_URL;
-const v = radarView(market);
+const v = radarView(market, countries);
 const count = (z: Zone) => v.rows.filter((r) => r.zone === z).length;
 const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 const fmtPrice = (x: number) => x.toLocaleString('ro-RO', { maximumSignificantDigits: 4 });
@@ -86,7 +86,7 @@ const firstMeasure = new Date(Date.parse(BASELINE) + 7 * 86400000).toISOString()
         {v.rows.map((r) => (
           <tr>
             <td><b>{r.a.n.ro}</b></td>
-            <td class="muted">{GROUP[r.a.g] ?? r.a.g}</td>
+            <td class="muted">{GROUP[r.a.g] ?? r.a.g}{market === 'comp' && COUNTRY[r.a.id] && <><br /><small>{COUNTRY_NAME[COUNTRY[r.a.id]] ?? COUNTRY[r.a.id]}</small></>}</td>
             <td>
               <span class:list={['k', r.zone]}>{r.a.k}/14</span>
               <span class="kbar" aria-hidden="true"><i style={`width:${(r.a.k / 14) * 100}%`} class={r.zone}></i></span>
@@ -131,7 +131,7 @@ const firstMeasure = new Date(Date.parse(BASELINE) + 7 * 86400000).toISOString()
     <p>
       <b>Calculat automat:</b> în cele două luni dinaintea instantaneului, {up} din {retros.length} active cu preț public au crescut.{' '}
       Variația mediană a fost {pct(medAll)}, față de {pct(v.benchRetro)} pentru {benchName}.{' '}
-      {best && worst && <>{best.retro! > 0 ? 'Cea mai mare creștere' : 'Cea mai mică scădere'}: {best.a.n.ro} ({pct(best.retro)}); cea mai mare scădere: {worst.a.n.ro} ({pct(worst.retro)}).</>}
+      {best && worst && retros.length > 1 && <>{best.retro! > 0 ? 'Cea mai mare creștere' : 'Cea mai mică scădere'}: {best.a.n.ro} ({pct(best.retro)}); cea mai mare scădere: {worst.a.n.ro} ({pct(worst.retro)}).</>}
     </p>
   </section>
 )}

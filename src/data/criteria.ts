@@ -1,0 +1,92 @@
+/**
+ * Cele 14 condiții ale radarului, adaptate pe domenii.
+ * Aceleași ponderi peste tot; se schimbă doar ce măsurăm concret.
+ * O condiție e „îndeplinită” de la nota 7 (din 10).
+ */
+export const WEIGHTS = [16, 6, 6, 8, 6, 8, 8, 4, 6, 6, 6, 6, 6, 8] as const;
+
+export type CriteriaSet = [string, string][]; // [condiție, ce măsurăm]
+
+export const CRITERIA: Record<string, CriteriaSet> = {
+  // Cripto și companii: textul din radar (prima pagină)
+  general: [
+    ['Folosit cu adevărat', 'Venituri, utilizatori sau cerere reală, nu promisiuni.'],
+    ['Lansare din forță', 'Cei mai buni nu se grăbesc: lansează când sunt gata.'],
+    ['Finanțare sănătoasă', 'Fără investitori care pot vinde masiv imediat.'],
+    ['Atrage oameni pricepuți', 'Talent, parteneri și constructori vin spre el.'],
+    ['Clienți reali', 'Activitate naturală, nu cumpărată sau subvenționată.'],
+    ['Echipă credibilă', 'Istoric de lucruri duse la capăt, fără scandaluri.'],
+    ['Ofertă bine împărțită', 'Puține acțiuni sau tokenuri gata să inunde piața.'],
+    ['Comunitate naturală', 'Oameni veniți pentru produs, nu doar pentru câștig rapid.'],
+    ['Problemă evidentă', 'Se explică într-o propoziție.'],
+    ['Preț de intrare bun', 'Loc de creștere față de rivali sau față de cost.'],
+    ['Media echilibrată', 'Euforia mediatică a marcat, istoric, vârful.'],
+    ['Preț și volum sănătoase', 'Preț stabil în timp ce utilizarea crește.'],
+    ['Puțini pe același pariu', 'Cu cât mai puțină aglomerație, cu atât mai bine.'],
+    ['Riscuri mici', 'Fără procese, scandaluri sau risc geopolitic mare.'],
+  ],
+  marfuri: [
+    ['Cerere reală', 'Consum fizic real și în creștere, nu doar poveste.'],
+    ['Disciplina ofertei', 'Producătorii sau statele limitează oferta (cote, tăieri, controale de export).'],
+    ['Stocuri și structura pieței', 'Stocuri mici și în scădere = notă mare.'],
+    ['Utilizări noi', 'Cerere nouă din tehnologie: AI, baterii, energie, apărare.'],
+    ['Cerere fizică vs. speculativă', 'Cumpără cine folosește marfa, nu doar fonduri care pariază.'],
+    ['Transparența prețului', 'Preț public, bursă lichidă, date de încredere.'],
+    ['Echilibru cerere-ofertă', 'Deficit așteptat = notă mare; surplus = notă mică.'],
+    ['Diversitatea cumpărătorilor', 'Mulți cumpărători din industrii diferite.'],
+    ['De neînlocuit', 'Fără substituenți ieftini.'],
+    ['Preț vs. cost de producție', 'Preț aproape de costul de producție = spațiu de creștere.'],
+    ['Media (neliniar)', 'Atenție echilibrată; euforia mediatică e semnal de vârf.'],
+    ['Preț și volum', 'Preț stabil cu cerere în creștere = semn bun.'],
+    ['Aglomerație (invers)', 'Puțini speculatori poziționați = notă mare.'],
+    ['Risc geopolitic / reglementare', 'Producție concentrată într-o singură țară = notă mică.'],
+  ],
+  forex: [
+    ['Fluxuri reale', 'Cerere de monedă din comerț și investiții: cont curent, export.'],
+    ['Disciplina băncii centrale', 'Inflație ținută sub control, bancă centrală independentă.'],
+    ['Rezerve și datorie externă', 'Rezerve valutare mari față de datoria pe termen scurt.'],
+    ['Roluri noi', 'Moneda câștigă loc în decontări comerciale sau în rezervele altor state.'],
+    ['Fluxuri autentice', 'Cerere din economia reală, nu doar din carry trade speculativ.'],
+    ['Instituții credibile', 'Guvern și bancă centrală previzibile, fără intervenții haotice.'],
+    ['Dobândă reală', 'Dobânda minus inflația favorizează moneda.'],
+    ['Economie diversificată', 'Exporturi variate, nu dependență de o singură marfă.'],
+    ['Rol de refugiu', 'Moneda e căutată în crize sau pentru decontări.'],
+    ['Evaluare', 'Subevaluată față de valoarea fundamentală (paritatea puterii de cumpărare, curs real efectiv).'],
+    ['Media (neliniar)', 'Atenție echilibrată; panica sau euforia marchează extremele.'],
+    ['Trend și volatilitate', 'Trend sănătos, fără salturi bruște.'],
+    ['Aglomerație (invers)', 'Puțini speculatori pe aceeași direcție (rapoartele CFTC).'],
+    ['Risc politic', 'Fără sancțiuni, controale de capital sau crize politice.'],
+  ],
+  'economii-emergente': [
+    ['Creștere reală', 'PIB și cerere internă în creștere, susținute de consum și investiții.'],
+    ['Disciplina fiscală', 'Deficit bugetar sub control.'],
+    ['Datorie și finanțare', 'Datorie externă suportabilă, puțină pe termen scurt.'],
+    ['Sectoare noi', 'Tehnologie, relocarea producției (nearshoring), minerale critice.'],
+    ['Capital pe termen lung', 'Investiții străine directe, nu doar capital speculativ.'],
+    ['Calitatea instituțiilor', 'Statul de drept, predictibilitate, corupție scăzută.'],
+    ['Inflație și dobândă reală', 'Inflație în scădere, dobândă reală pozitivă.'],
+    ['Exporturi diversificate', 'Mai multe industrii și mai mulți parteneri comerciali.'],
+    ['Poziție strategică', 'Resurse sau rol greu de înlocuit în lanțurile globale.'],
+    ['Evaluare', 'Bursa și moneda ieftine față de istoric și față de alte economii.'],
+    ['Media (neliniar)', 'Atenție echilibrată; euforia marchează vârful.'],
+    ['Trend și volum', 'Piața urcă pe volum sănătos.'],
+    ['Aglomerație (invers)', 'Fondurile internaționale încă sub-expuse.'],
+    ['Risc geopolitic', 'Fără conflicte, sancțiuni sau schimbări bruște de regim.'],
+  ],
+  sp500: [
+    ['Venituri reale', 'Venituri și profit în creștere, nu doar promisiuni.'],
+    ['Disciplina capitalului', 'Răscumpărări din profit, fără diluarea acționarilor.'],
+    ['Bilanț solid', 'Datorie mică față de numerar și profit.'],
+    ['Piețe noi', 'Expunere reală la creșteri noi (AI, energie, sănătate).'],
+    ['Clienți recurenți', 'Venituri diversificate și repetate, nu câțiva clienți mari.'],
+    ['Management credibil', 'Promisiuni ținute, guvernanță curată.'],
+    ['Marje și flux de numerar', 'Marje în creștere și flux de numerar liber.'],
+    ['Diversitate', 'Mai multe produse, piețe și tipuri de clienți.'],
+    ['Avantaj competitiv', 'Greu de copiat: rețea, brand, tehnologie, costuri.'],
+    ['Evaluare', 'Preț față de profit și flux de numerar, comparat cu istoricul și sectorul.'],
+    ['Media (neliniar)', 'Atenție echilibrată; euforia marchează vârful.'],
+    ['Preț și volum', 'Trend sănătos, fără divergențe de volum.'],
+    ['Aglomerație (invers)', 'Poziționare instituțională moderată, puține pariuri în aceeași direcție.'],
+    ['Riscuri mici', 'Fără procese, anchete sau riscuri de reglementare mari.'],
+  ],
+};

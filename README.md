@@ -37,7 +37,8 @@ Conflicte de interese: autorul deține sau a deținut poziții în Lighter (LIT)
 ## Structură
 
 - `radar/`: sursa radarului (`assets.json` cu notele, `template.html`, `build_site.py`). După orice modificare: `python3 radar/build_site.py`, care regenerează `public/index.html`, `public/en/index.html` și instantaneul.
-- `src/pages/domenii/`: paginile cu date oficiale.
+- `src/pages/domenii/`: paginile pe domenii. Start-ups are subpagini pe continente și țări (inclusiv România), filtrate după țara sediului (`COUNTRY` în `src/data/radar.ts`).
+- `src/data/criteria.ts`: cele 14 condiții adaptate pentru fiecare domeniu (cripto/companii, mărfuri, forex, economii emergente, S&P 500), cu aceleași ponderi.
 - `src/data/domains.ts`: registrul domeniilor. Un domeniu nou înseamnă un obiect nou aici, iar pagina lui se generează automat. Subdomeniile folosesc slug-uri ierarhice, ex. `startups/europa/romania`.
 - `src/data/datasets.ts`: seturile de date, fiecare cu sursă obligatorie.
 

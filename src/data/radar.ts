@@ -56,6 +56,23 @@ export const GROUP: Record<string, string> = {
   emerging: 'Emergentă',
 };
 
+/** Țara sediului principal, pentru companiile de pe radar (ISO 3166-1 alpha-2). */
+export const COUNTRY: Record<string, string> = {
+  'spacex-spcx': 'US', 'cerebras-cbrs': 'US', 'coreweave-crwv': 'US', 'circle-crcl': 'US', 'figma-fig': 'US',
+  'klarna-klar': 'SE', 'chime-chym': 'US', 'gemini-gemi': 'US', 'stubhub-stub': 'US', 'catl-3750-hk': 'CN', shein: 'SG',
+  openai: 'US', databricks: 'US', stripe: 'US', revolut: 'GB', bytedance: 'CN', anduril: 'US', ramp: 'US', canva: 'AU',
+  'kraken-payward': 'US', discord: 'US', plaid: 'US',
+  lovable: 'SE', mercor: 'US', elevenlabs: 'GB', harvey: 'US', sierra: 'US', 'mistral-ai': 'FR', cognition: 'US',
+  glean: 'US', replit: 'US', perplexity: 'US', 'figure-ai': 'US',
+  'safe-superintelligence-ssi': 'US', 'thinking-machines-lab': 'US', 'project-prometheus': 'US', 'ami-labs': 'FR',
+  'ineffable-intelligence': 'GB', 'physical-intelligence': 'US', 'periodic-labs': 'US', 'unconventional-ai': 'US',
+  'reflection-ai': 'US', humans: 'US', 'merge-labs': 'US',
+};
+export const COUNTRY_NAME: Record<string, string> = {
+  US: 'SUA', CA: 'Canada', GB: 'Marea Britanie', FR: 'Franța', SE: 'Suedia', DE: 'Germania', RO: 'România',
+  CN: 'China', SG: 'Singapore', IN: 'India', AU: 'Australia', BR: 'Brazilia',
+};
+
 export type Zone = 'puternic' | 'observatie' | 'slab';
 export const zone = (k: number): Zone => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
 export const ZONE_LABEL: Record<Zone, string> = {
@@ -99,8 +116,9 @@ export const pct = (x: number | undefined) =>
   x === undefined ? '—' : `${x > 0 ? '+' : ''}${x.toLocaleString('ro-RO', { maximumFractionDigits: 1, minimumFractionDigits: 1 })}%`;
 
 /** Tot ce are nevoie pagina unui domeniu despre activele lui de pe radar. */
-export function radarView(market: Market) {
-  const list = assets.filter((a) => a.m === market).sort((a, b) => b.k - a.k || b.s - a.s);
+export function radarView(market: Market, countries?: string[]) {
+  const list = assets
+    .filter((a) => a.m === market && (!countries || countries.includes(COUNTRY[a.id]))).sort((a, b) => b.k - a.k || b.s - a.s);
   const bench = db.benchmarks[BENCH_FOR[market]];
   const start = db.start;
   const rows = list.map((a) => {

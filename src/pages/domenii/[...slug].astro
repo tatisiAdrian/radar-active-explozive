@@ -5,7 +5,8 @@ import Chart from '../../components/Chart.astro';
 import RadarSection from '../../components/RadarSection.astro';
 import { domains, childrenOf, breadcrumbs } from '../../data/domains';
 import { datasets, datasetsFor, datasetById } from '../../data/datasets';
-import { dbSource } from '../../data/radar';
+import { dbSource, radarView } from '../../data/radar';
+import { CRITERIA, WEIGHTS } from '../../data/criteria';
 import type { Domain } from '../../data/types';
 
 export function getStaticPaths() {
@@ -31,7 +32,10 @@ const data = datasetsFor(domain.slug);
 const subdomains = childrenOf(domain.slug);
 const crumbs = breadcrumbs(domain.slug);
 const sources = [...new Map(data.map((d) => [d.source.url, d.source])).values()];
-if (domain.radarMarket) sources.push(dbSource);
+const radarRows = domain.radarMarket ? radarView(domain.radarMarket, domain.countries).rows.length : 0;
+if (radarRows) sources.push(dbSource);
+const criteria = domain.criteria ? CRITERIA[domain.criteria] : undefined;
+if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domain.criteria}” nu există (${domain.slug}).`);
 ---
 <Base title={domain.title} description={domain.summary}>
   <p class="crumbs">
@@ -47,7 +51,30 @@ if (domain.radarMarket) sources.push(dbSource);
     <ul>{domain.questions.map((q) => <li>{q}</li>)}</ul>
   </section>
 
-  {domain.radarMarket && <RadarSection market={domain.radarMarket} domain={domain.slug} />}
+  {domain.radarMarket && radarRows > 0 && <RadarSection market={domain.radarMarket} domain={domain.slug} countries={domain.countries} />}
+  {domain.radarMarket && radarRows === 0 && (
+    <section>
+      <h2>Activele de pe radar în această zonă</h2>
+      <p class="notice">Niciun activ din această zonă nu e încă pe radar. Le adăugăm doar după ce le notăm pe aceleași 14 condiții, cu date verificabile. Până atunci nu afișăm clasamente sau cifre.</p>
+    </section>
+  )}
+
+  {criteria && (
+    <section>
+      <h2>Cum aplicăm cele 14 condiții {domain.radarMarket ? 'aici' : 'în acest domeniu'}</h2>
+      <p class="muted">Același algoritm ca la cripto, companii și mărfuri: fiecare condiție primește o notă de la 0 la 10 și e îndeplinită de la 7. Ponderile sunt identice în toate domeniile; se schimbă doar ce măsurăm concret.{!domain.radarMarket && ' Primele active din acest domeniu vor fi notate și publicate cu instantaneu înghețat, ca restul radarului.'}</p>
+      <div class="table-wrap">
+        <table class="radar criteria">
+          <thead><tr><th>#</th><th>Condiție</th><th>Ce măsurăm</th><th>Pondere</th></tr></thead>
+          <tbody>
+            {criteria.map(([name, what], i) => (
+              <tr><td class="muted">C{i + 1}</td><td><b>{name}</b></td><td>{what}</td><td class="num">{WEIGHTS[i]}%</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )}
 
   <section>
     <h2>{domain.radarMarket ? 'Fundamentare: date oficiale' : 'Date și grafice'}</h2>

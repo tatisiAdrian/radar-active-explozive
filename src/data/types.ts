@@ -52,4 +52,8 @@ export interface Domain {
   interpretations?: Interpretation[];
   /** Piața de pe radar ale cărei active apar pe pagina domeniului (prețuri săptămânale, condiții). */
   radarMarket?: 'crypto' | 'comp' | 'comm';
+  /** Limitează activele radarului la aceste țări (coduri ISO, ex. 'US', 'RO'). */
+  countries?: string[];
+  /** Setul de condiții adaptat (cheie din src/data/criteria.ts). */
+  criteria?: string;
 }
