@@ -9,7 +9,8 @@ import { dirname } from 'node:path';
 
 const OUT = new URL('../src/data/sp500/macro.json', import.meta.url);
 const START = '2026-09-04';
-const SEC_UA = { 'User-Agent': 'RadarActiveExplozive research bot (github.com/TatisiAdrian/radar-active-explozive)', 'Accept-Encoding': 'gzip, deflate' };
+// SEC cere un User-Agent de forma „Nume adresă-de-contact”; folosim adresa noreply a contului GitHub al proiectului.
+const SEC_UA = { 'User-Agent': 'RadarActiveExplozive radar-active-explozive@users.noreply.github.com', 'Accept-Encoding': 'gzip, deflate' };
 const UA = { 'User-Agent': 'Mozilla/5.0 (radar-active-explozive data bot)' };
 
 export const COMPANIES = {
