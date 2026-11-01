@@ -3,7 +3,7 @@
  "start": "2026-09-04",
  "sources": {
   "sec": {
-   "name": "SEC EDGAR, rapoarte anuale 10-K (XBRL companyfacts)",
+   "name": "Rapoarte anuale 10-K (SEC), cifre preluate prin seria fundamentală Yahoo Finance",
    "url": "https://www.sec.gov/edgar/search/",
    "retrievedAt": "2026-11-01"
   },
@@ -13,7 +13,1076 @@
    "retrievedAt": "2026-11-01"
   }
  },
- "companies": {},
+ "companies": {
+  "AAPL": {
+   "name": "Apple",
+   "cik": "0000320193",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=10-K",
+   "revenue": {
+    "end": "2025-09-30",
+    "value": 416161000000,
+    "prevEnd": "2024-09-30",
+    "prev": 391035000000
+   },
+   "netIncome": {
+    "end": "2025-09-30",
+    "value": 112010000000,
+    "prevEnd": "2024-09-30",
+    "prev": 93736000000
+   },
+   "opCashFlow": {
+    "end": "2025-09-30",
+    "value": 111482000000,
+    "prevEnd": "2024-09-30",
+    "prev": 118254000000
+   },
+   "capex": {
+    "end": "2025-09-30",
+    "value": 12715000000,
+    "prevEnd": "2024-09-30",
+    "prev": 9447000000
+   },
+   "buybacks": {
+    "end": "2025-09-30",
+    "value": 90711000000,
+    "prevEnd": "2024-09-30",
+    "prev": 94949000000
+   },
+   "cash": {
+    "end": "2025-09-30",
+    "value": 35934000000,
+    "prevEnd": "2024-09-30",
+    "prev": 29943000000
+   },
+   "debt": {
+    "end": "2025-09-30",
+    "value": 78328000000,
+    "prevEnd": "2024-09-30",
+    "prev": 85750000000
+   },
+   "shares": {
+    "end": "2025-09-30",
+    "value": 14773260000,
+    "yearAgoEnd": "2024-09-30",
+    "yearAgo": 15116786000
+   }
+  },
+  "MSFT": {
+   "name": "Microsoft",
+   "cik": "0000789019",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=10-K",
+   "revenue": {
+    "end": "2026-06-30",
+    "value": 331839000000,
+    "prevEnd": "2025-06-30",
+    "prev": 281724000000
+   },
+   "netIncome": {
+    "end": "2026-06-30",
+    "value": 133749000000,
+    "prevEnd": "2025-06-30",
+    "prev": 101832000000
+   },
+   "opCashFlow": {
+    "end": "2026-06-30",
+    "value": 182935000000,
+    "prevEnd": "2025-06-30",
+    "prev": 136162000000
+   },
+   "capex": {
+    "end": "2026-06-30",
+    "value": 115948000000,
+    "prevEnd": "2025-06-30",
+    "prev": 64551000000
+   },
+   "buybacks": {
+    "end": "2026-06-30",
+    "value": 22271000000,
+    "prevEnd": "2025-06-30",
+    "prev": 18420000000
+   },
+   "cash": {
+    "end": "2026-06-30",
+    "value": 20935000000,
+    "prevEnd": "2025-06-30",
+    "prev": 30242000000
+   },
+   "debt": {
+    "end": "2026-06-30",
+    "value": 31067000000,
+    "prevEnd": "2025-06-30",
+    "prev": 40152000000
+   },
+   "shares": {
+    "end": "2026-06-30",
+    "value": 7427000000,
+    "yearAgoEnd": "2025-06-30",
+    "yearAgo": 7434158655
+   }
+  },
+  "NVDA": {
+   "name": "Nvidia",
+   "cik": "0001045810",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=10-K",
+   "revenue": {
+    "end": "2026-01-31",
+    "value": 215938000000,
+    "prevEnd": "2025-01-31",
+    "prev": 130497000000
+   },
+   "netIncome": {
+    "end": "2026-01-31",
+    "value": 120067000000,
+    "prevEnd": "2025-01-31",
+    "prev": 72880000000
+   },
+   "opCashFlow": {
+    "end": "2026-01-31",
+    "value": 102718000000,
+    "prevEnd": "2025-01-31",
+    "prev": 64089000000
+   },
+   "capex": {
+    "end": "2026-01-31",
+    "value": 6042000000,
+    "prevEnd": "2025-01-31",
+    "prev": 3236000000
+   },
+   "buybacks": {
+    "end": "2026-01-31",
+    "value": 40086000000,
+    "prevEnd": "2025-01-31",
+    "prev": 33706000000
+   },
+   "cash": {
+    "end": "2026-01-31",
+    "value": 10605000000,
+    "prevEnd": "2025-01-31",
+    "prev": 8589000000
+   },
+   "debt": {
+    "end": "2026-01-31",
+    "value": 7469000000,
+    "prevEnd": "2025-01-31",
+    "prev": 8463000000
+   },
+   "shares": {
+    "end": "2026-01-31",
+    "value": 24304000000,
+    "yearAgoEnd": "2025-01-31",
+    "yearAgo": 24477000000
+   }
+  },
+  "AMZN": {
+   "name": "Amazon",
+   "cik": "0001018724",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724&type=10-K",
+   "revenue": {
+    "end": "2025-12-31",
+    "value": 716924000000,
+    "prevEnd": "2024-12-31",
+    "prev": 637959000000
+   },
+   "netIncome": {
+    "end": "2025-12-31",
+    "value": 77670000000,
+    "prevEnd": "2024-12-31",
+    "prev": 59248000000
+   },
+   "opCashFlow": {
+    "end": "2025-12-31",
+    "value": 139514000000,
+    "prevEnd": "2024-12-31",
+    "prev": 115877000000
+   },
+   "capex": {
+    "end": "2025-12-31",
+    "value": 131819000000,
+    "prevEnd": "2024-12-31",
+    "prev": 82999000000
+   },
+   "buybacks": {
+    "end": "2024-12-31",
+    "value": 0,
+    "prevEnd": "2023-12-31",
+    "prev": 0
+   },
+   "cash": {
+    "end": "2025-12-31",
+    "value": 86810000000,
+    "prevEnd": "2024-12-31",
+    "prev": 78779000000
+   },
+   "debt": {
+    "end": "2025-12-31",
+    "value": 65648000000,
+    "prevEnd": "2024-12-31",
+    "prev": 52623000000
+   },
+   "shares": {
+    "end": "2025-12-31",
+    "value": 10731000000,
+    "yearAgoEnd": "2024-12-31",
+    "yearAgo": 10593000000
+   }
+  },
+  "GOOGL": {
+   "name": "Alphabet",
+   "cik": "0001652044",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-K",
+   "revenue": {
+    "end": "2025-12-31",
+    "value": 402836000000,
+    "prevEnd": "2024-12-31",
+    "prev": 350018000000
+   },
+   "netIncome": {
+    "end": "2025-12-31",
+    "value": 132170000000,
+    "prevEnd": "2024-12-31",
+    "prev": 100118000000
+   },
+   "opCashFlow": {
+    "end": "2025-12-31",
+    "value": 164713000000,
+    "prevEnd": "2024-12-31",
+    "prev": 125299000000
+   },
+   "capex": {
+    "end": "2025-12-31",
+    "value": 91447000000,
+    "prevEnd": "2024-12-31",
+    "prev": 52535000000
+   },
+   "buybacks": {
+    "end": "2025-12-31",
+    "value": 45709000000,
+    "prevEnd": "2024-12-31",
+    "prev": 62222000000
+   },
+   "cash": {
+    "end": "2025-12-31",
+    "value": 30708000000,
+    "prevEnd": "2024-12-31",
+    "prev": 23466000000
+   },
+   "debt": {
+    "end": "2025-12-31",
+    "value": 46547000000,
+    "prevEnd": "2024-12-31",
+    "prev": 10883000000
+   },
+   "shares": {
+    "end": "2025-12-31",
+    "value": 12088000000,
+    "yearAgoEnd": "2024-12-31",
+    "yearAgo": 12211000000
+   }
+  },
+  "META": {
+   "name": "Meta Platforms",
+   "cik": "0001326801",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=10-K",
+   "revenue": {
+    "end": "2025-12-31",
+    "value": 200966000000,
+    "prevEnd": "2024-12-31",
+    "prev": 164501000000
+   },
+   "netIncome": {
+    "end": "2025-12-31",
+    "value": 60458000000,
+    "prevEnd": "2024-12-31",
+    "prev": 62360000000
+   },
+   "opCashFlow": {
+    "end": "2025-12-31",
+    "value": 115800000000,
+    "prevEnd": "2024-12-31",
+    "prev": 91328000000
+   },
+   "capex": {
+    "end": "2025-12-31",
+    "value": 69691000000,
+    "prevEnd": "2024-12-31",
+    "prev": 37256000000
+   },
+   "buybacks": {
+    "end": "2025-12-31",
+    "value": 26248000000,
+    "prevEnd": "2024-12-31",
+    "prev": 30125000000
+   },
+   "cash": {
+    "end": "2025-12-31",
+    "value": 35873000000,
+    "prevEnd": "2024-12-31",
+    "prev": 43889000000
+   },
+   "debt": {
+    "end": "2025-12-31",
+    "value": 58744000000,
+    "prevEnd": "2024-12-31",
+    "prev": 28826000000
+   },
+   "shares": {
+    "end": "2025-12-31",
+    "value": 2529638328,
+    "yearAgoEnd": "2024-12-31",
+    "yearAgo": 2534487662
+   }
+  },
+  "AVGO": {
+   "name": "Broadcom",
+   "cik": "0001730168",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001730168&type=10-K",
+   "revenue": {
+    "end": "2025-10-31",
+    "value": 63887000000,
+    "prevEnd": "2024-10-31",
+    "prev": 51574000000
+   },
+   "netIncome": {
+    "end": "2025-10-31",
+    "value": 23126000000,
+    "prevEnd": "2024-10-31",
+    "prev": 5895000000
+   },
+   "opCashFlow": {
+    "end": "2025-10-31",
+    "value": 27537000000,
+    "prevEnd": "2024-10-31",
+    "prev": 19962000000
+   },
+   "capex": {
+    "end": "2025-10-31",
+    "value": 623000000,
+    "prevEnd": "2024-10-31",
+    "prev": 548000000
+   },
+   "buybacks": {
+    "end": "2025-10-31",
+    "value": 6310000000,
+    "prevEnd": "2024-10-31",
+    "prev": 12392000000
+   },
+   "cash": {
+    "end": "2025-10-31",
+    "value": 16178000000,
+    "prevEnd": "2024-10-31",
+    "prev": 9348000000
+   },
+   "debt": {
+    "end": "2025-10-31",
+    "value": 61984000000,
+    "prevEnd": "2024-10-31",
+    "prev": 66282000000
+   },
+   "shares": {
+    "end": "2025-10-31",
+    "value": 4741000000,
+    "yearAgoEnd": "2024-10-31",
+    "yearAgo": 4686000000
+   }
+  },
+  "TSLA": {
+   "name": "Tesla",
+   "cik": "0001318605",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001318605&type=10-K",
+   "revenue": {
+    "end": "2025-12-31",
+    "value": 94827000000,
+    "prevEnd": "2024-12-31",
+    "prev": 97690000000
+   },
+   "netIncome": {
+    "end": "2025-12-31",
+    "value": 3794000000,
+    "prevEnd": "2024-12-31",
+    "prev": 7130000000
+   },
+   "opCashFlow": {
+    "end": "2025-12-31",
+    "value": 14747000000,
+    "prevEnd": "2024-12-31",
+    "prev": 14923000000
+   },
+   "capex": {
+    "end": "2025-12-31",
+    "value": 8527000000,
+    "prevEnd": "2024-12-31",
+    "prev": 11342000000
+   },
+   "cash": {
+    "end": "2025-12-31",
+    "value": 16513000000,
+    "prevEnd": "2024-12-31",
+    "prev": 16139000000
+   },
+   "debt": {
+    "end": "2025-12-31",
+    "value": 6584000000,
+    "prevEnd": "2024-12-31",
+    "prev": 5535000000
+   },
+   "shares": {
+    "end": "2025-12-31",
+    "value": 3751000000,
+    "yearAgoEnd": "2024-12-31",
+    "yearAgo": 3216000000
+   }
+  },
+  "LLY": {
+   "name": "Eli Lilly",
+   "cik": "0000059478",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000059478&type=10-K",
+   "revenue": {
+    "end": "2025-12-31",
+    "value": 65179000000,
+    "prevEnd": "2024-12-31",
+    "prev": 45043000000
+   },
+   "netIncome": {
+    "end": "2025-12-31",
+    "value": 20640000000,
+    "prevEnd": "2024-12-31",
+    "prev": 10590000000
+   },
+   "opCashFlow": {
+    "end": "2025-12-31",
+    "value": 16813000000,
+    "prevEnd": "2024-12-31",
+    "prev": 8818000000
+   },
+   "capex": {
+    "end": "2025-12-31",
+    "value": 10849000000,
+    "prevEnd": "2024-12-31",
+    "prev": 8404000000
+   },
+   "buybacks": {
+    "end": "2025-12-31",
+    "value": 4108000000,
+    "prevEnd": "2024-12-31",
+    "prev": 2500000000
+   },
+   "cash": {
+    "end": "2025-12-31",
+    "value": 7268000000,
+    "prevEnd": "2024-12-31",
+    "prev": 3268000000
+   },
+   "debt": {
+    "end": "2025-12-31",
+    "value": 40868000000,
+    "prevEnd": "2024-12-31",
+    "prev": 28527000000
+   },
+   "shares": {
+    "end": "2025-12-31",
+    "value": 894800000,
+    "yearAgoEnd": "2024-12-31",
+    "yearAgo": 897538000
+   }
+  },
+  "V": {
+   "name": "Visa",
+   "cik": "0001403161",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001403161&type=10-K",
+   "revenue": {
+    "end": "2025-09-30",
+    "value": 40000000000,
+    "prevEnd": "2024-09-30",
+    "prev": 35926000000
+   },
+   "netIncome": {
+    "end": "2025-09-30",
+    "value": 20058000000,
+    "prevEnd": "2024-09-30",
+    "prev": 19743000000
+   },
+   "opCashFlow": {
+    "end": "2025-09-30",
+    "value": 23059000000,
+    "prevEnd": "2024-09-30",
+    "prev": 19950000000
+   },
+   "capex": {
+    "end": "2025-09-30",
+    "value": 1482000000,
+    "prevEnd": "2024-09-30",
+    "prev": 1257000000
+   },
+   "buybacks": {
+    "end": "2025-09-30",
+    "value": 18316000000,
+    "prevEnd": "2024-09-30",
+    "prev": 16713000000
+   },
+   "cash": {
+    "end": "2025-09-30",
+    "value": 17164000000,
+    "prevEnd": "2024-09-30",
+    "prev": 11975000000
+   },
+   "debt": {
+    "end": "2025-09-30",
+    "value": 19602000000,
+    "prevEnd": "2024-09-30",
+    "prev": 20836000000
+   },
+   "shares": {
+    "end": "2025-09-30",
+    "value": 1925199951,
+    "yearAgoEnd": "2024-09-30",
+    "yearAgo": 1972453147
+   }
+  },
+  "XOM": {
+   "name": "Exxon Mobil",
+   "cik": "0000034088",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000034088&type=10-K",
+   "revenue": {
+    "end": "2025-12-31",
+    "value": 323905000000,
+    "prevEnd": "2024-12-31",
+    "prev": 339247000000
+   },
+   "netIncome": {
+    "end": "2025-12-31",
+    "value": 28844000000,
+    "prevEnd": "2024-12-31",
+    "prev": 33680000000
+   },
+   "opCashFlow": {
+    "end": "2025-12-31",
+    "value": 51970000000,
+    "prevEnd": "2024-12-31",
+    "prev": 55022000000
+   },
+   "capex": {
+    "end": "2025-12-31",
+    "value": 28358000000,
+    "prevEnd": "2024-12-31",
+    "prev": 24306000000
+   },
+   "buybacks": {
+    "end": "2025-12-31",
+    "value": 20273000000,
+    "prevEnd": "2024-12-31",
+    "prev": 19629000000
+   },
+   "cash": {
+    "end": "2025-12-31",
+    "value": 10681000000,
+    "prevEnd": "2024-12-31",
+    "prev": 23029000000
+   },
+   "debt": {
+    "end": "2025-12-31",
+    "value": 27928000000,
+    "prevEnd": "2024-12-31",
+    "prev": 32804000000
+   },
+   "shares": {
+    "end": "2025-12-31",
+    "value": 4179000000,
+    "yearAgoEnd": "2024-12-31",
+    "yearAgo": 4353094536
+   }
+  },
+  "WMT": {
+   "name": "Walmart",
+   "cik": "0000104169",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000104169&type=10-K",
+   "revenue": {
+    "end": "2026-01-31",
+    "value": 713163000000,
+    "prevEnd": "2025-01-31",
+    "prev": 680985000000
+   },
+   "netIncome": {
+    "end": "2026-01-31",
+    "value": 21893000000,
+    "prevEnd": "2025-01-31",
+    "prev": 19436000000
+   },
+   "opCashFlow": {
+    "end": "2026-01-31",
+    "value": 41565000000,
+    "prevEnd": "2025-01-31",
+    "prev": 36443000000
+   },
+   "capex": {
+    "end": "2026-01-31",
+    "value": 26642000000,
+    "prevEnd": "2025-01-31",
+    "prev": 23783000000
+   },
+   "buybacks": {
+    "end": "2026-01-31",
+    "value": 8088000000,
+    "prevEnd": "2025-01-31",
+    "prev": 4494000000
+   },
+   "cash": {
+    "end": "2026-01-31",
+    "value": 10727000000,
+    "prevEnd": "2025-01-31",
+    "prev": 9037000000
+   },
+   "debt": {
+    "end": "2026-01-31",
+    "value": 34624000000,
+    "prevEnd": "2025-01-31",
+    "prev": 33401000000
+   },
+   "shares": {
+    "end": "2026-01-31",
+    "value": 7969000000,
+    "yearAgoEnd": "2025-01-31",
+    "yearAgo": 8024000000
+   }
+  },
+  "UNH": {
+   "name": "UnitedHealth",
+   "cik": "0000731766",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000731766&type=10-K",
+   "revenue": {
+    "end": "2025-12-31",
+    "value": 447567000000,
+    "prevEnd": "2024-12-31",
+    "prev": 400278000000
+   },
+   "netIncome": {
+    "end": "2025-12-31",
+    "value": 12056000000,
+    "prevEnd": "2024-12-31",
+    "prev": 14405000000
+   },
+   "opCashFlow": {
+    "end": "2025-12-31",
+    "value": 19697000000,
+    "prevEnd": "2024-12-31",
+    "prev": 24204000000
+   },
+   "capex": {
+    "end": "2025-12-31",
+    "value": 3622000000,
+    "prevEnd": "2024-12-31",
+    "prev": 3499000000
+   },
+   "buybacks": {
+    "end": "2025-12-31",
+    "value": 5545000000,
+    "prevEnd": "2024-12-31",
+    "prev": 9000000000
+   },
+   "cash": {
+    "end": "2025-12-31",
+    "value": 24365000000,
+    "prevEnd": "2024-12-31",
+    "prev": 25312000000
+   },
+   "debt": {
+    "end": "2025-12-31",
+    "value": 72320000000,
+    "prevEnd": "2024-12-31",
+    "prev": 72359000000
+   },
+   "shares": {
+    "end": "2025-12-31",
+    "value": 905838620,
+    "yearAgoEnd": "2024-12-31",
+    "yearAgo": 915000000
+   }
+  },
+  "JNJ": {
+   "name": "Johnson & Johnson",
+   "cik": "0000200406",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000200406&type=10-K",
+   "revenue": {
+    "end": "2025-12-31",
+    "value": 94193000000,
+    "prevEnd": "2024-12-31",
+    "prev": 88821000000
+   },
+   "netIncome": {
+    "end": "2025-12-31",
+    "value": 26804000000,
+    "prevEnd": "2024-12-31",
+    "prev": 14066000000
+   },
+   "opCashFlow": {
+    "end": "2025-12-31",
+    "value": 24530000000,
+    "prevEnd": "2024-12-31",
+    "prev": 24266000000
+   },
+   "capex": {
+    "end": "2025-12-31",
+    "value": 5217000000,
+    "prevEnd": "2024-12-31",
+    "prev": 6207000000
+   },
+   "buybacks": {
+    "end": "2025-12-31",
+    "value": 5953000000,
+    "prevEnd": "2024-12-31",
+    "prev": 2432000000
+   },
+   "cash": {
+    "end": "2025-12-31",
+    "value": 19709000000,
+    "prevEnd": "2024-12-31",
+    "prev": 24105000000
+   },
+   "debt": {
+    "end": "2025-12-31",
+    "value": 39438000000,
+    "prevEnd": "2024-12-31",
+    "prev": 30651000000
+   },
+   "shares": {
+    "end": "2025-12-31",
+    "value": 2407939000,
+    "yearAgoEnd": "2024-12-31",
+    "yearAgo": 2406922000
+   }
+  },
+  "PG": {
+   "name": "Procter & Gamble",
+   "cik": "0000080424",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000080424&type=10-K",
+   "revenue": {
+    "end": "2026-06-30",
+    "value": 87032000000,
+    "prevEnd": "2025-06-30",
+    "prev": 84284000000
+   },
+   "netIncome": {
+    "end": "2026-06-30",
+    "value": 16046000000,
+    "prevEnd": "2025-06-30",
+    "prev": 15974000000
+   },
+   "opCashFlow": {
+    "end": "2026-06-30",
+    "value": 19556000000,
+    "prevEnd": "2025-06-30",
+    "prev": 17817000000
+   },
+   "capex": {
+    "end": "2026-06-30",
+    "value": 4409000000,
+    "prevEnd": "2025-06-30",
+    "prev": 3773000000
+   },
+   "buybacks": {
+    "end": "2026-06-30",
+    "value": 5028000000,
+    "prevEnd": "2025-06-30",
+    "prev": 6500000000
+   },
+   "cash": {
+    "end": "2026-06-30",
+    "value": 9942000000,
+    "prevEnd": "2025-06-30",
+    "prev": 9556000000
+   },
+   "debt": {
+    "end": "2026-06-30",
+    "value": 22842000000,
+    "prevEnd": "2025-06-30",
+    "prev": 24995000000
+   },
+   "shares": {
+    "end": "2026-06-30",
+    "value": 2323858841,
+    "yearAgoEnd": "2025-06-30",
+    "yearAgo": 2341944000
+   }
+  },
+  "ORCL": {
+   "name": "Oracle",
+   "cik": "0001341439",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001341439&type=10-K",
+   "revenue": {
+    "end": "2026-05-31",
+    "value": 67357000000,
+    "prevEnd": "2025-05-31",
+    "prev": 57399000000
+   },
+   "netIncome": {
+    "end": "2026-05-31",
+    "value": 17087000000,
+    "prevEnd": "2025-05-31",
+    "prev": 12443000000
+   },
+   "opCashFlow": {
+    "end": "2026-05-31",
+    "value": 31977000000,
+    "prevEnd": "2025-05-31",
+    "prev": 20821000000
+   },
+   "capex": {
+    "end": "2026-05-31",
+    "value": 55663000000,
+    "prevEnd": "2025-05-31",
+    "prev": 21215000000
+   },
+   "buybacks": {
+    "end": "2026-05-31",
+    "value": 206000000,
+    "prevEnd": "2025-05-31",
+    "prev": 1500000000
+   },
+   "cash": {
+    "end": "2026-05-31",
+    "value": 31289000000,
+    "prevEnd": "2025-05-31",
+    "prev": 10786000000
+   },
+   "debt": {
+    "end": "2026-05-31",
+    "value": 122342000000,
+    "prevEnd": "2025-05-31",
+    "prev": 85297000000
+   },
+   "shares": {
+    "end": "2026-05-31",
+    "value": 2880000000,
+    "yearAgoEnd": "2025-05-31",
+    "yearAgo": 2807000000
+   }
+  },
+  "COST": {
+   "name": "Costco",
+   "cik": "0000909832",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000909832&type=10-K",
+   "revenue": {
+    "end": "2026-08-31",
+    "value": 303154000000,
+    "prevEnd": "2025-08-31",
+    "prev": 275235000000
+   },
+   "netIncome": {
+    "end": "2026-08-31",
+    "value": 9226000000,
+    "prevEnd": "2025-08-31",
+    "prev": 8099000000
+   },
+   "opCashFlow": {
+    "end": "2026-08-31",
+    "value": 15817000000,
+    "prevEnd": "2025-08-31",
+    "prev": 13335000000
+   },
+   "capex": {
+    "end": "2026-08-31",
+    "value": 6435000000,
+    "prevEnd": "2025-08-31",
+    "prev": 5498000000
+   },
+   "buybacks": {
+    "end": "2026-08-31",
+    "value": 848000000,
+    "prevEnd": "2025-08-31",
+    "prev": 903000000
+   },
+   "cash": {
+    "end": "2026-08-31",
+    "value": 20207000000,
+    "prevEnd": "2025-08-31",
+    "prev": 14161000000
+   },
+   "debt": {
+    "end": "2026-08-31",
+    "value": 3914000000,
+    "prevEnd": "2025-08-31",
+    "prev": 5713000000
+   },
+   "shares": {
+    "end": "2026-08-31",
+    "value": 443266000,
+    "yearAgoEnd": "2025-08-31",
+    "yearAgo": 443237000
+   }
+  },
+  "NFLX": {
+   "name": "Netflix",
+   "cik": "0001065280",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001065280&type=10-K",
+   "revenue": {
+    "end": "2025-12-31",
+    "value": 45183036000,
+    "prevEnd": "2024-12-31",
+    "prev": 39000966000
+   },
+   "netIncome": {
+    "end": "2025-12-31",
+    "value": 10981201000,
+    "prevEnd": "2024-12-31",
+    "prev": 8711631000
+   },
+   "opCashFlow": {
+    "end": "2025-12-31",
+    "value": 10149273000,
+    "prevEnd": "2024-12-31",
+    "prev": 7361364000
+   },
+   "capex": {
+    "end": "2025-12-31",
+    "value": 688220000,
+    "prevEnd": "2024-12-31",
+    "prev": 439538000
+   },
+   "buybacks": {
+    "end": "2025-12-31",
+    "value": 9127167000,
+    "prevEnd": "2024-12-31",
+    "prev": 6263746000
+   },
+   "cash": {
+    "end": "2025-12-31",
+    "value": 9033681000,
+    "prevEnd": "2024-12-31",
+    "prev": 7804733000
+   },
+   "debt": {
+    "end": "2025-12-31",
+    "value": 13463971000,
+    "prevEnd": "2024-12-31",
+    "prev": 13798351000
+   },
+   "shares": {
+    "end": "2025-12-31",
+    "value": 4222162150,
+    "yearAgoEnd": "2024-12-31",
+    "yearAgo": 4277571000
+   }
+  },
+  "AMD": {
+   "name": "AMD",
+   "cik": "0000002488",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=10-K",
+   "revenue": {
+    "end": "2025-12-31",
+    "value": 34639000000,
+    "prevEnd": "2024-12-31",
+    "prev": 25785000000
+   },
+   "netIncome": {
+    "end": "2025-12-31",
+    "value": 4335000000,
+    "prevEnd": "2024-12-31",
+    "prev": 1641000000
+   },
+   "opCashFlow": {
+    "end": "2025-12-31",
+    "value": 7709000000,
+    "prevEnd": "2024-12-31",
+    "prev": 3041000000
+   },
+   "capex": {
+    "end": "2025-12-31",
+    "value": 974000000,
+    "prevEnd": "2024-12-31",
+    "prev": 636000000
+   },
+   "buybacks": {
+    "end": "2025-12-31",
+    "value": 1923000000,
+    "prevEnd": "2024-12-31",
+    "prev": 1590000000
+   },
+   "cash": {
+    "end": "2025-12-31",
+    "value": 5539000000,
+    "prevEnd": "2024-12-31",
+    "prev": 3787000000
+   },
+   "debt": {
+    "end": "2025-12-31",
+    "value": 2348000000,
+    "prevEnd": "2024-12-31",
+    "prev": 1721000000
+   },
+   "shares": {
+    "end": "2025-12-31",
+    "value": 1630000000,
+    "yearAgoEnd": "2024-12-31",
+    "yearAgo": 1622000000
+   }
+  },
+  "PLTR": {
+   "name": "Palantir",
+   "cik": "0001321655",
+   "via": "Yahoo Finance",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655&type=10-K",
+   "revenue": {
+    "end": "2025-12-31",
+    "value": 4475446000,
+    "prevEnd": "2024-12-31",
+    "prev": 2865507000
+   },
+   "netIncome": {
+    "end": "2025-12-31",
+    "value": 1625033000,
+    "prevEnd": "2024-12-31",
+    "prev": 462190000
+   },
+   "opCashFlow": {
+    "end": "2025-12-31",
+    "value": 2134473000,
+    "prevEnd": "2024-12-31",
+    "prev": 1153865000
+   },
+   "capex": {
+    "end": "2025-12-31",
+    "value": 33882000,
+    "prevEnd": "2024-12-31",
+    "prev": 12634000
+   },
+   "buybacks": {
+    "end": "2025-12-31",
+    "value": 74985000,
+    "prevEnd": "2024-12-31",
+    "prev": 64196000
+   },
+   "cash": {
+    "end": "2025-12-31",
+    "value": 1423796000,
+    "prevEnd": "2024-12-31",
+    "prev": 2098524000
+   },
+   "shares": {
+    "end": "2025-12-31",
+    "value": 2391192000,
+    "yearAgoEnd": "2024-12-31",
+    "yearAgo": 2338795190
+   }
+  }
+ },
  "prices": {
   "AAPL": {
    "symbol": "AAPL",
@@ -961,26 +2030,5 @@
    "low52": 6343.72
   }
  },
- "errors": [
-  "SEC AAPL: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
-  "SEC MSFT: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
-  "SEC NVDA: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
-  "SEC AMZN: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
-  "SEC GOOGL: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
-  "SEC META: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0001326801.json",
-  "SEC AVGO: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0001730168.json",
-  "SEC TSLA: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json",
-  "SEC LLY: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0000059478.json",
-  "SEC V: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0001403161.json",
-  "SEC XOM: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0000034088.json",
-  "SEC WMT: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0000104169.json",
-  "SEC UNH: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0000731766.json",
-  "SEC JNJ: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0000200406.json",
-  "SEC PG: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0000080424.json",
-  "SEC ORCL: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0001341439.json",
-  "SEC COST: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0000909832.json",
-  "SEC NFLX: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0001065280.json",
-  "SEC AMD: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0000002488.json",
-  "SEC PLTR: 403 https://data.sec.gov/api/xbrl/companyfacts/CIK0001321655.json"
- ]
+ "errors": []
 }
