@@ -4126,6 +4126,53 @@
    "last": 43.4,
    "oneYearAgo": 33.71
   },
+  "RO": {
+   "symbol": "TVBETETF.RO",
+   "url": "https://finance.yahoo.com/quote/TVBETETF.RO",
+   "unit": "USD per unitate de ETF",
+   "points": [
+    [
+     "2026-09-04",
+     58.33
+    ],
+    [
+     "2026-09-11",
+     56.2
+    ],
+    [
+     "2026-09-18",
+     55.63
+    ],
+    [
+     "2026-09-25",
+     53.2
+    ],
+    [
+     "2026-10-02",
+     54.92
+    ],
+    [
+     "2026-10-09",
+     56.69
+    ],
+    [
+     "2026-10-16",
+     59.01
+    ],
+    [
+     "2026-10-23",
+     58.6
+    ],
+    [
+     "2026-10-30",
+     59.67
+    ]
+   ],
+   "high52": 62.16,
+   "low52": 37.22,
+   "last": 59.67,
+   "oneYearAgo": 37.22
+  },
   "VN": {
    "symbol": "VNM",
    "url": "https://finance.yahoo.com/quote/VNM",
@@ -4266,6 +4313,16 @@
    "low52": 79.18,
    "last": 79.18,
    "oneYearAgo": 94.39
+  },
+  "EG": {
+   "symbol": "^CASE30",
+   "url": "https://finance.yahoo.com/quote/%5ECASE30",
+   "unit": "puncte (indice local)",
+   "points": [],
+   "high52": 48744,
+   "low52": 48744,
+   "last": 48744,
+   "oneYearAgo": 48744
   },
   "PH": {
    "symbol": "EPHE",
@@ -4415,8 +4472,6 @@
   "BIS cpiYoY VN: 404 https://stats.bis.org/api/v1/data/WS_LONG_CPI/M.VN.771?startPeriod=2025-06&format=csv",
   "BIS policyRate EG: 404 https://stats.bis.org/api/v1/data/WS_CBPOL/M.EG?startPeriod=2025-06&format=csv",
   "BIS policyRateDaily EG: 404 https://stats.bis.org/api/v1/data/WS_CBPOL/D.EG?startPeriod=2026-07-01&format=csv",
-  "BIS cpiYoY EG: 404 https://stats.bis.org/api/v1/data/WS_LONG_CPI/M.EG.771?startPeriod=2025-06&format=csv",
-  "FX RO: 404 https://query1.finance.yahoo.com/v8/finance/chart/%5EBETI?range=1y&interval=1d",
-  "FX EG: 404 https://query1.finance.yahoo.com/v8/finance/chart/EGPT?range=1y&interval=1d"
+  "BIS cpiYoY EG: 404 https://stats.bis.org/api/v1/data/WS_LONG_CPI/M.EG.771?startPeriod=2025-06&format=csv"
  ]
 }
