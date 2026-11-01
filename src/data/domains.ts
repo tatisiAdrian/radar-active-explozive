@@ -84,11 +84,14 @@ export const domains: Domain[] = [
     questions: ['Care economii emergente au cele mai solide fundamente macro?'],
   },
   {
-    slug: 'companii-top-500',
-    title: 'Top 500 companii listate în SUA',
-    summary: 'Cele mai mari companii listate pe Wall Street după capitalizare.',
+    slug: 'sp500',
+    title: 'S&P 500',
+    summary: 'Cele 500 de companii mari listate în SUA din indicele S&P 500: capitalizare, sectoare, randamente.',
     status: 'planificat',
-    questions: ['Cât de concentrată este capitalizarea în primele 10 companii?'],
+    questions: [
+      'Cât de concentrată este capitalizarea indicelui în primele 10 companii?',
+      'Ce sectoare au contribuit cel mai mult la randamentul indicelui?',
+    ],
   },
 ];
 
