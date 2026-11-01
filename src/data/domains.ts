@@ -272,11 +272,12 @@ export const domains: Domain[] = [
     slug: 'sp500',
     criteria: 'sp500',
     title: 'S&P 500',
-    summary: 'Cele 500 de companii mari listate în SUA din indicele S&P 500: capitalizare, sectoare, randamente.',
-    status: 'planificat',
+    summary: '20 dintre cele mai mari companii din indicele S&P 500, notate pe aceleași 14 condiții, cu cifre din rapoartele anuale și prețuri săptămânale.',
+    status: 'activ',
     questions: [
-      'Cât de concentrată este capitalizarea indicelui în primele 10 companii?',
-      'Ce sectoare au contribuit cel mai mult la randamentul indicelui?',
+      'Care dintre cele mai mari companii americane au cele mai solide fundamente: creștere, flux de numerar, bilanț?',
+      'Unde e prețul acțiunii justificat de fluxul de numerar și unde e susținut doar de așteptări?',
+      'Cât de aglomerate sunt investițiile în companiile legate de inteligența artificială?',
     ],
   },
 ];

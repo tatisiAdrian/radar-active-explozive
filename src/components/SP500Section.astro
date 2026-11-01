@@ -12,14 +12,13 @@ const crit = CRITERIA.sp500;
 const SNAP = scores.judgmentDate;
 const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 const num = (x: number, d = 1) => x.toLocaleString('ro-RO', { maximumFractionDigits: d, minimumFractionDigits: d });
-const pct = (x: number | undefined) => (x === undefined ? '—' : `${x > 0 ? '+' : ''}${num(x)}%`);
 const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
 const QUANT = new Set(['C1', 'C2', 'C3', 'C7', 'C10', 'C12']);
 
 const src = (s: { name: string; url: string; retrievedAt: string }): Source => s;
 const prices = macro.prices as unknown as Record<string, { points: [string, number][]; symbol: string; url: string }>;
 const order = rows.map((r) => r.id);
-const num1 = (s?: string) => (s ? s.match(/(-?[\d,]+)%/g)?.at(-1) ?? '—' : '—');
+const num1 = (s?: string) => (s ? s.match(/([+-]?[\d,]+)%/g)?.at(-1) ?? '—' : '—');
 
 const growth: Dataset = {
   id: 'sp-crestere', domain: 'sp500', title: 'Creșterea veniturilor în ultimul an fiscal (rapoarte 10-K)', unit: '%', chart: 'bar',

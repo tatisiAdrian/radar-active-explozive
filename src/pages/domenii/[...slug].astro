@@ -5,6 +5,8 @@ import Chart from '../../components/Chart.astro';
 import RadarSection from '../../components/RadarSection.astro';
 import ForexSection from '../../components/ForexSection.astro';
 import EmergingSection from '../../components/EmergingSection.astro';
+import SP500Section from '../../components/SP500Section.astro';
+import spMacro from '../../data/sp500/macro.json';
 import emMacro from '../../data/emerging/macro.json';
 import forexMacro from '../../data/forex/macro.json';
 import { domains, childrenOf, breadcrumbs } from '../../data/domains';
@@ -40,7 +42,8 @@ const radarRows = domain.radarMarket ? radarView(domain.radarMarket, domain.coun
 if (radarRows) sources.push(dbSource);
 if (domain.slug === 'forex') sources.push(forexMacro.sources.imf, forexMacro.sources.bis, forexMacro.sources.fx);
 if (domain.slug === 'economii-emergente') sources.push(emMacro.sources.imf, emMacro.sources.bis, emMacro.sources.fx);
-const scored = ['forex', 'economii-emergente'].includes(domain.slug);
+if (domain.slug === 'sp500') sources.push(spMacro.sources.sec, spMacro.sources.prices);
+const scored = ['forex', 'economii-emergente', 'sp500'].includes(domain.slug);
 const criteria = domain.criteria ? CRITERIA[domain.criteria] : undefined;
 if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domain.criteria}” nu există (${domain.slug}).`);
 ---
@@ -60,6 +63,7 @@ if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domai
 
   {domain.slug === 'forex' && <ForexSection />}
   {domain.slug === 'economii-emergente' && <EmergingSection />}
+  {domain.slug === 'sp500' && <SP500Section />}
   {domain.radarMarket && radarRows > 0 && <RadarSection market={domain.radarMarket} domain={domain.slug} countries={domain.countries} />}
   {domain.radarMarket && radarRows === 0 && (
     <section>

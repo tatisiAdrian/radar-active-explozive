@@ -36,6 +36,10 @@ Conflicte de interese: autorul deține sau a deținut poziții în Lighter (LIT)
 
 15 economii (China, India, Brazilia, Mexic, Indonezia, Turcia, Africa de Sud, Polonia, România, Vietnam, Arabia Saudită, Argentina, Egipt, Filipine, Chile), după aceeași metodă ca Forex: date în `scripts/fetch-emerging.mjs`, formule în `scripts/score-emerging.mjs`, judecată în `scripts/emerging-judgment.json`. Instantaneu: `public/snapshots/emergente-2026-11-01.json`.
 
+## S&P 500
+
+20 dintre cele mai mari companii din indice. Cifrele financiare vin din rapoartele anuale 10-K: direct din SEC EDGAR când serverul o permite, altfel prin seria fundamentală Yahoo Finance (`scripts/fetch-sp500.mjs`). Formule în `scripts/score-sp500.mjs`, judecată în `scripts/sp500-judgment.json`. Instantaneu: `public/snapshots/sp500-2026-11-01.json`.
+
 ## Tehnologie
 
 - **Astro**: pagini statice, rapide, cu JavaScript doar unde e nevoie
