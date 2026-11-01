@@ -28,6 +28,10 @@ Conflicte de interese: autorul deține sau a deținut poziții în Lighter (LIT)
 - variația fiecărui activ în cele două luni dinaintea instantaneului (test retroactiv, marcat ca atare);
 - performanța de la instantaneu încolo, pe zone (10+, 6–9, sub 6 condiții), față de reper.
 
+## Forex
+
+15 monede notate pe cele 14 condiții. Șase condiții se calculează din date oficiale (FMI World Economic Outlook, BIS: dobânzi și inflație, Yahoo Finance: cursuri) după formulele din `scripts/score-forex.mjs`; opt sunt judecată, cu justificare, în `scripts/forex-judgment.json`. Datele se descarcă săptămânal (`scripts/fetch-forex.mjs`). Instantaneul înghețat: `public/snapshots/forex-2026-11-01.json`.
+
 ## Tehnologie
 
 - **Astro**: pagini statice, rapide, cu JavaScript doar unde e nevoie

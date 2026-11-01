@@ -3,6 +3,8 @@ import Base from '../../layouts/Base.astro';
 import DomainCard from '../../components/DomainCard.astro';
 import Chart from '../../components/Chart.astro';
 import RadarSection from '../../components/RadarSection.astro';
+import ForexSection from '../../components/ForexSection.astro';
+import forexMacro from '../../data/forex/macro.json';
 import { domains, childrenOf, breadcrumbs } from '../../data/domains';
 import { datasets, datasetsFor, datasetById } from '../../data/datasets';
 import { dbSource, radarView } from '../../data/radar';
@@ -34,6 +36,7 @@ const crumbs = breadcrumbs(domain.slug);
 const sources = [...new Map(data.map((d) => [d.source.url, d.source])).values()];
 const radarRows = domain.radarMarket ? radarView(domain.radarMarket, domain.countries).rows.length : 0;
 if (radarRows) sources.push(dbSource);
+if (domain.slug === 'forex') sources.push(forexMacro.sources.imf, forexMacro.sources.bis, forexMacro.sources.fx);
 const criteria = domain.criteria ? CRITERIA[domain.criteria] : undefined;
 if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domain.criteria}” nu există (${domain.slug}).`);
 ---
@@ -51,6 +54,7 @@ if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domai
     <ul>{domain.questions.map((q) => <li>{q}</li>)}</ul>
   </section>
 
+  {domain.slug === 'forex' && <ForexSection />}
   {domain.radarMarket && radarRows > 0 && <RadarSection market={domain.radarMarket} domain={domain.slug} countries={domain.countries} />}
   {domain.radarMarket && radarRows === 0 && (
     <section>
@@ -62,7 +66,7 @@ if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domai
   {criteria && (
     <section>
       <h2>Cum aplicăm cele 14 condiții {domain.radarMarket ? 'aici' : 'în acest domeniu'}</h2>
-      <p class="muted">Același algoritm ca la cripto, companii și mărfuri: fiecare condiție primește o notă de la 0 la 10 și e îndeplinită de la 7. Ponderile sunt identice în toate domeniile; se schimbă doar ce măsurăm concret.{!domain.radarMarket && ' Primele active din acest domeniu vor fi notate și publicate cu instantaneu înghețat, ca restul radarului.'}</p>
+      <p class="muted">Același algoritm ca la cripto, companii și mărfuri: fiecare condiție primește o notă de la 0 la 10 și e îndeplinită de la 7. Ponderile sunt identice în toate domeniile; se schimbă doar ce măsurăm concret.{!domain.radarMarket && domain.slug !== 'forex' && ' Primele active din acest domeniu vor fi notate și publicate cu instantaneu înghețat, ca restul radarului.'}</p>
       <div class="table-wrap">
         <table class="radar criteria">
           <thead><tr><th>#</th><th>Condiție</th><th>Ce măsurăm</th><th>Pondere</th></tr></thead>
@@ -76,12 +80,12 @@ if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domai
     </section>
   )}
 
-  <section>
+  {domain.slug !== 'forex' && <section>
     <h2>{domain.radarMarket ? 'Fundamentare: date oficiale' : 'Date și grafice'}</h2>
     {data.length
       ? data.map((ds) => <Chart dataset={ds} />)
       : <p class="notice">Datele sunt în curs de colectare din surse oficiale. Nu afișăm nicio cifră până nu are sursă verificabilă.</p>}
-  </section>
+  </section>}
 
   {domain.interpretations?.length ? (
     <section>

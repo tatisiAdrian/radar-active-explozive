@@ -248,9 +248,13 @@ export const domains: Domain[] = [
     slug: 'forex',
     criteria: 'forex',
     title: 'Forex',
-    summary: 'Principalele perechi valutare, politica monetară și fluxurile de capital.',
-    status: 'planificat',
-    questions: ['Cum influențează diferențialele de dobândă cursurile de schimb?'],
+    summary: '15 monede notate pe aceleași 14 condiții, cu date de la FMI, BIS și cursuri săptămânale.',
+    status: 'activ',
+    questions: [
+      'Ce monede au cele mai solide fundamente: cont curent, inflație, datorie, dobândă reală?',
+      'Cum influențează diferențialele de dobândă cursurile de schimb?',
+      'Unde se află leul românesc față de monedele din regiune și față de cele majore?',
+    ],
   },
   {
     slug: 'economii-emergente',

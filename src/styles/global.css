@@ -50,3 +50,8 @@ table.radar td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .kbar i { display: block; height: 100%; border-radius: 2px; background: var(--muted); }
 .kbar i.puternic { background: #1f9d63; } .kbar i.observatie { background: var(--warn); }
 table.radar.criteria { min-width: 560px; }
+table.radar.fx { min-width: 640px; }
+details.fxd { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); padding: .6rem 1rem; margin: .5rem 0; }
+details.fxd summary { cursor: pointer; }
+details.fxd[open] summary { margin-bottom: .5rem; }
+ul.formulas li { margin: .3rem 0; }
