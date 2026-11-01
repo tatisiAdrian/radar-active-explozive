@@ -74,6 +74,31 @@ function shares(facts) {
   return { end: last.end, value: last.value, yearAgoEnd: yearAgo?.end, yearAgo: yearAgo?.value };
 }
 
+// Rezervă: seria fundamentală anuală Yahoo Finance (aceleași cifre din rapoartele 10-K).
+const YF = {
+  revenue: 'annualTotalRevenue', netIncome: 'annualNetIncome', opCashFlow: 'annualOperatingCashFlow',
+  capex: 'annualCapitalExpenditure', buybacks: 'annualRepurchaseOfCapitalStock', cash: 'annualCashAndCashEquivalents',
+  debt: 'annualLongTermDebt', shares: 'annualOrdinarySharesNumber',
+};
+async function yahooFundamentals(tk, name) {
+  const p2 = Math.floor(Date.now() / 1000), p1 = p2 - 4 * 365 * 86400;
+  const j = await get(`https://query2.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/${tk}?type=${Object.values(YF).join(',')}&period1=${p1}&period2=${p2}`, UA);
+  const res = j.timeseries?.result ?? [];
+  const c = { name, cik: cikOf[tk], via: 'Yahoo Finance', url: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${cikOf[tk]}&type=10-K` };
+  for (const [k, type] of Object.entries(YF)) {
+    const r = res.find((x) => x.meta?.type?.[0] === type);
+    const pts = (r?.[type] ?? []).filter(Boolean).map((x) => [x.asOfDate, x.reportedValue?.raw]).filter((x) => x[1] != null).sort((a, b) => a[0].localeCompare(b[0]));
+    if (!pts.length) continue;
+    const last = pts.at(-1), prev = pts.at(-2);
+    let v = last[1], pv = prev?.[1];
+    if (k === 'capex' || k === 'buybacks') { v = Math.abs(v); pv = pv != null ? Math.abs(pv) : pv; }
+    if (k === 'shares') c.shares = { end: last[0], value: v, yearAgoEnd: prev?.[0], yearAgo: pv };
+    else c[k] = { end: last[0], value: v, prevEnd: prev?.[0], prev: pv };
+  }
+  if (!c.revenue) throw new Error('fără venituri');
+  return c;
+}
+
 const errors = [];
 const out = { updatedAt: day(Date.now()), start: START, sources: {}, companies: {}, prices: {}, errors };
 
@@ -100,10 +125,18 @@ for (const [tk, name] of Object.entries(COMPANIES)) {
     if (sh) c.shares = sh;
     out.companies[tk] = c;
     console.log(`ok SEC ${tk}: venituri ${c.revenue?.value} (${c.revenue?.end}), acțiuni ${c.shares?.value}`);
-  } catch (e) { errors.push(`SEC ${tk}: ${e.message}`); console.warn('EROARE SEC', tk, e.message); }
+  } catch (e) {
+    console.warn('SEC indisponibil pentru', tk, e.message, '→ încerc seria fundamentală Yahoo');
+    try {
+      out.companies[tk] = await yahooFundamentals(tk, name);
+      console.log(`ok Yahoo fundamentale ${tk}: venituri ${out.companies[tk].revenue?.value} (${out.companies[tk].revenue?.end})`);
+    } catch (e2) { errors.push(`${tk}: SEC ${e.message}; Yahoo ${e2.message}`); console.warn('EROARE', tk, e2.message); }
+  }
   await sleep(400);
 }
-out.sources.sec = { name: 'SEC EDGAR, rapoarte anuale 10-K (XBRL companyfacts)', url: 'https://www.sec.gov/edgar/search/', retrievedAt: out.updatedAt };
+out.sources.sec = Object.values(out.companies).some((c) => c.via === 'Yahoo Finance')
+  ? { name: 'Rapoarte anuale 10-K (SEC), cifre preluate prin seria fundamentală Yahoo Finance', url: 'https://www.sec.gov/edgar/search/', retrievedAt: out.updatedAt }
+  : { name: 'SEC EDGAR, rapoarte anuale 10-K (XBRL companyfacts)', url: 'https://www.sec.gov/edgar/search/', retrievedAt: out.updatedAt };
 
 const fridays = [];
 for (let d = new Date(START + 'T00:00:00Z'); day(d) <= out.updatedAt; d.setUTCDate(d.getUTCDate() + 7)) fridays.push(day(d));
