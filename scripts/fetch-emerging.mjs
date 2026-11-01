@@ -23,11 +23,11 @@ export const CURRENCIES = {
   TR: ['TUR', 'TR', 'TUR', false],
   ZA: ['ZAF', 'ZA', 'EZA', false],
   PL: ['POL', 'PL', 'EPOL', false],
-  RO: ['ROU', 'RO', '^BETI', false],
+  RO: ['ROU', 'RO', ['TVBETETF.RO', '^BET', '^BETI'], false],
   VN: ['VNM', 'VN', 'VNM', false],
   SA: ['SAU', 'SA', 'KSA', false],
   AR: ['ARG', 'AR', 'ARGT', false],
-  EG: ['EGY', 'EG', 'EGPT', false],
+  EG: ['EGY', 'EG', ['EGPT', '^CASE30', 'EGX30.CA'], false],
   PH: ['PHL', 'PH', 'EPHE', false],
   CL: ['CHL', 'CL', 'ECH', false],
   EM: [null, null, 'EEM', false],
@@ -137,9 +137,16 @@ const fridays = [];
 for (let d = new Date(START + 'T00:00:00Z'); day(d) <= out.updatedAt; d.setUTCDate(d.getUTCDate() + 7)) fridays.push(day(d));
 let old = {};
 try { old = JSON.parse(await readFile(OUT, 'utf8')).fx ?? {}; } catch {}
-for (const [cur, [, , sym, inv]] of Object.entries(CURRENCIES)) {
+for (let [cur, [, , sym, inv]] of Object.entries(CURRENCIES)) {
   try {
-    const j = await get(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(sym)}?range=1y&interval=1d`);
+    // Unele țări au mai multe simboluri posibile; îl folosim pe primul care răspunde.
+    let j, used;
+    for (const cand of [sym].flat()) {
+      try { j = await get(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(cand)}?range=1y&interval=1d`); used = cand; break; }
+      catch (e) { console.warn('încerc alt simbol după', cand, e.message); }
+    }
+    if (!j) throw new Error(`niciun simbol nu a răspuns (${[sym].flat().join(', ')})`);
+    sym = used;
     const r = j.chart.result[0];
     const daily = r.timestamp.map((t, i) => [t * 1000, r.indicators.quote[0].close[i]])
       .filter((p) => p[1] != null).map(([t, v]) => [t, inv ? 1 / v : v]);
