@@ -1,0 +1,11 @@
+---
+import type { Domain } from '../data/types';
+interface Props { domain: Domain }
+const { domain } = Astro.props;
+const href = `${import.meta.env.BASE_URL}domenii/${domain.slug}/`;
+---
+<a class="card" href={href}>
+  <span class:list={['badge', domain.status]}>{domain.status === 'activ' ? 'Activ' : 'Planificat'}</span>
+  <h3>{domain.title}</h3>
+  <p>{domain.summary}</p>
+</a>

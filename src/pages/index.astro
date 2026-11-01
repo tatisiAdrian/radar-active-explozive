@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import DomainCard from '../components/DomainCard.astro';
+import { topLevel } from '../data/domains';
+const all = topLevel();
+const active = all.filter((d) => d.status === 'activ');
+const planned = all.filter((d) => d.status === 'planificat');
+---
+<Base title="Domenii de analiză">
+  <h1>Radar Active</h1>
+  <p class="muted">Analize structurate pe domenii, fiecare susținută de date statistice reale și surse verificabile. Fiecare domeniu are pagina lui.</p>
+
+  <section>
+    <h2>Domenii active</h2>
+    <div class="grid">{active.map((d) => <DomainCard domain={d} />)}</div>
+  </section>
+
+  <section>
+    <h2>În pregătire</h2>
+    <div class="grid">{planned.map((d) => <DomainCard domain={d} />)}</div>
+  </section>
+</Base>

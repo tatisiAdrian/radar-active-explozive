@@ -1,0 +1,69 @@
+---
+import Base from '../../layouts/Base.astro';
+import DomainCard from '../../components/DomainCard.astro';
+import Chart from '../../components/Chart.astro';
+import { domains, childrenOf, breadcrumbs } from '../../data/domains';
+import { datasetsFor, datasetById } from '../../data/datasets';
+import type { Domain } from '../../data/types';
+
+export function getStaticPaths() {
+  return domains.map((domain) => ({ params: { slug: domain.slug }, props: { domain } }));
+}
+
+interface Props { domain: Domain }
+const { domain } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const data = datasetsFor(domain.slug);
+const subdomains = childrenOf(domain.slug);
+const crumbs = breadcrumbs(domain.slug);
+const sources = [...new Map(data.map((d) => [d.source.url, d.source])).values()];
+---
+<Base title={domain.title} description={domain.summary}>
+  <p class="crumbs">
+    <a href={base}>Domenii</a>
+    {crumbs.map((c) => <> / <a href={`${base}domenii/${c.slug}/`}>{c.title}</a></>)}
+  </p>
+  <span class:list={['badge', domain.status]}>{domain.status === 'activ' ? 'Activ' : 'Planificat'}</span>
+  <h1>{domain.title}</h1>
+  <p>{domain.summary}</p>
+
+  <section>
+    <h2>Întrebări la care răspunde analiza</h2>
+    <ul>{domain.questions.map((q) => <li>{q}</li>)}</ul>
+  </section>
+
+  <section>
+    <h2>Date și grafice</h2>
+    {data.length
+      ? data.map((ds) => <Chart dataset={ds} />)
+      : <p class="notice">Datele sunt în curs de colectare din surse oficiale. Nu afișăm nicio cifră până nu are sursă verificabilă.</p>}
+  </section>
+
+  {domain.interpretations?.length ? (
+    <section>
+      <h2>Interpretare</h2>
+      {domain.interpretations.map((i) => (
+        <article>
+          <h3>{i.title}</h3>
+          <p>{i.text}</p>
+          <p class="muted">Bazat pe: {i.basedOn.map((id) => datasetById(id)?.title ?? id).join('; ')}</p>
+        </article>
+      ))}
+    </section>
+  ) : null}
+
+  {subdomains.length > 0 && (
+    <section>
+      <h2>Analize detaliate</h2>
+      <div class="grid">{subdomains.map((d) => <DomainCard domain={d} />)}</div>
+    </section>
+  )}
+
+  <section>
+    <h2>Surse</h2>
+    {sources.length
+      ? <ul>{sources.map((s) => <li><a href={s.url} target="_blank" rel="noopener">{s.name}</a> (preluat la {s.retrievedAt})</li>)}</ul>
+      : <p class="muted">Sursele vor fi listate aici odată cu datele.</p>}
+    <p><a href={`${base}metodologie/`}>Cum verificăm datele →</a></p>
+  </section>
+</Base>

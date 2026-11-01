@@ -1,0 +1,51 @@
+---
+import type { Dataset } from '../data/types';
+interface Props { dataset: Dataset }
+const { dataset } = Astro.props;
+---
+<figure>
+  <div class="chart" data-dataset={JSON.stringify(dataset)} role="img" aria-label={dataset.title}></div>
+  <figcaption class="muted">
+    {dataset.title} ({dataset.unit}). Sursa: <a href={dataset.source.url} target="_blank" rel="noopener">{dataset.source.name}</a>, preluat la {dataset.source.retrievedAt}.
+    {dataset.notes && <> {dataset.notes}</>}
+  </figcaption>
+</figure>
+
+<script>
+  // ECharts se încarcă doar când un grafic intră în ecran (lazy-load), iar
+  // modulele sunt importate selectiv ca pachetul JS să rămână mic.
+  const charts = document.querySelectorAll<HTMLElement>('.chart[data-dataset]');
+  const observer = new IntersectionObserver(async (entries) => {
+    const visible = entries.filter((e) => e.isIntersecting);
+    if (!visible.length) return;
+    const echarts = await import('echarts/core');
+    const { LineChart, BarChart } = await import('echarts/charts');
+    const { GridComponent, TooltipComponent, LegendComponent, DataZoomComponent } = await import('echarts/components');
+    const { CanvasRenderer } = await import('echarts/renderers');
+    echarts.use([LineChart, BarChart, GridComponent, TooltipComponent, LegendComponent, DataZoomComponent, CanvasRenderer]);
+    const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+    for (const { target } of visible) {
+      observer.unobserve(target);
+      const el = target as HTMLElement;
+      const ds = JSON.parse(el.dataset.dataset!);
+      const chart = echarts.init(el, dark ? 'dark' : undefined, { renderer: 'canvas' });
+      chart.setOption({
+        backgroundColor: 'transparent',
+        tooltip: { trigger: 'axis' },
+        legend: { top: 0 },
+        grid: { left: 50, right: 20, top: 40, bottom: 60 },
+        dataZoom: [{ type: 'inside' }, { type: 'slider' }],
+        xAxis: { type: 'category', data: ds.series[0]?.points.map((p: [string, number]) => p[0]) ?? [] },
+        yAxis: { type: 'value', name: ds.unit },
+        series: ds.series.map((s: { name: string; points: [string, number][] }) => ({
+          name: s.name,
+          type: ds.chart,
+          smooth: true,
+          data: s.points.map((p) => p[1]),
+        })),
+      });
+      new ResizeObserver(() => chart.resize()).observe(el);
+    }
+  }, { rootMargin: '200px' });
+  charts.forEach((c) => observer.observe(c));
+</script>
