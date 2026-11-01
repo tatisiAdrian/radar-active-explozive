@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="[[lang]]">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>[[title]]</title>
+<meta name="description" content="[[meta_desc]]">
+<meta property="og:type" content="website">
+<meta property="og:title" content="[[title]]">
+<meta property="og:description" content="[[og_desc]]">
+<meta name="theme-color" content="#0f1d2e">
+<link rel="alternate" hreflang="[[alt_lang]]" href="[[alt_href]]">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230f1d2e'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%236f8dff' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='4' fill='none' stroke='%236f8dff' stroke-width='1.5'/%3E%3Cpath d='M16 16 L27 9' stroke='%236f8dff' stroke-width='2'/%3E%3Ccircle cx='21' cy='12' r='2' fill='%2345c48a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: instrument-panel landing — sticky bar, hero with live radar, picks, method, explorer, where-to-buy, transparency. */
+:root{
+  --paper:#f2f5f9; --surface:#ffffff; --surface-2:#f7f9fc; --ink:#0f1d2e; --ink-2:#4b5b70; --ink-3:#7a889b; --line:#d8e0ea; --grid:#e4eaf2;
+  --signal:#2b59ff; --signal-ink:#1b3fd1; --signal-soft:rgba(43,89,255,.10);
+  --strong:#14865a; --watch:#b86e0a; --weak:#7a889b;
+  --m-crypto:#2b59ff; --m-comp:#0e8a8a; --m-comm:#c2761a;
+  --scope:#0f1d2e; --scope-line:rgba(160,190,255,.18); --scope-text:#a9bde0; --scope-zone:rgba(69,196,138,.14);
+  --f-display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --r:10px; --shadow:0 1px 2px rgba(15,29,46,.06), 0 8px 24px rgba(15,29,46,.06);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#0a121d; --surface:#101b29; --surface-2:#0d1724; --ink:#e7eef7; --ink-2:#a3b3c7; --ink-3:#71839a; --line:#21314a; --grid:#1a283b;
+  --signal:#7391ff; --signal-ink:#9cb1ff; --signal-soft:rgba(115,145,255,.14);
+  --strong:#46c58b; --watch:#e6a542; --weak:#71839a;
+  --m-crypto:#7391ff; --m-comp:#3cc2bf; --m-comm:#e6a542;
+  --scope:#070e17; --scope-line:rgba(160,190,255,.16); --scope-text:#93a8c9; --scope-zone:rgba(70,197,139,.14);
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+  color-scheme:dark;
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55}
+a{color:var(--signal-ink)}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:0}
+h1,h2,h3{font-family:var(--f-display);letter-spacing:-.01em;text-wrap:balance;margin:0}
+:focus-visible{outline:2px solid var(--signal);outline-offset:2px;border-radius:4px}
+
+/* header */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--paper)}
+.bar .wrap{display:flex;align-items:center;gap:1rem;padding-block:.7rem}
+.brand{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--ink);font-family:var(--f-display);font-weight:800;font-size:1.05rem;white-space:nowrap}
+.brand svg{flex:none}
+.nav{display:flex;gap:.25rem;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
+.nav a{color:var(--ink-2);text-decoration:none;font-size:.9rem;padding:.35rem .6rem;border-radius:8px}
+.nav a:hover{color:var(--ink);background:var(--signal-soft)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-family:var(--f-mono);font-size:.75rem}
+.lang a,.lang b{padding:.3rem .6rem;text-decoration:none}
+.lang b{background:var(--ink);color:var(--paper);font-weight:500}
+.lang a{color:var(--ink-2)}
+@media (max-width:760px){.nav{display:none}.lang{margin-left:auto}}
+
+/* hero */
+.hero{padding-block:3.5rem 3rem}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:3rem;align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:2rem}.hero{padding-block:2rem}}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.6rem);line-height:1.02;font-weight:800;margin-top:.9rem}
+.hero h1 em{font-style:normal;color:var(--signal)}
+.lede{font-size:1.125rem;color:var(--ink-2);max-width:56ch;margin:1.1rem 0 0}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;margin-top:2rem;max-width:560px}
+@media (max-width:480px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{border-top:2px solid var(--ink);padding-top:.5rem}
+.stat b{display:block;font-family:var(--f-display);font-size:1.9rem;font-weight:700;line-height:1.1}
+.stat span{font-size:.8rem;color:var(--ink-2)}
+.cta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;font:600 .95rem var(--f-body);padding:.7rem 1.1rem;border-radius:999px;text-decoration:none;border:1px solid var(--ink);cursor:pointer;background:none;color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{transform:translateY(-1px)}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+/* radar */
+.scope{position:relative;background:var(--scope);border-radius:20px;padding:clamp(.75rem,2vw,1.25rem);box-shadow:var(--shadow);min-width:0}
+.scope svg{display:block;width:100%;height:auto;max-width:100%}
+.scope-legend{display:flex;flex-wrap:wrap;gap:.4rem 1rem;justify-content:center;font-size:.78rem;color:var(--scope-text);padding:.5rem .25rem .25rem;font-family:var(--f-mono)}
+.scope-legend i{display:inline-block;width:.6rem;height:.6rem;border-radius:50%;margin-right:.35rem;vertical-align:middle}
+.blip{cursor:pointer;transition:r .15s}
+.blip:focus{outline:none}
+.blip:focus-visible,.blip:hover{stroke:#fff;stroke-width:2}
+.sweep{transform-origin:300px 300px;animation:sweep 7s linear infinite}
+@keyframes sweep{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.sweep{animation:none;opacity:0}}
+.tip{position:absolute;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:.45rem .6rem;font-size:.8rem;box-shadow:var(--shadow);max-width:15rem;z-index:5}
+.tip b{display:block;font-weight:600}
+.tip span{color:var(--ink-2);font-family:var(--f-mono);font-size:.75rem}
+
+/* sections */
+section.block{padding-block:4rem;border-top:1px solid var(--line);scroll-margin-top:64px}
+tr.row{scroll-margin-top:80px}
+@media (max-width:640px){section.block{padding-block:2.75rem}}
+.head{display:grid;gap:.6rem;margin-bottom:2rem;max-width:70ch}
+.head h2{font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;line-height:1.1}
+.head p{color:var(--ink-2);margin:0}
+
+/* markets */
+:root{--ill-bg:#e9eef6}
+@media (prefers-color-scheme:dark){:root{--ill-bg:#14233a}}
+.markets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+@media (max-width:900px){.markets{grid-template-columns:1fr}}
+.market{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:grid;grid-template-rows:auto 1fr;transition:border-color .2s, transform .2s}
+.market:hover{border-color:var(--signal);transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.market:hover{transform:none}}
+.ill{display:block;width:100%;height:auto}
+.market-body{padding:1.1rem 1.2rem 1.2rem;display:grid;gap:.5rem;align-content:start}
+.market-body h3{font-size:1.3rem}
+.market-body p{margin:0;color:var(--ink-2);font-size:.93rem}
+.mstats{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.85rem;color:var(--ink-2)}
+.mstats b{font-size:1.2rem;color:var(--ink);font-weight:500}
+.mlead{font-size:.88rem}
+.mlead b{color:var(--ink)}
+
+/* charts */
+.charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+@media (max-width:900px){.charts{grid-template-columns:1fr}}
+.chart{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem;display:grid;gap:.9rem;min-width:0;align-content:start}
+.chart.wide{grid-column:1 / -1}
+.chart h3{font-size:1.15rem}
+.chart figcaption p{margin:.3rem 0 0;color:var(--ink-2);font-size:.9rem}
+.chart svg{display:block;max-width:100%;overflow:visible}
+.chart text{font-family:var(--f-body);fill:var(--ink-2)}
+.chart text.v{font-family:var(--f-mono);fill:var(--ink)}
+.chart text.nm{fill:var(--ink)}
+.keyrow{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.82rem;color:var(--ink-2)}
+.keyrow i{display:inline-block;width:.7rem;height:.7rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.ctip{position:fixed;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:.4rem .6rem;font-size:.8rem;box-shadow:var(--shadow);z-index:30}
+
+/* history */
+.hist{display:grid;gap:1.25rem}
+.hist-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+@media (max-width:760px){.hist-steps{grid-template-columns:1fr}}
+.hstep{display:grid;grid-template-columns:2.2rem 1fr;gap:.75rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem}
+.hstep>b{width:2.2rem;height:2.2rem;border-radius:50%;display:grid;place-items:center;background:var(--signal-soft);color:var(--signal-ink);font-weight:500}
+.hstep h3{font-size:1.05rem;margin-bottom:.3rem}
+.hstep p{margin:0;color:var(--ink-2);font-size:.9rem}
+.snaps{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow-x:auto}
+.snapt td{vertical-align:middle}
+.hash{font-family:var(--f-mono);font-size:.8rem;color:var(--ink-2)}
+.muted{color:var(--ink-3);font-size:.88rem}
+.proof{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:1.5rem;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem;align-items:center}
+@media (max-width:760px){.proof{grid-template-columns:1fr}}
+.proof h3{font-size:1.15rem;margin-bottom:.4rem}
+.proof p{margin:0 0 .6rem;color:var(--ink-2);font-size:.92rem}
+.hashline{display:flex;gap:.5rem;align-items:baseline;flex-wrap:wrap}
+.hashline span{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;color:var(--ink-3)}
+.hashline code{font-family:var(--f-mono);font-size:.78rem;word-break:break-all;color:var(--ink)}
+.chart-ph{text-align:center}
+.chart-ph p{font-size:.85rem;color:var(--ink-3);margin:.4rem 0 0}
+.pastperf{font-size:.85rem;color:var(--ink-3);margin:0}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:2rem;align-items:start}
+@media (max-width:760px){.about{grid-template-columns:1fr;gap:1rem}}
+.author{display:flex;gap:.9rem;align-items:center}
+.avatar{width:4.5rem;height:4.5rem;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-family:var(--f-display);font-size:2rem;font-weight:700;flex:none}
+.author b{display:block;font-family:var(--f-display);font-size:1.3rem}
+.author span{color:var(--ink-2);font-size:.88rem}
+.bio{max-width:64ch}
+.bio p{margin:0 0 1rem;font-size:1.05rem}
+.faq{margin-top:2.5rem;display:grid;gap:.5rem;max-width:72ch}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.9rem 1.1rem}
+.faq summary{cursor:pointer;font-weight:600;font-family:var(--f-display);font-size:1.05rem}
+.faq p{margin:.6rem 0 0;color:var(--ink-2)}
+
+/* picks */
+.picks{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,21rem),1fr));gap:1rem}
+.pick{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem;display:grid;gap:.6rem;align-content:start;min-width:0}
+.pick-top{display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.mk{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.35rem;color:var(--ink-2)}
+.mk i{width:.55rem;height:.55rem;border-radius:50%;display:inline-block}
+.pick h3{font-size:1.2rem;font-weight:700;line-height:1.2;overflow-wrap:anywhere}
+.pick-body{display:grid;grid-template-columns:96px 1fr;gap:.9rem;align-items:center}
+.pick-figs{display:grid;gap:.15rem}
+.pick-figs .big{font-family:var(--f-display);font-size:2rem;font-weight:700;line-height:1}
+.pick-figs small{color:var(--ink-2);font-size:.8rem}
+.badge{font-size:.72rem;font-weight:600;padding:.18rem .5rem;border-radius:999px;border:1px solid var(--line);color:var(--ink-2);white-space:nowrap}
+.badge.b-buy{border-color:color-mix(in srgb,var(--strong) 45%,transparent);color:var(--strong)}
+.badge.b-ind{border-color:color-mix(in srgb,var(--watch) 45%,transparent);color:var(--watch)}
+.linkbtn{font:600 .85rem var(--f-body);color:var(--signal-ink);background:none;border:0;padding:0;cursor:pointer;text-align:left;justify-self:start}
+.linkbtn:hover{text-decoration:underline}
+
+/* method */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;counter-reset:s}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem}
+.step b{font-family:var(--f-mono);font-size:.8rem;color:var(--signal)}
+.step h3{font-size:1.15rem;margin:.35rem 0 .4rem}
+.step p{margin:0;color:var(--ink-2);font-size:.95rem}
+.levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1rem}
+@media (max-width:640px){.levels{grid-template-columns:1fr}}
+.level{border-left:3px solid;padding:.4rem .9rem}
+.level b{font-family:var(--f-display);font-size:1.25rem;display:block}
+.level span{color:var(--ink-2);font-size:.9rem}
+.lv-strong{border-color:var(--strong)} .lv-strong b{color:var(--strong)}
+.lv-watch{border-color:var(--watch)} .lv-watch b{color:var(--watch)}
+.lv-weak{border-color:var(--weak)} .lv-weak b{color:var(--weak)}
+.crit{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,16rem),1fr));gap:.5rem 1.5rem;margin:2rem 0 0;padding:0;list-style:none}
+.crit li{display:grid;grid-template-columns:2.6rem 1fr;gap:.6rem;align-items:baseline;padding:.6rem 0;border-bottom:1px solid var(--line)}
+.crit .w{font-family:var(--f-mono);font-size:.8rem;color:var(--ink-3)}
+.crit strong{display:block;font-weight:600}
+.crit span{color:var(--ink-2);font-size:.88rem}
+.wbar{display:block;height:3px;background:var(--grid);border-radius:2px;margin-top:.35rem}
+.wbar i{display:block;height:100%;background:var(--signal);border-radius:2px}
+
+/* explorer */
+.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem}
+.tab{font:600 .95rem var(--f-body);padding:.55rem 1rem;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer;display:inline-flex;gap:.45rem;align-items:center}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tab .cnt{font-family:var(--f-mono);font-size:.75rem;opacity:.75}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.controls{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;padding:1rem;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.chips{display:flex;flex-wrap:wrap;gap:.35rem}
+.chip{font:500 .82rem var(--f-body);padding:.35rem .7rem;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--signal);color:var(--signal-ink);background:var(--signal-soft)}
+.ctl{display:flex;gap:.5rem;margin-left:auto;flex-wrap:wrap}
+@media (max-width:760px){.ctl{margin-left:0;width:100%}}
+.ctl input,.ctl select{font:inherit;font-size:.88rem;padding:.45rem .65rem;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);min-width:0}
+.ctl input{width:13rem;max-width:100%}
+@media (max-width:760px){.ctl input{flex:1 1 10rem;width:auto}}
+.gnote{padding:.8rem 1rem;font-size:.88rem;color:var(--ink-2);border-bottom:1px solid var(--line);margin:0}
+.tablewrap{overflow-x:auto}
+table.ex{width:100%;border-collapse:collapse;font-size:.92rem}
+.ex th{text-align:left;font:600 .72rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:.7rem 1rem;border-bottom:1px solid var(--line);white-space:nowrap}
+.ex td{padding:.75rem 1rem;border-bottom:1px solid var(--line);vertical-align:middle}
+.ex tr.row{cursor:pointer}
+.ex tr.row:hover td{background:var(--signal-soft)}
+.ex .r{text-align:right}
+.ex .nm{font-weight:600}
+.ex .grp{display:block;font-size:.78rem;color:var(--ink-3);font-weight:400}
+.sc{display:grid;gap:.25rem;min-width:5.5rem}
+.sc .bar2{height:4px;border-radius:2px;background:var(--grid)}
+.sc .bar2 i{display:block;height:100%;border-radius:2px;background:var(--signal)}
+.dots{display:grid;grid-template-columns:repeat(14,7px);gap:3px;align-items:center}
+.dots i{width:7px;height:7px;border-radius:2px;background:var(--grid)}
+.dots i.on{background:var(--strong)}
+.kv{display:flex;align-items:center;gap:.6rem;white-space:nowrap}
+.kv b{font-family:var(--f-mono);font-weight:500;min-width:2.6rem}
+.k-strong{color:var(--strong)} .k-watch{color:var(--watch)} .k-weak{color:var(--weak)}
+.chev{width:1.6rem;height:1.6rem;border-radius:50%;border:1px solid var(--line);display:inline-grid;place-items:center;transition:transform .2s;background:var(--surface)}
+tr.open .chev{transform:rotate(180deg)}
+@media (prefers-reduced-motion:reduce){.chev{transition:none}}
+@media (max-width:760px){.hide-s{display:none}}
+tr.detail td{background:var(--surface-2);padding:1.25rem 1rem}
+.det{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:1.5rem;align-items:start;position:sticky;left:1rem;max-width:calc(100vw - 4rem)}
+@media (max-width:760px){.det{grid-template-columns:1fr}}
+.det-side{display:grid;gap:1rem;min-width:0}
+.det h4{font:600 .72rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:0 0 .4rem}
+.det p{margin:0;color:var(--ink-2);font-size:.92rem}
+.cl{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,14rem),1fr));gap:.3rem 1.25rem;margin:0;padding:0;list-style:none;font-size:.86rem}
+.cl li{display:grid;grid-template-columns:1fr 2.2rem;gap:.5rem;align-items:center;padding:.2rem 0;border-bottom:1px dashed var(--line)}
+.cl li b{font-family:var(--f-mono);font-weight:500;text-align:right}
+.cl li.met b{color:var(--strong)}
+.cl li.low b{color:var(--watch)}
+.buy{display:inline-flex;align-items:center;gap:.4rem;font:600 .9rem var(--f-body);color:var(--paper);background:var(--ink);padding:.55rem .9rem;border-radius:999px;text-decoration:none;justify-self:start}
+.empty{padding:2rem 1rem;text-align:center;color:var(--ink-2)}
+
+/* where to buy */
+.venues{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,16.5rem),1fr));gap:1rem}
+.venue{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem;display:grid;gap:.6rem;align-content:start}
+.venue h3{font-size:1.1rem}
+.venue p{margin:0;color:var(--ink-2);font-size:.9rem}
+.venue ul{margin:0;padding:0;list-style:none;display:grid;gap:.25rem;font-size:.92rem}
+.venue li a{text-decoration:none;font-weight:500}
+.venue li a:hover{text-decoration:underline}
+.venue li span{color:var(--ink-3);font-size:.82rem}
+
+/* transparency */
+.trust{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));gap:1rem}
+.trust div{border-top:2px solid var(--ink);padding-top:.75rem}
+.trust h3{font-size:1.05rem;margin-bottom:.35rem}
+.trust p{margin:0;color:var(--ink-2);font-size:.92rem}
+.warn{margin-top:2rem;background:color-mix(in srgb,var(--watch) 10%,var(--surface));border:1px solid color-mix(in srgb,var(--watch) 35%,transparent);border-radius:var(--r);padding:1.1rem 1.25rem;display:grid;gap:.4rem;font-size:.92rem}
+.warn p{margin:0}
+
+footer{border-top:1px solid var(--line);padding-block:2rem 3rem;color:var(--ink-3);font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveal{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+  .reveal.d2{animation-delay:.08s}.reveal.d3{animation-delay:.16s}
+  @keyframes rise{from{opacity:.001;transform:translateY(8px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="[[title]]">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="var(--ink)"/><circle cx="16" cy="16" r="9" fill="none" stroke="var(--signal)" stroke-width="1.5"/><circle cx="16" cy="16" r="4" fill="none" stroke="var(--signal)" stroke-width="1.5"/><path d="M16 16 L27 9" stroke="var(--signal)" stroke-width="2"/><circle cx="21" cy="12" r="2" fill="var(--strong)"/></svg>
+      <span>[[brand]]</span>
+    </a>
+    <nav class="nav" aria-label="[[nav_label]]">
+      <a href="#metoda">[[nav_method]]</a>
+      <a href="#explorer">[[nav_explorer]]</a>
+      <a href="[[data_href]]">[[nav_data]]</a>
+      <a href="#istoric">[[nav_history]]</a>
+      <a href="#despre">[[nav_about]]</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">[[lang_switch]]</div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow reveal">[[hero_eyebrow]]</p>
+        <h1 class="reveal d2">[[hero_title]]</h1>
+        <p class="lede reveal d3">[[hero_lede]]</p>
+        <div class="stats" aria-live="polite">
+          <div class="stat"><b class="num" id="st-assets">88</b><span>[[st_assets]]</span></div>
+          <div class="stat"><b class="num">3</b><span>[[st_markets]]</span></div>
+          <div class="stat"><b class="num">14</b><span>[[st_conditions]]</span></div>
+          <div class="stat"><b class="num" id="st-strong">—</b><span>[[st_strong]]</span></div>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#explorer">[[cta_explore]]</a>
+          <a class="btn" href="#metoda">[[cta_method]]</a>
+        </div>
+      </div>
+      <figure class="scope" style="margin:0">
+        <svg id="radar" viewBox="0 0 600 600" role="img" aria-labelledby="radar-title">
+          <title id="radar-title">[[radar_title]]</title>
+        </svg>
+        <figcaption class="scope-legend">
+          <span><i style="background:var(--m-crypto)"></i>[[m_crypto]]</span>
+          <span><i style="background:var(--m-comp)"></i>[[m_comp]]</span>
+          <span><i style="background:var(--m-comm)"></i>[[m_comm]]</span>
+          <span>[[radar_hint]]</span>
+        </figcaption>
+        <div class="tip" id="tip" hidden></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block" id="piete">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">[[mk_eyebrow]]</p>
+        <h2>[[mk_title]]</h2>
+        <p>[[mk_lede]]</p>
+      </div>
+      <div class="markets">
+        <a class="market" href="#explorer" data-go="crypto">
+          <svg class="ill" viewBox="0 0 320 170" role="img" aria-label="[[m_crypto]]">
+            <rect width="320" height="170" rx="12" fill="var(--ill-bg)"/>
+            <g stroke="var(--m-crypto)" stroke-width="1.5" stroke-opacity=".45">
+              <line x1="52" y1="48" x2="118" y2="34"/><line x1="118" y1="34" x2="176" y2="70"/><line x1="52" y1="48" x2="86" y2="112"/><line x1="86" y1="112" x2="176" y2="70"/><line x1="176" y1="70" x2="250" y2="42"/><line x1="176" y1="70" x2="232" y2="128"/><line x1="250" y1="42" x2="282" y2="96"/><line x1="232" y1="128" x2="282" y2="96"/>
+            </g>
+            <g fill="var(--m-crypto)"><circle cx="52" cy="48" r="5"/><circle cx="118" cy="34" r="4"/><circle cx="86" cy="112" r="4"/><circle cx="250" cy="42" r="4"/><circle cx="232" cy="128" r="5"/><circle cx="282" cy="96" r="4"/></g>
+            <g transform="translate(176 92)">
+              <ellipse cx="0" cy="26" rx="44" ry="11" fill="var(--m-crypto)" fill-opacity=".35"/>
+              <rect x="-44" y="10" width="88" height="16" fill="var(--m-crypto)" fill-opacity=".35"/>
+              <ellipse cx="0" cy="10" rx="44" ry="11" fill="var(--m-crypto)" fill-opacity=".55"/>
+              <rect x="-44" y="-6" width="88" height="16" fill="var(--m-crypto)" fill-opacity=".55"/>
+              <ellipse cx="0" cy="-6" rx="44" ry="11" fill="var(--m-crypto)"/>
+              <ellipse cx="0" cy="-6" rx="30" ry="6.5" fill="none" stroke="var(--ill-bg)" stroke-width="2"/>
+            </g>
+            <circle cx="176" cy="70" r="7" fill="var(--strong)"/>
+          </svg>
+          <div class="market-body">
+            <h3>[[m_crypto]]</h3>
+            <p>[[mk_crypto_p]]</p>
+            <div class="mstats"><span><b class="num" data-mstat="crypto-n">—</b> [[mk_assets]]</span><span><b class="num" data-mstat="crypto-avg">—</b> [[mk_avg]]</span></div>
+            <p class="mlead">[[mk_leader]] <b data-mstat="crypto-top">—</b></p>
+          </div>
+        </a>
+        <a class="market" href="#explorer" data-go="comp">
+          <svg class="ill" viewBox="0 0 320 170" role="img" aria-label="[[m_comp]]">
+            <rect width="320" height="170" rx="12" fill="var(--ill-bg)"/>
+            <g fill="var(--m-comp)">
+              <rect x="40" y="88" width="34" height="58" rx="3" fill-opacity=".35"/>
+              <rect x="84" y="62" width="40" height="84" rx="3" fill-opacity=".55"/>
+              <rect x="134" y="36" width="46" height="110" rx="3"/>
+              <rect x="190" y="74" width="36" height="72" rx="3" fill-opacity=".45"/>
+            </g>
+            <g fill="var(--ill-bg)">
+              <rect x="144" y="48" width="8" height="8"/><rect x="162" y="48" width="8" height="8"/><rect x="144" y="64" width="8" height="8"/><rect x="162" y="64" width="8" height="8"/><rect x="144" y="80" width="8" height="8"/><rect x="162" y="80" width="8" height="8"/><rect x="144" y="96" width="8" height="8"/><rect x="162" y="96" width="8" height="8"/>
+              <rect x="94" y="74" width="7" height="7"/><rect x="108" y="74" width="7" height="7"/><rect x="94" y="90" width="7" height="7"/><rect x="108" y="90" width="7" height="7"/>
+            </g>
+            <line x1="28" y1="146" x2="292" y2="146" stroke="var(--ink-3)" stroke-width="1.5"/>
+            <polyline points="40,120 92,108 132,116 176,84 220,92 268,40" fill="none" stroke="var(--strong)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M268 40 l-14 2 l9 10 z" fill="var(--strong)"/>
+            <circle cx="268" cy="40" r="5" fill="var(--strong)"/>
+          </svg>
+          <div class="market-body">
+            <h3>[[m_comp]]</h3>
+            <p>[[mk_comp_p]]</p>
+            <div class="mstats"><span><b class="num" data-mstat="comp-n">—</b> [[mk_assets]]</span><span><b class="num" data-mstat="comp-avg">—</b> [[mk_avg]]</span></div>
+            <p class="mlead">[[mk_leader]] <b data-mstat="comp-top">—</b></p>
+          </div>
+        </a>
+        <a class="market" href="#explorer" data-go="comm">
+          <svg class="ill" viewBox="0 0 320 170" role="img" aria-label="[[m_comm]]">
+            <rect width="320" height="170" rx="12" fill="var(--ill-bg)"/>
+            <g transform="translate(70 30)">
+              <path d="M30 120 C 28 80, 32 40, 30 4" stroke="var(--m-comm)" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <g fill="var(--m-comm)">
+                <ellipse cx="22" cy="20" rx="6" ry="11" transform="rotate(-25 22 20)"/><ellipse cx="38" cy="20" rx="6" ry="11" transform="rotate(25 38 20)"/>
+                <ellipse cx="21" cy="40" rx="6" ry="11" transform="rotate(-25 21 40)"/><ellipse cx="39" cy="40" rx="6" ry="11" transform="rotate(25 39 40)"/>
+                <ellipse cx="21" cy="60" rx="6" ry="11" transform="rotate(-25 21 60)" fill-opacity=".7"/><ellipse cx="39" cy="60" rx="6" ry="11" transform="rotate(25 39 60)" fill-opacity=".7"/>
+                <ellipse cx="30" cy="2" rx="5" ry="10"/>
+              </g>
+            </g>
+            <g transform="translate(138 52)">
+              <rect x="0" y="6" width="62" height="88" rx="8" fill="var(--m-comm)" fill-opacity=".55"/>
+              <ellipse cx="31" cy="6" rx="31" ry="7" fill="var(--m-comm)"/>
+              <rect x="0" y="30" width="62" height="5" fill="var(--ill-bg)" fill-opacity=".6"/><rect x="0" y="64" width="62" height="5" fill="var(--ill-bg)" fill-opacity=".6"/>
+            </g>
+            <g transform="translate(222 92)">
+              <polygon points="0,52 14,14 40,0 62,20 70,52" fill="var(--ink-3)" fill-opacity=".55"/>
+              <polygon points="14,14 40,0 46,30 22,36" fill="var(--ink-3)" fill-opacity=".8"/>
+              <polygon points="40,0 62,20 46,30" fill="var(--ink-3)"/>
+              <circle cx="34" cy="26" r="4" fill="var(--strong)"/>
+            </g>
+            <line x1="28" y1="146" x2="292" y2="146" stroke="var(--ink-3)" stroke-width="1.5"/>
+          </svg>
+          <div class="market-body">
+            <h3>[[m_comm]]</h3>
+            <p>[[mk_comm_p]]</p>
+            <div class="mstats"><span><b class="num" data-mstat="comm-n">—</b> [[mk_assets]]</span><span><b class="num" data-mstat="comm-avg">—</b> [[mk_avg]]</span></div>
+            <p class="mlead">[[mk_leader]] <b data-mstat="comm-top">—</b></p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="grafice">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">[[ch_eyebrow]]</p>
+        <h2>[[ch_title]]</h2>
+        <p>[[ch_lede]]</p>
+      </div>
+      <div class="charts">
+        <figure class="chart wide">
+          <figcaption><h3>[[ch1_t]]</h3><p>[[ch1_p]]</p></figcaption>
+          <svg id="ch-top" role="img" aria-label="[[ch1_t]]" width="100%"></svg>
+        </figure>
+        <figure class="chart">
+          <figcaption><h3>[[ch2_t]]</h3><p>[[ch2_p]]</p></figcaption>
+          <svg id="ch-zones" role="img" aria-label="[[ch2_t]]" width="100%"></svg>
+          <div class="keyrow"><span><i style="background:var(--strong)"></i>[[lv1_b]]</span><span><i style="background:var(--watch)"></i>[[lv2_b]]</span><span><i style="background:var(--weak)"></i>[[lv3_b]]</span></div>
+        </figure>
+        <figure class="chart">
+          <figcaption><h3>[[ch3_t]]</h3><p>[[ch3_p]]</p></figcaption>
+          <svg id="ch-pairs" role="img" aria-label="[[ch3_t]]" width="100%"></svg>
+          <div class="keyrow"><span><i style="background:var(--ink-3)"></i>[[ch3_k1]]</span><span><i style="background:var(--signal)"></i>[[ch3_k2]]</span></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="pe-radar">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">[[picks_eyebrow]]</p>
+        <h2>[[picks_title]]</h2>
+        <p>[[picks_lede]]</p>
+      </div>
+      <div class="picks" id="picks"></div>
+    </div>
+  </section>
+
+  <section class="block" id="metoda">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">[[method_eyebrow]]</p>
+        <h2>[[method_title]]</h2>
+        <p>[[method_lede]]</p>
+      </div>
+      <div class="steps">
+        <div class="step"><b>01</b><h3>[[s1_t]]</h3><p>[[s1_p]]</p></div>
+        <div class="step"><b>02</b><h3>[[s2_t]]</h3><p>[[s2_p]]</p></div>
+        <div class="step"><b>03</b><h3>[[s3_t]]</h3><p>[[s3_p]]</p></div>
+      </div>
+      <div class="levels">
+        <div class="level lv-strong"><b>[[lv1_b]]</b><span>[[lv1_s]]</span></div>
+        <div class="level lv-watch"><b>[[lv2_b]]</b><span>[[lv2_s]]</span></div>
+        <div class="level lv-weak"><b>[[lv3_b]]</b><span>[[lv3_s]]</span></div>
+      </div>
+      <ul class="crit" id="crit"></ul>
+    </div>
+  </section>
+
+  <section class="block" id="explorer">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">[[ex_eyebrow]]</p>
+        <h2>[[ex_title]]</h2>
+        <p>[[ex_lede]]</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="[[ex_markets]]" id="mtabs"></div>
+      <div class="panel">
+        <div class="controls">
+          <div class="chips" id="gchips" role="group" aria-label="[[ex_groups]]"></div>
+          <div class="ctl">
+            <label class="sr" for="q" style="position:absolute;left:-9999px">[[ex_search]]</label>
+            <input id="q" type="search" placeholder="[[ex_search]]" autocomplete="off">
+            <label for="minK" style="position:absolute;left:-9999px">[[ex_min]]</label>
+            <select id="minK">
+              <option value="0">[[ex_min_all]]</option>
+              <option value="6">[[ex_min_6]]</option>
+              <option value="10">[[ex_min_10]]</option>
+            </select>
+            <label for="sortBy" style="position:absolute;left:-9999px">[[ex_sort]]</label>
+            <select id="sortBy">
+              <option value="k">[[ex_sort_k]]</option>
+              <option value="s">[[ex_sort_s]]</option>
+              <option value="n">[[ex_sort_n]]</option>
+            </select>
+          </div>
+        </div>
+        <p class="gnote" id="gnote"></p>
+        <div class="tablewrap">
+          <table class="ex">
+            <thead><tr>
+              <th class="r">#</th><th>[[th_asset]]</th><th>[[th_score]]</th><th>[[th_cond]]</th><th class="hide-s">[[th_access]]</th><th class="hide-s">[[th_where]]</th><th><span style="position:absolute;left:-9999px">[[th_more]]</span></th>
+            </tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="istoric">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">[[hi_eyebrow]]</p>
+        <h2>[[hi_title]]</h2>
+        <p>[[hi_lede]]</p>
+      </div>
+      <div class="hist">
+        <div class="hist-steps">
+          <div class="hstep"><b class="num">1</b><div><h3>[[hs1_t]]</h3><p>[[hs1_p]]</p></div></div>
+          <div class="hstep"><b class="num">2</b><div><h3>[[hs2_t]]</h3><p>[[hs2_p]]</p></div></div>
+          <div class="hstep"><b class="num">3</b><div><h3>[[hs3_t]]</h3><p>[[hs3_p]]</p></div></div>
+        </div>
+        <div class="snaps">
+          <table class="ex snapt">
+            <thead><tr><th>[[sn_date]]</th><th>[[sn_assets]]</th><th>[[sn_strong]]</th><th class="hide-s">[[sn_hash]]</th><th>[[sn_file]]</th><th>[[sn_perf]]</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><b>[[snap_date_label]]</b><span class="grp">[[sn_first]]</span></td>
+                <td class="num">[[snap_n]]</td>
+                <td class="num">[[snap_strong]]</td>
+                <td class="hide-s"><code class="hash" title="SHA-256">[[snap_hash_short]]</code></td>
+                <td><a href="[[snap_href]]" download>[[sn_download]]</a></td>
+                <td class="muted">[[sn_pending]]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="proof">
+          <div>
+            <h3>[[pf_t]]</h3>
+            <p>[[pf_p]]</p>
+            <p class="hashline"><span>SHA-256</span> <code>[[snap_hash]]</code></p>
+          </div>
+          <div class="chart-ph" aria-hidden="true">
+            <svg viewBox="0 0 320 150" width="100%">
+              <line x1="20" y1="130" x2="310" y2="130" stroke="var(--line)"/>
+              <rect x="40" y="90" width="50" height="40" rx="4" fill="var(--weak)" fill-opacity=".35"/>
+              <rect x="135" y="70" width="50" height="60" rx="4" fill="var(--watch)" fill-opacity=".35"/>
+              <rect x="230" y="40" width="50" height="90" rx="4" fill="var(--strong)" fill-opacity=".35"/>
+              <text x="65" y="146" text-anchor="middle" font-size="11" fill="var(--ink-3)">&lt; 6</text>
+              <text x="160" y="146" text-anchor="middle" font-size="11" fill="var(--ink-3)">6–9</text>
+              <text x="255" y="146" text-anchor="middle" font-size="11" fill="var(--ink-3)">10+</text>
+              <text x="160" y="24" text-anchor="middle" font-size="12" fill="var(--ink-2)">?</text>
+            </svg>
+            <p>[[pf_chart]]</p>
+          </div>
+        </div>
+        <p class="pastperf">[[past_perf]]</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="cumpara">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">[[buy_eyebrow]]</p>
+        <h2>[[buy_title]]</h2>
+        <p>[[buy_lede]]</p>
+      </div>
+      <div class="venues">
+        <div class="venue"><h3>[[v1_t]]</h3><p>[[v1_p]]</p><ul>
+          <li><a href="https://www.binance.com" target="_blank" rel="noopener noreferrer">Binance</a> <span>· [[v1_binance]]</span></li>
+          <li><a href="https://www.coinbase.com" target="_blank" rel="noopener noreferrer">Coinbase</a></li>
+          <li><a href="https://www.kraken.com" target="_blank" rel="noopener noreferrer">Kraken</a></li>
+          <li><a href="https://www.okx.com" target="_blank" rel="noopener noreferrer">OKX</a></li>
+          <li><a href="https://www.bybit.com" target="_blank" rel="noopener noreferrer">Bybit</a></li>
+        </ul></div>
+        <div class="venue"><h3>[[v2_t]]</h3><p>[[v2_p]]</p><ul>
+          <li><a href="https://www.interactivebrokers.com" target="_blank" rel="noopener noreferrer">Interactive Brokers</a></li>
+          <li><a href="https://www.xtb.com" target="_blank" rel="noopener noreferrer">XTB</a></li>
+          <li><a href="https://www.trading212.com" target="_blank" rel="noopener noreferrer">Trading 212</a></li>
+          <li><a href="https://www.etoro.com" target="_blank" rel="noopener noreferrer">eToro</a> <span>· [[v2_etoro]]</span></li>
+        </ul></div>
+        <div class="venue"><h3>[[v3_t]]</h3><p>[[v3_p]]</p><ul>
+          <li><a href="https://www.wisdomtree.eu" target="_blank" rel="noopener noreferrer">WisdomTree Europe</a> <span>· ETC</span></li>
+          <li><a href="https://www.cmegroup.com" target="_blank" rel="noopener noreferrer">CME Group</a> <span>· futures</span></li>
+          <li><a href="https://www.ice.com" target="_blank" rel="noopener noreferrer">ICE</a> <span>· futures</span></li>
+          <li><a href="https://www.lme.com" target="_blank" rel="noopener noreferrer">London Metal Exchange</a></li>
+        </ul></div>
+        <div class="venue"><h3>[[v4_t]]</h3><p>[[v4_p]]</p><ul>
+          <li><a href="https://forgeglobal.com" target="_blank" rel="noopener noreferrer">Forge Global</a></li>
+          <li><a href="https://equityzen.com" target="_blank" rel="noopener noreferrer">EquityZen</a></li>
+        </ul></div>
+      </div>
+      <div class="warn"><p><b>[[scam_b]]</b> [[scam_p]]</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="transparenta">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">[[tr_eyebrow]]</p>
+        <h2>[[tr_title]]</h2>
+      </div>
+      <div class="trust">
+        <div><h3>[[t1_t]]</h3><p>[[t1_p]]</p></div>
+        <div><h3>[[t2_t]]</h3><p>[[t2_p]]</p></div>
+        <div><h3>[[t3_t]]</h3><p>[[t3_p]]</p></div>
+        <div><h3>[[t4_t]]</h3><p>[[t4_p]]</p></div>
+      </div>
+      <div class="warn"><p><b>[[risk_b]]</b> [[risk_p]]</p></div>
+    </div>
+  </section>
+  <section class="block" id="despre">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">[[ab_eyebrow]]</p>
+        <h2>[[ab_title]]</h2>
+      </div>
+      <div class="about">
+        <div class="author">
+          <div class="avatar" aria-hidden="true">D</div>
+          <div><b>Daniel</b><span>[[ab_role]]</span></div>
+        </div>
+        <div class="bio">
+          <p>[[ab_p1]]</p>
+          <p>[[ab_p2]]</p>
+          <p>[[ab_p3]]</p>
+          <p><b>[[ab_p4]]</b></p>
+        </div>
+      </div>
+      <div class="faq">
+        <details open><summary>[[fq1_q]]</summary><p>[[fq1_a]]</p></details>
+        <details><summary>[[fq2_q]]</summary><p>[[fq2_a]]</p></details>
+        <details><summary>[[fq3_q]]</summary><p>[[fq3_a]]</p></details>
+        <details><summary>[[fq4_q]]</summary><p>[[fq4_a]]</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>[[footer]]</span>
+    <div class="lang" role="group" aria-label="Language">[[lang_switch]]</div>
+  </div>
+</footer>
+
+<script type="application/json" id="data">[[DATA]]</script>
+<script type="application/json" id="i18n">[[I18N]]</script>
+<script>
+(function () {
+  const A = JSON.parse(document.getElementById('data').textContent);
+  const T = JSON.parse(document.getElementById('i18n').textContent);
+  const L = document.documentElement.lang;
+  const NS = 'http://www.w3.org/2000/svg';
+  const W = [16, 6, 6, 8, 6, 8, 8, 4, 6, 6, 6, 6, 6, 8];
+  const MK = ['crypto', 'comp', 'comm'];
+  const MCOL = { crypto: 'var(--m-crypto)', comp: 'var(--m-comp)', comm: 'var(--m-comm)' };
+  const GROUPS = { crypto: ['pre', 'post'], comp: ['ipo', 'preipo', 'startup', 'seed'], comm: ['mature', 'emerging'] };
+  const ACCESS = { pre: 'use', post: 'buy', ipo: 'buy', preipo: 'restricted', startup: 'closed', seed: 'closed', mature: 'buy', emerging: 'indirect' };
+  const fmt = (v) => { const s = Number(v).toFixed(2); return L === 'ro' ? s.replace('.', ',') : s; };
+  const lvl = (k) => (k >= 10 ? 'strong' : k >= 6 ? 'watch' : 'weak');
+  const safe = (u) => (typeof u === 'string' && /^https:\/\//.test(u) ? u : '');
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const sv = (tag, attrs) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+  const critLabels = (m) => (m === 'comm' ? T.crit_comm : T.crit_gen);
+  const rank = (a, b) => b.k - a.k || b.s - a.s;
+
+  // stats
+  document.getElementById('st-assets').textContent = A.length;
+  document.getElementById('st-strong').textContent = A.filter((a) => a.k >= 10).length;
+
+  // ---------- big radar ----------
+  const R = 262, C = 300;
+  const rad = (k) => R * (1 - Math.min(14, Math.max(0, k)) / 14);
+  const svg = document.getElementById('radar');
+  const defs = sv('defs', {});
+  const grad = sv('linearGradient', { id: 'sw', x1: '0', y1: '0', x2: '1', y2: '0' });
+  grad.append(sv('stop', { offset: '0', 'stop-color': '#7391ff', 'stop-opacity': '0' }), sv('stop', { offset: '1', 'stop-color': '#7391ff', 'stop-opacity': '.35' }));
+  defs.append(grad); svg.append(defs);
+  svg.append(sv('circle', { cx: C, cy: C, r: R + 18, fill: 'none', stroke: 'var(--scope-line)' }));
+  svg.append(sv('circle', { cx: C, cy: C, r: rad(10), fill: 'var(--scope-zone)', stroke: 'rgba(70,197,139,.5)', 'stroke-dasharray': '3 4' }));
+  [14, 10, 6, 2, 0].forEach((k) => { if (k < 14) svg.append(sv('circle', { cx: C, cy: C, r: rad(k), fill: 'none', stroke: 'var(--scope-line)' })); });
+  [[10, T.ring10], [6, T.ring6], [0, T.ring0]].forEach(([k, label]) => {
+    const t = sv('text', { x: C + 6, y: C - rad(k) + 14, fill: 'var(--scope-text)', 'font-size': '12', 'font-family': 'IBM Plex Mono, monospace' });
+    t.textContent = label; svg.append(t);
+  });
+  MK.forEach((m, i) => {
+    const a = (-90 + i * 120) * Math.PI / 180;
+    svg.append(sv('line', { x1: C, y1: C, x2: C + (R + 18) * Math.cos(a), y2: C + (R + 18) * Math.sin(a), stroke: 'var(--scope-line)' }));
+    const mid = (-90 + i * 120 + 60) * Math.PI / 180;
+    const t = sv('text', { x: C + (R + 4) * Math.cos(mid), y: C + (R + 4) * Math.sin(mid) + 4, fill: 'var(--scope-text)', 'font-size': '13', 'font-family': 'IBM Plex Mono, monospace', 'text-anchor': 'middle', 'letter-spacing': '1.5' });
+    t.textContent = T['m_' + m].toUpperCase();
+    const bb = sv('rect', {}); svg.append(bb); svg.append(t);
+    requestAnimationFrame(() => { try { const b = t.getBBox(); bb.setAttribute('x', b.x - 6); bb.setAttribute('y', b.y - 3); bb.setAttribute('width', b.width + 12); bb.setAttribute('height', b.height + 6); bb.setAttribute('rx', 4); bb.setAttribute('fill', 'var(--scope)'); } catch (e) {} });
+  });
+  const sweep = sv('g', { class: 'sweep', 'aria-hidden': 'true' });
+  sweep.append(sv('path', { d: `M${C} ${C} L${C + R} ${C} A${R} ${R} 0 0 0 ${C + R * Math.cos(-0.5)} ${C + R * Math.sin(-0.5)} Z`, fill: 'url(#sw)' }));
+  sweep.append(sv('line', { x1: C, y1: C, x2: C + R, y2: C, stroke: '#9cb1ff', 'stroke-opacity': '.6', 'stroke-width': '1.5' }));
+  svg.append(sweep);
+  svg.append(sv('circle', { cx: C, cy: C, r: 4, fill: '#9cb1ff' }));
+  const tip = document.getElementById('tip');
+  const scope = svg.parentElement;
+  const showTip = (a, x, y) => {
+    tip.replaceChildren(el('b', null, a.n[L]), el('span', null, `${T.score} ${fmt(a.s)} · ${a.k}/14 · ${T.g[a.g]}`));
+    tip.hidden = false;
+    const sb = scope.getBoundingClientRect();
+    const tw = tip.offsetWidth, th = tip.offsetHeight;
+    let left = x - sb.left + 12, top = y - sb.top - th - 10;
+    if (left + tw > sb.width - 8) left = x - sb.left - tw - 12;
+    if (top < 8) top = y - sb.top + 14;
+    tip.style.left = Math.max(8, left) + 'px'; tip.style.top = top + 'px';
+  };
+  MK.forEach((m, mi) => {
+    const list = A.filter((a) => a.m === m).sort((a, b) => (a.id < b.id ? -1 : 1));
+    list.forEach((a, i) => {
+      const ang = (-90 + mi * 120 + 8 + (i + 0.5) * (104 / list.length)) * Math.PI / 180;
+      const r = Math.max(10, rad(a.k));
+      const x = C + r * Math.cos(ang), y = C + r * Math.sin(ang);
+      const b = sv('circle', { cx: x.toFixed(1), cy: y.toFixed(1), r: (3.2 + Math.max(0, a.s - 2) * 0.6).toFixed(1), fill: MCOL[m], class: 'blip', tabindex: '0', role: 'button', 'aria-label': `${a.n[L]}: ${a.k}/14, ${T.score} ${fmt(a.s)}` });
+      b.addEventListener('mouseenter', (e) => showTip(a, e.clientX, e.clientY));
+      b.addEventListener('mousemove', (e) => showTip(a, e.clientX, e.clientY));
+      b.addEventListener('mouseleave', () => { tip.hidden = true; });
+      b.addEventListener('focus', () => { const bb = b.getBoundingClientRect(); showTip(a, bb.left + bb.width / 2, bb.top); });
+      b.addEventListener('blur', () => { tip.hidden = true; });
+      b.addEventListener('click', () => openAsset(a.id));
+      b.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openAsset(a.id); } });
+      svg.append(b);
+    });
+  });
+
+  // ---------- mini polar ----------
+  function polar(a, size) {
+    const s = sv('svg', { viewBox: '0 0 120 120', width: size, height: size, role: 'img', 'aria-label': `${a.n[L]}: ${a.k}/14` });
+    const c = 60, rr = 50;
+    [5, 7, 10].forEach((v) => s.append(sv('circle', { cx: c, cy: c, r: rr * v / 10, fill: 'none', stroke: v === 7 ? 'var(--strong)' : 'var(--grid)', 'stroke-dasharray': v === 7 ? '2 3' : '', 'stroke-opacity': v === 7 ? '.7' : '1' })));
+    const pts = a.c.map((v, i) => { const ang = (-90 + i * 360 / 14) * Math.PI / 180; s.append(sv('line', { x1: c, y1: c, x2: c + rr * Math.cos(ang), y2: c + rr * Math.sin(ang), stroke: 'var(--grid)' })); return [c + rr * v / 10 * Math.cos(ang), c + rr * v / 10 * Math.sin(ang)]; });
+    s.append(sv('polygon', { points: pts.map((p) => p.map((n) => n.toFixed(1)).join(',')).join(' '), fill: MCOL[a.m], 'fill-opacity': '.18', stroke: MCOL[a.m], 'stroke-width': '1.5', 'stroke-linejoin': 'round' }));
+    pts.forEach((p, i) => { if (a.c[i] >= 7) s.append(sv('circle', { cx: p[0].toFixed(1), cy: p[1].toFixed(1), r: 2.2, fill: 'var(--strong)' })); });
+    return s;
+  }
+  const badge = (g) => { const k = ACCESS[g]; return el('span', 'badge ' + (k === 'buy' ? 'b-buy' : k === 'indirect' || k === 'use' ? 'b-ind' : ''), T.access[k]); };
+  const mkTag = (m) => { const s = el('span', 'mk'); const i = el('i'); i.style.background = MCOL[m]; s.append(i, document.createTextNode(T['m_' + m])); return s; };
+
+  // ---------- picks ----------
+  const picks = document.getElementById('picks');
+  MK.forEach((m) => {
+    A.filter((a) => a.m === m).sort(rank).slice(0, 2).forEach((a) => {
+      const card = el('article', 'pick');
+      const top = el('div', 'pick-top'); top.append(mkTag(m), badge(a.g));
+      const h = el('h3', null, a.n[L]);
+      const body = el('div', 'pick-body');
+      const figs = el('div', 'pick-figs');
+      const k = el('span', 'big num k-' + lvl(a.k), a.k + '/14');
+      figs.append(k, el('small', null, T.cond_met), el('small', null, `${T.score} ${fmt(a.s)} · ${T.g[a.g]}`));
+      body.append(polar(a, 96), figs);
+      const go = el('button', 'linkbtn', T.see_details + ' →'); go.type = 'button'; go.addEventListener('click', () => openAsset(a.id));
+      card.append(top, h, body, go); picks.append(card);
+    });
+  });
+
+  // ---------- criteria list ----------
+  const crit = document.getElementById('crit');
+  T.crit_long.forEach((c, i) => {
+    const li = el('li'); const w = el('span', 'w num', W[i] + '%');
+    const d = el('div'); d.append(el('strong', null, c[0]), el('span', null, c[1]));
+    const wb = el('span', 'wbar'); const wi = el('i'); wi.style.width = (W[i] / 16 * 100) + '%'; wb.append(wi); d.append(wb);
+    li.append(w, d); crit.append(li);
+  });
+
+  // ---------- explorer ----------
+  const st = { m: 'crypto', g: 'all', q: '', min: 0, sort: 'k', open: new Set() };
+  const mtabs = document.getElementById('mtabs'), gchips = document.getElementById('gchips'), tbody = document.getElementById('rows'), gnote = document.getElementById('gnote');
+  MK.forEach((m) => {
+    const b = el('button', 'tab'); b.type = 'button'; b.setAttribute('role', 'tab'); b.dataset.m = m;
+    const i = el('i'); i.style.cssText = `width:.55rem;height:.55rem;border-radius:50%;background:${MCOL[m]};display:inline-block`;
+    b.append(i, document.createTextNode(T['m_' + m]), el('span', 'cnt', String(A.filter((a) => a.m === m).length)));
+    b.addEventListener('click', () => { st.m = m; st.g = 'all'; render(); });
+    mtabs.append(b);
+  });
+  document.getElementById('q').addEventListener('input', (e) => { st.q = e.target.value.trim().toLowerCase(); render(); });
+  document.getElementById('minK').addEventListener('change', (e) => { st.min = Number(e.target.value); render(); });
+  document.getElementById('sortBy').addEventListener('change', (e) => { st.sort = e.target.value; render(); });
+
+  function detailRow(a) {
+    const tr = el('tr', 'detail'); const td = el('td'); td.colSpan = 7;
+    const det = el('div', 'det');
+    const side = el('div', 'det-side');
+    side.append(polar(a, 220));
+    const ctx = el('div'); ctx.append(el('h4', null, T.context), el('p', null, a.x[L])); side.append(ctx);
+    const right = el('div', 'det-side');
+    const lab = critLabels(a.m);
+    const listWrap = el('div'); listWrap.append(el('h4', null, T.profile));
+    const ul = el('ul', 'cl');
+    a.c.forEach((v, i) => { const li = el('li', v >= 7 ? 'met' : v <= 4 ? 'low' : ''); li.append(el('span', null, lab[i]), el('b', null, String(v))); ul.append(li); });
+    listWrap.append(ul);
+    const where = el('div'); where.append(el('h4', null, T.where), el('p', null, a.w[L]));
+    right.append(listWrap, where);
+    const u = safe(a.l);
+    if (u) { const ln = el('a', 'buy', (a.lt || T.open_link) + ' ↗'); ln.href = u; ln.target = '_blank'; ln.rel = 'noopener noreferrer'; right.append(ln); }
+    det.append(side, right); td.append(det); tr.append(td);
+    return tr;
+  }
+
+  function render() {
+    mtabs.querySelectorAll('.tab').forEach((b) => b.setAttribute('aria-selected', b.dataset.m === st.m ? 'true' : 'false'));
+    gchips.replaceChildren();
+    ['all'].concat(GROUPS[st.m]).forEach((g) => {
+      const c = el('button', 'chip', g === 'all' ? T.all : T.g[g]); c.type = 'button';
+      c.setAttribute('aria-pressed', st.g === g ? 'true' : 'false');
+      c.addEventListener('click', () => { st.g = g; render(); });
+      gchips.append(c);
+    });
+    gnote.textContent = st.g === 'all' ? T.mnote[st.m] : T.gnote[st.g];
+    let list = A.filter((a) => a.m === st.m && (st.g === 'all' || a.g === st.g) && a.k >= st.min && (!st.q || a.n[L].toLowerCase().includes(st.q) || a.x[L].toLowerCase().includes(st.q)));
+    list.sort(st.sort === 's' ? (a, b) => b.s - a.s || b.k - a.k : st.sort === 'n' ? (a, b) => a.n[L].localeCompare(b.n[L], L) : rank);
+    tbody.replaceChildren();
+    if (!list.length) { const tr = el('tr'); const td = el('td', 'empty', T.empty); td.colSpan = 7; tr.append(td); tbody.append(tr); return; }
+    list.forEach((a, i) => {
+      const tr = el('tr', 'row' + (st.open.has(a.id) ? ' open' : '')); tr.id = 'a-' + a.id; tr.tabIndex = 0;
+      tr.setAttribute('aria-expanded', st.open.has(a.id) ? 'true' : 'false');
+      tr.append(el('td', 'r num', String(i + 1)));
+      const n = el('td'); n.append(el('span', 'nm', a.n[L]), el('span', 'grp', T.g[a.g])); tr.append(n);
+      const sc = el('td'); const sw = el('div', 'sc'); sw.append(el('span', 'num', fmt(a.s)));
+      const bar = el('span', 'bar2'); const bi = el('i'); bi.style.width = (a.s * 10) + '%'; bi.style.background = MCOL[a.m]; bar.append(bi); sw.append(bar); sc.append(sw); tr.append(sc);
+      const kd = el('td'); const kv = el('div', 'kv'); kv.append(el('b', 'k-' + lvl(a.k), a.k + '/14'));
+      const dots = el('span', 'dots hide-s'); a.c.slice().sort((x, y) => y - x).forEach((v) => dots.append(el('i', v >= 7 ? 'on' : ''))); kv.append(dots); kd.append(kv); tr.append(kd);
+      const ac = el('td', 'hide-s'); ac.append(badge(a.g)); tr.append(ac);
+      const wh = el('td', 'hide-s'); const u = safe(a.l);
+      if (u) { const ln = el('a', null, a.lt || T.open_link); ln.href = u; ln.target = '_blank'; ln.rel = 'noopener noreferrer'; ln.addEventListener('click', (e) => e.stopPropagation()); wh.append(ln); } else { wh.textContent = '—'; wh.style.color = 'var(--ink-3)'; }
+      tr.append(wh);
+      const ch = el('td', 'r'); const cv = el('span', 'chev', '⌄'); cv.setAttribute('aria-hidden', 'true'); ch.append(cv); tr.append(ch);
+      const toggle = () => { st.open.has(a.id) ? st.open.delete(a.id) : st.open.add(a.id); render(); };
+      tr.addEventListener('click', toggle);
+      tr.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+      tbody.append(tr);
+      if (st.open.has(a.id)) tbody.append(detailRow(a));
+    });
+  }
+
+  function openAsset(id) {
+    const a = A.find((x) => x.id === id); if (!a) return;
+    st.m = a.m; st.g = 'all'; st.q = ''; st.min = 0; st.open.add(id);
+    document.getElementById('q').value = ''; document.getElementById('minK').value = '0';
+    render();
+    const row = document.getElementById('a-' + id);
+    if (row) { row.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); row.focus({ preventScroll: true }); }
+  }
+  render();
+
+  // ---------- market cards ----------
+  MK.forEach((m) => {
+    const list = A.filter((a) => a.m === m);
+    const avg = list.reduce((s, a) => s + a.k, 0) / list.length;
+    const top = list.slice().sort(rank)[0];
+    const set = (key, v) => document.querySelectorAll(`[data-mstat="${m}-${key}"]`).forEach((e) => { e.textContent = v; });
+    set('n', String(list.length));
+    set('avg', (L === 'ro' ? avg.toFixed(1).replace('.', ',') : avg.toFixed(1)) + '/14');
+    set('top', `${top.n[L]} (${top.k}/14)`);
+  });
+  document.querySelectorAll('.market[data-go]').forEach((a) => a.addEventListener('click', () => { st.m = a.dataset.go; st.g = 'all'; render(); }));
+
+  // ---------- charts ----------
+  const ctip = el('div', 'ctip'); ctip.hidden = true; document.body.append(ctip);
+  const hover = (node, text) => {
+    node.addEventListener('mousemove', (e) => { ctip.textContent = text; ctip.hidden = false; const w = ctip.offsetWidth; ctip.style.left = Math.min(e.clientX + 12, innerWidth - w - 8) + 'px'; ctip.style.top = (e.clientY - 34) + 'px'; });
+    node.addEventListener('mouseleave', () => { ctip.hidden = true; });
+  };
+  const txt = (attrs, s) => { const t = sv('text', attrs); t.textContent = s; return t; };
+
+  function chartTop() {
+    const svg = document.getElementById('ch-top'); svg.replaceChildren();
+    const W0 = Math.max(320, svg.clientWidth || 640);
+    const narrow = W0 < 560;
+    const list = A.slice().sort(rank).slice(0, 10);
+    const rowH = 30, top = 6, labelW = narrow ? 128 : 230, right = 56;
+    const H = top + list.length * rowH + 26;
+    svg.setAttribute('viewBox', `0 0 ${W0} ${H}`); svg.setAttribute('height', H);
+    const x0 = labelW, x1 = W0 - right, sx = (k) => x0 + (x1 - x0) * k / 14;
+    [0, 7, 10, 14].forEach((k) => {
+      svg.append(sv('line', { x1: sx(k), x2: sx(k), y1: top - 2, y2: top + list.length * rowH, stroke: k === 10 ? 'var(--strong)' : 'var(--grid)', 'stroke-dasharray': k === 10 ? '3 3' : '' }));
+      svg.append(txt({ x: sx(k), y: H - 6, 'text-anchor': 'middle', 'font-size': '11' }, String(k)));
+    });
+    list.forEach((a, i) => {
+      const y = top + i * rowH;
+      let name = a.n[L]; const max = narrow ? 17 : 30; if (name.length > max) name = name.slice(0, max - 1) + '…';
+      svg.append(txt({ x: labelW - 10, y: y + rowH / 2 + 4, 'text-anchor': 'end', 'font-size': narrow ? '12' : '13', class: 'nm' }, name));
+      const r = sv('rect', { x: x0, y: y + 6, width: Math.max(2, sx(a.k) - x0), height: rowH - 12, rx: 3, fill: MCOL[a.m] });
+      hover(r, `${a.n[L]} · ${a.k}/14 · ${T.score} ${fmt(a.s)} · ${T['m_' + a.m]}`); svg.append(r);
+      svg.append(txt({ x: sx(a.k) + 6, y: y + rowH / 2 + 4, 'font-size': '12', class: 'v' }, a.k + '/14'));
+    });
+  }
+
+  function chartZones() {
+    const svg = document.getElementById('ch-zones'); svg.replaceChildren();
+    const W0 = Math.max(300, svg.clientWidth || 520);
+    const rowH = 54, labelW = 104, H = MK.length * rowH + 4;
+    svg.setAttribute('viewBox', `0 0 ${W0} ${H}`); svg.setAttribute('height', H);
+    const x1 = W0 - 8;
+    MK.forEach((m, i) => {
+      const list = A.filter((a) => a.m === m);
+      const parts = [['strong', list.filter((a) => a.k >= 10).length], ['watch', list.filter((a) => a.k >= 6 && a.k < 10).length], ['weak', list.filter((a) => a.k < 6).length]];
+      const y = i * rowH + 8;
+      svg.append(txt({ x: 0, y: y + 22, 'font-size': '13', class: 'nm' }, T['m_' + m]));
+      let x = labelW; const total = list.length;
+      parts.forEach(([lv, n]) => {
+        if (!n) return;
+        const w = (x1 - labelW) * n / total;
+        const r = sv('rect', { x: x, y: y + 6, width: Math.max(1, w - 2), height: 26, rx: 4, fill: `var(--${lv})`, 'fill-opacity': lv === 'weak' ? '.45' : '1' });
+        hover(r, `${T['m_' + m]} · ${T.lvname[lv]}: ${n}`); svg.append(r);
+        if (w > 24) svg.append(txt({ x: x + w / 2 - 1, y: y + 24, 'text-anchor': 'middle', 'font-size': '12', class: 'v', fill: lv === 'weak' ? 'var(--ink)' : '#fff', style: lv === 'weak' ? '' : 'fill:#fff' }, String(n)));
+        x += w;
+      });
+    });
+  }
+
+  function chartPairs() {
+    const svg = document.getElementById('ch-pairs'); svg.replaceChildren();
+    const W0 = Math.max(300, svg.clientWidth || 520);
+    const pairs = [['crypto', 'pre', 'post'], ['comp', 'preipo', 'ipo'], ['comp', 'seed', 'startup'], ['comm', 'emerging', 'mature']];
+    const rowH = 64, labelW = 0, H = pairs.length * rowH + 22;
+    svg.setAttribute('viewBox', `0 0 ${W0} ${H}`); svg.setAttribute('height', H);
+    const x0 = 0, x1 = W0 - 54, sx = (k) => x0 + (x1 - x0) * k / 14;
+    const avg = (g) => { const l = A.filter((a) => a.g === g); return l.reduce((s, a) => s + a.k, 0) / l.length; };
+    pairs.forEach(([m, a, b], i) => {
+      const y = i * rowH;
+      svg.append(txt({ x: 0, y: y + 13, 'font-size': '12.5', class: 'nm' }, `${T['m_' + m]} · ${T.pairlabel[a + '-' + b]}`));
+      [[a, 'var(--ink-3)', 0], [b, 'var(--signal)', 1]].forEach(([g, col, j]) => {
+        const v = avg(g), yy = y + 20 + j * 19;
+        const r = sv('rect', { x: x0, y: yy, width: Math.max(2, sx(v) - x0), height: 15, rx: 3, fill: col });
+        hover(r, `${T.g[g]} · ${T.avgcond}: ${v.toFixed(1)}/14`); svg.append(r);
+        svg.append(txt({ x: sx(v) + 6, y: yy + 12, 'font-size': '11.5', class: 'v' }, (L === 'ro' ? v.toFixed(1).replace('.', ',') : v.toFixed(1))));
+      });
+    });
+    [0, 7, 14].forEach((k) => svg.append(txt({ x: sx(k), y: H - 4, 'text-anchor': k === 0 ? 'start' : 'middle', 'font-size': '11' }, String(k))));
+  }
+  const drawCharts = () => { chartTop(); chartZones(); chartPairs(); };
+  drawCharts();
+  let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(drawCharts, 150); });
+
+  const h = location.hash.slice(1);
+  if (MK.includes(h)) { st.m = h; render(); document.getElementById('explorer').scrollIntoView(); }
+})();
+</script>
+</body>
+</html>

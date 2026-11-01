@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Explosive Assets Radar</title>
+<meta name="description" content="We pre-identify the assets (crypto, companies, commodities) that meet the most conditions for an explosive price rise. Free access. Not investment advice.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Explosive Assets Radar">
+<meta property="og:description" content="Which assets now meet the most conditions for an explosive rise — 88 assets across crypto, companies and commodities. Transparent method, free access.">
+<meta name="theme-color" content="#0f1d2e">
+<link rel="alternate" hreflang="ro" href="../">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230f1d2e'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%236f8dff' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='4' fill='none' stroke='%236f8dff' stroke-width='1.5'/%3E%3Cpath d='M16 16 L27 9' stroke='%236f8dff' stroke-width='2'/%3E%3Ccircle cx='21' cy='12' r='2' fill='%2345c48a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: instrument-panel landing — sticky bar, hero with live radar, picks, method, explorer, where-to-buy, transparency. */
+:root{
+  --paper:#f2f5f9; --surface:#ffffff; --surface-2:#f7f9fc; --ink:#0f1d2e; --ink-2:#4b5b70; --ink-3:#7a889b; --line:#d8e0ea; --grid:#e4eaf2;
+  --signal:#2b59ff; --signal-ink:#1b3fd1; --signal-soft:rgba(43,89,255,.10);
+  --strong:#14865a; --watch:#b86e0a; --weak:#7a889b;
+  --m-crypto:#2b59ff; --m-comp:#0e8a8a; --m-comm:#c2761a;
+  --scope:#0f1d2e; --scope-line:rgba(160,190,255,.18); --scope-text:#a9bde0; --scope-zone:rgba(69,196,138,.14);
+  --f-display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --r:10px; --shadow:0 1px 2px rgba(15,29,46,.06), 0 8px 24px rgba(15,29,46,.06);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#0a121d; --surface:#101b29; --surface-2:#0d1724; --ink:#e7eef7; --ink-2:#a3b3c7; --ink-3:#71839a; --line:#21314a; --grid:#1a283b;
+  --signal:#7391ff; --signal-ink:#9cb1ff; --signal-soft:rgba(115,145,255,.14);
+  --strong:#46c58b; --watch:#e6a542; --weak:#71839a;
+  --m-crypto:#7391ff; --m-comp:#3cc2bf; --m-comm:#e6a542;
+  --scope:#070e17; --scope-line:rgba(160,190,255,.16); --scope-text:#93a8c9; --scope-zone:rgba(70,197,139,.14);
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+  color-scheme:dark;
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55}
+a{color:var(--signal-ink)}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:0}
+h1,h2,h3{font-family:var(--f-display);letter-spacing:-.01em;text-wrap:balance;margin:0}
+:focus-visible{outline:2px solid var(--signal);outline-offset:2px;border-radius:4px}
+
+/* header */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--paper)}
+.bar .wrap{display:flex;align-items:center;gap:1rem;padding-block:.7rem}
+.brand{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--ink);font-family:var(--f-display);font-weight:800;font-size:1.05rem;white-space:nowrap}
+.brand svg{flex:none}
+.nav{display:flex;gap:.25rem;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
+.nav a{color:var(--ink-2);text-decoration:none;font-size:.9rem;padding:.35rem .6rem;border-radius:8px}
+.nav a:hover{color:var(--ink);background:var(--signal-soft)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-family:var(--f-mono);font-size:.75rem}
+.lang a,.lang b{padding:.3rem .6rem;text-decoration:none}
+.lang b{background:var(--ink);color:var(--paper);font-weight:500}
+.lang a{color:var(--ink-2)}
+@media (max-width:760px){.nav{display:none}.lang{margin-left:auto}}
+
+/* hero */
+.hero{padding-block:3.5rem 3rem}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:3rem;align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:2rem}.hero{padding-block:2rem}}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.6rem);line-height:1.02;font-weight:800;margin-top:.9rem}
+.hero h1 em{font-style:normal;color:var(--signal)}
+.lede{font-size:1.125rem;color:var(--ink-2);max-width:56ch;margin:1.1rem 0 0}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;margin-top:2rem;max-width:560px}
+@media (max-width:480px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{border-top:2px solid var(--ink);padding-top:.5rem}
+.stat b{display:block;font-family:var(--f-display);font-size:1.9rem;font-weight:700;line-height:1.1}
+.stat span{font-size:.8rem;color:var(--ink-2)}
+.cta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;font:600 .95rem var(--f-body);padding:.7rem 1.1rem;border-radius:999px;text-decoration:none;border:1px solid var(--ink);cursor:pointer;background:none;color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{transform:translateY(-1px)}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+/* radar */
+.scope{position:relative;background:var(--scope);border-radius:20px;padding:clamp(.75rem,2vw,1.25rem);box-shadow:var(--shadow);min-width:0}
+.scope svg{display:block;width:100%;height:auto;max-width:100%}
+.scope-legend{display:flex;flex-wrap:wrap;gap:.4rem 1rem;justify-content:center;font-size:.78rem;color:var(--scope-text);padding:.5rem .25rem .25rem;font-family:var(--f-mono)}
+.scope-legend i{display:inline-block;width:.6rem;height:.6rem;border-radius:50%;margin-right:.35rem;vertical-align:middle}
+.blip{cursor:pointer;transition:r .15s}
+.blip:focus{outline:none}
+.blip:focus-visible,.blip:hover{stroke:#fff;stroke-width:2}
+.sweep{transform-origin:300px 300px;animation:sweep 7s linear infinite}
+@keyframes sweep{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.sweep{animation:none;opacity:0}}
+.tip{position:absolute;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:.45rem .6rem;font-size:.8rem;box-shadow:var(--shadow);max-width:15rem;z-index:5}
+.tip b{display:block;font-weight:600}
+.tip span{color:var(--ink-2);font-family:var(--f-mono);font-size:.75rem}
+
+/* sections */
+section.block{padding-block:4rem;border-top:1px solid var(--line);scroll-margin-top:64px}
+tr.row{scroll-margin-top:80px}
+@media (max-width:640px){section.block{padding-block:2.75rem}}
+.head{display:grid;gap:.6rem;margin-bottom:2rem;max-width:70ch}
+.head h2{font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;line-height:1.1}
+.head p{color:var(--ink-2);margin:0}
+
+/* markets */
+:root{--ill-bg:#e9eef6}
+@media (prefers-color-scheme:dark){:root{--ill-bg:#14233a}}
+.markets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+@media (max-width:900px){.markets{grid-template-columns:1fr}}
+.market{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:grid;grid-template-rows:auto 1fr;transition:border-color .2s, transform .2s}
+.market:hover{border-color:var(--signal);transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.market:hover{transform:none}}
+.ill{display:block;width:100%;height:auto}
+.market-body{padding:1.1rem 1.2rem 1.2rem;display:grid;gap:.5rem;align-content:start}
+.market-body h3{font-size:1.3rem}
+.market-body p{margin:0;color:var(--ink-2);font-size:.93rem}
+.mstats{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.85rem;color:var(--ink-2)}
+.mstats b{font-size:1.2rem;color:var(--ink);font-weight:500}
+.mlead{font-size:.88rem}
+.mlead b{color:var(--ink)}
+
+/* charts */
+.charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+@media (max-width:900px){.charts{grid-template-columns:1fr}}
+.chart{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem;display:grid;gap:.9rem;min-width:0;align-content:start}
+.chart.wide{grid-column:1 / -1}
+.chart h3{font-size:1.15rem}
+.chart figcaption p{margin:.3rem 0 0;color:var(--ink-2);font-size:.9rem}
+.chart svg{display:block;max-width:100%;overflow:visible}
+.chart text{font-family:var(--f-body);fill:var(--ink-2)}
+.chart text.v{font-family:var(--f-mono);fill:var(--ink)}
+.chart text.nm{fill:var(--ink)}
+.keyrow{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.82rem;color:var(--ink-2)}
+.keyrow i{display:inline-block;width:.7rem;height:.7rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.ctip{position:fixed;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:.4rem .6rem;font-size:.8rem;box-shadow:var(--shadow);z-index:30}
+
+/* history */
+.hist{display:grid;gap:1.25rem}
+.hist-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+@media (max-width:760px){.hist-steps{grid-template-columns:1fr}}
+.hstep{display:grid;grid-template-columns:2.2rem 1fr;gap:.75rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem}
+.hstep>b{width:2.2rem;height:2.2rem;border-radius:50%;display:grid;place-items:center;background:var(--signal-soft);color:var(--signal-ink);font-weight:500}
+.hstep h3{font-size:1.05rem;margin-bottom:.3rem}
+.hstep p{margin:0;color:var(--ink-2);font-size:.9rem}
+.snaps{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow-x:auto}
+.snapt td{vertical-align:middle}
+.hash{font-family:var(--f-mono);font-size:.8rem;color:var(--ink-2)}
+.muted{color:var(--ink-3);font-size:.88rem}
+.proof{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:1.5rem;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem;align-items:center}
+@media (max-width:760px){.proof{grid-template-columns:1fr}}
+.proof h3{font-size:1.15rem;margin-bottom:.4rem}
+.proof p{margin:0 0 .6rem;color:var(--ink-2);font-size:.92rem}
+.hashline{display:flex;gap:.5rem;align-items:baseline;flex-wrap:wrap}
+.hashline span{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;color:var(--ink-3)}
+.hashline code{font-family:var(--f-mono);font-size:.78rem;word-break:break-all;color:var(--ink)}
+.chart-ph{text-align:center}
+.chart-ph p{font-size:.85rem;color:var(--ink-3);margin:.4rem 0 0}
+.pastperf{font-size:.85rem;color:var(--ink-3);margin:0}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:2rem;align-items:start}
+@media (max-width:760px){.about{grid-template-columns:1fr;gap:1rem}}
+.author{display:flex;gap:.9rem;align-items:center}
+.avatar{width:4.5rem;height:4.5rem;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-family:var(--f-display);font-size:2rem;font-weight:700;flex:none}
+.author b{display:block;font-family:var(--f-display);font-size:1.3rem}
+.author span{color:var(--ink-2);font-size:.88rem}
+.bio{max-width:64ch}
+.bio p{margin:0 0 1rem;font-size:1.05rem}
+.faq{margin-top:2.5rem;display:grid;gap:.5rem;max-width:72ch}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.9rem 1.1rem}
+.faq summary{cursor:pointer;font-weight:600;font-family:var(--f-display);font-size:1.05rem}
+.faq p{margin:.6rem 0 0;color:var(--ink-2)}
+
+/* picks */
+.picks{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,21rem),1fr));gap:1rem}
+.pick{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem;display:grid;gap:.6rem;align-content:start;min-width:0}
+.pick-top{display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.mk{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.35rem;color:var(--ink-2)}
+.mk i{width:.55rem;height:.55rem;border-radius:50%;display:inline-block}
+.pick h3{font-size:1.2rem;font-weight:700;line-height:1.2;overflow-wrap:anywhere}
+.pick-body{display:grid;grid-template-columns:96px 1fr;gap:.9rem;align-items:center}
+.pick-figs{display:grid;gap:.15rem}
+.pick-figs .big{font-family:var(--f-display);font-size:2rem;font-weight:700;line-height:1}
+.pick-figs small{color:var(--ink-2);font-size:.8rem}
+.badge{font-size:.72rem;font-weight:600;padding:.18rem .5rem;border-radius:999px;border:1px solid var(--line);color:var(--ink-2);white-space:nowrap}
+.badge.b-buy{border-color:color-mix(in srgb,var(--strong) 45%,transparent);color:var(--strong)}
+.badge.b-ind{border-color:color-mix(in srgb,var(--watch) 45%,transparent);color:var(--watch)}
+.linkbtn{font:600 .85rem var(--f-body);color:var(--signal-ink);background:none;border:0;padding:0;cursor:pointer;text-align:left;justify-self:start}
+.linkbtn:hover{text-decoration:underline}
+
+/* method */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;counter-reset:s}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem}
+.step b{font-family:var(--f-mono);font-size:.8rem;color:var(--signal)}
+.step h3{font-size:1.15rem;margin:.35rem 0 .4rem}
+.step p{margin:0;color:var(--ink-2);font-size:.95rem}
+.levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1rem}
+@media (max-width:640px){.levels{grid-template-columns:1fr}}
+.level{border-left:3px solid;padding:.4rem .9rem}
+.level b{font-family:var(--f-display);font-size:1.25rem;display:block}
+.level span{color:var(--ink-2);font-size:.9rem}
+.lv-strong{border-color:var(--strong)} .lv-strong b{color:var(--strong)}
+.lv-watch{border-color:var(--watch)} .lv-watch b{color:var(--watch)}
+.lv-weak{border-color:var(--weak)} .lv-weak b{color:var(--weak)}
+.crit{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,16rem),1fr));gap:.5rem 1.5rem;margin:2rem 0 0;padding:0;list-style:none}
+.crit li{display:grid;grid-template-columns:2.6rem 1fr;gap:.6rem;align-items:baseline;padding:.6rem 0;border-bottom:1px solid var(--line)}
+.crit .w{font-family:var(--f-mono);font-size:.8rem;color:var(--ink-3)}
+.crit strong{display:block;font-weight:600}
+.crit span{color:var(--ink-2);font-size:.88rem}
+.wbar{display:block;height:3px;background:var(--grid);border-radius:2px;margin-top:.35rem}
+.wbar i{display:block;height:100%;background:var(--signal);border-radius:2px}
+
+/* explorer */
+.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem}
+.tab{font:600 .95rem var(--f-body);padding:.55rem 1rem;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer;display:inline-flex;gap:.45rem;align-items:center}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tab .cnt{font-family:var(--f-mono);font-size:.75rem;opacity:.75}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.controls{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;padding:1rem;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.chips{display:flex;flex-wrap:wrap;gap:.35rem}
+.chip{font:500 .82rem var(--f-body);padding:.35rem .7rem;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--signal);color:var(--signal-ink);background:var(--signal-soft)}
+.ctl{display:flex;gap:.5rem;margin-left:auto;flex-wrap:wrap}
+@media (max-width:760px){.ctl{margin-left:0;width:100%}}
+.ctl input,.ctl select{font:inherit;font-size:.88rem;padding:.45rem .65rem;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);min-width:0}
+.ctl input{width:13rem;max-width:100%}
+@media (max-width:760px){.ctl input{flex:1 1 10rem;width:auto}}
+.gnote{padding:.8rem 1rem;font-size:.88rem;color:var(--ink-2);border-bottom:1px solid var(--line);margin:0}
+.tablewrap{overflow-x:auto}
+table.ex{width:100%;border-collapse:collapse;font-size:.92rem}
+.ex th{text-align:left;font:600 .72rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:.7rem 1rem;border-bottom:1px solid var(--line);white-space:nowrap}
+.ex td{padding:.75rem 1rem;border-bottom:1px solid var(--line);vertical-align:middle}
+.ex tr.row{cursor:pointer}
+.ex tr.row:hover td{background:var(--signal-soft)}
+.ex .r{text-align:right}
+.ex .nm{font-weight:600}
+.ex .grp{display:block;font-size:.78rem;color:var(--ink-3);font-weight:400}
+.sc{display:grid;gap:.25rem;min-width:5.5rem}
+.sc .bar2{height:4px;border-radius:2px;background:var(--grid)}
+.sc .bar2 i{display:block;height:100%;border-radius:2px;background:var(--signal)}
+.dots{display:grid;grid-template-columns:repeat(14,7px);gap:3px;align-items:center}
+.dots i{width:7px;height:7px;border-radius:2px;background:var(--grid)}
+.dots i.on{background:var(--strong)}
+.kv{display:flex;align-items:center;gap:.6rem;white-space:nowrap}
+.kv b{font-family:var(--f-mono);font-weight:500;min-width:2.6rem}
+.k-strong{color:var(--strong)} .k-watch{color:var(--watch)} .k-weak{color:var(--weak)}
+.chev{width:1.6rem;height:1.6rem;border-radius:50%;border:1px solid var(--line);display:inline-grid;place-items:center;transition:transform .2s;background:var(--surface)}
+tr.open .chev{transform:rotate(180deg)}
+@media (prefers-reduced-motion:reduce){.chev{transition:none}}
+@media (max-width:760px){.hide-s{display:none}}
+tr.detail td{background:var(--surface-2);padding:1.25rem 1rem}
+.det{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:1.5rem;align-items:start;position:sticky;left:1rem;max-width:calc(100vw - 4rem)}
+@media (max-width:760px){.det{grid-template-columns:1fr}}
+.det-side{display:grid;gap:1rem;min-width:0}
+.det h4{font:600 .72rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:0 0 .4rem}
+.det p{margin:0;color:var(--ink-2);font-size:.92rem}
+.cl{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,14rem),1fr));gap:.3rem 1.25rem;margin:0;padding:0;list-style:none;font-size:.86rem}
+.cl li{display:grid;grid-template-columns:1fr 2.2rem;gap:.5rem;align-items:center;padding:.2rem 0;border-bottom:1px dashed var(--line)}
+.cl li b{font-family:var(--f-mono);font-weight:500;text-align:right}
+.cl li.met b{color:var(--strong)}
+.cl li.low b{color:var(--watch)}
+.buy{display:inline-flex;align-items:center;gap:.4rem;font:600 .9rem var(--f-body);color:var(--paper);background:var(--ink);padding:.55rem .9rem;border-radius:999px;text-decoration:none;justify-self:start}
+.empty{padding:2rem 1rem;text-align:center;color:var(--ink-2)}
+
+/* where to buy */
+.venues{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,16.5rem),1fr));gap:1rem}
+.venue{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem;display:grid;gap:.6rem;align-content:start}
+.venue h3{font-size:1.1rem}
+.venue p{margin:0;color:var(--ink-2);font-size:.9rem}
+.venue ul{margin:0;padding:0;list-style:none;display:grid;gap:.25rem;font-size:.92rem}
+.venue li a{text-decoration:none;font-weight:500}
+.venue li a:hover{text-decoration:underline}
+.venue li span{color:var(--ink-3);font-size:.82rem}
+
+/* transparency */
+.trust{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));gap:1rem}
+.trust div{border-top:2px solid var(--ink);padding-top:.75rem}
+.trust h3{font-size:1.05rem;margin-bottom:.35rem}
+.trust p{margin:0;color:var(--ink-2);font-size:.92rem}
+.warn{margin-top:2rem;background:color-mix(in srgb,var(--watch) 10%,var(--surface));border:1px solid color-mix(in srgb,var(--watch) 35%,transparent);border-radius:var(--r);padding:1.1rem 1.25rem;display:grid;gap:.4rem;font-size:.92rem}
+.warn p{margin:0}
+
+footer{border-top:1px solid var(--line);padding-block:2rem 3rem;color:var(--ink-3);font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveal{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+  .reveal.d2{animation-delay:.08s}.reveal.d3{animation-delay:.16s}
+  @keyframes rise{from{opacity:.001;transform:translateY(8px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Explosive Assets Radar">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="var(--ink)"/><circle cx="16" cy="16" r="9" fill="none" stroke="var(--signal)" stroke-width="1.5"/><circle cx="16" cy="16" r="4" fill="none" stroke="var(--signal)" stroke-width="1.5"/><path d="M16 16 L27 9" stroke="var(--signal)" stroke-width="2"/><circle cx="21" cy="12" r="2" fill="var(--strong)"/></svg>
+      <span>Explosive Assets Radar</span>
+    </a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="#metoda">Method</a>
+      <a href="#explorer">All assets</a>
+      <a href="../domenii/">Official data</a>
+      <a href="#istoric">Track record</a>
+      <a href="#despre">About</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language"><a href="../" hreflang="ro" lang="ro">RO</a><b>EN</b></div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow reveal">Pre-identification · updated 29 October 2026</p>
+        <h1 class="reveal d2">We spot early the assets that meet <em>the most conditions</em> for an explosive rise.</h1>
+        <p class="lede reveal d3">Rises of 5, 10 or 50 times were usually preceded by the same signs. We look for them systematically across crypto, companies and commodities and put them on one radar. It is a watchlist of candidates, not advice to buy.</p>
+        <div class="stats" aria-live="polite">
+          <div class="stat"><b class="num" id="st-assets">88</b><span>assets analysed</span></div>
+          <div class="stat"><b class="num">3</b><span>markets</span></div>
+          <div class="stat"><b class="num">14</b><span>conditions checked</span></div>
+          <div class="stat"><b class="num" id="st-strong">—</b><span>strong candidates (10+)</span></div>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#explorer">See all assets</a>
+          <a class="btn" href="#metoda">How it works</a>
+        </div>
+      </div>
+      <figure class="scope" style="margin:0">
+        <svg id="radar" viewBox="0 0 600 600" role="img" aria-labelledby="radar-title">
+          <title id="radar-title">Radar of all assets: the closer a dot is to the centre, the more conditions it meets.</title>
+        </svg>
+        <figcaption class="scope-legend">
+          <span><i style="background:var(--m-crypto)"></i>Crypto</span>
+          <span><i style="background:var(--m-comp)"></i>Companies</span>
+          <span><i style="background:var(--m-comm)"></i>Commodities</span>
+          <span>Centre = 14 conditions · green zone = 10+</span>
+        </figcaption>
+        <div class="tip" id="tip" hidden></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block" id="piete">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Three markets, one question</p>
+        <h2>Where do the most conditions add up?</h2>
+        <p>We apply the same 14 conditions to three types of assets so they can be compared fairly.</p>
+      </div>
+      <div class="markets">
+        <a class="market" href="#explorer" data-go="crypto">
+          <svg class="ill" viewBox="0 0 320 170" role="img" aria-label="Crypto">
+            <rect width="320" height="170" rx="12" fill="var(--ill-bg)"/>
+            <g stroke="var(--m-crypto)" stroke-width="1.5" stroke-opacity=".45">
+              <line x1="52" y1="48" x2="118" y2="34"/><line x1="118" y1="34" x2="176" y2="70"/><line x1="52" y1="48" x2="86" y2="112"/><line x1="86" y1="112" x2="176" y2="70"/><line x1="176" y1="70" x2="250" y2="42"/><line x1="176" y1="70" x2="232" y2="128"/><line x1="250" y1="42" x2="282" y2="96"/><line x1="232" y1="128" x2="282" y2="96"/>
+            </g>
+            <g fill="var(--m-crypto)"><circle cx="52" cy="48" r="5"/><circle cx="118" cy="34" r="4"/><circle cx="86" cy="112" r="4"/><circle cx="250" cy="42" r="4"/><circle cx="232" cy="128" r="5"/><circle cx="282" cy="96" r="4"/></g>
+            <g transform="translate(176 92)">
+              <ellipse cx="0" cy="26" rx="44" ry="11" fill="var(--m-crypto)" fill-opacity=".35"/>
+              <rect x="-44" y="10" width="88" height="16" fill="var(--m-crypto)" fill-opacity=".35"/>
+              <ellipse cx="0" cy="10" rx="44" ry="11" fill="var(--m-crypto)" fill-opacity=".55"/>
+              <rect x="-44" y="-6" width="88" height="16" fill="var(--m-crypto)" fill-opacity=".55"/>
+              <ellipse cx="0" cy="-6" rx="44" ry="11" fill="var(--m-crypto)"/>
+              <ellipse cx="0" cy="-6" rx="30" ry="6.5" fill="none" stroke="var(--ill-bg)" stroke-width="2"/>
+            </g>
+            <circle cx="176" cy="70" r="7" fill="var(--strong)"/>
+          </svg>
+          <div class="market-body">
+            <h3>Crypto</h3>
+            <p>Tokens not yet launched, where you position yourself by using the product, and launched tokens far below their peak.</p>
+            <div class="mstats"><span><b class="num" data-mstat="crypto-n">—</b> assets</span><span><b class="num" data-mstat="crypto-avg">—</b> conditions on average</span></div>
+            <p class="mlead">Top of the list: <b data-mstat="crypto-top">—</b></p>
+          </div>
+        </a>
+        <a class="market" href="#explorer" data-go="comp">
+          <svg class="ill" viewBox="0 0 320 170" role="img" aria-label="Companies">
+            <rect width="320" height="170" rx="12" fill="var(--ill-bg)"/>
+            <g fill="var(--m-comp)">
+              <rect x="40" y="88" width="34" height="58" rx="3" fill-opacity=".35"/>
+              <rect x="84" y="62" width="40" height="84" rx="3" fill-opacity=".55"/>
+              <rect x="134" y="36" width="46" height="110" rx="3"/>
+              <rect x="190" y="74" width="36" height="72" rx="3" fill-opacity=".45"/>
+            </g>
+            <g fill="var(--ill-bg)">
+              <rect x="144" y="48" width="8" height="8"/><rect x="162" y="48" width="8" height="8"/><rect x="144" y="64" width="8" height="8"/><rect x="162" y="64" width="8" height="8"/><rect x="144" y="80" width="8" height="8"/><rect x="162" y="80" width="8" height="8"/><rect x="144" y="96" width="8" height="8"/><rect x="162" y="96" width="8" height="8"/>
+              <rect x="94" y="74" width="7" height="7"/><rect x="108" y="74" width="7" height="7"/><rect x="94" y="90" width="7" height="7"/><rect x="108" y="90" width="7" height="7"/>
+            </g>
+            <line x1="28" y1="146" x2="292" y2="146" stroke="var(--ink-3)" stroke-width="1.5"/>
+            <polyline points="40,120 92,108 132,116 176,84 220,92 268,40" fill="none" stroke="var(--strong)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M268 40 l-14 2 l9 10 z" fill="var(--strong)"/>
+            <circle cx="268" cy="40" r="5" fill="var(--strong)"/>
+          </svg>
+          <div class="market-body">
+            <h3>Companies</h3>
+            <p>Recently listed companies, private companies before listing, and startups with or without a product.</p>
+            <div class="mstats"><span><b class="num" data-mstat="comp-n">—</b> assets</span><span><b class="num" data-mstat="comp-avg">—</b> conditions on average</span></div>
+            <p class="mlead">Top of the list: <b data-mstat="comp-top">—</b></p>
+          </div>
+        </a>
+        <a class="market" href="#explorer" data-go="comm">
+          <svg class="ill" viewBox="0 0 320 170" role="img" aria-label="Commodities">
+            <rect width="320" height="170" rx="12" fill="var(--ill-bg)"/>
+            <g transform="translate(70 30)">
+              <path d="M30 120 C 28 80, 32 40, 30 4" stroke="var(--m-comm)" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <g fill="var(--m-comm)">
+                <ellipse cx="22" cy="20" rx="6" ry="11" transform="rotate(-25 22 20)"/><ellipse cx="38" cy="20" rx="6" ry="11" transform="rotate(25 38 20)"/>
+                <ellipse cx="21" cy="40" rx="6" ry="11" transform="rotate(-25 21 40)"/><ellipse cx="39" cy="40" rx="6" ry="11" transform="rotate(25 39 40)"/>
+                <ellipse cx="21" cy="60" rx="6" ry="11" transform="rotate(-25 21 60)" fill-opacity=".7"/><ellipse cx="39" cy="60" rx="6" ry="11" transform="rotate(25 39 60)" fill-opacity=".7"/>
+                <ellipse cx="30" cy="2" rx="5" ry="10"/>
+              </g>
+            </g>
+            <g transform="translate(138 52)">
+              <rect x="0" y="6" width="62" height="88" rx="8" fill="var(--m-comm)" fill-opacity=".55"/>
+              <ellipse cx="31" cy="6" rx="31" ry="7" fill="var(--m-comm)"/>
+              <rect x="0" y="30" width="62" height="5" fill="var(--ill-bg)" fill-opacity=".6"/><rect x="0" y="64" width="62" height="5" fill="var(--ill-bg)" fill-opacity=".6"/>
+            </g>
+            <g transform="translate(222 92)">
+              <polygon points="0,52 14,14 40,0 62,20 70,52" fill="var(--ink-3)" fill-opacity=".55"/>
+              <polygon points="14,14 40,0 46,30 22,36" fill="var(--ink-3)" fill-opacity=".8"/>
+              <polygon points="40,0 62,20 46,30" fill="var(--ink-3)"/>
+              <circle cx="34" cy="26" r="4" fill="var(--strong)"/>
+            </g>
+            <line x1="28" y1="146" x2="292" y2="146" stroke="var(--ink-3)" stroke-width="1.5"/>
+          </svg>
+          <div class="market-body">
+            <h3>Commodities</h3>
+            <p>Mature commodities far below their peak, and emerging commodities still without a liquid exchange.</p>
+            <div class="mstats"><span><b class="num" data-mstat="comm-n">—</b> assets</span><span><b class="num" data-mstat="comm-avg">—</b> conditions on average</span></div>
+            <p class="mlead">Top of the list: <b data-mstat="comm-top">—</b></p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="grafice">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">At a glance</p>
+        <h2>What the radar shows now</h2>
+        <p>Three simple charts. Hover over the bars for details.</p>
+      </div>
+      <div class="charts">
+        <figure class="chart wide">
+          <figcaption><h3>Top 10 assets by conditions met</h3><p>The dotted green line marks the 10-condition threshold, where an asset becomes a strong candidate.</p></figcaption>
+          <svg id="ch-top" role="img" aria-label="Top 10 assets by conditions met" width="100%"></svg>
+        </figure>
+        <figure class="chart">
+          <figcaption><h3>How many assets sit in each zone</h3><p>Most assets do not meet enough conditions. That is normal: we are looking for the exceptions.</p></figcaption>
+          <svg id="ch-zones" role="img" aria-label="How many assets sit in each zone" width="100%"></svg>
+          <div class="keyrow"><span><i style="background:var(--strong)"></i>10+ of 14</span><span><i style="background:var(--watch)"></i>6 – 9</span><span><i style="background:var(--weak)"></i>Under 6</span></div>
+        </figure>
+        <figure class="chart">
+          <figcaption><h3>Before vs. after launch</h3><p>Average conditions met. Good projects that have not launched yet usually meet more conditions.</p></figcaption>
+          <svg id="ch-pairs" role="img" aria-label="Before vs. after launch" width="100%"></svg>
+          <div class="keyrow"><span><i style="background:var(--ink-3)"></i>Before launch</span><span><i style="background:var(--signal)"></i>After launch</span></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="pe-radar">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">On the radar now</p>
+        <h2>The top two candidates in each market</h2>
+        <p>The shape shows the profile on all 14 conditions: the larger and rounder, the more complete the asset. Green dots are conditions met.</p>
+      </div>
+      <div class="picks" id="picks"></div>
+    </div>
+  </section>
+
+  <section class="block" id="metoda">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Method</p>
+        <h2>How to read the radar, in three steps</h2>
+        <p>No complicated formulas. Every asset goes through the same 14 questions.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><b>01</b><h3>We score 14 conditions</h3><p>Each asset gets a score from 0 to 10 on every condition, based on public data.</p></div>
+        <div class="step"><b>02</b><h3>We count what is met</h3><p>A condition is met from a score of 7 upward. The more are met, the more complete the picture.</p></div>
+        <div class="step"><b>03</b><h3>We compare and watch</h3><p>The score (0-10) shows overall quality. Candidates with the most conditions go on the watchlist.</p></div>
+      </div>
+      <div class="levels">
+        <div class="level lv-strong"><b>10+ of 14</b><span>Strong candidate. Rare. Checked weekly.</span></div>
+        <div class="level lv-watch"><b>6 – 9</b><span>On watch. We track whether conditions get added.</span></div>
+        <div class="level lv-weak"><b>Under 6</b><span>Too many conditions missing, however good the story.</span></div>
+      </div>
+      <ul class="crit" id="crit"></ul>
+    </div>
+  </section>
+
+  <section class="block" id="explorer">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">All assets</p>
+        <h2>Search, filter, compare</h2>
+        <p>Click a row to see the full profile on the 14 conditions, the context and where to buy.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Markets" id="mtabs"></div>
+      <div class="panel">
+        <div class="controls">
+          <div class="chips" id="gchips" role="group" aria-label="Categories"></div>
+          <div class="ctl">
+            <label class="sr" for="q" style="position:absolute;left:-9999px">Search an asset…</label>
+            <input id="q" type="search" placeholder="Search an asset…" autocomplete="off">
+            <label for="minK" style="position:absolute;left:-9999px">Minimum conditions</label>
+            <select id="minK">
+              <option value="0">All</option>
+              <option value="6">6+ conditions</option>
+              <option value="10">10+ conditions</option>
+            </select>
+            <label for="sortBy" style="position:absolute;left:-9999px">Sort by</label>
+            <select id="sortBy">
+              <option value="k">Conditions met</option>
+              <option value="s">Score</option>
+              <option value="n">Name</option>
+            </select>
+          </div>
+        </div>
+        <p class="gnote" id="gnote"></p>
+        <div class="tablewrap">
+          <table class="ex">
+            <thead><tr>
+              <th class="r">#</th><th>Asset</th><th>Score</th><th>Conditions</th><th class="hide-s">Access</th><th class="hide-s">Link</th><th><span style="position:absolute;left:-9999px">Details</span></th>
+            </tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="istoric">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Verifiable track record</p>
+        <h2>Not just predictions: every radar is frozen and checkable</h2>
+        <p>Every Friday we publish the radar as a dated file that never changes. At the following snapshots we measure how the assets moved — all of them, not only the ones that worked out.</p>
+      </div>
+      <div class="hist">
+        <div class="hist-steps">
+          <div class="hstep"><b class="num">1</b><div><h3>We freeze the radar</h3><p>The full list, with scores and conditions, is saved as a dated file. Anyone can download it.</p></div></div>
+          <div class="hstep"><b class="num">2</b><div><h3>We prove we didn’t touch it</h3><p>We publish the file’s digital fingerprint (SHA-256). If even one comma changed, the fingerprint would no longer match.</p></div></div>
+          <div class="hstep"><b class="num">3</b><div><h3>We measure the result in public</h3><p>We use closing prices from public sources and compare with Bitcoin, the S&P 500 and a commodity index. Misses included.</p></div></div>
+        </div>
+        <div class="snaps">
+          <table class="ex snapt">
+            <thead><tr><th>Snapshot</th><th>Assets</th><th>10+ conditions</th><th class="hide-s">Fingerprint</th><th>File</th><th>Performance</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><b>29 October 2026</b><span class="grp">Snapshot #1, the starting point</span></td>
+                <td class="num">88</td>
+                <td class="num">7</td>
+                <td class="hide-s"><code class="hash" title="SHA-256">ad1a3ed5d564…</code></td>
+                <td><a href="../snapshots/2026-10-29.json" download>Download JSON</a></td>
+                <td class="muted">Calculated from the next snapshot (6 November 2026)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="proof">
+          <div>
+            <h3>The test of the method</h3>
+            <p>The question we track in public: did assets with 10+ conditions do better than those with under 6? The chart fills in after the first four weeks. If the method doesn’t work, we will say so and adjust it.</p>
+            <p class="hashline"><span>SHA-256</span> <code>ad1a3ed5d564848a2a74bc36904d7045d707be51cc910e67d4df40f660995a58</code></p>
+          </div>
+          <div class="chart-ph" aria-hidden="true">
+            <svg viewBox="0 0 320 150" width="100%">
+              <line x1="20" y1="130" x2="310" y2="130" stroke="var(--line)"/>
+              <rect x="40" y="90" width="50" height="40" rx="4" fill="var(--weak)" fill-opacity=".35"/>
+              <rect x="135" y="70" width="50" height="60" rx="4" fill="var(--watch)" fill-opacity=".35"/>
+              <rect x="230" y="40" width="50" height="90" rx="4" fill="var(--strong)" fill-opacity=".35"/>
+              <text x="65" y="146" text-anchor="middle" font-size="11" fill="var(--ink-3)">&lt; 6</text>
+              <text x="160" y="146" text-anchor="middle" font-size="11" fill="var(--ink-3)">6–9</text>
+              <text x="255" y="146" text-anchor="middle" font-size="11" fill="var(--ink-3)">10+</text>
+              <text x="160" y="24" text-anchor="middle" font-size="12" fill="var(--ink-2)">?</text>
+            </svg>
+            <p>Average return by zone. Available after 4 snapshots.</p>
+          </div>
+        </div>
+        <p class="pastperf">Past performance is not a reliable indicator of future results. Reference prices come from public sources on the dates shown, before any fees or taxes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="cumpara">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Where to buy</p>
+        <h2>Platforms, by type of asset</h2>
+        <p>Examples, not recommendations. Check availability in your country and the fees before you open an account.</p>
+      </div>
+      <div class="venues">
+        <div class="venue"><h3>Crypto</h3><p>Centralised exchanges for tokens already launched. All require identity verification.</p><ul>
+          <li><a href="https://www.binance.com" target="_blank" rel="noopener noreferrer">Binance</a> <span>· most tokens on the radar</span></li>
+          <li><a href="https://www.coinbase.com" target="_blank" rel="noopener noreferrer">Coinbase</a></li>
+          <li><a href="https://www.kraken.com" target="_blank" rel="noopener noreferrer">Kraken</a></li>
+          <li><a href="https://www.okx.com" target="_blank" rel="noopener noreferrer">OKX</a></li>
+          <li><a href="https://www.bybit.com" target="_blank" rel="noopener noreferrer">Bybit</a></li>
+        </ul></div>
+        <div class="venue"><h3>Listed shares</h3><p>Brokers with access to US and Hong Kong exchanges, where the companies on the radar are listed.</p><ul>
+          <li><a href="https://www.interactivebrokers.com" target="_blank" rel="noopener noreferrer">Interactive Brokers</a></li>
+          <li><a href="https://www.xtb.com" target="_blank" rel="noopener noreferrer">XTB</a></li>
+          <li><a href="https://www.trading212.com" target="_blank" rel="noopener noreferrer">Trading 212</a></li>
+          <li><a href="https://www.etoro.com" target="_blank" rel="noopener noreferrer">eToro</a> <span>· also offers CFDs, high risk</span></li>
+        </ul></div>
+        <div class="venue"><h3>Commodities</h3><p>In the EU, the simplest route is ETCs listed in Europe. Futures need a special account and use leverage.</p><ul>
+          <li><a href="https://www.wisdomtree.eu" target="_blank" rel="noopener noreferrer">WisdomTree Europe</a> <span>· ETC</span></li>
+          <li><a href="https://www.cmegroup.com" target="_blank" rel="noopener noreferrer">CME Group</a> <span>· futures</span></li>
+          <li><a href="https://www.ice.com" target="_blank" rel="noopener noreferrer">ICE</a> <span>· futures</span></li>
+          <li><a href="https://www.lme.com" target="_blank" rel="noopener noreferrer">London Metal Exchange</a></li>
+        </ul></div>
+        <div class="venue"><h3>Private companies (pre-IPO)</h3><p>Secondary markets, usually for accredited investors only and with high minimums.</p><ul>
+          <li><a href="https://forgeglobal.com" target="_blank" rel="noopener noreferrer">Forge Global</a></li>
+          <li><a href="https://equityzen.com" target="_blank" rel="noopener noreferrer">EquityZen</a></li>
+        </ul></div>
+      </div>
+      <div class="warn"><p><b>Beware of fake sites.</b> A popular project attracts fraudulent copies. Only use the official address and never share your wallet’s secret phrase.</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="transparenta">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Transparency</p>
+        <h2>How we work</h2>
+      </div>
+      <div class="trust">
+        <div><h3>Public data</h3><p>Prices and valuations from public sources: the World Bank, exchanges, company reports and specialist press.</p></div>
+        <div><h3>Judgement, not a secret algorithm</h3><p>Scores are set by people, against written criteria. You can see every one in each asset’s profile.</p></div>
+        <div><h3>Weekly updates</h3><p>The radar is reviewed once a week. The date of the last update is always at the top of the page.</p></div>
+        <div><h3>Conflicts of interest</h3><p>The authors may hold positions in some of the assets analysed. We say so, so you can judge for yourself.</p></div>
+      </div>
+      <div class="warn"><p><b>This is not investment advice.</b> The radar guarantees no rise. Most assets with explosive potential never explode, and the move can go down too, with losses of 80-90%. Only invest money you can afford to lose entirely.</p></div>
+    </div>
+  </section>
+  <section class="block" id="despre">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">About</p>
+        <h2>Who builds the radar, and why</h2>
+      </div>
+      <div class="about">
+        <div class="author">
+          <div class="avatar" aria-hidden="true">D</div>
+          <div><b>Daniel</b><span>Author · IT and capital markets</span></div>
+        </div>
+        <div class="bio">
+          <p>I was a director of Primăvara SA, a company listed on the Bucharest Stock Exchange that I inherited from my father. There I saw from the inside how a listed company works: shareholders, reporting, decisions under pressure. I also saw how fast value can disappear when the market turns.</p>
+          <p>I have worked in IT for over 22 years. I delivered IT projects for the Bucharest Stock Exchange at Siveco, with EY as a subcontractor, so I have also seen the exchange from inside its systems. I have invested in crypto since 2015.</p>
+          <p>The radar is the method I wish I had back then: the same 14 questions for every asset, rules written in advance and a public track record. I am building it with my son, to teach him to judge an investment with his head, not on impulse.</p>
+          <p><b>We don’t sell signals and we don’t tell you when to buy. We publish the method, the results and the mistakes.</b></p>
+        </div>
+      </div>
+      <div class="faq">
+        <details open><summary>If the method is good, why is it public?</summary><p>Because we sell nothing based on it. The radar doesn’t tell you when to buy or sell: it only shows which assets meet the most conditions. Publishing it with a frozen track record forces us to be checked. A hidden method can’t be checked by anyone.</p></details>
+        <details><summary>Do you want to make money selling it?</summary><p>No. Access is free and we have nothing to sell: no subscriptions, no signals, no paid courses based on the radar.</p></details>
+        <details><summary>Do you hold the assets on the radar?</summary><p>Sometimes, yes. The author holds or has held Lighter (LIT) and uses Polymarket. We disclose this so you can judge for yourself, and we don’t change scores based on our positions.</p></details>
+        <details><summary>Can I verify a snapshot myself?</summary><p>Yes. Download the JSON file and compute its SHA-256 fingerprint with any tool (for example the sha256sum command or an online calculator). You should get exactly the fingerprint published above.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Explosive Assets Radar · independent analysis, free access · updated 29 October 2026</span>
+    <div class="lang" role="group" aria-label="Language"><a href="../" hreflang="ro" lang="ro">RO</a><b>EN</b></div>
+  </div>
+</footer>
+
+<script type="application/json" id="data">[{"id": "polymarket-poly", "m": "crypto", "g": "pre", "n": {"ro": "Polymarket (POLY)", "en": "Polymarket (POLY)"}, "s": 7.16, "k": 9, "c": [10, 9, 4, 5, 9, 7, 5, 8, 9, 4, 9, 7, 3, 8], "w": {"ro": "Nelansat — te poziționezi folosind platforma (pariuri reale, diverse)", "en": "Not launched — position yourself by using the platform (real, varied bets)"}, "x": {"ro": "Confirmat, fără dată", "en": "Confirmed, no date"}, "l": "https://polymarket.com/", "lt": "polymarket.com"}, {"id": "base-coinbase", "m": "crypto", "g": "pre", "n": {"ro": "Base (Coinbase)", "en": "Base (Coinbase)"}, "s": 6.8, "k": 8, "c": [9, 8, 5, 8, 9, 7, 3, 5, 6, 4, 8, 7, 3, 9], "w": {"ro": "Nelansat — folosești aplicații din rețeaua Base", "en": "Not launched — use apps on the Base network"}, "x": {"ro": "Explorare; ~74% șanse până în 2027", "en": "Exploring; ~74% odds by 2027"}, "l": "https://www.base.org/", "lt": "base.org"}, {"id": "metamask-mask", "m": "crypto", "g": "pre", "n": {"ro": "MetaMask (MASK)", "en": "MetaMask (MASK)"}, "s": 6.14, "k": 5, "c": [9, 7, 5, 6, 8, 6, 4, 4, 5, 4, 7, 6, 3, 7], "w": {"ro": "Nelansat — folosești portofelul (swap, bridge)", "en": "Not launched — use the wallet (swap, bridge)"}, "x": {"ro": "Confirmat Consensys, fără dată", "en": "Confirmed by Consensys, no date"}, "l": "https://metamask.io/", "lt": "metamask.io"}, {"id": "backpack", "m": "crypto", "g": "pre", "n": {"ro": "Backpack", "en": "Backpack"}, "s": 5.56, "k": 1, "c": [6, 5, 5, 5, 6, 7, 6, 4, 6, 6, 5, 5, 4, 6], "w": {"ro": "Nelansat — tranzacționezi pe bursă, strângi puncte", "en": "Not launched — trade on the exchange, earn points"}, "x": {"ro": "Plan TGE oficial: 25% comunitate", "en": "Official TGE plan: 25% to the community"}, "l": "https://backpack.exchange/", "lt": "backpack.exchange"}, {"id": "abstract", "m": "crypto", "g": "pre", "n": {"ro": "Abstract", "en": "Abstract"}, "s": 5.5, "k": 0, "c": [6, 5, 4, 6, 6, 6, 5, 6, 6, 5, 5, 5, 5, 6], "w": {"ro": "Nelansat — folosești aplicații din rețea", "en": "Not launched — use apps on the network"}, "x": {"ro": "Anticipat 2026", "en": "Expected 2026"}, "l": "https://abs.xyz/", "lt": "abs.xyz"}, {"id": "dexari", "m": "crypto", "g": "pre", "n": {"ro": "Dexari", "en": "Dexari"}, "s": 5.46, "k": 2, "c": [6, 4, 7, 4, 6, 6, 4, 5, 6, 6, 4, 5, 7, 6], "w": {"ro": "Nelansat — folosești aplicația, strângi puncte", "en": "Not launched — use the app, earn points"}, "x": {"ro": "Puncte S2, TGE probabil Q2-Q3 2026", "en": "Season 2 points; TGE likely Q2-Q3 2026"}, "l": "https://dexari.com/", "lt": "dexari.com"}, {"id": "ink-kraken", "m": "crypto", "g": "pre", "n": {"ro": "Ink (Kraken)", "en": "Ink (Kraken)"}, "s": 5.2, "k": 1, "c": [5, 5, 5, 5, 5, 6, 5, 4, 5, 6, 5, 4, 5, 7], "w": {"ro": "Nelansat — folosești aplicații din rețea", "en": "Not launched — use apps on the network"}, "x": {"ro": "Anticipat 2026", "en": "Expected 2026"}, "l": "https://inkonchain.com/", "lt": "inkonchain.com"}, {"id": "edgex", "m": "crypto", "g": "pre", "n": {"ro": "EdgeX", "en": "EdgeX"}, "s": 5.02, "k": 0, "c": [6, 4, 5, 4, 6, 5, 4, 4, 6, 6, 4, 5, 5, 5], "w": {"ro": "Nelansat — tranzacționezi, strângi puncte", "en": "Not launched — trade, earn points"}, "x": {"ro": "Program puncte activ", "en": "Points program active"}, "l": "https://edgex.exchange/", "lt": "edgex.exchange"}, {"id": "paradex", "m": "crypto", "g": "pre", "n": {"ro": "Paradex", "en": "Paradex"}, "s": 5.04, "k": 0, "c": [6, 4, 5, 4, 6, 5, 4, 4, 6, 5, 4, 5, 5, 6], "w": {"ro": "Nelansat — tranzacționezi, strângi puncte", "en": "Not launched — trade, earn points"}, "x": {"ro": "Program puncte activ", "en": "Points program active"}, "l": "https://www.paradex.trade/", "lt": "paradex.trade"}, {"id": "pacifica", "m": "crypto", "g": "pre", "n": {"ro": "Pacifica", "en": "Pacifica"}, "s": 4.78, "k": 0, "c": [5, 4, 5, 4, 5, 5, 4, 4, 6, 6, 4, 5, 6, 4], "w": {"ro": "Nelansat, fără token confirmat", "en": "Not launched, no confirmed token"}, "x": {"ro": "Fără token, farming speculativ", "en": "No token; speculative farming"}, "l": "", "lt": ""}, {"id": "megaeth-mega", "m": "crypto", "g": "post", "n": {"ro": "MegaETH (MEGA)", "en": "MegaETH (MEGA)"}, "s": 6.18, "k": 6, "c": [7, 5, 4, 7, 8, 7, 5, 5, 7, 5, 6, 6, 4, 8], "w": {"ro": "Binance (spot)", "en": "Binance (spot)"}, "x": {"ro": "TGE 30.04.2026; -38% în 72h, TVL $580M+ ↑", "en": "TGE 30 Apr 2026; -38% in 72h, TVL $580M+ rising"}, "l": "https://www.binance.com/en/trade/MEGA_USDT", "lt": "MEGA/USDT"}, {"id": "arcium-arx", "m": "crypto", "g": "post", "n": {"ro": "Arcium (ARX)", "en": "Arcium (ARX)"}, "s": 4.88, "k": 1, "c": [5, 4, 4, 5, 6, 6, 5, 4, 7, 2, 5, 3, 5, 6], "w": {"ro": "Bybit, MEXC, KuCoin", "en": "Bybit, MEXC, KuCoin"}, "x": {"ro": "TGE la FDV $400M; unlock 22.07.2026", "en": "TGE at $400M FDV; unlock 22 Jul 2026"}, "l": "https://www.coingecko.com/en/coins/arcium", "lt": "CoinGecko: lista burselor"}, {"id": "starknet-strk", "m": "crypto", "g": "post", "n": {"ro": "Starknet (STRK)", "en": "Starknet (STRK)"}, "s": 5.3, "k": 3, "c": [5, 4, 4, 7, 5, 6, 4, 4, 6, 4, 5, 4, 7, 8], "w": {"ro": "Binance (spot)", "en": "Binance (spot)"}, "x": {"ro": "Cap ~$300M, jos de la vârf $8 mld", "en": "Market cap ~$300M, down from an $8B peak"}, "l": "https://www.binance.com/en/trade/STRK_USDT", "lt": "STRK/USDT"}, {"id": "linea-linea", "m": "crypto", "g": "post", "n": {"ro": "Linea (LINEA)", "en": "Linea (LINEA)"}, "s": 5.12, "k": 1, "c": [6, 4, 4, 6, 6, 5, 4, 3, 5, 4, 5, 4, 6, 7], "w": {"ro": "Binance (spot)", "en": "Binance (spot)"}, "x": {"ro": "Lansat 2025; legat de puncte MetaMask", "en": "Launched 2025; tied to MetaMask points"}, "l": "https://www.binance.com/en/trade/LINEA_USDT", "lt": "LINEA/USDT"}, {"id": "monad-mon", "m": "crypto", "g": "post", "n": {"ro": "Monad (MON)", "en": "Monad (MON)"}, "s": 4.28, "k": 0, "c": [4, 3, 3, 6, 6, 5, 3, 3, 6, 3, 4, 3, 4, 6], "w": {"ro": "Binance (spot)", "en": "Binance (spot)"}, "x": {"ro": "-43% de la ATH; backlash airdrop + ICO $188M", "en": "-43% from ATH; airdrop backlash + $188M ICO"}, "l": "https://www.binance.com/en/trade/MON_USDT", "lt": "MON/USDT"}, {"id": "story-ip", "m": "crypto", "g": "post", "n": {"ro": "Story (IP)", "en": "Story (IP)"}, "s": 4.38, "k": 0, "c": [4, 4, 3, 4, 4, 5, 4, 3, 6, 4, 5, 3, 6, 6], "w": {"ro": "Binance (spot)", "en": "Binance (spot)"}, "x": {"ro": "Lansat 2025, drawdown sever", "en": "Launched 2025, severe drawdown"}, "l": "https://www.binance.com/en/trade/IP_USDT", "lt": "IP/USDT"}, {"id": "somnia-somi", "m": "crypto", "g": "post", "n": {"ro": "Somnia (SOMI)", "en": "Somnia (SOMI)"}, "s": 4.04, "k": 0, "c": [4, 3, 3, 4, 4, 5, 4, 3, 5, 4, 4, 3, 6, 4], "w": {"ro": "Binance (spot)", "en": "Binance (spot)"}, "x": {"ro": "Lansat 09.2025; 10 mld tx testnet (sybil?)", "en": "Launched Sep 2025; 10B testnet transactions (sybil?)"}, "l": "https://www.binance.com/en/trade/SOMI_USDT", "lt": "SOMI/USDT"}, {"id": "plasma-xpl", "m": "crypto", "g": "post", "n": {"ro": "Plasma (XPL)", "en": "Plasma (XPL)"}, "s": 3.44, "k": 0, "c": [3, 2, 3, 4, 4, 4, 4, 2, 6, 2, 3, 2, 6, 3], "w": {"ro": "Binance (spot)", "en": "Binance (spot)"}, "x": {"ro": "-94% de la ATH $1.68", "en": "-94% from $1.68 ATH"}, "l": "https://www.binance.com/en/trade/XPL_USDT", "lt": "XPL/USDT"}, {"id": "berachain-bera", "m": "crypto", "g": "post", "n": {"ro": "Berachain (BERA)", "en": "Berachain (BERA)"}, "s": 3.22, "k": 0, "c": [3, 2, 2, 4, 3, 4, 3, 3, 4, 3, 3, 2, 6, 3], "w": {"ro": "Binance (spot)", "en": "Binance (spot)"}, "x": {"ro": "-93%+; TVL -88%; scandal side-letter", "en": "-93%+; TVL -88%; side-letter scandal"}, "l": "https://www.binance.com/en/trade/BERA_USDT", "lt": "BERA/USDT"}, {"id": "bio-protocol-bio", "m": "crypto", "g": "post", "n": {"ro": "Bio Protocol (BIO)", "en": "Bio Protocol (BIO)"}, "s": 3.54, "k": 1, "c": [3, 3, 3, 3, 3, 4, 3, 3, 5, 3, 3, 2, 7, 5], "w": {"ro": "Binance (spot)", "en": "Binance (spot)"}, "x": {"ro": "-93% de la lansare", "en": "-93% since launch"}, "l": "https://www.binance.com/en/trade/BIO_USDT", "lt": "BIO/USDT"}, {"id": "movement-move", "m": "crypto", "g": "post", "n": {"ro": "Movement (MOVE)", "en": "Movement (MOVE)"}, "s": 2.42, "k": 1, "c": [2, 2, 2, 3, 2, 2, 2, 2, 4, 2, 2, 2, 7, 1], "w": {"ro": "Binance (spot); Coinbase l-a delistat", "en": "Binance (spot); delisted by Coinbase"}, "x": {"ro": "Scandal market-maker; încredere distrusă", "en": "Market-maker scandal; trust destroyed"}, "l": "https://www.binance.com/en/trade/MOVE_USDT", "lt": "MOVE/USDT"}, {"id": "lighter-lit", "m": "crypto", "g": "post", "n": {"ro": "Lighter (LIT)", "en": "Lighter (LIT)"}, "s": 6.78, "k": 9, "c": [8, 7, 6, 6, 8, 7, 7, 5, 8, 4, 7, 7, 4, 8], "w": {"ro": "Coinbase, OKX, Gate (spot)", "en": "Coinbase, OKX, Gate (spot)"}, "x": {"ro": "TGE 29.12.2025; ATL $0,78 (31.03.2026) → ~$3,59 (22.10); buybacks + arderi; cliff 30.12.2026", "en": "TGE 29 Dec 2025; low $0.78 (31 Mar 2026) → ~$3.59 (22 Oct); buybacks + burns; cliff unlock 30 Dec 2026"}, "l": "https://www.coingecko.com/en/coins/lighter", "lt": "CoinGecko: lista burselor"}, {"id": "spacex-spcx", "m": "comp", "g": "ipo", "n": {"ro": "SpaceX (SPCX)", "en": "SpaceX (SPCX)"}, "s": 6.46, "k": 8, "c": [9, 7, 7, 9, 8, 7, 4, 9, 8, 2, 4, 5, 2, 6], "w": {"ro": "Nasdaq · prin orice broker cu acces la bursele SUA", "en": "Nasdaq · any broker with US access"}, "x": {"ro": "Vârf $2,66T pe 16.06, minim $108 în iulie, revenire. Cel mai aglomerat trade; evaluare ~100x venituri.", "en": "Peak $2.66T on 16 Jun, low $108 in July, recovered. Most crowded trade; valued at ~100x revenue."}, "l": "https://finance.yahoo.com/quote/SPCX", "lt": "SPCX"}, {"id": "cerebras-cbrs", "m": "comp", "g": "ipo", "n": {"ro": "Cerebras (CBRS)", "en": "Cerebras (CBRS)"}, "s": 5.66, "k": 4, "c": [7, 4, 5, 7, 4, 7, 5, 5, 7, 5, 5, 3, 6, 6], "w": {"ro": "Nasdaq · broker cu acces SUA", "en": "Nasdaq · broker with US access"}, "x": {"ro": "Max. 52 săpt. $386. TD Cowen a coborât ținta sub prețul IPO (oct.). Dependență de puțini clienți.", "en": "52-week high $386. TD Cowen cut its target below the IPO price (Oct). Few large customers."}, "l": "https://finance.yahoo.com/quote/CBRS", "lt": "CBRS"}, {"id": "coreweave-crwv", "m": "comp", "g": "ipo", "n": {"ro": "CoreWeave (CRWV)", "en": "CoreWeave (CRWV)"}, "s": 5.54, "k": 2, "c": [8, 4, 2, 6, 5, 6, 5, 4, 7, 6, 5, 5, 5, 5], "w": {"ro": "Nasdaq · broker cu acces SUA", "en": "Nasdaq · broker with US access"}, "x": {"ro": "-59% de la max. 52 săpt. ($141,8). Datorii foarte mari; concentrare pe câțiva clienți mari.", "en": "-59% from 52-week high ($141.8). Very high debt; concentrated on a few large customers."}, "l": "https://finance.yahoo.com/quote/CRWV", "lt": "CRWV"}, {"id": "circle-crcl", "m": "comp", "g": "ipo", "n": {"ro": "Circle (CRCL)", "en": "Circle (CRCL)"}, "s": 6.48, "k": 6, "c": [8, 6, 7, 6, 7, 7, 6, 6, 8, 5, 5, 5, 5, 7], "w": {"ro": "NYSE · broker cu acces SUA", "en": "NYSE · broker with US access"}, "x": {"ro": "Max. 52 săpt. $140. Venituri legate de dobânzi: scad dacă scad dobânzile.", "en": "52-week high $140. Revenue tied to interest rates: falls when rates fall."}, "l": "https://finance.yahoo.com/quote/CRCL", "lt": "CRCL"}, {"id": "figma-fig", "m": "comp", "g": "ipo", "n": {"ro": "Figma (FIG)", "en": "Figma (FIG)"}, "s": 6.74, "k": 10, "c": [7, 7, 7, 8, 8, 8, 5, 8, 8, 6, 5, 3, 7, 7], "w": {"ro": "NYSE · broker cu acces SUA", "en": "NYSE · broker with US access"}, "x": {"ro": "Închidere în ziua 1: $115,50 → -80% de atunci. Bilanț puternic; pierderea vine din compensații în acțiuni.", "en": "Day-one close $115.50 → -80% since. Strong balance sheet; losses come from stock-based pay."}, "l": "https://finance.yahoo.com/quote/FIG", "lt": "FIG"}, {"id": "klarna-klar", "m": "comp", "g": "ipo", "n": {"ro": "Klarna (KLAR)", "en": "Klarna (KLAR)"}, "s": 5.24, "k": 3, "c": [6, 4, 4, 5, 6, 5, 5, 7, 6, 7, 4, 2, 7, 5], "w": {"ro": "NYSE · broker cu acces SUA", "en": "NYSE · broker with US access"}, "x": {"ro": "Max. 52 săpt. $47,5. Risc de credit; evaluare 2021: $45,6B.", "en": "52-week high $47.5. Credit risk; 2021 valuation: $45.6B."}, "l": "https://finance.yahoo.com/quote/KLAR", "lt": "KLAR"}, {"id": "chime-chym", "m": "comp", "g": "ipo", "n": {"ro": "Chime (CHYM)", "en": "Chime (CHYM)"}, "s": 6.06, "k": 5, "c": [7, 5, 6, 5, 7, 6, 5, 6, 7, 7, 5, 5, 7, 6], "w": {"ro": "Nasdaq · broker cu acces SUA", "en": "Nasdaq · broker with US access"}, "x": {"ro": "Range 52 săpt. $15,9-35,6. Practic la prețul IPO după 16 luni.", "en": "52-week range $15.9-35.6. Roughly at its IPO price after 16 months."}, "l": "https://finance.yahoo.com/quote/CHYM", "lt": "CHYM"}, {"id": "gemini-gemi", "m": "comp", "g": "ipo", "n": {"ro": "Gemini (GEMI)", "en": "Gemini (GEMI)"}, "s": 3.88, "k": 1, "c": [3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 3, 1, 8, 4], "w": {"ro": "Nasdaq · broker cu acces SUA", "en": "Nasdaq · broker with US access"}, "x": {"ro": "-89% vs IPO, lângă minimul de 52 săpt. Fondatori: frații Winklevoss.", "en": "-89% vs IPO, near its 52-week low. Founded by the Winklevoss twins."}, "l": "https://finance.yahoo.com/quote/GEMI", "lt": "GEMI"}, {"id": "stubhub-stub", "m": "comp", "g": "ipo", "n": {"ro": "StubHub (STUB)", "en": "StubHub (STUB)"}, "s": 4.16, "k": 1, "c": [5, 2, 2, 4, 5, 4, 4, 6, 5, 6, 3, 1, 8, 3], "w": {"ro": "NYSE · broker cu acces SUA", "en": "NYSE · broker with US access"}, "x": {"ro": "IPO amânat de mai multe ori; exit de private equity; datorii.", "en": "IPO postponed several times; private-equity exit; debt."}, "l": "https://finance.yahoo.com/quote/STUB", "lt": "STUB"}, {"id": "catl-3750-hk", "m": "comp", "g": "ipo", "n": {"ro": "CATL (3750.HK)", "en": "CATL (3750.HK)"}, "s": 7.1, "k": 7, "c": [9, 7, 8, 8, 8, 8, 6, 6, 9, 6, 5, 4, 6, 6], "w": {"ro": "Bursa din Hong Kong · broker cu acces HK", "en": "Hong Kong Stock Exchange · broker with HK access"}, "x": {"ro": "Vârf HK$794,5 (iun. 2026) → -57% în ~4 luni; -10% într-o zi pe schimbări fiscale. Risc geopolitic.", "en": "Peak HK$794.5 (Jun 2026) → -57% in ~4 months; -10% in one day on tax changes. Geopolitical risk."}, "l": "https://finance.yahoo.com/quote/3750.HK", "lt": "3750.HK"}, {"id": "shein", "m": "comp", "g": "ipo", "n": {"ro": "Shein", "en": "Shein"}, "s": 5.42, "k": 3, "c": [8, 3, 6, 5, 6, 5, 5, 6, 6, 7, 3, 3, 7, 3], "w": {"ro": "Bursa din Hong Kong · broker cu acces HK", "en": "Hong Kong Stock Exchange · broker with HK access"}, "x": {"ro": "Evaluare 2022: $100B. Încercări de listare în SUA și Londra eșuate; controverse privind munca și tarifele.", "en": "2022 valuation: $100B. Failed listing attempts in the US and London; labour and tariff controversies."}, "l": "", "lt": ""}, {"id": "openai", "m": "comp", "g": "preipo", "n": {"ro": "OpenAI", "en": "OpenAI"}, "s": 6.38, "k": 6, "c": [10, 6, 3, 9, 8, 6, 3, 9, 9, 3, 5, 7, 2, 5], "w": {"ro": "Nu e pe bursă. Ocazional pe piețe secundare (Forge Global, EquityZen), de regulă doar pentru investitori acreditați", "en": "Not listed. Occasionally on secondary markets (Forge Global, EquityZen), usually for accredited investors only"}, "x": {"ro": "Ardere masivă de capital și angajamente uriașe pentru compute; structură juridică complexă.", "en": "Massive cash burn and huge compute commitments; complex legal structure."}, "l": "https://forgeglobal.com/", "lt": "Forge Global"}, {"id": "databricks", "m": "comp", "g": "preipo", "n": {"ro": "Databricks", "en": "Databricks"}, "s": 7.7, "k": 11, "c": [9, 9, 7, 9, 9, 9, 6, 7, 8, 5, 7, 8, 4, 8], "w": {"ro": "Nu e pe bursă. Ocazional pe piețe secundare (Forge Global, EquityZen), de regulă doar pentru investitori acreditați", "en": "Not listed. Occasionally on secondary markets (Forge Global, EquityZen), usually for accredited investors only"}, "x": {"ro": "Amână din forță — tiparul „refuz deliberat al lansării”.", "en": "Delays listing from strength — the deliberate-delay pattern."}, "l": "https://forgeglobal.com/", "lt": "Forge Global"}, {"id": "stripe", "m": "comp", "g": "preipo", "n": {"ro": "Stripe", "en": "Stripe"}, "s": 8.26, "k": 12, "c": [9, 10, 9, 9, 9, 9, 7, 8, 9, 6, 8, 8, 4, 9], "w": {"ro": "Nu e pe bursă. Ocazional pe piețe secundare (Forge Global, EquityZen), de regulă doar pentru investitori acreditați", "en": "Not listed. Occasionally on secondary markets (Forge Global, EquityZen), usually for accredited investors only"}, "x": {"ro": "De la $50B (2023) la $159B fără listare.", "en": "From $50B (2023) to $159B without listing."}, "l": "https://forgeglobal.com/", "lt": "Forge Global"}, {"id": "revolut", "m": "comp", "g": "preipo", "n": {"ro": "Revolut", "en": "Revolut"}, "s": 7.28, "k": 9, "c": [9, 8, 8, 8, 8, 7, 6, 8, 8, 5, 6, 9, 4, 6], "w": {"ro": "Nu e pe bursă. Ocazional pe piețe secundare (Forge Global, EquityZen), de regulă doar pentru investitori acreditați", "en": "Not listed. Occasionally on secondary markets (Forge Global, EquityZen), usually for accredited investors only"}, "x": {"ro": "68M clienți; al cincilea an profitabil.", "en": "68M customers; fifth profitable year."}, "l": "https://forgeglobal.com/", "lt": "Forge Global"}, {"id": "bytedance", "m": "comp", "g": "preipo", "n": {"ro": "ByteDance", "en": "ByteDance"}, "s": 7.14, "k": 9, "c": [10, 6, 9, 9, 8, 7, 4, 8, 7, 8, 4, 8, 5, 4], "w": {"ro": "Nu e pe bursă. Ocazional pe piețe secundare (Forge Global, EquityZen), de regulă doar pentru investitori acreditați", "en": "Not listed. Occasionally on secondary markets (Forge Global, EquityZen), usually for accredited investors only"}, "x": {"ro": "Ieftin raportat la venituri, dar risc geopolitic și de guvernanță ridicat (TikTok SUA).", "en": "Cheap relative to revenue, but high geopolitical and governance risk (TikTok US)."}, "l": "https://forgeglobal.com/", "lt": "Forge Global"}, {"id": "anduril", "m": "comp", "g": "preipo", "n": {"ro": "Anduril", "en": "Anduril"}, "s": 7.26, "k": 10, "c": [8, 9, 7, 9, 8, 8, 6, 7, 8, 4, 6, 9, 4, 7], "w": {"ro": "Nu e pe bursă. Ocazional pe piețe secundare (Forge Global, EquityZen), de regulă doar pentru investitori acreditați", "en": "Not listed. Occasionally on secondary markets (Forge Global, EquityZen), usually for accredited investors only"}, "x": {"ro": "Contracte guvernamentale reale; evaluare dublată în 2026.", "en": "Real government contracts; valuation doubled in 2026."}, "l": "https://forgeglobal.com/", "lt": "Forge Global"}, {"id": "ramp", "m": "comp", "g": "preipo", "n": {"ro": "Ramp", "en": "Ramp"}, "s": 7.28, "k": 10, "c": [8, 8, 8, 8, 8, 8, 6, 6, 7, 4, 7, 9, 5, 8], "w": {"ro": "Nu e pe bursă. Ocazional pe piețe secundare (Forge Global, EquityZen), de regulă doar pentru investitori acreditați", "en": "Not listed. Occasionally on secondary markets (Forge Global, EquityZen), usually for accredited investors only"}, "x": {"ro": "Evaluare $32B → $44B în 2026.", "en": "Valuation $32B → $44B in 2026."}, "l": "https://forgeglobal.com/", "lt": "Forge Global"}, {"id": "canva", "m": "comp", "g": "preipo", "n": {"ro": "Canva", "en": "Canva"}, "s": 7.6, "k": 11, "c": [9, 8, 8, 7, 8, 8, 6, 9, 8, 7, 7, 6, 6, 8], "w": {"ro": "Nu e pe bursă. Ocazional pe piețe secundare (Forge Global, EquityZen), de regulă doar pentru investitori acreditați", "en": "Not listed. Occasionally on secondary markets (Forge Global, EquityZen), usually for accredited investors only"}, "x": {"ro": "Profitabil; evaluare rezonabilă (~13x venituri).", "en": "Profitable; reasonable valuation (~13x revenue)."}, "l": "https://forgeglobal.com/", "lt": "Forge Global"}, {"id": "kraken-payward", "m": "comp", "g": "preipo", "n": {"ro": "Kraken (Payward)", "en": "Kraken (Payward)"}, "s": 6.26, "k": 5, "c": [7, 5, 7, 6, 7, 6, 6, 7, 7, 6, 6, 5, 6, 6], "w": {"ro": "Nu e pe bursă. Ocazional pe piețe secundare (Forge Global, EquityZen), de regulă doar pentru investitori acreditați", "en": "Not listed. Occasionally on secondary markets (Forge Global, EquityZen), usually for accredited investors only"}, "x": {"ro": "Evaluări volatile ($20B → $13,3B → $21B).", "en": "Volatile valuations ($20B → $13.3B → $21B)."}, "l": "https://forgeglobal.com/", "lt": "Forge Global"}, {"id": "discord", "m": "comp", "g": "preipo", "n": {"ro": "Discord", "en": "Discord"}, "s": 6.16, "k": 3, "c": [7, 5, 6, 6, 7, 6, 6, 9, 6, 6, 5, 5, 6, 6], "w": {"ro": "Nu e pe bursă. Ocazional pe piețe secundare (Forge Global, EquityZen), de regulă doar pentru investitori acreditați", "en": "Not listed. Occasionally on secondary markets (Forge Global, EquityZen), usually for accredited investors only"}, "x": {"ro": "Evaluare plată din 2021.", "en": "Valuation flat since 2021."}, "l": "https://forgeglobal.com/", "lt": "Forge Global"}, {"id": "plaid", "m": "comp", "g": "preipo", "n": {"ro": "Plaid", "en": "Plaid"}, "s": 6.64, "k": 8, "c": [7, 6, 7, 7, 8, 7, 6, 6, 8, 7, 6, 4, 6, 7], "w": {"ro": "Nu e pe bursă. Ocazional pe piețe secundare (Forge Global, EquityZen), de regulă doar pentru investitori acreditați", "en": "Not listed. Occasionally on secondary markets (Forge Global, EquityZen), usually for accredited investors only"}, "x": {"ro": "Sub evaluarea din 2021 ($13,4B) — candidat de tip „intrare după capitulare”.", "en": "Below its 2021 valuation ($13.4B) — a post-capitulation candidate."}, "l": "https://forgeglobal.com/", "lt": "Forge Global"}, {"id": "lovable", "m": "comp", "g": "startup", "n": {"ro": "Lovable", "en": "Lovable"}, "s": 6.76, "k": 9, "c": [8, 6, 7, 7, 6, 7, 6, 8, 8, 4, 7, 8, 4, 7], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "A atins $100M ARR în 8 luni; risc de churn ridicat în categorie.", "en": "Reached $100M ARR in 8 months; high churn risk in the category."}, "l": "", "lt": ""}, {"id": "mercor", "m": "comp", "g": "startup", "n": {"ro": "Mercor", "en": "Mercor"}, "s": 6.72, "k": 5, "c": [9, 6, 8, 6, 6, 7, 6, 4, 7, 4, 6, 9, 6, 6], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Depinde de bugetele marilor laboratoare AI.", "en": "Depends on the budgets of the large AI labs."}, "l": "", "lt": ""}, {"id": "elevenlabs", "m": "comp", "g": "startup", "n": {"ro": "ElevenLabs", "en": "ElevenLabs"}, "s": 7.18, "k": 11, "c": [8, 7, 7, 7, 8, 8, 6, 7, 8, 5, 7, 8, 5, 8], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Lider de categorie; utilizare largă în media și agenți.", "en": "Category leader; widely used in media and AI agents."}, "l": "", "lt": ""}, {"id": "harvey", "m": "comp", "g": "startup", "n": {"ro": "Harvey", "en": "Harvey"}, "s": 6.4, "k": 6, "c": [7, 6, 6, 6, 7, 7, 6, 5, 8, 4, 6, 8, 5, 7], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Peste $1B strânși; clienți: firme mari de avocatură.", "en": "Over $1B raised; clients are large law firms."}, "l": "", "lt": ""}, {"id": "sierra", "m": "comp", "g": "startup", "n": {"ro": "Sierra", "en": "Sierra"}, "s": 6.8, "k": 9, "c": [7, 7, 7, 7, 7, 9, 6, 4, 7, 4, 6, 8, 6, 8], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Fondator Bret Taylor (ex-Salesforce, președinte OpenAI).", "en": "Founded by Bret Taylor (ex-Salesforce, OpenAI chair)."}, "l": "", "lt": ""}, {"id": "mistral-ai", "m": "comp", "g": "startup", "n": {"ro": "Mistral AI", "en": "Mistral AI"}, "s": 6.62, "k": 8, "c": [6, 7, 6, 8, 6, 8, 6, 7, 7, 5, 7, 7, 6, 7], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Campionul european; avantaj de suveranitate digitală UE.", "en": "Europe's champion; EU digital-sovereignty advantage."}, "l": "", "lt": ""}, {"id": "cognition", "m": "comp", "g": "startup", "n": {"ro": "Cognition", "en": "Cognition"}, "s": 6.68, "k": 7, "c": [8, 6, 6, 8, 7, 8, 6, 5, 8, 3, 6, 8, 4, 7], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Seria D $1B (mai 2026). Concurență directă cu laboratoarele mari.", "en": "Series D $1B (May 2026). Competes directly with the large labs."}, "l": "", "lt": ""}, {"id": "glean", "m": "comp", "g": "startup", "n": {"ro": "Glean", "en": "Glean"}, "s": 6.36, "k": 6, "c": [7, 7, 6, 6, 7, 7, 6, 4, 7, 6, 6, 5, 6, 7], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Evaluare stabilă; categorie atacată de Microsoft/Google.", "en": "Stable valuation; category under attack from Microsoft/Google."}, "l": "", "lt": ""}, {"id": "replit", "m": "comp", "g": "startup", "n": {"ro": "Replit", "en": "Replit"}, "s": 6.56, "k": 7, "c": [7, 6, 6, 8, 6, 7, 6, 8, 7, 5, 6, 7, 5, 7], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "În Forbes AI 50 (2026).", "en": "In the Forbes AI 50 (2026)."}, "l": "", "lt": ""}, {"id": "perplexity", "m": "comp", "g": "startup", "n": {"ro": "Perplexity", "en": "Perplexity"}, "s": 5.8, "k": 5, "c": [7, 5, 5, 7, 6, 7, 6, 7, 7, 3, 4, 6, 4, 5], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Procese privind drepturile de autor; concurență cu Google/OpenAI.", "en": "Copyright lawsuits; competes with Google/OpenAI."}, "l": "", "lt": ""}, {"id": "figure-ai", "m": "comp", "g": "startup", "n": {"ro": "Figure AI", "en": "Figure AI"}, "s": 4.88, "k": 3, "c": [4, 5, 5, 7, 3, 6, 5, 6, 7, 2, 3, 7, 4, 5], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Implementări încă limitate; evaluare mult peste venituri.", "en": "Deployments still limited; valuation far above revenue."}, "l": "", "lt": ""}, {"id": "safe-superintelligence-ssi", "m": "comp", "g": "seed", "n": {"ro": "Safe Superintelligence (SSI)", "en": "Safe Superintelligence (SSI)"}, "s": 5.36, "k": 5, "c": [2, 9, 6, 9, 1, 9, 5, 5, 6, 2, 7, 7, 4, 6], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Fără produs. Cofondatorul Daniel Gross a plecat (2025).", "en": "No product. Co-founder Daniel Gross left (2025)."}, "l": "", "lt": ""}, {"id": "thinking-machines-lab", "m": "comp", "g": "seed", "n": {"ro": "Thinking Machines Lab", "en": "Thinking Machines Lab"}, "s": 5.12, "k": 4, "c": [3, 7, 6, 7, 3, 8, 5, 6, 6, 2, 6, 7, 3, 5], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Produs timpuriu (API Tinker). Plecări de cofondatori.", "en": "Early product (Tinker API). Co-founder departures."}, "l": "", "lt": ""}, {"id": "project-prometheus", "m": "comp", "g": "seed", "n": {"ro": "Project Prometheus", "en": "Project Prometheus"}, "s": 5.12, "k": 6, "c": [2, 6, 9, 8, 1, 8, 5, 4, 7, 1, 5, 7, 4, 7], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Fără produs, fără venituri, fără clienți anunțați.", "en": "No product, no revenue, no announced customers."}, "l": "", "lt": ""}, {"id": "ami-labs", "m": "comp", "g": "seed", "n": {"ro": "AMI Labs", "en": "AMI Labs"}, "s": 5.52, "k": 7, "c": [2, 7, 7, 8, 1, 9, 5, 6, 7, 3, 7, 6, 6, 7], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Pre-produs.", "en": "Pre-product."}, "l": "", "lt": ""}, {"id": "ineffable-intelligence", "m": "comp", "g": "seed", "n": {"ro": "Ineffable Intelligence", "en": "Ineffable Intelligence"}, "s": 5.38, "k": 6, "c": [2, 7, 7, 8, 1, 9, 5, 4, 6, 3, 6, 6, 7, 7], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Pre-produs.", "en": "Pre-product."}, "l": "", "lt": ""}, {"id": "physical-intelligence", "m": "comp", "g": "seed", "n": {"ro": "Physical Intelligence", "en": "Physical Intelligence"}, "s": 5.6, "k": 6, "c": [3, 7, 6, 8, 2, 8, 5, 6, 8, 3, 6, 7, 5, 7], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Pre-produs (modele de cercetare).", "en": "Pre-product (research models)."}, "l": "", "lt": ""}, {"id": "periodic-labs", "m": "comp", "g": "seed", "n": {"ro": "Periodic Labs", "en": "Periodic Labs"}, "s": 5.64, "k": 8, "c": [2, 7, 7, 8, 2, 8, 5, 5, 8, 4, 7, 6, 7, 7], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Pre-produs; laborator fizic propriu.", "en": "Pre-product; own physical lab."}, "l": "", "lt": ""}, {"id": "unconventional-ai", "m": "comp", "g": "seed", "n": {"ro": "Unconventional AI", "en": "Unconventional AI"}, "s": 5.22, "k": 6, "c": [2, 6, 7, 7, 1, 8, 5, 4, 7, 3, 6, 6, 7, 7], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Pre-produs.", "en": "Pre-product."}, "l": "", "lt": ""}, {"id": "reflection-ai", "m": "comp", "g": "seed", "n": {"ro": "Reflection AI", "en": "Reflection AI"}, "s": 5.24, "k": 2, "c": [3, 6, 6, 7, 3, 7, 5, 6, 6, 4, 6, 6, 5, 6], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Fără produs comercial major.", "en": "No major commercial product."}, "l": "", "lt": ""}, {"id": "humans", "m": "comp", "g": "seed", "n": {"ro": "Humans&", "en": "Humans&"}, "s": 4.82, "k": 2, "c": [2, 6, 6, 7, 1, 7, 5, 4, 5, 3, 6, 6, 6, 6], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Pre-produs.", "en": "Pre-product."}, "l": "", "lt": ""}, {"id": "merge-labs", "m": "comp", "g": "seed", "n": {"ro": "Merge Labs", "en": "Merge Labs"}, "s": 4.86, "k": 4, "c": [1, 6, 6, 7, 1, 7, 5, 5, 7, 4, 6, 6, 7, 5], "w": {"ro": "Nu se tranzacționează public; rundele sunt închise investitorilor obișnuiți", "en": "Not publicly traded; funding rounds are closed to ordinary investors"}, "x": {"ro": "Pre-produs; potențial conflict de interese cu OpenAI.", "en": "Pre-product; potential conflict of interest with OpenAI."}, "l": "", "lt": ""}, {"id": "litiu-carbonat", "m": "comm", "g": "mature", "n": {"ro": "Litiu (carbonat)", "en": "Lithium (carbonate)"}, "s": 5.86, "k": 5, "c": [8, 4, 5, 9, 7, 5, 3, 6, 7, 7, 5, 2, 6, 5], "w": {"ro": "ETF pe companii de litiu (LIT); futures GFEX/CME doar pentru profesioniști", "en": "Lithium-company ETF (LIT); GFEX/CME futures for professionals only"}, "x": {"ro": "A înjumătățit de la vârful din mai 2026 (>200.000 CNY/t): mine repornite, surplus așteptat în 2027.", "en": "Halved from the May 2026 peak (>200,000 CNY/t): mines restarted, surplus expected in 2027."}, "l": "https://finance.yahoo.com/quote/LIT", "lt": "LIT (Yahoo Finance)"}, {"id": "paladiu", "m": "comm", "g": "mature", "n": {"ro": "Paladiu", "en": "Palladium"}, "s": 4.94, "k": 3, "c": [4, 6, 6, 3, 7, 7, 5, 4, 4, 6, 5, 4, 7, 3], "w": {"ro": "ETF fizic PALL (SUA); ETC-uri fizice listate în Europa", "en": "PALL physical ETF (US); physical ETCs listed in Europe"}, "x": {"ro": "Cerere în scădere la catalizatoarele auto pe măsură ce cresc mașinile electrice; Rusia ~40% din ofertă.", "en": "Falling demand from car catalysts as EVs grow; Russia supplies ~40%."}, "l": "https://finance.yahoo.com/quote/PALL", "lt": "PALL (Yahoo Finance)"}, {"id": "portocale-suc-de-portocale", "m": "comm", "g": "mature", "n": {"ro": "Portocale / suc de portocale", "en": "Oranges / orange juice"}, "s": 4.36, "k": 2, "c": [4, 4, 5, 2, 7, 6, 5, 3, 3, 5, 3, 2, 7, 5], "w": {"ro": "Futures ICE pe suc de portocale (OJ); fără ETF dedicat", "en": "ICE orange-juice futures (OJ); no dedicated ETF"}, "x": {"ro": "Cererea de suc scade de ani de zile; boala „greening” afectează livezile.", "en": "Juice demand has been falling for years; citrus greening disease hits orchards."}, "l": "https://finance.yahoo.com/quote/OJ=F", "lt": "OJ=F (Yahoo Finance)"}, {"id": "gaz-natural-sua-henry-hub", "m": "comm", "g": "mature", "n": {"ro": "Gaz natural SUA (Henry Hub)", "en": "US natural gas (Henry Hub)"}, "s": 6.8, "k": 8, "c": [8, 5, 6, 8, 8, 8, 5, 8, 7, 8, 5, 4, 5, 8], "w": {"ro": "ETF UNG (SUA); futures NYMEX (NG)", "en": "UNG ETF (US); NYMEX futures (NG)"}, "x": {"ro": "Ieftin în SUA, în timp ce în Europa e $25,42 din cauza războiului din Orientul Mijlociu; cerere nouă din LNG și centre de date.", "en": "Cheap in the US while Europe pays $25.42 because of the Middle East war; new demand from LNG and data centres."}, "l": "https://finance.yahoo.com/quote/UNG", "lt": "UNG (Yahoo Finance)"}, {"id": "minereu-de-fier", "m": "comm", "g": "mature", "n": {"ro": "Minereu de fier", "en": "Iron ore"}, "s": 4.88, "k": 2, "c": [4, 5, 5, 2, 8, 7, 4, 4, 6, 5, 5, 4, 6, 5], "w": {"ro": "Futures SGX/CME/DCE doar pentru profesioniști; altfel indirect prin companii miniere", "en": "SGX/CME/DCE futures for professionals only; otherwise indirectly via miners"}, "x": {"ro": "Producția de oțel a Chinei slăbește; ofertă nouă din Simandou (Guineea).", "en": "China's steel output is weakening; new supply from Simandou (Guinea)."}, "l": "https://www.cmegroup.com/", "lt": "CME Group"}, {"id": "nichel", "m": "comm", "g": "mature", "n": {"ro": "Nichel", "en": "Nickel"}, "s": 5.4, "k": 3, "c": [6, 5, 4, 7, 7, 6, 3, 5, 5, 7, 5, 5, 6, 4], "w": {"ro": "LME (profesioniști); ETC-uri de nichel listate în Europa", "en": "LME (professionals); nickel ETCs listed in Europe"}, "x": {"ro": "Indonezia domină oferta și a strâns controalele; prețul a urcat 6,7% în august.", "en": "Indonesia dominates supply and tightened controls; price rose 6.7% in August."}, "l": "https://www.lme.com/", "lt": "LME"}, {"id": "cobalt", "m": "comm", "g": "mature", "n": {"ro": "Cobalt", "en": "Cobalt"}, "s": 5.4, "k": 2, "c": [6, 8, 5, 6, 6, 4, 6, 4, 5, 6, 5, 4, 7, 3], "w": {"ro": "Futures LME/CME cu lichiditate mică; fără produs direct pentru retail", "en": "Thinly traded LME/CME futures; no direct retail product"}, "x": {"ro": "RD Congo limitează exporturile la ~96.600 t/an în 2026-2027, cam jumătate din producția din 2024.", "en": "DR Congo caps exports at ~96,600 t/year in 2026-2027, about half of 2024 output."}, "l": "https://www.lme.com/", "lt": "LME"}, {"id": "grau-sua-hrw", "m": "comm", "g": "mature", "n": {"ro": "Grâu (SUA, HRW)", "en": "Wheat (US, HRW)"}, "s": 6.38, "k": 6, "c": [7, 5, 6, 3, 9, 8, 6, 8, 9, 7, 6, 6, 5, 5], "w": {"ro": "ETF WEAT (SUA); futures CBOT/KC", "en": "WEAT ETF (US); CBOT/KC futures"}, "x": {"ro": "+43% față de media 2025: războiul a perturbat transporturile de cereale; El Niño amenință recoltele.", "en": "+43% vs the 2025 average: the war disrupted grain shipments; El Niño threatens harvests."}, "l": "https://finance.yahoo.com/quote/WEAT", "lt": "WEAT (Yahoo Finance)"}, {"id": "porumb", "m": "comm", "g": "mature", "n": {"ro": "Porumb", "en": "Corn"}, "s": 6.5, "k": 6, "c": [7, 5, 6, 5, 8, 8, 6, 8, 8, 7, 6, 6, 5, 6], "w": {"ro": "ETF CORN (SUA); futures CBOT", "en": "CORN ETF (US); CBOT futures"}, "x": {"ro": "În creștere în 2026; cerere și din etanol.", "en": "Rising in 2026; demand also from ethanol."}, "l": "https://finance.yahoo.com/quote/CORN", "lt": "CORN (Yahoo Finance)"}, {"id": "zahar", "m": "comm", "g": "mature", "n": {"ro": "Zahăr", "en": "Sugar"}, "s": 6.02, "k": 4, "c": [6, 5, 6, 4, 8, 8, 5, 7, 6, 7, 6, 5, 6, 6], "w": {"ro": "ETF CANE (SUA); futures ICE (SB)", "en": "CANE ETF (US); ICE futures (SB)"}, "x": {"ro": "Ușoară revenire în 2026 de la minimul din 2025.", "en": "Slight recovery in 2026 from the 2025 low."}, "l": "https://finance.yahoo.com/quote/CANE", "lt": "CANE (Yahoo Finance)"}, {"id": "cacao", "m": "comm", "g": "mature", "n": {"ro": "Cacao", "en": "Cocoa"}, "s": 5.2, "k": 3, "c": [6, 3, 5, 3, 8, 7, 5, 5, 7, 5, 4, 4, 6, 4], "w": {"ro": "Futures ICE (CC); ETC-uri de cacao listate în Europa", "en": "ICE futures (CC); cocoa ETCs listed in Europe"}, "x": {"ro": "Oferta din Africa de Vest se reface după criza din 2024; cererea a scăzut la prețuri mari.", "en": "West African supply is recovering after the 2024 crisis; demand fell at high prices."}, "l": "https://finance.yahoo.com/quote/CC=F", "lt": "CC=F (Yahoo Finance)"}, {"id": "ore-de-calcul-gpu-h100-b200", "m": "comm", "g": "emerging", "n": {"ro": "Ore de calcul GPU (H100 / B200)", "en": "GPU compute hours (H100 / B200)"}, "s": 7.24, "k": 6, "c": [10, 6, 5, 10, 9, 5, 6, 6, 8, 7, 6, 6, 7, 6], "w": {"ro": "Futures CME doar prin cont de futures; fără produs retail", "en": "CME futures via a futures account only; no retail product"}, "x": {"ro": "Prima „marfă AI”: prețul se fixează pe un indice zilnic (Silicon Data). Activ care se depreciază: fiecare generație nouă de cipuri ieftinește închirierea celor vechi.", "en": "The first AI commodity: priced on a daily index (Silicon Data). A depreciating asset: each new chip generation cheapens renting the old ones."}, "l": "https://www.cmegroup.com/", "lt": "CME Group"}, {"id": "pamanturi-rare-ndpr-oxid", "m": "comm", "g": "emerging", "n": {"ro": "Pământuri rare: NdPr (oxid)", "en": "Rare earths: NdPr (oxide)"}, "s": 6.18, "k": 5, "c": [8, 7, 5, 8, 8, 4, 6, 6, 8, 6, 6, 5, 6, 2], "w": {"ro": "Indirect: ETF REMX (companii din pământuri rare)", "en": "Indirectly: REMX ETF (rare-earth companies)"}, "x": {"ro": "Prețul a coborât sub pragul minim de $110/kg garantat de Pentagon; China controlează ~90% din procesare.", "en": "Price fell below the $110/kg floor guaranteed by the Pentagon; China controls ~90% of processing."}, "l": "https://finance.yahoo.com/quote/REMX", "lt": "REMX (Yahoo Finance)"}, {"id": "disprosiu-oxid", "m": "comm", "g": "emerging", "n": {"ro": "Disprosiu (oxid)", "en": "Dysprosium (oxide)"}, "s": 5.82, "k": 7, "c": [7, 8, 4, 7, 8, 2, 7, 5, 9, 4, 5, 6, 7, 2], "w": {"ro": "Indirect: ETF REMX", "en": "Indirectly: REMX ETF"}, "x": {"ro": "Cel mai mare decalaj de preț China-vest din listă (+1.900%): piața s-a rupt în două.", "en": "The largest China-vs-West price gap on the list (+1,900%): the market has split in two."}, "l": "https://finance.yahoo.com/quote/REMX", "lt": "REMX (Yahoo Finance)"}, {"id": "galiu-metal", "m": "comm", "g": "emerging", "n": {"ro": "Galiu (metal)", "en": "Gallium (metal)"}, "s": 5.92, "k": 7, "c": [7, 8, 4, 8, 8, 3, 7, 5, 8, 4, 5, 6, 7, 2], "w": {"ro": "Fără produs direct; doar acțiuni ale producătorilor", "en": "No direct product; producers' shares only"}, "x": {"ro": "Benchmark-uri noi S&P Global (2026); decalaj de preț de peste 600%.", "en": "New S&P Global benchmarks (2026); price gap of over 600%."}, "l": "", "lt": ""}, {"id": "germaniu-lingou", "m": "comm", "g": "emerging", "n": {"ro": "Germaniu (lingou)", "en": "Germanium (ingot)"}, "s": 5.64, "k": 6, "c": [6, 8, 4, 7, 8, 3, 7, 4, 8, 4, 5, 6, 7, 2], "w": {"ro": "Fără produs direct; doar acțiuni ale producătorilor", "en": "No direct product; producers' shares only"}, "x": {"ro": "Decalaj de preț de aproape 400%.", "en": "Price gap of almost 400%."}, "l": "", "lt": ""}, {"id": "wolfram-apt", "m": "comm", "g": "emerging", "n": {"ro": "Wolfram (APT)", "en": "Tungsten (APT)"}, "s": 5.82, "k": 4, "c": [6, 8, 4, 6, 8, 4, 7, 5, 8, 5, 6, 6, 6, 3], "w": {"ro": "Indirect: ETF REMX (parțial)", "en": "Indirectly: REMX ETF (partly)"}, "x": {"ro": "Cel mai mare câștigător dintre mineralele critice în 2026, dar -24,6% într-o lună pe piața chineză.", "en": "Top critical-mineral gainer in 2026, but -24.6% in one month in China."}, "l": "https://finance.yahoo.com/quote/REMX", "lt": "REMX (Yahoo Finance)"}, {"id": "antimoniu", "m": "comm", "g": "emerging", "n": {"ro": "Antimoniu", "en": "Antimony"}, "s": 5.1, "k": 3, "c": [6, 7, 4, 5, 8, 3, 6, 4, 7, 5, 5, 3, 6, 2], "w": {"ro": "Fără produs direct; doar acțiuni ale producătorilor", "en": "No direct product; producers' shares only"}, "x": {"ro": "-31,5% într-o lună în China, în timp ce prețurile occidentale au scăzut mult mai puțin.", "en": "-31.5% in a month in China, while Western prices fell much less."}, "l": "", "lt": ""}, {"id": "grafit-sferic", "m": "comm", "g": "emerging", "n": {"ro": "Grafit (sferic)", "en": "Graphite (spherical)"}, "s": 5.34, "k": 5, "c": [7, 4, 4, 7, 8, 4, 4, 5, 6, 7, 4, 3, 7, 3], "w": {"ro": "Fără produs direct; doar acțiuni ale producătorilor", "en": "No direct product; producers' shares only"}, "x": {"ro": "Ofertă abundentă, preț în scădere (-13,2% într-o lună); bariere comerciale SUA-China.", "en": "Ample supply, falling price (-13.2% in a month); US-China trade barriers."}, "l": "", "lt": ""}, {"id": "credite-de-eliminare-a-carbonului-cdr", "m": "comm", "g": "emerging", "n": {"ro": "Credite de eliminare a carbonului (CDR)", "en": "Carbon removal credits (CDR)"}, "s": 4.44, "k": 2, "c": [4, 5, 3, 7, 4, 2, 5, 2, 5, 3, 5, 5, 8, 4], "w": {"ro": "Fără produs retail; carbonul reglementat (UE ETS) se poate urmări prin ETF KRBN", "en": "No retail product; regulated carbon (EU ETS) can be tracked via the KRBN ETF"}, "x": {"ro": "Cumpărători concentrați (câteva companii tech); calitatea creditelor e greu de verificat.", "en": "Concentrated buyers (a few tech companies); credit quality is hard to verify."}, "l": "https://finance.yahoo.com/quote/KRBN", "lt": "KRBN (Yahoo Finance)"}, {"id": "hidrogen-verde", "m": "comm", "g": "emerging", "n": {"ro": "Hidrogen verde", "en": "Green hydrogen"}, "s": 3.54, "k": 1, "c": [2, 3, 3, 6, 3, 3, 4, 3, 4, 2, 3, 3, 8, 4], "w": {"ro": "Fără produs direct; indici de preț la EEX", "en": "No direct product; price indices at EEX"}, "x": {"ro": "Multe proiecte amânate sau anulate; costul rămâne mult peste hidrogenul din gaz.", "en": "Many projects delayed or cancelled; cost remains far above gas-based hydrogen."}, "l": "https://www.eex.com/", "lt": "EEX"}, {"id": "apa-california", "m": "comm", "g": "emerging", "n": {"ro": "Apă (California)", "en": "Water (California)"}, "s": 4.94, "k": 2, "c": [4, 4, 4, 3, 6, 5, 5, 3, 10, 5, 5, 4, 9, 4], "w": {"ro": "Futures CME (NQH2O) doar prin cont de futures", "en": "CME futures (NQH2O) via a futures account only"}, "x": {"ro": "Lansat tehnic, dar aproape neadoptat; subiect sensibil politic.", "en": "Technically launched but barely adopted; politically sensitive."}, "l": "https://www.cmegroup.com/", "lt": "CME Group"}]</script>
+<script type="application/json" id="i18n">{"score": "Score", "cond_met": "conditions met", "see_details": "See profile", "context": "Context", "profile": "Profile on 14 conditions (score 0-10)", "where": "Where to buy", "open_link": "Open", "all": "All", "empty": "No asset matches these filters.", "ring10": "10", "ring6": "6", "ring0": "0 conditions", "avgcond": "average conditions", "lvname": {"strong": "10+ conditions", "watch": "6-9 conditions", "weak": "under 6"}, "access": {"use": "By using it", "buy": "Buyable", "restricted": "Restricted", "closed": "Closed", "indirect": "Indirect"}, "g": {"pre": "Crypto, not launched", "post": "Crypto, below peak", "ipo": "Recently listed", "preipo": "Pre-IPO", "startup": "Startup with product", "seed": "Pre-product startup", "mature": "Mature, below peak", "emerging": "Emerging"}, "pairlabel": {"pre-post": "not launched vs. launched", "preipo-ipo": "pre-IPO vs. listed", "seed-startup": "startups without vs. with product", "emerging-mature": "emerging vs. mature"}, "mnote": {"crypto": "Tokens not yet launched (you position yourself by using the platform) and launched tokens far below their peak. Prices from 23 October 2026.", "comp": "Listed companies, private companies and startups. Only the listed ones can be bought directly. Data from 26-29 October 2026.", "comm": "Mature and emerging commodities. In the EU many US ETFs are unavailable; look for the European equivalent. Prices from Sep-Oct 2026."}, "gnote": {"pre": "Cannot be bought yet. The link goes to the platform you use to position yourself for a free allocation (airdrop).", "post": "Bought on crypto exchanges. Historically the best moment came after capitulation, when usage grows while the price stays flat.", "ipo": "Bought through any broker with access to US or Hong Kong exchanges.", "preipo": "Not listed. Shares occasionally appear on secondary markets, usually for accredited investors only.", "startup": "Not publicly traded. We track them because they often signal the next listings.", "seed": "Billion-dollar valuations before any product. Rounds are closed to ordinary investors.", "mature": "Bought through ETCs/ETFs or futures.", "emerging": "Most cannot be bought directly; exposure comes through companies. Prices inside and outside China can differ several-fold."}, "crit_long": [["Actually used", "Real revenue, users or demand, not promises."], ["Launch from strength", "The best don’t rush: they launch when ready."], ["Healthy funding", "No investors who can sell heavily right away."], ["Attracts skilled people", "Talent, partners and builders move toward it."], ["Real customers", "Natural activity, not bought or subsidised."], ["Credible team", "A record of finishing things, no scandals."], ["Well-distributed supply", "Few shares or tokens waiting to flood the market."], ["Organic community", "People who came for the product, not quick gains."], ["Obvious problem", "Explainable in one sentence."], ["Good entry price", "Room to grow versus rivals or versus cost."], ["Balanced media", "Media euphoria has historically marked the top."], ["Healthy price and volume", "A steady price while usage grows."], ["Few on the same bet", "The less crowded, the better."], ["Low risks", "No lawsuits, scandals or major geopolitical risk."]], "crit_gen": ["Actually used", "Launch from strength", "Healthy funding", "Attracts skilled people", "Real customers", "Credible team", "Well-distributed supply", "Organic community", "Obvious problem", "Good entry price", "Balanced media", "Healthy price and volume", "Few on the same bet", "Low risks"], "crit_comm": ["Real demand", "Supply discipline", "Low inventories", "New uses", "Physical demand", "Transparent price", "Deficit, not surplus", "Diverse buyers", "Irreplaceable", "Price vs cost", "Balanced media", "Price and volume", "Few speculators", "Low geopolitical risk"], "m_crypto": "Crypto", "m_comp": "Companies", "m_comm": "Commodities"}</script>
+<script>
+(function () {
+  const A = JSON.parse(document.getElementById('data').textContent);
+  const T = JSON.parse(document.getElementById('i18n').textContent);
+  const L = document.documentElement.lang;
+  const NS = 'http://www.w3.org/2000/svg';
+  const W = [16, 6, 6, 8, 6, 8, 8, 4, 6, 6, 6, 6, 6, 8];
+  const MK = ['crypto', 'comp', 'comm'];
+  const MCOL = { crypto: 'var(--m-crypto)', comp: 'var(--m-comp)', comm: 'var(--m-comm)' };
+  const GROUPS = { crypto: ['pre', 'post'], comp: ['ipo', 'preipo', 'startup', 'seed'], comm: ['mature', 'emerging'] };
+  const ACCESS = { pre: 'use', post: 'buy', ipo: 'buy', preipo: 'restricted', startup: 'closed', seed: 'closed', mature: 'buy', emerging: 'indirect' };
+  const fmt = (v) => { const s = Number(v).toFixed(2); return L === 'ro' ? s.replace('.', ',') : s; };
+  const lvl = (k) => (k >= 10 ? 'strong' : k >= 6 ? 'watch' : 'weak');
+  const safe = (u) => (typeof u === 'string' && /^https:\/\//.test(u) ? u : '');
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const sv = (tag, attrs) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+  const critLabels = (m) => (m === 'comm' ? T.crit_comm : T.crit_gen);
+  const rank = (a, b) => b.k - a.k || b.s - a.s;
+
+  // stats
+  document.getElementById('st-assets').textContent = A.length;
+  document.getElementById('st-strong').textContent = A.filter((a) => a.k >= 10).length;
+
+  // ---------- big radar ----------
+  const R = 262, C = 300;
+  const rad = (k) => R * (1 - Math.min(14, Math.max(0, k)) / 14);
+  const svg = document.getElementById('radar');
+  const defs = sv('defs', {});
+  const grad = sv('linearGradient', { id: 'sw', x1: '0', y1: '0', x2: '1', y2: '0' });
+  grad.append(sv('stop', { offset: '0', 'stop-color': '#7391ff', 'stop-opacity': '0' }), sv('stop', { offset: '1', 'stop-color': '#7391ff', 'stop-opacity': '.35' }));
+  defs.append(grad); svg.append(defs);
+  svg.append(sv('circle', { cx: C, cy: C, r: R + 18, fill: 'none', stroke: 'var(--scope-line)' }));
+  svg.append(sv('circle', { cx: C, cy: C, r: rad(10), fill: 'var(--scope-zone)', stroke: 'rgba(70,197,139,.5)', 'stroke-dasharray': '3 4' }));
+  [14, 10, 6, 2, 0].forEach((k) => { if (k < 14) svg.append(sv('circle', { cx: C, cy: C, r: rad(k), fill: 'none', stroke: 'var(--scope-line)' })); });
+  [[10, T.ring10], [6, T.ring6], [0, T.ring0]].forEach(([k, label]) => {
+    const t = sv('text', { x: C + 6, y: C - rad(k) + 14, fill: 'var(--scope-text)', 'font-size': '12', 'font-family': 'IBM Plex Mono, monospace' });
+    t.textContent = label; svg.append(t);
+  });
+  MK.forEach((m, i) => {
+    const a = (-90 + i * 120) * Math.PI / 180;
+    svg.append(sv('line', { x1: C, y1: C, x2: C + (R + 18) * Math.cos(a), y2: C + (R + 18) * Math.sin(a), stroke: 'var(--scope-line)' }));
+    const mid = (-90 + i * 120 + 60) * Math.PI / 180;
+    const t = sv('text', { x: C + (R + 4) * Math.cos(mid), y: C + (R + 4) * Math.sin(mid) + 4, fill: 'var(--scope-text)', 'font-size': '13', 'font-family': 'IBM Plex Mono, monospace', 'text-anchor': 'middle', 'letter-spacing': '1.5' });
+    t.textContent = T['m_' + m].toUpperCase();
+    const bb = sv('rect', {}); svg.append(bb); svg.append(t);
+    requestAnimationFrame(() => { try { const b = t.getBBox(); bb.setAttribute('x', b.x - 6); bb.setAttribute('y', b.y - 3); bb.setAttribute('width', b.width + 12); bb.setAttribute('height', b.height + 6); bb.setAttribute('rx', 4); bb.setAttribute('fill', 'var(--scope)'); } catch (e) {} });
+  });
+  const sweep = sv('g', { class: 'sweep', 'aria-hidden': 'true' });
+  sweep.append(sv('path', { d: `M${C} ${C} L${C + R} ${C} A${R} ${R} 0 0 0 ${C + R * Math.cos(-0.5)} ${C + R * Math.sin(-0.5)} Z`, fill: 'url(#sw)' }));
+  sweep.append(sv('line', { x1: C, y1: C, x2: C + R, y2: C, stroke: '#9cb1ff', 'stroke-opacity': '.6', 'stroke-width': '1.5' }));
+  svg.append(sweep);
+  svg.append(sv('circle', { cx: C, cy: C, r: 4, fill: '#9cb1ff' }));
+  const tip = document.getElementById('tip');
+  const scope = svg.parentElement;
+  const showTip = (a, x, y) => {
+    tip.replaceChildren(el('b', null, a.n[L]), el('span', null, `${T.score} ${fmt(a.s)} · ${a.k}/14 · ${T.g[a.g]}`));
+    tip.hidden = false;
+    const sb = scope.getBoundingClientRect();
+    const tw = tip.offsetWidth, th = tip.offsetHeight;
+    let left = x - sb.left + 12, top = y - sb.top - th - 10;
+    if (left + tw > sb.width - 8) left = x - sb.left - tw - 12;
+    if (top < 8) top = y - sb.top + 14;
+    tip.style.left = Math.max(8, left) + 'px'; tip.style.top = top + 'px';
+  };
+  MK.forEach((m, mi) => {
+    const list = A.filter((a) => a.m === m).sort((a, b) => (a.id < b.id ? -1 : 1));
+    list.forEach((a, i) => {
+      const ang = (-90 + mi * 120 + 8 + (i + 0.5) * (104 / list.length)) * Math.PI / 180;
+      const r = Math.max(10, rad(a.k));
+      const x = C + r * Math.cos(ang), y = C + r * Math.sin(ang);
+      const b = sv('circle', { cx: x.toFixed(1), cy: y.toFixed(1), r: (3.2 + Math.max(0, a.s - 2) * 0.6).toFixed(1), fill: MCOL[m], class: 'blip', tabindex: '0', role: 'button', 'aria-label': `${a.n[L]}: ${a.k}/14, ${T.score} ${fmt(a.s)}` });
+      b.addEventListener('mouseenter', (e) => showTip(a, e.clientX, e.clientY));
+      b.addEventListener('mousemove', (e) => showTip(a, e.clientX, e.clientY));
+      b.addEventListener('mouseleave', () => { tip.hidden = true; });
+      b.addEventListener('focus', () => { const bb = b.getBoundingClientRect(); showTip(a, bb.left + bb.width / 2, bb.top); });
+      b.addEventListener('blur', () => { tip.hidden = true; });
+      b.addEventListener('click', () => openAsset(a.id));
+      b.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openAsset(a.id); } });
+      svg.append(b);
+    });
+  });
+
+  // ---------- mini polar ----------
+  function polar(a, size) {
+    const s = sv('svg', { viewBox: '0 0 120 120', width: size, height: size, role: 'img', 'aria-label': `${a.n[L]}: ${a.k}/14` });
+    const c = 60, rr = 50;
+    [5, 7, 10].forEach((v) => s.append(sv('circle', { cx: c, cy: c, r: rr * v / 10, fill: 'none', stroke: v === 7 ? 'var(--strong)' : 'var(--grid)', 'stroke-dasharray': v === 7 ? '2 3' : '', 'stroke-opacity': v === 7 ? '.7' : '1' })));
+    const pts = a.c.map((v, i) => { const ang = (-90 + i * 360 / 14) * Math.PI / 180; s.append(sv('line', { x1: c, y1: c, x2: c + rr * Math.cos(ang), y2: c + rr * Math.sin(ang), stroke: 'var(--grid)' })); return [c + rr * v / 10 * Math.cos(ang), c + rr * v / 10 * Math.sin(ang)]; });
+    s.append(sv('polygon', { points: pts.map((p) => p.map((n) => n.toFixed(1)).join(',')).join(' '), fill: MCOL[a.m], 'fill-opacity': '.18', stroke: MCOL[a.m], 'stroke-width': '1.5', 'stroke-linejoin': 'round' }));
+    pts.forEach((p, i) => { if (a.c[i] >= 7) s.append(sv('circle', { cx: p[0].toFixed(1), cy: p[1].toFixed(1), r: 2.2, fill: 'var(--strong)' })); });
+    return s;
+  }
+  const badge = (g) => { const k = ACCESS[g]; return el('span', 'badge ' + (k === 'buy' ? 'b-buy' : k === 'indirect' || k === 'use' ? 'b-ind' : ''), T.access[k]); };
+  const mkTag = (m) => { const s = el('span', 'mk'); const i = el('i'); i.style.background = MCOL[m]; s.append(i, document.createTextNode(T['m_' + m])); return s; };
+
+  // ---------- picks ----------
+  const picks = document.getElementById('picks');
+  MK.forEach((m) => {
+    A.filter((a) => a.m === m).sort(rank).slice(0, 2).forEach((a) => {
+      const card = el('article', 'pick');
+      const top = el('div', 'pick-top'); top.append(mkTag(m), badge(a.g));
+      const h = el('h3', null, a.n[L]);
+      const body = el('div', 'pick-body');
+      const figs = el('div', 'pick-figs');
+      const k = el('span', 'big num k-' + lvl(a.k), a.k + '/14');
+      figs.append(k, el('small', null, T.cond_met), el('small', null, `${T.score} ${fmt(a.s)} · ${T.g[a.g]}`));
+      body.append(polar(a, 96), figs);
+      const go = el('button', 'linkbtn', T.see_details + ' →'); go.type = 'button'; go.addEventListener('click', () => openAsset(a.id));
+      card.append(top, h, body, go); picks.append(card);
+    });
+  });
+
+  // ---------- criteria list ----------
+  const crit = document.getElementById('crit');
+  T.crit_long.forEach((c, i) => {
+    const li = el('li'); const w = el('span', 'w num', W[i] + '%');
+    const d = el('div'); d.append(el('strong', null, c[0]), el('span', null, c[1]));
+    const wb = el('span', 'wbar'); const wi = el('i'); wi.style.width = (W[i] / 16 * 100) + '%'; wb.append(wi); d.append(wb);
+    li.append(w, d); crit.append(li);
+  });
+
+  // ---------- explorer ----------
+  const st = { m: 'crypto', g: 'all', q: '', min: 0, sort: 'k', open: new Set() };
+  const mtabs = document.getElementById('mtabs'), gchips = document.getElementById('gchips'), tbody = document.getElementById('rows'), gnote = document.getElementById('gnote');
+  MK.forEach((m) => {
+    const b = el('button', 'tab'); b.type = 'button'; b.setAttribute('role', 'tab'); b.dataset.m = m;
+    const i = el('i'); i.style.cssText = `width:.55rem;height:.55rem;border-radius:50%;background:${MCOL[m]};display:inline-block`;
+    b.append(i, document.createTextNode(T['m_' + m]), el('span', 'cnt', String(A.filter((a) => a.m === m).length)));
+    b.addEventListener('click', () => { st.m = m; st.g = 'all'; render(); });
+    mtabs.append(b);
+  });
+  document.getElementById('q').addEventListener('input', (e) => { st.q = e.target.value.trim().toLowerCase(); render(); });
+  document.getElementById('minK').addEventListener('change', (e) => { st.min = Number(e.target.value); render(); });
+  document.getElementById('sortBy').addEventListener('change', (e) => { st.sort = e.target.value; render(); });
+
+  function detailRow(a) {
+    const tr = el('tr', 'detail'); const td = el('td'); td.colSpan = 7;
+    const det = el('div', 'det');
+    const side = el('div', 'det-side');
+    side.append(polar(a, 220));
+    const ctx = el('div'); ctx.append(el('h4', null, T.context), el('p', null, a.x[L])); side.append(ctx);
+    const right = el('div', 'det-side');
+    const lab = critLabels(a.m);
+    const listWrap = el('div'); listWrap.append(el('h4', null, T.profile));
+    const ul = el('ul', 'cl');
+    a.c.forEach((v, i) => { const li = el('li', v >= 7 ? 'met' : v <= 4 ? 'low' : ''); li.append(el('span', null, lab[i]), el('b', null, String(v))); ul.append(li); });
+    listWrap.append(ul);
+    const where = el('div'); where.append(el('h4', null, T.where), el('p', null, a.w[L]));
+    right.append(listWrap, where);
+    const u = safe(a.l);
+    if (u) { const ln = el('a', 'buy', (a.lt || T.open_link) + ' ↗'); ln.href = u; ln.target = '_blank'; ln.rel = 'noopener noreferrer'; right.append(ln); }
+    det.append(side, right); td.append(det); tr.append(td);
+    return tr;
+  }
+
+  function render() {
+    mtabs.querySelectorAll('.tab').forEach((b) => b.setAttribute('aria-selected', b.dataset.m === st.m ? 'true' : 'false'));
+    gchips.replaceChildren();
+    ['all'].concat(GROUPS[st.m]).forEach((g) => {
+      const c = el('button', 'chip', g === 'all' ? T.all : T.g[g]); c.type = 'button';
+      c.setAttribute('aria-pressed', st.g === g ? 'true' : 'false');
+      c.addEventListener('click', () => { st.g = g; render(); });
+      gchips.append(c);
+    });
+    gnote.textContent = st.g === 'all' ? T.mnote[st.m] : T.gnote[st.g];
+    let list = A.filter((a) => a.m === st.m && (st.g === 'all' || a.g === st.g) && a.k >= st.min && (!st.q || a.n[L].toLowerCase().includes(st.q) || a.x[L].toLowerCase().includes(st.q)));
+    list.sort(st.sort === 's' ? (a, b) => b.s - a.s || b.k - a.k : st.sort === 'n' ? (a, b) => a.n[L].localeCompare(b.n[L], L) : rank);
+    tbody.replaceChildren();
+    if (!list.length) { const tr = el('tr'); const td = el('td', 'empty', T.empty); td.colSpan = 7; tr.append(td); tbody.append(tr); return; }
+    list.forEach((a, i) => {
+      const tr = el('tr', 'row' + (st.open.has(a.id) ? ' open' : '')); tr.id = 'a-' + a.id; tr.tabIndex = 0;
+      tr.setAttribute('aria-expanded', st.open.has(a.id) ? 'true' : 'false');
+      tr.append(el('td', 'r num', String(i + 1)));
+      const n = el('td'); n.append(el('span', 'nm', a.n[L]), el('span', 'grp', T.g[a.g])); tr.append(n);
+      const sc = el('td'); const sw = el('div', 'sc'); sw.append(el('span', 'num', fmt(a.s)));
+      const bar = el('span', 'bar2'); const bi = el('i'); bi.style.width = (a.s * 10) + '%'; bi.style.background = MCOL[a.m]; bar.append(bi); sw.append(bar); sc.append(sw); tr.append(sc);
+      const kd = el('td'); const kv = el('div', 'kv'); kv.append(el('b', 'k-' + lvl(a.k), a.k + '/14'));
+      const dots = el('span', 'dots hide-s'); a.c.slice().sort((x, y) => y - x).forEach((v) => dots.append(el('i', v >= 7 ? 'on' : ''))); kv.append(dots); kd.append(kv); tr.append(kd);
+      const ac = el('td', 'hide-s'); ac.append(badge(a.g)); tr.append(ac);
+      const wh = el('td', 'hide-s'); const u = safe(a.l);
+      if (u) { const ln = el('a', null, a.lt || T.open_link); ln.href = u; ln.target = '_blank'; ln.rel = 'noopener noreferrer'; ln.addEventListener('click', (e) => e.stopPropagation()); wh.append(ln); } else { wh.textContent = '—'; wh.style.color = 'var(--ink-3)'; }
+      tr.append(wh);
+      const ch = el('td', 'r'); const cv = el('span', 'chev', '⌄'); cv.setAttribute('aria-hidden', 'true'); ch.append(cv); tr.append(ch);
+      const toggle = () => { st.open.has(a.id) ? st.open.delete(a.id) : st.open.add(a.id); render(); };
+      tr.addEventListener('click', toggle);
+      tr.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+      tbody.append(tr);
+      if (st.open.has(a.id)) tbody.append(detailRow(a));
+    });
+  }
+
+  function openAsset(id) {
+    const a = A.find((x) => x.id === id); if (!a) return;
+    st.m = a.m; st.g = 'all'; st.q = ''; st.min = 0; st.open.add(id);
+    document.getElementById('q').value = ''; document.getElementById('minK').value = '0';
+    render();
+    const row = document.getElementById('a-' + id);
+    if (row) { row.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); row.focus({ preventScroll: true }); }
+  }
+  render();
+
+  // ---------- market cards ----------
+  MK.forEach((m) => {
+    const list = A.filter((a) => a.m === m);
+    const avg = list.reduce((s, a) => s + a.k, 0) / list.length;
+    const top = list.slice().sort(rank)[0];
+    const set = (key, v) => document.querySelectorAll(`[data-mstat="${m}-${key}"]`).forEach((e) => { e.textContent = v; });
+    set('n', String(list.length));
+    set('avg', (L === 'ro' ? avg.toFixed(1).replace('.', ',') : avg.toFixed(1)) + '/14');
+    set('top', `${top.n[L]} (${top.k}/14)`);
+  });
+  document.querySelectorAll('.market[data-go]').forEach((a) => a.addEventListener('click', () => { st.m = a.dataset.go; st.g = 'all'; render(); }));
+
+  // ---------- charts ----------
+  const ctip = el('div', 'ctip'); ctip.hidden = true; document.body.append(ctip);
+  const hover = (node, text) => {
+    node.addEventListener('mousemove', (e) => { ctip.textContent = text; ctip.hidden = false; const w = ctip.offsetWidth; ctip.style.left = Math.min(e.clientX + 12, innerWidth - w - 8) + 'px'; ctip.style.top = (e.clientY - 34) + 'px'; });
+    node.addEventListener('mouseleave', () => { ctip.hidden = true; });
+  };
+  const txt = (attrs, s) => { const t = sv('text', attrs); t.textContent = s; return t; };
+
+  function chartTop() {
+    const svg = document.getElementById('ch-top'); svg.replaceChildren();
+    const W0 = Math.max(320, svg.clientWidth || 640);
+    const narrow = W0 < 560;
+    const list = A.slice().sort(rank).slice(0, 10);
+    const rowH = 30, top = 6, labelW = narrow ? 128 : 230, right = 56;
+    const H = top + list.length * rowH + 26;
+    svg.setAttribute('viewBox', `0 0 ${W0} ${H}`); svg.setAttribute('height', H);
+    const x0 = labelW, x1 = W0 - right, sx = (k) => x0 + (x1 - x0) * k / 14;
+    [0, 7, 10, 14].forEach((k) => {
+      svg.append(sv('line', { x1: sx(k), x2: sx(k), y1: top - 2, y2: top + list.length * rowH, stroke: k === 10 ? 'var(--strong)' : 'var(--grid)', 'stroke-dasharray': k === 10 ? '3 3' : '' }));
+      svg.append(txt({ x: sx(k), y: H - 6, 'text-anchor': 'middle', 'font-size': '11' }, String(k)));
+    });
+    list.forEach((a, i) => {
+      const y = top + i * rowH;
+      let name = a.n[L]; const max = narrow ? 17 : 30; if (name.length > max) name = name.slice(0, max - 1) + '…';
+      svg.append(txt({ x: labelW - 10, y: y + rowH / 2 + 4, 'text-anchor': 'end', 'font-size': narrow ? '12' : '13', class: 'nm' }, name));
+      const r = sv('rect', { x: x0, y: y + 6, width: Math.max(2, sx(a.k) - x0), height: rowH - 12, rx: 3, fill: MCOL[a.m] });
+      hover(r, `${a.n[L]} · ${a.k}/14 · ${T.score} ${fmt(a.s)} · ${T['m_' + a.m]}`); svg.append(r);
+      svg.append(txt({ x: sx(a.k) + 6, y: y + rowH / 2 + 4, 'font-size': '12', class: 'v' }, a.k + '/14'));
+    });
+  }
+
+  function chartZones() {
+    const svg = document.getElementById('ch-zones'); svg.replaceChildren();
+    const W0 = Math.max(300, svg.clientWidth || 520);
+    const rowH = 54, labelW = 104, H = MK.length * rowH + 4;
+    svg.setAttribute('viewBox', `0 0 ${W0} ${H}`); svg.setAttribute('height', H);
+    const x1 = W0 - 8;
+    MK.forEach((m, i) => {
+      const list = A.filter((a) => a.m === m);
+      const parts = [['strong', list.filter((a) => a.k >= 10).length], ['watch', list.filter((a) => a.k >= 6 && a.k < 10).length], ['weak', list.filter((a) => a.k < 6).length]];
+      const y = i * rowH + 8;
+      svg.append(txt({ x: 0, y: y + 22, 'font-size': '13', class: 'nm' }, T['m_' + m]));
+      let x = labelW; const total = list.length;
+      parts.forEach(([lv, n]) => {
+        if (!n) return;
+        const w = (x1 - labelW) * n / total;
+        const r = sv('rect', { x: x, y: y + 6, width: Math.max(1, w - 2), height: 26, rx: 4, fill: `var(--${lv})`, 'fill-opacity': lv === 'weak' ? '.45' : '1' });
+        hover(r, `${T['m_' + m]} · ${T.lvname[lv]}: ${n}`); svg.append(r);
+        if (w > 24) svg.append(txt({ x: x + w / 2 - 1, y: y + 24, 'text-anchor': 'middle', 'font-size': '12', class: 'v', fill: lv === 'weak' ? 'var(--ink)' : '#fff', style: lv === 'weak' ? '' : 'fill:#fff' }, String(n)));
+        x += w;
+      });
+    });
+  }
+
+  function chartPairs() {
+    const svg = document.getElementById('ch-pairs'); svg.replaceChildren();
+    const W0 = Math.max(300, svg.clientWidth || 520);
+    const pairs = [['crypto', 'pre', 'post'], ['comp', 'preipo', 'ipo'], ['comp', 'seed', 'startup'], ['comm', 'emerging', 'mature']];
+    const rowH = 64, labelW = 0, H = pairs.length * rowH + 22;
+    svg.setAttribute('viewBox', `0 0 ${W0} ${H}`); svg.setAttribute('height', H);
+    const x0 = 0, x1 = W0 - 54, sx = (k) => x0 + (x1 - x0) * k / 14;
+    const avg = (g) => { const l = A.filter((a) => a.g === g); return l.reduce((s, a) => s + a.k, 0) / l.length; };
+    pairs.forEach(([m, a, b], i) => {
+      const y = i * rowH;
+      svg.append(txt({ x: 0, y: y + 13, 'font-size': '12.5', class: 'nm' }, `${T['m_' + m]} · ${T.pairlabel[a + '-' + b]}`));
+      [[a, 'var(--ink-3)', 0], [b, 'var(--signal)', 1]].forEach(([g, col, j]) => {
+        const v = avg(g), yy = y + 20 + j * 19;
+        const r = sv('rect', { x: x0, y: yy, width: Math.max(2, sx(v) - x0), height: 15, rx: 3, fill: col });
+        hover(r, `${T.g[g]} · ${T.avgcond}: ${v.toFixed(1)}/14`); svg.append(r);
+        svg.append(txt({ x: sx(v) + 6, y: yy + 12, 'font-size': '11.5', class: 'v' }, (L === 'ro' ? v.toFixed(1).replace('.', ',') : v.toFixed(1))));
+      });
+    });
+    [0, 7, 14].forEach((k) => svg.append(txt({ x: sx(k), y: H - 4, 'text-anchor': k === 0 ? 'start' : 'middle', 'font-size': '11' }, String(k))));
+  }
+  const drawCharts = () => { chartTop(); chartZones(); chartPairs(); };
+  drawCharts();
+  let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(drawCharts, 150); });
+
+  const h = location.hash.slice(1);
+  if (MK.includes(h)) { st.m = h; render(); document.getElementById('explorer').scrollIntoView(); }
+})();
+</script>
+</body>
+</html>

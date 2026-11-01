@@ -32,7 +32,7 @@ const sources = [...new Map(data.map((d) => [d.source.url, d.source])).values()]
 ---
 <Base title={domain.title} description={domain.summary}>
   <p class="crumbs">
-    <a href={base}>Domenii</a>
+    <a href={`${base}domenii/`}>Date oficiale</a>
     {crumbs.map((c) => <> / <a href={`${base}domenii/${c.slug}/`}>{c.title}</a></>)}
   </p>
   <span class:list={['badge', domain.status]}>{domain.status === 'activ' ? 'Activ' : 'Planificat'}</span>
