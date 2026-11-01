@@ -6,6 +6,7 @@ import RadarSection from '../../components/RadarSection.astro';
 import ForexSection from '../../components/ForexSection.astro';
 import EmergingSection from '../../components/EmergingSection.astro';
 import SP500Section from '../../components/SP500Section.astro';
+import RomaniaSection from '../../components/RomaniaSection.astro';
 import spMacro from '../../data/sp500/macro.json';
 import emMacro from '../../data/emerging/macro.json';
 import forexMacro from '../../data/forex/macro.json';
@@ -43,7 +44,8 @@ if (radarRows) sources.push(dbSource);
 if (domain.slug === 'forex') sources.push(forexMacro.sources.imf, forexMacro.sources.bis, forexMacro.sources.fx);
 if (domain.slug === 'economii-emergente') sources.push(emMacro.sources.imf, emMacro.sources.bis, emMacro.sources.fx);
 if (domain.slug === 'sp500') sources.push(spMacro.sources.sec, spMacro.sources.prices);
-const scored = ['forex', 'economii-emergente', 'sp500'].includes(domain.slug);
+const scored = ['forex', 'economii-emergente', 'sp500', 'startups/europa/romania'].includes(domain.slug);
+if (domain.slug === 'startups/europa/romania') sources.push(dbSource);
 const criteria = domain.criteria ? CRITERIA[domain.criteria] : undefined;
 if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domain.criteria}” nu există (${domain.slug}).`);
 ---
@@ -65,7 +67,8 @@ if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domai
   {domain.slug === 'economii-emergente' && <EmergingSection />}
   {domain.slug === 'sp500' && <SP500Section />}
   {domain.radarMarket && radarRows > 0 && <RadarSection market={domain.radarMarket} domain={domain.slug} countries={domain.countries} />}
-  {domain.radarMarket && radarRows === 0 && (
+  {domain.slug === 'startups/europa/romania' && <RomaniaSection />}
+  {domain.radarMarket && radarRows === 0 && domain.slug !== 'startups/europa/romania' && (
     <section>
       <h2>Activele de pe radar în această zonă</h2>
       <p class="notice">Niciun activ din această zonă nu e încă pe radar. Le adăugăm doar după ce le notăm pe aceleași 14 condiții, cu date verificabile. Până atunci nu afișăm clasamente sau cifre.</p>

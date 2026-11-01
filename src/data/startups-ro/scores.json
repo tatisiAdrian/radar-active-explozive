@@ -1,0 +1,323 @@
+{
+ "date": "2026-11-01",
+ "updatedAt": "2026-11-01",
+ "rows": [
+  {
+   "id": "bitdefender",
+   "name": "Bitdefender",
+   "stage": "Privată, listare amânată",
+   "sector": "Securitate cibernetică",
+   "c": [
+    9,
+    10,
+    9,
+    7,
+    9,
+    8,
+    6,
+    7,
+    9,
+    null,
+    7,
+    null,
+    7,
+    7
+   ],
+   "why": "Venituri de 480 mil. USD în 2025 (+11%) și profit operațional de 57 mil. USD. Listarea în SUA, estimată pentru iunie 2026, a fost mutată spre finalul lui 2028, dintr-o poziție financiară confortabilă: tiparul „lansare din forță” al radarului. Acțiunile nu se pot cumpăra încă de investitorii obișnuiți.",
+   "sources": [
+    [
+     "Financiarul: venituri 2025 și amânarea listării (6 iulie 2026)",
+     "https://financiarul.ro/companii/bitdefender-a-avut-venituri-de-480-de-milioane-de-dolari-in-2025-si-amana-l/index.html.md"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.62,
+   "met": 11
+  },
+  {
+   "id": "pentest-tools",
+   "name": "Pentest-Tools.com",
+   "stage": "Privată, fără investitori externi",
+   "sector": "Securitate cibernetică (testare automată)",
+   "c": [
+    7,
+    8,
+    9,
+    6,
+    8,
+    7,
+    8,
+    6,
+    8,
+    null,
+    8,
+    null,
+    8,
+    7
+   ],
+   "why": "Dezvoltată fără investitori externi, profitabilă, cu clienți plătitori în peste 100 de țări. Fără runde de finanțare, nimeni nu poate vinde masiv; în schimb nu există nicio cale publică de a investi.",
+   "sources": [
+    [
+     "Pîrvănescu: Romanian tech startups to watch in 2026",
+     "https://pirvanescu.com/blog/2026-03-16-romanian-tech-startups-watch-2026/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.14,
+   "met": 10
+  },
+  {
+   "id": "uipath",
+   "name": "UiPath",
+   "stage": "Listată (NYSE: PATH)",
+   "sector": "Automatizare software și agenți AI",
+   "priceId": "ro-uipath",
+   "c": [
+    9,
+    4,
+    9,
+    7,
+    9,
+    7,
+    7,
+    6,
+    8,
+    8,
+    7,
+    0,
+    7,
+    6
+   ],
+   "why": "Fondată la București, azi cu sediul la New York. Venituri de 1,61 mld. USD în anul fiscal 2026 (+13%), ARR 1,85 mld. USD, 1,69 mld. USD numerar și răscumpărări de 329 mil. USD într-un an. S-a listat în 2021 aproape de vârful pieței, la 56 USD pe acțiune; acum cotează în jur de 14 USD, adică peste 75% sub prețul de listare, cu un randament al fluxului de numerar liber ridicat pentru o companie de software. Riscul principal este ca agenții AI ai marilor companii să înlocuiască automatizarea clasică.",
+   "sources": [
+    [
+     "UiPath, rezultate fiscal 2026 (comunicat oficial)",
+     "https://ir.uipath.com/news/detail/431/mailto:PR@uipath.com"
+    ],
+    [
+     "UiPath, raport anual 10-K (SEC)",
+     "https://www.sec.gov/Archives/edgar/data/1734722/000173472226000012/path-20260131.htm"
+    ]
+   ],
+   "inputs": {
+    "C12": "acțiunea -9,6% în două luni (Yahoo Finance, PATH)"
+   },
+   "score": 6.96,
+   "met": 10,
+   "price": {
+    "symbol": "PATH",
+    "url": "https://finance.yahoo.com/quote/PATH",
+    "points": [
+     [
+      "2026-09-04",
+      15.19
+     ],
+     [
+      "2026-09-11",
+      13.75
+     ],
+     [
+      "2026-09-18",
+      13.39
+     ],
+     [
+      "2026-09-25",
+      12.46
+     ],
+     [
+      "2026-10-02",
+      13.12
+     ],
+     [
+      "2026-10-09",
+      13.48
+     ],
+     [
+      "2026-10-16",
+      12.85
+     ],
+     [
+      "2026-10-23",
+      14.13
+     ],
+     [
+      "2026-10-30",
+      13.73
+     ]
+    ]
+   }
+  },
+  {
+   "id": "fintechos",
+   "name": "FintechOS",
+   "stage": "Privată (Serie B + finanțare 2026)",
+   "sector": "Software pentru bănci și asigurători",
+   "c": [
+    7,
+    7,
+    7,
+    6,
+    7,
+    6,
+    5,
+    5,
+    7,
+    null,
+    7,
+    null,
+    7,
+    6
+   ],
+   "why": "A strâns 28 mil. USD în septembrie 2026 (capital de la investitorii existenți și credit de la Santander), după ce a devenit profitabilă în prima jumătate a lui 2026. Veniturile recurente au crescut cu 40%, iar afacerea din SUA cu 130%. Pragul de rentabilitate a venit mai târziu decât anunțase compania pentru 2024.",
+   "sources": [
+    [
+     "The Next Web: FintechOS raises $28M after turning profitable (22 sept. 2026)",
+     "https://thenextweb.com/news/fintechos-raises-28m-equity-debt-profitability"
+    ],
+    [
+     "Pîrvănescu: Romanian tech startups to watch in 2026",
+     "https://pirvanescu.com/blog/2026-03-16-romanian-tech-startups-watch-2026/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.28,
+   "met": 7
+  },
+  {
+   "id": "flowx-ai",
+   "name": "FlowX.AI",
+   "stage": "Privată (Serie A)",
+   "sector": "Modernizarea aplicațiilor bancare cu AI",
+   "c": [
+    6,
+    6,
+    7,
+    7,
+    7,
+    7,
+    5,
+    5,
+    7,
+    null,
+    7,
+    null,
+    5,
+    6
+   ],
+   "why": "Cea mai mare rundă Serie A din România (35 mil. USD, condusă de Dawn Capital), cu clienți ca Banca Transilvania și OTP. Veniturile publicate sunt încă mici (1,55 mil. USD în 2022, ultima cifră disponibilă), deci tracțiunea comercială trebuie confirmată.",
+   "sources": [
+    [
+     "bne IntelliNews: FlowX.AI raises $35mn, Romania's largest Series A",
+     "https://www.intellinews.com/flowx-ai-raises-35mn-in-romania-s-largest-series-a-funding-to-date-279453"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.1,
+   "met": 6
+  },
+  {
+   "id": "dotlumen",
+   "name": "dotLumen (.lumen)",
+   "stage": "Privată (granturi UE + rundă seed)",
+   "sector": "Ochelari de mobilitate pentru nevăzători",
+   "c": [
+    4,
+    6,
+    6,
+    7,
+    4,
+    7,
+    5,
+    7,
+    10,
+    null,
+    7,
+    null,
+    8,
+    6
+   ],
+   "why": "Problemă evidentă și concurență mică: ochelari care ghidează nevăzătorii fără câine-ghid. Finanțare din granturi europene (EIC) și o rundă de 5 mil. EUR în 2024, din care 1 mil. EUR prin SeedBlink. Produsul e la început de comercializare, deci clienții reali sunt încă puțini.",
+   "sources": [
+    [
+     "Comisia Europeană, EIC: proiectul .lumen",
+     "https://eic.ec.europa.eu/impact/lumen_en"
+    ],
+    [
+     "Romania Insider: rundă de 5 mil. EUR (iulie 2024)",
+     "https://www.romania-insider.com/dot-lumen-funding-round-eur-5-mln-jul-2024"
+    ]
+   ],
+   "inputs": {},
+   "score": 5.98,
+   "met": 6
+  },
+  {
+   "id": "druid-ai",
+   "name": "DRUID AI",
+   "stage": "Privată (Serie C, 2025)",
+   "sector": "Agenți AI conversaționali pentru companii",
+   "c": [
+    7,
+    6,
+    6,
+    8,
+    7,
+    6,
+    5,
+    6,
+    7,
+    null,
+    6,
+    null,
+    4,
+    5
+   ],
+   "why": "Serie C de 31 mil. USD în septembrie 2025, condusă de Cipio Partners; venitul recurent anual a crescut de 2,7 ori în 2024, cu peste 300 de clienți. A adus ca CEO un executiv cu experiență (fostul CEO Sumo Logic). Categoria agenților AI e foarte aglomerată, iar marile companii de AI concurează direct.",
+   "sources": [
+    [
+     "DRUID AI, comunicat Serie C (BusinessWire, sept. 2025)",
+     "https://www.businesswire.com/news/home/20250916132368/en/DRUID-AI-Raises-%2431-Million-Series-C-to-Accelerate-Agentic-AI-Platform-Growth-Under-New-CEO-Joseph-Kim"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.04,
+   "met": 4
+  },
+  {
+   "id": "questo",
+   "name": "Questo",
+   "stage": "Privată (seed)",
+   "sector": "Turism și jocuri bazate pe locație",
+   "c": [
+    5,
+    6,
+    6,
+    5,
+    6,
+    6,
+    6,
+    6,
+    6,
+    null,
+    7,
+    null,
+    8,
+    7
+   ],
+   "why": "Tururi și jocuri ghidate prin aplicație în peste 100 de orașe, cu venituri din bilete și contracte cu companii; rundă seed de 1,8 mil. EUR. Piață mai mică și mai sezonieră decât software-ul pentru companii.",
+   "sources": [
+    [
+     "Pîrvănescu: Romanian tech startups to watch in 2026",
+     "https://pirvanescu.com/blog/2026-03-16-romanian-tech-startups-watch-2026/"
+    ],
+    [
+     "Mean CEO: Startups in Romania news, octombrie 2026",
+     "https://blog.mean.ceo/startups-romania-news-october-2026/"
+    ]
+   ],
+   "inputs": {},
+   "score": 5.9,
+   "met": 3
+  }
+ ]
+}

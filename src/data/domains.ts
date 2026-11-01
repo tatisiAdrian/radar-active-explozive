@@ -39,8 +39,8 @@ export const domains: Domain[] = [
     radarMarket: 'comp',
     criteria: 'general',
     countries: ['RO'],
-    summary: 'Ecosistemul românesc: finanțare, sectoare, exit-uri.',
-    status: 'planificat',
+    summary: '8 companii tech fondate în România, de la UiPath și Bitdefender la start-up-uri seed, notate pe aceleași 14 condiții.',
+    status: 'activ',
     questions: [
       'Cum se compară România cu regiunea (Europa Centrală și de Est)?',
       'Care start-ups românești merită urmărite pe aceleași 14 condiții?',

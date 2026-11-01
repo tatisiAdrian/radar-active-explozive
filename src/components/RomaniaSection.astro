@@ -1,0 +1,107 @@
+---
+import Chart from './Chart.astro';
+import type { Dataset } from '../data/types';
+import data from '../data/startups-ro/scores.json';
+import { CRITERIA } from '../data/criteria';
+import { dbSource, db } from '../data/radar';
+
+const base = import.meta.env.BASE_URL;
+type Row = { id: string; name: string; stage: string; sector: string; c: (number | null)[]; why: string; sources: [string, string][]; inputs: Record<string, string>; score: number; met: number; price?: { symbol: string; url: string; points: [string, number][] } };
+const rows = data.rows as unknown as Row[];
+const crit = CRITERIA.general;
+const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const num = (x: number, d = 2) => x.toLocaleString('ro-RO', { maximumFractionDigits: d, minimumFractionDigits: d });
+const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
+
+const metChart: Dataset = {
+  id: 'ro-conditii', domain: 'startups/europa/romania', title: 'Condiții îndeplinite din 14, pe companii', unit: 'condiții', chart: 'bar',
+  series: [{ name: 'Condiții îndeplinite', points: rows.map((r) => [r.name, r.met]) }],
+  source: { name: 'Radar Active Explozive, instantaneul start-ups România', url: `https://github.com/TatisiAdrian/radar-active-explozive/blob/main/scripts/startups-ro.json`, retrievedAt: data.date },
+  notes: 'Notele și sursa fiecăreia sunt în detaliile de mai jos.',
+};
+const listed = rows.filter((r) => r.price?.points.length);
+const bench = db.benchmarks.sp500;
+const priceChart: Dataset | undefined = listed.length ? {
+  id: 'ro-preturi', domain: 'startups/europa/romania', title: 'Companiile românești listate, săptămânal, față de S&P 500', unit: 'indice, prima săptămână = 100', chart: 'line',
+  series: [
+    ...listed.map((r) => ({ name: `${r.name} (${r.price!.symbol})`, points: r.price!.points.map(([d, v]) => [d, +((v / r.price!.points[0][1]) * 100).toFixed(2)] as [string, number]) })),
+    ...(bench ? [{ name: 'S&P 500 (reper)', points: bench.points.map(([d, v]) => [d, +((v / bench.points[0][1]) * 100).toFixed(2)] as [string, number]) }] : []),
+  ],
+  source: dbSource,
+} : undefined;
+const top = rows[0];
+const priv = rows.filter((r) => !r.price).length;
+---
+<section id="radar">
+  <h2>Start-up-urile românești de pe radar</h2>
+  <p>
+    {rows.length} companii fondate în România, notate pe aceleași 14 condiții ca start-up-urile globale. Fiecare notă se sprijină pe surse publice, listate la fiecare companie.
+    Notele sunt înghețate în{' '}<a href={`${base}snapshots/startups-ro-${data.date}.json`}>instantaneul din {fmtDate(data.date)}</a>{' '}
+    (amprenta în <a href={`${base}snapshots/startups-ro-${data.date}.sha256`}>fișierul .sha256</a>).
+    Condițiile de preț nu se pot evalua la companiile nelistate: primesc 5 (neutru) în scor și nu sunt considerate îndeplinite.
+  </p>
+  <div class="table-wrap">
+    <table class="radar fx">
+      <thead><tr><th>#</th><th>Compania</th><th>Stadiu</th><th>Domeniu</th><th>Condiții</th><th>Scor</th></tr></thead>
+      <tbody>
+        {rows.map((r, i) => (
+          <tr>
+            <td class="muted">{i + 1}</td>
+            <td><b>{r.name}</b></td>
+            <td class="muted">{r.stage}</td>
+            <td class="muted">{r.sector}</td>
+            <td><span class:list={['k', zone(r.met)]}>{r.met}/14</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 14) * 100}%`} class={zone(r.met)}></i></span></td>
+            <td>{num(r.score)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Fiecare companie, condiție cu condiție</h3>
+  {rows.map((r) => (
+    <details class="fxd">
+      <summary><b>{r.name}</b> · {r.stage} · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · scor {num(r.score)}</summary>
+      <p>{r.why}</p>
+      <div class="table-wrap">
+        <table class="radar criteria">
+          <thead><tr><th>#</th><th>Condiție</th><th>Notă</th><th>Cum</th></tr></thead>
+          <tbody>
+            {crit.map(([name], i) => {
+              const k = `C${i + 1}`;
+              const v = r.c[i];
+              return (
+                <tr>
+                  <td class="muted">{k}</td>
+                  <td>{name}</td>
+                  <td><span class:list={['k', v == null ? 'slab' : v >= 7 ? 'puternic' : v >= 5 ? 'observatie' : 'slab']}>{v ?? '—'}</span></td>
+                  <td class="muted">{r.inputs[k] ? <>Calculat: {r.inputs[k]}</> : v == null ? 'Nu se tranzacționează public' : 'Judecată pe sursele de mai jos'}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Surse: {r.sources.map(([t, u], i) => <>{i > 0 && '; '}<a href={u} target="_blank" rel="noopener">{t}</a></>)}</p>
+    </details>
+  ))}
+</section>
+
+<section>
+  <h2>Datele din spatele notelor</h2>
+  <Chart dataset={metChart} />
+  {priceChart && <Chart dataset={priceChart} />}
+</section>
+
+<section>
+  <h2>Ce arată analiza</h2>
+  <p>
+    <b>{top.name}</b> îndeplinește cele mai multe condiții ({top.met} din 14).{' '}
+    {priv} din {rows.length} companii nu sunt listate, deci un investitor obișnuit nu le poate cumpăra direct; le urmărim pentru că sunt următorii candidați la listare sau la runde mari de finanțare.
+    Tiparul cel mai puternic din ecosistem e Bitdefender: venituri și profit solide, cu listarea amânată din forță, nu din nevoie.
+  </p>
+  <p class="notice">
+    Ecosistemul românesc e mic: în 2025, investițiile în start-up-uri au scăzut cu 20% ca volum și cu 49% ca număr de tranzacții, iar rata rundelor ulterioare a fost de 28% (Polonia: 137%), potrivit raportului How to Web citat de{' '}
+    <a href="https://blog.mean.ceo/startups-romania-news-october-2026/" target="_blank" rel="noopener">Mean CEO</a>. Nu este o recomandare de investiții.
+  </p>
+</section>

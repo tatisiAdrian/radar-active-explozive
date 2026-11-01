@@ -35,7 +35,7 @@ const { dataset, height } = Astro.props;
       for (const s of ds.series) for (const [k] of s.points) if (!x.includes(k)) x.push(k);
       if (ds.series.every((s) => s.points.every(([k]) => /^\d{4}-\d{2}-\d{2}$/.test(k)))) x.sort();
       const long = x.length > 12 && ds.chart === 'line';
-      const rotate = ds.chart === 'bar' && x.length > 8;
+      const rotate = ds.chart === 'bar' && x.length > 6;
       const many = ds.series.length > 6;
       const chart = echarts.init(el, dark ? 'dark' : undefined, { renderer: 'canvas' });
       const fmt = (v: unknown) => (typeof v === 'number' ? v.toLocaleString('ro-RO', { maximumFractionDigits: 2 }) : '—');
