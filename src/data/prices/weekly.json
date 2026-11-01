@@ -1420,6 +1420,50 @@
    "symbol": "story-2",
    "url": "https://www.coingecko.com/en/coins/story-2",
    "currency": "USD"
+  },
+  "ro-uipath": {
+   "provider": "Yahoo Finance",
+   "symbol": "PATH",
+   "url": "https://finance.yahoo.com/quote/PATH",
+   "currency": "USD",
+   "points": [
+    [
+     "2026-09-04",
+     15.19
+    ],
+    [
+     "2026-09-11",
+     13.75
+    ],
+    [
+     "2026-09-18",
+     13.39
+    ],
+    [
+     "2026-09-25",
+     12.46
+    ],
+    [
+     "2026-10-02",
+     13.12
+    ],
+    [
+     "2026-10-09",
+     13.48
+    ],
+    [
+     "2026-10-16",
+     12.85
+    ],
+    [
+     "2026-10-23",
+     14.13
+    ],
+    [
+     "2026-10-30",
+     13.73
+    ]
+   ]
   }
  },
  "benchmarks": {
