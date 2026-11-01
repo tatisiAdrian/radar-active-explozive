@@ -40,6 +40,7 @@ const YAHOO = {
   'gemini-gemi': ['GEMI'],
   'stubhub-stub': ['STUB'],
   'catl-3750-hk': ['3750.HK'],
+  'ro-uipath': ['PATH'],
   'litiu-carbonat': ['LIT', 'ETF pe companii de litiu (aproximare)'],
   'paladiu': ['PALL', 'ETF fizic'],
   'portocale-suc-de-portocale': ['OJ=F', 'futures ICE'],
