@@ -2,8 +2,10 @@
 import Base from '../../layouts/Base.astro';
 import DomainCard from '../../components/DomainCard.astro';
 import Chart from '../../components/Chart.astro';
+import RadarSection from '../../components/RadarSection.astro';
 import { domains, childrenOf, breadcrumbs } from '../../data/domains';
 import { datasets, datasetsFor, datasetById } from '../../data/datasets';
+import { dbSource } from '../../data/radar';
 import type { Domain } from '../../data/types';
 
 export function getStaticPaths() {
@@ -29,6 +31,7 @@ const data = datasetsFor(domain.slug);
 const subdomains = childrenOf(domain.slug);
 const crumbs = breadcrumbs(domain.slug);
 const sources = [...new Map(data.map((d) => [d.source.url, d.source])).values()];
+if (domain.radarMarket) sources.push(dbSource);
 ---
 <Base title={domain.title} description={domain.summary}>
   <p class="crumbs">
@@ -44,8 +47,10 @@ const sources = [...new Map(data.map((d) => [d.source.url, d.source])).values()]
     <ul>{domain.questions.map((q) => <li>{q}</li>)}</ul>
   </section>
 
+  {domain.radarMarket && <RadarSection market={domain.radarMarket} domain={domain.slug} />}
+
   <section>
-    <h2>Date și grafice</h2>
+    <h2>{domain.radarMarket ? 'Fundamentare: date oficiale' : 'Date și grafice'}</h2>
     {data.length
       ? data.map((ds) => <Chart dataset={ds} />)
       : <p class="notice">Datele sunt în curs de colectare din surse oficiale. Nu afișăm nicio cifră până nu are sursă verificabilă.</p>}

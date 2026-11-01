@@ -21,6 +21,13 @@ Metoda: 14 condiții notate 0–10, o condiție e îndeplinită de la nota 7; po
 
 Conflicte de interese: autorul deține sau a deținut poziții în Lighter (LIT) și folosește Polymarket.
 
+## Baza de date săptămânală
+
+`src/data/prices/weekly.json` conține închiderea de vineri pentru fiecare activ cu preț public (CoinGecko, Yahoo Finance) și reperele Bitcoin, S&P 500 și mărfuri (ETF DBC), începând cu 4 septembrie 2026. Fișierul se actualizează automat în fiecare vineri seara (`.github/workflows/data.yml`, scriptul `scripts/fetch-prices.mjs`); punctele mai vechi de 7 zile nu se mai modifică. Paginile Start-ups, Cripto și Mărfuri calculează din el:
+
+- variația fiecărui activ în cele două luni dinaintea instantaneului (test retroactiv, marcat ca atare);
+- performanța de la instantaneu încolo, pe zone (10+, 6–9, sub 6 condiții), față de reper.
+
 ## Tehnologie
 
 - **Astro**: pagini statice, rapide, cu JavaScript doar unde e nevoie

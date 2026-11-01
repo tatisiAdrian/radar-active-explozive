@@ -21,7 +21,7 @@ const CRYPTO = {
   'starknet-strk': ['Starknet', 'STRK'],
   'linea-linea': ['Linea', 'LINEA'],
   'monad-mon': ['Monad', 'MON'],
-  'story-ip': ['Story', 'IP'],
+  'story-ip': ['Story Protocol', 'IP', 'story-2'],
   'somnia-somi': ['Somnia', 'SOMI'],
   'plasma-xpl': ['Plasma', 'XPL'],
   'berachain-bera': ['Berachain', 'BERA'],
@@ -91,6 +91,7 @@ async function getJSON(url, tries = 4) {
 }
 
 const CG = 'https://api.coingecko.com/api/v3';
+// Caută după nume; ID-ul găsit se salvează în bază și se refolosește data viitoare.
 async function coingeckoResolve(name, symbol) {
   const j = await getJSON(`${CG}/search?query=${encodeURIComponent(name)}`);
   const c = j.coins
@@ -136,8 +137,8 @@ async function run(target, key, meta, loader) {
   }
 }
 
-for (const [id, [name, symbol]] of Object.entries(CRYPTO)) {
-  let cg = db.series[id]?.symbol;
+for (const [id, [name, symbol, fixedId]] of Object.entries(CRYPTO)) {
+  let cg = db.series[id]?.symbol ?? fixedId;
   await run(db.series, id, {}, async () => {
     if (!cg) { cg = await coingeckoResolve(name, symbol); await sleep(6000); }
     return coingeckoDaily(cg);

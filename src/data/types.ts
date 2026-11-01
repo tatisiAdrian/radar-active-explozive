@@ -50,4 +50,6 @@ export interface Domain {
   /** Întrebările la care răspunde analiza domeniului */
   questions: string[];
   interpretations?: Interpretation[];
+  /** Piața de pe radar ale cărei active apar pe pagina domeniului (prețuri săptămânale, condiții). */
+  radarMarket?: 'crypto' | 'comp' | 'comm';
 }

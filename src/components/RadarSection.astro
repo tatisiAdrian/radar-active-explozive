@@ -1,0 +1,156 @@
+---
+import Chart from './Chart.astro';
+import type { Dataset } from '../data/types';
+import {
+  radarView, rebased, pct, median, dbSource, db, GROUP, ZONE_LABEL, SNAPSHOT_DATE, BASELINE,
+  type Market, type Zone,
+} from '../data/radar';
+
+interface Props { market: Market; domain: string }
+const { market, domain } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const v = radarView(market);
+const count = (z: Zone) => v.rows.filter((r) => r.zone === z).length;
+const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const fmtPrice = (x: number) => x.toLocaleString('ro-RO', { maximumSignificantDigits: 4 });
+const why: Record<string, string> = {
+  pre: 'nelansat încă',
+  preipo: 'nelistat (piață privată)',
+  startup: 'nelistat',
+  seed: 'nelistat',
+  ipo: 'fără sursă publică',
+  post: 'sursa nu a răspuns la ultima actualizare',
+  emerging: 'fără bursă lichidă',
+  mature: 'fără preț zilnic public gratuit',
+};
+
+const benchName = v.bench?.label ?? 'reper';
+const pricesChart: Dataset | undefined = v.priced.length ? {
+  id: `radar-preturi-${market}`,
+  domain,
+  title: `Prețuri săptămânale ale activelor de pe radar vs. ${benchName}`,
+  unit: 'indice, prima săptămână = 100',
+  chart: 'line',
+  series: [
+    ...v.priced.map((r) => ({ name: r.a.n.ro, points: rebased(r.price!) })),
+    ...(v.bench ? [{ name: `${benchName} (reper)`, points: rebased(v.bench) }] : []),
+  ],
+  source: dbSource,
+  notes: 'Fiecare serie e rebazată la 100 în prima vineri, ca să se poată compara active cu prețuri foarte diferite. Prețurile brute sunt în tabel și în fișierul sursă.',
+} : undefined;
+
+const retroChart: Dataset | undefined = v.priced.length ? {
+  id: `radar-retro-${market}`,
+  domain,
+  title: `Variația mediană în cele ${v.priced[0].price!.points.filter((p) => p[0] <= BASELINE).length - 1} săptămâni dinaintea instantaneului, pe zone`,
+  unit: '%',
+  chart: 'bar',
+  series: [{
+    name: 'Variație mediană',
+    points: [
+      ...v.byZone.filter((z) => z.n).map((z) => [`${ZONE_LABEL[z.z]} (${z.n})`, +z.med!.toFixed(1)] as [string, number]),
+      ...(v.benchRetro !== undefined ? [[benchName, +v.benchRetro.toFixed(1)] as [string, number]] : []),
+    ],
+  }],
+  source: dbSource,
+  notes: `Calculat automat din baza de date: ${fmtDate(v.start)} → ${fmtDate(BASELINE)}. În paranteză, numărul de active cu preț public din fiecare zonă.`,
+} : undefined;
+
+const retros = v.priced.filter((r) => r.retro !== undefined);
+const up = retros.filter((r) => r.retro! > 0).length;
+const best = [...retros].sort((a, b) => b.retro! - a.retro!)[0];
+const worst = [...retros].sort((a, b) => a.retro! - b.retro!)[0];
+const medAll = median(retros.map((r) => r.retro!));
+const afterRows = v.priced.filter((r) => r.after !== undefined);
+const firstMeasure = new Date(Date.parse(BASELINE) + 7 * 86400000).toISOString().slice(0, 10);
+---
+<section id="radar">
+  <h2>Activele de pe radar în acest domeniu</h2>
+  <p>
+    {v.rows.length} active notate pe aceleași 14 condiții: <b>{count('puternic')}</b> cu 10+ condiții îndeplinite,{' '}
+    <b>{count('observatie')}</b> în observație (6–9) și <b>{count('slab')}</b> sub 6.
+    Notele sunt cele din{' '}<a href={`${base}#istoric`}>instantaneul înghețat din {fmtDate(SNAPSHOT_DATE)}</a>{' '}
+    (<a href={`${base}snapshots/${SNAPSHOT_DATE}.json`}>fișier JSON cu amprentă SHA-256</a>).{' '}
+    {v.priced.length} au preț public săptămânal în baza noastră de date.
+  </p>
+  <div class="table-wrap">
+    <table class="radar">
+      <thead>
+        <tr>
+          <th>Activ</th><th>Categorie</th><th>Condiții</th><th>Scor</th>
+          <th>Ultimul preț</th><th title={`${fmtDate(v.start)} → ${fmtDate(BASELINE)}`}>Înainte de instantaneu</th>
+          <th title={`de la ${fmtDate(BASELINE)}`}>De la instantaneu</th><th>Sursa prețului</th>
+        </tr>
+      </thead>
+      <tbody>
+        {v.rows.map((r) => (
+          <tr>
+            <td><b>{r.a.n.ro}</b></td>
+            <td class="muted">{GROUP[r.a.g] ?? r.a.g}</td>
+            <td>
+              <span class:list={['k', r.zone]}>{r.a.k}/14</span>
+              <span class="kbar" aria-hidden="true"><i style={`width:${(r.a.k / 14) * 100}%`} class={r.zone}></i></span>
+            </td>
+            <td>{r.a.s.toLocaleString('ro-RO', { maximumFractionDigits: 2 })}</td>
+            {r.price ? (
+              <>
+                <td class="num">{fmtPrice(r.price.points.at(-1)![1])} {r.price.currency}<br /><small class="muted">{r.price.points.at(-1)![0]}</small></td>
+                <td class:list={['num', (r.retro ?? 0) >= 0 ? 'pos' : 'neg']}>{pct(r.retro)}</td>
+                <td class:list={['num', r.after === undefined ? 'muted' : r.after >= 0 ? 'pos' : 'neg']}>{r.after === undefined ? 'din ' + firstMeasure : pct(r.after)}</td>
+                <td><a href={r.price.url} target="_blank" rel="noopener">{r.price.provider} · {r.price.symbol}</a>{r.price.note && <><br /><small class="muted">{r.price.note}</small></>}</td>
+              </>
+            ) : (
+              <td colspan="4" class="muted">Fără preț public: {why[r.a.g] ?? 'nedisponibil'}</td>
+            )}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+{pricesChart && (
+  <section>
+    <h2>Prețuri săptămânale (baza de date)</h2>
+    <p class="muted">
+      În fiecare vineri, o rutină automată din GitHub descarcă închiderile din surse publice și le adaugă aici. Punctele mai vechi de o săptămână nu se mai modifică,
+      iar fiecare actualizare rămâne în istoricul public al proiectului. Ultima actualizare: {fmtDate(db.updatedAt)}.
+    </p>
+    <Chart dataset={pricesChart} height={440} />
+  </section>
+)}
+
+{retroChart && (
+  <section>
+    <h2>Test retroactiv: ce s-a întâmplat înainte de instantaneu</h2>
+    <p class="notice">
+      Atenție la citire: notele au fost date pe {fmtDate(SNAPSHOT_DATE)}, <b>după</b> această perioadă. Graficul arată contextul în care au fost date notele, nu performanța radarului.
+      Performanța reală se măsoară doar de la instantaneu încolo (secțiunea următoare).
+    </p>
+    <Chart dataset={retroChart} />
+    <p>
+      <b>Calculat automat:</b> în cele două luni dinaintea instantaneului, {up} din {retros.length} active cu preț public au crescut.{' '}
+      Variația mediană a fost {pct(medAll)}, față de {pct(v.benchRetro)} pentru {benchName}.{' '}
+      {best && worst && <>{best.retro! > 0 ? 'Cea mai mare creștere' : 'Cea mai mică scădere'}: {best.a.n.ro} ({pct(best.retro)}); cea mai mare scădere: {worst.a.n.ro} ({pct(worst.retro)}).</>}
+    </p>
+  </section>
+)}
+
+<section>
+  <h2>De la instantaneu: performanța radarului</h2>
+  {afterRows.length ? (
+    <p>
+      De la {fmtDate(BASELINE)}, variația mediană a activelor de pe radar este {pct(median(afterRows.map((r) => r.after!)))},
+      față de {pct(v.benchAfter)} pentru {benchName}. Pe zone:{' '}
+      {v.byZone.map((z) => {
+        const xs = afterRows.filter((r) => r.zone === z.z).map((r) => r.after!);
+        return xs.length ? <> {ZONE_LABEL[z.z]}: {pct(median(xs))} ({xs.length} active);</> : null;
+      })}
+    </p>
+  ) : (
+    <p class="notice">
+      Prima măsurare se face automat vineri, {fmtDate(firstMeasure)}, față de închiderea din {fmtDate(BASELINE)}. De atunci, tabelul de mai sus și acest paragraf se actualizează săptămânal, cu toate activele, inclusiv cele care au scăzut.
+    </p>
+  )}
+  <p class="muted">Performanța trecută nu este un indicator de încredere pentru rezultatele viitoare. Prețuri înainte de comisioane și taxe. Nu este o recomandare de investiții.</p>
+</section>

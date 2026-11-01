@@ -10,6 +10,7 @@ export const domains: Domain[] = [
   {
     slug: 'startups',
     title: 'Start-ups la nivel mondial',
+    radarMarket: 'comp',
     summary: 'Finanțare, evaluări și dinamica ecosistemelor de start-up la nivel global.',
     status: 'activ',
     questions: [
@@ -49,6 +50,7 @@ export const domains: Domain[] = [
   {
     slug: 'crypto',
     title: 'Criptoactive',
+    radarMarket: 'crypto',
     summary: 'Capitalizare, volatilitate, adopție și reglementare pe piața cripto.',
     status: 'activ',
     questions: [
@@ -67,6 +69,7 @@ export const domains: Domain[] = [
   {
     slug: 'marfuri',
     title: 'Mărfuri',
+    radarMarket: 'comm',
     summary: 'Energie, metale și produse agricole: prețuri, cerere și ofertă.',
     status: 'activ',
     questions: [

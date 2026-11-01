@@ -1,10 +1,10 @@
 ---
 import type { Dataset } from '../data/types';
-interface Props { dataset: Dataset }
-const { dataset } = Astro.props;
+interface Props { dataset: Dataset; height?: number }
+const { dataset, height } = Astro.props;
 ---
 <figure>
-  <div class="chart" data-dataset={JSON.stringify(dataset)} role="img" aria-label={dataset.title}></div>
+  <div class="chart" style={height ? `height:${height}px` : undefined} data-dataset={JSON.stringify(dataset)} role="img" aria-label={dataset.title}></div>
   <figcaption class="muted">
     {dataset.title} ({dataset.unit}). Sursa: <a href={dataset.source.url} target="_blank" rel="noopener">{dataset.source.name}</a>, preluat la {dataset.source.retrievedAt}.
     {dataset.notes && <> {dataset.notes}</>}
@@ -14,37 +14,50 @@ const { dataset } = Astro.props;
 <script>
   // ECharts se încarcă doar când un grafic intră în ecran (lazy-load), iar
   // modulele sunt importate selectiv ca pachetul JS să rămână mic.
+  type Pt = [string, number];
+  type S = { name: string; points: Pt[] };
   const charts = document.querySelectorAll<HTMLElement>('.chart[data-dataset]');
   const observer = new IntersectionObserver(async (entries) => {
     const visible = entries.filter((e) => e.isIntersecting);
     if (!visible.length) return;
     const echarts = await import('echarts/core');
     const { LineChart, BarChart } = await import('echarts/charts');
-    const { GridComponent, TooltipComponent, LegendComponent, DataZoomComponent } = await import('echarts/components');
+    const { GridComponent, TooltipComponent, LegendComponent, DataZoomComponent, MarkLineComponent } = await import('echarts/components');
     const { CanvasRenderer } = await import('echarts/renderers');
-    echarts.use([LineChart, BarChart, GridComponent, TooltipComponent, LegendComponent, DataZoomComponent, CanvasRenderer]);
+    echarts.use([LineChart, BarChart, GridComponent, TooltipComponent, LegendComponent, DataZoomComponent, MarkLineComponent, CanvasRenderer]);
     const dark = matchMedia('(prefers-color-scheme: dark)').matches;
     for (const { target } of visible) {
       observer.unobserve(target);
       const el = target as HTMLElement;
-      const ds = JSON.parse(el.dataset.dataset!);
-      const long = (ds.series[0]?.points.length ?? 0) > 12;
+      const ds = JSON.parse(el.dataset.dataset!) as { unit: string; chart: 'line' | 'bar'; series: S[] };
+      // Axa X = toate etichetele din toate seriile, în ordinea apariției; valorile lipsă rămân goale.
+      const x: string[] = [];
+      for (const s of ds.series) for (const [k] of s.points) if (!x.includes(k)) x.push(k);
+      if (ds.series.every((s) => s.points.every(([k]) => /^\d{4}-\d{2}-\d{2}$/.test(k)))) x.sort();
+      const long = x.length > 12;
+      const many = ds.series.length > 6;
       const chart = echarts.init(el, dark ? 'dark' : undefined, { renderer: 'canvas' });
+      const fmt = (v: unknown) => (typeof v === 'number' ? v.toLocaleString('ro-RO', { maximumFractionDigits: 2 }) : '—');
       chart.setOption({
         backgroundColor: 'transparent',
-        tooltip: { trigger: 'axis' },
-        legend: { top: 0 },
-        // Bara de zoom apare doar la serii lungi; la câteva puncte ar acoperi etichetele axei.
-        grid: { left: 60, right: 20, top: 40, bottom: long ? 80 : 40 },
+        tooltip: { trigger: 'axis', valueFormatter: fmt, confine: true },
+        legend: { top: 0, type: many ? 'scroll' : 'plain' },
+        grid: { left: 60, right: 20, top: 44, bottom: long ? 80 : 40 },
         dataZoom: long ? [{ type: 'inside' }, { type: 'slider', bottom: 10 }] : [],
-        xAxis: { type: 'category', data: ds.series[0]?.points.map((p: [string, number]) => p[0]) ?? [] },
-        yAxis: { type: 'value', name: ds.unit },
-        series: ds.series.map((s: { name: string; points: [string, number][] }) => ({
-          name: s.name,
-          type: ds.chart,
-          smooth: true,
-          data: s.points.map((p) => p[1]),
-        })),
+        xAxis: { type: 'category', data: x },
+        yAxis: { type: 'value', name: ds.unit, scale: ds.chart === 'line' },
+        series: ds.series.map((s) => {
+          const m = new Map(s.points);
+          return {
+            name: s.name,
+            type: ds.chart,
+            smooth: ds.chart === 'line',
+            connectNulls: true,
+            symbolSize: 5,
+            emphasis: { focus: 'series' },
+            data: x.map((k) => m.get(k) ?? null),
+          };
+        }),
       });
       new ResizeObserver(() => chart.resize()).observe(el);
     }
