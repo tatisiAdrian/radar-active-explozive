@@ -29,6 +29,9 @@ jobs:
       - name: Descarcă datele Forex (FMI, BIS, cursuri)
         run: node scripts/fetch-forex.mjs && node scripts/score-forex.mjs
         continue-on-error: true
+      - name: Descarcă datele S&P 500 (SEC, prețuri)
+        run: node scripts/fetch-sp500.mjs && (test ! -f scripts/score-sp500.mjs || node scripts/score-sp500.mjs)
+        continue-on-error: true
       - name: Descarcă datele pentru economiile emergente (FMI, BIS, burse)
         run: node scripts/fetch-emerging.mjs && (test ! -f scripts/score-emerging.mjs || node scripts/score-emerging.mjs)
         continue-on-error: true
@@ -36,7 +39,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/prices/weekly.json src/data/forex/ src/data/emerging/ 2>/dev/null || git add src/data/prices/weekly.json
+          git add src/data/prices/weekly.json src/data/forex/ src/data/emerging/ src/data/sp500/ 2>/dev/null || git add src/data/prices/weekly.json
           if git diff --cached --quiet; then echo "Nicio modificare."; exit 0; fi
           git commit -qm "Date săptămânale $(date -u +%F)"
           git push
