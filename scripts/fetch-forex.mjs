@@ -74,14 +74,31 @@ out.sources.imf = {
 };
 
 // ——— BIS: dobânda de politică monetară și inflația ———
+// Parser CSV minimal, cu ghilimele (unele câmpuri de descriere conțin virgule).
+function parseCsv(text) {
+  const rows = []; let row = [], cell = '', q = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (q) {
+      if (ch === '"' && text[i + 1] === '"') { cell += '"'; i++; }
+      else if (ch === '"') q = false;
+      else cell += ch;
+    } else if (ch === '"') q = true;
+    else if (ch === ',') { row.push(cell); cell = ''; }
+    else if (ch === '\n' || ch === '\r') {
+      if (ch === '\r' && text[i + 1] === '\n') i++;
+      row.push(cell); rows.push(row); row = []; cell = '';
+    } else cell += ch;
+  }
+  if (cell || row.length) { row.push(cell); rows.push(row); }
+  return rows.filter((r) => r.length > 1);
+}
 function lastFromCsv(csv) {
-  // Căutăm coloanele TIME_PERIOD și OBS_VALUE în CSV-ul SDMX.
-  const lines = csv.trim().split(/\r?\n/);
-  const head = lines[0].split(',').map((h) => h.replace(/"/g, '').trim());
+  const [head, ...lines] = parseCsv(csv.trim());
   const ti = head.findIndex((h) => /TIME_PERIOD/i.test(h));
   const vi = head.findIndex((h) => /OBS_VALUE/i.test(h));
-  const rows = lines.slice(1).map((l) => l.split(',').map((x) => x.replace(/"/g, '').trim()))
-    .filter((r) => r[vi] !== '' && r[vi] !== 'NaN' && !Number.isNaN(+r[vi]))
+  const rows = lines
+    .filter((r) => r[vi] !== undefined && r[vi] !== '' && r[vi] !== 'NaN' && !Number.isNaN(+r[vi]))
     .map((r) => [r[ti], +r[vi]]).sort((a, b) => a[0].localeCompare(b[0]));
   return rows.at(-1);
 }
