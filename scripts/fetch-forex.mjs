@@ -89,6 +89,7 @@ for (const [cur, [, bis]] of Object.entries(CURRENCIES)) {
   out.bis[cur] = {};
   for (const [key, url] of [
     ['policyRate', `https://stats.bis.org/api/v1/data/WS_CBPOL/M.${bis}?startPeriod=2025-06&format=csv`],
+    ['policyRateDaily', `https://stats.bis.org/api/v1/data/WS_CBPOL/D.${bis}?startPeriod=2026-07-01&format=csv`],
     ['cpiYoY', `https://stats.bis.org/api/v1/data/WS_LONG_CPI/M.${bis}.771?startPeriod=2025-06&format=csv`],
   ]) {
     try {
@@ -98,6 +99,11 @@ for (const [cur, [, bis]] of Object.entries(CURRENCIES)) {
     } catch (e) { errors.push(`BIS ${key} ${cur}: ${e.message}`); console.warn('EROARE BIS', key, cur, e.message); }
     await sleep(700);
   }
+  // Seria lunară are uneori întârziere; dacă cea zilnică e mai nouă, o folosim pe ea.
+  const m = out.bis[cur].policyRate, d = out.bis[cur].policyRateDaily;
+  if (d && (!m || d.period > m.period)) out.bis[cur].policyRate = d;
+  delete out.bis[cur].policyRateDaily;
+  if (out.bis[cur].policyRate) errors.splice(0, errors.length, ...errors.filter((e) => !e.startsWith(`BIS policyRate ${cur}`) && !e.startsWith(`BIS policyRateDaily ${cur}`)));
   console.log(`BIS ${cur}:`, JSON.stringify(out.bis[cur]));
 }
 out.sources.bis = {
