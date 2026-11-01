@@ -1,0 +1,108 @@
+---
+import { OVERVIEW } from '../data/overview';
+
+const base = import.meta.env.BASE_URL;
+const S = 820, C = S / 2, R = 330, R0 = 26;
+const n = OVERVIEW.length;
+const span = (2 * Math.PI) / n;
+const rOf = (met: number) => R0 + (R - R0) * (1 - met / 14);
+const pt = (r: number, a: number) => [C + r * Math.cos(a), C + r * Math.sin(a)] as const;
+const f = (x: number) => x.toFixed(1);
+
+const sectors = OVERVIEW.map((d, k) => {
+  const a0 = -Math.PI / 2 + k * span, a1 = a0 + span, am = a0 + span / 2;
+  const [x0, y0] = pt(R + 8, a0), [x1, y1] = pt(R + 8, a1);
+  const path = `M${C},${C} L${f(x0)},${f(y0)} A${R + 8},${R + 8} 0 0 1 ${f(x1)},${f(y1)} Z`;
+  const [lx, ly] = pt(R + 34, am);
+  const anchor = Math.abs(Math.cos(am)) < 0.25 ? 'middle' : Math.cos(am) > 0 ? 'start' : 'end';
+  // Punctele: grupate pe numărul de condiții, întinse uniform în sector; ușor decalate radial ca să nu se suprapună.
+  const groups = new Map<number, typeof d.items>();
+  for (const it of [...d.items].sort((a, b) => b.score - a.score)) groups.set(it.met, [...(groups.get(it.met) ?? []), it]);
+  const dots = [...groups.entries()].flatMap(([met, items]) => items.map((it, i) => {
+    const g = items.length;
+    const a = a0 + span * (0.12 + 0.76 * (g === 1 ? 0.5 : i / (g - 1)));
+    const r = rOf(met) + (g > 6 ? ((i % 3) - 1) * 9 : 0);
+    const [x, y] = pt(Math.max(R0 + 4, r), a);
+    return { x, y, it, rad: 3.2 + Math.max(0, it.score - 3) * 0.75 };
+  }));
+  return { d, path, lx, ly, anchor, dots, href: `${base}domenii/${d.slug}/` };
+});
+const ring = (met: number) => rOf(met);
+---
+<figure class="home-radar">
+  <svg viewBox={`0 0 ${S} ${S}`} role="img" aria-labelledby="hr-title hr-desc">
+    <title id="hr-title">Radarul tuturor domeniilor</title>
+    <desc id="hr-desc">Fiecare punct e un activ analizat. Cu cât e mai aproape de centru, cu atât îndeplinește mai multe din cele 14 condiții. Fiecare sector duce la pagina domeniului.</desc>
+    <defs>
+      <radialGradient id="hr-glow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="var(--hr-zone)" stop-opacity=".9" />
+        <stop offset="100%" stop-color="var(--hr-zone)" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    <circle cx={C} cy={C} r={R + 8} class="hr-bg" />
+    <circle cx={C} cy={C} r={ring(10)} fill="url(#hr-glow)" />
+    <circle cx={C} cy={C} r={ring(10)} class="hr-ring strong" />
+    <circle cx={C} cy={C} r={ring(6)} class="hr-ring" />
+    <circle cx={C} cy={C} r={ring(2)} class="hr-ring faint" />
+    <text x={C + 6} y={C - ring(10) - 6} class="hr-ringlabel">10 condiții</text>
+    <text x={C + 6} y={C - ring(6) - 6} class="hr-ringlabel">6</text>
+    <text x={C + 6} y={C - ring(2) - 6} class="hr-ringlabel">2</text>
+    {sectors.map((s) => (
+      <a href={s.href} class="hr-sector" style={`--c:${s.d.color}`} aria-label={`${s.d.title}: ${s.d.items.length} active`}>
+        <path d={s.path} class="hr-slice" />
+        {s.dots.map((p) => (
+          <circle cx={f(p.x)} cy={f(p.y)} r={f(p.rad)} class="hr-dot" data-tip={`${p.it.name} · ${p.it.met}/14 condiții · ${s.d.short}`}>
+            <title>{`${p.it.name}: ${p.it.met} din 14 condiții (${s.d.title})`}</title>
+          </circle>
+        ))}
+        <text x={f(s.lx)} y={f(s.ly)} text-anchor={s.anchor} class="hr-label">{s.d.short}</text>
+        <text x={f(s.lx)} y={f(s.ly + 17)} text-anchor={s.anchor} class="hr-sub">{s.d.items.length} active</text>
+      </a>
+    ))}
+    <circle cx={C} cy={C} r="4" class="hr-center" />
+  </svg>
+  <div class="hr-tip" hidden></div>
+  <figcaption class="muted">Centrul = toate cele 14 condiții. Zona verde = 10 sau mai multe. Mărimea punctului = scorul. Apasă pe un sector pentru analiza completă.</figcaption>
+</figure>
+
+<script>
+  // Eticheta de la hover arată numele activului și numărul de condiții.
+  const fig = document.querySelector<HTMLElement>('.home-radar');
+  const tip = fig?.querySelector<HTMLElement>('.hr-tip');
+  fig?.querySelectorAll<SVGCircleElement>('.hr-dot').forEach((d) => {
+    d.addEventListener('mouseenter', () => {
+      if (!tip) return;
+      tip.textContent = d.dataset.tip ?? '';
+      const fr = fig.getBoundingClientRect(), r = d.getBoundingClientRect();
+      tip.style.left = `${r.left - fr.left + r.width / 2}px`;
+      tip.style.top = `${r.top - fr.top}px`;
+      tip.hidden = false;
+    });
+    d.addEventListener('mouseleave', () => { if (tip) tip.hidden = true; });
+  });
+</script>
+
+<style>
+  .home-radar { position: relative; margin: 0; --hr-zone: rgba(31, 157, 99, .28); }
+  svg { width: 100%; height: auto; display: block; max-width: 760px; margin: 0 auto; overflow: visible; }
+  .hr-bg { fill: var(--scope); }
+  .hr-ring { fill: none; stroke: var(--scope-line); stroke-width: 1.2; }
+  .hr-ring.strong { stroke: rgba(70, 197, 139, .55); stroke-dasharray: 4 4; }
+  .hr-ring.faint { stroke-opacity: .5; }
+  .hr-ringlabel { fill: var(--scope-text); font: 500 11px var(--f-mono); }
+  .hr-slice { fill: var(--c); fill-opacity: 0; stroke: var(--scope-line); stroke-width: 1; transition: fill-opacity .2s; }
+  .hr-sector:hover .hr-slice, .hr-sector:focus-visible .hr-slice { fill-opacity: .14; }
+  .hr-dot { fill: var(--c); fill-opacity: .9; stroke: var(--scope); stroke-width: 1; transition: r .15s, fill-opacity .15s; }
+  .hr-sector:hover .hr-dot { fill-opacity: 1; }
+  .hr-dot:hover { stroke: #fff; stroke-width: 2; }
+  .hr-label { fill: var(--text); font: 700 16px var(--f-display); }
+  .hr-sector:hover .hr-label { fill: var(--c); }
+  .hr-sub { fill: var(--muted); font: 500 12px var(--f-mono); }
+  .hr-center { fill: #46c58b; }
+  .hr-tip { position: absolute; transform: translate(-50%, calc(-100% - 10px)); background: var(--text); color: var(--bg); font: 500 .8rem var(--f-body); padding: .3rem .55rem; border-radius: 6px; white-space: nowrap; pointer-events: none; z-index: 2; }
+  figcaption { text-align: center; margin-top: .75rem; font-size: .88rem; }
+  @media (prefers-reduced-motion: no-preference) {
+    .hr-dot { animation: hr-in .6s ease-out both; }
+    @keyframes hr-in { from { opacity: 0; transform: scale(.4); transform-origin: center; transform-box: fill-box; } }
+  }
+</style>

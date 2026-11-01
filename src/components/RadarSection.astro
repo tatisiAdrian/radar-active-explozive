@@ -69,7 +69,7 @@ const firstMeasure = new Date(Date.parse(BASELINE) + 7 * 86400000).toISOString()
   <p>
     {v.rows.length} active notate pe aceleași 14 condiții: <b>{count('puternic')}</b> cu 10+ condiții îndeplinite,{' '}
     <b>{count('observatie')}</b> în observație (6–9) și <b>{count('slab')}</b> sub 6.
-    Notele sunt cele din{' '}<a href={`${base}#istoric`}>instantaneul înghețat din {fmtDate(SNAPSHOT_DATE)}</a>{' '}
+    Notele sunt cele din{' '}<a href={`${base}radar/#istoric`}>instantaneul înghețat din {fmtDate(SNAPSHOT_DATE)}</a>{' '}
     (<a href={`${base}snapshots/${SNAPSHOT_DATE}.json`}>fișier JSON cu amprentă SHA-256</a>).{' '}
     {v.priced.length} au preț public săptămânal în baza noastră de date.
   </p>

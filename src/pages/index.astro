@@ -1,0 +1,153 @@
+---
+import Base from '../layouts/Base.astro';
+import HomeRadar from '../components/HomeRadar.astro';
+import { OVERVIEW, ALL, UPDATED } from '../data/overview';
+import { domains } from '../data/domains';
+
+const base = import.meta.env.BASE_URL;
+const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const strongAll = ALL.filter((x) => x.met >= 10).length;
+
+// Instantaneele înghețate, citite din public/snapshots la build (fișierul și amprenta SHA-256).
+const shaFiles = import.meta.glob<string>('/public/snapshots/*.sha256', { query: '?raw', import: 'default', eager: true });
+const LABEL: Record<string, string> = { forex: 'Forex', emergente: 'Economii emergente', sp500: 'S&P 500', 'startups-ro': 'Start-ups România' };
+const snapshots = Object.values(shaFiles).map((txt) => {
+  const [hash, file] = txt.trim().split(/\s+/);
+  const m = file.match(/^(?:(.+)-)?(\d{4}-\d{2}-\d{2})\.json$/)!;
+  return { file, hash, date: m[2], label: m[1] ? LABEL[m[1]] ?? m[1] : 'Radarul inițial: cripto, companii, mărfuri (88 de active)' };
+}).sort((a, b) => b.date.localeCompare(a.date) || a.label.localeCompare(b.label));
+
+const cards = OVERVIEW.map((d) => {
+  const sorted = [...d.items].sort((a, b) => b.met - a.met || b.score - a.score);
+  return {
+    d,
+    strong: d.items.filter((x) => x.met >= 10).length,
+    watch: d.items.filter((x) => x.met >= 6 && x.met < 10).length,
+    top: sorted.slice(0, 3),
+    summary: domains.find((x) => x.slug === d.slug)?.summary ?? '',
+  };
+});
+const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.includes('/'));
+---
+<Base title="Toate domeniile" description="Un singur radar pentru cripto, start-ups, mărfuri, Forex, economii emergente și S&P 500: activele care adună cele mai multe din cele 14 condiții pentru o creștere puternică.">
+  <section class="home-hero">
+    <div class="hh-text">
+      <p class="eyebrow">Pre-identificare · date actualizate pe {fmtDate(UPDATED)}</p>
+      <h1>Un singur radar pentru <span class="accent">toate piețele</span> pe care le analizăm.</h1>
+      <p class="lede">Aceleași 14 condiții, aplicate la cripto, start-ups, mărfuri, monede, economii și cele mai mari companii americane. Cu cât un activ e mai aproape de centru, cu atât adună mai multe condiții pentru o creștere puternică. E o listă de urmărit, nu un sfat de cumpărare.</p>
+      <div class="hh-stats">
+        <div><b>{ALL.length}</b><span>active analizate</span></div>
+        <div><b>{OVERVIEW.length}</b><span>domenii</span></div>
+        <div><b>{strongAll}</b><span>cu 10+ condiții</span></div>
+        <div><b>{snapshots.length}</b><span>instantanee înghețate</span></div>
+      </div>
+      <ul class="hh-legend">
+        {cards.map((c) => (
+          <li><a href={`${base}domenii/${c.d.slug}/`} style={`--c:${c.d.color}`}><i></i><span>{c.d.title}</span><small>{c.d.items.length} · {c.strong} cu 10+</small></a></li>
+        ))}
+      </ul>
+    </div>
+    <div class="hh-radar"><HomeRadar /></div>
+  </section>
+
+  <section>
+    <h2>Domeniile</h2>
+    <p class="muted">Fiecare domeniu are pagina lui: clasamentul complet, nota la fiecare condiție, datele oficiale din spatele notelor și sursele.</p>
+    <div class="dgrid">
+      {cards.map((c) => (
+        <a class="dcard" href={`${base}domenii/${c.d.slug}/`} style={`--c:${c.d.color}`}>
+          <span class="dbar"></span>
+          <h3>{c.d.title}</h3>
+          <p class="muted">{c.summary}</p>
+          <div class="dstats">
+            <span><b>{c.d.items.length}</b> active</span>
+            <span class="strong"><b>{c.strong}</b> cu 10+</span>
+            <span class="watch"><b>{c.watch}</b> în observație</span>
+          </div>
+          <ol class="dtop">
+            {c.top.map((t) => <li><span>{t.name}</span><b>{t.met}/14</b></li>)}
+          </ol>
+          <span class="dcta">Deschide analiza →</span>
+        </a>
+      ))}
+    </div>
+    {planned.length > 0 && <p class="muted">În pregătire: {planned.map((p) => p.title).join(', ')}.</p>}
+  </section>
+
+  <section class="steps">
+    <h2>Cum citești radarul</h2>
+    <div class="sgrid">
+      <div><b>1</b><h3>Aceleași 14 condiții</h3><p>Fiecare activ primește o notă de la 0 la 10 la fiecare condiție, adaptată domeniului: cerere reală, finanțe sănătoase, evaluare, aglomerație, riscuri. O condiție e îndeplinită de la nota 7.</p></div>
+      <div><b>2</b><h3>Date, nu impresii</h3><p>Unde există date oficiale (FMI, BIS, Banca Mondială, rapoarte anuale, prețuri publice), notele se calculează după formule publicate. Restul sunt judecată, cu justificare și surse.</p></div>
+      <div><b>3</b><h3>Înghețat și verificat</h3><p>Notele se îngheață într-un fișier datat, cu amprentă digitală. Prețurile se actualizează automat în fiecare vineri, iar rezultatul se măsoară public, inclusiv greșelile.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Instantanee verificabile</h2>
+    <p class="muted">Fiecare fișier poate fi descărcat și verificat: amprenta SHA-256 calculată de oricine (de exemplu cu <code>sha256sum</code>) trebuie să fie identică cu cea de mai jos. Dacă s-ar schimba o singură virgulă, amprenta n-ar mai corespunde.</p>
+    <div class="table-wrap">
+      <table class="radar snaps">
+        <thead><tr><th>Data</th><th>Domeniu</th><th>Fișier</th><th>Amprentă SHA-256</th></tr></thead>
+        <tbody>
+          {snapshots.map((s) => (
+            <tr><td class="num">{s.date}</td><td>{s.label}</td><td><a href={`${base}snapshots/${s.file}`}>{s.file}</a></td><td><code title={s.hash}>{s.hash.slice(0, 16)}…</code></td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p>
+      <a href={`${base}radar/`}>Radarul inițial</a> (cu istoric, „Despre noi” și versiunea în engleză) ·{' '}
+      <a href={`${base}metodologie/`}>Metodologie</a> ·{' '}
+      <a href="https://github.com/TatisiAdrian/radar-active-explozive" target="_blank" rel="noopener">Codul și istoricul modificărilor (GitHub)</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .home-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 2.5rem; align-items: center; margin-top: 1rem; }
+  .eyebrow { font: 500 .78rem var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 .75rem; }
+  h1 { font: 800 clamp(2rem, 4.2vw, 3.3rem)/1.05 var(--f-display); letter-spacing: -.02em; margin: 0 0 1rem; }
+  .accent { color: var(--accent); }
+  .lede { font-size: 1.08rem; color: var(--muted); margin: 0 0 1.5rem; }
+  .hh-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin-bottom: 1.5rem; }
+  .hh-stats div { border-top: 2px solid var(--text); padding-top: .5rem; }
+  .hh-stats b { display: block; font: 800 1.9rem var(--f-display); }
+  .hh-stats span { font-size: .82rem; color: var(--muted); }
+  .hh-legend { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: .25rem .75rem; }
+  .hh-legend a { display: flex; align-items: center; gap: .5rem; color: var(--text); text-decoration: none; padding: .3rem .4rem; border-radius: 6px; }
+  .hh-legend a:hover { background: var(--surface); }
+  .hh-legend i { width: .7rem; height: .7rem; border-radius: 50%; background: var(--c); flex: none; }
+  .hh-legend span { font-weight: 600; font-size: .92rem; }
+  .hh-legend small { margin-left: auto; color: var(--muted); font: 500 .75rem var(--f-mono); white-space: nowrap; }
+  .dgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+  .dcard { position: relative; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.25rem 1rem; color: var(--text); text-decoration: none; overflow: hidden; transition: transform .15s, border-color .15s, box-shadow .15s; }
+  .dcard:hover { transform: translateY(-3px); border-color: var(--c); box-shadow: 0 10px 28px rgba(15, 29, 46, .1); }
+  .dbar { position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--c); }
+  .dcard h3 { font: 700 1.25rem var(--f-display); margin: .25rem 0 .35rem; }
+  .dcard p { margin: 0 0 .9rem; font-size: .92rem; }
+  .dstats { display: flex; gap: .9rem; flex-wrap: wrap; font-size: .85rem; color: var(--muted); margin-bottom: .75rem; }
+  .dstats b { color: var(--text); font-size: 1.05rem; }
+  .dstats .strong b { color: #1f9d63; } .dstats .watch b { color: var(--warn); }
+  .dtop { list-style: none; padding: 0; margin: 0 0 1rem; border-top: 1px solid var(--border); }
+  .dtop li { display: flex; justify-content: space-between; gap: 1rem; padding: .4rem 0; border-bottom: 1px solid var(--border); font-size: .9rem; }
+  .dtop li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .dtop b { font: 600 .85rem var(--f-mono); }
+  .dcta { margin-top: auto; color: var(--c); font-weight: 600; font-size: .92rem; }
+  .sgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .sgrid div { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; }
+  .sgrid b { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--accent); color: #fff; font: 700 1rem var(--f-display); }
+  .sgrid h3 { font: 700 1.1rem var(--f-display); margin: .6rem 0 .4rem; }
+  .sgrid p { margin: 0; color: var(--muted); font-size: .92rem; }
+  table.snaps { min-width: 640px; }
+  code { font: .82rem var(--f-mono); }
+  @media (max-width: 900px) {
+    .home-hero { grid-template-columns: 1fr; gap: 1.5rem; }
+    .hh-radar { order: -1; }
+    .sgrid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 520px) {
+    .hh-stats { grid-template-columns: repeat(2, 1fr); }
+    .hh-legend { grid-template-columns: 1fr; }
+  }
+</style>

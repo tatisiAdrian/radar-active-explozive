@@ -6,7 +6,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 TPL = open(os.path.join(HERE, "template.html"), encoding="utf-8").read()
 DATA = json.load(open(os.path.join(HERE, "assets.json"), encoding="utf-8"))
-OUT = os.path.join(HERE, "..", "public")
+PUB = os.path.join(HERE, "..", "public")
+# Radarul inițial (88 de active, RO + EN) stă la /radar/; Home-ul site-ului e pagina Astro cu toate domeniile.
+OUT = os.path.join(PUB, "radar")
 
 CRIT_LONG = {
  "ro": [["Folosit cu adevărat", "Venituri, utilizatori sau cerere reală, nu promisiuni."], ["Lansare din forță", "Cei mai buni nu se grăbesc: lansează când sunt gata."], ["Finanțare sănătoasă", "Fără investitori care pot vinde masiv imediat."], ["Atrage oameni pricepuți", "Talent, parteneri și constructori vin spre el."], ["Clienți reali", "Activitate naturală, nu cumpărată sau subvenționată."], ["Echipă credibilă", "Istoric de lucruri duse la capăt, fără scandaluri."], ["Ofertă bine împărțită", "Puține acțiuni sau tokenuri gata să inunde piața."], ["Comunitate naturală", "Oameni veniți pentru produs, nu doar pentru câștig rapid."], ["Problemă evidentă", "Se explică într-o propoziție."], ["Preț de intrare bun", "Loc de creștere față de rivali sau față de cost."], ["Media echilibrată", "Euforia mediatică a marcat, istoric, vârful."], ["Preț și volum sănătoase", "Preț stabil în timp ce utilizarea crește."], ["Puțini pe același pariu", "Cu cât mai puțină aglomerație, cu atât mai bine."], ["Riscuri mici", "Fără procese, scandaluri sau risc geopolitic mare."]],
@@ -147,12 +149,12 @@ snap = {
 }
 snap_bytes = json.dumps(snap, ensure_ascii=False, indent=1, sort_keys=False).encode("utf-8")
 SNAP_HASH = hashlib.sha256(snap_bytes).hexdigest()
-os.makedirs(OUT + "/snapshots", exist_ok=True)
-open(OUT + f"/snapshots/{SNAP_DATE}.json", "wb").write(snap_bytes)
-open(OUT + f"/snapshots/{SNAP_DATE}.sha256", "w").write(f"{SNAP_HASH}  {SNAP_DATE}.json\n")
+os.makedirs(PUB + "/snapshots", exist_ok=True)
+open(PUB + f"/snapshots/{SNAP_DATE}.json", "wb").write(snap_bytes)
+open(PUB + f"/snapshots/{SNAP_DATE}.sha256", "w").write(f"{SNAP_HASH}  {SNAP_DATE}.json\n")
 N = str(len(DATA)); NS = str(sum(1 for a in DATA if a["k"] >= 10))
 COMMON = dict(snap_hash=SNAP_HASH, snap_hash_short=SNAP_HASH[:12] + "…", snap_n=N, snap_strong=NS)
-RO.update(COMMON, nav_data="Date oficiale", data_href="domenii/", nav_history="Istoric", nav_about="Despre noi", snap_href=f"snapshots/{SNAP_DATE}.json",
+RO.update(COMMON, nav_home="Toate domeniile", home_href="../", nav_data="Date oficiale", data_href="../domenii/", nav_history="Istoric", nav_about="Despre noi", snap_href=f"../snapshots/{SNAP_DATE}.json",
  hi_eyebrow="Istoric verificabil", hi_title="Nu doar predicții: fiecare radar rămâne înghețat și se verifică",
  hi_lede="În fiecare vineri publicăm radarul ca fișier datat, care nu se mai modifică. La următoarele instantanee măsurăm cum s-au mișcat activele, pe toate, nu doar pe cele care au ieșit bine.",
  hs1_t="Înghețăm radarul", hs1_p="Lista completă, cu scoruri și condiții, se salvează ca fișier datat. Oricine îl poate descărca.",
@@ -174,7 +176,7 @@ RO.update(COMMON, nav_data="Date oficiale", data_href="domenii/", nav_history="I
  fq3_q="Dețineți activele de pe radar?", fq3_a="Uneori, da. Autorul deține sau a deținut poziții în Lighter (LIT) și folosește Polymarket. Le declarăm ca să poți judeca singur și nu modificăm notele în funcție de pozițiile noastre.",
  fq4_q="Pot verifica eu singur un instantaneu?", fq4_a="Da. Descarcă fișierul JSON și calculează-i amprenta SHA-256 cu orice utilitar (de exemplu, comanda sha256sum sau un calculator online). Trebuie să obții exact amprenta publicată mai sus.",
 )
-EN.update(COMMON, nav_data="Official data", data_href="../domenii/", nav_history="Track record", nav_about="About", snap_href=f"../snapshots/{SNAP_DATE}.json",
+EN.update(COMMON, nav_home="All domains", home_href="../../", nav_data="Official data", data_href="../../domenii/", nav_history="Track record", nav_about="About", snap_href=f"../../snapshots/{SNAP_DATE}.json",
  hi_eyebrow="Verifiable track record", hi_title="Not just predictions: every radar is frozen and checkable",
  hi_lede="Every Friday we publish the radar as a dated file that never changes. At the following snapshots we measure how the assets moved — all of them, not only the ones that worked out.",
  hs1_t="We freeze the radar", hs1_p="The full list, with scores and conditions, is saved as a dated file. Anyone can download it.",

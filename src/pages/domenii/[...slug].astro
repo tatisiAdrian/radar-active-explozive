@@ -51,7 +51,7 @@ if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domai
 ---
 <Base title={domain.title} description={domain.summary}>
   <p class="crumbs">
-    <a href={`${base}domenii/`}>Date oficiale</a>
+    <a href={base}>Acasă</a> / <a href={`${base}domenii/`}>Domenii</a>
     {crumbs.map((c) => <> / <a href={`${base}domenii/${c.slug}/`}>{c.title}</a></>)}
   </p>
   <span class:list={['badge', domain.status]}>{domain.status === 'activ' ? 'Activ' : 'Planificat'}</span>
