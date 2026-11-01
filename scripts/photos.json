@@ -1,0 +1,13 @@
+{
+ "_doc": "Fotografii cu licența Unsplash (gratuită, inclusiv folosire comercială). Descărcate de scripts/fetch-photos.mjs în public/images/.",
+ "photos": [
+  { "key": "crypto", "url": "https://images.unsplash.com/photo-1623227413711-25ee4388dae3", "page": "https://unsplash.com/photos/a-bitcoin-sitting-on-top-of-a-pile-of-gold-nuggets-rhm7H8X5J98", "author": "Kanchanara", "alt": "O monedă bitcoin așezată pe pepite de aur" },
+  { "key": "startups", "url": "https://images.unsplash.com/photo-1774600134168-b9ebd714e4e1", "page": "https://unsplash.com/photos/team-collaborating-on-laptops-in-modern-office-N3Bf0ArT5J0", "author": "Fiqih Alfarish", "alt": "O echipă care lucrează pe laptopuri într-un birou modern" },
+  { "key": "romania", "url": "https://images.unsplash.com/photo-1771756762795-6f5a742edbdd", "page": "https://unsplash.com/photos/the-arcul-de-triumf-in-bucharest-with-cars-driving-by-jB4ook3eaxw", "author": "Uladzislau Petrushkevich", "alt": "Arcul de Triumf din București, cu mașini în trafic" },
+  { "key": "sp500", "url": "https://images.unsplash.com/photo-1770461846516-b7e5993a8e4f", "page": "https://unsplash.com/photos/new-york-stock-exchange-building-with-american-flags-xnzSgqyP8Hs", "author": "David Vives", "alt": "Clădirea Bursei din New York, cu steaguri americane" },
+  { "key": "marfuri", "url": "https://images.unsplash.com/photo-1751788385441-50e19352c5ad", "page": "https://unsplash.com/photos/harvesting-equipment-in-a-field-of-wheat-DIHyZXCF-2A", "author": "Bernd Dittrich", "alt": "Combine care recoltează un câmp de grâu" },
+  { "key": "forex", "url": "https://images.unsplash.com/photo-1764865988307-a7abe207fa1d", "page": "https://unsplash.com/photos/us-dollars-and-euros-scattered-on-a-surface-4Ah6xLAQqaU", "author": "Eric Prouzet", "alt": "Bancnote în dolari și euro împrăștiate pe o masă" },
+  { "key": "emergente", "url": "https://images.unsplash.com/photo-1736297150541-89378f055b96", "page": "https://unsplash.com/photos/a-large-city-with-a-lot-of-tall-buildings-DkfnGxoy5NI", "author": "Alim", "alt": "Clădirile înalte din Jakarta, Indonezia" },
+  { "key": "fond", "url": "https://images.unsplash.com/photo-1770131748972-b1a08d57efbc", "page": "https://unsplash.com/photos/tall-bookshelves-filled-with-old-books-in-a-library-6vBqpVyYHX0", "author": "Ahmet Yüksek", "alt": "Rafturi înalte cu cărți vechi într-o bibliotecă" }
+ ]
+}

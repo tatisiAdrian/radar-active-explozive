@@ -1,0 +1,30 @@
+name: Descarcă fotografiile
+
+# Rulare manuală: descarcă fotografiile din scripts/photos.json în public/images/ și republică site-ul.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/fetch-photos.mjs
+      - name: Salvează în repo și republică
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images
+          if git diff --cached --quiet; then echo "Nicio modificare."; exit 0; fi
+          git commit -qm "Fotografii (Unsplash)"
+          git push
+          gh workflow run deploy.yml --ref main
