@@ -1,0 +1,42 @@
+name: Actualizare date săptămânale
+
+# În fiecare vineri seara (după închiderea burselor din SUA) descarcă prețurile,
+# le salvează în src/data/prices/weekly.json și republică site-ul.
+# Fiecare actualizare rămâne în istoricul git, ca dovadă.
+on:
+  schedule:
+    - cron: '17 22 * * 5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Descarcă prețurile
+        run: node scripts/fetch-prices.mjs
+      - name: Salvează în repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/prices/weekly.json
+          if git diff --cached --quiet; then echo "Nicio modificare."; exit 0; fi
+          git commit -qm "Date săptămânale $(date -u +%F)"
+          git push
+          echo "changed=1" >> "$GITHUB_ENV"
+      - name: Republică site-ul
+        if: env.changed == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --ref main
