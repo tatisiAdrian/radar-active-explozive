@@ -3699,7 +3699,7 @@
  "bis": {
   "USD": {
    "policyRate": {
-    "period": "2026-09",
+    "period": "2026-10-27",
     "value": 3.875
    },
    "cpiYoY": {
@@ -3721,7 +3721,7 @@
   },
   "GBP": {
    "policyRate": {
-    "period": "2026-09",
+    "period": "2026-10-26",
     "value": 3.75
    },
    "cpiYoY": {
@@ -3731,7 +3731,7 @@
   },
   "CHF": {
    "policyRate": {
-    "period": "2026-09",
+    "period": "2026-10-27",
     "value": 0
    },
    "cpiYoY": {
@@ -3741,7 +3741,7 @@
   },
   "CNY": {
    "policyRate": {
-    "period": "2026-09",
+    "period": "2026-10-19",
     "value": 3
    },
    "cpiYoY": {
@@ -3763,7 +3763,7 @@
   },
   "RON": {
    "policyRate": {
-    "period": "2026-09",
+    "period": "2026-10-27",
     "value": 6.5
    },
    "cpiYoY": {
@@ -3779,8 +3779,8 @@
   },
   "INR": {
    "policyRate": {
-    "period": "2026-09",
-    "value": 5.25
+    "period": "2026-10-19",
+    "value": 5.5
    },
    "cpiYoY": {
     "period": "2026-09",
@@ -3801,8 +3801,8 @@
   },
   "TRY": {
    "policyRate": {
-    "period": "2026-09",
-    "value": 37
+    "period": "2026-10-23",
+    "value": 36
    },
    "cpiYoY": {
     "period": "2026-09",
@@ -3811,7 +3811,7 @@
   },
   "ZAR": {
    "policyRate": {
-    "period": "2026-09",
+    "period": "2026-10-26",
     "value": 7.25
    },
    "cpiYoY": {
@@ -4529,11 +4529,18 @@
  },
  "errors": [
   "BIS policyRate EUR: fără observații",
+  "BIS policyRateDaily EUR: fără observații",
   "BIS policyRate JPY: fără observații",
+  "BIS policyRateDaily JPY: fără observații",
   "BIS policyRate AUD: fără observații",
+  "BIS policyRateDaily AUD: fără observații",
   "BIS policyRate CAD: fără observații",
+  "BIS policyRateDaily CAD: fără observații",
   "BIS policyRate PLN: fără observații",
+  "BIS policyRateDaily PLN: fără observații",
   "BIS policyRate BRL: fără observații",
-  "BIS policyRate MXN: fără observații"
+  "BIS policyRateDaily BRL: fără observații",
+  "BIS policyRate MXN: fără observații",
+  "BIS policyRateDaily MXN: fără observații"
  ]
 }
