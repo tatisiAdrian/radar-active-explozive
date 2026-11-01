@@ -22,4 +22,4 @@ npm run dev      # server local
 npm run build    # verificare + build în dist/
 ```
 
-Publicarea pe GitHub Pages se face automat la fiecare push pe `main`.
+Publicarea se face automat: la fiecare push pe `main`, site-ul construit e pus în branch-ul `gh-pages`, din care îl servește GitHub Pages.
