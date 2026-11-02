@@ -18,19 +18,19 @@ const LABEL: Record<string, string> = { forex: 'Forex', emergente: 'Emerging eco
 const snapshots = Object.values(shaFiles).map((txt) => {
   const [hash, file] = txt.trim().split(/\s+/);
   const m = file.match(/^(?:(.+)-)?(\d{4}-\d{2}-\d{2})\.json$/)!;
-  return { file, hash, date: m[2], label: m[1] ? LABEL[m[1]] ?? m[1] : 'Crypto, companies, commodities (88 assets)' };
+  return { file, hash, date: m[2], label: m[1] ? LABEL[m[1]] ?? OVERVIEW.find((d) => `social-${d.slug}` === m[1])?.title ?? m[1] : 'Crypto, companies, commodities (88 assets)' };
 }).sort((a, b) => b.date.localeCompare(a.date) || a.label.localeCompare(b.label));
 
 const general = CRITERIA_EN.general;
 ---
 
 <Base lang="en" alt="" title="All domains" description="One radar for crypto, start-ups, commodities, forex, emerging economies and the S&P 500: the assets that meet the most of the 14 conditions for strong growth.">
-  <PhotoHeader photo={photo('home')!} lang="en" title="Two radars: investments and macroeconomics" eyebrow={`Pre-identification · data updated on ${fmtDate(UPDATED)}`} summary="We don’t mix apples and oranges. Assets you can invest in directly (crypto, start-ups, shares) have their own radar. The backdrop every investment lives in (currencies, national economies, commodities) has another. Both use the same 14 conditions, adapted to each domain. It is a watch list, not buying advice." position="center 60%" />
+  <PhotoHeader photo={photo('home')!} lang="en" title="Three radars: investments, macroeconomics and social" eyebrow={`Pre-identification · data updated on ${fmtDate(UPDATED)}`} summary="We don’t mix apples and oranges. Assets you can invest in directly (crypto, start-ups, shares) have their own radar. The backdrop every investment lives in (currencies, national economies, commodities) has another. And life decisions (where to study, which job to choose, where to work and where to live) have a third. All use the same 14 conditions, adapted to each domain." position="center 60%" />
   <section class="home-intro">
     <div class="hh-text">
       <div class="hh-stats">
         <div><b>{ALL.length}</b><span>assets analysed</span></div>
-        <div><b>2</b><span>categories, {OVERVIEW.length} domains</span></div>
+        <div><b>3</b><span>categories, {OVERVIEW.length} domains</span></div>
         <div><b>{strongAll}</b><span>with 10+ conditions</span></div>
         <div><b>{snapshots.length}</b><span>frozen snapshots</span></div>
       </div>
@@ -40,7 +40,7 @@ const general = CRITERIA_EN.general;
   <HomeCats lang="en" />
 
   <nav class="subnav" aria-label="On this page">
-    <a href={`${base}en/investments/`}>Investments</a><a href={`${base}en/macro/`}>Macroeconomics</a><a href="#method">Method</a><a href="#history">History</a><a href="#transparency">Transparency</a>
+    <a href={`${base}en/investments/`}>Investments</a><a href={`${base}en/macro/`}>Macroeconomics</a><a href={`${base}en/social/`}>Social</a><a href="#method">Method</a><a href="#history">History</a><a href="#transparency">Transparency</a>
   </nav>
 
   <section class="steps" id="method">

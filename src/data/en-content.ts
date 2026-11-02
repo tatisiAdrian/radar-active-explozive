@@ -7,6 +7,11 @@
 export interface DomainEn { title: string; summary: string; questions: string[]; interpretations?: { title: string; text: string }[] }
 
 export const DOMAINS_EN: Record<string, DomainEn> = {
+  'licee-romania': { title: "The best high schools in Romania", summary: "11 top high schools, scored on 14 conditions: the 2025 baccalaureate average, the pass rate, the last admission average and what students get compared with how hard it is to get in.", questions: ["Which high schools have the best baccalaureate results?", "Where do students get the most compared with how hard it is to get in?", "Is a top Bucharest high school worth it compared with one in Iași or Cluj?"] },
+  'facultati-romania': { title: "The best universities in Romania", summary: "11 Romanian universities, scored on 14 conditions: the QS and THE 2026 rankings, graduate employability, in-demand fields and the city.", questions: ["Which Romanian universities have the best international recognition?", "Where do graduates find work most easily?", "How much does the city you study in matter?"] },
+  'meserii-romania': { title: "The best jobs in Romania", summary: "11 jobs, scored on 14 conditions: earnings, employer demand, growth until 2030, resistance to AI, training time and risks.", questions: ["Which jobs combine good earnings with high demand?", "Which jobs are hardest for artificial intelligence to replace?", "Is a job with short training worth it compared with one requiring long studies?"] },
+  'angajatori-romania': { title: "The best employers in Romania", summary: "11 employers, scored on 14 conditions: candidate demand (Catalyst 2025), Top Employers 2026 certification, pay, stability and real chances of being hired.", questions: ["Which employers are the most desired, and how hard is it to get in?", "Which employers offer jobs across the country?", "Where is the risk of restructuring higher?"] },
+  'localitati-romania': { title: "The best places in Romania for a good life", summary: "11 cities, scored on 14 conditions: income, jobs, attractiveness, education, healthcare, nature, connectivity, housing cost and risks.", questions: ["In which cities is life best, costs included?", "Where are good wages and jobs, without the capital’s congestion?", "Which small city offers a good life at low cost?"] },
   startups: { title: 'Start-ups worldwide', summary: 'Funding, valuations and the dynamics of start-up ecosystems worldwide.', questions: ['How much venture capital was invested, by year and by region?', 'Which sectors attract most of the funding?', 'How is the number of “unicorn” companies changing?'] },
   'startups/europa': { title: 'Start-ups in Europe', summary: 'European start-up ecosystems, compared by country.', questions: ['Which European ecosystems are the best funded?', 'Which European start-ups meet the most conditions?'] },
   'startups/europa/romania': { title: 'Start-ups in Romania', summary: '8 tech companies founded in Romania, from UiPath and Bitdefender to seed-stage start-ups, scored on the same 14 conditions.', questions: ['How does Romania compare with the region (Central and Eastern Europe)?', 'Which Romanian start-ups are worth following on the same 14 conditions?', 'What exits have there been, and at what valuations?'] },
@@ -270,6 +275,14 @@ export const FORMULAS_EN: Record<string, Record<string, string>> = {
     C10: 'Free-cash-flow yield = free cash flow / market cap (Yahoo price × SEC share count): score = 2 × the yield in %. A 5% yield gives 10.',
     C12: 'The share price’s two-month trend (from 4 September): score = 5 + the change in % / 2.',
   },
+  licee: {
+    C1: 'The 2025 baccalaureate average: score = 10 − (9.6 − the average) × 8 (an average of 9.35 gives 8).',
+    C2: 'The 2025 baccalaureate pass rate: score = 10 − (100 − the rate) × 2 (99% gives 8).',
+    C3: 'The last 2025 admission average: score = 10 − (9.7 − the average) × 10 (9.4 gives 7). No data if the school is not in the national admission top.',
+    C4: 'Results versus demand: the baccalaureate average minus the last admission average, from the same year; score = 6 + the difference × 10. An approximation: the two averages belong to different cohorts.',
+    C5: 'Consistency: the school appears in both national tops (baccalaureate and admission) = 9; in only one = 5.',
+    C10: 'Ease of entry (the inverse of demand): score = (9.7 − the last admission average) × 20 (9.4 gives 6). No data if the school is not in the admission top.',
+  },
   imobiliare: {
     C1: 'Real demand (IMF 2026): score = 2 + 1.2 × real GDP growth − 0.3 × unemployment above 5%.',
     C3: 'Household debt (IMF, latest year available, % of GDP): score = 10 − debt / 12 (24% gives 8, 60% gives 5, 96% gives 2).',
@@ -304,6 +317,12 @@ export function inputEn(s: string): string {
     [/datorie (\S+) mld\. USD, numerar (\S+) mld\. USD, flux din exploatare (\S+) mld\. USD/, 'debt USD $1 billion, cash USD $2 billion, operating cash flow USD $3 billion'],
     [/flux de numerar liber (\S+) mld\. USD, marjă (\S+)%/, 'free cash flow USD $1 billion, margin $2%'],
     [/capitalizare (\S+) trilioane USD, randament al fluxului liber (\S+)%/, 'market cap USD $1 trillion, free-cash-flow yield $2%'],
+    [/media la BAC 2025: (\S+)/, 'baccalaureate average 2025: $1'],
+    [/^promovare: (\S+)%/, 'pass rate: $1%'],
+    [/ultima medie de admitere 2025: (\S+)/, 'last admission average 2025: $1'],
+    [/^BAC (\S+) − admitere (\S+) = (\S+)/, 'baccalaureate $1 − admission $2 = $3'],
+    [/în topul la BAC și în cel la admitere/, 'in both the baccalaureate and the admission tops'],
+    [/doar în topul la BAC/, 'only in the baccalaureate top'],
   ];
   for (const [re, en] of R) t = t.replace(re, en);
   return t.replace(/(\d),(\d)/g, '$1.$2');

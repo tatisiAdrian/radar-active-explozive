@@ -1,0 +1,482 @@
+{
+ "slug": "meserii-romania",
+ "set": "meserii",
+ "date": "2026-11-03",
+ "formulas": {},
+ "rows": [
+  {
+   "id": "securitate",
+   "name": "Specialist în securitate cibernetică",
+   "nameEn": "Cybersecurity specialist",
+   "c": [
+    9,
+    7,
+    9,
+    8,
+    6,
+    8,
+    8,
+    9,
+    8,
+    5,
+    6,
+    7,
+    7,
+    7
+   ],
+   "why": "Securitatea e printre meseriile cu creștere rapidă la WEF și e greu de înlocuit de AI: atacurile cresc odată cu digitalizarea. Salarii la nivelul IT.",
+   "whyEn": "Security is among the WEF’s fast-growing jobs and is hard for AI to replace: attacks grow with digitalisation. Pay at IT levels.",
+   "sources": [
+    [
+     "Undelucram.ro (ANOFM, INS): locuri de muncă vacante și salarii, septembrie 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ],
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Undelucram.ro (ANOFM, INS): job vacancies and wages, September 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ],
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.58,
+   "met": 11
+  },
+  {
+   "id": "energie",
+   "name": "Inginer în energie (regenerabile, rețele, stocare)",
+   "nameEn": "Energy engineer (renewables, grids, storage)",
+   "c": [
+    8,
+    8,
+    9,
+    8,
+    5,
+    7,
+    8,
+    9,
+    9,
+    6,
+    7,
+    7,
+    8,
+    6
+   ],
+   "why": "Tranziția energetică (parcuri fotovoltaice și eoliene, stocare în baterii, rețele) cere ingineri, iar sectorul energetic e printre cele mai bine plătite din țară. WEF pune specialiștii în energie regenerabilă printre meseriile în creștere.",
+   "whyEn": "The energy transition (solar and wind parks, battery storage, grids) needs engineers, and energy is among the best-paid sectors in the country. The WEF lists renewable-energy specialists among growing jobs.",
+   "sources": [
+    [
+     "Undelucram.ro (ANOFM, INS): locuri de muncă vacante și salarii, septembrie 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ],
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Undelucram.ro (ANOFM, INS): job vacancies and wages, September 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ],
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.5,
+   "met": 11
+  },
+  {
+   "id": "electrician",
+   "name": "Electrician (inclusiv instalații fotovoltaice și pompe de căldură)",
+   "nameEn": "Electrician (including solar and heat-pump installations)",
+   "c": [
+    6,
+    9,
+    8,
+    9,
+    8,
+    6,
+    8,
+    9,
+    8,
+    8,
+    8,
+    7,
+    8,
+    5
+   ],
+   "why": "Cerere mare și constantă (construcții, panouri solare, pompe de căldură), pregătire scurtă și greu de automatizat; meseria e pe lista ocupațiilor deficitare. Risc de accidentare de luat în calcul.",
+   "whyEn": "High and steady demand (construction, solar panels, heat pumps), short training and hard to automate; the trade is on the list of occupations in shortage. Injury risk to keep in mind.",
+   "sources": [
+    [
+     "Startupcafe: lista ocupațiilor deficitare 2026",
+     "https://startupcafe.ro/lista-ocupatii-deficitare-2026-meserii-ministerul-muncii-angajare-lucratori-straini-afara-ue-104114"
+    ],
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Startupcafe: the 2026 list of occupations in shortage",
+     "https://startupcafe.ro/lista-ocupatii-deficitare-2026-meserii-ministerul-muncii-angajare-lucratori-straini-afara-ue-104114"
+    ],
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.4,
+   "met": 11
+  },
+  {
+   "id": "asistent",
+   "name": "Asistent medical",
+   "nameEn": "Nurse",
+   "c": [
+    6,
+    9,
+    8,
+    9,
+    7,
+    5,
+    9,
+    9,
+    10,
+    8,
+    7,
+    7,
+    7,
+    5
+   ],
+   "why": "Una dintre meseriile cu cea mai mare creștere în cifre absolute la WEF; spitalele au sute de posturi vacante. Salariu mediu, program solicitant, dar se poate profesa oriunde în UE.",
+   "whyEn": "One of the jobs with the largest absolute growth in the WEF report; hospitals have hundreds of vacancies. Average pay and a demanding schedule, but it can be practised anywhere in the EU.",
+   "sources": [
+    [
+     "Undelucram.ro (ANOFM, INS): locuri de muncă vacante și salarii, septembrie 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ],
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Undelucram.ro (ANOFM, INS): job vacancies and wages, September 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ],
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.34,
+   "met": 11
+  },
+  {
+   "id": "meserias",
+   "name": "Meseriaș calificat în construcții (zidar, fierar-betonist, instalator)",
+   "nameEn": "Skilled construction worker (bricklayer, steel fixer, plumber)",
+   "c": [
+    5,
+    10,
+    8,
+    9,
+    9,
+    4,
+    7,
+    8,
+    8,
+    9,
+    8,
+    7,
+    9,
+    3
+   ],
+   "why": "Cea mai mare cerere de pe piață și meserii pentru care firmele aduc muncitori din afara UE. Pregătire scurtă, dar muncă fizică grea și risc ridicat de accidente.",
+   "whyEn": "The highest demand on the market, and trades for which companies bring workers from outside the EU. Short training, but heavy physical work and a high accident risk.",
+   "sources": [
+    [
+     "Undelucram.ro (ANOFM, INS): locuri de muncă vacante și salarii, septembrie 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ],
+    [
+     "Startupcafe: lista ocupațiilor deficitare 2026",
+     "https://startupcafe.ro/lista-ocupatii-deficitare-2026-meserii-ministerul-muncii-angajare-lucratori-straini-afara-ue-104114"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Undelucram.ro (ANOFM, INS): job vacancies and wages, September 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ],
+    [
+     "Startupcafe: the 2026 list of occupations in shortage",
+     "https://startupcafe.ro/lista-ocupatii-deficitare-2026-meserii-ministerul-muncii-angajare-lucratori-straini-afara-ue-104114"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.04,
+   "met": 11
+  },
+  {
+   "id": "medic",
+   "name": "Medic",
+   "nameEn": "Doctor",
+   "c": [
+    9,
+    9,
+    8,
+    9,
+    2,
+    6,
+    10,
+    9,
+    10,
+    3,
+    7,
+    7,
+    6,
+    6
+   ],
+   "why": "Cerere foarte mare și stabilitate maximă; diplomele se recunosc în toată UE. Prețul e pregătirea foarte lungă (6 ani de facultate plus rezidențiat) și presiunea programului.",
+   "whyEn": "Very high demand and maximum stability; diplomas are recognised across the EU. The price is very long training (6 years of university plus residency) and the pressure of the schedule.",
+   "sources": [
+    [
+     "Undelucram.ro (ANOFM, INS): locuri de muncă vacante și salarii, septembrie 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Undelucram.ro (ANOFM, INS): job vacancies and wages, September 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.4,
+   "met": 9
+  },
+  {
+   "id": "constructii",
+   "name": "Inginer în construcții",
+   "nameEn": "Civil engineer",
+   "c": [
+    7,
+    8,
+    7,
+    8,
+    5,
+    6,
+    7,
+    8,
+    8,
+    6,
+    7,
+    6,
+    7,
+    6
+   ],
+   "why": "Construcțiile au cele mai multe locuri vacante din țară (peste 5.000 în septembrie 2026), iar fondurile europene și infrastructura susțin cererea. Sectorul e ciclic.",
+   "whyEn": "Construction has the most vacancies in the country (over 5,000 in September 2026), and EU funds and infrastructure support demand. The sector is cyclical.",
+   "sources": [
+    [
+     "Undelucram.ro (ANOFM, INS): locuri de muncă vacante și salarii, septembrie 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Undelucram.ro (ANOFM, INS): job vacancies and wages, September 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.84,
+   "met": 9
+  },
+  {
+   "id": "profesor",
+   "name": "Profesor",
+   "nameEn": "Teacher",
+   "c": [
+    4,
+    7,
+    7,
+    9,
+    4,
+    6,
+    9,
+    6,
+    10,
+    6,
+    7,
+    5,
+    8,
+    8
+   ],
+   "why": "Educația e printre puținele domenii în care WEF estimează creșterea locurilor de muncă la nivel global; în România posturile sunt stabile, dar salariile rămân sub media profesiilor cu studii superioare.",
+   "whyEn": "Education is among the few fields where the WEF expects jobs to grow globally; in Romania posts are stable, but pay remains below the average for graduate professions.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.68,
+   "met": 8
+  },
+  {
+   "id": "sofer",
+   "name": "Șofer de camion (transport internațional)",
+   "nameEn": "Truck driver (international transport)",
+   "c": [
+    6,
+    9,
+    7,
+    5,
+    9,
+    3,
+    6,
+    9,
+    7,
+    9,
+    8,
+    6,
+    7,
+    4
+   ],
+   "why": "Transportul rutier e al doilea sector după numărul de locuri vacante (2.352 în septembrie 2026). Câștig bun în transport internațional, dar timp lung departe de casă, iar camioanele autonome sunt un risc pe termen lung.",
+   "whyEn": "Road freight is second by number of vacancies (2,352 in September 2026). Good earnings in international transport, but long periods away from home, and autonomous trucks are a long-term risk.",
+   "sources": [
+    [
+     "Undelucram.ro (ANOFM, INS): locuri de muncă vacante și salarii, septembrie 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ],
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Undelucram.ro (ANOFM, INS): job vacancies and wages, September 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ],
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.48,
+   "met": 8
+  },
+  {
+   "id": "date-ai",
+   "name": "Specialist în date și inteligență artificială",
+   "nameEn": "Data and AI specialist",
+   "c": [
+    9,
+    6,
+    10,
+    7,
+    5,
+    8,
+    6,
+    9,
+    6,
+    4,
+    4,
+    7,
+    5,
+    7
+   ],
+   "why": "Specialiștii în big data și în AI sunt primele două meserii cu cea mai rapidă creștere în raportul WEF 2025. Cer pregătire lungă (matematică, statistică), iar atenția mediatică e foarte mare.",
+   "whyEn": "Big-data and AI specialists are the top two fastest-growing jobs in the WEF 2025 report. They require long training (mathematics, statistics), and media attention is very high.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.86,
+   "met": 7
+  },
+  {
+   "id": "programator",
+   "name": "Programator / dezvoltator software",
+   "nameEn": "Software developer",
+   "c": [
+    10,
+    6,
+    9,
+    5,
+    6,
+    8,
+    6,
+    9,
+    6,
+    5,
+    4,
+    6,
+    4,
+    7
+   ],
+   "why": "IT are cel mai mare salariu mediu net pe domenii (13.464 lei în iulie 2026, de 2,3 ori media națională), iar WEF îl pune printre meseriile cu cea mai rapidă creștere. Pe de altă parte, posturile de IT senior sunt puține printre locurile vacante, iar instrumentele AI schimbă munca de programare.",
+   "whyEn": "IT has the highest average net wage by sector (13,464 lei in July 2026, 2.3 times the national average), and the WEF lists it among the fastest-growing jobs. On the other hand, senior IT roles are few among vacancies, and AI tools are changing programming work.",
+   "sources": [
+    [
+     "Undelucram.ro (ANOFM, INS): locuri de muncă vacante și salarii, septembrie 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ],
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Undelucram.ro (ANOFM, INS): job vacancies and wages, September 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ],
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.8,
+   "met": 5
+  }
+ ]
+}

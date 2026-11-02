@@ -203,6 +203,48 @@
    "page": "https://unsplash.com/photos/a-view-of-a-city-with-tall-buildings-vyagy6HJpVE",
    "author": "Kenny Murgor",
    "alt": "Clădirile înalte din Nairobi, Kenya"
+  },
+  {
+   "key": "social",
+   "url": "https://images.unsplash.com/photo-1528642474498-1af0c17fd8c3",
+   "page": "https://unsplash.com/photos/aerial-view-of-people-walking-on-raod-IBaVuZsJJTo",
+   "author": "Ryoji Iwata",
+   "alt": "Mulțimea care traversează intersecția Shibuya din Tokyo, văzută de sus"
+  },
+  {
+   "key": "licee-romania",
+   "url": "https://images.unsplash.com/photo-1598981457915-aea220950616",
+   "page": "https://unsplash.com/photos/student-writing-at-classroom-desk--hgJu2ykh4E",
+   "author": "Jeswin Thomas",
+   "alt": "Un elev care scrie la o bancă, în clasă"
+  },
+  {
+   "key": "facultati-romania",
+   "url": "https://images.unsplash.com/photo-1775623606576-3e049f72b8e7",
+   "page": "https://unsplash.com/photos/graduates-in-caps-and-gowns-toss-hats-in-the-air-pf-o0xEBkt4",
+   "author": "Md.Sabbir Sikder",
+   "alt": "Absolvenți care își aruncă tocile în aer"
+  },
+  {
+   "key": "meserii-romania",
+   "url": "https://images.unsplash.com/photo-1745377881072-fa978cac245a",
+   "page": "https://unsplash.com/photos/a-welder-works-sparks-fly-against-the-sunset-jcm9Qo8O7kw",
+   "author": "Amanda da Silva",
+   "alt": "Un sudor la lucru, cu scântei pe fundalul apusului"
+  },
+  {
+   "key": "angajatori-romania",
+   "url": "https://images.unsplash.com/photo-1758873268745-dd2cf0d677b5",
+   "page": "https://unsplash.com/photos/team-collaborating-around-a-computer-in-an-office-UikYLDQj9_I",
+   "author": "Vitaly Gariev",
+   "alt": "Colegi care râd și discută la un laptop, într-un birou deschis"
+  },
+  {
+   "key": "localitati-romania",
+   "url": "https://images.unsplash.com/photo-1595272749673-2a19793bfb33",
+   "page": "https://unsplash.com/photos/red-cable-car-over-city-buildings-during-daytime-SUMf3kN-kYc",
+   "author": "Zoltan Rakottyai",
+   "alt": "Telecabina roșie deasupra Brașovului"
   }
  ]
 }

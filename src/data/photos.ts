@@ -11,6 +11,7 @@ export function photoForDomain(slug: string): Photo | undefined {
   // Fiecare regiune de start-up-uri are fotografia ei (orașul-simbol al regiunii).
   const sub = slug.startsWith('startups/') ? slug.split('/').at(-1)! : '';
   if (sub && photo(sub)) return photo(sub);
+  if (photo(slug)) return photo(slug);
   const top = slug.split('/')[0];
   const map: Record<string, string> = { crypto: 'crypto', startups: 'startups', marfuri: 'marfuri', forex: 'forex', 'economii-emergente': 'emergente', sp500: 'sp500', imobiliare: 'imobiliare', 'proiecte-imobiliare': 'proiecte' };
   return map[top] ? photo(map[top]) : undefined;

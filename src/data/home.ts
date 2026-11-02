@@ -5,6 +5,7 @@ import sp500 from './sp500/scores.json';
 import ro from './startups-ro/scores.json';
 import imob from './imobiliare/scores.json';
 import proj from './proiecte-imobiliare/scores.json';
+import { SOCIAL } from './social';
 import { OVERVIEW } from './overview';
 import { fondTag, FOND_LABEL } from './explain';
 import { type Lang, DOMAIN_EN, NAME_EN, COUNTRY_EN, STAGE_EN, GROUP_EN, ACCESS_EN, FOND_EN } from './i18n';
@@ -16,7 +17,7 @@ export interface HomeItem {
   dshort: string;
   color: string;
   group: string;
-  access: 'Cumpărabil' | 'Prin utilizare' | 'Acces restrâns' | 'Indirect';
+  access: 'Cumpărabil' | 'Prin utilizare' | 'Acces restrâns' | 'Indirect' | 'Deschis tuturor';
   met: number;
   score: number;
   c: (number | null)[];
@@ -31,6 +32,7 @@ export interface HomeItem {
 const meta = Object.fromEntries(OVERVIEW.map((d) => [d.slug, d]));
 const mk = (slug: string, x: Omit<HomeItem, 'domain' | 'dshort' | 'color' | 'fond'>): HomeItem => ({
   ...x,
+  group: x.group || meta[slug].short,
   domain: slug,
   dshort: meta[slug].short,
   color: meta[slug].color,
@@ -68,6 +70,9 @@ export const ITEMS: HomeItem[] = [
   ...(proj.rows as unknown as Row[]).map((r) => mk('proiecte-imobiliare', {
     name: r.name, group: r.stage ?? 'Proiect', access: r.stage?.startsWith('Listată') ? 'Cumpărabil' : 'Acces restrâns', met: r.met, score: r.score, c: r.c ?? [], set: 'proiecte-imobiliare', launched: null, nameEn: r.nameEn, gkey: r.stageEn ? `en:${r.stageEn}` : undefined,
   })),
+  ...Object.values(SOCIAL).flatMap((d) => d.rows.map((r) => mk(d.slug, {
+    name: r.name, group: '', access: 'Deschis tuturor', met: r.met, score: r.score, c: r.c, set: d.set, launched: null, nameEn: r.nameEn, gkey: `soc:${d.slug}`,
+  }))),
 ];
 
 export const byRank = (a: HomeItem, b: HomeItem) => b.met - a.met || b.score - a.score;
@@ -81,7 +86,7 @@ export function localize(it: HomeItem, lang: Lang): HomeItem {
     ...it,
     name: it.nameEn ?? it.name,
     dshort: DOMAIN_EN[it.domain]?.short ?? it.dshort,
-    group: g.startsWith('en:') ? g.slice(3) : GROUP_EN[g] ?? STAGE_EN[g] ?? GROUP_EN_EXTRA[g] ?? it.group,
+    group: g.startsWith('soc:') ? (DOMAIN_EN[g.slice(4)]?.short ?? it.group) : g.startsWith('en:') ? g.slice(3) : GROUP_EN[g] ?? STAGE_EN[g] ?? GROUP_EN_EXTRA[g] ?? it.group,
     access: (ACCESS_EN[it.access] ?? it.access) as HomeItem['access'],
     fond: FOND_EN[it.fond] ?? it.fond,
   };

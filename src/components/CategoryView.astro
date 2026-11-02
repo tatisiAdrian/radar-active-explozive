@@ -16,7 +16,7 @@ const { lang = 'ro', cat } = Astro.props;
 const en = lang === 'en';
 const base = import.meta.env.BASE_URL;
 const C = CATEGORIES[cat];
-const other = CATEGORIES[cat === 'investitii' ? 'macro' : 'investitii'];
+const other = CATEGORIES[cat === 'investitii' ? 'macro' : cat === 'macro' ? 'social' : 'investitii'];
 const t = C.t[lang];
 const ot = other.t[lang];
 const doms = overviewFor(lang, C.slugs);
@@ -46,7 +46,7 @@ const T = en
   <div class="hh-text">
     <p class="lede">{t.lede}</p>
     <div class="hh-stats">
-      <div><b>{items.length}</b><span>{T.assets}</span></div>
+      <div><b>{items.length}</b><span>{cat === 'social' ? (en ? 'positions analysed' : 'poziții analizate') : T.assets}</span></div>
       <div><b>{doms.length}</b><span>{T.domains}</span></div>
       <div><b>{strong}</b><span>{T.strong}</span></div>
       <div><b>{watch}</b><span>{T.watch}</span></div>
@@ -61,7 +61,7 @@ const T = en
 </section>
 
 <nav class="subnav" aria-label={T.nav}>
-  {T.s.map((s: string, i: number) => <a href={`#${T.ids[i]}`}>{s}</a>)}
+  {T.s.map((s: string, i: number) => (cat === 'social' && i === 4 ? null : <a href={`#${T.ids[i]}`}>{s}</a>))}
   <a class="sub-other" href={`${base}${other.path[lang]}`}>{ot.name} →</a>
 </nav>
 
@@ -74,7 +74,7 @@ const T = en
 <section id={T.ids[1]}>
   <p class="eyebrow">{T.gE}</p>
   <h2>{T.gH}</h2>
-  <p class="muted">{T.gP(items.length)}</p>
+  <p class="muted">{cat === 'social' ? (en ? `Simple charts, computed from the scores of the ${items.length} positions in this category.` : `Grafice simple, calculate din notele celor ${items.length} de poziții din această categorie.`) : T.gP(items.length)}</p>
   <HomeCharts lang={lang} only={C.slugs} />
 </section>
 
@@ -88,15 +88,15 @@ const T = en
 <section id={T.ids[3]}>
   <p class="eyebrow">{T.aE}</p>
   <h2>{T.aH}</h2>
-  <p class="muted">{T.aP(items.length)}</p>
+  <p class="muted">{cat === 'social' ? (en ? `All ${items.length} positions in this category, in one table. Click a row for the score on each condition, explained in plain words.` : `Toate cele ${items.length} de poziții din această categorie, într-un singur tabel. Apasă pe un rând ca să vezi nota la fiecare condiție, explicată pe înțeles.`) : T.aP(items.length)}</p>
   <Explorer lang={lang} only={C.slugs} />
 </section>
 
-<section id={T.ids[4]}>
+{cat !== 'social' && <section id={T.ids[4]}>
   <p class="eyebrow">{T.bE}</p>
   <h2>{T.bH}</h2>
   <BuyBlocks lang={lang} cat={cat} />
-</section>
+</section>}
 
 <section>
   <a class="cat-door" href={`${base}${other.path[lang]}`} style={`--cat:${other.color}`}>

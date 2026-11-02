@@ -13,7 +13,7 @@ const cats = CAT_LIST.map((c) => {
   const best = [...items].sort((a, b) => b.met - a.met || b.score - a.score)[0];
   return { c, t: c.t[lang], doms, n: items.length, strong: items.filter((x) => x.met >= 10).length, best };
 });
-const W = en ? { assets: 'assets', with: 'with 10+', lead: 'Leading now' } : { assets: 'active', with: 'cu 10+', lead: 'Pe primul loc acum' };
+const W = en ? { pos: 'positions', assets: 'assets', with: 'with 10+', lead: 'Leading now' } : { pos: 'poziții', assets: 'active', with: 'cu 10+', lead: 'Pe primul loc acum' };
 ---
 <div class="cats">
   {cats.map((x) => (
@@ -24,7 +24,7 @@ const W = en ? { assets: 'assets', with: 'with 10+', lead: 'Leading now' } : { a
       <HomeRadar lang={lang} only={x.c.slugs} uid={`h-${x.c.key}`} compact />
       <p>{x.t.lede}</p>
       <ul class="cat-doms">
-        {x.doms.map((d) => <li style={`--c:${d.color}`}><i></i>{d.title}<small>{d.items.length} {W.assets} · {d.items.filter((i) => i.met >= 10).length} {W.with}</small></li>)}
+        {x.doms.map((d) => <li style={`--c:${d.color}`}><i></i>{d.title}<small>{d.items.length} {x.c.key === 'social' ? W.pos : W.assets} · {d.items.filter((i) => i.met >= 10).length} {W.with}</small></li>)}
       </ul>
       {x.best && <p><b>{W.lead}:</b> {x.best.name} · {x.best.met}/14</p>}
       <span class="cta">{x.t.cta}</span>

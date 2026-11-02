@@ -19,7 +19,7 @@ const ax = (i: number, v: number) => {
 };
 const poly = (c: (number | null)[]) => c.map((v, i) => ax(i, v ?? 5).map((n) => n.toFixed(1)).join(',')).join(' ');
 const n2 = (x: number) => x.toLocaleString(en ? 'en-GB' : 'ro-RO', { maximumFractionDigits: 2, minimumFractionDigits: 2 });
-const ACC: Record<string, string> = { 'Cumpărabil': 'a-buy', 'Prin utilizare': 'a-use', 'Acces restrâns': 'a-closed', 'Indirect': 'a-ind' };
+const ACC: Record<string, string> = { 'Cumpărabil': 'a-buy', 'Prin utilizare': 'a-use', 'Acces restrâns': 'a-closed', 'Indirect': 'a-ind', 'Deschis tuturor': 'a-use' };
 ---
 <div class="picks">
   {picks.map((p) => (

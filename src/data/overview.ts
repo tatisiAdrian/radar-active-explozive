@@ -5,6 +5,7 @@ import sp500 from './sp500/scores.json';
 import ro from './startups-ro/scores.json';
 import imob from './imobiliare/scores.json';
 import proj from './proiecte-imobiliare/scores.json';
+import { SOCIAL } from './social';
 import { type Lang, DOMAIN_EN, NAME_EN, COUNTRY_EN } from './i18n';
 
 /** Un punct pe radarul de pe Home: un activ dintr-un domeniu, cu numărul de condiții îndeplinite. */
@@ -35,6 +36,11 @@ export const OVERVIEW: DomainOverview[] = [
   { slug: 'imobiliare', title: 'Piața imobiliară națională', short: 'Imobiliare', what: 'piețe imobiliare naționale, inclusiv România', color: '#8a6d3b', snapshot: 'imobiliare-2026-11-02.json', items: fromScores(imob as unknown as Scored) },
   { slug: 'proiecte-imobiliare', title: 'Proiecte imobiliare de interes mondial', short: 'Proiecte', what: 'proiecte imobiliare mari și companiile din spatele lor', color: '#2f8f5b', snapshot: 'proiecte-imobiliare-2026-11-02.json', items: fromScores(proj as unknown as Scored) },
   { slug: 'economii-emergente', title: 'Economii emergente', short: 'Emergente', what: 'economii emergente, inclusiv România', color: '#c4433b', snapshot: 'emergente-2026-11-01.json', items: fromScores(emerging as unknown as Scored) },
+  { slug: 'licee-romania', title: 'Cele mai bune licee din România', short: 'Licee', what: 'cele mai bune licee din românia', color: '#7c5cff', snapshot: 'social-licee-romania-2026-11-03.json', items: SOCIAL['licee-romania'].rows.map((r) => ({ name: r.name, met: r.met, score: r.score, c: r.c })) },
+  { slug: 'facultati-romania', title: 'Cele mai bune universități din România', short: 'Facultăți', what: 'cele mai bune universități din românia', color: '#e0568a', snapshot: 'social-facultati-romania-2026-11-03.json', items: SOCIAL['facultati-romania'].rows.map((r) => ({ name: r.name, met: r.met, score: r.score, c: r.c })) },
+  { slug: 'meserii-romania', title: 'Cele mai bune meserii în România', short: 'Meserii', what: 'cele mai bune meserii în românia', color: '#d98a1f', snapshot: 'social-meserii-romania-2026-11-03.json', items: SOCIAL['meserii-romania'].rows.map((r) => ({ name: r.name, met: r.met, score: r.score, c: r.c })) },
+  { slug: 'angajatori-romania', title: 'Cei mai buni angajatori din România', short: 'Angajatori', what: 'cei mai buni angajatori din românia', color: '#2f9c8f', snapshot: 'social-angajatori-romania-2026-11-03.json', items: SOCIAL['angajatori-romania'].rows.map((r) => ({ name: r.name, met: r.met, score: r.score, c: r.c })) },
+  { slug: 'localitati-romania', title: 'Cele mai bune localități din România pentru o viață de calitate', short: 'Localități', what: 'cele mai bune localități din românia pentru o viață de calitate', color: '#4f8de0', snapshot: 'social-localitati-romania-2026-11-03.json', items: SOCIAL['localitati-romania'].rows.map((r) => ({ name: r.name, met: r.met, score: r.score, c: r.c })) },
 ];
 
 export const ALL = OVERVIEW.flatMap((d) => d.items);
@@ -56,6 +62,7 @@ export function overviewFor(lang: Lang, only?: string[]): DomainOverview[] {
       if (r && d.slug === 'economii-emergente') name = COUNTRY_EN[r.id] ?? r.name;
       const rr = r as unknown as { nameEn?: string } | undefined;
       if (rr?.nameEn && (d.slug === 'imobiliare' || d.slug === 'proiecte-imobiliare')) name = rr.nameEn;
+      if (SOCIAL[d.slug]) name = SOCIAL[d.slug].rows[i]?.nameEn ?? name;
       return { ...it, name };
     });
     return { ...d, title: t?.title ?? d.title, short: t?.short ?? d.short, what: t?.what ?? d.what, items };

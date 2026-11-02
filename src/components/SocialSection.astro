@@ -1,0 +1,85 @@
+---
+import Chart from './Chart.astro';
+import CriteriaDetail from './CriteriaDetail.astro';
+import FondBadge from './FondBadge.astro';
+import type { Dataset } from '../data/types';
+import type { Lang } from '../data/i18n';
+import { SOCIAL } from '../data/social';
+import { FORMULAS_EN, inputEn } from '../data/en-content';
+import { fmtDate as fd, num as nm } from '../data/lang';
+
+interface Props { slug: string; lang?: Lang }
+const { slug, lang = 'ro' } = Astro.props;
+const en = lang === 'en';
+const L = (ro: string, e: string) => (en ? e : ro);
+const base = import.meta.env.BASE_URL;
+const d = SOCIAL[slug];
+const rows = d.rows.map((r) => (en ? { ...r, name: r.nameEn, why: r.whyEn, sources: r.sourcesEn, inputs: Object.fromEntries(Object.entries(r.inputs).map(([k, v]) => [k, inputEn(v)])) } : r));
+const formulas = en ? FORMULAS_EN[d.set] ?? {} : d.formulas;
+const fmtDate = (x: string) => fd(x, lang);
+const num = (x: number) => nm(x, 2, lang);
+const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
+const snap = `social-${slug}-${d.date}`;
+const short = (s: string) => s.replace(/,.*$/, '').replace(/ \(.*\)$/, '');
+const metChart: Dataset = {
+  id: `${slug}-conditii`, domain: slug, title: L('Condiții îndeplinite din 14', 'Conditions met out of 14'), unit: L('condiții', 'conditions'), chart: 'bar',
+  series: [{ name: L('Condiții îndeplinite', 'Conditions met'), points: rows.map((r) => [short(r.name), r.met]) }],
+  source: { name: L(`Radar Active Explozive, instantaneul din ${fmtDate(d.date)}`, `Explosive Assets Radar, snapshot of ${fmtDate(d.date)}`), url: `https://github.com/TatisiAdrian/radar-active-explozive/blob/main/scripts/social/${slug}.json`, retrievedAt: d.date },
+  notes: L('Notele și sursele fiecărei poziții sunt în detaliile de mai sus.', 'The scores and sources for each position are in the details above.'),
+};
+const top = rows[0];
+const allSources = [...new Map(rows.flatMap((r) => r.sources).map(([t, u]) => [u, t])).entries()];
+---
+<section id="radar">
+  <h2>{L('Clasamentul', 'The ranking')}</h2>
+  <p>
+    {en ? <>{rows.length} positions scored on 14 conditions adapted to this topic. {Object.keys(formulas).length > 0 ? <>{Object.keys(formulas).length} conditions are computed from public data using published formulas; the rest are judgement, with a rationale and sources for each position.</> : <>The scores are judgement based on the cited sources, with a rationale for each position.</>} Conditions that cannot be assessed yet get 5 (neutral) in the score and do not count as met. The scores are frozen in the{' '}<a href={`${base}snapshots/${snap}.json`}>snapshot of {fmtDate(d.date)}</a>{' '}(fingerprint in the <a href={`${base}snapshots/${snap}.sha256`}>.sha256 file</a>).</>
+      : <>{rows.length} poziții notate pe 14 condiții adaptate acestei teme. {Object.keys(formulas).length > 0 ? <>{Object.keys(formulas).length} condiții se calculează din date publice, după formule publicate; restul sunt judecată, cu justificare și surse la fiecare poziție.</> : <>Notele sunt judecată pe baza surselor citate, cu justificare la fiecare poziție.</>} Condițiile care nu se pot evalua încă primesc 5 (neutru) în scor și nu sunt considerate îndeplinite. Notele sunt înghețate în{' '}<a href={`${base}snapshots/${snap}.json`}>instantaneul din {fmtDate(d.date)}</a>{' '}(amprenta în <a href={`${base}snapshots/${snap}.sha256`}>fișierul .sha256</a>).</>}
+  </p>
+  <div class="table-wrap">
+    <table class="radar fx">
+      <thead><tr><th>#</th><th>{L('Nume', 'Name')}</th><th>{L('Condiții', 'Conditions')}</th><th>{L('Scor', 'Score')}</th><th>{L('Fond / formă', 'Substance / form')}</th></tr></thead>
+      <tbody>
+        {rows.map((r, i) => (
+          <tr>
+            <td class="muted">{i + 1}</td>
+            <td><b>{r.name}</b></td>
+            <td><span class:list={['k', zone(r.met)]}>{r.met}/14</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 14) * 100}%`} class={zone(r.met)}></i></span></td>
+            <td>{num(r.score)}</td>
+            <td><FondBadge values={r.c} lang={lang} /></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h3>{L('Fiecare poziție, condiție cu condiție', 'Each position, condition by condition')}</h3>
+  {rows.map((r) => (
+    <details class="fxd">
+      <summary><b>{r.name}</b> · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · {L('scor', 'score')} {num(r.score)} · <FondBadge values={r.c} lang={lang} /></summary>
+      <p>{r.why}</p>
+      <CriteriaDetail set={d.set} values={r.c} inputs={r.inputs} lang={lang} />
+      <p class="muted">{L('Surse', 'Sources')}: {r.sources.map(([t, u], i) => <>{i > 0 && '; '}<a href={u} target="_blank" rel="noopener">{t}</a></>)}</p>
+    </details>
+  ))}
+
+  {Object.keys(formulas).length > 0 && (
+    <>
+      <h3>{L('Formulele condițiilor calculate', 'Formulas for the computed conditions')}</h3>
+      <ul class="formulas">{Object.entries(formulas).map(([k, f]) => <li><b>{k}</b>: {f}</li>)}</ul>
+    </>
+  )}
+</section>
+
+<section>
+  <h2>{L('Datele din spatele notelor', 'The data behind the scores')}</h2>
+  <Chart dataset={metChart} lang={lang} />
+  <h3>{L('Sursele analizei', 'The analysis’s sources')}</h3>
+  <ul>{allSources.map(([u, t]) => <li><a href={u} target="_blank" rel="noopener">{t}</a></li>)}</ul>
+</section>
+
+<section>
+  <h2>{L('Ce arată analiza', 'What the analysis shows')}</h2>
+  <p>{en ? <><b>{top.name}</b> meets the most conditions ({top.met} of 14). The ranking rewards substance: real results and real opportunities, weighed against how hard and how expensive they are to reach, not only fame.</> : <><b>{top.name}</b> îndeplinește cele mai multe condiții ({top.met} din 14). Clasamentul răsplătește fondul: rezultate și oportunități reale, puse în balanță cu cât de greu și cât de scump e să ajungi la ele, nu doar renumele.</>}</p>
+  <p class="notice">{L('Clasamentele sunt orientative și se bazează pe date publice la data instantaneului. Alegerea potrivită depinde de situația fiecăruia.', 'The rankings are indicative and rest on public data as of the snapshot date. The right choice depends on each person’s situation.')}</p>
+</section>

@@ -4,6 +4,7 @@ import type { Lang } from '../data/i18n';
 
 interface Props { lang?: Lang; only?: string[]; uid?: string; compact?: boolean }
 const { lang = 'ro', only, uid = 'hr', compact = false } = Astro.props;
+const social = !!only && only.every((s) => s.endsWith('-romania') && !s.startsWith('startups'));
 const en = lang === 'en';
 const OVERVIEW = overviewFor(lang, only);
 const T = en
@@ -57,7 +58,7 @@ const ring = (met: number) => rOf(met);
     <text x={C + 6} y={C - ring(6) - 6} class="hr-ringlabel">6</text>
     <text x={C + 6} y={C - ring(2) - 6} class="hr-ringlabel">2</text>
     {sectors.map((s) => (
-      <a href={s.href} class="hr-sector" style={`--c:${s.d.color}`} aria-label={`${s.d.title}: ${s.d.items.length} ${T.assets}`}>
+      <a href={s.href} class="hr-sector" style={`--c:${s.d.color}`} aria-label={`${s.d.title}: ${s.d.items.length} ${social ? (en ? 'positions' : 'poziții') : T.assets}`}>
         <path d={s.path} class="hr-slice" />
         {s.dots.map((p) => (
           <circle cx={f(p.x)} cy={f(p.y)} r={f(p.rad)} class="hr-dot" data-tip={`${p.it.name} · ${p.it.met}/14 ${T.of} · ${s.d.short}`}>
@@ -65,7 +66,7 @@ const ring = (met: number) => rOf(met);
           </circle>
         ))}
         <text x={f(s.lx)} y={f(s.ly)} text-anchor={s.anchor} class="hr-label">{s.d.short}</text>
-        <text x={f(s.lx)} y={f(s.ly + 17)} text-anchor={s.anchor} class="hr-sub">{s.d.items.length} {T.assets}</text>
+        <text x={f(s.lx)} y={f(s.ly + 17)} text-anchor={s.anchor} class="hr-sub">{s.d.items.length} {social ? (en ? 'positions' : 'poziții') : T.assets}</text>
       </a>
     ))}
     <circle cx={C} cy={C} r="4" class="hr-center" />

@@ -91,7 +91,7 @@ const n1 = (x: number) => x.toLocaleString(en ? 'en-GB' : 'ro-RO', { maximumFrac
     </div>
   </figure>
 
-  <figure class="hc">
+  {pairs.length > 0 && <figure class="hc">
     <h3>{T.h4}</h3>
     <p class="muted">{T.p4}</p>
     <div class="pairs">
@@ -103,7 +103,7 @@ const n1 = (x: number) => x.toLocaleString(en ? 'en-GB' : 'ro-RO', { maximumFrac
         </div>
       ))}
     </div>
-  </figure>
+  </figure>}
 </div>
 
 <style>

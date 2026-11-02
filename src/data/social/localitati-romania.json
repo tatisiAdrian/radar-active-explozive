@@ -1,0 +1,474 @@
+{
+ "slug": "localitati-romania",
+ "set": "localitati",
+ "date": "2026-11-03",
+ "formulas": {},
+ "rows": [
+  {
+   "id": "cluj",
+   "name": "Cluj-Napoca",
+   "nameEn": "Cluj-Napoca",
+   "c": [
+    8,
+    9,
+    9,
+    9,
+    9,
+    8,
+    7,
+    8,
+    8,
+    3,
+    5,
+    8,
+    4,
+    8
+   ],
+   "why": "Locul 2 în Indexul de Atractivitate Urbană 2026 și locul 10 în Europa în raportul UE privind calitatea vieții în orașe; al doilea salariu din țară (peste 6.700 lei net) și al doilea număr de locuri vacante. Cel mai mare minus: locuințele cele mai scumpe raportat la venit.",
+   "whyEn": "Second in the 2026 Urban Attractiveness Index and 10th in Europe in the EU report on quality of life in cities; the second-highest wage in the country (over 6,700 lei net) and the second-largest number of vacancies. The biggest minus: the most expensive housing relative to income.",
+   "sources": [
+    [
+     "Economedia: Indexul de Atractivitate Urbană 2026 (1.200 de respondenți)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ],
+    [
+     "Digi24 (INS): salariile pe județe, aprilie 2026",
+     "https://digi24.ro/stiri/economie/finante-economie/harta-salariilor-din-romania-unde-se-castiga-cei-mai-multi-bani-judetul-care-a-depasit-toate-asteptarile-in-2026-3855597"
+    ],
+    [
+     "Romania Insider: raportul UE privind calitatea vieții în orașele europene (Cluj-Napoca pe locul 10)",
+     "https://www.romania-insider.com/regional/cluj-napoca-tenth-most-livable-cities-europe-2024"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Economedia: Urban Attractiveness Index 2026 (1,200 respondents)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ],
+    [
+     "Digi24 (INS): wages by county, April 2026",
+     "https://digi24.ro/stiri/economie/finante-economie/harta-salariilor-din-romania-unde-se-castiga-cei-mai-multi-bani-judetul-care-a-depasit-toate-asteptarile-in-2026-3855597"
+    ],
+    [
+     "Romania Insider: the EU report on quality of life in European cities (Cluj-Napoca 10th)",
+     "https://www.romania-insider.com/regional/cluj-napoca-tenth-most-livable-cities-europe-2024"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.46,
+   "met": 11
+  },
+  {
+   "id": "sibiu",
+   "name": "Sibiu",
+   "nameEn": "Sibiu",
+   "c": [
+    7,
+    6,
+    8,
+    6,
+    7,
+    7,
+    9,
+    8,
+    8,
+    5,
+    7,
+    7,
+    7,
+    8
+   ],
+   "why": "Locul 5 în Index; salariu mediu peste 6.400 lei, județ remarcat pentru creșterea salarială din 2026, oraș compact cu acces la munte.",
+   "whyEn": "Fifth in the Index; an average wage above 6,400 lei, a county noted for its wage growth in 2026, a compact city close to the mountains.",
+   "sources": [
+    [
+     "Economedia: Indexul de Atractivitate Urbană 2026 (1.200 de respondenți)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ],
+    [
+     "Digi24 (INS): salariile pe județe, aprilie 2026",
+     "https://digi24.ro/stiri/economie/finante-economie/harta-salariilor-din-romania-unde-se-castiga-cei-mai-multi-bani-judetul-care-a-depasit-toate-asteptarile-in-2026-3855597"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Economedia: Urban Attractiveness Index 2026 (1,200 respondents)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ],
+    [
+     "Digi24 (INS): wages by county, April 2026",
+     "https://digi24.ro/stiri/economie/finante-economie/harta-salariilor-din-romania-unde-se-castiga-cei-mai-multi-bani-judetul-care-a-depasit-toate-asteptarile-in-2026-3855597"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.14,
+   "met": 11
+  },
+  {
+   "id": "timisoara",
+   "name": "Timișoara",
+   "nameEn": "Timișoara",
+   "c": [
+    8,
+    7,
+    8,
+    8,
+    9,
+    6,
+    6,
+    9,
+    8,
+    5,
+    7,
+    7,
+    6,
+    8
+   ],
+   "why": "Locul 4 în Index; salariu mediu peste 6.700 lei (la egalitate cu Clujul), autostradă spre Vest și aeroport internațional, cu locuințe mai ieftine decât la Cluj.",
+   "whyEn": "Fourth in the Index; an average wage above 6,700 lei (level with Cluj), a motorway to the West and an international airport, with housing cheaper than in Cluj.",
+   "sources": [
+    [
+     "Economedia: Indexul de Atractivitate Urbană 2026 (1.200 de respondenți)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ],
+    [
+     "Digi24 (INS): salariile pe județe, aprilie 2026",
+     "https://digi24.ro/stiri/economie/finante-economie/harta-salariilor-din-romania-unde-se-castiga-cei-mai-multi-bani-judetul-care-a-depasit-toate-asteptarile-in-2026-3855597"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Economedia: Urban Attractiveness Index 2026 (1,200 respondents)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ],
+    [
+     "Digi24 (INS): wages by county, April 2026",
+     "https://digi24.ro/stiri/economie/finante-economie/harta-salariilor-din-romania-unde-se-castiga-cei-mai-multi-bani-judetul-care-a-depasit-toate-asteptarile-in-2026-3855597"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.3,
+   "met": 10
+  },
+  {
+   "id": "oradea",
+   "name": "Oradea",
+   "nameEn": "Oradea",
+   "c": [
+    6,
+    7,
+    8,
+    6,
+    7,
+    10,
+    7,
+    6,
+    8,
+    6,
+    7,
+    9,
+    7,
+    8
+   ],
+   "why": "Locul 6 în Index; exemplu național de atragere a fondurilor europene și de renovare urbană; județul Bihor e al treilea la locuri de muncă vacante.",
+   "whyEn": "Sixth in the Index; a national example of attracting EU funds and urban renewal; Bihor county is third for job vacancies.",
+   "sources": [
+    [
+     "Economedia: Indexul de Atractivitate Urbană 2026 (1.200 de respondenți)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Economedia: Urban Attractiveness Index 2026 (1,200 respondents)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.22,
+   "met": 10
+  },
+  {
+   "id": "brasov",
+   "name": "Brașov",
+   "nameEn": "Brașov",
+   "c": [
+    6,
+    6,
+    10,
+    7,
+    7,
+    7,
+    10,
+    7,
+    8,
+    4,
+    6,
+    9,
+    6,
+    7
+   ],
+   "why": "Locul 1 în Indexul de Atractivitate Urbană 2026: munții la marginea orașului, aeroport nou și o economie diversificată. Locuințele s-au scumpit odată cu cererea.",
+   "whyEn": "First in the 2026 Urban Attractiveness Index: mountains on the edge of the city, a new airport and a diversified economy. Housing has become more expensive with demand.",
+   "sources": [
+    [
+     "Economedia: Indexul de Atractivitate Urbană 2026 (1.200 de respondenți)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Economedia: Urban Attractiveness Index 2026 (1,200 respondents)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.08,
+   "met": 9
+  },
+  {
+   "id": "alba",
+   "name": "Alba Iulia",
+   "nameEn": "Alba Iulia",
+   "c": [
+    5,
+    5,
+    7,
+    5,
+    6,
+    8,
+    8,
+    7,
+    9,
+    7,
+    7,
+    6,
+    8,
+    8
+   ],
+   "why": "Locul 9 în Index; oraș mic, cu cetatea restaurată și acces la autostrada A10; locuințe accesibile, dar mai puține locuri de muncă bine plătite.",
+   "whyEn": "Ninth in the Index; a small city with a restored fortress and access to the A10 motorway; affordable housing, but fewer well-paid jobs.",
+   "sources": [
+    [
+     "Economedia: Indexul de Atractivitate Urbană 2026 (1.200 de respondenți)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Economedia: Urban Attractiveness Index 2026 (1,200 respondents)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.7,
+   "met": 9
+  },
+  {
+   "id": "constanta",
+   "name": "Constanța",
+   "nameEn": "Constanța",
+   "c": [
+    6,
+    7,
+    9,
+    6,
+    7,
+    5,
+    7,
+    8,
+    7,
+    5,
+    7,
+    7,
+    6,
+    6
+   ],
+   "why": "Locul 3 în Index: mare, port și autostradă spre București; al patrulea județ la locuri vacante. Sezonul turistic aglomerează orașul vara.",
+   "whyEn": "Third in the Index: sea, port and a motorway to Bucharest; fourth county by vacancies. The tourist season crowds the city in summer.",
+   "sources": [
+    [
+     "Economedia: Indexul de Atractivitate Urbană 2026 (1.200 de respondenți)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Economedia: Urban Attractiveness Index 2026 (1,200 respondents)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.5,
+   "met": 8
+  },
+  {
+   "id": "iasi",
+   "name": "Iași",
+   "nameEn": "Iași",
+   "c": [
+    5,
+    6,
+    7,
+    9,
+    9,
+    6,
+    6,
+    5,
+    8,
+    6,
+    7,
+    7,
+    5,
+    8
+   ],
+   "why": "Locul 7 în Index; cel mai mare centru universitar și medical din Moldova, dar conectivitate rutieră slabă (autostrada e încă în construcție) și salarii sub Cluj și Timișoara.",
+   "whyEn": "Seventh in the Index; the largest university and medical centre in Moldavia, but weak road connections (the motorway is still being built) and wages below Cluj and Timișoara.",
+   "sources": [
+    [
+     "Economedia: Indexul de Atractivitate Urbană 2026 (1.200 de respondenți)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Economedia: Urban Attractiveness Index 2026 (1,200 respondents)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.62,
+   "met": 7
+  },
+  {
+   "id": "arad",
+   "name": "Arad",
+   "nameEn": "Arad",
+   "c": [
+    6,
+    6,
+    7,
+    5,
+    6,
+    6,
+    6,
+    8,
+    8,
+    7,
+    7,
+    6,
+    8,
+    8
+   ],
+   "why": "Locul 10 în Index; aproape de granița cu Ungaria, pe autostradă, cu industrie auto și locuințe mai ieftine decât la Timișoara.",
+   "whyEn": "Tenth in the Index; close to the Hungarian border, on the motorway, with a car industry and housing cheaper than in Timișoara.",
+   "sources": [
+    [
+     "Economedia: Indexul de Atractivitate Urbană 2026 (1.200 de respondenți)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Economedia: Urban Attractiveness Index 2026 (1,200 respondents)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.58,
+   "met": 7
+  },
+  {
+   "id": "bucuresti",
+   "name": "București",
+   "nameEn": "Bucharest",
+   "c": [
+    9,
+    10,
+    6,
+    9,
+    9,
+    4,
+    3,
+    9,
+    7,
+    4,
+    6,
+    4,
+    2,
+    3
+   ],
+   "why": "Cel mai mare salariu (peste 7.600 lei net) și cele mai multe locuri de muncă (7.832 vacante în septembrie 2026), dar doar locul 8 în Index și „pierde teren”: trafic, poluare și cel mai mare risc seismic dintre marile orașe.",
+   "whyEn": "The highest wage (over 7,600 lei net) and the most jobs (7,832 vacancies in September 2026), but only 8th in the Index and “losing ground”: traffic, pollution and the highest earthquake risk among the large cities.",
+   "sources": [
+    [
+     "Economedia: Indexul de Atractivitate Urbană 2026 (1.200 de respondenți)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ],
+    [
+     "Digi24 (INS): salariile pe județe, aprilie 2026",
+     "https://digi24.ro/stiri/economie/finante-economie/harta-salariilor-din-romania-unde-se-castiga-cei-mai-multi-bani-judetul-care-a-depasit-toate-asteptarile-in-2026-3855597"
+    ],
+    [
+     "Undelucram.ro (ANOFM): locuri vacante pe județe, septembrie 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Economedia: Urban Attractiveness Index 2026 (1,200 respondents)",
+     "https://economedia.ro/index-atractivitate-urbana-romanii-ar-alege-brasov-ca-loc-de-trai-iar-bucuresti-pierde-teren-oamenii-aleg-mobilitatea-urbana-sportul-si-stabilitatea-economica.html"
+    ],
+    [
+     "Digi24 (INS): wages by county, April 2026",
+     "https://digi24.ro/stiri/economie/finante-economie/harta-salariilor-din-romania-unde-se-castiga-cei-mai-multi-bani-judetul-care-a-depasit-toate-asteptarile-in-2026-3855597"
+    ],
+    [
+     "Undelucram.ro (ANOFM): vacancies by county, September 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.2,
+   "met": 6
+  },
+  {
+   "id": "piatra-neamt",
+   "name": "Piatra Neamț",
+   "nameEn": "Piatra Neamț",
+   "c": [
+    4,
+    4,
+    5,
+    4,
+    5,
+    6,
+    9,
+    4,
+    8,
+    8,
+    8,
+    5,
+    9,
+    8
+   ],
+   "why": "Inclus în raportul UE privind calitatea vieții în orașe; natură excepțională și locuințe ieftine, dar salarii mici, puține locuri de muncă și fără autostradă sau aeroport aproape.",
+   "whyEn": "Included in the EU report on quality of life in cities; exceptional nature and cheap housing, but low wages, few jobs and no motorway or airport nearby.",
+   "sources": [
+    [
+     "Romania Insider: raportul UE privind calitatea vieții în orașele europene (Cluj-Napoca pe locul 10)",
+     "https://www.romania-insider.com/regional/cluj-napoca-tenth-most-livable-cities-europe-2024"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Romania Insider: the EU report on quality of life in European cities (Cluj-Napoca 10th)",
+     "https://www.romania-insider.com/regional/cluj-napoca-tenth-most-livable-cities-europe-2024"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.08,
+   "met": 6
+  }
+ ]
+}

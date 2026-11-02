@@ -1,0 +1,522 @@
+{
+ "slug": "facultati-romania",
+ "set": "facultati",
+ "date": "2026-11-03",
+ "formulas": {},
+ "rows": [
+  {
+   "id": "ub",
+   "name": "Universitatea din București",
+   "nameEn": "University of Bucharest",
+   "c": [
+    8,
+    7,
+    8,
+    8,
+    8,
+    7,
+    4,
+    7,
+    9,
+    7,
+    6,
+    8,
+    null,
+    7
+   ],
+   "why": "QS 761–770 (în urcare de la 801–850), THE 1001–1200; prima din țară la rezultatele în cercetare (THE) și la angajabilitate (QS).",
+   "whyEn": "QS 761–770 (up from 801–850), THE 1001–1200; first in the country for research environment (THE) and employability (QS).",
+   "sources": [
+    [
+     "Edupedu: universitățile din România în QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: cele 22 de universități din România în Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: Romanian universities in the QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: the 22 Romanian universities in Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.12,
+   "met": 11
+  },
+  {
+   "id": "ubb",
+   "name": "Universitatea Babeș-Bolyai, Cluj-Napoca",
+   "nameEn": "Babeș-Bolyai University, Cluj-Napoca",
+   "c": [
+    8,
+    6,
+    8,
+    8,
+    8,
+    7,
+    4,
+    8,
+    9,
+    7,
+    6,
+    7,
+    null,
+    7
+   ],
+   "why": "QS 761–770, la egalitate cu UB, THE 1201–1500; universitate multiculturală (română, maghiară, germană), într-un oraș cu multe locuri de muncă.",
+   "whyEn": "QS 761–770, tied with UB, THE 1201–1500; a multicultural university (Romanian, Hungarian, German), in a city with many jobs.",
+   "sources": [
+    [
+     "Edupedu: universitățile din România în QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: cele 22 de universități din România în Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: Romanian universities in the QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: the 22 Romanian universities in Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.04,
+   "met": 10
+  },
+  {
+   "id": "umf-cd",
+   "name": "UMF „Carol Davila”, București",
+   "nameEn": "“Carol Davila” University of Medicine and Pharmacy, Bucharest",
+   "c": [
+    null,
+    8,
+    8,
+    7,
+    9,
+    9,
+    4,
+    8,
+    9,
+    3,
+    7,
+    null,
+    null,
+    7
+   ],
+   "why": "Prima din cele 22 de universități românești în THE 2026 (801–1000); medicina rămâne una dintre cele mai sigure căi spre un loc de muncă bine plătit.",
+   "whyEn": "First of the 22 Romanian universities in THE 2026 (801–1000); medicine remains one of the safest paths to a well-paid job.",
+   "sources": [
+    [
+     "Edupedu: universitățile din România în QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: cele 22 de universități din România în Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: Romanian universities in the QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: the 22 Romanian universities in Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.52,
+   "met": 9
+  },
+  {
+   "id": "umf-cv",
+   "name": "UMF Craiova",
+   "nameEn": "University of Medicine and Pharmacy of Craiova",
+   "c": [
+    null,
+    7,
+    7,
+    6,
+    8,
+    9,
+    7,
+    7,
+    5,
+    4,
+    7,
+    null,
+    null,
+    7
+   ],
+   "why": "Locul trei în țară în THE 2026 (1001–1200); medicină într-un oraș cu costuri de trai mai mici.",
+   "whyEn": "Third in the country in THE 2026 (1001–1200); medicine in a city with lower living costs.",
+   "sources": [
+    [
+     "Edupedu: universitățile din România în QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: cele 22 de universități din România în Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: Romanian universities in the QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: the 22 Romanian universities in Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.28,
+   "met": 8
+  },
+  {
+   "id": "upb",
+   "name": "Universitatea Națională de Știință și Tehnologie Politehnica București",
+   "nameEn": "National University of Science and Technology Politehnica Bucharest",
+   "c": [
+    5,
+    4,
+    7,
+    7,
+    7,
+    9,
+    4,
+    6,
+    9,
+    7,
+    7,
+    null,
+    null,
+    7
+   ],
+   "why": "QS 1201–1400, THE 1501+; cea mai mare școală de inginerie din țară, cu reputație bună la angajatori (locul 630 la acest indicator QS).",
+   "whyEn": "QS 1201–1400, THE 1501+; the country’s largest engineering school, with a good reputation among employers (630th on this QS indicator).",
+   "sources": [
+    [
+     "Edupedu: universitățile din România în QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: cele 22 de universități din România în Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: Romanian universities in the QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: the 22 Romanian universities in Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.26,
+   "met": 8
+  },
+  {
+   "id": "ase",
+   "name": "Academia de Studii Economice, București",
+   "nameEn": "Bucharest University of Economic Studies",
+   "c": [
+    null,
+    8,
+    8,
+    6,
+    8,
+    8,
+    4,
+    7,
+    9,
+    6,
+    6,
+    null,
+    null,
+    7
+   ],
+   "why": "Una dintre cele două universități românești din top 1000 THE 2026 (801–1000); economie, finanțe și informatică economică, domenii cerute pe piață.",
+   "whyEn": "One of the two Romanian universities in the THE 2026 top 1000 (801–1000); economics, finance and business informatics, fields in demand on the market.",
+   "sources": [
+    [
+     "Edupedu: universitățile din România în QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: cele 22 de universități din România în Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: Romanian universities in the QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: the 22 Romanian universities in Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.38,
+   "met": 7
+  },
+  {
+   "id": "umf-cj",
+   "name": "UMF „Iuliu Hațieganu”, Cluj-Napoca",
+   "nameEn": "“Iuliu Hațieganu” University of Medicine and Pharmacy, Cluj-Napoca",
+   "c": [
+    null,
+    6,
+    8,
+    6,
+    9,
+    9,
+    4,
+    8,
+    9,
+    3,
+    7,
+    null,
+    null,
+    7
+   ],
+   "why": "THE 1201–1500; medicină la Cluj, cu mulți studenți străini și cerere foarte mare la admitere.",
+   "whyEn": "THE 1201–1500; medicine in Cluj, with many foreign students and very high demand at admission.",
+   "sources": [
+    [
+     "Edupedu: universitățile din România în QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: cele 22 de universități din România în Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: Romanian universities in the QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: the 22 Romanian universities in Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.32,
+   "met": 7
+  },
+  {
+   "id": "uaic",
+   "name": "Universitatea „Alexandru Ioan Cuza”, Iași",
+   "nameEn": "“Alexandru Ioan Cuza” University, Iași",
+   "c": [
+    6,
+    4,
+    6,
+    6,
+    7,
+    7,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    null,
+    7
+   ],
+   "why": "QS 1001–1200 (în urcare), THE 1501+; cea mai veche universitate modernă a țării, într-un oraș cu costuri mai mici decât București sau Cluj.",
+   "whyEn": "QS 1001–1200 (up), THE 1501+; the country’s oldest modern university, in a city with lower costs than Bucharest or Cluj.",
+   "sources": [
+    [
+     "Edupedu: universitățile din România în QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: cele 22 de universități din România în Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: Romanian universities in the QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: the 22 Romanian universities in Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.22,
+   "met": 6
+  },
+  {
+   "id": "utcn",
+   "name": "Universitatea Tehnică din Cluj-Napoca",
+   "nameEn": "Technical University of Cluj-Napoca",
+   "c": [
+    5,
+    4,
+    6,
+    6,
+    7,
+    9,
+    4,
+    6,
+    9,
+    7,
+    7,
+    null,
+    null,
+    7
+   ],
+   "why": "QS 1201–1400, THE 1501+; inginerie și calculatoare într-unul dintre cele mai puternice centre IT ale țării.",
+   "whyEn": "QS 1201–1400, THE 1501+; engineering and computing in one of the country’s strongest IT hubs.",
+   "sources": [
+    [
+     "Edupedu: universitățile din România în QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: cele 22 de universități din România în Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: Romanian universities in the QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: the 22 Romanian universities in Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.12,
+   "met": 6
+  },
+  {
+   "id": "uvt",
+   "name": "Universitatea de Vest din Timișoara",
+   "nameEn": "West University of Timișoara",
+   "c": [
+    5,
+    4,
+    7,
+    6,
+    6,
+    7,
+    5,
+    6,
+    8,
+    7,
+    7,
+    null,
+    null,
+    7
+   ],
+   "why": "QS 1201–1400, cu rezultatele absolvenților pe piața muncii în top 800 QS; Timișoara are al doilea salariu mediu din țară după București.",
+   "whyEn": "QS 1201–1400, with graduates’ employment outcomes in the QS top 800; Timișoara has the second-highest average wage after Bucharest.",
+   "sources": [
+    [
+     "Edupedu: universitățile din România în QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: cele 22 de universități din România în Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: Romanian universities in the QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: the 22 Romanian universities in Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ]
+   ],
+   "inputs": {},
+   "score": 5.98,
+   "met": 6
+  },
+  {
+   "id": "unitbv",
+   "name": "Universitatea Transilvania din Brașov",
+   "nameEn": "Transilvania University of Brașov",
+   "c": [
+    5,
+    4,
+    6,
+    6,
+    6,
+    7,
+    5,
+    6,
+    7,
+    7,
+    7,
+    null,
+    null,
+    7
+   ],
+   "why": "QS 1201–1400, THE 1501+; singura universitate românească în prima jumătate a unui clasament THE pe domenii în 2026.",
+   "whyEn": "QS 1201–1400, THE 1501+; the only Romanian university in the top half of a THE subject ranking in 2026.",
+   "sources": [
+    [
+     "Edupedu: universitățile din România în QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: cele 22 de universități din România în Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ],
+    [
+     "Universitatea Transilvania: clasamentul THE pe domenii 2026",
+     "https://unitbv.ro/en/news-and-events/7541-unitbv-singura-universitate-din-romania-care-apare-in-jumatatea-superioara-a-clasamentului-times-higher-education-2026-in-domenii-de-studii-2.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: Romanian universities in the QS World University Rankings 2026",
+     "https://www.edupedu.ro/universitatea-babes-bolyai-din-cluj-napoca-si-universitatea-din-bucuresti-la-egalitate-in-top-1000-qs-world-university-rankings-2026-romania-ca-medie-a-rezultatelor-este-cel-mai-slab-sistem-din/"
+    ],
+    [
+     "Edupedu: the 22 Romanian universities in Times Higher Education 2026",
+     "https://www.edupedu.ro/rankingul-global-times-higher-education-2026-ase-bucuresti-si-umf-carol-davila-bucuresti-singurele-universitati-din-romania-incluse-in-top-1000-22-de-universitati-din-romania-au-fost-incluse-din/"
+    ],
+    [
+     "Transilvania University: THE 2026 subject ranking",
+     "https://unitbv.ro/en/news-and-events/7541-unitbv-singura-universitate-din-romania-care-apare-in-jumatatea-superioara-a-clasamentului-times-higher-education-2026-in-domenii-de-studii-2.html"
+    ]
+   ],
+   "inputs": {},
+   "score": 5.86,
+   "met": 5
+  }
+ ]
+}

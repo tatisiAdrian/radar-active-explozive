@@ -1,0 +1,392 @@
+{
+ "_doc": "Cei mai buni angajatori din România. Note de judecată pe baza sondajului Catalyst 2025, a certificării Top Employers 2026 și a contextului industriei.",
+ "date": "2026-11-03",
+ "set": "angajatori",
+ "items": [
+  {
+   "id": "microsoft",
+   "name": "Microsoft România",
+   "nameEn": "Microsoft Romania",
+   "c": [
+    10,
+    null,
+    9,
+    8,
+    9,
+    7,
+    3,
+    7,
+    8,
+    3,
+    5,
+    5,
+    2,
+    6
+   ],
+   "why": "Locul 1 în topul Catalyst al celor mai doriți angajatori (2025). Salarii de top și o companie foarte solidă, dar puține posturi, concentrate în București, și concurență uriașă la angajare.",
+   "whyEn": "First in the Catalyst ranking of most desired employers (2025). Top pay and a very solid company, but few posts, concentrated in Bucharest, and huge competition for jobs.",
+   "sources": [
+    [
+     "Romania Insider: Catalyst, cei mai doriți angajatori din România 2025 (12.161 de respondenți)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Romania Insider: Catalyst, most desired employers in Romania 2025 (12,161 respondents)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ]
+  },
+  {
+   "id": "google",
+   "name": "Google România",
+   "nameEn": "Google Romania",
+   "c": [
+    10,
+    null,
+    9,
+    8,
+    9,
+    8,
+    2,
+    6,
+    8,
+    2,
+    5,
+    5,
+    2,
+    6
+   ],
+   "why": "Locul 2 la Catalyst; prezență mică în România, deci șanse foarte mici de angajare raportat la numărul de candidați.",
+   "whyEn": "Second at Catalyst; a small presence in Romania, so very low chances of being hired relative to the number of candidates.",
+   "sources": [
+    [
+     "Romania Insider: Catalyst, cei mai doriți angajatori din România 2025 (12.161 de respondenți)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Romania Insider: Catalyst, most desired employers in Romania 2025 (12,161 respondents)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ]
+  },
+  {
+   "id": "continental",
+   "name": "Continental România",
+   "nameEn": "Continental Romania",
+   "c": [
+    9,
+    null,
+    7,
+    7,
+    6,
+    6,
+    8,
+    8,
+    7,
+    6,
+    7,
+    4,
+    5,
+    4
+   ],
+   "why": "Locul 3 la Catalyst, cu fabrici și centre de inginerie în mai multe orașe. Industria auto europeană trece prin restructurări, ceea ce crește riscul.",
+   "whyEn": "Third at Catalyst, with factories and engineering centres in several cities. The European car industry is going through restructuring, which raises the risk.",
+   "sources": [
+    [
+     "Romania Insider: Catalyst, cei mai doriți angajatori din România 2025 (12.161 de respondenți)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Romania Insider: Catalyst, most desired employers in Romania 2025 (12,161 respondents)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ]
+  },
+  {
+   "id": "oracle",
+   "name": "Oracle România",
+   "nameEn": "Oracle Romania",
+   "c": [
+    9,
+    null,
+    8,
+    7,
+    8,
+    7,
+    4,
+    6,
+    7,
+    5,
+    6,
+    5,
+    4,
+    6
+   ],
+   "why": "Locul 4 la Catalyst; unul dintre cele mai mari centre tehnologice din București, cu roluri de suport și inginerie.",
+   "whyEn": "Fourth at Catalyst; one of Bucharest’s largest technology centres, with support and engineering roles.",
+   "sources": [
+    [
+     "Romania Insider: Catalyst, cei mai doriți angajatori din România 2025 (12.161 de respondenți)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Romania Insider: Catalyst, most desired employers in Romania 2025 (12,161 respondents)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ]
+  },
+  {
+   "id": "bosch",
+   "name": "Bosch România",
+   "nameEn": "Bosch Romania",
+   "c": [
+    9,
+    null,
+    7,
+    8,
+    7,
+    6,
+    7,
+    8,
+    8,
+    6,
+    7,
+    4,
+    5,
+    4
+   ],
+   "why": "Locul 5 la Catalyst, cu fabrici și centre de cercetare la Cluj, Timișoara și Blaj. Ca la Continental, industria auto e sub presiune în Europa.",
+   "whyEn": "Fifth at Catalyst, with plants and research centres in Cluj, Timișoara and Blaj. As with Continental, the car industry is under pressure in Europe.",
+   "sources": [
+    [
+     "Romania Insider: Catalyst, cei mai doriți angajatori din România 2025 (12.161 de respondenți)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Romania Insider: Catalyst, most desired employers in Romania 2025 (12,161 respondents)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ]
+  },
+  {
+   "id": "amazon",
+   "name": "Amazon România",
+   "nameEn": "Amazon Romania",
+   "c": [
+    8,
+    null,
+    8,
+    7,
+    9,
+    5,
+    5,
+    8,
+    7,
+    6,
+    6,
+    5,
+    4,
+    6
+   ],
+   "why": "Locul 6 la Catalyst, cu centre de dezvoltare software și operațiuni. Ritm de lucru cunoscut ca intens.",
+   "whyEn": "Sixth at Catalyst, with software development centres and operations. A work pace known to be intense.",
+   "sources": [
+    [
+     "Romania Insider: Catalyst, cei mai doriți angajatori din România 2025 (12.161 de respondenți)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Romania Insider: Catalyst, most desired employers in Romania 2025 (12,161 respondents)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ]
+  },
+  {
+   "id": "ing",
+   "name": "ING Bank România",
+   "nameEn": "ING Bank Romania",
+   "c": [
+    8,
+    null,
+    8,
+    7,
+    8,
+    7,
+    5,
+    7,
+    7,
+    6,
+    7,
+    6,
+    5,
+    7
+   ],
+   "why": "Locul 7 la Catalyst; bancă digitală cu un hub tehnologic important în București.",
+   "whyEn": "Seventh at Catalyst; a digital bank with an important technology hub in Bucharest.",
+   "sources": [
+    [
+     "Romania Insider: Catalyst, cei mai doriți angajatori din România 2025 (12.161 de respondenți)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Romania Insider: Catalyst, most desired employers in Romania 2025 (12,161 respondents)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ]
+  },
+  {
+   "id": "ibm",
+   "name": "IBM România",
+   "nameEn": "IBM Romania",
+   "c": [
+    7,
+    null,
+    8,
+    7,
+    8,
+    7,
+    4,
+    7,
+    7,
+    6,
+    6,
+    5,
+    5,
+    6
+   ],
+   "why": "Locul 8 la Catalyst, cu centre tehnologice în București și Brașov.",
+   "whyEn": "Eighth at Catalyst, with technology centres in Bucharest and Brașov.",
+   "sources": [
+    [
+     "Romania Insider: Catalyst, cei mai doriți angajatori din România 2025 (12.161 de respondenți)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Romania Insider: Catalyst, most desired employers in Romania 2025 (12,161 respondents)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ]
+  },
+  {
+   "id": "bt",
+   "name": "Banca Transilvania",
+   "nameEn": "Banca Transilvania",
+   "c": [
+    7,
+    null,
+    8,
+    7,
+    9,
+    6,
+    10,
+    8,
+    8,
+    8,
+    7,
+    7,
+    6,
+    8
+   ],
+   "why": "Locul 9 la Catalyst și cea mai mare bancă din România, cu sediul la Cluj și unități în toată țara: cele mai multe locuri de muncă dintre angajatorii doriți.",
+   "whyEn": "Ninth at Catalyst and Romania’s largest bank, headquartered in Cluj with branches across the country: the most jobs among the desired employers.",
+   "sources": [
+    [
+     "Romania Insider: Catalyst, cei mai doriți angajatori din România 2025 (12.161 de respondenți)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Romania Insider: Catalyst, most desired employers in Romania 2025 (12,161 respondents)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ]
+  },
+  {
+   "id": "emag",
+   "name": "eMAG",
+   "nameEn": "eMAG",
+   "c": [
+    7,
+    null,
+    7,
+    7,
+    8,
+    6,
+    6,
+    8,
+    8,
+    7,
+    7,
+    6,
+    6,
+    7
+   ],
+   "why": "Locul 10 la Catalyst; cel mai mare comerciant online românesc, cu roluri de la tehnologie la logistică.",
+   "whyEn": "Tenth at Catalyst; the largest Romanian online retailer, with roles from technology to logistics.",
+   "sources": [
+    [
+     "Romania Insider: Catalyst, cei mai doriți angajatori din România 2025 (12.161 de respondenți)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Romania Insider: Catalyst, most desired employers in Romania 2025 (12,161 respondents)",
+     "https://www.romania-insider.com/catalyst-most-desired-employers-romania-2025"
+    ]
+   ]
+  },
+  {
+   "id": "raiffeisen",
+   "name": "Raiffeisen Bank România",
+   "nameEn": "Raiffeisen Bank Romania",
+   "c": [
+    5,
+    9,
+    8,
+    6,
+    8,
+    6,
+    8,
+    6,
+    6,
+    8,
+    6,
+    6,
+    7,
+    7
+   ],
+   "why": "Certificată Top Employers 2026 în România, deci practicile de resurse umane au fost evaluate extern; rețea în toată țara.",
+   "whyEn": "Certified Top Employer 2026 in Romania, so its HR practices were assessed externally; a network across the country.",
+   "sources": [
+    [
+     "Hipo.ro: companiile certificate Top Employers 2026 în România",
+     "https://www.hipo.ro/locuri-de-munca/vizualizareArticol/4008/Top-Employers-2026-in-Romania"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Hipo.ro: companies certified Top Employers 2026 in Romania",
+     "https://www.hipo.ro/locuri-de-munca/vizualizareArticol/4008/Top-Employers-2026-in-Romania"
+    ]
+   ]
+  }
+ ]
+}

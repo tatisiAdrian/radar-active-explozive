@@ -5,6 +5,8 @@
  */
 export const WEIGHTS = [16, 6, 6, 8, 6, 8, 8, 4, 6, 6, 6, 6, 6, 8] as const;
 
+import { SOCIAL_SETS } from './social-criteria';
+
 export type CriteriaSet = [string, string][]; // [condiție, ce măsurăm]
 
 export const CRITERIA: Record<string, CriteriaSet> = {
@@ -121,4 +123,5 @@ export const CRITERIA: Record<string, CriteriaSet> = {
     ['Aglomerație (invers)', 'Puțini investitori pe același pariu.'],
     ['Riscuri mici', 'Fără întârzieri mari, procese sau risc geopolitic.'],
   ],
+  ...Object.fromEntries(Object.entries(SOCIAL_SETS).map(([k, v]) => [k, v.ro])),
 };

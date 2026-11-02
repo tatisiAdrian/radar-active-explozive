@@ -1,0 +1,642 @@
+{
+ "slug": "licee-romania",
+ "set": "licee",
+ "date": "2026-11-03",
+ "formulas": {
+  "C1": "Media la BAC 2025: nota = 10 − (9,6 − media) × 8 (o medie de 9,35 dă 8).",
+  "C2": "Rata de promovare la BAC 2025: nota = 10 − (100 − rata) × 2 (99% dă 8).",
+  "C3": "Ultima medie de admitere 2025: nota = 10 − (9,7 − media) × 10 (9,4 dă 7). Fără date dacă liceul nu e în topul național la admitere.",
+  "C4": "Rezultate față de cerere: media la BAC minus ultima medie de admitere, din același an; nota = 6 + diferența × 10. O aproximare: cele două medii aparțin unor generații diferite.",
+  "C5": "Constanță: liceul apare în ambele topuri naționale (BAC și admitere) = 9; doar într-unul = 5.",
+  "C10": "Accesibilitate la intrare (inversul cererii): nota = (9,7 − ultima medie de admitere) × 20 (9,4 dă 6). Fără date dacă liceul nu e în topul la admitere."
+ },
+ "rows": [
+  {
+   "id": "racovita-is",
+   "name": "Colegiul Național „Emil Racoviță”, Iași",
+   "nameEn": "“Emil Racoviță” National College, Iași",
+   "data": {
+    "bac": 9.31,
+    "rate": 99.3,
+    "adm": 9.37
+   },
+   "c": [
+    8,
+    9,
+    7,
+    5,
+    9,
+    10,
+    9,
+    8,
+    8,
+    7,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "BAC 9,31 și admitere 9,37; aproape toți absolvenții promovează (99,3%).",
+   "whyEn": "Baccalaureate 9.31 and admission 9.37; almost every graduate passes (99.3%).",
+   "sources": [
+    [
+     "Edupedu (date BAC+): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 licee după ultima medie de admitere 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BAC+ data): top 20 high schools by 2025 baccalaureate average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 high schools by the last admission average in 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,31",
+    "C2": "promovare: 99,3%",
+    "C3": "ultima medie de admitere 2025: 9,37",
+    "C4": "BAC 9,31 − admitere 9,37 = -0,06",
+    "C10": "ultima medie de admitere 2025: 9,37",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.34,
+   "met": 10
+  },
+  {
+   "id": "negruzzi",
+   "name": "Colegiul Național „Costache Negruzzi”, Iași",
+   "nameEn": "“Costache Negruzzi” National College, Iași",
+   "data": {
+    "bac": 9.27,
+    "rate": 100,
+    "adm": 9.37
+   },
+   "c": [
+    7,
+    10,
+    7,
+    5,
+    9,
+    10,
+    9,
+    8,
+    8,
+    7,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "BAC 9,27 cu promovare 100% și admitere 9,37.",
+   "whyEn": "Baccalaureate 9.27 with a 100% pass rate and admission at 9.37.",
+   "sources": [
+    [
+     "Edupedu (date BAC+): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 licee după ultima medie de admitere 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BAC+ data): top 20 high schools by 2025 baccalaureate average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 high schools by the last admission average in 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,27",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,37",
+    "C4": "BAC 9,27 − admitere 9,37 = -0,10",
+    "C10": "ultima medie de admitere 2025: 9,37",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.24,
+   "met": 10
+  },
+  {
+   "id": "racovita-cj",
+   "name": "Colegiul Național „Emil Racoviță”, Cluj-Napoca",
+   "nameEn": "“Emil Racoviță” National College, Cluj-Napoca",
+   "data": {
+    "bac": 9.33,
+    "rate": 100,
+    "adm": 9.32
+   },
+   "c": [
+    8,
+    10,
+    6,
+    6,
+    9,
+    10,
+    9,
+    8,
+    8,
+    8,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "Cel mai bun liceu din Cluj la BAC 2025 (9,33), cu media la BAC peste media de admitere: elevii ies cel puțin la nivelul la care au intrat.",
+   "whyEn": "The best high school in Cluj at the 2025 baccalaureate (9.33), with a baccalaureate average above the admission average: students leave at least at the level they entered.",
+   "sources": [
+    [
+     "Edupedu (date BAC+): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 licee după ultima medie de admitere 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BAC+ data): top 20 high schools by 2025 baccalaureate average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 high schools by the last admission average in 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,33",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,32",
+    "C4": "BAC 9,33 − admitere 9,32 = 0,01",
+    "C10": "ultima medie de admitere 2025: 9,32",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.48,
+   "met": 9
+  },
+  {
+   "id": "lazar",
+   "name": "Colegiul Național „Gheorghe Lazăr”, București",
+   "nameEn": "“Gheorghe Lazăr” National College, Bucharest",
+   "data": {
+    "bac": 9.53,
+    "rate": 100,
+    "adm": 9.62
+   },
+   "c": [
+    9,
+    10,
+    9,
+    5,
+    9,
+    10,
+    9,
+    8,
+    8,
+    2,
+    5,
+    8,
+    null,
+    null
+   ],
+   "why": "Primul liceu din țară după media la BAC 2025 (9,53) și după ultima medie de admitere (9,62); toți absolvenții au promovat.",
+   "whyEn": "First high school in the country by the 2025 baccalaureate average (9.53) and by the last admission average (9.62); every graduate passed.",
+   "sources": [
+    [
+     "Edupedu (date BAC+): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 licee după ultima medie de admitere 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BAC+ data): top 20 high schools by 2025 baccalaureate average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 high schools by the last admission average in 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,53",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,62",
+    "C4": "BAC 9,53 − admitere 9,62 = -0,09",
+    "C10": "ultima medie de admitere 2025: 9,62",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.44,
+   "met": 9
+  },
+  {
+   "id": "cn-iasi",
+   "name": "Colegiul Național, Iași",
+   "nameEn": "The National College, Iași",
+   "data": {
+    "bac": 9.41,
+    "rate": 100,
+    "adm": 9.42
+   },
+   "c": [
+    8,
+    10,
+    7,
+    6,
+    9,
+    10,
+    9,
+    8,
+    8,
+    6,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "Al doilea liceu din țară la BAC 2025 (9,41), cu o medie de admitere mai mică decât liceele de top din București: rezultate foarte bune la un prag de intrare mai accesibil.",
+   "whyEn": "Second in the country at the 2025 baccalaureate (9.41), with a lower admission average than Bucharest’s top schools: very good results at a more accessible entry threshold.",
+   "sources": [
+    [
+     "Edupedu (date BAC+): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 licee după ultima medie de admitere 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BAC+ data): top 20 high schools by 2025 baccalaureate average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 high schools by the last admission average in 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,41",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,42",
+    "C4": "BAC 9,41 − admitere 9,42 = -0,01",
+    "C10": "ultima medie de admitere 2025: 9,42",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.42,
+   "met": 9
+  },
+  {
+   "id": "cosbuc",
+   "name": "Colegiul Național Bilingv „George Coșbuc”, București",
+   "nameEn": "“George Coșbuc” Bilingual National College, Bucharest",
+   "data": {
+    "bac": 9.23,
+    "rate": 100,
+    "adm": 9.3
+   },
+   "c": [
+    7,
+    10,
+    6,
+    5,
+    9,
+    10,
+    9,
+    8,
+    8,
+    8,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "Liceu bilingv cu BAC 9,23 și admitere 9,30; profil de limbi străine, util pentru studii în străinătate.",
+   "whyEn": "A bilingual high school with a 9.23 baccalaureate and a 9.30 admission threshold; a foreign-language profile, useful for studying abroad.",
+   "sources": [
+    [
+     "Edupedu (date BAC+): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 licee după ultima medie de admitere 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BAC+ data): top 20 high schools by 2025 baccalaureate average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 high schools by the last admission average in 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,23",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,3",
+    "C4": "BAC 9,23 − admitere 9,3 = -0,07",
+    "C10": "ultima medie de admitere 2025: 9,3",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.24,
+   "met": 9
+  },
+  {
+   "id": "avram-iancu",
+   "name": "Liceul Teoretic „Avram Iancu”, Cluj-Napoca",
+   "nameEn": "“Avram Iancu” Theoretical High School, Cluj-Napoca",
+   "data": {
+    "bac": 9.21,
+    "rate": 99,
+    "adm": 9.35
+   },
+   "c": [
+    7,
+    8,
+    7,
+    5,
+    9,
+    10,
+    9,
+    6,
+    8,
+    7,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "Liceu teoretic intrat în ambele topuri naționale: admitere 9,35 și BAC 9,21.",
+   "whyEn": "A theoretical high school present in both national tops: admission 9.35 and baccalaureate 9.21.",
+   "sources": [
+    [
+     "Edupedu (date BAC+): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 licee după ultima medie de admitere 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BAC+ data): top 20 high schools by 2025 baccalaureate average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 high schools by the last admission average in 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,21",
+    "C2": "promovare: 99%",
+    "C3": "ultima medie de admitere 2025: 9,35",
+    "C4": "BAC 9,21 − admitere 9,35 = -0,14",
+    "C10": "ultima medie de admitere 2025: 9,35",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.04,
+   "met": 9
+  },
+  {
+   "id": "mircea",
+   "name": "Colegiul Național „Mircea cel Bătrân”, Constanța",
+   "nameEn": "“Mircea cel Bătrân” National College, Constanța",
+   "data": {
+    "bac": 9.24,
+    "rate": 99.5,
+    "adm": 9.57
+   },
+   "c": [
+    7,
+    9,
+    9,
+    3,
+    9,
+    10,
+    7,
+    8,
+    8,
+    3,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "A patra medie de admitere din țară (9,57) și BAC 9,24: foarte căutat, dar rezultatele la final sunt sub prețul de intrare.",
+   "whyEn": "The fourth-highest admission average in the country (9.57) and a 9.24 baccalaureate: very sought after, but final results are below the entry price.",
+   "sources": [
+    [
+     "Edupedu (date BAC+): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 licee după ultima medie de admitere 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BAC+ data): top 20 high schools by 2025 baccalaureate average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 high schools by the last admission average in 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,24",
+    "C2": "promovare: 99,5%",
+    "C3": "ultima medie de admitere 2025: 9,57",
+    "C4": "BAC 9,24 − admitere 9,57 = -0,33",
+    "C10": "ultima medie de admitere 2025: 9,57",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 6.74,
+   "met": 9
+  },
+  {
+   "id": "vianu",
+   "name": "Colegiul Național de Informatică „Tudor Vianu”, București",
+   "nameEn": "“Tudor Vianu” National College of Computer Science, Bucharest",
+   "data": {
+    "bac": 9.38,
+    "rate": 100,
+    "adm": 9.62
+   },
+   "c": [
+    8,
+    10,
+    9,
+    4,
+    9,
+    10,
+    9,
+    9,
+    8,
+    2,
+    5,
+    null,
+    null,
+    null
+   ],
+   "why": "Liceu specializat în informatică, cu cea mai mare medie de admitere din țară (9,62, la egalitate cu „Gheorghe Lazăr”) și 9,38 la BAC.",
+   "whyEn": "A high school specialised in computer science, with the highest admission average in the country (9.62, tied with “Gheorghe Lazăr”) and 9.38 at the baccalaureate.",
+   "sources": [
+    [
+     "Edupedu (date BAC+): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 licee după ultima medie de admitere 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BAC+ data): top 20 high schools by 2025 baccalaureate average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 high schools by the last admission average in 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,38",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,62",
+    "C4": "BAC 9,38 − admitere 9,62 = -0,24",
+    "C10": "ultima medie de admitere 2025: 9,62",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.06,
+   "met": 8
+  },
+  {
+   "id": "sava",
+   "name": "Colegiul Național „Sfântul Sava”, București",
+   "nameEn": "“Saint Sava” National College, Bucharest",
+   "data": {
+    "bac": 9.35,
+    "rate": 100,
+    "adm": 9.6
+   },
+   "c": [
+    8,
+    10,
+    9,
+    4,
+    9,
+    10,
+    9,
+    8,
+    8,
+    2,
+    5,
+    null,
+    null,
+    null
+   ],
+   "why": "Unul dintre cele mai vechi licee din țară, cu admitere de 9,60 și BAC de 9,35; intrarea e foarte grea pentru un rezultat apropiat de al altor licee de top.",
+   "whyEn": "One of the oldest high schools in the country, with a 9.60 admission threshold and a 9.35 baccalaureate average; entry is very hard for a result close to that of other top schools.",
+   "sources": [
+    [
+     "Edupedu (date BAC+): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 licee după ultima medie de admitere 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BAC+ data): top 20 high schools by 2025 baccalaureate average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ],
+    [
+     "Edupedu: top 20 high schools by the last admission average in 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
+    ]
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,35",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,6",
+    "C4": "BAC 9,35 − admitere 9,6 = -0,25",
+    "C10": "ultima medie de admitere 2025: 9,6",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.02,
+   "met": 8
+  },
+  {
+   "id": "saguna",
+   "name": "Colegiul Național „Andrei Șaguna”, Brașov",
+   "nameEn": "“Andrei Șaguna” National College, Brașov",
+   "data": {
+    "bac": 9.3,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    8,
+    10,
+    null,
+    null,
+    5,
+    10,
+    7,
+    8,
+    8,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "Cel mai bun liceu din Brașov la BAC 2025 (9,30, promovare 100%); nu apare în topul național după media de admitere, deci intrarea e mai accesibilă.",
+   "whyEn": "The best high school in Brașov at the 2025 baccalaureate (9.30, 100% pass rate); it is not in the national top by admission average, so entry is more accessible.",
+   "sources": [
+    [
+     "Edupedu (date BAC+): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BAC+ data): top 20 high schools by 2025 baccalaureate average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/"
+    ]
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,3",
+    "C2": "promovare: 100%",
+    "C5": "doar în topul la BAC"
+   },
+   "score": 6.76,
+   "met": 7
+  }
+ ]
+}

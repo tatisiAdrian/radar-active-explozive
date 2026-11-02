@@ -9,6 +9,8 @@ import SP500Section from './SP500Section.astro';
 import RomaniaSection from './RomaniaSection.astro';
 import ImobSection from './ImobSection.astro';
 import ProjectsSection from './ProjectsSection.astro';
+import SocialSection from './SocialSection.astro';
+import { SOCIAL } from '../data/social';
 import PhotoHeader from './PhotoHeader.astro';
 import { photoForDomain } from '../data/photos';
 import spMacro from '../data/sp500/macro.json';
@@ -48,7 +50,8 @@ if (domain.slug === 'economii-emergente') sources.push(emMacro.sources.imf, emMa
 if (domain.slug === 'sp500') sources.push(spMacro.sources.sec, spMacro.sources.prices);
 if (domain.slug === 'imobiliare') sources.push(imobMacro.sources.bis, imobMacro.sources.imf);
 if (domain.slug === 'proiecte-imobiliare') sources.push(dbSource);
-const scored = ['forex', 'economii-emergente', 'sp500', 'startups/europa/romania', 'imobiliare', 'proiecte-imobiliare'].includes(domain.slug);
+const isSocial = Boolean(SOCIAL[domain.slug]);
+const scored = isSocial || ['forex', 'economii-emergente', 'sp500', 'startups/europa/romania', 'imobiliare', 'proiecte-imobiliare'].includes(domain.slug);
 if (domain.slug === 'startups/europa/romania') sources.push(dbSource);
 const srcs = [...new Map(sources.map((s) => [s.url, sourceL(s, lang)])).values()];
 const criteria = domain.criteria ? (en ? CRITERIA_EN : CRITERIA)[domain.criteria] : undefined;
@@ -80,6 +83,7 @@ const home = en ? `${base}en/` : base;
   {domain.slug === 'sp500' && <SP500Section lang={lang} />}
   {domain.slug === 'imobiliare' && <ImobSection lang={lang} />}
   {domain.slug === 'proiecte-imobiliare' && <ProjectsSection lang={lang} />}
+  {isSocial && <SocialSection slug={domain.slug} lang={lang} />}
   {domain.radarMarket && radarRows > 0 && <RadarSection market={domain.radarMarket} domain={domain.slug} countries={domain.countries} lang={lang} />}
   {domain.slug === 'startups/europa/romania' && <RomaniaSection lang={lang} />}
   {domain.radarMarket && radarRows === 0 && domain.slug !== 'startups/europa/romania' && (

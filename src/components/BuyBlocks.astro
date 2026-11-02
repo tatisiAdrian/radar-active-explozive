@@ -1,7 +1,7 @@
 ---
 import type { Lang } from '../data/i18n';
 import type { CatKey } from '../data/categories';
-interface Props { lang?: Lang; cat: CatKey }
+interface Props { lang?: Lang; cat: CatKey | string }
 const { lang = 'ro', cat } = Astro.props;
 const en = lang === 'en';
 const base = import.meta.env.BASE_URL;

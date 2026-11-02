@@ -17,19 +17,19 @@ const LABEL: Record<string, string> = { forex: 'Forex', emergente: 'Economii eme
 const snapshots = Object.values(shaFiles).map((txt) => {
   const [hash, file] = txt.trim().split(/\s+/);
   const m = file.match(/^(?:(.+)-)?(\d{4}-\d{2}-\d{2})\.json$/)!;
-  return { file, hash, date: m[2], label: m[1] ? LABEL[m[1]] ?? m[1] : 'Cripto, companii, mărfuri (88 de active)' };
+  return { file, hash, date: m[2], label: m[1] ? LABEL[m[1]] ?? OVERVIEW.find((d) => `social-${d.slug}` === m[1])?.title ?? m[1] : 'Cripto, companii, mărfuri (88 de active)' };
 }).sort((a, b) => b.date.localeCompare(a.date) || a.label.localeCompare(b.label));
 
 const general = CRITERIA.general;
 ---
 
 <Base title="Toate domeniile" alt="en/" description="Un singur radar pentru cripto, start-ups, mărfuri, Forex, economii emergente și S&P 500: activele care adună cele mai multe din cele 14 condiții pentru o creștere puternică.">
-  <PhotoHeader photo={photo('home')!} title="Două radare: investiții și macroeconomie" eyebrow={`Pre-identificare · date actualizate pe ${fmtDate(UPDATED)}`} summary="Nu amestecăm merele cu perele. Activele în care poți investi direct (cripto, start-ups, acțiuni) au radarul lor. Contextul în care trăiesc toate investițiile (monede, economii naționale, mărfuri) are alt radar. Ambele folosesc aceleași 14 condiții, adaptate fiecărui domeniu. E o listă de urmărit, nu un sfat de cumpărare." position="center 60%" />
+  <PhotoHeader photo={photo('home')!} title="Trei radare: investiții, macroeconomie și social" eyebrow={`Pre-identificare · date actualizate pe ${fmtDate(UPDATED)}`} summary="Nu amestecăm merele cu perele. Activele în care poți investi direct (cripto, start-ups, acțiuni) au radarul lor. Contextul în care trăiesc toate investițiile (monede, economii naționale, mărfuri) are alt radar. Iar deciziile de viață (unde înveți, ce meserie alegi, unde lucrezi și unde trăiești) au un al treilea. Toate folosesc aceleași 14 condiții, adaptate fiecărui domeniu." position="center 60%" />
   <section class="home-intro">
     <div class="hh-text">
       <div class="hh-stats">
         <div><b>{ALL.length}</b><span>active analizate</span></div>
-        <div><b>2</b><span>categorii, {OVERVIEW.length} domenii</span></div>
+        <div><b>3</b><span>categorii, {OVERVIEW.length} domenii</span></div>
         <div><b>{strongAll}</b><span>cu 10+ condiții</span></div>
         <div><b>{snapshots.length}</b><span>instantanee înghețate</span></div>
       </div>
@@ -39,7 +39,7 @@ const general = CRITERIA.general;
   <HomeCats lang="ro" />
 
   <nav class="subnav" aria-label="Pe această pagină">
-    <a href={`${base}investitii/`}>Investiții</a><a href={`${base}macro/`}>Macroeconomie</a><a href="#metoda">Metoda</a><a href="#istoric">Istoric</a><a href="#transparenta">Transparență</a>
+    <a href={`${base}investitii/`}>Investiții</a><a href={`${base}macro/`}>Macroeconomie</a><a href={`${base}social/`}>Social</a><a href="#metoda">Metoda</a><a href="#istoric">Istoric</a><a href="#transparenta">Transparență</a>
   </nav>
 
   <section class="steps" id="metoda">

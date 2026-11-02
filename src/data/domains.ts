@@ -304,6 +304,46 @@ export const domains: Domain[] = [
       'Prin ce companii listate poate un investitor să ajungă la aceste proiecte?',
     ],
   },
+  {
+    slug: 'licee-romania',
+    criteria: 'licee',
+    title: 'Cele mai bune licee din România',
+    summary: '11 licee de top, notate pe 14 condiții: media la BAC 2025, promovarea, ultima medie de admitere și ce primesc elevii față de cât de greu intră.',
+    status: 'activ',
+    questions: ["Care licee au cele mai bune rezultate la bacalaureat?", "Unde primesc elevii cel mai mult față de cât de greu e să intri?", "Merită un liceu de top din București față de unul din Iași sau Cluj?"],
+  },
+  {
+    slug: 'facultati-romania',
+    criteria: 'facultati',
+    title: 'Cele mai bune universități din România',
+    summary: '11 universități românești, notate pe 14 condiții: clasamentele QS și THE 2026, angajabilitatea absolvenților, domeniile cerute și orașul.',
+    status: 'activ',
+    questions: ["Care universități românești au cea mai bună recunoaștere internațională?", "Unde își găsesc absolvenții cel mai ușor de lucru?", "Cât contează orașul în care studiezi?"],
+  },
+  {
+    slug: 'meserii-romania',
+    criteria: 'meserii',
+    title: 'Cele mai bune meserii în România',
+    summary: '11 meserii, notate pe 14 condiții: câștig, cererea angajatorilor, creșterea până în 2030, rezistența la AI, timpul de pregătire și riscurile.',
+    status: 'activ',
+    questions: ["Ce meserii combină un câștig bun cu o cerere mare?", "Care meserii sunt cele mai greu de înlocuit de inteligența artificială?", "Merită o meserie cu pregătire scurtă față de una cu studii lungi?"],
+  },
+  {
+    slug: 'angajatori-romania',
+    criteria: 'angajatori',
+    title: 'Cei mai buni angajatori din România',
+    summary: '11 angajatori, notați pe 14 condiții: dorința candidaților (Catalyst 2025), certificarea Top Employers 2026, salarii, stabilitate și șansele reale de angajare.',
+    status: 'activ',
+    questions: ["Care sunt angajatorii cei mai doriți și cât de greu e să intri la ei?", "Ce angajatori oferă locuri de muncă în toată țara?", "Unde e riscul de restructurare mai mare?"],
+  },
+  {
+    slug: 'localitati-romania',
+    criteria: 'localitati',
+    title: 'Cele mai bune localități din România pentru o viață de calitate',
+    summary: '11 orașe, notate pe 14 condiții: venituri, locuri de muncă, atractivitate, educație, sănătate, natură, conectivitate, costul locuinței și riscuri.',
+    status: 'activ',
+    questions: ["În ce orașe se trăiește cel mai bine, luând în calcul și costurile?", "Unde sunt salarii și locuri de muncă bune, fără aglomerația Capitalei?", "Ce oraș mic oferă o viață bună la costuri mici?"],
+  },
 ];
 
 export const getDomain = (slug: string) => domains.find((d) => d.slug === slug);

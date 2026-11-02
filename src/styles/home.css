@@ -84,7 +84,7 @@
 .cat-door b { font: 700 1.3rem var(--f-display); }
 .cat-door span { color: var(--muted); }
 .cat-door em { font-style: normal; font-weight: 600; color: var(--cat); }
-.cats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.5rem; }
+.cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 1.5rem; }
 .cat-panel { display: flex; flex-direction: column; gap: .6rem; background: var(--surface); border: 1px solid var(--border); border-top: 5px solid var(--cat); border-radius: var(--radius); padding: 1.3rem 1.4rem; color: var(--text); text-decoration: none; transition: transform .15s, box-shadow .15s; }
 .cat-panel:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(15, 29, 46, .12); }
 .cat-panel .eyebrow { margin: 0; }

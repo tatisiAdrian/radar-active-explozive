@@ -4,7 +4,7 @@ import type { Lang } from './i18n';
  * Cele două categorii ale site-ului: activele în care investești direct
  * și contextul macroeconomic (monede, economii, mărfuri).
  */
-export type CatKey = 'investitii' | 'macro';
+export type CatKey = 'investitii' | 'macro' | 'social';
 export interface Category {
   key: CatKey;
   slugs: string[];
@@ -62,6 +62,30 @@ export const CATEGORIES: Record<CatKey, Category> = {
       },
     },
   },
+  social: {
+  key: 'social',
+  slugs: ['licee-romania', 'facultati-romania', 'meserii-romania', 'angajatori-romania', 'localitati-romania'],
+  path: { ro: 'social/', en: 'en/social/' },
+  color: '#6b4fbb',
+  t: {
+    ro: {
+      name: 'Social',
+      eyebrow: 'Categoria 3 · Social',
+      title: 'Radarul social',
+      question: 'Unde înveți, ce meserie alegi, unde lucrezi și unde trăiești?',
+      lede: 'Cele mai bune licee, universități, meserii, angajatori și localități pentru o viață de calitate: întâi în România, apoi în Europa și în lume. Aceleași 14 condiții, adaptate: rezultate, cerere, costuri, riscuri.',
+      cta: 'Deschide radarul social →',
+    },
+    en: {
+      name: 'Social',
+      eyebrow: 'Category 3 · Social',
+      title: 'The social radar',
+      question: 'Where to study, which job to choose, where to work and where to live?',
+      lede: 'The best high schools, universities, jobs, employers and places for a good life: first in Romania, then in Europe and the world. The same 14 conditions, adapted: results, demand, costs, risks.',
+      cta: 'Open the social radar →',
+    },
+  },
+},
 };
-export const CAT_LIST = [CATEGORIES.investitii, CATEGORIES.macro];
+export const CAT_LIST = [CATEGORIES.investitii, CATEGORIES.macro, CATEGORIES.social];
 export const catOf = (slug: string) => CAT_LIST.find((c) => c.slugs.some((s) => slug === s || slug.startsWith(s + '/'))) ?? CATEGORIES.investitii;

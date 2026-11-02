@@ -3,10 +3,17 @@
  * cele 14 condiții pe fiecare set și explicațiile pe înțeles ale notelor.
  * Notele și datele sunt aceleași; se traduce doar textul.
  */
+import { SOCIAL_SETS } from './social-criteria';
+
 export type Lang = 'ro' | 'en';
 type Three = [low: string, mid: string, high: string];
 
 export const DOMAIN_EN: Record<string, { title: string; short: string; what: string; summary: string }> = {
+  'licee-romania': { title: "The best high schools in Romania", short: "High schools", what: "the best high schools in romania", summary: "11 top high schools, scored on 14 conditions: the 2025 baccalaureate average, the pass rate, the last admission average and what students get compared with how hard it is to get in." },
+  'facultati-romania': { title: "The best universities in Romania", short: "Universities", what: "the best universities in romania", summary: "11 Romanian universities, scored on 14 conditions: the QS and THE 2026 rankings, graduate employability, in-demand fields and the city." },
+  'meserii-romania': { title: "The best jobs in Romania", short: "Jobs", what: "the best jobs in romania", summary: "11 jobs, scored on 14 conditions: earnings, employer demand, growth until 2030, resistance to AI, training time and risks." },
+  'angajatori-romania': { title: "The best employers in Romania", short: "Employers", what: "the best employers in romania", summary: "11 employers, scored on 14 conditions: candidate demand (Catalyst 2025), Top Employers 2026 certification, pay, stability and real chances of being hired." },
+  'localitati-romania': { title: "The best places in Romania for a good life", short: "Places", what: "the best places in romania for a good life", summary: "11 cities, scored on 14 conditions: income, jobs, attractiveness, education, healthcare, nature, connectivity, housing cost and risks." },
   crypto: { title: 'Crypto assets', short: 'Crypto', what: 'launched and unlaunched tokens', summary: 'Market cap, volatility, adoption and regulation in the crypto market.' },
   startups: { title: 'Start-ups worldwide', short: 'Start-ups', what: 'recently listed companies, pre-IPO and start-ups', summary: 'Funding, valuations and the dynamics of start-up ecosystems worldwide.' },
   'startups/europa/romania': { title: 'Start-ups in Romania', short: 'Romania', what: 'tech companies founded in Romania', summary: '8 tech companies founded in Romania, from UiPath and Bitdefender to seed-stage start-ups, scored on the same 14 conditions.' },
@@ -42,7 +49,7 @@ export const GROUP_EN: Record<string, string> = {
   startup: 'Start-up with product', seed: 'Pre-product start-up', mature: 'Mature, below peak', emerging: 'Emerging',
 };
 export const ACCESS_EN: Record<string, string> = {
-  'Cumpărabil': 'Buyable', 'Prin utilizare': 'By using it', 'Acces restrâns': 'Restricted access', 'Indirect': 'Indirect',
+  'Deschis tuturor': 'Open to all', 'Cumpărabil': 'Buyable', 'Prin utilizare': 'By using it', 'Acces restrâns': 'Restricted access', 'Indirect': 'Indirect',
 };
 export const FOND_EN: Record<string, string> = {
   'Fond fără formă': 'Substance without form',
@@ -57,6 +64,12 @@ export const FOND_HINT_EN: Record<string, string> = {
   'in-confirmare': 'The substance exists only partly: worth watching whether it is confirmed.',
 };
 export const PHOTO_ALT_EN: Record<string, string> = {
+  'social': "The crowd crossing Tokyo’s Shibuya intersection, seen from above",
+  'licee-romania': "A student writing at a desk in a classroom",
+  'facultati-romania': "Graduates throwing their caps in the air",
+  'meserii-romania': "A welder at work, sparks flying against the sunset",
+  'angajatori-romania': "Coworkers laughing and talking at a laptop in an open-plan office",
+  'localitati-romania': "The red cable car above Brașov",
   'home': 'A radio telescope under a starry sky, in Germany',
   'investitii': 'The bronze bull on Wall Street, New York',
   'macro': 'Shipping containers at a port in Shenzhen, China, seen from above',
@@ -201,6 +214,7 @@ export const CRITERIA_EN: Record<string, [string, string][]> = {
     ['Crowding (inverse)', 'Moderate institutional positioning, few bets on the same side.'],
     ['Low risks', 'No major lawsuits, investigations or regulatory risk.'],
   ],
+  ...Object.fromEntries(Object.entries(SOCIAL_SETS).map(([k, v]) => [k, v.en])),
 };
 
 const general: Three[] = [
@@ -315,5 +329,5 @@ const proiecteEn: Three[] = [
   ['Many investors on the same bet.', 'Moderate positioning.', 'Few investors on the same bet.'],
   ['High risks: delays, lawsuits or geopolitics.', 'A few risks to watch.', 'Low risks.'],
 ];
-export const SETS_EN: Record<string, Three[]> = { general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare: imobiliareEn, 'proiecte-imobiliare': proiecteEn };
+export const SETS_EN: Record<string, Three[]> = { general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare: imobiliareEn, 'proiecte-imobiliare': proiecteEn, ...Object.fromEntries(Object.entries(SOCIAL_SETS).map(([k, v]) => [k, v.exEn])) };
 export const NA_EN = 'Cannot be assessed yet (for example, the asset is not publicly traded).';

@@ -3,6 +3,8 @@
  * și fiecare condiție, o propoziție pentru notă mică (0–4), medie (5–6) și mare (7–10).
  * Lângă propoziție, paginile afișează și cifra din spate, acolo unde există.
  */
+import { SOCIAL_SETS } from './social-criteria';
+
 type Three = [low: string, mid: string, high: string];
 
 const general: Three[] = [
@@ -123,7 +125,7 @@ const proiecte: Three[] = [
   ['Riscuri mari: întârzieri, procese sau geopolitică.', 'Câteva riscuri de urmărit.', 'Riscuri mici.'],
 ];
 
-export const SETS: Record<string, Three[]> = { general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare, 'proiecte-imobiliare': proiecte };
+export const SETS: Record<string, Three[]> = { general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare, 'proiecte-imobiliare': proiecte, ...Object.fromEntries(Object.entries(SOCIAL_SETS).map(([k, v]) => [k, v.exRo])) };
 
 /** Propoziția pe înțeles pentru nota v la condiția i (0-13) din setul dat. */
 export function explain(set: string, i: number, v: number | null | undefined): string {
