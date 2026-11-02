@@ -280,6 +280,30 @@ export const domains: Domain[] = [
       'Cât de aglomerate sunt investițiile în companiile legate de inteligența artificială?',
     ],
   },
+  {
+    slug: 'imobiliare',
+    criteria: 'imobiliare',
+    title: 'Piața imobiliară națională',
+    summary: '16 piețe imobiliare naționale, inclusiv România, notate pe aceleași 14 condiții, cu date BIS și FMI: prețul real al locuințelor, datoria gospodăriilor, dobânda reală.',
+    status: 'activ',
+    questions: [
+      'În ce țări sunt locuințele scumpe sau ieftine față de propriul istoric, în termeni reali?',
+      'Unde e cererea susținută de economie și de un deficit real de locuințe, și unde de credit ieftin sau de investitori străini?',
+      'Cum se compară piața imobiliară din România cu cele din regiune și cu marile piețe ale lumii?',
+    ],
+  },
+  {
+    slug: 'proiecte-imobiliare',
+    criteria: 'proiecte-imobiliare',
+    title: 'Proiecte imobiliare de interes mondial',
+    summary: '15 proiecte imobiliare de interes mondial, de la centre de date și parcuri logistice la capitale noi, notate pe aceleași 14 condiții.',
+    status: 'activ',
+    questions: [
+      'Care proiecte imobiliare mari au cerere reală, chiriași și finanțare sănătoasă?',
+      'Care sunt doar formă: clădiri spectaculoase sau orașe noi fără oameni și fără venituri?',
+      'Prin ce companii listate poate un investitor să ajungă la aceste proiecte?',
+    ],
+  },
 ];
 
 export const getDomain = (slug: string) => domains.find((d) => d.slug === slug);

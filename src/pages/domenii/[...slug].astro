@@ -7,6 +7,9 @@ import ForexSection from '../../components/ForexSection.astro';
 import EmergingSection from '../../components/EmergingSection.astro';
 import SP500Section from '../../components/SP500Section.astro';
 import RomaniaSection from '../../components/RomaniaSection.astro';
+import ImobSection from '../../components/ImobSection.astro';
+import ProjectsSection from '../../components/ProjectsSection.astro';
+import imobMacro from '../../data/imobiliare/macro.json';
 import PhotoHeader from '../../components/PhotoHeader.astro';
 import { photoForDomain } from '../../data/photos';
 import spMacro from '../../data/sp500/macro.json';
@@ -49,7 +52,9 @@ if (radarRows) sources.push(dbSource);
 if (domain.slug === 'forex') sources.push(forexMacro.sources.imf, forexMacro.sources.bis, forexMacro.sources.fx);
 if (domain.slug === 'economii-emergente') sources.push(emMacro.sources.imf, emMacro.sources.bis, emMacro.sources.fx);
 if (domain.slug === 'sp500') sources.push(spMacro.sources.sec, spMacro.sources.prices);
-const scored = ['forex', 'economii-emergente', 'sp500', 'startups/europa/romania'].includes(domain.slug);
+if (domain.slug === 'imobiliare') sources.push(imobMacro.sources.bis, imobMacro.sources.imf);
+if (domain.slug === 'proiecte-imobiliare') sources.push(dbSource);
+const scored = ['forex', 'economii-emergente', 'sp500', 'startups/europa/romania', 'imobiliare', 'proiecte-imobiliare'].includes(domain.slug);
 if (domain.slug === 'startups/europa/romania') sources.push(dbSource);
 const criteria = domain.criteria ? CRITERIA[domain.criteria] : undefined;
 if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domain.criteria}” nu există (${domain.slug}).`);
@@ -77,6 +82,8 @@ if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domai
   {domain.slug === 'forex' && <ForexSection />}
   {domain.slug === 'economii-emergente' && <EmergingSection />}
   {domain.slug === 'sp500' && <SP500Section />}
+  {domain.slug === 'imobiliare' && <ImobSection />}
+  {domain.slug === 'proiecte-imobiliare' && <ProjectsSection />}
   {domain.radarMarket && radarRows > 0 && <RadarSection market={domain.radarMarket} domain={domain.slug} countries={domain.countries} />}
   {domain.slug === 'startups/europa/romania' && <RomaniaSection />}
   {domain.radarMarket && radarRows === 0 && domain.slug !== 'startups/europa/romania' && (

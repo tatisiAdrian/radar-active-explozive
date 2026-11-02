@@ -203,7 +203,7 @@
     "C12": "prețul real +1,5% într-un an (2026-Q2)"
    },
    "gaps": [],
-   "why": "Prețurile locuințelor au crescut cu 7,8% în primul trimestru din 2026, peste media UE, iar dezvoltatorii premium raportează prețuri medii în creștere. Rata proprietății e printre cele mai mari din Europa și cererea vine mai ales de la cei care locuiesc efectiv în apartamente, nu de la fonduri. Fondul de locuințe e vechi, iar marile orașe (București, Cluj, Iași, Brașov, Timișoara) atrag oameni. Riscurile sunt fiscale: deficitul bugetar mare a adus creșteri de taxe și o dobândă încă ridicată.",
+   "why": "Prețurile locuințelor au crescut nominal cu 7,8% în primul trimestru din 2026 (Eurostat), peste media UE; ajustată cu inflația, care a rămas ridicată, creșterea e mult mai mică. Dezvoltatorii premium raportează prețuri medii în creștere. Rata proprietății e printre cele mai mari din Europa și cererea vine mai ales de la cei care locuiesc efectiv în apartamente, nu de la fonduri. Fondul de locuințe e vechi, iar marile orașe (București, Cluj, Iași, Brașov, Timișoara) atrag oameni. Riscurile sunt fiscale: deficitul bugetar mare a adus creșteri de taxe și o dobândă încă ridicată.",
    "sources": [
     [
      "Romania Insider: prețurile locuințelor +7,8% în T1 2026 (Eurostat)",
@@ -626,7 +626,7 @@
     "C10",
     "C12"
    ],
-   "why": "Dubai a avut o creștere excepțională după 2021, dar în al doilea trimestru din 2026 prețurile au scăzut cu 4% și chiriile cu 6% față de trimestrul anterior, pe fondul unui val de livrări (peste 13.000 de locuințe în T2 și circa 32.000 așteptate în a doua jumătate a anului). Cererea vine mult din partea investitorilor străini, iar războiul din regiune a crescut riscul.",
+   "why": "BIS nu publică încă un indice al prețurilor locuințelor pentru Emiratele Arabe Unite, deci trei condiții calculate lipsesc. Dubai a avut o creștere excepțională după 2021, dar în al doilea trimestru din 2026 prețurile au scăzut cu 4% și chiriile cu 6% față de trimestrul anterior, pe fondul unui val de livrări (peste 13.000 de locuințe în T2 și circa 32.000 așteptate în a doua jumătate a anului). Cererea vine mult din partea investitorilor străini, iar războiul din regiune a crescut riscul.",
    "sources": [
     [
      "Khaleej Times (Cushman & Wakefield): prețuri și chirii în scădere, august 2026",

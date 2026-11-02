@@ -13,6 +13,8 @@ export const DOMAIN_EN: Record<string, { title: string; short: string; what: str
   sp500: { title: 'S&P 500', short: 'S&P 500', what: 'the largest US companies', summary: '20 of the largest companies in the S&P 500, scored on the same 14 conditions, with figures from annual reports and weekly prices.' },
   marfuri: { title: 'Commodities', short: 'Commodities', what: 'mature and emerging commodities', summary: 'Energy, metals and agricultural products: prices, demand and supply.' },
   forex: { title: 'Forex', short: 'Forex', what: 'major and emerging currencies', summary: '15 currencies scored on the same 14 conditions, with IMF and BIS data and weekly exchange rates.' },
+  imobiliare: { title: 'National housing markets', short: 'Housing', what: 'national housing markets, including Romania', summary: '16 national housing markets, including Romania, scored on the same 14 conditions, with BIS and IMF data: real house prices, household debt, real interest rates.' },
+  'proiecte-imobiliare': { title: 'World real-estate projects', short: 'Real estate', what: 'landmark real-estate projects and the companies behind them', summary: '15 real-estate projects of worldwide interest, from data centres and logistics parks to new capitals, scored on the same 14 conditions.' },
   'economii-emergente': { title: 'Emerging economies', short: 'Emerging', what: 'emerging economies, including Romania', summary: '15 emerging economies, including Romania, scored on the same 14 conditions, with IMF and BIS data and each country’s stock market.' },
 };
 
@@ -56,6 +58,8 @@ export const PHOTO_ALT_EN: Record<string, string> = {
   marfuri: 'Combines harvesting a wheat field',
   forex: 'Dollar and euro banknotes spread on a table',
   emergente: 'The tall buildings of Jakarta, Indonesia',
+  imobiliare: 'Dense apartment buildings in a city, seen from above',
+  proiecte: 'A tall building under construction with a crane on top, in London',
   fond: 'Tall shelves of old books in a library',
 };
 
@@ -107,6 +111,38 @@ export const CRITERIA_EN: Record<string, [string, string][]> = {
     ['Trend and volatility', 'Healthy trend, no sudden jumps.'],
     ['Crowding (inverse)', 'Few speculators on the same side (CFTC reports).'],
     ['Political risk', 'No sanctions, capital controls or political crises.'],
+  ],
+  imobiliare: [
+    ['Real demand', 'Economic growth and jobs: people can afford to buy or rent.'],
+    ['Supply discipline', 'New construction in line with needs, no wave of empty flats.'],
+    ['Household debt', 'Low household debt versus GDP: room for credit to grow soundly.'],
+    ['New demand drivers', 'Urbanisation, migration, foreign investment, new factories.'],
+    ['Demand to live in', 'Bought by people who live there, not only investors betting on price.'],
+    ['Rules and institutions', 'Secure property rights, land registry, stable rules for loans and rents.'],
+    ['Cost of credit', 'A moderate real interest rate: credit is affordable but does not inflate a bubble.'],
+    ['Diversified demand', 'Several dynamic cities and regions, not just the capital.'],
+    ['Housing shortage', 'Homes are missing, or existing ones are old and overcrowded.'],
+    ['Valuation', 'Real house prices versus their 10-year average.'],
+    ['Media (non-linear)', 'Balanced attention; euphoria marks the top.'],
+    ['Price trend', 'Annual change in real house prices.'],
+    ['Crowding (inverse)', 'Few foreign investors or funds betting on the same market.'],
+    ['Risk', 'No credit bubble, political crises or sudden property taxes.'],
+  ],
+  'proiecte-imobiliare': [
+    ['Real demand', 'Space let or sold, real rental or sales income.'],
+    ['Launch from strength', 'Launched or expanded from a strong balance sheet, not out of need for money.'],
+    ['Healthy funding', 'Moderate leverage, refinancing without pressure.'],
+    ['Attracts tenants and partners', 'Large tenants, financial partners, government partnerships.'],
+    ['Real customers', 'The space is used, not just bought off-plan by investors.'],
+    ['Credible developer', 'A record of projects delivered on time and on budget.'],
+    ['Balanced supply', 'No wave of competing space delivered in the same area.'],
+    ['A living place', 'People actually live or work there.'],
+    ['Obvious need', 'Meets a clear need: data centres, logistics, housing.'],
+    ['Good entry price', 'Shares below asset value or a good yield for the risk.'],
+    ['Media (non-linear)', 'Balanced attention; euphoria marks the top.'],
+    ['Price and volume', 'The share price trend, from weekly prices.'],
+    ['Crowding (inverse)', 'Few investors on the same bet.'],
+    ['Low risks', 'No major delays, lawsuits or geopolitical risk.'],
   ],
   'economii-emergente': [
     ['Real growth', 'GDP and domestic demand growing, driven by consumption and investment.'],
@@ -222,5 +258,37 @@ const sp500: Three[] = [
   ['One of the most crowded trades: everyone already owns it.', 'Moderately crowded.', 'Not crowded: room for new buyers.'],
   ['High risks: lawsuits, investigations or regulation.', 'A few risks to watch.', 'Low risks.'],
 ];
-export const SETS_EN: Record<string, Three[]> = { general, marfuri, forex, 'economii-emergente': emergente, sp500 };
+const imobiliareEn: Three[] = [
+  ['The economy grows little or unemployment is high: housing demand is weak.', 'Moderate demand: ordinary growth and jobs.', 'A growing economy with jobs: people can afford homes.'],
+  ['Far more is built than needed, or unsold stock is large.', 'Construction is close to needs.', 'Disciplined new supply: no wave of empty flats.'],
+  ['Households are already heavily indebted.', 'Moderate household debt.', 'Low household debt: credit can grow soundly.'],
+  ['Few new drivers bringing buyers.', 'A few new demand drivers.', 'Strong new demand: urbanisation, migration, investment, new factories.'],
+  ['Much of the demand comes from investors betting on price.', 'Mixed demand: living and investment.', 'Bought mostly by people who live in the home.'],
+  ['Changing rules, insecure property or land registry.', 'Acceptable institutions.', 'Secure property and stable rules for loans and rents.'],
+  ['Credit is either too expensive (slowing the market) or too cheap (inflating a bubble).', 'The cost of credit is acceptable.', 'A moderate real rate: credit is affordable but sound.'],
+  ['Demand is concentrated in a single city.', 'A few dynamic cities.', 'Many dynamic cities and regions.'],
+  ['Enough homes, or a surplus.', 'A moderate housing shortage.', 'Homes are missing: demand exceeds supply in the long run.'],
+  ['Real prices are far above their 10-year average.', 'Real prices are close to the average.', 'Real prices are below their 10-year average.'],
+  ['Euphoria or panic in the press.', 'Moderate attention.', 'Balanced attention.'],
+  ['Real house prices are falling.', 'Real prices are stable.', 'Real house prices are rising.'],
+  ['Many foreign investors or funds in the same market.', 'Moderate positioning.', 'Few investors on the same bet.'],
+  ['High risk: credit bubble, political crises or sudden taxes.', 'A few risks to watch.', 'Low risk.'],
+];
+const proiecteEn: Three[] = [
+  ['The space is not in demand yet: demand is a promise.', 'Partial demand, still being confirmed.', 'Space let or sold, with real income.'],
+  ['Rushed, or funded out of need for money.', 'The launch timing says nothing special.', 'Launched or expanded from strength.'],
+  ['High debt or uncertain funding.', 'Reasonable funding, with some risks.', 'Healthy funding and refinancing without pressure.'],
+  ['Attracts few important tenants or partners.', 'Attracts partners at a normal pace.', 'Large tenants and partners come to the project.'],
+  ['Space is mostly bought off-plan by investors.', 'Real customers, mixed with speculators.', 'The space is used by those who buy or rent it.'],
+  ['A developer with delays or broken promises.', 'A credible developer without a long record.', 'A credible developer with projects delivered on time.'],
+  ['A wave of competing space is delivered in the same area.', 'Moderate competing supply.', 'Little competing supply.'],
+  ['The place is still empty: few people live or work there.', 'Partly alive.', 'A living place: people actually live and work there.'],
+  ['The need it meets is unclear.', 'A real but not pressing need.', 'An obvious need, easy to explain.'],
+  ['The shares are expensive versus asset value.', 'Fair price.', 'The shares are cheap versus asset value.'],
+  ['Press euphoria: a historical top signal.', 'Moderate attention.', 'Balanced attention.'],
+  ['The shares have fallen recently.', 'The shares are stable.', 'The shares have risen recently.'],
+  ['Many investors on the same bet.', 'Moderate positioning.', 'Few investors on the same bet.'],
+  ['High risks: delays, lawsuits or geopolitics.', 'A few risks to watch.', 'Low risks.'],
+];
+export const SETS_EN: Record<string, Three[]> = { general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare: imobiliareEn, 'proiecte-imobiliare': proiecteEn };
 export const NA_EN = 'Cannot be assessed yet (for example, the asset is not publicly traded).';

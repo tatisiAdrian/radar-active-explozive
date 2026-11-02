@@ -90,7 +90,40 @@ const sp500: Three[] = [
   ['Riscuri mari: procese, anchete sau reglementare.', 'Câteva riscuri de urmărit.', 'Riscuri mici.'],
 ];
 
-export const SETS: Record<string, Three[]> = { general, marfuri, forex, 'economii-emergente': emergente, sp500 };
+const imobiliare: Three[] = [
+  ['Economia crește puțin sau șomajul e mare: cererea de locuințe e slabă.', 'Cerere moderată: creștere și locuri de muncă la nivel obișnuit.', 'Economie în creștere și locuri de muncă: oamenii își permit locuințe.'],
+  ['Se construiește mult peste nevoi sau stocurile de locuințe nevândute sunt mari.', 'Construcțiile sunt aproape de nevoi.', 'Oferta nouă e disciplinată: nu există un val de apartamente goale.'],
+  ['Gospodăriile sunt deja foarte îndatorate.', 'Datoria gospodăriilor e moderată.', 'Gospodăriile au datorii mici: creditul poate crește sănătos.'],
+  ['Puțini factori noi care să aducă cumpărători.', 'Câțiva factori noi de cerere.', 'Cerere nouă puternică: urbanizare, migrație, investiții, fabrici noi.'],
+  ['Mare parte din cerere vine de la investitori care pariază pe preț.', 'Cerere amestecată: locuire și investiție.', 'Cumpără mai ales cei care locuiesc în casă.'],
+  ['Reguli schimbătoare, proprietate sau cadastru nesigure.', 'Instituții acceptabile.', 'Proprietate sigură și reguli stabile pentru credite și chirii.'],
+  ['Creditul e fie prea scump (frânează piața), fie prea ieftin (umflă o bulă).', 'Costul creditului e acceptabil.', 'Dobânda reală e moderată: creditul e accesibil, dar sănătos.'],
+  ['Cererea e concentrată într-un singur oraș.', 'Câteva orașe dinamice.', 'Multe orașe și regiuni dinamice.'],
+  ['Locuințe suficiente sau în surplus.', 'Un deficit moderat de locuințe.', 'Lipsesc locuințe: cererea depășește oferta pe termen lung.'],
+  ['Prețul real e mult peste media ultimilor 10 ani.', 'Prețul real e aproape de medie.', 'Prețul real e sub media ultimilor 10 ani.'],
+  ['Euforie sau panică în presă.', 'Atenție moderată.', 'Atenție echilibrată.'],
+  ['Prețul real al locuințelor scade.', 'Prețul real e stabil.', 'Prețul real al locuințelor crește.'],
+  ['Mulți investitori străini sau fonduri pe aceeași piață.', 'Poziționare moderată.', 'Puțini investitori pe același pariu.'],
+  ['Risc mare: bulă de credit, crize politice sau taxe bruște.', 'Câteva riscuri de urmărit.', 'Risc mic.'],
+];
+const proiecte: Three[] = [
+  ['Spațiile nu sunt încă cerute: cererea e o promisiune.', 'Cerere parțială, încă în confirmare.', 'Spații închiriate sau vândute, cu venituri reale.'],
+  ['Proiect grăbit sau finanțat din nevoie de bani.', 'Momentul lansării nu spune nimic special.', 'Lansat sau extins dintr-o poziție de forță.'],
+  ['Datorie mare sau finanțare nesigură.', 'Finanțare rezonabilă, cu câteva riscuri.', 'Finanțare sănătoasă și refinanțări fără presiune.'],
+  ['Atrage puțini chiriași sau parteneri importanți.', 'Atrage parteneri într-un ritm normal.', 'Chiriași și parteneri mari vin spre proiect.'],
+  ['Spațiile sunt cumpărate mai ales pe hârtie, de investitori.', 'Clienți reali, amestecați cu speculatori.', 'Spațiile sunt folosite de cei care le cumpără sau le închiriază.'],
+  ['Dezvoltator cu întârzieri sau promisiuni neținute.', 'Dezvoltator credibil, fără un istoric lung.', 'Dezvoltator credibil, cu proiecte livrate la timp.'],
+  ['Un val de spații concurente se livrează în aceeași zonă.', 'Oferta concurentă e moderată.', 'Puțină ofertă concurentă.'],
+  ['Locul e încă gol: puțini oameni locuiesc sau lucrează acolo.', 'Viață parțială.', 'Loc viu: oamenii locuiesc și lucrează efectiv acolo.'],
+  ['Nevoia pe care o rezolvă e neclară.', 'Nevoie reală, dar nu presantă.', 'Nevoie evidentă, ușor de explicat.'],
+  ['Acțiunea e scumpă față de valoarea activelor.', 'Preț corect.', 'Acțiunea e ieftină față de valoarea activelor.'],
+  ['Euforie în presă: semnal istoric de vârf.', 'Atenție moderată.', 'Atenție echilibrată.'],
+  ['Acțiunea a scăzut recent.', 'Acțiunea e stabilă.', 'Acțiunea a crescut recent.'],
+  ['Mulți investitori pe același pariu.', 'Poziționare moderată.', 'Puțini investitori pe același pariu.'],
+  ['Riscuri mari: întârzieri, procese sau geopolitică.', 'Câteva riscuri de urmărit.', 'Riscuri mici.'],
+];
+
+export const SETS: Record<string, Three[]> = { general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare, 'proiecte-imobiliare': proiecte };
 
 /** Propoziția pe înțeles pentru nota v la condiția i (0-13) din setul dat. */
 export function explain(set: string, i: number, v: number | null | undefined): string {

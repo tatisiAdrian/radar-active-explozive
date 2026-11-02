@@ -30,7 +30,7 @@
    "c": [8, 7, 8, 8, 6, 8, 3, 7, 6, 7, 4, null, 4, 4],
    "why": "Dezvoltatorul Burj Khalifa, Dubai Mall și Dubai Creek Harbour, cu un bilanț solid și numerar mare din vânzările în avans. Piața din Dubai a întors însă: în T2 2026 prețurile au scăzut cu 4% și chiriile cu 6% față de trimestrul anterior, iar zeci de mii de locuințe noi se livrează în 2026. Războiul din regiune adaugă risc.",
    "sources": [["Emaar, relația cu investitorii", "https://properties.emaar.com/en/investor-relations/"], ["Khaleej Times (Cushman & Wakefield), august 2026", "https://www.khaleejtimes.com/business/dubai-home-prices-rents-decline-as-supply-rises-32000-more-units-due-this-year"]] },
-  { "id": "aldar", "name": "Aldar Properties (Abu Dhabi)", "nameEn": "Aldar Properties (Abu Dhabi)", "stage": "Listată (ADX: ALDAR)", "stageEn": "Listed (ADX: ALDAR)", "region": "Emiratele Arabe Unite", "kind": "Dezvoltare mixtă", "kindEn": "Mixed-use development", "priceId": "pi-aldar",
+  { "id": "aldar", "name": "Aldar Properties (Abu Dhabi)", "nameEn": "Aldar Properties (Abu Dhabi)", "stage": "Listată (ADX: ALDAR)", "stageEn": "Listed (ADX: ALDAR)", "region": "Emiratele Arabe Unite", "kind": "Dezvoltare mixtă", "kindEn": "Mixed-use development", "priceId": null,
    "c": [8, 7, 7, 8, 7, 8, 5, 7, 6, 6, 6, null, 5, 5],
    "why": "Principalul dezvoltator din Abu Dhabi (Saadiyat, Yas), cu venituri recurente din chirii pe lângă vânzări. Piața din Abu Dhabi are mai puțină ofertă nouă decât Dubai, dar rămâne expusă aceluiași risc regional.",
    "sources": [["Aldar, relația cu investitorii", "https://www.aldar.com/en/investor-relations"]] },

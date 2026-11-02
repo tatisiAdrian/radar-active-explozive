@@ -49,7 +49,6 @@ const YAHOO = {
   'pi-vonovia': ['VNA.DE'],
   'pi-ctp': ['CTPNV.AS'],
   'pi-emaar': ['EMAAR.AE'],
-  'pi-aldar': ['ALDAR.AE'],
   'pi-mitsui-fudosan': ['8801.T'],
   'pi-shkp': ['0016.HK'],
   'pi-one-united': ['ONE.RO'],

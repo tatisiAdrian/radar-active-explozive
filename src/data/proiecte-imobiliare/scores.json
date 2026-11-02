@@ -582,7 +582,7 @@
    "region": "Emiratele Arabe Unite",
    "kind": "Dezvoltare mixtă",
    "kindEn": "Mixed-use development",
-   "priceId": "pi-aldar",
+   "priceId": null,
    "c": [
     8,
     7,

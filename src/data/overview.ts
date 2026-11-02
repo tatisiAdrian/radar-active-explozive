@@ -3,6 +3,8 @@ import forex from './forex/scores.json';
 import emerging from './emerging/scores.json';
 import sp500 from './sp500/scores.json';
 import ro from './startups-ro/scores.json';
+import imob from './imobiliare/scores.json';
+import proj from './proiecte-imobiliare/scores.json';
 import { type Lang, DOMAIN_EN, NAME_EN, COUNTRY_EN } from './i18n';
 
 /** Un punct pe radarul de pe Home: un activ dintr-un domeniu, cu numărul de condiții îndeplinite. */
@@ -30,6 +32,8 @@ export const OVERVIEW: DomainOverview[] = [
   { slug: 'sp500', title: 'S&P 500', short: 'S&P 500', what: 'cele mai mari companii americane', color: '#b0397a', snapshot: 'sp500-2026-11-01.json', items: fromScores(sp500 as unknown as Scored, (r) => `${r.id} · ${r.name}`) },
   { slug: 'marfuri', title: 'Mărfuri', short: 'Mărfuri', what: 'mărfuri mature și emergente', color: '#c2761a', snapshot: '2026-10-29.json', items: fromRadar('comm') },
   { slug: 'forex', title: 'Forex', short: 'Forex', what: 'monede majore și emergente', color: '#7a4fd0', snapshot: 'forex-2026-11-01.json', items: fromScores(forex as unknown as Scored, (r) => `${r.id} · ${r.name}`) },
+  { slug: 'imobiliare', title: 'Piața imobiliară națională', short: 'Imobiliare', what: 'piețe imobiliare naționale, inclusiv România', color: '#8a6d3b', snapshot: 'imobiliare-2026-11-02.json', items: fromScores(imob as unknown as Scored) },
+  { slug: 'proiecte-imobiliare', title: 'Proiecte imobiliare de interes mondial', short: 'Proiecte', what: 'proiecte imobiliare mari și companiile din spatele lor', color: '#2f8f5b', snapshot: 'proiecte-imobiliare-2026-11-02.json', items: fromScores(proj as unknown as Scored) },
   { slug: 'economii-emergente', title: 'Economii emergente', short: 'Emergente', what: 'economii emergente, inclusiv România', color: '#c4433b', snapshot: 'emergente-2026-11-01.json', items: fromScores(emerging as unknown as Scored) },
 ];
 
@@ -41,7 +45,7 @@ export function overviewFor(lang: Lang, only?: string[]): DomainOverview[] {
   const pick = (xs: DomainOverview[]) => (only ? only.map((s) => xs.find((d) => d.slug === s)!).filter(Boolean) : xs);
   if (lang === 'ro') return pick(OVERVIEW);
   const en = Object.fromEntries(assets.map((a) => [a.n.ro, a.n.en]));
-  const sc = { forex, 'economii-emergente': emerging, sp500 } as Record<string, unknown>;
+  const sc = { forex, 'economii-emergente': emerging, sp500, imobiliare: imob, 'proiecte-imobiliare': proj } as Record<string, unknown>;
   return pick(OVERVIEW).map((d) => {
     const t = DOMAIN_EN[d.slug];
     const rows = (sc[d.slug] as Scored | undefined)?.rows;
@@ -50,6 +54,8 @@ export function overviewFor(lang: Lang, only?: string[]): DomainOverview[] {
       let name = en[it.name] ?? it.name;
       if (r && d.slug === 'forex') name = `${r.id} · ${NAME_EN[r.id] ?? r.name}`;
       if (r && d.slug === 'economii-emergente') name = COUNTRY_EN[r.id] ?? r.name;
+      const rr = r as unknown as { nameEn?: string } | undefined;
+      if (rr?.nameEn && (d.slug === 'imobiliare' || d.slug === 'proiecte-imobiliare')) name = rr.nameEn;
       return { ...it, name };
     });
     return { ...d, title: t?.title ?? d.title, short: t?.short ?? d.short, what: t?.what ?? d.what, items };

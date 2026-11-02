@@ -3,6 +3,8 @@ import forex from './forex/scores.json';
 import emerging from './emerging/scores.json';
 import sp500 from './sp500/scores.json';
 import ro from './startups-ro/scores.json';
+import imob from './imobiliare/scores.json';
+import proj from './proiecte-imobiliare/scores.json';
 import { OVERVIEW } from './overview';
 import { fondTag, FOND_LABEL } from './explain';
 import { type Lang, DOMAIN_EN, NAME_EN, COUNTRY_EN, STAGE_EN, GROUP_EN, ACCESS_EN, FOND_EN } from './i18n';
@@ -41,7 +43,7 @@ const ACCESS: Record<string, HomeItem['access']> = {
 };
 const LAUNCHED: Record<string, boolean> = { pre: false, post: true, preipo: false, ipo: true, seed: false, startup: true, emerging: false, mature: true };
 
-type Row = { id: string; name: string; score: number; met: number; criteria?: (number | null)[]; c?: (number | null)[]; stage?: string; priceId?: string };
+type Row = { id: string; name: string; nameEn?: string; stageEn?: string; score: number; met: number; criteria?: (number | null)[]; c?: (number | null)[]; stage?: string; priceId?: string };
 
 export const ITEMS: HomeItem[] = [
   ...assets.map((a) => mk(a.m === 'crypto' ? 'crypto' : a.m === 'comp' ? 'startups' : 'marfuri', {
@@ -60,11 +62,17 @@ export const ITEMS: HomeItem[] = [
   ...(emerging.rows as unknown as Row[]).map((r) => mk('economii-emergente', {
     name: r.name, group: 'Economie emergentă', access: 'Indirect', met: r.met, score: r.score, c: r.criteria ?? [], set: 'economii-emergente', launched: null, nameEn: COUNTRY_EN[r.id] ?? r.name, gkey: 'em',
   })),
+  ...(imob.rows as unknown as Row[]).map((r) => mk('imobiliare', {
+    name: r.name, group: 'Piață imobiliară națională', access: 'Indirect', met: r.met, score: r.score, c: r.criteria ?? [], set: 'imobiliare', launched: null, nameEn: r.nameEn, gkey: 'imob',
+  })),
+  ...(proj.rows as unknown as Row[]).map((r) => mk('proiecte-imobiliare', {
+    name: r.name, group: r.stage ?? 'Proiect', access: r.stage?.startsWith('Listată') ? 'Cumpărabil' : 'Acces restrâns', met: r.met, score: r.score, c: r.c ?? [], set: 'proiecte-imobiliare', launched: null, nameEn: r.nameEn, gkey: r.stageEn ? `en:${r.stageEn}` : undefined,
+  })),
 ];
 
 export const byRank = (a: HomeItem, b: HomeItem) => b.met - a.met || b.score - a.score;
 
-const GROUP_EN_EXTRA: Record<string, string> = { fx: 'Currency', em: 'Emerging economy', sp: 'Listed in the S&P 500' };
+const GROUP_EN_EXTRA: Record<string, string> = { fx: 'Currency', em: 'Emerging economy', sp: 'Listed in the S&P 500', imob: 'National housing market' };
 /** Același activ, cu textul în limba cerută (notele rămân identice). */
 export function localize(it: HomeItem, lang: Lang): HomeItem {
   if (lang === 'ro') return it;
@@ -73,7 +81,7 @@ export function localize(it: HomeItem, lang: Lang): HomeItem {
     ...it,
     name: it.nameEn ?? it.name,
     dshort: DOMAIN_EN[it.domain]?.short ?? it.dshort,
-    group: GROUP_EN[g] ?? STAGE_EN[g] ?? GROUP_EN_EXTRA[g] ?? it.group,
+    group: g.startsWith('en:') ? g.slice(3) : GROUP_EN[g] ?? STAGE_EN[g] ?? GROUP_EN_EXTRA[g] ?? it.group,
     access: (ACCESS_EN[it.access] ?? it.access) as HomeItem['access'],
     fond: FOND_EN[it.fond] ?? it.fond,
   };
