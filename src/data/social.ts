@@ -20,10 +20,10 @@ export const SOCIAL: Record<string, SocialData> = Object.fromEntries(
 );
 export const SOCIAL_SLUGS = Object.keys(SOCIAL);
 
-/** Regiunile categoriei Social: fiecare are pagina ei și butonul ei (RO, EU). */
+/** Regiunile categoriei Social: Europa e vizualizarea implicită (butonul EU), România are butonul RO. */
 export const REGIONS = [
-  { key: 'romania', code: 'RO', path: { ro: 'social/', en: 'en/social/' }, name: { ro: 'România', en: 'Romania' } },
-  { key: 'europa', code: 'EU', path: { ro: 'social/europa/', en: 'en/social/europe/' }, name: { ro: 'Europa', en: 'Europe' } },
+  { key: 'europa', code: 'EU', path: { ro: 'social/', en: 'en/social/' }, name: { ro: 'Europa', en: 'Europe' } },
+  { key: 'romania', code: 'RO', path: { ro: 'social/romania/', en: 'en/social/romania/' }, name: { ro: 'România', en: 'Romania' } },
 ] as const;
 export type RegionKey = (typeof REGIONS)[number]['key'];
 export const regionOf = (slug: string): RegionKey => (slug.endsWith('-europa') ? 'europa' : 'romania');

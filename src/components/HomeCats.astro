@@ -9,7 +9,7 @@ const { lang = 'ro' } = Astro.props;
 const en = lang === 'en';
 const base = import.meta.env.BASE_URL;
 const cats = CAT_LIST.map((c) => {
-  const slugs = c.key === 'social' ? c.slugs.filter((s) => regionOf(s) === 'romania') : c.slugs;
+  const slugs = c.key === 'social' ? c.slugs.filter((s) => regionOf(s) === 'europa') : c.slugs;
   const doms = overviewFor(lang, slugs);
   const items = doms.flatMap((d) => d.items);
   const best = [...items].sort((a, b) => b.met - a.met || b.score - a.score)[0];

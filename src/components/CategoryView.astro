@@ -13,7 +13,7 @@ import { CATEGORIES, type CatKey } from '../data/categories';
 import type { Lang } from '../data/i18n';
 
 interface Props { lang?: Lang; cat: CatKey; region?: RegionKey }
-const { lang = 'ro', cat, region = 'romania' } = Astro.props;
+const { lang = 'ro', cat, region = 'europa' } = Astro.props;
 const en = lang === 'en';
 const base = import.meta.env.BASE_URL;
 const C = CATEGORIES[cat];
