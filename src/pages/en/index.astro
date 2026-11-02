@@ -18,7 +18,7 @@ const LABEL: Record<string, string> = { forex: 'Forex', emergente: 'Emerging eco
 const snapshots = Object.values(shaFiles).map((txt) => {
   const [hash, file] = txt.trim().split(/\s+/);
   const m = file.match(/^(?:(.+)-)?(\d{4}-\d{2}-\d{2})\.json$/)!;
-  return { file, hash, date: m[2], label: m[1] ? LABEL[m[1]] ?? OVERVIEW.find((d) => `social-${d.slug}` === m[1])?.title ?? m[1] : 'Crypto, companies, commodities (88 assets)' };
+  return { file, hash, date: m[2], label: m[1] ? LABEL[m[1]] ?? OVERVIEW.find((d) => `social-${d.slug}` === m[1].replace(/-r\d+$/, ''))?.title ?? m[1] : 'Crypto, companies, commodities (88 assets)' };
 }).sort((a, b) => b.date.localeCompare(a.date) || a.label.localeCompare(b.label));
 
 const general = CRITERIA_EN.general;

@@ -9,7 +9,7 @@ export interface SocialRow {
   id: string; name: string; nameEn: string; c: (number | null)[]; why: string; whyEn: string;
   sources: [string, string][]; sourcesEn: [string, string][]; inputs: Record<string, string>; score: number; met: number;
 }
-export interface SocialData { slug: string; set: string; date: string; formulas: Record<string, string>; rows: SocialRow[] }
+export interface SocialData { slug: string; set: string; date: string; snapshot: string; previousSnapshot?: string; revisionNote?: string; revisionNoteEn?: string; formulas: Record<string, string>; rows: SocialRow[] }
 export const SOCIAL: Record<string, SocialData> = Object.fromEntries(
   [licee, facultati, meserii, angajatori, localitati].map((d) => [d.slug, d as unknown as SocialData]),
 );

@@ -2,6 +2,7 @@
  "slug": "licee-romania",
  "set": "licee",
  "date": "2026-11-03",
+ "snapshot": "social-licee-romania-2026-11-03",
  "formulas": {
   "C1": "Media la BAC 2025: nota = 10 − (9,6 − media) × 8 (o medie de 9,35 dă 8).",
   "C2": "Rata de promovare la BAC 2025: nota = 10 − (100 − rata) × 2 (99% dă 8).",

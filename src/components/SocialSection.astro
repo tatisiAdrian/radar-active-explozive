@@ -19,7 +19,7 @@ const formulas = en ? FORMULAS_EN[d.set] ?? {} : d.formulas;
 const fmtDate = (x: string) => fd(x, lang);
 const num = (x: number) => nm(x, 2, lang);
 const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
-const snap = `social-${slug}-${d.date}`;
+const snap = d.snapshot;
 const short = (s: string) => s.replace(/,.*$/, '').replace(/ \(.*\)$/, '');
 const metChart: Dataset = {
   id: `${slug}-conditii`, domain: slug, title: L('Condiții îndeplinite din 14', 'Conditions met out of 14'), unit: L('condiții', 'conditions'), chart: 'bar',
@@ -36,6 +36,7 @@ const allSources = [...new Map(rows.flatMap((r) => r.sources).map(([t, u]) => [u
     {en ? <>{rows.length} positions scored on 14 conditions adapted to this topic. {Object.keys(formulas).length > 0 ? <>{Object.keys(formulas).length} conditions are computed from public data using published formulas; the rest are judgement, with a rationale and sources for each position.</> : <>The scores are judgement based on the cited sources, with a rationale for each position.</>} Conditions that cannot be assessed yet get 5 (neutral) in the score and do not count as met. The scores are frozen in the{' '}<a href={`${base}snapshots/${snap}.json`}>snapshot of {fmtDate(d.date)}</a>{' '}(fingerprint in the <a href={`${base}snapshots/${snap}.sha256`}>.sha256 file</a>).</>
       : <>{rows.length} poziții notate pe 14 condiții adaptate acestei teme. {Object.keys(formulas).length > 0 ? <>{Object.keys(formulas).length} condiții se calculează din date publice, după formule publicate; restul sunt judecată, cu justificare și surse la fiecare poziție.</> : <>Notele sunt judecată pe baza surselor citate, cu justificare la fiecare poziție.</>} Condițiile care nu se pot evalua încă primesc 5 (neutru) în scor și nu sunt considerate îndeplinite. Notele sunt înghețate în{' '}<a href={`${base}snapshots/${snap}.json`}>instantaneul din {fmtDate(d.date)}</a>{' '}(amprenta în <a href={`${base}snapshots/${snap}.sha256`}>fișierul .sha256</a>).</>}
   </p>
+  {d.revisionNote && <p class="notice">{en ? d.revisionNoteEn : d.revisionNote} {d.previousSnapshot && <>{L('Instantaneul anterior rămâne publicat:', 'The previous snapshot stays published:')} <a href={`${base}snapshots/${d.previousSnapshot}.json`}>{d.previousSnapshot}.json</a>.</>}</p>}
   <div class="table-wrap">
     <table class="radar fx">
       <thead><tr><th>#</th><th>{L('Nume', 'Name')}</th><th>{L('Condiții', 'Conditions')}</th><th>{L('Scor', 'Score')}</th><th>{L('Fond / formă', 'Substance / form')}</th></tr></thead>

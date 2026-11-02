@@ -44,11 +44,13 @@ for (const f of files) {
     const met = c.filter((v) => v != null && v >= 7).length;
     return { ...it, c, inputs, score, met };
   }).sort((a, b) => b.met - a.met || b.score - a.score);
-  const out = { slug, set: cfg.set, date: cfg.date, formulas: FORMULAS[cfg.set] ?? {}, rows };
+  const snapName = `social-${slug}${cfg.revision ? `-r${cfg.revision}` : ''}-${cfg.date}`;
+  const prevSnap = cfg.revision ? `social-${slug}${cfg.revision > 2 ? `-r${cfg.revision - 1}` : ''}-${cfg.date}` : undefined;
+  const out = { slug, set: cfg.set, date: cfg.date, snapshot: snapName, previousSnapshot: prevSnap, revisionNote: cfg.revisionNote, revisionNoteEn: cfg.revisionNoteEn, formulas: FORMULAS[cfg.set] ?? {}, rows };
   await writeFile(new URL(`../src/data/social/${slug}.json`, import.meta.url), JSON.stringify(out, null, 1) + '\n');
   console.log(slug, rows.map((r) => `${r.id} ${r.met}/14 ${r.score}`).join(' | '));
   if (process.argv.includes('--snapshot')) {
-    const name = `social-${slug}-${cfg.date}`;
+    const name = snapName;
     const file = new URL(`../public/snapshots/${name}.json`, import.meta.url);
     try { await access(file); console.log('  instantaneul există deja'); continue; } catch {}
     const snap = Buffer.from(JSON.stringify({ domain: slug, date: cfg.date, weights: W, met_threshold: 7, formulas: out.formulas, rows: rows.map(({ why, whyEn, sources, sourcesEn, nameEn, ...r }) => r) }, null, 1));
