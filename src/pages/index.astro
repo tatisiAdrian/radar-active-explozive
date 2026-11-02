@@ -9,6 +9,7 @@ import HomeCharts from '../components/HomeCharts.astro';
 import TopPicks from '../components/TopPicks.astro';
 import Explorer from '../components/Explorer.astro';
 import { CRITERIA, WEIGHTS } from '../data/criteria';
+import '../styles/home.css';
 
 const base = import.meta.env.BASE_URL;
 const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
@@ -38,7 +39,7 @@ const cards = OVERVIEW.map((d) => {
 const general = CRITERIA.general;
 const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.includes('/'));
 ---
-<Base title="Toate domeniile" description="Un singur radar pentru cripto, start-ups, mărfuri, Forex, economii emergente și S&P 500: activele care adună cele mai multe din cele 14 condiții pentru o creștere puternică.">
+<Base title="Toate domeniile" alt="en/" description="Un singur radar pentru cripto, start-ups, mărfuri, Forex, economii emergente și S&P 500: activele care adună cele mai multe din cele 14 condiții pentru o creștere puternică.">
   <section class="home-hero">
     <div class="hh-text">
       <p class="eyebrow">Pre-identificare · date actualizate pe {fmtDate(UPDATED)}</p>
@@ -190,82 +191,3 @@ const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.inclu
     <p class="notice"><b>Nu este o recomandare de investiții.</b> Radarul nu garantează nicio creștere. Cele mai multe active cu potențial de explozie nu explodează, iar mișcarea poate fi și în jos, cu pierderi de 80–90%. Investește doar bani pe care îți permiți să-i pierzi integral.</p>
   </section>
 </Base>
-
-<style>
-  .home-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 2.5rem; align-items: center; margin-top: 1rem; }
-  .eyebrow { font: 500 .78rem var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 .75rem; }
-  h1 { font: 800 clamp(2rem, 4.2vw, 3.3rem)/1.05 var(--f-display); letter-spacing: -.02em; margin: 0 0 1rem; }
-  .accent { color: var(--accent); }
-  .lede { font-size: 1.08rem; color: var(--muted); margin: 0 0 1.5rem; }
-  .hh-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin-bottom: 1.5rem; }
-  .hh-stats div { border-top: 2px solid var(--text); padding-top: .5rem; }
-  .hh-stats b { display: block; font: 800 1.9rem var(--f-display); }
-  .hh-stats span { font-size: .82rem; color: var(--muted); }
-  .hh-legend { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: .25rem .75rem; }
-  .hh-legend a { display: flex; align-items: center; gap: .5rem; color: var(--text); text-decoration: none; padding: .3rem .4rem; border-radius: 6px; }
-  .hh-legend a:hover { background: var(--surface); }
-  .hh-legend i { width: .7rem; height: .7rem; border-radius: 50%; background: var(--c); flex: none; }
-  .hh-legend span { font-weight: 600; font-size: .92rem; }
-  .hh-legend small { margin-left: auto; color: var(--muted); font: 500 .75rem var(--f-mono); white-space: nowrap; }
-  .dgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
-  .dcard { position: relative; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.25rem 1rem; color: var(--text); text-decoration: none; overflow: hidden; transition: transform .15s, border-color .15s, box-shadow .15s; }
-  .dcard:hover { transform: translateY(-3px); border-color: var(--c); box-shadow: 0 10px 28px rgba(15, 29, 46, .1); }
-  .dbar { position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--c); }
-  .dimg { display: block; width: calc(100% + 2.5rem); margin: -1.25rem -1.25rem 1rem; height: 150px; object-fit: cover; border-bottom: 3px solid var(--c); }
-  .dcard h3 { font: 700 1.25rem var(--f-display); margin: .25rem 0 .35rem; }
-  .dstats .fff b { color: #1f9d63; }
-  .dcard p { margin: 0 0 .9rem; font-size: .92rem; }
-  .dstats { display: flex; gap: .9rem; flex-wrap: wrap; font-size: .85rem; color: var(--muted); margin-bottom: .75rem; }
-  .dstats b { color: var(--text); font-size: 1.05rem; }
-  .dstats .strong b { color: #1f9d63; } .dstats .watch b { color: var(--warn); }
-  .dtop { list-style: none; padding: 0; margin: 0 0 1rem; border-top: 1px solid var(--border); }
-  .dtop li { display: flex; justify-content: space-between; gap: 1rem; padding: .4rem 0; border-bottom: 1px solid var(--border); font-size: .9rem; }
-  .dtop li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .dtop b { font: 600 .85rem var(--f-mono); }
-  .dcta { margin-top: auto; color: var(--c); font-weight: 600; font-size: .92rem; }
-  .sgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-  .sgrid div { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; }
-  .sgrid b { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--accent); color: #fff; font: 700 1rem var(--f-display); }
-  .sgrid h3 { font: 700 1.1rem var(--f-display); margin: .6rem 0 .4rem; }
-  .sgrid p { margin: 0; color: var(--muted); font-size: .92rem; }
-  table.snaps { min-width: 640px; }
-  .subnav { display: flex; gap: .4rem 1.1rem; flex-wrap: wrap; margin: 1.75rem 0 0; padding: .7rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); font-size: .9rem; }
-  .subnav a { color: var(--muted); text-decoration: none; } .subnav a:hover { color: var(--text); }
-  .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin-top: 1rem; }
-  .zn { border-radius: var(--radius); padding: .9rem 1rem; border: 1px solid var(--border); background: var(--surface); border-left-width: 4px; }
-  .zn b { display: block; font: 700 1.05rem var(--f-display); } .zn span { font-size: .88rem; color: var(--muted); }
-  .z-strong { border-left-color: #1f9d63; } .z-watch { border-left-color: #d4931f; } .z-weak { border-left-color: #8a97aa; }
-  .crit-h { margin: 1.8rem 0 .3rem; font-size: 1.2rem; }
-  .crit { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: .6rem; margin-top: .8rem; }
-  .crit div { display: grid; grid-template-columns: 3rem 1fr; gap: 0 .6rem; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: .6rem .8rem; }
-  .crit .w { grid-row: span 2; font: 700 1.1rem var(--f-display); color: var(--accent); align-self: center; }
-  .crit b { font-size: .92rem; } .crit small { color: var(--muted); font-size: .8rem; }
-  .hsteps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
-  .hsteps div { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem; }
-  .hsteps b { display: inline-grid; place-items: center; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--text); color: var(--bg); font: 700 .95rem var(--f-display); }
-  .hsteps h3 { margin: .5rem 0 .3rem; font-size: 1.05rem; } .hsteps p { margin: 0; color: var(--muted); font-size: .9rem; }
-  .test { margin-top: 1rem; background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius); padding: 1rem 1.2rem; }
-  .test h3 { margin: 0 0 .3rem; font-size: 1.05rem; } .test p { margin: .3rem 0; } .small { font-size: .82rem; }
-  .buy { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
-  .buy > div { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.2rem; }
-  .buy h3 { margin: 0 0 .3rem; font-size: 1.1rem; } .buy p { margin: 0 0 .5rem; color: var(--muted); font-size: .88rem; }
-  .buy ul { margin: 0; padding-left: 1.1rem; font-size: .9rem; } .buy li { margin: .2rem 0; }
-  .how { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1rem; }
-  .how div { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem; }
-  .how h3 { margin: 0 0 .3rem; font-size: 1.02rem; } .how p { margin: 0; color: var(--muted); font-size: .88rem; }
-  code { font: .82rem var(--f-mono); }
-  @media (max-width: 900px) {
-    .home-hero { grid-template-columns: 1fr; gap: 1.5rem; }
-    .hh-radar { order: -1; }
-    .sgrid { grid-template-columns: 1fr 1fr; }
-    .how { grid-template-columns: 1fr 1fr; }
-    .zones, .hsteps { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 520px) {
-    .sgrid, .how { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 520px) {
-    .hh-stats { grid-template-columns: repeat(2, 1fr); }
-    .hh-legend { grid-template-columns: 1fr; }
-  }
-</style>

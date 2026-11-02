@@ -1,6 +1,13 @@
 ---
-import { ITEMS, byRank } from '../data/home';
-import { OVERVIEW } from '../data/overview';
+import { itemsFor, byRank } from '../data/home';
+import { overviewFor } from '../data/overview';
+import type { Lang } from '../data/i18n';
+
+interface Props { lang?: Lang }
+const { lang = 'ro' } = Astro.props;
+const en = lang === 'en';
+const ITEMS = itemsFor(lang);
+const OVERVIEW = overviewFor(lang);
 import { assets } from '../data/radar';
 
 const top = [...ITEMS].sort(byRank).slice(0, 10);
@@ -20,20 +27,23 @@ const avgOf = (gs: string[]) => {
   return xs.reduce((s, a) => s + a.k, 0) / (xs.length || 1);
 };
 const pairs = [
-  { label: 'Crypto · nelansate vs. lansate', before: avgOf(['pre']), after: avgOf(['post']) },
-  { label: 'Companii · pre-IPO vs. listate', before: avgOf(['preipo']), after: avgOf(['ipo']) },
-  { label: 'Start-ups · fără vs. cu produs', before: avgOf(['seed']), after: avgOf(['startup']) },
-  { label: 'Mărfuri · emergente vs. mature', before: avgOf(['emerging']), after: avgOf(['mature']) },
+  { label: en ? 'Crypto · not launched vs. launched' : 'Crypto · nelansate vs. lansate', before: avgOf(['pre']), after: avgOf(['post']) },
+  { label: en ? 'Companies · pre-IPO vs. listed' : 'Companii · pre-IPO vs. listate', before: avgOf(['preipo']), after: avgOf(['ipo']) },
+  { label: en ? 'Start-ups · without vs. with product' : 'Start-ups · fără vs. cu produs', before: avgOf(['seed']), after: avgOf(['startup']) },
+  { label: en ? 'Commodities · emerging vs. mature' : 'Mărfuri · emergente vs. mature', before: avgOf(['emerging']), after: avgOf(['mature']) },
 ];
-const n1 = (x: number) => x.toLocaleString('ro-RO', { maximumFractionDigits: 1, minimumFractionDigits: 1 });
+const T = en
+  ? { h1: 'Top 10 assets, across all domains', p1: 'The dashed green line marks the 10-condition threshold, from which an asset becomes a strong candidate.', of: 'of 14 conditions', h2: 'How many assets sit in each zone', p2: 'Most assets do not gather enough conditions. That is normal: we are looking for the exceptions.', with: 'with 10+', watch: 'on watch', under: 'under 6', l1: '10+ of 14', h3: 'Average conditions met, by domain', p3: 'How “full” each domain is, on average, out of the 14 conditions.', h4: 'Before vs. after launch', p4: 'Average conditions met. Good projects that have not launched yet often tick more conditions.', before: 'before', after: 'after' }
+  : { h1: 'Top 10 active, din toate domeniile', p1: 'Linia verde punctată marchează pragul de 10 condiții, de la care un activ devine candidat puternic.', of: 'din 14 condiții', h2: 'Câte active sunt în fiecare zonă', p2: 'Cele mai multe active nu adună destule condiții. E normal: căutăm excepțiile.', with: 'cu 10+', watch: 'în observație', under: 'sub 6', l1: '10+ din 14', h3: 'Media condițiilor îndeplinite, pe domeniu', p3: 'Cât de „plin” e fiecare domeniu, în medie, din cele 14 condiții.', h4: 'Înainte vs. după lansare', p4: 'Media condițiilor îndeplinite. Proiectele bune care încă nu s-au lansat bifează, adesea, mai multe condiții.', before: 'înainte', after: 'după' };
+const n1 = (x: number) => x.toLocaleString(en ? 'en-GB' : 'ro-RO', { maximumFractionDigits: 1, minimumFractionDigits: 1 });
 ---
 <div class="hc-grid">
   <figure class="hc">
-    <h3>Top 10 active, din toate domeniile</h3>
-    <p class="muted">Linia verde punctată marchează pragul de 10 condiții, de la care un activ devine candidat puternic.</p>
+    <h3>{T.h1}</h3>
+    <p class="muted">{T.p1}</p>
     <div class="bars">
       {top.map((t) => (
-        <div class="bar-row" title={`${t.name}: ${t.met} din 14 condiții (${t.dshort})`}>
+        <div class="bar-row" title={`${t.name}: ${t.met} ${T.of} (${t.dshort})`}>
           <span class="bar-name">{t.name}<small style={`color:${t.color}`}>{t.dshort}</small></span>
           <span class="bar-track"><i style={`width:${pctOf(t.met)}%;background:${t.color}`}></i><em class="thr" style={`left:${pctOf(10)}%`}></em></span>
           <b>{t.met}/14</b>
@@ -43,11 +53,11 @@ const n1 = (x: number) => x.toLocaleString('ro-RO', { maximumFractionDigits: 1, 
   </figure>
 
   <figure class="hc">
-    <h3>Câte active sunt în fiecare zonă</h3>
-    <p class="muted">Cele mai multe active nu adună destule condiții. E normal: căutăm excepțiile.</p>
+    <h3>{T.h2}</h3>
+    <p class="muted">{T.p2}</p>
     <div class="bars">
       {zones.map((z) => (
-        <div class="bar-row" title={`${z.d.title}: ${z.strong} cu 10+, ${z.watch} în observație, ${z.weak} sub 6`}>
+        <div class="bar-row" title={`${z.d.title}: ${z.strong} ${T.with}, ${z.watch} ${T.watch}, ${z.weak} ${T.under}`}>
           <span class="bar-name">{z.d.short}</span>
           <span class="stack">
             {z.strong > 0 && <i class="z-s" style={`flex:${z.strong}`}>{z.strong}</i>}
@@ -58,12 +68,12 @@ const n1 = (x: number) => x.toLocaleString('ro-RO', { maximumFractionDigits: 1, 
         </div>
       ))}
     </div>
-    <p class="legend"><span><i class="z-s"></i>10+ din 14</span><span><i class="z-w"></i>6–9</span><span><i class="z-x"></i>sub 6</span></p>
+    <p class="legend"><span><i class="z-s"></i>{T.l1}</span><span><i class="z-w"></i>6–9</span><span><i class="z-x"></i>{T.under}</span></p>
   </figure>
 
   <figure class="hc">
-    <h3>Media condițiilor îndeplinite, pe domeniu</h3>
-    <p class="muted">Cât de „plin” e fiecare domeniu, în medie, din cele 14 condiții.</p>
+    <h3>{T.h3}</h3>
+    <p class="muted">{T.p3}</p>
     <div class="bars">
       {[...zones].sort((a, b) => b.avg - a.avg).map((z) => (
         <div class="bar-row">
@@ -76,14 +86,14 @@ const n1 = (x: number) => x.toLocaleString('ro-RO', { maximumFractionDigits: 1, 
   </figure>
 
   <figure class="hc">
-    <h3>Înainte vs. după lansare</h3>
-    <p class="muted">Media condițiilor îndeplinite. Proiectele bune care încă nu s-au lansat bifează, adesea, mai multe condiții.</p>
+    <h3>{T.h4}</h3>
+    <p class="muted">{T.p4}</p>
     <div class="pairs">
       {pairs.map((p) => (
         <div class="pair">
           <span class="bar-name">{p.label}</span>
-          <div class="bar-row sm"><span class="tag">înainte</span><span class="bar-track"><i class="pre" style={`width:${pctOf(p.before)}%`}></i></span><b>{n1(p.before)}</b></div>
-          <div class="bar-row sm"><span class="tag">după</span><span class="bar-track"><i class="post" style={`width:${pctOf(p.after)}%`}></i></span><b>{n1(p.after)}</b></div>
+          <div class="bar-row sm"><span class="tag">{T.before}</span><span class="bar-track"><i class="pre" style={`width:${pctOf(p.before)}%`}></i></span><b>{n1(p.before)}</b></div>
+          <div class="bar-row sm"><span class="tag">{T.after}</span><span class="bar-track"><i class="post" style={`width:${pctOf(p.after)}%`}></i></span><b>{n1(p.after)}</b></div>
         </div>
       ))}
     </div>

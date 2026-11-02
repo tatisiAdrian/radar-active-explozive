@@ -24,6 +24,7 @@ header.site .brand { display: flex; align-items: center; gap: .5rem; font: 700 1
 header.site nav { display: flex; gap: 1.1rem; flex-wrap: wrap; margin-left: auto; }
 header.site nav a { color: var(--muted); text-decoration: none; font-size: .95rem; }
 header.site nav a:hover, header.site nav a[aria-current='page'] { color: var(--text); }
+header.site nav a.lang { border: 1px solid var(--border); border-radius: 999px; padding: 0 .55rem; font: 600 .8rem var(--f-mono); color: var(--text); }
 :target, section[id] { scroll-margin-top: 5rem; }
 main { padding: 2rem 0 4rem; }
 footer.site { border-top: 1px solid var(--border); padding: 1.5rem 0; color: var(--muted); font-size: .9rem; }

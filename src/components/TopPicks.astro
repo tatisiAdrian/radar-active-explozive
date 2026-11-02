@@ -1,9 +1,15 @@
 ---
-import { ITEMS, byRank } from '../data/home';
+import { ITEMS, byRank, localize } from '../data/home';
 import { OVERVIEW } from '../data/overview';
+import type { Lang } from '../data/i18n';
+
+interface Props { lang?: Lang }
+const { lang = 'ro' } = Astro.props;
+const en = lang === 'en';
+const T = en ? { met: 'conditions met', score: 'Score', cta: 'See the profile (in Romanian) →' } : { met: 'condiții îndeplinite', score: 'Scor', cta: 'Vezi profilul →' };
 
 const base = import.meta.env.BASE_URL;
-const picks = OVERVIEW.flatMap((d) => ITEMS.filter((i) => i.domain === d.slug).sort(byRank).slice(0, 2));
+const picks = OVERVIEW.flatMap((d) => ITEMS.filter((i) => i.domain === d.slug).sort(byRank).slice(0, 2)).map((p) => ({ ...p, raw: p.access, ...localize(p, lang) }));
 // Profilul pe 14 condiții: un poligon pe 14 axe; punctele verzi = condiții îndeplinite (nota ≥ 7).
 const R = 46, C = 56;
 const ax = (i: number, v: number) => {
@@ -12,7 +18,7 @@ const ax = (i: number, v: number) => {
   return [C + r * Math.cos(a), C + r * Math.sin(a)];
 };
 const poly = (c: (number | null)[]) => c.map((v, i) => ax(i, v ?? 5).map((n) => n.toFixed(1)).join(',')).join(' ');
-const n2 = (x: number) => x.toLocaleString('ro-RO', { maximumFractionDigits: 2, minimumFractionDigits: 2 });
+const n2 = (x: number) => x.toLocaleString(en ? 'en-GB' : 'ro-RO', { maximumFractionDigits: 2, minimumFractionDigits: 2 });
 const ACC: Record<string, string> = { 'Cumpărabil': 'a-buy', 'Prin utilizare': 'a-use', 'Acces restrâns': 'a-closed', 'Indirect': 'a-ind' };
 ---
 <div class="picks">
@@ -20,7 +26,7 @@ const ACC: Record<string, string> = { 'Cumpărabil': 'a-buy', 'Prin utilizare': 
     <a class="pick" href={`${base}domenii/${p.domain}/`} style={`--c:${p.color}`}>
       <div class="pk-top">
         <span class="pk-dom">{p.dshort}</span>
-        <span class:list={['pk-acc', ACC[p.access]]}>{p.access}</span>
+        <span class:list={['pk-acc', ACC[p.raw]]}>{p.access}</span>
       </div>
       <div class="pk-body">
         <svg viewBox="0 0 112 112" class="pk-svg" aria-hidden="true">
@@ -32,12 +38,12 @@ const ACC: Record<string, string> = { 'Cumpărabil': 'a-buy', 'Prin utilizare': 
         </svg>
         <div>
           <h3>{p.name}</h3>
-          <p class="pk-met"><b>{p.met}/14</b> condiții îndeplinite</p>
-          <p class="muted pk-sub">Scor {n2(p.score)} · {p.group}</p>
+          <p class="pk-met"><b>{p.met}/14</b> {T.met}</p>
+          <p class="muted pk-sub">{T.score} {n2(p.score)} · {p.group}</p>
           <p class="pk-fond">{p.fond}</p>
         </div>
       </div>
-      <span class="pk-cta">Vezi profilul →</span>
+      <span class="pk-cta">{T.cta}</span>
     </a>
   ))}
 </div>

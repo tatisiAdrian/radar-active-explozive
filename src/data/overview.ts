@@ -3,6 +3,7 @@ import forex from './forex/scores.json';
 import emerging from './emerging/scores.json';
 import sp500 from './sp500/scores.json';
 import ro from './startups-ro/scores.json';
+import { type Lang, DOMAIN_EN, NAME_EN, COUNTRY_EN } from './i18n';
 
 /** Un punct pe radarul de pe Home: un activ dintr-un domeniu, cu numărul de condiții îndeplinite. */
 export interface Dot { name: string; met: number; score: number; c: (number | null)[] }
@@ -34,3 +35,22 @@ export const OVERVIEW: DomainOverview[] = [
 
 export const ALL = OVERVIEW.flatMap((d) => d.items);
 export const UPDATED = db.updatedAt;
+
+/** Domeniile cu titluri și nume de active în limba cerută. */
+export function overviewFor(lang: Lang): DomainOverview[] {
+  if (lang === 'ro') return OVERVIEW;
+  const en = Object.fromEntries(assets.map((a) => [a.n.ro, a.n.en]));
+  const sc = { forex, 'economii-emergente': emerging, sp500 } as Record<string, unknown>;
+  return OVERVIEW.map((d) => {
+    const t = DOMAIN_EN[d.slug];
+    const rows = (sc[d.slug] as Scored | undefined)?.rows;
+    const items = d.items.map((it, i) => {
+      const r = rows?.[i];
+      let name = en[it.name] ?? it.name;
+      if (r && d.slug === 'forex') name = `${r.id} · ${NAME_EN[r.id] ?? r.name}`;
+      if (r && d.slug === 'economii-emergente') name = COUNTRY_EN[r.id] ?? r.name;
+      return { ...it, name };
+    });
+    return { ...d, title: t?.title ?? d.title, short: t?.short ?? d.short, what: t?.what ?? d.what, items };
+  });
+}

@@ -1,8 +1,21 @@
 ---
-import { ITEMS, byRank } from '../data/home';
-import { OVERVIEW } from '../data/overview';
+import { itemsFor, byRank } from '../data/home';
+import { overviewFor } from '../data/overview';
 import { CRITERIA } from '../data/criteria';
 import { SETS } from '../data/explain';
+import { type Lang, CRITERIA_EN, SETS_EN, NA_EN } from '../data/i18n';
+
+interface Props { lang?: Lang }
+const { lang = 'ro' } = Astro.props;
+const en = lang === 'en';
+const ITEMS = itemsFor(lang);
+const OVERVIEW = overviewFor(lang);
+const T = en
+  ? { domains: 'Domains', all: 'All', search: 'Search', ph: 'Search an asset…', min: 'Minimum conditions', mAll: 'All', m6: '6+ (on watch)', m10: '10+ (strong candidates)', sort: 'Sort by', sMet: 'Conditions met', sScore: 'Score', sName: 'Name', th: ['#', 'Asset', 'Domain', 'Score', 'Conditions', 'Access', 'Substance / form', ''] }
+  : { domains: 'Domenii', all: 'Toate', search: 'Caută', ph: 'Caută un activ…', min: 'Condiții minime', mAll: 'Toate', m6: '6+ (în observație)', m10: '10+ (candidați puternici)', sort: 'Ordonează după', sMet: 'Condiții îndeplinite', sScore: 'Scor', sName: 'Nume', th: ['#', 'Activ', 'Domeniu', 'Scor', 'Condiții', 'Acces', 'Fond / formă', ''] };
+const S = en
+  ? { na: NA_EN, full: 'Full analysis, with data and sources (in Romanian) →', found: 'assets found. Click a row to see the score for each condition, in plain words.', less: 'Show only the first 20', more: 'Show all {n} assets', locale: 'en-GB' }
+  : { na: 'Nu se poate evalua încă (de exemplu, activul nu se tranzacționează public).', full: 'Analiza completă, cu datele și sursele →', found: 'active găsite. Apasă pe un rând ca să vezi nota la fiecare condiție, explicată pe înțeles.', less: 'Arată doar primele 20', more: 'Arată toate cele {n} de active', locale: 'ro-RO' };
 
 const base = import.meta.env.BASE_URL;
 const items = [...ITEMS].sort(byRank);
@@ -10,30 +23,31 @@ const payload = {
   base,
   items,
   domains: OVERVIEW.map((d) => ({ slug: d.slug, short: d.short, color: d.color, n: ITEMS.filter((i) => i.domain === d.slug).length })),
-  crit: Object.fromEntries(Object.entries(CRITERIA).map(([k, v]) => [k, v.map(([name]) => name)])),
-  explain: SETS,
+  crit: Object.fromEntries(Object.entries(en ? CRITERIA_EN : CRITERIA).map(([k, v]) => [k, v.map(([name]) => name)])),
+  explain: en ? SETS_EN : SETS,
+  s: S,
 };
 ---
 <div class="ex" id="explorer-app">
-  <div class="ex-tabs" role="tablist" aria-label="Domenii">
-    <button type="button" class="ex-tab on" data-dom="" role="tab" aria-selected="true">Toate <small>{ITEMS.length}</small></button>
+  <div class="ex-tabs" role="tablist" aria-label={T.domains}>
+    <button type="button" class="ex-tab on" data-dom="" role="tab" aria-selected="true">{T.all} <small>{ITEMS.length}</small></button>
     {payload.domains.map((d) => (
       <button type="button" class="ex-tab" data-dom={d.slug} role="tab" aria-selected="false" style={`--c:${d.color}`}>{d.short} <small>{d.n}</small></button>
     ))}
   </div>
   <div class="ex-ctrl">
-    <label><span>Caută</span><input type="search" id="ex-q" placeholder="Caută un activ…" autocomplete="off" /></label>
-    <label><span>Condiții minime</span>
-      <select id="ex-min"><option value="0">Toate</option><option value="6">6+ (în observație)</option><option value="10">10+ (candidați puternici)</option></select>
+    <label><span>{T.search}</span><input type="search" id="ex-q" placeholder={T.ph} autocomplete="off" /></label>
+    <label><span>{T.min}</span>
+      <select id="ex-min"><option value="0">{T.mAll}</option><option value="6">{T.m6}</option><option value="10">{T.m10}</option></select>
     </label>
-    <label><span>Ordonează după</span>
-      <select id="ex-sort"><option value="met">Condiții îndeplinite</option><option value="score">Scor</option><option value="name">Nume</option></select>
+    <label><span>{T.sort}</span>
+      <select id="ex-sort"><option value="met">{T.sMet}</option><option value="score">{T.sScore}</option><option value="name">{T.sName}</option></select>
     </label>
   </div>
   <p class="muted ex-count" id="ex-count" aria-live="polite"></p>
   <div class="table-wrap">
     <table class="radar ex-table">
-      <thead><tr><th>#</th><th>Activ</th><th>Domeniu</th><th>Scor</th><th>Condiții</th><th>Acces</th><th>Fond / formă</th><th></th></tr></thead>
+      <thead><tr>{T.th.map((h) => <th>{h}</th>)}</tr></thead>
       <tbody id="ex-body"></tbody>
     </table>
   </div>
@@ -46,7 +60,7 @@ const payload = {
   const root = document.getElementById('explorer-app');
   const raw = document.getElementById('ex-data')?.textContent;
   if (root && raw) {
-    const data = JSON.parse(raw) as { base: string; items: Item[]; crit: Record<string, string[]>; explain: Record<string, [string, string, string][]> };
+    const data = JSON.parse(raw) as { base: string; items: Item[]; crit: Record<string, string[]>; explain: Record<string, [string, string, string][]>; s: Record<string, string> };
     const body = root.querySelector<HTMLTableSectionElement>('#ex-body')!;
     const q = root.querySelector<HTMLInputElement>('#ex-q')!;
     const min = root.querySelector<HTMLSelectElement>('#ex-min')!;
@@ -57,10 +71,10 @@ const payload = {
     let all = false;
     const PAGE = 20;
     const esc = (s: string) => s.replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[ch]!);
-    const num = (x: number) => x.toLocaleString('ro-RO', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const num = (x: number) => x.toLocaleString(data.s.locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
     const say = (set: string, i: number, v: number | null) => {
-      if (v == null) return 'Nu se poate evalua încă (de exemplu, activul nu se tranzacționează public).';
+      if (v == null) return data.s.na;
       const t = data.explain[set]?.at(i);
       return t ? (v >= 7 ? t[2] : v >= 5 ? t[1] : t[0]) : '';
     };
@@ -71,19 +85,19 @@ const payload = {
         const cls = v == null ? 'slab' : v >= 7 ? 'puternic' : v >= 5 ? 'observatie' : 'slab';
         return `<li><span class="k ${cls}">${v ?? '—'}</span><b>${esc(n)}</b><span>${esc(say(it.set, i, v))}</span></li>`;
       }).join('');
-      return `<div class="ex-det"><ul>${rows}</ul><a href="${data.base}domenii/${it.domain}/">Analiza completă, cu datele și sursele →</a></div>`;
+      return `<div class="ex-det"><ul>${rows}</ul><a href="${data.base}domenii/${it.domain}/">${data.s.full}</a></div>`;
     };
     const render = () => {
       const term = q.value.trim().toLowerCase();
       const m = Number(min.value);
       let xs = data.items.filter((i) => (!dom || i.domain === dom) && i.met >= m && (!term || i.name.toLowerCase().includes(term)));
       if (sort.value === 'score') xs = [...xs].sort((a, b) => b.score - a.score);
-      else if (sort.value === 'name') xs = [...xs].sort((a, b) => a.name.localeCompare(b.name, 'ro'));
-      count.textContent = `${xs.length} active găsite. Apasă pe un rând ca să vezi nota la fiecare condiție, explicată pe înțeles.`;
+      else if (sort.value === 'name') xs = [...xs].sort((a, b) => a.name.localeCompare(b.name, data.s.locale));
+      count.textContent = `${xs.length} ${data.s.found}`;
       const total = xs.length;
       if (!all) xs = xs.slice(0, PAGE);
       more.hidden = total <= PAGE;
-      more.textContent = all ? 'Arată doar primele 20' : `Arată toate cele ${total} de active`;
+      more.textContent = all ? data.s.less : data.s.more.replace('{n}', String(total));
       body.innerHTML = xs.map((it, i) => `
         <tr class="ex-row" tabindex="0" aria-expanded="false">
           <td class="muted">${i + 1}</td>

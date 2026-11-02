@@ -1,0 +1,191 @@
+---
+import Base from '../../layouts/Base.astro';
+import HomeRadar from '../../components/HomeRadar.astro';
+import { overviewFor, ALL, UPDATED } from '../../data/overview';
+import { photoForDomain } from '../../data/photos';
+import { fondTag } from '../../data/explain';
+import HomeCharts from '../../components/HomeCharts.astro';
+import TopPicks from '../../components/TopPicks.astro';
+import Explorer from '../../components/Explorer.astro';
+import { WEIGHTS } from '../../data/criteria';
+import { CRITERIA_EN, DOMAIN_EN, PHOTO_ALT_EN } from '../../data/i18n';
+import '../../styles/home.css';
+
+const base = import.meta.env.BASE_URL;
+const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const OVERVIEW = overviewFor('en');
+const strongAll = ALL.filter((x) => x.met >= 10).length;
+
+const shaFiles = import.meta.glob<string>('/public/snapshots/*.sha256', { query: '?raw', import: 'default', eager: true });
+const LABEL: Record<string, string> = { forex: 'Forex', emergente: 'Emerging economies', sp500: 'S&P 500', 'startups-ro': 'Start-ups in Romania' };
+const snapshots = Object.values(shaFiles).map((txt) => {
+  const [hash, file] = txt.trim().split(/\s+/);
+  const m = file.match(/^(?:(.+)-)?(\d{4}-\d{2}-\d{2})\.json$/)!;
+  return { file, hash, date: m[2], label: m[1] ? LABEL[m[1]] ?? m[1] : 'Original radar: crypto, companies, commodities (88 assets)' };
+}).sort((a, b) => b.date.localeCompare(a.date) || a.label.localeCompare(b.label));
+
+const cards = OVERVIEW.map((d) => {
+  const sorted = [...d.items].sort((a, b) => b.met - a.met || b.score - a.score);
+  return {
+    d,
+    strong: d.items.filter((x) => x.met >= 10).length,
+    watch: d.items.filter((x) => x.met >= 6 && x.met < 10).length,
+    top: sorted.slice(0, 3),
+    summary: DOMAIN_EN[d.slug]?.summary ?? '',
+    ph: photoForDomain(d.slug),
+    fff: d.items.filter((x) => fondTag(x.c) === 'fond-fara-forma').length,
+  };
+});
+const general = CRITERIA_EN.general;
+const ext = { target: '_blank', rel: 'noopener' };
+---
+<Base lang="en" alt="" title="All domains" description="One radar for crypto, start-ups, commodities, forex, emerging economies and the S&P 500: the assets that meet the most of the 14 conditions for strong growth.">
+  <section class="home-hero">
+    <div class="hh-text">
+      <p class="eyebrow">Pre-identification · data updated on {fmtDate(UPDATED)}</p>
+      <h1>One radar for <span class="accent">every market</span> we analyse.</h1>
+      <p class="lede">The same 14 conditions, applied to crypto, start-ups, commodities, currencies, economies and the largest US companies. The closer an asset is to the centre, the more conditions it meets for strong growth. It is a watch list, not buying advice.</p>
+      <div class="hh-stats">
+        <div><b>{ALL.length}</b><span>assets analysed</span></div>
+        <div><b>{OVERVIEW.length}</b><span>domains</span></div>
+        <div><b>{strongAll}</b><span>with 10+ conditions</span></div>
+        <div><b>{snapshots.length}</b><span>frozen snapshots</span></div>
+      </div>
+      <ul class="hh-legend">
+        {cards.map((c) => (
+          <li><a href={`${base}domenii/${c.d.slug}/`} style={`--c:${c.d.color}`}><i></i><span>{c.d.title}</span><small>{c.d.items.length} · {c.strong} with 10+</small></a></li>
+        ))}
+      </ul>
+    </div>
+    <div class="hh-radar"><HomeRadar lang="en" /></div>
+  </section>
+
+  <nav class="subnav" aria-label="On this page">
+    <a href="#domains">Domains</a><a href="#charts">At a glance</a><a href="#candidates">Candidates</a><a href="#method">Method</a><a href="#all">All assets</a><a href="#history">History</a><a href="#buy">Where to buy</a><a href="#transparency">Transparency</a>
+  </nav>
+
+  <section id="domains">
+    <h2>The domains</h2>
+    <p class="muted">Each domain has its own page: the full ranking, the score on every condition, the official data behind the scores and the sources. Domain pages are in Romanian for now; the scores and figures read the same.</p>
+    <div class="dgrid">
+      {cards.map((c) => (
+        <a class="dcard" href={`${base}domenii/${c.d.slug}/`} hreflang="ro" style={`--c:${c.d.color}`}>
+          {c.ph ? <img class="dimg" src={`${base}images/${c.ph.key}-800.jpg`} alt={PHOTO_ALT_EN[c.ph.key] ?? c.ph.alt} loading="lazy" decoding="async" width="800" height="533" style={c.ph.key === 'romania' ? 'object-position:center 35%' : undefined} /> : <span class="dbar"></span>}
+          <h3>{c.d.title}</h3>
+          <p class="muted">{c.summary}</p>
+          <div class="dstats">
+            <span><b>{c.d.items.length}</b> assets</span>
+            <span class="strong"><b>{c.strong}</b> with 10+</span>
+            <span class="watch"><b>{c.watch}</b> on watch</span>
+            <span class="fff" title="Solid substance, not yet inflated by price, press or crowding"><b>{c.fff}</b> substance without form</span>
+          </div>
+          <ol class="dtop">
+            {c.top.map((t) => <li><span>{t.name}</span><b>{t.met}/14</b></li>)}
+          </ol>
+          <span class="dcta">Open the analysis (RO) →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section id="charts">
+    <p class="eyebrow">At a glance</p>
+    <h2>What the radar shows now</h2>
+    <p class="muted">Four simple charts, computed from the scores of all {ALL.length} assets. Hover over the bars to see the details.</p>
+    <HomeCharts lang="en" />
+  </section>
+
+  <section id="candidates">
+    <p class="eyebrow">On the radar now</p>
+    <h2>The top two candidates in each domain</h2>
+    <p class="muted">The drawing shows the profile across the 14 conditions: the larger and rounder the shape, the more complete the asset. Green dots are conditions met; the dotted circle is the threshold of 7.</p>
+    <TopPicks lang="en" />
+  </section>
+
+  <section class="steps" id="method">
+    <p class="eyebrow">Method</p>
+    <h2>How to read the radar</h2>
+    <div class="sgrid">
+      <div><b>1</b><h3>The same 14 conditions</h3><p>Each asset gets a score from 0 to 10 on each condition, adapted to its domain: real demand, healthy finances, valuation, crowding, risks. A condition counts as met from a score of 7.</p></div>
+      <div><b>2</b><h3>Data, not impressions</h3><p>Where official data exists (IMF, BIS, World Bank, annual reports, public prices), scores are computed with published formulas. The rest is judgement, with a written rationale and sources.</p></div>
+      <div><b>3</b><h3>Substance, not form</h3><p>We look for what supports the price (usage, customers, finances), not only what is visible (listing, valuation, press). Assets with solid substance that the market has not yet inflated are the most interesting.</p></div>
+      <div><b>4</b><h3>Frozen and verified</h3><p>Scores are frozen in a dated file with a digital fingerprint. Prices update automatically every Friday, and the outcome is measured in public, mistakes included.</p></div>
+    </div>
+    <div class="zones">
+      <div class="zn z-strong"><b>10+ of 14</b><span>Strong candidate. Rare. Tracked weekly.</span></div>
+      <div class="zn z-watch"><b>6 – 9</b><span>On watch. We track whether conditions get added.</span></div>
+      <div class="zn z-weak"><b>Under 6</b><span>Too many conditions missing, however good the story.</span></div>
+    </div>
+    <h3 class="crit-h">The 14 conditions and their weights</h3>
+    <p class="muted">The same weights in every domain; what we measure is adapted: in forex the real interest rate and the current account matter, in the S&P 500 cash flow, in emerging economies debt and institutions. Each domain page has its own table.</p>
+    <div class="crit">
+      {general.map(([name, what], i) => <div><span class="w">{WEIGHTS[i]}%</span><b>{name}</b><small>{what}</small></div>)}
+    </div>
+  </section>
+
+  <section id="all">
+    <p class="eyebrow">All assets</p>
+    <h2>Search, filter, compare</h2>
+    <p class="muted">All {ALL.length} assets from the {OVERVIEW.length} domains, in one table. Pick a domain, search for a name or show only the strong candidates.</p>
+    <Explorer lang="en" />
+  </section>
+
+  <section id="history">
+    <p class="eyebrow">Verifiable history</p>
+    <h2>Not just predictions: every radar stays frozen and gets checked</h2>
+    <div class="hsteps">
+      <div><b>1</b><h3>We freeze the radar</h3><p>The full list, with scores and conditions, is saved as a dated file. Anyone can download it.</p></div>
+      <div><b>2</b><h3>We prove we didn’t touch it</h3><p>We publish the file’s digital fingerprint (SHA-256). If even one comma changed, the fingerprint would no longer match.</p></div>
+      <div><b>3</b><h3>We measure the outcome in public</h3><p>Closing prices from public sources, compared with Bitcoin, the S&P 500 and a commodity index. Mistakes included.</p></div>
+    </div>
+    <h3 class="crit-h">Verifiable snapshots</h3>
+    <p class="muted">Each file can be downloaded and checked: the SHA-256 fingerprint anyone computes (for example with <code>sha256sum</code>) must match the one below.</p>
+    <div class="table-wrap">
+      <table class="radar snaps">
+        <thead><tr><th>Date</th><th>Domain</th><th>File</th><th>SHA-256 fingerprint</th></tr></thead>
+        <tbody>
+          {snapshots.map((s) => (
+            <tr><td class="num">{s.date}</td><td>{s.label}</td><td><a href={`${base}snapshots/${s.file}`}>{s.file}</a></td><td><code title={s.hash}>{s.hash.slice(0, 16)}…</code></td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="test">
+      <h3>The method test</h3>
+      <p>The question we track in public: did assets with 10+ conditions perform better than those under 6? The first measurement is on Friday, 6 November 2026, and the chart fills in after the first four weeks. If the method does not work, we will say so and adjust it.</p>
+      <p class="muted small">Past performance is not a reliable indicator of future results. Reference prices come from public sources on the dates shown, before fees or taxes.</p>
+    </div>
+    <p>
+      <a href={`${base}radar/en/`}>Original radar</a> (with history and “About us”) ·{' '}
+      <a href={`${base}en/funding/`}>How we are funded</a> ·{' '}
+      <a href="https://github.com/TatisiAdrian/radar-active-explozive" {...ext}>Code and change history (GitHub)</a>
+    </p>
+  </section>
+
+  <section id="buy">
+    <p class="eyebrow">Where to buy</p>
+    <h2>Platforms, by asset type</h2>
+    <p class="muted">Examples, not recommendations. Check availability in your country and the fees before opening an account. We receive no commission for accounts opened; if a broker listed here becomes a sponsor, it is clearly marked, under our <a href={`${base}en/funding/`}>public rules</a>.</p>
+    <div class="buy">
+      <div><h3>Crypto</h3><p>Centralised exchanges for tokens already launched. All require identity verification.</p><ul><li><a href="https://www.binance.com" {...ext}>Binance</a> · most of the tokens on the radar</li><li><a href="https://www.coinbase.com" {...ext}>Coinbase</a></li><li><a href="https://www.kraken.com" {...ext}>Kraken</a></li><li><a href="https://www.okx.com" {...ext}>OKX</a></li><li><a href="https://www.bybit.com" {...ext}>Bybit</a></li></ul></div>
+      <div><h3>Listed shares</h3><p>S&P 500 companies, recent listings and UiPath, through brokers with access to US and Hong Kong exchanges.</p><ul><li><a href="https://www.interactivebrokers.com" {...ext}>Interactive Brokers</a></li><li><a href="https://www.xtb.com" {...ext}>XTB</a></li><li><a href="https://www.trading212.com" {...ext}>Trading 212</a></li><li><a href="https://www.home.saxo" {...ext}>Saxo</a></li><li><a href="https://www.etoro.com" {...ext}>eToro</a> · also offers CFDs, high risk</li></ul></div>
+      <div><h3>Commodities</h3><p>In the EU the simplest route is ETCs listed in Europe. Futures need a special account and use leverage.</p><ul><li><a href="https://www.wisdomtree.eu" {...ext}>WisdomTree Europe</a> · ETC</li><li><a href="https://www.cmegroup.com" {...ext}>CME Group</a> · futures</li><li><a href="https://www.ice.com" {...ext}>ICE</a> · futures</li><li><a href="https://www.lme.com" {...ext}>London Metal Exchange</a></li></ul></div>
+      <div><h3>Forex</h3><p>Currencies are bought through multi-currency accounts at a bank or broker. Leveraged trading (CFDs) can lose more than you deposit: most retail accounts lose money.</p><ul><li><a href="https://www.interactivebrokers.com" {...ext}>Interactive Brokers</a> · FX conversion at market rate</li><li><a href="https://www.home.saxo" {...ext}>Saxo</a></li><li>Your bank’s multi-currency account</li></ul></div>
+      <div><h3>Emerging economies</h3><p>Through exchange-listed country ETFs (for example EEM, INDA, EWZ), bought via the brokers above. For Romania, the ETF on the BET index, listed on the Bucharest Stock Exchange.</p><ul><li><a href="https://www.bvb.ro" {...ext}>Bucharest Stock Exchange</a> · BET ETF (TVBETETF)</li><li><a href="https://tradeville.ro" {...ext}>Tradeville</a></li><li><a href="https://www.btcapitalpartners.ro" {...ext}>BT Capital Partners</a></li><li><a href="https://www.brk.ro" {...ext}>BRK Financial Group</a></li></ul></div>
+      <div><h3>Private companies (pre-IPO)</h3><p>Secondary markets, usually for accredited investors only and with high minimums.</p><ul><li><a href="https://forgeglobal.com" {...ext}>Forge Global</a></li><li><a href="https://equityzen.com" {...ext}>EquityZen</a></li></ul></div>
+    </div>
+    <p class="notice">Beware of fake sites. A project’s popularity attracts fraudulent copies. Only go through the official address and never share your wallet’s secret phrase.</p>
+  </section>
+
+  <section id="transparency">
+    <p class="eyebrow">Transparency</p>
+    <h2>How we work</h2>
+    <div class="how">
+      <div><h3>Public data</h3><p>IMF, BIS, World Bank, company annual reports, exchanges and specialist press. Every figure has a source, a link and a retrieval date.</p></div>
+      <div><h3>Formulas and judgement, in the open</h3><p>Where data exists, scores are computed with published formulas; the rest is judgement, with a rationale. You can see each one in every asset’s profile.</p></div>
+      <div><h3>Weekly updates</h3><p>Prices and official data update automatically every Friday. The date of the last update is always at the top of this page.</p></div>
+      <div><h3>Money and conflicts of interest</h3><p>The radar stays free; we are funded by courses, services for companies and declared sponsorships. The author holds or has held positions in Lighter (LIT) and uses Polymarket. <a href={`${base}en/funding/`}>How we are funded →</a></p></div>
+    </div>
+    <p class="notice"><b>This is not investment advice.</b> The radar guarantees no growth. Most assets with explosive potential do not explode, and the move can also be down, with losses of 80–90%. Only invest money you can afford to lose entirely.</p>
+  </section>
+</Base>

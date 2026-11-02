@@ -1,5 +1,14 @@
 ---
-import { OVERVIEW } from '../data/overview';
+import { overviewFor } from '../data/overview';
+import type { Lang } from '../data/i18n';
+
+interface Props { lang?: Lang }
+const { lang = 'ro' } = Astro.props;
+const en = lang === 'en';
+const OVERVIEW = overviewFor(lang);
+const T = en
+  ? { title: 'Radar of all domains', desc: 'Each dot is an analysed asset. The closer to the centre, the more of the 14 conditions it meets. Each sector leads to the domain page.', ring: '10 conditions', assets: 'assets', of: 'conditions', cap: 'Centre = all 14 conditions. Green zone = 10 or more. Dot size = score. Click a sector for the full analysis (in Romanian).' }
+  : { title: 'Radarul tuturor domeniilor', desc: 'Fiecare punct e un activ analizat. Cu cât e mai aproape de centru, cu atât îndeplinește mai multe din cele 14 condiții. Fiecare sector duce la pagina domeniului.', ring: '10 condiții', assets: 'active', of: 'condiții', cap: 'Centrul = toate cele 14 condiții. Zona verde = 10 sau mai multe. Mărimea punctului = scorul. Apasă pe un sector pentru analiza completă.' };
 
 const base = import.meta.env.BASE_URL;
 const S = 820, C = S / 2, R = 330, R0 = 26;
@@ -31,8 +40,8 @@ const ring = (met: number) => rOf(met);
 ---
 <figure class="home-radar">
   <svg viewBox={`0 0 ${S} ${S}`} role="img" aria-labelledby="hr-title hr-desc">
-    <title id="hr-title">Radarul tuturor domeniilor</title>
-    <desc id="hr-desc">Fiecare punct e un activ analizat. Cu cât e mai aproape de centru, cu atât îndeplinește mai multe din cele 14 condiții. Fiecare sector duce la pagina domeniului.</desc>
+    <title id="hr-title">{T.title}</title>
+    <desc id="hr-desc">{T.desc}</desc>
     <defs>
       <radialGradient id="hr-glow" cx="50%" cy="50%" r="50%">
         <stop offset="0%" stop-color="var(--hr-zone)" stop-opacity=".9" />
@@ -44,25 +53,25 @@ const ring = (met: number) => rOf(met);
     <circle cx={C} cy={C} r={ring(10)} class="hr-ring strong" />
     <circle cx={C} cy={C} r={ring(6)} class="hr-ring" />
     <circle cx={C} cy={C} r={ring(2)} class="hr-ring faint" />
-    <text x={C + 6} y={C - ring(10) - 6} class="hr-ringlabel">10 condiții</text>
+    <text x={C + 6} y={C - ring(10) - 6} class="hr-ringlabel">{T.ring}</text>
     <text x={C + 6} y={C - ring(6) - 6} class="hr-ringlabel">6</text>
     <text x={C + 6} y={C - ring(2) - 6} class="hr-ringlabel">2</text>
     {sectors.map((s) => (
-      <a href={s.href} class="hr-sector" style={`--c:${s.d.color}`} aria-label={`${s.d.title}: ${s.d.items.length} active`}>
+      <a href={s.href} class="hr-sector" style={`--c:${s.d.color}`} aria-label={`${s.d.title}: ${s.d.items.length} ${T.assets}`}>
         <path d={s.path} class="hr-slice" />
         {s.dots.map((p) => (
-          <circle cx={f(p.x)} cy={f(p.y)} r={f(p.rad)} class="hr-dot" data-tip={`${p.it.name} · ${p.it.met}/14 condiții · ${s.d.short}`}>
-            <title>{`${p.it.name}: ${p.it.met} din 14 condiții (${s.d.title})`}</title>
+          <circle cx={f(p.x)} cy={f(p.y)} r={f(p.rad)} class="hr-dot" data-tip={`${p.it.name} · ${p.it.met}/14 ${T.of} · ${s.d.short}`}>
+            <title>{`${p.it.name}: ${p.it.met}/14 ${T.of} (${s.d.title})`}</title>
           </circle>
         ))}
         <text x={f(s.lx)} y={f(s.ly)} text-anchor={s.anchor} class="hr-label">{s.d.short}</text>
-        <text x={f(s.lx)} y={f(s.ly + 17)} text-anchor={s.anchor} class="hr-sub">{s.d.items.length} active</text>
+        <text x={f(s.lx)} y={f(s.ly + 17)} text-anchor={s.anchor} class="hr-sub">{s.d.items.length} {T.assets}</text>
       </a>
     ))}
     <circle cx={C} cy={C} r="4" class="hr-center" />
   </svg>
   <div class="hr-tip" hidden></div>
-  <figcaption class="muted">Centrul = toate cele 14 condiții. Zona verde = 10 sau mai multe. Mărimea punctului = scorul. Apasă pe un sector pentru analiza completă.</figcaption>
+  <figcaption class="muted">{T.cap}</figcaption>
 </figure>
 
 <script>
