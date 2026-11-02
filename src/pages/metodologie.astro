@@ -1,8 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
+import PhotoHeader from '../components/PhotoHeader.astro';
+import { photo } from '../data/photos';
 ---
 <Base alt="en/methodology/" title="Metodologie">
-  <h1>Metodologie</h1>
+<PhotoHeader photo={photo('metodologie')!} title="Metodologie" eyebrow="Cum lucrăm" summary="Reguli simple, ca oricine să poată verifica singur fiecare cifră și fiecare concluzie." />
   <p>Fiecare analiză de pe site respectă aceleași reguli, ca cititorul să poată verifica singur concluziile.</p>
   <ol>
     <li><strong>Nicio cifră fără sursă.</strong> Fiecare set de date are numele sursei, link direct și data preluării. Site-ul nu se poate publica dacă lipsește oricare dintre ele.</li>

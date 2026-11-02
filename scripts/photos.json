@@ -1,15 +1,208 @@
 {
  "_doc": "Fotografii cu licența Unsplash (gratuită, inclusiv folosire comercială). Descărcate de scripts/fetch-photos.mjs în public/images/.",
  "photos": [
-  { "key": "crypto", "url": "https://images.unsplash.com/photo-1623227413711-25ee4388dae3", "page": "https://unsplash.com/photos/a-bitcoin-sitting-on-top-of-a-pile-of-gold-nuggets-rhm7H8X5J98", "author": "Kanchanara", "alt": "O monedă bitcoin așezată pe pepite de aur" },
-  { "key": "startups", "url": "https://images.unsplash.com/photo-1774600134168-b9ebd714e4e1", "page": "https://unsplash.com/photos/team-collaborating-on-laptops-in-modern-office-N3Bf0ArT5J0", "author": "Fiqih Alfarish", "alt": "O echipă care lucrează pe laptopuri într-un birou modern" },
-  { "key": "romania", "url": "https://images.unsplash.com/photo-1771756762795-6f5a742edbdd", "page": "https://unsplash.com/photos/the-arcul-de-triumf-in-bucharest-with-cars-driving-by-jB4ook3eaxw", "author": "Uladzislau Petrushkevich", "alt": "Arcul de Triumf din București, cu mașini în trafic" },
-  { "key": "sp500", "url": "https://images.unsplash.com/photo-1770461846516-b7e5993a8e4f", "page": "https://unsplash.com/photos/new-york-stock-exchange-building-with-american-flags-xnzSgqyP8Hs", "author": "David Vives", "alt": "Clădirea Bursei din New York, cu steaguri americane" },
-  { "key": "marfuri", "url": "https://images.unsplash.com/photo-1751788385441-50e19352c5ad", "page": "https://unsplash.com/photos/harvesting-equipment-in-a-field-of-wheat-DIHyZXCF-2A", "author": "Bernd Dittrich", "alt": "Combine care recoltează un câmp de grâu" },
-  { "key": "forex", "url": "https://images.unsplash.com/photo-1764865988307-a7abe207fa1d", "page": "https://unsplash.com/photos/us-dollars-and-euros-scattered-on-a-surface-4Ah6xLAQqaU", "author": "Eric Prouzet", "alt": "Bancnote în dolari și euro împrăștiate pe o masă" },
-  { "key": "emergente", "url": "https://images.unsplash.com/photo-1736297150541-89378f055b96", "page": "https://unsplash.com/photos/a-large-city-with-a-lot-of-tall-buildings-DkfnGxoy5NI", "author": "Alim", "alt": "Clădirile înalte din Jakarta, Indonezia" },
-  { "key": "imobiliare", "url": "https://images.unsplash.com/photo-1770064319692-fdea4ad4a80d", "page": "https://unsplash.com/photos/dense-apartment-buildings-in-a-city-aerial-view-krVXmZzL_Q4", "author": "Willian Justen de Vasconcellos", "alt": "Blocuri de locuințe dense într-un oraș, văzute de sus" },
-  { "key": "proiecte", "url": "https://images.unsplash.com/photo-1637701323782-10ebeae22093", "page": "https://unsplash.com/photos/a-very-tall-building-with-a-crane-on-top-of-it-n3ye52UITD0", "author": "Andrea De Santis", "alt": "O clădire înaltă în construcție, cu o macara în vârf, la Londra" },
-  { "key": "fond", "url": "https://images.unsplash.com/photo-1770131748972-b1a08d57efbc", "page": "https://unsplash.com/photos/tall-bookshelves-filled-with-old-books-in-a-library-6vBqpVyYHX0", "author": "Ahmet Yüksek", "alt": "Rafturi înalte cu cărți vechi într-o bibliotecă" }
+  {
+   "key": "crypto",
+   "url": "https://images.unsplash.com/photo-1623227413711-25ee4388dae3",
+   "page": "https://unsplash.com/photos/a-bitcoin-sitting-on-top-of-a-pile-of-gold-nuggets-rhm7H8X5J98",
+   "author": "Kanchanara",
+   "alt": "O monedă bitcoin așezată pe pepite de aur"
+  },
+  {
+   "key": "startups",
+   "url": "https://images.unsplash.com/photo-1541185934-01b600ea069c",
+   "page": "https://unsplash.com/photos/rocket-launch-trail-in-night-sky-6SbFGnQTE8s",
+   "author": "SpaceX",
+   "alt": "Urma unei rachete lansate pe cerul nopții"
+  },
+  {
+   "key": "romania",
+   "url": "https://images.unsplash.com/photo-1771756762795-6f5a742edbdd",
+   "page": "https://unsplash.com/photos/the-arcul-de-triumf-in-bucharest-with-cars-driving-by-jB4ook3eaxw",
+   "author": "Uladzislau Petrushkevich",
+   "alt": "Arcul de Triumf din București, cu mașini în trafic"
+  },
+  {
+   "key": "sp500",
+   "url": "https://images.unsplash.com/photo-1770461846516-b7e5993a8e4f",
+   "page": "https://unsplash.com/photos/new-york-stock-exchange-building-with-american-flags-xnzSgqyP8Hs",
+   "author": "David Vives",
+   "alt": "Clădirea Bursei din New York, cu steaguri americane"
+  },
+  {
+   "key": "marfuri",
+   "url": "https://images.unsplash.com/photo-1751788385441-50e19352c5ad",
+   "page": "https://unsplash.com/photos/harvesting-equipment-in-a-field-of-wheat-DIHyZXCF-2A",
+   "author": "Bernd Dittrich",
+   "alt": "Combine care recoltează un câmp de grâu"
+  },
+  {
+   "key": "forex",
+   "url": "https://images.unsplash.com/photo-1764865988307-a7abe207fa1d",
+   "page": "https://unsplash.com/photos/us-dollars-and-euros-scattered-on-a-surface-4Ah6xLAQqaU",
+   "author": "Eric Prouzet",
+   "alt": "Bancnote în dolari și euro împrăștiate pe o masă"
+  },
+  {
+   "key": "emergente",
+   "url": "https://images.unsplash.com/photo-1736297150541-89378f055b96",
+   "page": "https://unsplash.com/photos/a-large-city-with-a-lot-of-tall-buildings-DkfnGxoy5NI",
+   "author": "Alim",
+   "alt": "Clădirile înalte din Jakarta, Indonezia"
+  },
+  {
+   "key": "imobiliare",
+   "url": "https://images.unsplash.com/photo-1770064319692-fdea4ad4a80d",
+   "page": "https://unsplash.com/photos/dense-apartment-buildings-in-a-city-aerial-view-krVXmZzL_Q4",
+   "author": "Willian Justen de Vasconcellos",
+   "alt": "Blocuri de locuințe dense într-un oraș, văzute de sus"
+  },
+  {
+   "key": "proiecte",
+   "url": "https://images.unsplash.com/photo-1637701323782-10ebeae22093",
+   "page": "https://unsplash.com/photos/a-very-tall-building-with-a-crane-on-top-of-it-n3ye52UITD0",
+   "author": "Andrea De Santis",
+   "alt": "O clădire înaltă în construcție, cu o macara în vârf, la Londra"
+  },
+  {
+   "key": "fond",
+   "url": "https://images.unsplash.com/photo-1770131748972-b1a08d57efbc",
+   "page": "https://unsplash.com/photos/tall-bookshelves-filled-with-old-books-in-a-library-6vBqpVyYHX0",
+   "author": "Ahmet Yüksek",
+   "alt": "Rafturi înalte cu cărți vechi într-o bibliotecă"
+  },
+  {
+   "key": "home",
+   "url": "https://images.unsplash.com/photo-1610457642191-05328cdf34ff",
+   "page": "https://unsplash.com/photos/white-satellite-dish-under-blue-sky-during-night-time-3YAIvBNlZM4",
+   "author": "Stephan Widua",
+   "alt": "Un radiotelescop sub un cer înstelat, în Germania"
+  },
+  {
+   "key": "investitii",
+   "url": "https://images.unsplash.com/photo-1727883384683-231453ce29a7",
+   "page": "https://unsplash.com/photos/a-statue-of-a-bull-on-a-city-street-V3pdV5dmsz0",
+   "author": "osamu nakazawa",
+   "alt": "Taurul de bronz de pe Wall Street, New York"
+  },
+  {
+   "key": "macro",
+   "url": "https://images.unsplash.com/photo-1640529494825-4add7eed660e",
+   "page": "https://unsplash.com/photos/an-aerial-view-of-shipping-containers-at-a-port-iDlVmSKg_Is",
+   "author": "Weichao Deng",
+   "alt": "Containere într-un port din Shenzhen, China, văzute de sus"
+  },
+  {
+   "key": "metodologie",
+   "url": "https://images.unsplash.com/photo-1759772082797-6c5fef25a39c",
+   "page": "https://unsplash.com/photos/observatory-domes-under-the-milky-way-at-night-Xsva3kxJ6mw",
+   "author": "Evgeni Tcherkasski",
+   "alt": "Cupolele observatorului Roque de los Muchachos sub Calea Lactee"
+  },
+  {
+   "key": "finantare",
+   "url": "https://images.unsplash.com/photo-1582139329536-e7284fece509",
+   "page": "https://unsplash.com/photos/steel-bank-vault-door-locking-wheel-3wPJxh-piRw",
+   "author": "Jason Dent",
+   "alt": "Ușa masivă a unui seif de bancă, cu roata de închidere"
+  },
+  {
+   "key": "domenii",
+   "url": "https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0",
+   "page": "https://unsplash.com/photos/satellite-view-of-earths-surface-_SFJhRPzJHs",
+   "author": "NASA",
+   "alt": "Manhattan noaptea, fotografiat din spațiu"
+  },
+  {
+   "key": "europa",
+   "url": "https://images.unsplash.com/photo-1665482955116-8226c353a5f1",
+   "page": "https://unsplash.com/photos/a-city-skyline-at-night-lopPmvD3Ucs",
+   "author": "Nick Andreas",
+   "alt": "Zgârie-norii din Frankfurt noaptea"
+  },
+  {
+   "key": "marea-britanie",
+   "url": "https://images.unsplash.com/photo-1779991672998-624922d44b17",
+   "page": "https://unsplash.com/photos/londons-financial-district-skyline-with-river-thames-and-boats-7WlarfPrpb8",
+   "author": "Zara Johnson",
+   "alt": "Districtul financiar al Londrei, cu Tamisa și vapoare"
+  },
+  {
+   "key": "franta",
+   "url": "https://images.unsplash.com/photo-1760281854309-3c5ea36d5d83",
+   "page": "https://unsplash.com/photos/eiffel-tower-visible-over-the-paris-cityscape-2IhA9Z4EEeA",
+   "author": "Miraxh Tereziu",
+   "alt": "Turnul Eiffel deasupra acoperișurilor Parisului"
+  },
+  {
+   "key": "suedia",
+   "url": "https://images.unsplash.com/photo-1785783704852-4074740560f3",
+   "page": "https://unsplash.com/photos/historic-buildings-line-the-waterfront-of-a-european-city-CmsuZaL6pAQ",
+   "author": "Kylli Kittus",
+   "alt": "Clădiri istorice pe malul apei, la Stockholm"
+  },
+  {
+   "key": "america-de-nord",
+   "url": "https://images.unsplash.com/photo-1486325212027-8081e485255e",
+   "page": "https://unsplash.com/photos/cn-tower-and-toronto-skyline-gOq27RHoL3s",
+   "author": "Zia Syed",
+   "alt": "Turnul CN și orizontul Torontoului"
+  },
+  {
+   "key": "sua",
+   "url": "https://images.unsplash.com/photo-1788987259172-8d68fe102587",
+   "page": "https://unsplash.com/photos/bay-bridge-and-san-francisco-skyline-hmW3e2hLGP0",
+   "author": "Kellen Riggin",
+   "alt": "Podul Bay Bridge și orizontul San Francisco"
+  },
+  {
+   "key": "asia",
+   "url": "https://images.unsplash.com/photo-1764418658652-3b8d6304b115",
+   "page": "https://unsplash.com/photos/aerial-view-of-a-city-skyline-at-night-RDlhSZR4SR8",
+   "author": "Sarmat Batagov",
+   "alt": "Tokyo noaptea, văzut de sus"
+  },
+  {
+   "key": "china",
+   "url": "https://images.unsplash.com/photo-1750766810524-5121e1707f0f",
+   "page": "https://unsplash.com/photos/skyscrapers-stand-tall-against-a-blue-cloudy-sky-_C_w5KR8uYA",
+   "author": "Declan Sun",
+   "alt": "Zgârie-norii din Pudong, Shanghai"
+  },
+  {
+   "key": "singapore",
+   "url": "https://images.unsplash.com/photo-1774075884764-be7319c06e08",
+   "page": "https://unsplash.com/photos/singapore-skyline-with-marina-bay-sands-and-ferris-wheel-3GRENNknIsw",
+   "author": "Sigrid",
+   "alt": "Orizontul Singapore, cu Marina Bay Sands"
+  },
+  {
+   "key": "india",
+   "url": "https://images.unsplash.com/photo-1753806390462-580d7a625f76",
+   "page": "https://unsplash.com/photos/city-skyline-stretches-across-the-water-under-stormy-skies-_uQU8ASuO_A",
+   "author": "Zoshua Colah",
+   "alt": "Orizontul Mumbaiului peste apă, sub un cer de furtună"
+  },
+  {
+   "key": "oceania",
+   "url": "https://images.unsplash.com/photo-1781668071654-b3fe9359cd9f",
+   "page": "https://unsplash.com/photos/sydney-opera-house-harbour-bridge-and-city-skyline-over-water-YdEYNsLdAhg",
+   "author": "Fabio Cagni",
+   "alt": "Opera din Sydney, podul portului și orizontul orașului"
+  },
+  {
+   "key": "america-latina",
+   "url": "https://images.unsplash.com/photo-1502309085707-08dca030b9a3",
+   "page": "https://unsplash.com/photos/aerial-photography-of-city-buildings-during-sunrise-6OMe9rp3v9c",
+   "author": "Draga Work",
+   "alt": "São Paulo la răsărit, văzut de sus"
+  },
+  {
+   "key": "africa",
+   "url": "https://images.unsplash.com/photo-1693902997450-7e912c0d3554",
+   "page": "https://unsplash.com/photos/a-view-of-a-city-with-tall-buildings-vyagy6HJpVE",
+   "author": "Kenny Murgor",
+   "alt": "Clădirile înalte din Nairobi, Kenya"
+  }
  ]
 }

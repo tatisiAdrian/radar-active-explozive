@@ -85,7 +85,7 @@ const firstMeasure = new Date(Date.parse(BASELINE) + 7 * 86400000).toISOString()
     <p>
       {v.rows.length} assets scored on the same 14 conditions: <b>{count('puternic')}</b> with 10+ conditions met,{' '}
       <b>{count('observatie')}</b> on watch (6–9) and <b>{count('slab')}</b> under 6.
-      The scores are those of the{' '}<a href={`${base}radar/en/#istoric`}>frozen snapshot of {fmtDate(SNAPSHOT_DATE)}</a>{' '}
+      The scores are those of the{' '}frozen snapshot of {fmtDate(SNAPSHOT_DATE)}{' '}
       (<a href={`${base}snapshots/${SNAPSHOT_DATE}.json`}>JSON file with a SHA-256 fingerprint</a>).{' '}
       {v.priced.length} have a weekly public price in our database.
     </p>
@@ -93,7 +93,7 @@ const firstMeasure = new Date(Date.parse(BASELINE) + 7 * 86400000).toISOString()
     <p>
       {v.rows.length} active notate pe aceleași 14 condiții: <b>{count('puternic')}</b> cu 10+ condiții îndeplinite,{' '}
       <b>{count('observatie')}</b> în observație (6–9) și <b>{count('slab')}</b> sub 6.
-      Notele sunt cele din{' '}<a href={`${base}radar/#istoric`}>instantaneul înghețat din {fmtDate(SNAPSHOT_DATE)}</a>{' '}
+      Notele sunt cele din{' '}instantaneul înghețat din {fmtDate(SNAPSHOT_DATE)}{' '}
       (<a href={`${base}snapshots/${SNAPSHOT_DATE}.json`}>fișier JSON cu amprentă SHA-256</a>).{' '}
       {v.priced.length} au preț public săptămânal în baza noastră de date.
     </p>

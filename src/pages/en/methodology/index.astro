@@ -1,8 +1,10 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import PhotoHeader from '../../../components/PhotoHeader.astro';
+import { photo } from '../../../data/photos';
 ---
 <Base lang="en" alt="metodologie/" title="Methodology">
-  <h1>Methodology</h1>
+<PhotoHeader photo={photo('metodologie')!} lang="en" title="Methodology" eyebrow="How we work" summary="Simple rules, so anyone can check every figure and every conclusion for themselves." />
   <p>Every analysis on the site follows the same rules, so readers can check the conclusions for themselves.</p>
   <ol>
     <li><strong>No figure without a source.</strong> Every dataset has the source’s name, a direct link and the retrieval date. The site cannot be published if any of them is missing.</li>

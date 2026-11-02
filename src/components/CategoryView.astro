@@ -5,6 +5,8 @@ import TopPicks from './TopPicks.astro';
 import Explorer from './Explorer.astro';
 import DomainCards from './DomainCards.astro';
 import BuyBlocks from './BuyBlocks.astro';
+import PhotoHeader from './PhotoHeader.astro';
+import { photo } from '../data/photos';
 import { overviewFor, UPDATED } from '../data/overview';
 import { CATEGORIES, type CatKey } from '../data/categories';
 import type { Lang } from '../data/i18n';
@@ -39,11 +41,9 @@ const T = en
       bE: 'Unde cumperi', bH: 'Platforme pentru această categorie',
       other: 'Cealaltă categorie', method: 'Cum funcționează cele 14 condiții, istoricul înghețat și cum ne finanțăm', methodLink: 'pe prima pagină →' };
 ---
+<PhotoHeader photo={photo(cat)!} lang={lang} title={t.title} eyebrow={`${t.eyebrow} · ${T.upd} ${fmtDate(UPDATED)}`} summary={t.question} />
 <section class="home-hero cat-hero" style={`--cat:${C.color}`}>
   <div class="hh-text">
-    <p class="eyebrow">{t.eyebrow} · {T.upd} {fmtDate(UPDATED)}</p>
-    <h1>{t.title}</h1>
-    <p class="cat-q">{t.question}</p>
     <p class="lede">{t.lede}</p>
     <div class="hh-stats">
       <div><b>{items.length}</b><span>{T.assets}</span></div>

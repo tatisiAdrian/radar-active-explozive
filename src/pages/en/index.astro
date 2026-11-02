@@ -1,6 +1,8 @@
 ---
 import HomeCats from '../../components/HomeCats.astro';
 import Base from '../../layouts/Base.astro';
+import PhotoHeader from '../../components/PhotoHeader.astro';
+import { photo } from '../../data/photos';
 import { overviewFor, ALL, UPDATED } from '../../data/overview';
 import { WEIGHTS } from '../../data/criteria';
 import { CRITERIA_EN } from '../../data/i18n';
@@ -16,18 +18,16 @@ const LABEL: Record<string, string> = { forex: 'Forex', emergente: 'Emerging eco
 const snapshots = Object.values(shaFiles).map((txt) => {
   const [hash, file] = txt.trim().split(/\s+/);
   const m = file.match(/^(?:(.+)-)?(\d{4}-\d{2}-\d{2})\.json$/)!;
-  return { file, hash, date: m[2], label: m[1] ? LABEL[m[1]] ?? m[1] : 'Original radar: crypto, companies, commodities (88 assets)' };
+  return { file, hash, date: m[2], label: m[1] ? LABEL[m[1]] ?? m[1] : 'Crypto, companies, commodities (88 assets)' };
 }).sort((a, b) => b.date.localeCompare(a.date) || a.label.localeCompare(b.label));
 
 const general = CRITERIA_EN.general;
 ---
 
 <Base lang="en" alt="" title="All domains" description="One radar for crypto, start-ups, commodities, forex, emerging economies and the S&P 500: the assets that meet the most of the 14 conditions for strong growth.">
-  <section class="home-hero home-intro">
+  <PhotoHeader photo={photo('home')!} lang="en" title="Two radars: investments and macroeconomics" eyebrow={`Pre-identification · data updated on ${fmtDate(UPDATED)}`} summary="We don’t mix apples and oranges. Assets you can invest in directly (crypto, start-ups, shares) have their own radar. The backdrop every investment lives in (currencies, national economies, commodities) has another. Both use the same 14 conditions, adapted to each domain. It is a watch list, not buying advice." position="center 60%" />
+  <section class="home-intro">
     <div class="hh-text">
-      <p class="eyebrow">Pre-identification · data updated on {fmtDate(UPDATED)}</p>
-      <h1>Two radars: <span class="accent">investments</span> and <span class="accent2">macroeconomics</span>.</h1>
-      <p class="lede">We don’t mix apples and oranges. Assets you can invest in directly (crypto, start-ups, shares) have their own radar. The backdrop every investment lives in (currencies, national economies, commodities) has another. Both use the same 14 conditions, adapted to each domain. It is a watch list, not buying advice.</p>
       <div class="hh-stats">
         <div><b>{ALL.length}</b><span>assets analysed</span></div>
         <div><b>2</b><span>categories, {OVERVIEW.length} domains</span></div>
@@ -90,7 +90,7 @@ const general = CRITERIA_EN.general;
       <p class="muted small">Past performance is not a reliable indicator of future results. Reference prices come from public sources on the dates shown, before fees or taxes.</p>
     </div>
     <p>
-      <a href={`${base}radar/en/`}>Original radar</a> (with history and “About us”) ·{' '}
+      <a href={`${base}en/methodology/`}>Methodology</a> ·{' '}
       <a href={`${base}en/funding/`}>How we are funded</a> ·{' '}
       <a href="https://github.com/TatisiAdrian/radar-active-explozive" target="_blank" rel="noopener">Code and change history (GitHub)</a>
     </p>

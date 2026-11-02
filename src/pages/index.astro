@@ -1,6 +1,8 @@
 ---
 import HomeCats from '../components/HomeCats.astro';
 import Base from '../layouts/Base.astro';
+import PhotoHeader from '../components/PhotoHeader.astro';
+import { photo } from '../data/photos';
 import { OVERVIEW, ALL, UPDATED } from '../data/overview';
 import { CRITERIA, WEIGHTS } from '../data/criteria';
 import '../styles/home.css';
@@ -15,18 +17,16 @@ const LABEL: Record<string, string> = { forex: 'Forex', emergente: 'Economii eme
 const snapshots = Object.values(shaFiles).map((txt) => {
   const [hash, file] = txt.trim().split(/\s+/);
   const m = file.match(/^(?:(.+)-)?(\d{4}-\d{2}-\d{2})\.json$/)!;
-  return { file, hash, date: m[2], label: m[1] ? LABEL[m[1]] ?? m[1] : 'Radarul inițial: cripto, companii, mărfuri (88 de active)' };
+  return { file, hash, date: m[2], label: m[1] ? LABEL[m[1]] ?? m[1] : 'Cripto, companii, mărfuri (88 de active)' };
 }).sort((a, b) => b.date.localeCompare(a.date) || a.label.localeCompare(b.label));
 
 const general = CRITERIA.general;
 ---
 
 <Base title="Toate domeniile" alt="en/" description="Un singur radar pentru cripto, start-ups, mărfuri, Forex, economii emergente și S&P 500: activele care adună cele mai multe din cele 14 condiții pentru o creștere puternică.">
-  <section class="home-hero home-intro">
+  <PhotoHeader photo={photo('home')!} title="Două radare: investiții și macroeconomie" eyebrow={`Pre-identificare · date actualizate pe ${fmtDate(UPDATED)}`} summary="Nu amestecăm merele cu perele. Activele în care poți investi direct (cripto, start-ups, acțiuni) au radarul lor. Contextul în care trăiesc toate investițiile (monede, economii naționale, mărfuri) are alt radar. Ambele folosesc aceleași 14 condiții, adaptate fiecărui domeniu. E o listă de urmărit, nu un sfat de cumpărare." position="center 60%" />
+  <section class="home-intro">
     <div class="hh-text">
-      <p class="eyebrow">Pre-identificare · date actualizate pe {fmtDate(UPDATED)}</p>
-      <h1>Două radare: <span class="accent">investiții</span> și <span class="accent2">macroeconomie</span>.</h1>
-      <p class="lede">Nu amestecăm merele cu perele. Activele în care poți investi direct (cripto, start-ups, acțiuni) au radarul lor. Contextul în care trăiesc toate investițiile (monede, economii naționale, mărfuri) are alt radar. Ambele folosesc aceleași 14 condiții, adaptate fiecărui domeniu. E o listă de urmărit, nu un sfat de cumpărare.</p>
       <div class="hh-stats">
         <div><b>{ALL.length}</b><span>active analizate</span></div>
         <div><b>2</b><span>categorii, {OVERVIEW.length} domenii</span></div>
@@ -89,7 +89,6 @@ const general = CRITERIA.general;
       <p class="muted small">Performanța trecută nu este un indicator de încredere pentru rezultatele viitoare. Prețurile de referință se iau din surse publice la datele indicate, fără comisioane sau taxe.</p>
     </div>
     <p>
-      <a href={`${base}radar/`}>Radarul inițial</a> (cu istoric, „Despre noi” și versiunea în engleză) ·{' '}
       <a href={`${base}metodologie/`}>Metodologie</a> ·{' '}
       <a href={`${base}finantare/`}>Cum ne finanțăm</a> ·{' '}
       <a href="https://github.com/TatisiAdrian/radar-active-explozive" target="_blank" rel="noopener">Codul și istoricul modificărilor (GitHub)</a>

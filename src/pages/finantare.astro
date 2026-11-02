@@ -1,9 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+import PhotoHeader from '../components/PhotoHeader.astro';
+import { photo } from '../data/photos';
 const base = import.meta.env.BASE_URL;
 ---
 <Base title="Cum ne finanțăm" alt="en/funding/" description="Radarul rămâne gratuit. Ne finanțăm din cursuri, servicii pentru companii și sponsorizări declarate, cu reguli scrise care protejează independența notelor.">
-  <h1>Cum ne finanțăm</h1>
+<PhotoHeader photo={photo('finantare')!} title="Cum ne finanțăm" eyebrow="Independență" summary="Radarul rămâne gratuit. Regulile de mai jos protejează notele de orice influență a celor care plătesc." />
   <p class="lede-f">Radarul rămâne gratuit, pentru toată lumea. Ne finanțăm din cursuri, servicii pentru companii și sponsorizări declarate. Nu vindem semnale și nu facem recomandări personale.</p>
 
   <section>

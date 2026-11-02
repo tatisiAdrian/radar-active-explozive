@@ -1,5 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import PhotoHeader from '../../../components/PhotoHeader.astro';
+import { photo } from '../../../data/photos';
 import DomainCard from '../../../components/DomainCard.astro';
 import { topLevel } from '../../../data/domains';
 import { CAT_LIST, catOf } from '../../../data/categories';
@@ -9,7 +11,7 @@ const active = all.filter((d) => d.status === 'activ');
 const planned = all.filter((d) => d.status === 'planificat');
 ---
 <Base lang="en" alt="domenii/" title="Domains">
-  <h1>All domains</h1>
+<PhotoHeader photo={photo('domenii')!} lang="en" title="All domains" eyebrow="Investments and macroeconomics" summary="Each domain has its own page: the full ranking, the score on every condition, the official data and the sources." />
   <p class="muted">The radar’s groundwork: prices and statistics taken directly from official sources (World Bank, CoinGecko and others), each with a link and a retrieval date. Each domain has its own page.</p>
   <p><a href={`${base}en/`}>← Home</a></p>
 

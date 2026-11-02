@@ -46,7 +46,6 @@ const canonical = Astro.site ? new URL(path, Astro.site).href : path;
               <a href={`${base}en/investments/`} aria-current={path.startsWith(`${base}en/investments/`) ? 'page' : undefined}>Investments</a>
               <a href={`${base}en/macro/`} aria-current={path.startsWith(`${base}en/macro/`) ? 'page' : undefined}>Macroeconomics</a>
               <a href={`${base}en/substance/`} aria-current={path.startsWith(`${base}en/substance/`) ? 'page' : undefined}>Substance, not form</a>
-              <a href={`${base}radar/en/`}>Original radar</a>
               <a href={`${base}en/methodology/`} aria-current={path.startsWith(`${base}en/methodology/`) ? 'page' : undefined}>Methodology</a>
             </>
           ) : (
@@ -55,7 +54,6 @@ const canonical = Astro.site ? new URL(path, Astro.site).href : path;
               <a href={`${base}investitii/`} aria-current={path.startsWith(`${base}investitii/`) ? 'page' : undefined}>Investiții</a>
               <a href={`${base}macro/`} aria-current={path.startsWith(`${base}macro/`) ? 'page' : undefined}>Macroeconomie</a>
               <a href={`${base}fond/`} aria-current={path.startsWith(`${base}fond/`) ? 'page' : undefined}>Fond, nu formă</a>
-              <a href={`${base}radar/`}>Radarul inițial</a>
               <a href={`${base}metodologie/`} aria-current={path.startsWith(`${base}metodologie/`) ? 'page' : undefined}>Metodologie</a>
             </>
           )}
