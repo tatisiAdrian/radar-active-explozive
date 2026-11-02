@@ -4,6 +4,7 @@ import { domains } from '../data/domains';
 import { photoForDomain } from '../data/photos';
 import { fondTag } from '../data/explain';
 import { type Lang, DOMAIN_EN, PHOTO_ALT_EN } from '../data/i18n';
+import { SOCIAL } from '../data/social';
 
 interface Props { lang?: Lang; only: string[] }
 const { lang = 'ro', only } = Astro.props;
@@ -29,7 +30,7 @@ const cards = overviewFor(lang, only).map((d) => ({
       <h3>{c.d.title}</h3>
       <p class="muted">{c.summary}</p>
       <div class="dstats">
-        <span><b>{c.d.items.length}</b> {T.assets}</span>
+        <span><b>{c.d.items.length}</b> {SOCIAL[c.d.slug] ? (en ? 'positions' : 'poziții') : T.assets}</span>
         <span class="strong"><b>{c.strong}</b> {T.with}</span>
         <span class="watch"><b>{c.watch}</b> {T.watch}</span>
         <span class="fff" title={T.fffTip}><b>{c.fff}</b> {T.fff}</span>

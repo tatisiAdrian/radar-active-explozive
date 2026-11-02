@@ -7,19 +7,22 @@ import DomainCards from './DomainCards.astro';
 import BuyBlocks from './BuyBlocks.astro';
 import PhotoHeader from './PhotoHeader.astro';
 import { photo } from '../data/photos';
+import { REGIONS, regionOf, type RegionKey } from '../data/social';
 import { overviewFor, UPDATED } from '../data/overview';
 import { CATEGORIES, type CatKey } from '../data/categories';
 import type { Lang } from '../data/i18n';
 
-interface Props { lang?: Lang; cat: CatKey }
-const { lang = 'ro', cat } = Astro.props;
+interface Props { lang?: Lang; cat: CatKey; region?: RegionKey }
+const { lang = 'ro', cat, region = 'romania' } = Astro.props;
 const en = lang === 'en';
 const base = import.meta.env.BASE_URL;
 const C = CATEGORIES[cat];
+const slugs = cat === 'social' ? C.slugs.filter((s) => regionOf(s) === region) : C.slugs;
+const reg = REGIONS.find((r) => r.key === region)!;
 const other = CATEGORIES[cat === 'investitii' ? 'macro' : cat === 'macro' ? 'social' : 'investitii'];
 const t = C.t[lang];
 const ot = other.t[lang];
-const doms = overviewFor(lang, C.slugs);
+const doms = overviewFor(lang, slugs);
 const items = doms.flatMap((d) => d.items);
 const strong = items.filter((x) => x.met >= 10).length;
 const watch = items.filter((x) => x.met >= 6 && x.met < 10).length;
@@ -41,7 +44,14 @@ const T = en
       bE: 'Unde cumperi', bH: 'Platforme pentru această categorie',
       other: 'Cealaltă categorie', method: 'Cum funcționează cele 14 condiții, istoricul înghețat și cum ne finanțăm', methodLink: 'pe prima pagină →' };
 ---
-<PhotoHeader photo={photo(cat)!} lang={lang} title={t.title} eyebrow={`${t.eyebrow} · ${T.upd} ${fmtDate(UPDATED)}`} summary={t.question} />
+<PhotoHeader photo={photo(cat === 'social' && region === 'europa' ? 'europa' : cat)!} lang={lang} title={cat === 'social' ? `${t.title}: ${reg.name[lang]}` : t.title} eyebrow={`${t.eyebrow} · ${T.upd} ${fmtDate(UPDATED)}`} summary={t.question} />
+{cat === 'social' && (
+  <nav class="region-switch" aria-label={en ? 'Region' : 'Regiune'}>
+    <span>{en ? 'Region' : 'Regiune'}:</span>
+    {REGIONS.map((r) => <a href={`${base}${r.path[lang]}`} aria-current={r.key === region ? 'page' : undefined} title={r.name[lang]}>{r.code}</a>)}
+    <small>{en ? 'Worldwide: coming next' : 'Lume: urmează'}</small>
+  </nav>
+)}
 <section class="home-hero cat-hero" style={`--cat:${C.color}`}>
   <div class="hh-text">
     <p class="lede">{t.lede}</p>
@@ -57,7 +67,7 @@ const T = en
       ))}
     </ul>
   </div>
-  <div class="hh-radar"><HomeRadar lang={lang} only={C.slugs} uid={`r-${cat}`} /></div>
+  <div class="hh-radar"><HomeRadar lang={lang} only={slugs} uid={`r-${cat}`} /></div>
 </section>
 
 <nav class="subnav" aria-label={T.nav}>
@@ -68,28 +78,28 @@ const T = en
 <section id={T.ids[0]}>
   <h2>{T.dH}</h2>
   <p class="muted">{T.dP}</p>
-  <DomainCards lang={lang} only={C.slugs} />
+  <DomainCards lang={lang} only={slugs} />
 </section>
 
 <section id={T.ids[1]}>
   <p class="eyebrow">{T.gE}</p>
   <h2>{T.gH}</h2>
   <p class="muted">{cat === 'social' ? (en ? `Simple charts, computed from the scores of the ${items.length} positions in this category.` : `Grafice simple, calculate din notele celor ${items.length} de poziții din această categorie.`) : T.gP(items.length)}</p>
-  <HomeCharts lang={lang} only={C.slugs} />
+  <HomeCharts lang={lang} only={slugs} />
 </section>
 
 <section id={T.ids[2]}>
   <p class="eyebrow">{T.cE}</p>
   <h2>{T.cH}</h2>
   <p class="muted">{T.cP}</p>
-  <TopPicks lang={lang} only={C.slugs} />
+  <TopPicks lang={lang} only={slugs} />
 </section>
 
 <section id={T.ids[3]}>
   <p class="eyebrow">{T.aE}</p>
   <h2>{T.aH}</h2>
   <p class="muted">{cat === 'social' ? (en ? `All ${items.length} positions in this category, in one table. Click a row for the score on each condition, explained in plain words.` : `Toate cele ${items.length} de poziții din această categorie, într-un singur tabel. Apasă pe un rând ca să vezi nota la fiecare condiție, explicată pe înțeles.`) : T.aP(items.length)}</p>
-  <Explorer lang={lang} only={C.slugs} />
+  <Explorer lang={lang} only={slugs} />
 </section>
 
 {cat !== 'social' && <section id={T.ids[4]}>

@@ -1,0 +1,380 @@
+{
+ "domain": "licee-europa",
+ "date": "2026-11-03",
+ "weights": [
+  16,
+  6,
+  6,
+  8,
+  6,
+  8,
+  8,
+  4,
+  6,
+  6,
+  6,
+  6,
+  6,
+  8
+ ],
+ "met_threshold": 7,
+ "formulas": {
+  "C1": "Matematică, PISA 2022: nota = (scorul − 440) / 7 (510 dă 10, 489 dă 7).",
+  "C2": "Citire, PISA 2022: nota = (scorul − 440) / 7.",
+  "C3": "Științe, PISA 2022: nota = (scorul − 450) / 7 (500 dă 7)."
+ },
+ "rows": [
+  {
+   "id": "irlanda",
+   "name": "Irlanda",
+   "data": {
+    "math": 492,
+    "read": 516,
+    "sci": 504
+   },
+   "c": [
+    7,
+    10,
+    8,
+    8,
+    8,
+    10,
+    7,
+    6,
+    9,
+    8,
+    7,
+    7,
+    7,
+    null
+   ],
+   "inputs": {
+    "C1": "matematică: 492 puncte",
+    "C2": "citire: 516 puncte",
+    "C3": "științe: 504 puncte"
+   },
+   "score": 7.6,
+   "met": 12
+  },
+  {
+   "id": "estonia",
+   "name": "Estonia",
+   "data": {
+    "math": 510,
+    "read": 511,
+    "sci": 526
+   },
+   "c": [
+    10,
+    10,
+    10,
+    9,
+    9,
+    10,
+    7,
+    6,
+    7,
+    6,
+    7,
+    8,
+    7,
+    null
+   ],
+   "inputs": {
+    "C1": "matematică: 510 puncte",
+    "C2": "citire: 511 puncte",
+    "C3": "științe: 526 puncte"
+   },
+   "score": 8.16,
+   "met": 11
+  },
+  {
+   "id": "elvetia",
+   "name": "Elveția",
+   "data": {
+    "math": 508,
+    "read": 483,
+    "sci": 503
+   },
+   "c": [
+    10,
+    6,
+    8,
+    7,
+    9,
+    9,
+    9,
+    10,
+    8,
+    4,
+    7,
+    7,
+    5,
+    null
+   ],
+   "inputs": {
+    "C1": "matematică: 508 puncte",
+    "C2": "citire: 483 puncte",
+    "C3": "științe: 503 puncte"
+   },
+   "score": 7.64,
+   "met": 10
+  },
+  {
+   "id": "finlanda",
+   "name": "Finlanda",
+   "data": {
+    "math": 484,
+    "read": 490,
+    "sci": 511
+   },
+   "c": [
+    6,
+    7,
+    9,
+    8,
+    7,
+    10,
+    10,
+    7,
+    7,
+    5,
+    7,
+    8,
+    4,
+    null
+   ],
+   "inputs": {
+    "C1": "matematică: 484 puncte",
+    "C2": "citire: 490 puncte",
+    "C3": "științe: 511 puncte"
+   },
+   "score": 7.12,
+   "met": 10
+  },
+  {
+   "id": "danemarca",
+   "name": "Danemarca",
+   "data": {
+    "math": 489,
+    "read": 489,
+    "sci": 494
+   },
+   "c": [
+    7,
+    7,
+    6,
+    8,
+    6,
+    10,
+    8,
+    7,
+    9,
+    5,
+    7,
+    7,
+    6,
+    null
+   ],
+   "inputs": {
+    "C1": "matematică: 489 puncte",
+    "C2": "citire: 489 puncte",
+    "C3": "științe: 494 puncte"
+   },
+   "score": 7.06,
+   "met": 9
+  },
+  {
+   "id": "polonia",
+   "name": "Polonia",
+   "data": {
+    "math": 489,
+    "read": 489,
+    "sci": 499
+   },
+   "c": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    10,
+    6,
+    6,
+    6,
+    6,
+    7,
+    8,
+    6,
+    null
+   ],
+   "inputs": {
+    "C1": "matematică: 489 puncte",
+    "C2": "citire: 489 puncte",
+    "C3": "științe: 499 puncte"
+   },
+   "score": 6.84,
+   "met": 8
+  },
+  {
+   "id": "cehia",
+   "name": "Cehia",
+   "data": {
+    "math": 487,
+    "read": 489,
+    "sci": 498
+   },
+   "c": [
+    7,
+    7,
+    7,
+    5,
+    7,
+    10,
+    6,
+    7,
+    6,
+    6,
+    7,
+    7,
+    6,
+    null
+   ],
+   "inputs": {
+    "C1": "matematică: 487 puncte",
+    "C2": "citire: 489 puncte",
+    "C3": "științe: 498 puncte"
+   },
+   "score": 6.66,
+   "met": 8
+  },
+  {
+   "id": "regatul-unit",
+   "name": "Regatul Unit",
+   "data": {
+    "math": 489,
+    "read": 494,
+    "sci": 500
+   },
+   "c": [
+    7,
+    8,
+    7,
+    6,
+    8,
+    9,
+    6,
+    6,
+    9,
+    8,
+    6,
+    6,
+    6,
+    null
+   ],
+   "inputs": {
+    "C1": "matematică: 489 puncte",
+    "C2": "citire: 494 puncte",
+    "C3": "științe: 500 puncte"
+   },
+   "score": 6.92,
+   "met": 7
+  },
+  {
+   "id": "olanda",
+   "name": "Țările de Jos",
+   "data": {
+    "math": 493,
+    "read": 459,
+    "sci": 488
+   },
+   "c": [
+    8,
+    3,
+    5,
+    6,
+    8,
+    10,
+    7,
+    9,
+    10,
+    5,
+    6,
+    6,
+    4,
+    null
+   ],
+   "inputs": {
+    "C1": "matematică: 493 puncte",
+    "C2": "citire: 459 puncte",
+    "C3": "științe: 488 puncte"
+   },
+   "score": 6.7,
+   "met": 6
+  },
+  {
+   "id": "belgia",
+   "name": "Belgia",
+   "data": {
+    "math": 489,
+    "read": 479,
+    "sci": 491
+   },
+   "c": [
+    7,
+    6,
+    6,
+    5,
+    8,
+    10,
+    6,
+    8,
+    8,
+    5,
+    6,
+    7,
+    5,
+    null
+   ],
+   "inputs": {
+    "C1": "matematică: 489 puncte",
+    "C2": "citire: 479 puncte",
+    "C3": "științe: 491 puncte"
+   },
+   "score": 6.58,
+   "met": 6
+  },
+  {
+   "id": "slovenia",
+   "name": "Slovenia",
+   "data": {
+    "math": 485,
+    "read": 469,
+    "sci": 500
+   },
+   "c": [
+    6,
+    4,
+    7,
+    7,
+    6,
+    10,
+    6,
+    7,
+    6,
+    4,
+    7,
+    8,
+    6,
+    null
+   ],
+   "inputs": {
+    "C1": "matematică: 485 puncte",
+    "C2": "citire: 469 puncte",
+    "C3": "științe: 500 puncte"
+   },
+   "score": 6.36,
+   "met": 6
+  }
+ ]
+}

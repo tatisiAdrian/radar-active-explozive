@@ -1,0 +1,536 @@
+{
+ "_doc": "Cele mai bune sisteme de licee din Europa, pe țări (nu există un clasament european al școlilor). C1–C3 se calculează din scorurile PISA 2022; restul sunt judecată.",
+ "date": "2026-11-03",
+ "set": "licee-eu",
+ "region": "europa",
+ "items": [
+  {
+   "id": "estonia",
+   "name": "Estonia",
+   "nameEn": "Estonia",
+   "data": {
+    "math": 510,
+    "read": 511,
+    "sci": 526
+   },
+   "c": [
+    null,
+    null,
+    null,
+    9,
+    9,
+    10,
+    7,
+    6,
+    7,
+    6,
+    7,
+    8,
+    7,
+    null
+   ],
+   "why": "Cel mai bun sistem școlar din Europa la PISA 2022: primul la științe (526), la egalitate pe primul loc la matematică (510) și la citire (511). Rezultate foarte bune și pentru elevii din familii modeste.",
+   "whyEn": "Europe’s best school system in PISA 2022: first in science (526), joint first in mathematics (510) and reading (511). Very good results for pupils from modest families too.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "elvetia",
+   "name": "Elveția",
+   "nameEn": "Switzerland",
+   "data": {
+    "math": 508,
+    "read": 483,
+    "sci": 503
+   },
+   "c": [
+    null,
+    null,
+    null,
+    7,
+    9,
+    9,
+    9,
+    10,
+    8,
+    4,
+    7,
+    7,
+    5,
+    null
+   ],
+   "why": "La egalitate pe primul loc în Europa la matematică (508), cu un sistem dual în care ucenicia e la fel de respectată ca liceul teoretic; citirea e mai slabă (483).",
+   "whyEn": "Joint first in Europe in mathematics (508), with a dual system in which apprenticeship is as respected as academic high school; reading is weaker (483).",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "irlanda",
+   "name": "Irlanda",
+   "nameEn": "Ireland",
+   "data": {
+    "math": 492,
+    "read": 516,
+    "sci": 504
+   },
+   "c": [
+    null,
+    null,
+    null,
+    8,
+    8,
+    10,
+    7,
+    6,
+    9,
+    8,
+    7,
+    7,
+    7,
+    null
+   ],
+   "why": "Primul loc din UE și din OCDE la citire (516) și rezultate bune la științe (504); predare în engleză, deci acces ușor pentru familiile care se mută.",
+   "whyEn": "First in the EU and the OECD in reading (516) and good science results (504); teaching in English, so easy access for families who move there.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "regatul-unit",
+   "name": "Regatul Unit",
+   "nameEn": "United Kingdom",
+   "data": {
+    "math": 489,
+    "read": 494,
+    "sci": 500
+   },
+   "c": [
+    null,
+    null,
+    null,
+    6,
+    8,
+    9,
+    6,
+    6,
+    9,
+    8,
+    6,
+    6,
+    6,
+    null
+   ],
+   "why": "Rezultate peste media OCDE la toate trei probele (489, 494, 500) și predare în engleză; diferențe mari între școli și regiuni.",
+   "whyEn": "Above the OECD average in all three subjects (489, 494, 500) and teaching in English; large gaps between schools and regions.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "polonia",
+   "name": "Polonia",
+   "nameEn": "Poland",
+   "data": {
+    "math": 489,
+    "read": 489,
+    "sci": 499
+   },
+   "c": [
+    null,
+    null,
+    null,
+    7,
+    7,
+    10,
+    6,
+    6,
+    6,
+    6,
+    7,
+    8,
+    6,
+    null
+   ],
+   "why": "Unul dintre marile succese educaționale din Europa în ultimele două decenii; matematică 489, științe 499. Rezultatele au scăzut față de 2018, ca în cea mai mare parte a Europei.",
+   "whyEn": "One of Europe’s great education successes of the past two decades; mathematics 489, science 499. Results fell compared with 2018, as in most of Europe.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "finlanda",
+   "name": "Finlanda",
+   "nameEn": "Finland",
+   "data": {
+    "math": 484,
+    "read": 490,
+    "sci": 511
+   },
+   "c": [
+    null,
+    null,
+    null,
+    8,
+    7,
+    10,
+    10,
+    7,
+    7,
+    5,
+    7,
+    8,
+    4,
+    null
+   ],
+   "why": "Profesori foarte bine pregătiți și respectați și al doilea scor la științe din Europa (511); rezultatele au scăzut constant din 2006 încoace.",
+   "whyEn": "Very well trained and respected teachers and Europe’s second-best science score (511); results have fallen steadily since 2006.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "danemarca",
+   "name": "Danemarca",
+   "nameEn": "Denmark",
+   "data": {
+    "math": 489,
+    "read": 489,
+    "sci": 494
+   },
+   "c": [
+    null,
+    null,
+    null,
+    8,
+    6,
+    10,
+    8,
+    7,
+    9,
+    5,
+    7,
+    7,
+    6,
+    null
+   ],
+   "why": "Rezultate echilibrate (489, 489, 494) și diferențe mici între elevi; engleza e foarte bine stăpânită.",
+   "whyEn": "Balanced results (489, 489, 494) and small gaps between pupils; English is very well mastered.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "cehia",
+   "name": "Cehia",
+   "nameEn": "Czechia",
+   "data": {
+    "math": 487,
+    "read": 489,
+    "sci": 498
+   },
+   "c": [
+    null,
+    null,
+    null,
+    5,
+    7,
+    10,
+    6,
+    7,
+    6,
+    6,
+    7,
+    7,
+    6,
+    null
+   ],
+   "why": "Rezultate peste media OCDE (487, 489, 498), dar legătura dintre mediul familial și rezultate e mai puternică decât în nordul Europei.",
+   "whyEn": "Above the OECD average (487, 489, 498), but the link between family background and results is stronger than in northern Europe.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "olanda",
+   "name": "Țările de Jos",
+   "nameEn": "Netherlands",
+   "data": {
+    "math": 493,
+    "read": 459,
+    "sci": 488
+   },
+   "c": [
+    null,
+    null,
+    null,
+    6,
+    8,
+    10,
+    7,
+    9,
+    10,
+    5,
+    6,
+    6,
+    4,
+    null
+   ],
+   "why": "A doua matematică din UE după Estonia (493), dar o scădere puternică la citire (459); orientarea timpurie spre trasee diferite e un punct sensibil.",
+   "whyEn": "The second-best mathematics in the EU after Estonia (493), but a sharp drop in reading (459); early tracking into different paths is a sensitive point.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "belgia",
+   "name": "Belgia",
+   "nameEn": "Belgium",
+   "data": {
+    "math": 489,
+    "read": 479,
+    "sci": 491
+   },
+   "c": [
+    null,
+    null,
+    null,
+    5,
+    8,
+    10,
+    6,
+    8,
+    8,
+    5,
+    6,
+    7,
+    5,
+    null
+   ],
+   "why": "Rezultate bune la matematică (489) și științe (491), dar diferențe mari între comunitățile flamandă și franceză și între școli.",
+   "whyEn": "Good results in mathematics (489) and science (491), but large gaps between the Flemish and French communities and between schools.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "slovenia",
+   "name": "Slovenia",
+   "nameEn": "Slovenia",
+   "data": {
+    "math": 485,
+    "read": 469,
+    "sci": 500
+   },
+   "c": [
+    null,
+    null,
+    null,
+    7,
+    6,
+    10,
+    6,
+    7,
+    6,
+    4,
+    7,
+    8,
+    6,
+    null
+   ],
+   "why": "Matematică 485 și științe 500, peste media OCDE; citirea (469) e punctul slab.",
+   "whyEn": "Mathematics 485 and science 500, above the OECD average; reading (469) is the weak point.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  }
+ ]
+}

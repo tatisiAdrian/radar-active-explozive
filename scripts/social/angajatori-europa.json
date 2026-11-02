@@ -1,0 +1,393 @@
+{
+ "_doc": "Cei mai buni angajatori din Europa. Note de judecată pe baza Forbes World’s Best Employers 2025, a certificărilor Top Employers Europe 2026 și a contextului industriei.",
+ "date": "2026-11-03",
+ "set": "angajatori",
+ "region": "europa",
+ "items": [
+  {
+   "id": "microsoft",
+   "name": "Microsoft",
+   "nameEn": "Microsoft",
+   "c": [
+    10,
+    null,
+    10,
+    8,
+    10,
+    7,
+    7,
+    7,
+    8,
+    3,
+    5,
+    5,
+    2,
+    6
+   ],
+   "why": "Locul 1 în Forbes World’s Best Employers 2025, pe baza recomandărilor a circa 300.000 de angajați. Salarii de top, dar concurență foarte mare la angajare.",
+   "whyEn": "First in Forbes World’s Best Employers 2025, based on recommendations from about 300,000 employees. Top pay, but very strong competition for jobs.",
+   "sources": [
+    [
+     "Forbes Italia: cei mai buni angajatori din lume 2025 (Forbes și Statista, circa 300.000 de angajați)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes Italia: World’s Best Employers 2025 (Forbes and Statista, about 300,000 employees)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ]
+  },
+  {
+   "id": "alphabet",
+   "name": "Alphabet (Google)",
+   "nameEn": "Alphabet (Google)",
+   "c": [
+    10,
+    null,
+    10,
+    8,
+    10,
+    8,
+    6,
+    6,
+    8,
+    2,
+    5,
+    5,
+    2,
+    6
+   ],
+   "why": "Locul 3 la Forbes 2025; birouri mari la Dublin, Zürich, Londra și München, dar șanse foarte mici de angajare raportat la numărul de candidați.",
+   "whyEn": "Third at Forbes 2025; large offices in Dublin, Zurich, London and Munich, but very low chances relative to the number of candidates.",
+   "sources": [
+    [
+     "Forbes Italia: cei mai buni angajatori din lume 2025 (Forbes și Statista, circa 300.000 de angajați)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes Italia: World’s Best Employers 2025 (Forbes and Statista, about 300,000 employees)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ]
+  },
+  {
+   "id": "bmw",
+   "name": "BMW Group",
+   "nameEn": "BMW Group",
+   "c": [
+    9,
+    null,
+    8,
+    8,
+    8,
+    7,
+    7,
+    8,
+    8,
+    6,
+    7,
+    5,
+    4,
+    5
+   ],
+   "why": "Cel mai bine clasat angajator european la Forbes 2025 (locul 5); industria auto europeană e însă sub presiune.",
+   "whyEn": "The highest-ranked European employer at Forbes 2025 (5th); the European car industry is, however, under pressure.",
+   "sources": [
+    [
+     "Forbes Italia: cei mai buni angajatori din lume 2025 (Forbes și Statista, circa 300.000 de angajați)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes Italia: World’s Best Employers 2025 (Forbes and Statista, about 300,000 employees)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ]
+  },
+  {
+   "id": "ibm",
+   "name": "IBM",
+   "nameEn": "IBM",
+   "c": [
+    8,
+    null,
+    8,
+    7,
+    8,
+    7,
+    8,
+    7,
+    7,
+    6,
+    6,
+    5,
+    5,
+    6
+   ],
+   "why": "Locul 8 la Forbes 2025, cu centre în majoritatea țărilor europene.",
+   "whyEn": "Eighth at Forbes 2025, with centres in most European countries.",
+   "sources": [
+    [
+     "Forbes Italia: cei mai buni angajatori din lume 2025 (Forbes și Statista, circa 300.000 de angajați)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes Italia: World’s Best Employers 2025 (Forbes and Statista, about 300,000 employees)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ]
+  },
+  {
+   "id": "lego",
+   "name": "LEGO Group",
+   "nameEn": "LEGO Group",
+   "c": [
+    8,
+    null,
+    7,
+    7,
+    9,
+    8,
+    5,
+    7,
+    9,
+    5,
+    7,
+    7,
+    4,
+    8
+   ],
+   "why": "Locul 10 la Forbes 2025 și unul dintre cei mai doriți angajatori din Europa; companie de familie foarte profitabilă, cu sediul în Danemarca.",
+   "whyEn": "Tenth at Forbes 2025 and one of Europe’s most desired employers; a very profitable family company headquartered in Denmark.",
+   "sources": [
+    [
+     "Forbes Italia: cei mai buni angajatori din lume 2025 (Forbes și Statista, circa 300.000 de angajați)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes Italia: World’s Best Employers 2025 (Forbes and Statista, about 300,000 employees)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ]
+  },
+  {
+   "id": "unicredit",
+   "name": "UniCredit",
+   "nameEn": "UniCredit",
+   "c": [
+    6,
+    9,
+    7,
+    7,
+    8,
+    6,
+    8,
+    6,
+    6,
+    7,
+    7,
+    6,
+    7,
+    7
+   ],
+   "why": "Top Employer Europe 2026, cu certificări locale în Austria, Germania, Italia, România și alte țări.",
+   "whyEn": "Top Employer Europe 2026, with local certifications in Austria, Germany, Italy, Romania and other countries.",
+   "sources": [
+    [
+     "UniCredit: Top Employer Europe 2026",
+     "https://www.unicreditgroup.eu/en/press-media/press-releases/2026/january/unicredit-recognised-as-a-top-employer-2026-in-europe.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UniCredit: Top Employer Europe 2026",
+     "https://www.unicreditgroup.eu/en/press-media/press-releases/2026/january/unicredit-recognised-as-a-top-employer-2026-in-europe.html"
+    ]
+   ]
+  },
+  {
+   "id": "generali",
+   "name": "Generali",
+   "nameEn": "Generali",
+   "c": [
+    6,
+    9,
+    7,
+    7,
+    8,
+    6,
+    8,
+    6,
+    6,
+    7,
+    7,
+    6,
+    7,
+    8
+   ],
+   "why": "Top Employer Europe 2026, cu 14 companii din grup certificate în 10 țări și scoruri peste media sectorului de asigurări.",
+   "whyEn": "Top Employer Europe 2026, with 14 group companies certified in 10 countries and scores above the insurance-sector average.",
+   "sources": [
+    [
+     "Generali: Top Employer Europe 2026",
+     "https://www.generali.com/media/News/2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Generali: Top Employer Europe 2026",
+     "https://www.generali.com/media/News/2026"
+    ]
+   ]
+  },
+  {
+   "id": "metro",
+   "name": "METRO",
+   "nameEn": "METRO",
+   "c": [
+    5,
+    9,
+    6,
+    7,
+    7,
+    6,
+    9,
+    8,
+    6,
+    9,
+    7,
+    6,
+    7,
+    6
+   ],
+   "why": "Top Employer Europe pentru al 12-lea an la rând (2026), cu certificări în 10 țări, inclusiv România; multe posturi accesibile, salarii de comerț.",
+   "whyEn": "Top Employer Europe for the 12th year in a row (2026), with certifications in 10 countries including Romania; many accessible posts, retail pay.",
+   "sources": [
+    [
+     "METRO: Top Employer Europe pentru al 12-lea an la rând (2026)",
+     "https://newsroom.metroag.de/en/news/metro-named-top-employer-in-europe-and-ten-countries-for-the-twelfth-consecutive-year"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "METRO: Top Employer Europe for the 12th year in a row (2026)",
+     "https://newsroom.metroag.de/en/news/metro-named-top-employer-in-europe-and-ten-countries-for-the-twelfth-consecutive-year"
+    ]
+   ]
+  },
+  {
+   "id": "sulzer",
+   "name": "Sulzer",
+   "nameEn": "Sulzer",
+   "c": [
+    5,
+    9,
+    7,
+    6,
+    7,
+    6,
+    5,
+    6,
+    7,
+    6,
+    7,
+    6,
+    8,
+    7
+   ],
+   "why": "Top Employer 2026 cu statut regional pentru Europa; companie industrială elvețiană cu cerere constantă de ingineri.",
+   "whyEn": "Top Employer 2026 with regional status for Europe; a Swiss industrial company with steady demand for engineers.",
+   "sources": [
+    [
+     "Sulzer: Top Employer 2026, inclusiv statutul regional pentru Europa",
+     "https://www.sulzer.com/en/-/media/files/news/2026/260115_topemployer_en.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Sulzer: Top Employer 2026, including regional status for Europe",
+     "https://www.sulzer.com/en/-/media/files/news/2026/260115_topemployer_en.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "fresenius",
+   "name": "Fresenius Kabi",
+   "nameEn": "Fresenius Kabi",
+   "c": [
+    5,
+    9,
+    7,
+    6,
+    8,
+    6,
+    6,
+    6,
+    8,
+    6,
+    7,
+    6,
+    8,
+    7
+   ],
+   "why": "Certificată Top Employer în 13 țări; medicamente și tehnologie medicală, un sector stabil.",
+   "whyEn": "Certified Top Employer in 13 countries; medicines and medical technology, a stable sector.",
+   "sources": [
+    [
+     "Fresenius Kabi: Top Employer în 13 țări",
+     "https://www.fresenius-kabi.com/news/top-employer-certification-in-thirteen-countries"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Fresenius Kabi: Top Employer in 13 countries",
+     "https://www.fresenius-kabi.com/news/top-employer-certification-in-thirteen-countries"
+    ]
+   ]
+  },
+  {
+   "id": "edp",
+   "name": "EDP (energie regenerabilă)",
+   "nameEn": "EDP (renewable energy)",
+   "c": [
+    6,
+    9,
+    7,
+    7,
+    8,
+    6,
+    6,
+    6,
+    8,
+    6,
+    7,
+    7,
+    7,
+    7
+   ],
+   "why": "Certificată Top Employer 2026, iar EDP Renewables a primit și sigiliul Top Employer Europe, după un audit al circa 250 de practici de resurse umane; sector în creștere (energie regenerabilă).",
+   "whyEn": "Certified Top Employer 2026, and EDP Renewables also received the Top Employer Europe seal, after an audit of around 250 people-management practices; a growing sector (renewable energy).",
+   "sources": [
+    [
+     "pv magazine: EDP, Top Employer 2026 și Top Employer Europe",
+     "https://www.pv-magazine-australia.com/?p=14833"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "pv magazine: EDP, Top Employer 2026 and Top Employer Europe",
+     "https://www.pv-magazine-australia.com/?p=14833"
+    ]
+   ]
+  }
+ ]
+}

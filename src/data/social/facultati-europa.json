@@ -1,0 +1,516 @@
+{
+ "slug": "facultati-europa",
+ "set": "facultati",
+ "region": "europa",
+ "date": "2026-11-03",
+ "snapshot": "social-facultati-europa-2026-11-03",
+ "formulas": {},
+ "rows": [
+  {
+   "id": "tum",
+   "name": "Universitatea Tehnică din München (TUM)",
+   "nameEn": "Technical University of Munich (TUM)",
+   "c": [
+    7,
+    9,
+    9,
+    9,
+    8,
+    10,
+    4,
+    8,
+    9,
+    7,
+    7,
+    7,
+    null,
+    8
+   ],
+   "why": "Cea mai bine clasată universitate din Germania; inginerie de vârf, fără taxe de școlarizare pentru majoritatea programelor, într-un oraș cu locuri de muncă bine plătite.",
+   "whyEn": "Germany’s highest-ranked university; top engineering, with no tuition fees for most programmes, in a city with well-paid jobs.",
+   "sources": [
+    [
+     "QS World University Rankings: Europe 2026 (primele 10, comunicat preluat de Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings: Europe 2026 (top 10, press release via Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.58,
+   "met": 12
+  },
+  {
+   "id": "epfl",
+   "name": "EPFL, Lausanne",
+   "nameEn": "EPFL, Lausanne",
+   "c": [
+    8,
+    9,
+    9,
+    10,
+    8,
+    10,
+    3,
+    10,
+    8,
+    6,
+    7,
+    7,
+    null,
+    9
+   ],
+   "why": "Locul 10 în QS Europa 2026; inginerie și informatică de vârf, taxe mici, dar costuri de trai ridicate în Elveția.",
+   "whyEn": "Tenth in QS Europe 2026; top engineering and computer science, low fees, but high living costs in Switzerland.",
+   "sources": [
+    [
+     "QS World University Rankings: Europe 2026 (primele 10, comunicat preluat de Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings: Europe 2026 (top 10, press release via Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.78,
+   "met": 11
+  },
+  {
+   "id": "psl",
+   "name": "Université PSL, Paris",
+   "nameEn": "PSL University, Paris",
+   "c": [
+    8,
+    8,
+    8,
+    9,
+    8,
+    7,
+    4,
+    8,
+    9,
+    6,
+    7,
+    8,
+    null,
+    7
+   ],
+   "why": "Locul 8 în QS Europa 2026 (de pe 9); grupează școli de elită din Paris (ENS, Mines, Dauphine) cu taxe mici pentru studenții din UE.",
+   "whyEn": "Eighth in QS Europe 2026 (up from 9th); it groups elite Paris schools (ENS, Mines, Dauphine) with low fees for EU students.",
+   "sources": [
+    [
+     "QS World University Rankings: Europe 2026 (primele 10, comunicat preluat de Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings: Europe 2026 (top 10, press release via Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.3,
+   "met": 11
+  },
+  {
+   "id": "kcl",
+   "name": "King’s College London",
+   "nameEn": "King’s College London",
+   "c": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    2,
+    9,
+    9,
+    5,
+    7,
+    8,
+    null,
+    8
+   ],
+   "why": "Locul 7 în QS Europa 2026 (de pe 8); puternică în medicină, drept și științe sociale.",
+   "whyEn": "Seventh in QS Europe 2026 (up from 8th); strong in medicine, law and social sciences.",
+   "sources": [
+    [
+     "QS World University Rankings: Europe 2026 (primele 10, comunicat preluat de Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings: Europe 2026 (top 10, press release via Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.2,
+   "met": 11
+  },
+  {
+   "id": "oxford",
+   "name": "Universitatea Oxford",
+   "nameEn": "University of Oxford",
+   "c": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    8,
+    2,
+    10,
+    8,
+    2,
+    4,
+    8,
+    null,
+    8
+   ],
+   "why": "Locul 1 în QS Europa 2026 (de pe 3). Reputație globală maximă, dar admitere extrem de selectivă și costuri foarte mari pentru studenții din afara Regatului Unit.",
+   "whyEn": "First in QS Europe 2026 (up from 3rd). Top global reputation, but extremely selective admission and very high costs for students from outside the UK.",
+   "sources": [
+    [
+     "QS World University Rankings: Europe 2026 (primele 10, comunicat preluat de Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings: Europe 2026 (top 10, press release via Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.66,
+   "met": 10
+  },
+  {
+   "id": "ucl",
+   "name": "University College London (UCL)",
+   "nameEn": "University College London (UCL)",
+   "c": [
+    9,
+    9,
+    9,
+    9,
+    9,
+    8,
+    2,
+    10,
+    9,
+    4,
+    6,
+    8,
+    null,
+    8
+   ],
+   "why": "Locul 3 la egalitate în QS Europa 2026 (de pe 5); universitate mare și foarte internațională, în centrul Londrei.",
+   "whyEn": "Joint third in QS Europe 2026 (up from 5th); a large and very international university in central London.",
+   "sources": [
+    [
+     "QS World University Rankings: Europe 2026 (primele 10, comunicat preluat de Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings: Europe 2026 (top 10, press release via Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.54,
+   "met": 10
+  },
+  {
+   "id": "manchester",
+   "name": "Universitatea din Manchester",
+   "nameEn": "University of Manchester",
+   "c": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    6,
+    9,
+    8,
+    6,
+    7,
+    5,
+    null,
+    8
+   ],
+   "why": "Locul 9 în QS Europa 2026 (de pe 7); universitate mare, într-un oraș mai ieftin decât Londra.",
+   "whyEn": "Ninth in QS Europe 2026 (down from 7th); a large university in a city cheaper than London.",
+   "sources": [
+    [
+     "QS World University Rankings: Europe 2026 (primele 10, comunicat preluat de Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings: Europe 2026 (top 10, press release via Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.34,
+   "met": 10
+  },
+  {
+   "id": "edinburgh",
+   "name": "Universitatea din Edinburgh",
+   "nameEn": "University of Edinburgh",
+   "c": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    7,
+    5,
+    9,
+    7,
+    6,
+    7,
+    6,
+    null,
+    8
+   ],
+   "why": "Locul 6 în QS Europa 2026; oraș mai accesibil decât Londra, cu o universitate foarte internațională.",
+   "whyEn": "Sixth in QS Europe 2026; a city more affordable than London, with a very international university.",
+   "sources": [
+    [
+     "QS World University Rankings: Europe 2026 (primele 10, comunicat preluat de Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings: Europe 2026 (top 10, press release via Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.18,
+   "met": 10
+  },
+  {
+   "id": "eth",
+   "name": "ETH Zürich",
+   "nameEn": "ETH Zurich",
+   "c": [
+    10,
+    10,
+    10,
+    10,
+    9,
+    10,
+    2,
+    9,
+    10,
+    5,
+    6,
+    6,
+    null,
+    9
+   ],
+   "why": "Locul 2 în QS Europa 2026 (fostul lider). Taxe de școlarizare mici pentru o universitate de vârf mondial, dar Zürich e unul dintre cele mai scumpe orașe din lume.",
+   "whyEn": "Second in QS Europe 2026 (the former leader). Low tuition for a world-leading university, but Zurich is one of the most expensive cities in the world.",
+   "sources": [
+    [
+     "QS World University Rankings: Europe 2026 (primele 10, comunicat preluat de Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings: Europe 2026 (top 10, press release via Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "inputs": {},
+   "score": 8.1,
+   "met": 9
+  },
+  {
+   "id": "imperial",
+   "name": "Imperial College London",
+   "nameEn": "Imperial College London",
+   "c": [
+    9,
+    10,
+    10,
+    10,
+    9,
+    10,
+    2,
+    10,
+    9,
+    3,
+    6,
+    6,
+    null,
+    8
+   ],
+   "why": "Locul 3 la egalitate în QS Europa 2026 (de pe 2); inginerie, medicină și științe, cu absolvenți foarte căutați.",
+   "whyEn": "Joint third in QS Europe 2026 (down from 2nd); engineering, medicine and science, with graduates in high demand.",
+   "sources": [
+    [
+     "QS World University Rankings: Europe 2026 (primele 10, comunicat preluat de Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings: Europe 2026 (top 10, press release via Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.72,
+   "met": 9
+  },
+  {
+   "id": "cambridge",
+   "name": "Universitatea Cambridge",
+   "nameEn": "University of Cambridge",
+   "c": [
+    9,
+    10,
+    10,
+    10,
+    10,
+    8,
+    3,
+    10,
+    7,
+    2,
+    4,
+    6,
+    null,
+    8
+   ],
+   "why": "Locul 5 în QS Europa 2026; reputație de top în științe și matematică, admitere extrem de selectivă.",
+   "whyEn": "Fifth in QS Europe 2026; a top reputation in science and mathematics, extremely selective admission.",
+   "sources": [
+    [
+     "QS World University Rankings: Europe 2026 (primele 10, comunicat preluat de Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings: Europe 2026 (top 10, press release via Bolsamania)",
+     "https://www.bolsamania.com/nota-de-prensa/mercados/europes-best-universities-revealed--21572685.html"
+    ],
+    [
+     "TopUniversities: QS World University Rankings: Europe 2026",
+     "https://www.topuniversities.com/qs-europe-rankings"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.4,
+   "met": 9
+  }
+ ]
+}

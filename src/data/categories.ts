@@ -64,7 +64,7 @@ export const CATEGORIES: Record<CatKey, Category> = {
   },
   social: {
   key: 'social',
-  slugs: ['licee-romania', 'facultati-romania', 'meserii-romania', 'angajatori-romania', 'localitati-romania'],
+  slugs: ['licee-romania', 'facultati-romania', 'meserii-romania', 'angajatori-romania', 'localitati-romania', 'licee-europa', 'facultati-europa', 'meserii-europa', 'angajatori-europa', 'localitati-europa'],
   path: { ro: 'social/', en: 'en/social/' },
   color: '#6b4fbb',
   t: {

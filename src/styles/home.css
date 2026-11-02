@@ -101,3 +101,8 @@
 .home-intro { grid-template-columns: minmax(0, 1fr); }
 .home-intro .hh-text { max-width: 860px; }
 .accent2 { color: #c4433b; }
+
+.region-switch { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; margin: .2rem 0 1rem; font-size: .9rem; color: var(--muted); }
+.region-switch a { font: 700 .95rem var(--f-mono); padding: .3rem .85rem; border: 1px solid var(--border); border-radius: 999px; color: var(--text); text-decoration: none; background: var(--surface); }
+.region-switch a[aria-current='page'] { background: var(--text); color: var(--bg); border-color: var(--text); }
+.region-switch small { margin-left: .3rem; }

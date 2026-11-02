@@ -10,7 +10,7 @@ import RomaniaSection from './RomaniaSection.astro';
 import ImobSection from './ImobSection.astro';
 import ProjectsSection from './ProjectsSection.astro';
 import SocialSection from './SocialSection.astro';
-import { SOCIAL } from '../data/social';
+import { SOCIAL, REGIONS, regionOf } from '../data/social';
 import PhotoHeader from './PhotoHeader.astro';
 import { photoForDomain } from '../data/photos';
 import spMacro from '../data/sp500/macro.json';
@@ -60,7 +60,7 @@ const home = en ? `${base}en/` : base;
 ---
 <Base lang={lang} alt={en ? `domenii/${domain.slug}/` : `en/domains/${domain.slug}/`} title={title} description={summary} image={ph ? `images/${ph.key}-1600.jpg` : undefined}>
   <p class="crumbs">
-    <a href={home}>{L('Acasă', 'Home')}</a> / <a href={`${base}${cat.path[lang]}`}>{cat.t[lang].name}</a>
+    <a href={home}>{L('Acasă', 'Home')}</a> / <a href={`${base}${cat.key === 'social' ? REGIONS.find((r) => r.key === regionOf(domain.slug))!.path[lang] : cat.path[lang]}`}>{cat.t[lang].name}{cat.key === 'social' ? ` · ${REGIONS.find((r) => r.key === regionOf(domain.slug))!.name[lang]}` : ''}</a>
     {crumbs.map((c) => <> / <a href={domainHref(c.slug, lang)}>{domainTitle(c, lang)}</a></>)}
   </p>
   {ph ? (

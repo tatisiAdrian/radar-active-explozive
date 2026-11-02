@@ -76,8 +76,8 @@ const licee: SetDef = {
 
 const facultati: SetDef = {
   ro: [
-    ['Recunoaștere QS', 'Poziția în QS World University Rankings 2026.'],
-    ['Recunoaștere THE', 'Poziția în Times Higher Education 2026.'],
+    ['Recunoaștere QS', 'Poziția în clasamentele QS 2026 (mondial sau european).'],
+    ['Reputație globală', 'Poziția în Times Higher Education 2026 și reputația academică.'],
     ['Angajabilitate', 'Reputația la angajatori și rezultatele absolvenților pe piața muncii.'],
     ['Cercetare', 'Rezultatele în cercetare și citări.'],
     ['Cererea candidaților', 'Câți candidați se înscriu pe un loc.'],
@@ -92,8 +92,8 @@ const facultati: SetDef = {
     ['Riscuri', 'Finanțare, scandaluri, calitatea programelor.'],
   ],
   en: [
-    ['QS recognition', 'Position in the QS World University Rankings 2026.'],
-    ['THE recognition', 'Position in Times Higher Education 2026.'],
+    ['QS recognition', 'Position in the 2026 QS rankings (world or Europe).'],
+    ['Global reputation', 'Position in Times Higher Education 2026 and academic reputation.'],
     ['Employability', 'Reputation among employers and graduates’ labour-market outcomes.'],
     ['Research', 'Research results and citations.'],
     ['Applicant demand', 'How many applicants per place.'],
@@ -108,8 +108,8 @@ const facultati: SetDef = {
     ['Risks', 'Funding, scandals, programme quality.'],
   ],
   exRo: [
-    ['Poziție slabă sau absentă în QS.', 'Poziție medie în QS.', 'Printre cele mai bune poziții românești în QS.'],
-    ['Poziție slabă în THE.', 'Poziție medie în THE.', 'Printre cele mai bune poziții românești în THE.'],
+    ['Poziție slabă sau absentă în QS.', 'Poziție medie în QS.', 'Printre cele mai bune poziții din zonă în QS.'],
+    ['Reputație globală slabă.', 'Reputație globală medie.', 'Reputație globală puternică.'],
     ['Absolvenții sunt puțin căutați.', 'Absolvenții își găsesc de lucru.', 'Absolvenții sunt foarte căutați de angajatori.'],
     ['Cercetare slabă.', 'Cercetare medie.', 'Cercetare puternică.'],
     ['Puțini candidați.', 'Cerere normală.', 'Cerere foarte mare.'],
@@ -124,8 +124,8 @@ const facultati: SetDef = {
     ['Riscuri mari.', 'Câteva riscuri de urmărit.', 'Riscuri mici.'],
   ],
   exEn: [
-    ['A weak or missing QS position.', 'An average QS position.', 'Among the best Romanian positions in QS.'],
-    ['A weak THE position.', 'An average THE position.', 'Among the best Romanian positions in THE.'],
+    ['A weak or missing QS position.', 'An average QS position.', 'Among the best positions in the region in QS.'],
+    ['A weak global reputation.', 'An average global reputation.', 'A strong global reputation.'],
     ['Graduates are in little demand.', 'Graduates find work.', 'Graduates are in high demand among employers.'],
     ['Weak research.', 'Average research.', 'Strong research.'],
     ['Few applicants.', 'Normal demand.', 'Very high demand.'],
@@ -342,4 +342,72 @@ const localitati: SetDef = {
   ],
 };
 
-export const SOCIAL_SETS: Record<string, SetDef> = { licee, facultati, meserii, angajatori, localitati };
+
+const liceeEu: SetDef = {
+  ro: [
+    ['Matematică (PISA)', 'Scorul mediu al elevilor de 15 ani la matematică, PISA 2022.'],
+    ['Citire (PISA)', 'Scorul mediu la citire, PISA 2022.'],
+    ['Științe (PISA)', 'Scorul mediu la științe, PISA 2022.'],
+    ['Echitate', 'Cât de puțin depind rezultatele de mediul familial.'],
+    ['Elevi de top', 'Ponderea elevilor cu rezultate foarte bune.'],
+    ['Educație publică gratuită', 'Licee de stat bune, fără taxe.'],
+    ['Profesori', 'Pregătirea, statutul și salariul profesorilor.'],
+    ['Trasee diverse', 'Liceu teoretic și ucenicie de calitate, ambele respectate.'],
+    ['Limbi străine', 'Cât de bine învață elevii limbi străine.'],
+    ['Acces pentru familiile care se mută', 'Limba de predare și ușurința de a intra în sistem.'],
+    ['Media (neliniar)', 'Atenție echilibrată; „modelele” celebre pot fi supraevaluate.'],
+    ['Trend', 'Rezultatele cresc sau scad față de testele anterioare.'],
+    ['Aglomerație (invers)', 'Selecție și presiune timpurie asupra elevilor.'],
+    ['Riscuri', 'Lipsă de profesori, inegalități, reforme bruște.'],
+  ],
+  en: [
+    ['Mathematics (PISA)', 'The mean score of 15-year-olds in mathematics, PISA 2022.'],
+    ['Reading (PISA)', 'The mean reading score, PISA 2022.'],
+    ['Science (PISA)', 'The mean science score, PISA 2022.'],
+    ['Equity', 'How little results depend on family background.'],
+    ['Top performers', 'The share of pupils with very good results.'],
+    ['Free public education', 'Good state high schools, with no fees.'],
+    ['Teachers', 'Teachers’ training, status and pay.'],
+    ['Diverse paths', 'Academic high school and quality apprenticeships, both respected.'],
+    ['Foreign languages', 'How well pupils learn foreign languages.'],
+    ['Access for families who move', 'The language of instruction and ease of entering the system.'],
+    ['Media (non-linear)', 'Balanced attention; famous “models” can be overrated.'],
+    ['Trend', 'Results rising or falling compared with earlier tests.'],
+    ['Crowding (inverse)', 'Early selection and pressure on pupils.'],
+    ['Risks', 'Teacher shortages, inequalities, sudden reforms.'],
+  ],
+  exRo: [
+    ['Sub media europeană la matematică.', 'Aproape de media OCDE la matematică.', 'Printre cele mai bune scoruri la matematică din Europa.'],
+    ['Sub media europeană la citire.', 'Aproape de media OCDE la citire.', 'Printre cele mai bune scoruri la citire din Europa.'],
+    ['Sub media europeană la științe.', 'Aproape de media OCDE la științe.', 'Printre cele mai bune scoruri la științe din Europa.'],
+    ['Rezultatele depind mult de familie.', 'Echitate medie.', 'Rezultate bune și pentru elevii din familii modeste.'],
+    ['Puțini elevi de top.', 'O pondere medie de elevi de top.', 'Mulți elevi de top.'],
+    ['Educația bună e mai ales privată.', 'Educație publică bună, cu diferențe.', 'Licee de stat foarte bune, gratuite.'],
+    ['Profesori puțini sau slab plătiți.', 'Profesori bine pregătiți.', 'Profesori foarte bine pregătiți și respectați.'],
+    ['Un singur traseu valorizat.', 'Trasee diverse, inegal respectate.', 'Liceu și ucenicie, ambele de calitate.'],
+    ['Limbi străine slab învățate.', 'Limbi străine învățate mediu.', 'Elevii vorbesc bine limbi străine.'],
+    ['Greu de accesat pentru o familie nou venită.', 'Accesibil cu efort.', 'Ușor de accesat (de exemplu, predare în engleză).'],
+    ['Supraevaluat de presă.', 'Atenție moderată.', 'Atenție echilibrată.'],
+    ['Rezultatele scad puternic.', 'Rezultate stabile sau în scădere ușoară.', 'Rezultatele cresc.'],
+    ['Selecție timpurie și presiune mare.', 'Presiune moderată.', 'Presiune mică, selecție târzie.'],
+    ['Riscuri mari.', 'Câteva riscuri.', 'Riscuri mici.'],
+  ],
+  exEn: [
+    ['Below the European average in mathematics.', 'Close to the OECD average in mathematics.', 'Among the best mathematics scores in Europe.'],
+    ['Below the European average in reading.', 'Close to the OECD average in reading.', 'Among the best reading scores in Europe.'],
+    ['Below the European average in science.', 'Close to the OECD average in science.', 'Among the best science scores in Europe.'],
+    ['Results depend heavily on family.', 'Average equity.', 'Good results for pupils from modest families too.'],
+    ['Few top performers.', 'An average share of top performers.', 'Many top performers.'],
+    ['Good education is mostly private.', 'Good public education, with gaps.', 'Very good, free state high schools.'],
+    ['Few or poorly paid teachers.', 'Well-trained teachers.', 'Very well trained and respected teachers.'],
+    ['Only one path is valued.', 'Diverse paths, unequally respected.', 'High school and apprenticeship, both of quality.'],
+    ['Foreign languages poorly learned.', 'Foreign languages learned moderately.', 'Pupils speak foreign languages well.'],
+    ['Hard to access for a newly arrived family.', 'Accessible with effort.', 'Easy to access (for example, teaching in English).'],
+    ['Overrated by the press.', 'Moderate attention.', 'Balanced attention.'],
+    ['Results are falling sharply.', 'Results stable or falling slightly.', 'Results are rising.'],
+    ['Early selection and high pressure.', 'Moderate pressure.', 'Low pressure, late selection.'],
+    ['High risks.', 'A few risks.', 'Low risks.'],
+  ],
+};
+
+export const SOCIAL_SETS: Record<string, SetDef> = { licee, 'licee-eu': liceeEu, facultati, meserii, angajatori, localitati };

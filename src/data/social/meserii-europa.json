@@ -1,0 +1,444 @@
+{
+ "slug": "meserii-europa",
+ "set": "meserii",
+ "region": "europa",
+ "date": "2026-11-03",
+ "snapshot": "social-meserii-europa-2026-11-03",
+ "formulas": {},
+ "rows": [
+  {
+   "id": "electrician",
+   "name": "Electrician",
+   "nameEn": "Electrician",
+   "c": [
+    7,
+    9,
+    9,
+    9,
+    8,
+    6,
+    8,
+    9,
+    8,
+    8,
+    8,
+    7,
+    8,
+    5
+   ],
+   "why": "Tranziția verde (panouri solare, pompe de căldură, rețele) creează cerere pentru electricieni în toată Europa, potrivit EURES.",
+   "whyEn": "The green transition (solar panels, heat pumps, grids) creates demand for electricians across Europe, according to EURES.",
+   "sources": [
+    [
+     "EURES (Autoritatea Europeană a Muncii): lipsa și surplusul de personal în Europa, raportul 2025",
+     "https://eures.europa.eu/what-latest-data-reveals-about-labour-market-imbalances-across-europe-2026-06-29_en"
+    ],
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "EURES (European Labour Authority): labour shortages and surpluses in Europe, 2025 report",
+     "https://eures.europa.eu/what-latest-data-reveals-about-labour-market-imbalances-across-europe-2026-06-29_en"
+    ],
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.62,
+   "met": 12
+  },
+  {
+   "id": "instalator",
+   "name": "Instalator",
+   "nameEn": "Plumber",
+   "c": [
+    7,
+    9,
+    8,
+    9,
+    8,
+    5,
+    8,
+    9,
+    8,
+    8,
+    8,
+    7,
+    8,
+    5
+   ],
+   "why": "Pe lista meseriilor cu lipsă de personal legate de tranziția verde (EURES); pregătire scurtă și greu de automatizat.",
+   "whyEn": "On the list of shortage trades linked to the green transition (EURES); short training and hard to automate.",
+   "sources": [
+    [
+     "EURES (Autoritatea Europeană a Muncii): lipsa și surplusul de personal în Europa, raportul 2025",
+     "https://eures.europa.eu/what-latest-data-reveals-about-labour-market-imbalances-across-europe-2026-06-29_en"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "EURES (European Labour Authority): labour shortages and surpluses in Europe, 2025 report",
+     "https://eures.europa.eu/what-latest-data-reveals-about-labour-market-imbalances-across-europe-2026-06-29_en"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.48,
+   "met": 12
+  },
+  {
+   "id": "securitate",
+   "name": "Specialist în securitate cibernetică",
+   "nameEn": "Cybersecurity specialist",
+   "c": [
+    9,
+    8,
+    9,
+    8,
+    6,
+    8,
+    8,
+    9,
+    8,
+    5,
+    6,
+    7,
+    7,
+    7
+   ],
+   "why": "Cerere în creștere odată cu atacurile cibernetice și cu noile reguli europene de securitate; greu de înlocuit de AI.",
+   "whyEn": "Growing demand with cyberattacks and new European security rules; hard for AI to replace.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.64,
+   "met": 11
+  },
+  {
+   "id": "energie",
+   "name": "Inginer în energie regenerabilă",
+   "nameEn": "Renewable-energy engineer",
+   "c": [
+    8,
+    8,
+    9,
+    8,
+    5,
+    7,
+    8,
+    9,
+    9,
+    6,
+    7,
+    7,
+    8,
+    6
+   ],
+   "why": "Europa investește masiv în energie regenerabilă și rețele; WEF pune specialiștii în energie regenerabilă printre meseriile în creștere.",
+   "whyEn": "Europe is investing heavily in renewable energy and grids; the WEF lists renewable-energy specialists among growing jobs.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.5,
+   "met": 11
+  },
+  {
+   "id": "asistent",
+   "name": "Asistent medical și îngrijitor",
+   "nameEn": "Nurse and care worker",
+   "c": [
+    6,
+    10,
+    9,
+    9,
+    7,
+    4,
+    9,
+    9,
+    10,
+    8,
+    7,
+    7,
+    8,
+    5
+   ],
+   "why": "Lipsă persistentă în toată Europa, într-un sector fără surplus în nicio țară; îmbătrânirea populației crește cererea.",
+   "whyEn": "A persistent shortage across Europe, in a sector with a surplus in no country; population ageing raises demand.",
+   "sources": [
+    [
+     "EURES (Autoritatea Europeană a Muncii): lipsa și surplusul de personal în Europa, raportul 2025",
+     "https://eures.europa.eu/what-latest-data-reveals-about-labour-market-imbalances-across-europe-2026-06-29_en"
+    ],
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "EURES (European Labour Authority): labour shortages and surpluses in Europe, 2025 report",
+     "https://eures.europa.eu/what-latest-data-reveals-about-labour-market-imbalances-across-europe-2026-06-29_en"
+    ],
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.44,
+   "met": 11
+  },
+  {
+   "id": "medic",
+   "name": "Medic specialist",
+   "nameEn": "Specialist doctor",
+   "c": [
+    10,
+    10,
+    8,
+    9,
+    2,
+    6,
+    10,
+    9,
+    10,
+    3,
+    7,
+    7,
+    7,
+    6
+   ],
+   "why": "Lipsă de medici specialiști în multe țări europene, inclusiv Bulgaria, Italia și Țările de Jos, potrivit EURES; nicio țară europeană nu are surplus în sănătate. Pregătire foarte lungă.",
+   "whyEn": "A shortage of specialist doctors in many European countries, including Bulgaria, Italy and the Netherlands, according to EURES; no European country has a surplus in health. Very long training.",
+   "sources": [
+    [
+     "EURES (Autoritatea Europeană a Muncii): lipsa și surplusul de personal în Europa, raportul 2025",
+     "https://eures.europa.eu/what-latest-data-reveals-about-labour-market-imbalances-across-europe-2026-06-29_en"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "EURES (European Labour Authority): labour shortages and surpluses in Europe, 2025 report",
+     "https://eures.europa.eu/what-latest-data-reveals-about-labour-market-imbalances-across-europe-2026-06-29_en"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.68,
+   "met": 10
+  },
+  {
+   "id": "sudor",
+   "name": "Sudor",
+   "nameEn": "Welder",
+   "c": [
+    6,
+    9,
+    7,
+    8,
+    8,
+    4,
+    7,
+    9,
+    7,
+    8,
+    8,
+    6,
+    8,
+    4
+   ],
+   "why": "Lipsă de sudori raportată în mai multe țări (de exemplu, Bulgaria, Italia, Țările de Jos); muncă grea, cu risc de accidente.",
+   "whyEn": "A shortage of welders reported in several countries (for example, Bulgaria, Italy, the Netherlands); heavy work with accident risk.",
+   "sources": [
+    [
+     "EURES (Autoritatea Europeană a Muncii): lipsa și surplusul de personal în Europa, raportul 2025",
+     "https://eures.europa.eu/what-latest-data-reveals-about-labour-market-imbalances-across-europe-2026-06-29_en"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "EURES (European Labour Authority): labour shortages and surpluses in Europe, 2025 report",
+     "https://eures.europa.eu/what-latest-data-reveals-about-labour-market-imbalances-across-europe-2026-06-29_en"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.82,
+   "met": 10
+  },
+  {
+   "id": "profesor",
+   "name": "Profesor",
+   "nameEn": "Teacher",
+   "c": [
+    6,
+    8,
+    7,
+    9,
+    4,
+    6,
+    9,
+    6,
+    10,
+    6,
+    7,
+    6,
+    8,
+    8
+   ],
+   "why": "Multe țări europene au lipsă de profesori, iar WEF estimează creșterea locurilor de muncă în educație; recunoașterea diplomei depinde de țară.",
+   "whyEn": "Many European countries lack teachers, and the WEF expects jobs in education to grow; recognition of the diploma depends on the country.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.12,
+   "met": 8
+  },
+  {
+   "id": "date-ai",
+   "name": "Specialist în date și inteligență artificială",
+   "nameEn": "Data and AI specialist",
+   "c": [
+    9,
+    7,
+    10,
+    7,
+    5,
+    8,
+    6,
+    9,
+    6,
+    4,
+    4,
+    7,
+    5,
+    7
+   ],
+   "why": "Primele două meserii cu cea mai rapidă creștere în raportul WEF 2025; pregătire lungă și atenție mediatică foarte mare.",
+   "whyEn": "The top two fastest-growing jobs in the WEF 2025 report; long training and very high media attention.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.92,
+   "met": 8
+  },
+  {
+   "id": "sofer",
+   "name": "Șofer de camion",
+   "nameEn": "Truck driver",
+   "c": [
+    6,
+    9,
+    7,
+    5,
+    9,
+    3,
+    6,
+    9,
+    7,
+    9,
+    8,
+    6,
+    7,
+    4
+   ],
+   "why": "Lipsă de șoferi în multe țări europene și una dintre meseriile cu cea mai mare creștere în cifre absolute la WEF; mult timp departe de casă.",
+   "whyEn": "A shortage of drivers in many European countries and one of the jobs with the largest absolute growth in the WEF report; much time away from home.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.48,
+   "met": 8
+  },
+  {
+   "id": "software",
+   "name": "Dezvoltator software",
+   "nameEn": "Software developer",
+   "c": [
+    9,
+    6,
+    9,
+    5,
+    6,
+    8,
+    6,
+    9,
+    6,
+    5,
+    4,
+    6,
+    4,
+    7
+   ],
+   "why": "Printre meseriile cu creștere rapidă la WEF, cu salarii mari în toată Europa; concurență mare la nivel de începător și presiune din partea instrumentelor AI.",
+   "whyEn": "Among the WEF’s fast-growing jobs, with high pay across Europe; strong competition at entry level and pressure from AI tools.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul despre viitorul locurilor de muncă, 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.64,
+   "met": 5
+  }
+ ]
+}

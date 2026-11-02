@@ -344,6 +344,46 @@ export const domains: Domain[] = [
     status: 'activ',
     questions: ["În ce orașe se trăiește cel mai bine, luând în calcul și costurile?", "Unde sunt salarii și locuri de muncă bune, fără aglomerația Capitalei?", "Ce oraș mic oferă o viață bună la costuri mici?"],
   },
+  {
+    slug: 'licee-europa',
+    criteria: 'licee-eu',
+    title: "Cele mai bune sisteme de licee din Europa",
+    summary: "11 sisteme de licee europene, comparate pe țări: scorurile PISA 2022 la matematică, citire și științe, echitate, profesori și accesul pentru familiile care se mută.",
+    status: 'activ',
+    questions: ["În ce țări europene învață cel mai bine elevii de liceu?", "Unde depind rezultatele cel mai puțin de familia elevului?", "Unde e cel mai ușor pentru o familie din România care se mută?"],
+  },
+  {
+    slug: 'facultati-europa',
+    criteria: 'facultati',
+    title: "Cele mai bune universități din Europa",
+    summary: "11 universități europene, notate pe 14 condiții: clasamentul QS Europa 2026, reputația globală, angajabilitatea, costurile și accesibilitatea.",
+    status: 'activ',
+    questions: ["Care sunt cele mai bune universități din Europa?", "Unde primești o educație de top la costuri rezonabile?", "Cât de greu e să intri și cât costă viața de student?"],
+  },
+  {
+    slug: 'meserii-europa',
+    criteria: 'meserii',
+    title: "Cele mai bune meserii în Europa",
+    summary: "11 meserii, notate pe 14 condiții, pe baza lipsei de personal raportate de EURES în 2025 și a raportului WEF despre viitorul locurilor de muncă.",
+    status: 'activ',
+    questions: ["Ce meserii lipsesc în toată Europa?", "Care meserii îți permit să lucrezi în orice țară din UE?", "Care sunt cele mai greu de înlocuit de AI?"],
+  },
+  {
+    slug: 'angajatori-europa',
+    criteria: 'angajatori',
+    title: "Cei mai buni angajatori din Europa",
+    summary: "11 angajatori, notați pe 14 condiții: Forbes World’s Best Employers 2025, certificările Top Employers Europe 2026, salarii, stabilitate și șanse reale de angajare.",
+    status: 'activ',
+    questions: ["Care sunt cei mai apreciați angajatori din Europa?", "Ce angajatori au practici de resurse umane certificate extern?", "Unde ai șanse reale să fii angajat?"],
+  },
+  {
+    slug: 'localitati-europa',
+    criteria: 'localitati',
+    title: "Cele mai bune orașe din Europa pentru o viață de calitate",
+    summary: "11 orașe europene, notate pe 14 condiții: indicele EIU de calitate a vieții 2026, satisfacția locuitorilor din raportul UE, venituri, cultură, costul locuinței și riscuri.",
+    status: 'activ',
+    questions: ["În ce orașe europene se trăiește cel mai bine?", "Unde e viața bună fără prețurile din Zürich sau Copenhaga?", "Cum se compară Clujul cu marile orașe ale Europei?"],
+  },
 ];
 
 export const getDomain = (slug: string) => domains.find((d) => d.slug === slug);

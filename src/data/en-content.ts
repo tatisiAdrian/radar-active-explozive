@@ -7,6 +7,11 @@
 export interface DomainEn { title: string; summary: string; questions: string[]; interpretations?: { title: string; text: string }[] }
 
 export const DOMAINS_EN: Record<string, DomainEn> = {
+  'licee-europa': { title: "Europe’s best high-school systems", summary: "11 European high-school systems, compared by country: PISA 2022 scores in mathematics, reading and science, equity, teachers and access for families who move.", questions: ["In which European countries do high-school pupils learn best?", "Where do results depend least on the pupil’s family?", "Where is it easiest for a Romanian family that moves?"] },
+  'facultati-europa': { title: "Europe’s best universities", summary: "11 European universities, scored on 14 conditions: the QS Europe 2026 ranking, global reputation, employability, costs and accessibility.", questions: ["Which are the best universities in Europe?", "Where do you get a top education at reasonable cost?", "How hard is it to get in, and what does student life cost?"] },
+  'meserii-europa': { title: "The best jobs in Europe", summary: "11 jobs, scored on 14 conditions, based on the labour shortages reported by EURES in 2025 and the WEF Future of Jobs report.", questions: ["Which jobs are missing across Europe?", "Which jobs let you work in any EU country?", "Which are the hardest for AI to replace?"] },
+  'angajatori-europa': { title: "The best employers in Europe", summary: "11 employers, scored on 14 conditions: Forbes World’s Best Employers 2025, Top Employers Europe 2026 certifications, pay, stability and real chances of being hired.", questions: ["Which are Europe’s most appreciated employers?", "Which employers have externally certified HR practices?", "Where do you have a real chance of being hired?"] },
+  'localitati-europa': { title: "The best cities in Europe for a good life", summary: "11 European cities, scored on 14 conditions: the 2026 EIU Liveability Index, residents’ satisfaction in the EU report, income, culture, housing cost and risks.", questions: ["In which European cities is life best?", "Where is life good without Zurich or Copenhagen prices?", "How does Cluj compare with Europe’s great cities?"] },
   'licee-romania': { title: "The best high schools in Romania", summary: "11 top high schools, scored on 14 conditions: the 2025 baccalaureate average, the pass rate, the last admission average and what students get compared with how hard it is to get in.", questions: ["Which high schools have the best baccalaureate results?", "Where do students get the most compared with how hard it is to get in?", "Is a top Bucharest high school worth it compared with one in Iași or Cluj?"] },
   'facultati-romania': { title: "The best universities in Romania", summary: "11 Romanian universities, scored on 14 conditions: the QS and THE 2026 rankings, graduate employability, in-demand fields and the city.", questions: ["Which Romanian universities have the best international recognition?", "Where do graduates find work most easily?", "How much does the city you study in matter?"] },
   'meserii-romania': { title: "The best jobs in Romania", summary: "11 jobs, scored on 14 conditions: earnings, employer demand, growth until 2030, resistance to AI, training time and risks.", questions: ["Which jobs combine good earnings with high demand?", "Which jobs are hardest for artificial intelligence to replace?", "Is a job with short training worth it compared with one requiring long studies?"] },
@@ -275,6 +280,11 @@ export const FORMULAS_EN: Record<string, Record<string, string>> = {
     C10: 'Free-cash-flow yield = free cash flow / market cap (Yahoo price × SEC share count): score = 2 × the yield in %. A 5% yield gives 10.',
     C12: 'The share price’s two-month trend (from 4 September): score = 5 + the change in % / 2.',
   },
+  'licee-eu': {
+    C1: 'Mathematics, PISA 2022: score = (the score − 440) / 7 (510 gives 10, 489 gives 7).',
+    C2: 'Reading, PISA 2022: score = (the score − 440) / 7.',
+    C3: 'Science, PISA 2022: score = (the score − 450) / 7 (500 gives 7).',
+  },
   licee: {
     C1: 'The 2025 baccalaureate average: score = 10 − (9.6 − the average) × 8 (an average of 9.35 gives 8).',
     C2: 'The 2025 baccalaureate pass rate: score = 10 − (100 − the rate) × 2 (99% gives 8).',
@@ -323,6 +333,9 @@ export function inputEn(s: string): string {
     [/^BAC (\S+) − admitere (\S+) = (\S+)/, 'baccalaureate $1 − admission $2 = $3'],
     [/în topul la BAC și în cel la admitere/, 'in both the baccalaureate and the admission tops'],
     [/doar în topul la BAC/, 'only in the baccalaureate top'],
+    [/^matematică: (\d+) puncte/, 'mathematics: $1 points'],
+    [/^citire: (\d+) puncte/, 'reading: $1 points'],
+    [/^științe: (\d+) puncte/, 'science: $1 points'],
   ];
   for (const [re, en] of R) t = t.replace(re, en);
   return t.replace(/(\d),(\d)/g, '$1.$2');

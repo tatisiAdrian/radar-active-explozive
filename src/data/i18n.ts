@@ -9,6 +9,11 @@ export type Lang = 'ro' | 'en';
 type Three = [low: string, mid: string, high: string];
 
 export const DOMAIN_EN: Record<string, { title: string; short: string; what: string; summary: string }> = {
+  'licee-europa': { title: "Europe’s best high-school systems", short: "High schools", what: "europe’s best high-school systems", summary: "11 European high-school systems, compared by country: PISA 2022 scores in mathematics, reading and science, equity, teachers and access for families who move." },
+  'facultati-europa': { title: "Europe’s best universities", short: "Universities", what: "europe’s best universities", summary: "11 European universities, scored on 14 conditions: the QS Europe 2026 ranking, global reputation, employability, costs and accessibility." },
+  'meserii-europa': { title: "The best jobs in Europe", short: "Jobs", what: "the best jobs in europe", summary: "11 jobs, scored on 14 conditions, based on the labour shortages reported by EURES in 2025 and the WEF Future of Jobs report." },
+  'angajatori-europa': { title: "The best employers in Europe", short: "Employers", what: "the best employers in europe", summary: "11 employers, scored on 14 conditions: Forbes World’s Best Employers 2025, Top Employers Europe 2026 certifications, pay, stability and real chances of being hired." },
+  'localitati-europa': { title: "The best cities in Europe for a good life", short: "Places", what: "the best cities in europe for a good life", summary: "11 European cities, scored on 14 conditions: the 2026 EIU Liveability Index, residents’ satisfaction in the EU report, income, culture, housing cost and risks." },
   'licee-romania': { title: "The best high schools in Romania", short: "High schools", what: "the best high schools in romania", summary: "11 top high schools, scored on 14 conditions: the 2025 baccalaureate average, the pass rate, the last admission average and what students get compared with how hard it is to get in." },
   'facultati-romania': { title: "The best universities in Romania", short: "Universities", what: "the best universities in romania", summary: "11 Romanian universities, scored on 14 conditions: the QS and THE 2026 rankings, graduate employability, in-demand fields and the city." },
   'meserii-romania': { title: "The best jobs in Romania", short: "Jobs", what: "the best jobs in romania", summary: "11 jobs, scored on 14 conditions: earnings, employer demand, growth until 2030, resistance to AI, training time and risks." },
@@ -64,6 +69,8 @@ export const FOND_HINT_EN: Record<string, string> = {
   'in-confirmare': 'The substance exists only partly: worth watching whether it is confirmed.',
 };
 export const PHOTO_ALT_EN: Record<string, string> = {
+  'facultati-europa': "The Radcliffe Camera library in Oxford",
+  'localitati-europa': "The colourful houses of Nyhavn, Copenhagen",
   'social': "The crowd crossing Tokyo’s Shibuya intersection, seen from above",
   'licee-romania': "A student writing at a desk in a classroom",
   'facultati-romania': "Graduates throwing their caps in the air",

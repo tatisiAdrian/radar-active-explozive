@@ -1,0 +1,401 @@
+{
+ "_doc": "Cele mai bune orașe din Europa pentru o viață de calitate. Note de judecată pe baza indicelui EIU de calitate a vieții 2026 și a raportului Comisiei Europene privind calitatea vieții în orașe.",
+ "date": "2026-11-03",
+ "set": "localitati",
+ "region": "europa",
+ "items": [
+  {
+   "id": "copenhaga",
+   "name": "Copenhaga",
+   "nameEn": "Copenhagen",
+   "c": [
+    9,
+    8,
+    10,
+    9,
+    9,
+    9,
+    8,
+    9,
+    9,
+    4,
+    9,
+    8,
+    6,
+    9
+   ],
+   "why": "Primul oraș din lume în indicele EIU de calitate a vieții 2026 și printre orașele europene cu cei mai mulțumiți locuitori; locuințele sunt scumpe.",
+   "whyEn": "First city in the world in the 2026 EIU Liveability Index and among the European cities with the most satisfied residents; housing is expensive.",
+   "sources": [
+    [
+     "Business Today: cele mai bune 10 orașe de locuit în 2026 (EIU)",
+     "https://www.businesstoday.in/amp/latest/trends/story/planning-to-move-abroad-these-are-the-worlds-10-most-liveable-cities-in-2026-541841-2026-07-08"
+    ],
+    [
+     "Comisia Europeană: raportul privind calitatea vieții în orașele europene (71.153 de interviuri, 83 de orașe)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Business Today: the world’s 10 most liveable cities in 2026 (EIU)",
+     "https://www.businesstoday.in/amp/latest/trends/story/planning-to-move-abroad-these-are-the-worlds-10-most-liveable-cities-in-2026-541841-2026-07-08"
+    ],
+    [
+     "European Commission: the report on quality of life in European cities (71,153 interviews, 83 cities)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ]
+  },
+  {
+   "id": "viena",
+   "name": "Viena",
+   "nameEn": "Vienna",
+   "c": [
+    8,
+    8,
+    10,
+    9,
+    9,
+    9,
+    8,
+    9,
+    9,
+    7,
+    10,
+    7,
+    6,
+    9
+   ],
+   "why": "Locul 2 în lume la EIU 2026; locuințele sociale fac chiria mult mai accesibilă decât în alte capitale, iar oferta culturală e printre cele mai bogate din lume.",
+   "whyEn": "Second in the world at EIU 2026; social housing makes rent much more affordable than in other capitals, and the cultural offer is among the richest in the world.",
+   "sources": [
+    [
+     "Business Today: cele mai bune 10 orașe de locuit în 2026 (EIU)",
+     "https://www.businesstoday.in/amp/latest/trends/story/planning-to-move-abroad-these-are-the-worlds-10-most-liveable-cities-in-2026-541841-2026-07-08"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Business Today: the world’s 10 most liveable cities in 2026 (EIU)",
+     "https://www.businesstoday.in/amp/latest/trends/story/planning-to-move-abroad-these-are-the-worlds-10-most-liveable-cities-in-2026-541841-2026-07-08"
+    ]
+   ]
+  },
+  {
+   "id": "zurich",
+   "name": "Zürich",
+   "nameEn": "Zurich",
+   "c": [
+    10,
+    8,
+    9,
+    10,
+    10,
+    9,
+    9,
+    9,
+    9,
+    2,
+    8,
+    5,
+    6,
+    9
+   ],
+   "why": "Locul 5 în lume la EIU 2026 (de pe 2), cu note maxime la sănătate și educație; salarii foarte mari, dar printre cele mai scumpe locuințe din lume.",
+   "whyEn": "Fifth in the world at EIU 2026 (down from 2nd), with top scores in healthcare and education; very high wages, but some of the most expensive housing in the world.",
+   "sources": [
+    [
+     "Iamexpat: Indicele EIU de calitate a vieții 2026 (Zürich pe 5, Geneva pe 6)",
+     "https://www.iamexpat.ch/lifestyle/lifestyle-news/zurich-falls-3-spots-ranking-most-liveable-cities-world-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Iamexpat: EIU Global Liveability Index 2026 (Zurich 5th, Geneva 6th)",
+     "https://www.iamexpat.ch/lifestyle/lifestyle-news/zurich-falls-3-spots-ranking-most-liveable-cities-world-2026"
+    ]
+   ]
+  },
+  {
+   "id": "geneva",
+   "name": "Geneva",
+   "nameEn": "Geneva",
+   "c": [
+    10,
+    7,
+    9,
+    9,
+    10,
+    9,
+    9,
+    9,
+    9,
+    2,
+    8,
+    6,
+    7,
+    9
+   ],
+   "why": "Locul 6 în lume la EIU 2026; oraș internațional (ONU, organizații globale), foarte scump.",
+   "whyEn": "Sixth in the world at EIU 2026; an international city (UN, global organisations), very expensive.",
+   "sources": [
+    [
+     "Iamexpat: Indicele EIU de calitate a vieții 2026 (Zürich pe 5, Geneva pe 6)",
+     "https://www.iamexpat.ch/lifestyle/lifestyle-news/zurich-falls-3-spots-ranking-most-liveable-cities-world-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Iamexpat: EIU Global Liveability Index 2026 (Zurich 5th, Geneva 6th)",
+     "https://www.iamexpat.ch/lifestyle/lifestyle-news/zurich-falls-3-spots-ranking-most-liveable-cities-world-2026"
+    ]
+   ]
+  },
+  {
+   "id": "groningen",
+   "name": "Groningen",
+   "nameEn": "Groningen",
+   "c": [
+    7,
+    7,
+    9,
+    8,
+    8,
+    8,
+    7,
+    6,
+    9,
+    6,
+    7,
+    7,
+    8,
+    9
+   ],
+   "why": "Printre orașele europene cu cei mai mulțumiți locuitori în raportul UE; oraș universitar tânăr, pe bicicletă.",
+   "whyEn": "Among the European cities with the most satisfied residents in the EU report; a young university city that moves by bicycle.",
+   "sources": [
+    [
+     "Comisia Europeană: raportul privind calitatea vieții în orașele europene (71.153 de interviuri, 83 de orașe)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "European Commission: the report on quality of life in European cities (71,153 interviews, 83 cities)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ]
+  },
+  {
+   "id": "gdansk",
+   "name": "Gdańsk",
+   "nameEn": "Gdańsk",
+   "c": [
+    6,
+    7,
+    9,
+    7,
+    7,
+    8,
+    8,
+    7,
+    9,
+    6,
+    7,
+    8,
+    7,
+    9
+   ],
+   "why": "Printre orașele cu cei mai mulțumiți locuitori din Europa în raportul UE; port la Marea Baltică într-o Polonie cu creștere economică solidă.",
+   "whyEn": "Among the cities with the most satisfied residents in Europe in the EU report; a Baltic port in a Poland with solid economic growth.",
+   "sources": [
+    [
+     "Comisia Europeană: raportul privind calitatea vieții în orașele europene (71.153 de interviuri, 83 de orașe)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "European Commission: the report on quality of life in European cities (71,153 interviews, 83 cities)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ]
+  },
+  {
+   "id": "antwerp",
+   "name": "Anvers",
+   "nameEn": "Antwerp",
+   "c": [
+    8,
+    8,
+    9,
+    7,
+    8,
+    7,
+    6,
+    9,
+    7,
+    6,
+    8,
+    6,
+    6,
+    8
+   ],
+   "why": "Printre orașele cu cei mai mulțumiți locuitori în raportul UE; al doilea port al Europei, cu multe locuri de muncă.",
+   "whyEn": "Among the cities with the most satisfied residents in the EU report; Europe’s second port, with many jobs.",
+   "sources": [
+    [
+     "Comisia Europeană: raportul privind calitatea vieții în orașele europene (71.153 de interviuri, 83 de orașe)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "European Commission: the report on quality of life in European cities (71,153 interviews, 83 cities)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ]
+  },
+  {
+   "id": "braga",
+   "name": "Braga",
+   "nameEn": "Braga",
+   "c": [
+    5,
+    6,
+    9,
+    7,
+    7,
+    7,
+    8,
+    6,
+    9,
+    7,
+    7,
+    7,
+    8,
+    9
+   ],
+   "why": "Printre orașele cu cei mai mulțumiți locuitori în raportul UE; oraș portughez tânăr, cu costuri mai mici decât Lisabona sau Porto.",
+   "whyEn": "Among the cities with the most satisfied residents in the EU report; a young Portuguese city with lower costs than Lisbon or Porto.",
+   "sources": [
+    [
+     "Comisia Europeană: raportul privind calitatea vieții în orașele europene (71.153 de interviuri, 83 de orașe)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "European Commission: the report on quality of life in European cities (71,153 interviews, 83 cities)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ]
+  },
+  {
+   "id": "rostock",
+   "name": "Rostock",
+   "nameEn": "Rostock",
+   "c": [
+    6,
+    6,
+    9,
+    7,
+    8,
+    7,
+    8,
+    6,
+    8,
+    8,
+    6,
+    6,
+    8,
+    9
+   ],
+   "why": "Printre orașele cu cei mai mulțumiți locuitori în raportul UE; oraș german la mare, cu locuințe accesibile.",
+   "whyEn": "Among the cities with the most satisfied residents in the EU report; a German city on the sea, with affordable housing.",
+   "sources": [
+    [
+     "Comisia Europeană: raportul privind calitatea vieții în orașele europene (71.153 de interviuri, 83 de orașe)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "European Commission: the report on quality of life in European cities (71,153 interviews, 83 cities)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ]
+  },
+  {
+   "id": "budapesta",
+   "name": "Budapesta",
+   "nameEn": "Budapest",
+   "c": [
+    6,
+    7,
+    8,
+    8,
+    7,
+    6,
+    7,
+    8,
+    7,
+    6,
+    9,
+    5,
+    5,
+    7
+   ],
+   "why": "Cel mai bun oraș de locuit din Europa Centrală și de Est în indicele EIU 2026, deși a coborât în clasamentul global; ofertă culturală foarte bogată.",
+   "whyEn": "The most liveable city in Central and Eastern Europe in the 2026 EIU index, though it fell in the global ranking; a very rich cultural offer.",
+   "sources": [
+    [
+     "Xpatloop: Budapesta rămâne cel mai bun oraș de locuit din regiune (EIU 2026)",
+     "https://xpatloop.com/channels/2026/07/budapest-still-regions-most-liveable-city-despite-eiu-global-ranking-drop.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Xpatloop: Budapest still the region’s most liveable city (EIU 2026)",
+     "https://xpatloop.com/channels/2026/07/budapest-still-regions-most-liveable-city-despite-eiu-global-ranking-drop.html"
+    ]
+   ]
+  },
+  {
+   "id": "cluj-eu",
+   "name": "Cluj-Napoca",
+   "nameEn": "Cluj-Napoca",
+   "c": [
+    6,
+    8,
+    9,
+    9,
+    9,
+    8,
+    7,
+    8,
+    8,
+    3,
+    9,
+    8,
+    4,
+    8
+   ],
+   "why": "Pe locul 10 în Europa în raportul UE privind calitatea vieții în orașe, cu foarte mulți locuitori mulțumiți de locurile de muncă; locuințele au devenit scumpe față de venituri.",
+   "whyEn": "10th in Europe in the EU report on quality of life in cities, with very many residents satisfied with jobs; housing has become expensive relative to income.",
+   "sources": [
+    [
+     "Romania Insider: Cluj-Napoca, pe locul 10 în Europa la calitatea vieții (raportul UE)",
+     "https://www.romania-insider.com/regional/cluj-napoca-tenth-most-livable-cities-europe-2024"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Romania Insider: Cluj-Napoca 10th in Europe for quality of life (EU report)",
+     "https://www.romania-insider.com/regional/cluj-napoca-tenth-most-livable-cities-europe-2024"
+    ]
+   ]
+  }
+ ]
+}

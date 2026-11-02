@@ -245,6 +245,20 @@
    "page": "https://unsplash.com/photos/red-cable-car-over-city-buildings-during-daytime-SUMf3kN-kYc",
    "author": "Zoltan Rakottyai",
    "alt": "Telecabina roșie deasupra Brașovului"
+  },
+  {
+   "key": "facultati-europa",
+   "url": "https://images.unsplash.com/photo-1612563958093-2c3bcfbd8760",
+   "page": "https://unsplash.com/photos/radcliffe-camera-in-oxford-nqBUTBsDQNM",
+   "author": "Ben Seymour",
+   "alt": "Biblioteca Radcliffe Camera din Oxford"
+  },
+  {
+   "key": "localitati-europa",
+   "url": "https://images.unsplash.com/photo-1790042281644-4e7637a957d7",
+   "page": "https://unsplash.com/photos/red-boat-before-colorful-buildings-in-nyhavn-NT8soa0sHto",
+   "author": "Frank Huang",
+   "alt": "Casele colorate din Nyhavn, Copenhaga"
   }
  ]
 }

@@ -1,6 +1,7 @@
 {
  "slug": "licee-romania",
  "set": "licee",
+ "region": "romania",
  "date": "2026-11-03",
  "snapshot": "social-licee-romania-2026-11-03",
  "formulas": {

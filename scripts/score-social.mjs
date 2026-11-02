@@ -19,6 +19,11 @@ export const FORMULAS = {
     C5: 'Constanță: liceul apare în ambele topuri naționale (BAC și admitere) = 9; doar într-unul = 5.',
     C10: 'Accesibilitate la intrare (inversul cererii): nota = (9,7 − ultima medie de admitere) × 20 (9,4 dă 6). Fără date dacă liceul nu e în topul la admitere.',
   },
+  'licee-eu': {
+    C1: 'Matematică, PISA 2022: nota = (scorul − 440) / 7 (510 dă 10, 489 dă 7).',
+    C2: 'Citire, PISA 2022: nota = (scorul − 440) / 7.',
+    C3: 'Științe, PISA 2022: nota = (scorul − 450) / 7 (500 dă 7).',
+  },
 };
 
 const files = (await readdir(new URL('./social/', import.meta.url))).filter((f) => f.endsWith('.json'));
@@ -40,13 +45,19 @@ for (const f of files) {
       }
       c[4] = adm ? 9 : 5; inputs.C5 = adm ? 'în topul la BAC și în cel la admitere' : 'doar în topul la BAC';
     }
+    if (cfg.set === 'licee-eu' && it.data) {
+      const { math, read, sci } = it.data;
+      c[0] = clamp((math - 440) / 7); inputs.C1 = `matematică: ${math} puncte`;
+      c[1] = clamp((read - 440) / 7); inputs.C2 = `citire: ${read} puncte`;
+      c[2] = clamp((sci - 450) / 7); inputs.C3 = `științe: ${sci} puncte`;
+    }
     const score = +(c.map((v) => v ?? 5).reduce((s, v, i) => s + v * W[i], 0) / 100).toFixed(2);
     const met = c.filter((v) => v != null && v >= 7).length;
     return { ...it, c, inputs, score, met };
   }).sort((a, b) => b.met - a.met || b.score - a.score);
   const snapName = `social-${slug}${cfg.revision ? `-r${cfg.revision}` : ''}-${cfg.date}`;
   const prevSnap = cfg.revision ? `social-${slug}${cfg.revision > 2 ? `-r${cfg.revision - 1}` : ''}-${cfg.date}` : undefined;
-  const out = { slug, set: cfg.set, date: cfg.date, snapshot: snapName, previousSnapshot: prevSnap, revisionNote: cfg.revisionNote, revisionNoteEn: cfg.revisionNoteEn, formulas: FORMULAS[cfg.set] ?? {}, rows };
+  const out = { slug, set: cfg.set, region: cfg.region ?? 'romania', date: cfg.date, snapshot: snapName, previousSnapshot: prevSnap, revisionNote: cfg.revisionNote, revisionNoteEn: cfg.revisionNoteEn, formulas: FORMULAS[cfg.set] ?? {}, rows };
   await writeFile(new URL(`../src/data/social/${slug}.json`, import.meta.url), JSON.stringify(out, null, 1) + '\n');
   console.log(slug, rows.map((r) => `${r.id} ${r.met}/14 ${r.score}`).join(' | '));
   if (process.argv.includes('--snapshot')) {

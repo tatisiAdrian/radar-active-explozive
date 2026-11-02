@@ -12,6 +12,8 @@ export function photoForDomain(slug: string): Photo | undefined {
   const sub = slug.startsWith('startups/') ? slug.split('/').at(-1)! : '';
   if (sub && photo(sub)) return photo(sub);
   if (photo(slug)) return photo(slug);
+  // Analizele europene fără fotografie proprie o folosesc pe cea a analizei românești pereche.
+  if (slug.endsWith('-europa') && photo(slug.replace('-europa', '-romania'))) return photo(slug.replace('-europa', '-romania'));
   const top = slug.split('/')[0];
   const map: Record<string, string> = { crypto: 'crypto', startups: 'startups', marfuri: 'marfuri', forex: 'forex', 'economii-emergente': 'emergente', sp500: 'sp500', imobiliare: 'imobiliare', 'proiecte-imobiliare': 'proiecte' };
   return map[top] ? photo(map[top]) : undefined;

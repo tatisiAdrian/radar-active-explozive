@@ -2,16 +2,18 @@
 import HomeRadar from './HomeRadar.astro';
 import { overviewFor } from '../data/overview';
 import { CAT_LIST } from '../data/categories';
+import { regionOf } from '../data/social';
 import type { Lang } from '../data/i18n';
 interface Props { lang?: Lang }
 const { lang = 'ro' } = Astro.props;
 const en = lang === 'en';
 const base = import.meta.env.BASE_URL;
 const cats = CAT_LIST.map((c) => {
-  const doms = overviewFor(lang, c.slugs);
+  const slugs = c.key === 'social' ? c.slugs.filter((s) => regionOf(s) === 'romania') : c.slugs;
+  const doms = overviewFor(lang, slugs);
   const items = doms.flatMap((d) => d.items);
   const best = [...items].sort((a, b) => b.met - a.met || b.score - a.score)[0];
-  return { c, t: c.t[lang], doms, n: items.length, strong: items.filter((x) => x.met >= 10).length, best };
+  return { c, slugs, t: c.t[lang], doms, n: items.length, strong: items.filter((x) => x.met >= 10).length, best };
 });
 const W = en ? { pos: 'positions', assets: 'assets', with: 'with 10+', lead: 'Leading now' } : { pos: 'poziții', assets: 'active', with: 'cu 10+', lead: 'Pe primul loc acum' };
 ---
@@ -21,7 +23,7 @@ const W = en ? { pos: 'positions', assets: 'assets', with: 'with 10+', lead: 'Le
       <p class="eyebrow">{x.t.eyebrow}</p>
       <h2>{x.t.name}</h2>
       <p class="cat-q">{x.t.question}</p>
-      <HomeRadar lang={lang} only={x.c.slugs} uid={`h-${x.c.key}`} compact />
+      <HomeRadar lang={lang} only={x.slugs} uid={`h-${x.c.key}`} compact />
       <p>{x.t.lede}</p>
       <ul class="cat-doms">
         {x.doms.map((d) => <li style={`--c:${d.color}`}><i></i>{d.title}<small>{d.items.length} {x.c.key === 'social' ? W.pos : W.assets} · {d.items.filter((i) => i.met >= 10).length} {W.with}</small></li>)}
