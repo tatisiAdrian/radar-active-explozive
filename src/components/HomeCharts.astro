@@ -1,0 +1,117 @@
+---
+import { ITEMS, byRank } from '../data/home';
+import { OVERVIEW } from '../data/overview';
+import { assets } from '../data/radar';
+
+const top = [...ITEMS].sort(byRank).slice(0, 10);
+const pctOf = (k: number) => (k / 14) * 100;
+const zones = OVERVIEW.map((d) => {
+  const xs = ITEMS.filter((i) => i.domain === d.slug);
+  return {
+    d, n: xs.length,
+    strong: xs.filter((x) => x.met >= 10).length,
+    watch: xs.filter((x) => x.met >= 6 && x.met < 10).length,
+    weak: xs.filter((x) => x.met < 6).length,
+    avg: xs.reduce((s, x) => s + x.met, 0) / (xs.length || 1),
+  };
+});
+const avgOf = (gs: string[]) => {
+  const xs = assets.filter((a) => gs.includes(a.g));
+  return xs.reduce((s, a) => s + a.k, 0) / (xs.length || 1);
+};
+const pairs = [
+  { label: 'Crypto · nelansate vs. lansate', before: avgOf(['pre']), after: avgOf(['post']) },
+  { label: 'Companii · pre-IPO vs. listate', before: avgOf(['preipo']), after: avgOf(['ipo']) },
+  { label: 'Start-ups · fără vs. cu produs', before: avgOf(['seed']), after: avgOf(['startup']) },
+  { label: 'Mărfuri · emergente vs. mature', before: avgOf(['emerging']), after: avgOf(['mature']) },
+];
+const n1 = (x: number) => x.toLocaleString('ro-RO', { maximumFractionDigits: 1, minimumFractionDigits: 1 });
+---
+<div class="hc-grid">
+  <figure class="hc">
+    <h3>Top 10 active, din toate domeniile</h3>
+    <p class="muted">Linia verde punctată marchează pragul de 10 condiții, de la care un activ devine candidat puternic.</p>
+    <div class="bars">
+      {top.map((t) => (
+        <div class="bar-row" title={`${t.name}: ${t.met} din 14 condiții (${t.dshort})`}>
+          <span class="bar-name">{t.name}<small style={`color:${t.color}`}>{t.dshort}</small></span>
+          <span class="bar-track"><i style={`width:${pctOf(t.met)}%;background:${t.color}`}></i><em class="thr" style={`left:${pctOf(10)}%`}></em></span>
+          <b>{t.met}/14</b>
+        </div>
+      ))}
+    </div>
+  </figure>
+
+  <figure class="hc">
+    <h3>Câte active sunt în fiecare zonă</h3>
+    <p class="muted">Cele mai multe active nu adună destule condiții. E normal: căutăm excepțiile.</p>
+    <div class="bars">
+      {zones.map((z) => (
+        <div class="bar-row" title={`${z.d.title}: ${z.strong} cu 10+, ${z.watch} în observație, ${z.weak} sub 6`}>
+          <span class="bar-name">{z.d.short}</span>
+          <span class="stack">
+            {z.strong > 0 && <i class="z-s" style={`flex:${z.strong}`}>{z.strong}</i>}
+            {z.watch > 0 && <i class="z-w" style={`flex:${z.watch}`}>{z.watch}</i>}
+            {z.weak > 0 && <i class="z-x" style={`flex:${z.weak}`}>{z.weak}</i>}
+          </span>
+          <b>{z.n}</b>
+        </div>
+      ))}
+    </div>
+    <p class="legend"><span><i class="z-s"></i>10+ din 14</span><span><i class="z-w"></i>6–9</span><span><i class="z-x"></i>sub 6</span></p>
+  </figure>
+
+  <figure class="hc">
+    <h3>Media condițiilor îndeplinite, pe domeniu</h3>
+    <p class="muted">Cât de „plin” e fiecare domeniu, în medie, din cele 14 condiții.</p>
+    <div class="bars">
+      {[...zones].sort((a, b) => b.avg - a.avg).map((z) => (
+        <div class="bar-row">
+          <span class="bar-name">{z.d.short}</span>
+          <span class="bar-track"><i style={`width:${pctOf(z.avg)}%;background:${z.d.color}`}></i></span>
+          <b>{n1(z.avg)}</b>
+        </div>
+      ))}
+    </div>
+  </figure>
+
+  <figure class="hc">
+    <h3>Înainte vs. după lansare</h3>
+    <p class="muted">Media condițiilor îndeplinite. Proiectele bune care încă nu s-au lansat bifează, adesea, mai multe condiții.</p>
+    <div class="pairs">
+      {pairs.map((p) => (
+        <div class="pair">
+          <span class="bar-name">{p.label}</span>
+          <div class="bar-row sm"><span class="tag">înainte</span><span class="bar-track"><i class="pre" style={`width:${pctOf(p.before)}%`}></i></span><b>{n1(p.before)}</b></div>
+          <div class="bar-row sm"><span class="tag">după</span><span class="bar-track"><i class="post" style={`width:${pctOf(p.after)}%`}></i></span><b>{n1(p.after)}</b></div>
+        </div>
+      ))}
+    </div>
+  </figure>
+</div>
+
+<style>
+  .hc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .hc { margin: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.25rem; }
+  .hc h3 { margin: 0 0 .25rem; font-size: 1.1rem; }
+  .hc > p { margin: 0 0 1rem; font-size: .88rem; }
+  .bars { display: grid; gap: .5rem; }
+  .bar-row { display: grid; grid-template-columns: minmax(0, 11rem) 1fr 3rem; align-items: center; gap: .6rem; font-size: .88rem; }
+  .bar-row b { font: 600 .85rem var(--f-mono); text-align: right; }
+  .bar-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bar-name small { margin-left: .4rem; font: 600 .7rem var(--f-mono); }
+  .bar-track { position: relative; height: 12px; background: color-mix(in srgb, var(--border) 60%, transparent); border-radius: 6px; }
+  .bar-track i { position: absolute; inset: 0 auto 0 0; border-radius: 6px; }
+  .thr { position: absolute; top: -4px; bottom: -4px; border-left: 2px dashed #1f9d63; }
+  .stack { display: flex; height: 18px; border-radius: 6px; overflow: hidden; }
+  .stack i { display: grid; place-items: center; font: 600 .7rem var(--f-mono); color: #fff; font-style: normal; min-width: 1.2rem; }
+  .z-s { background: #1f9d63; } .z-w { background: #d4931f; } .z-x { background: #8a97aa; }
+  .legend { display: flex; gap: 1rem; margin: .8rem 0 0; font-size: .8rem; color: var(--muted); }
+  .legend i { display: inline-block; width: .7rem; height: .7rem; border-radius: 2px; margin-right: .3rem; vertical-align: -1px; }
+  .pairs { display: grid; gap: .8rem; }
+  .pair > .bar-name { display: block; font-weight: 600; font-size: .88rem; margin-bottom: .25rem; }
+  .bar-row.sm { grid-template-columns: 4rem 1fr 3rem; }
+  .tag { font: 500 .72rem var(--f-mono); color: var(--muted); }
+  .pre { background: var(--accent); } .post { background: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+  @media (max-width: 900px) { .hc-grid { grid-template-columns: 1fr; } .bar-row { grid-template-columns: minmax(0, 8rem) 1fr 2.6rem; } }
+</style>

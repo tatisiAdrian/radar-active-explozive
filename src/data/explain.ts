@@ -90,7 +90,7 @@ const sp500: Three[] = [
   ['Riscuri mari: procese, anchete sau reglementare.', 'Câteva riscuri de urmărit.', 'Riscuri mici.'],
 ];
 
-const SETS: Record<string, Three[]> = { general, marfuri, forex, 'economii-emergente': emergente, sp500 };
+export const SETS: Record<string, Three[]> = { general, marfuri, forex, 'economii-emergente': emergente, sp500 };
 
 /** Propoziția pe înțeles pentru nota v la condiția i (0-13) din setul dat. */
 export function explain(set: string, i: number, v: number | null | undefined): string {

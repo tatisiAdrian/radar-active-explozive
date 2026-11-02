@@ -1,0 +1,148 @@
+---
+import { ITEMS, byRank } from '../data/home';
+import { OVERVIEW } from '../data/overview';
+import { CRITERIA } from '../data/criteria';
+import { SETS } from '../data/explain';
+
+const base = import.meta.env.BASE_URL;
+const items = [...ITEMS].sort(byRank);
+const payload = {
+  base,
+  items,
+  domains: OVERVIEW.map((d) => ({ slug: d.slug, short: d.short, color: d.color, n: ITEMS.filter((i) => i.domain === d.slug).length })),
+  crit: Object.fromEntries(Object.entries(CRITERIA).map(([k, v]) => [k, v.map(([name]) => name)])),
+  explain: SETS,
+};
+---
+<div class="ex" id="explorer-app">
+  <div class="ex-tabs" role="tablist" aria-label="Domenii">
+    <button type="button" class="ex-tab on" data-dom="" role="tab" aria-selected="true">Toate <small>{ITEMS.length}</small></button>
+    {payload.domains.map((d) => (
+      <button type="button" class="ex-tab" data-dom={d.slug} role="tab" aria-selected="false" style={`--c:${d.color}`}>{d.short} <small>{d.n}</small></button>
+    ))}
+  </div>
+  <div class="ex-ctrl">
+    <label><span>Caută</span><input type="search" id="ex-q" placeholder="Caută un activ…" autocomplete="off" /></label>
+    <label><span>Condiții minime</span>
+      <select id="ex-min"><option value="0">Toate</option><option value="6">6+ (în observație)</option><option value="10">10+ (candidați puternici)</option></select>
+    </label>
+    <label><span>Ordonează după</span>
+      <select id="ex-sort"><option value="met">Condiții îndeplinite</option><option value="score">Scor</option><option value="name">Nume</option></select>
+    </label>
+  </div>
+  <p class="muted ex-count" id="ex-count" aria-live="polite"></p>
+  <div class="table-wrap">
+    <table class="radar ex-table">
+      <thead><tr><th>#</th><th>Activ</th><th>Domeniu</th><th>Scor</th><th>Condiții</th><th>Acces</th><th>Fond / formă</th><th></th></tr></thead>
+      <tbody id="ex-body"></tbody>
+    </table>
+  </div>
+  <p class="ex-more-wrap"><button type="button" id="ex-more" class="ex-more" hidden></button></p>
+  <script type="application/json" id="ex-data" set:html={JSON.stringify(payload).replace(/</g, '\\u003c')}></script>
+</div>
+
+<script>
+  type Item = { name: string; domain: string; dshort: string; color: string; group: string; access: string; met: number; score: number; c: (number | null)[]; set: string; fond: string };
+  const root = document.getElementById('explorer-app');
+  const raw = document.getElementById('ex-data')?.textContent;
+  if (root && raw) {
+    const data = JSON.parse(raw) as { base: string; items: Item[]; crit: Record<string, string[]>; explain: Record<string, [string, string, string][]> };
+    const body = root.querySelector<HTMLTableSectionElement>('#ex-body')!;
+    const q = root.querySelector<HTMLInputElement>('#ex-q')!;
+    const min = root.querySelector<HTMLSelectElement>('#ex-min')!;
+    const sort = root.querySelector<HTMLSelectElement>('#ex-sort')!;
+    const count = root.querySelector<HTMLElement>('#ex-count')!;
+    const more = root.querySelector<HTMLButtonElement>('#ex-more')!;
+    let dom = '';
+    let all = false;
+    const PAGE = 20;
+    const esc = (s: string) => s.replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[ch]!);
+    const num = (x: number) => x.toLocaleString('ro-RO', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
+    const say = (set: string, i: number, v: number | null) => {
+      if (v == null) return 'Nu se poate evalua încă (de exemplu, activul nu se tranzacționează public).';
+      const t = data.explain[set]?.at(i);
+      return t ? (v >= 7 ? t[2] : v >= 5 ? t[1] : t[0]) : '';
+    };
+    const detail = (it: Item) => {
+      const names = data.crit[it.set] ?? [];
+      const rows = names.map((n, i) => {
+        const v = it.c.at(i) ?? null;
+        const cls = v == null ? 'slab' : v >= 7 ? 'puternic' : v >= 5 ? 'observatie' : 'slab';
+        return `<li><span class="k ${cls}">${v ?? '—'}</span><b>${esc(n)}</b><span>${esc(say(it.set, i, v))}</span></li>`;
+      }).join('');
+      return `<div class="ex-det"><ul>${rows}</ul><a href="${data.base}domenii/${it.domain}/">Analiza completă, cu datele și sursele →</a></div>`;
+    };
+    const render = () => {
+      const term = q.value.trim().toLowerCase();
+      const m = Number(min.value);
+      let xs = data.items.filter((i) => (!dom || i.domain === dom) && i.met >= m && (!term || i.name.toLowerCase().includes(term)));
+      if (sort.value === 'score') xs = [...xs].sort((a, b) => b.score - a.score);
+      else if (sort.value === 'name') xs = [...xs].sort((a, b) => a.name.localeCompare(b.name, 'ro'));
+      count.textContent = `${xs.length} active găsite. Apasă pe un rând ca să vezi nota la fiecare condiție, explicată pe înțeles.`;
+      const total = xs.length;
+      if (!all) xs = xs.slice(0, PAGE);
+      more.hidden = total <= PAGE;
+      more.textContent = all ? 'Arată doar primele 20' : `Arată toate cele ${total} de active`;
+      body.innerHTML = xs.map((it, i) => `
+        <tr class="ex-row" tabindex="0" aria-expanded="false">
+          <td class="muted">${i + 1}</td>
+          <td><b>${esc(it.name)}</b><br><small class="muted">${esc(it.group)}</small></td>
+          <td><span class="ex-dom" style="--c:${it.color}">${esc(it.dshort)}</span></td>
+          <td class="num">${num(it.score)}</td>
+          <td><span class="k ${zone(it.met)}">${it.met}/14</span></td>
+          <td class="muted">${esc(it.access)}</td>
+          <td><small>${esc(it.fond)}</small></td>
+          <td class="ex-chev">⌄</td>
+        </tr>
+        <tr class="ex-detrow" hidden><td colspan="8">${detail(it)}</td></tr>`).join('');
+    };
+    body.addEventListener('click', (e) => {
+      const row = (e.target as HTMLElement).closest<HTMLTableRowElement>('tr.ex-row');
+      if (!row) return;
+      const det = row.nextElementSibling as HTMLTableRowElement;
+      det.hidden = !det.hidden;
+      row.setAttribute('aria-expanded', String(!det.hidden));
+    });
+    body.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const row = (e.target as HTMLElement).closest<HTMLTableRowElement>('tr.ex-row');
+      if (!row) return;
+      e.preventDefault();
+      row.click();
+    });
+    root.querySelectorAll<HTMLButtonElement>('.ex-tab').forEach((b) => b.addEventListener('click', () => {
+      root.querySelectorAll('.ex-tab').forEach((x) => { x.classList.remove('on'); x.setAttribute('aria-selected', 'false'); });
+      b.classList.add('on'); b.setAttribute('aria-selected', 'true');
+      dom = b.dataset.dom ?? '';
+      render();
+    }));
+    more.addEventListener('click', () => { all = !all; render(); });
+    [q, min, sort].forEach((el) => el.addEventListener('input', render));
+    render();
+  }
+</script>
+
+<style is:global>
+  .ex-tabs { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .9rem; }
+  .ex-tab { border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 999px; padding: .35rem .8rem; font: 600 .85rem var(--f-body); cursor: pointer; }
+  .ex-tab small { color: var(--muted); font-weight: 500; margin-left: .2rem; }
+  .ex-tab.on { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .ex-tab.on small { color: inherit; opacity: .7; }
+  .ex-ctrl { display: flex; flex-wrap: wrap; gap: .8rem; margin-bottom: .6rem; }
+  .ex-ctrl label { display: grid; gap: .2rem; font-size: .75rem; color: var(--muted); }
+  .ex-ctrl input, .ex-ctrl select { font: .92rem var(--f-body); padding: .45rem .6rem; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text); min-width: 12rem; }
+  .ex-count { font-size: .85rem; margin: .2rem 0 .6rem; }
+  .ex-more-wrap { text-align: center; margin: .8rem 0 0; }
+  .ex-more { border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 999px; padding: .5rem 1.1rem; font: 600 .9rem var(--f-body); cursor: pointer; }
+  .ex-more:hover { border-color: var(--accent); }
+  table.ex-table { min-width: 860px; }
+  tr.ex-row { cursor: pointer; }
+  tr.ex-row:hover td { background: color-mix(in srgb, var(--accent) 5%, transparent); }
+  tr.ex-row[aria-expanded='true'] .ex-chev { transform: rotate(180deg); }
+  .ex-chev { color: var(--muted); text-align: center; transition: transform .15s; }
+  .ex-dom { font: 600 .75rem var(--f-mono); color: var(--c); }
+  .ex-det ul { list-style: none; margin: 0 0 .6rem; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: .35rem 1.5rem; }
+  .ex-det li { display: grid; grid-template-columns: 2rem 11rem 1fr; gap: .5rem; font-size: .84rem; align-items: baseline; }
+  @media (max-width: 900px) { .ex-det ul { grid-template-columns: 1fr; } .ex-det li { grid-template-columns: 2rem 1fr; } .ex-det li span:last-child { grid-column: 2; } }
+</style>

@@ -5,6 +5,10 @@ import { OVERVIEW, ALL, UPDATED } from '../data/overview';
 import { domains } from '../data/domains';
 import { photoForDomain } from '../data/photos';
 import { fondTag } from '../data/explain';
+import HomeCharts from '../components/HomeCharts.astro';
+import TopPicks from '../components/TopPicks.astro';
+import Explorer from '../components/Explorer.astro';
+import { CRITERIA, WEIGHTS } from '../data/criteria';
 
 const base = import.meta.env.BASE_URL;
 const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
@@ -31,6 +35,7 @@ const cards = OVERVIEW.map((d) => {
     fff: d.items.filter((x) => fondTag(x.c) === 'fond-fara-forma').length,
   };
 });
+const general = CRITERIA.general;
 const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.includes('/'));
 ---
 <Base title="Toate domeniile" description="Un singur radar pentru cripto, start-ups, mărfuri, Forex, economii emergente și S&P 500: activele care adună cele mai multe din cele 14 condiții pentru o creștere puternică.">
@@ -54,7 +59,11 @@ const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.inclu
     <div class="hh-radar"><HomeRadar /></div>
   </section>
 
-  <section>
+  <nav class="subnav" aria-label="Pe această pagină">
+    <a href="#domenii">Domeniile</a><a href="#grafice">Pe scurt, în grafice</a><a href="#candidati">Candidați</a><a href="#metoda">Metoda</a><a href="#toate">Toate activele</a><a href="#istoric">Istoric</a><a href="#cumpar">Unde cumperi</a><a href="#transparenta">Transparență</a>
+  </nav>
+
+  <section id="domenii">
     <h2>Domeniile</h2>
     <p class="muted">Fiecare domeniu are pagina lui: clasamentul complet, nota la fiecare condiție, datele oficiale din spatele notelor și sursele.</p>
     <div class="dgrid">
@@ -79,7 +88,22 @@ const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.inclu
     {planned.length > 0 && <p class="muted">În pregătire: {planned.map((p) => p.title).join(', ')}.</p>}
   </section>
 
-  <section class="steps">
+  <section id="grafice">
+    <p class="eyebrow">Pe scurt, în grafice</p>
+    <h2>Ce arată radarul acum</h2>
+    <p class="muted">Patru grafice simple, calculate din notele tuturor celor {ALL.length} de active. Treci cu mouse-ul peste bare ca să vezi detaliile.</p>
+    <HomeCharts />
+  </section>
+
+  <section id="candidati">
+    <p class="eyebrow">Acum pe radar</p>
+    <h2>Primii doi candidați din fiecare domeniu</h2>
+    <p class="muted">Desenul arată profilul pe cele 14 condiții: cu cât forma e mai mare și mai rotundă, cu atât activul e mai complet. Punctele verzi sunt condițiile îndeplinite; cercul punctat e pragul de 7.</p>
+    <TopPicks />
+  </section>
+
+  <section class="steps" id="metoda">
+    <p class="eyebrow">Metoda</p>
     <h2>Cum citești radarul</h2>
     <div class="sgrid">
       <div><b>1</b><h3>Aceleași 14 condiții</h3><p>Fiecare activ primește o notă de la 0 la 10 la fiecare condiție, adaptată domeniului: cerere reală, finanțe sănătoase, evaluare, aglomerație, riscuri. O condiție e îndeplinită de la nota 7.</p></div>
@@ -87,10 +111,34 @@ const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.inclu
       <div><b>3</b><h3>Fond, nu formă</h3><p>Căutăm ce susține prețul (utilizare, clienți, finanțe), nu doar ce se vede (listare, evaluare, presă). Activele cu fond solid, încă neumflate de piață, sunt cele mai interesante. <a href={`${base}fond/`}>De ce căutăm fondul, nu forma →</a></p></div>
       <div><b>4</b><h3>Înghețat și verificat</h3><p>Notele se îngheață într-un fișier datat, cu amprentă digitală. Prețurile se actualizează automat în fiecare vineri, iar rezultatul se măsoară public, inclusiv greșelile.</p></div>
     </div>
+    <div class="zones">
+      <div class="zn z-strong"><b>10+ din 14</b><span>Candidat puternic. Rar. Se urmărește săptămânal.</span></div>
+      <div class="zn z-watch"><b>6 – 9</b><span>În observație. Urmărim dacă se adaugă condiții.</span></div>
+      <div class="zn z-weak"><b>Sub 6</b><span>Lipsesc prea multe condiții, oricât de bună ar fi povestea.</span></div>
+    </div>
+    <h3 class="crit-h">Cele 14 condiții și ponderea lor</h3>
+    <p class="muted">Aceleași ponderi în toate domeniile; ce măsurăm concret se adaptează: la Forex contează dobânda reală și contul curent, la S&P 500 fluxul de numerar, la economiile emergente datoria și instituțiile. Fiecare pagină de domeniu are tabelul ei.</p>
+    <div class="crit">
+      {general.map(([name, what], i) => <div><span class="w">{WEIGHTS[i]}%</span><b>{name}</b><small>{what}</small></div>)}
+    </div>
   </section>
 
-  <section>
-    <h2>Instantanee verificabile</h2>
+  <section id="toate">
+    <p class="eyebrow">Toate activele</p>
+    <h2>Caută, filtrează, compară</h2>
+    <p class="muted">Toate cele {ALL.length} de active din cele {OVERVIEW.length} domenii, într-un singur tabel. Alege un domeniu, caută un nume sau arată doar candidații puternici.</p>
+    <Explorer />
+  </section>
+
+  <section id="istoric">
+    <p class="eyebrow">Istoric verificabil</p>
+    <h2>Nu doar predicții: fiecare radar rămâne înghețat și se verifică</h2>
+    <div class="hsteps">
+      <div><b>1</b><h3>Înghețăm radarul</h3><p>Lista completă, cu scoruri și condiții, se salvează ca fișier datat. Oricine îl poate descărca.</p></div>
+      <div><b>2</b><h3>Dovedim că n-am umblat la el</h3><p>Publicăm amprenta digitală (SHA-256) a fișierului. Dacă s-ar schimba măcar o virgulă, amprenta n-ar mai corespunde.</p></div>
+      <div><b>3</b><h3>Măsurăm public rezultatul</h3><p>Prețuri de închidere din surse publice, comparate cu Bitcoin, S&P 500 și un indice de mărfuri. Includem și greșelile.</p></div>
+    </div>
+    <h3 class="crit-h">Instantanee verificabile</h3>
     <p class="muted">Fiecare fișier poate fi descărcat și verificat: amprenta SHA-256 calculată de oricine (de exemplu cu <code>sha256sum</code>) trebuie să fie identică cu cea de mai jos. Dacă s-ar schimba o singură virgulă, amprenta n-ar mai corespunde.</p>
     <div class="table-wrap">
       <table class="radar snaps">
@@ -102,12 +150,44 @@ const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.inclu
         </tbody>
       </table>
     </div>
+    <div class="test">
+      <h3>Testul metodei</h3>
+      <p>Întrebarea pe care o urmărim public: activele cu 10+ condiții au evoluat mai bine decât cele cu sub 6? Prima măsurare se face vineri, 6 noiembrie 2026, iar graficul se completează după primele patru săptămâni. Dacă metoda nu funcționează, o spunem și o ajustăm.</p>
+      <p class="muted small">Performanța trecută nu este un indicator de încredere pentru rezultatele viitoare. Prețurile de referință se iau din surse publice la datele indicate, fără comisioane sau taxe.</p>
+    </div>
     <p>
       <a href={`${base}radar/`}>Radarul inițial</a> (cu istoric, „Despre noi” și versiunea în engleză) ·{' '}
       <a href={`${base}metodologie/`}>Metodologie</a> ·{' '}
       <a href={`${base}finantare/`}>Cum ne finanțăm</a> ·{' '}
       <a href="https://github.com/TatisiAdrian/radar-active-explozive" target="_blank" rel="noopener">Codul și istoricul modificărilor (GitHub)</a>
     </p>
+  </section>
+
+  <section id="cumpar">
+    <p class="eyebrow">Unde cumperi</p>
+    <h2>Platforme, pe tipuri de active</h2>
+    <p class="muted">Exemple, nu recomandări. Verifică disponibilitatea în țara ta și comisioanele înainte să-ți deschizi un cont. Nu primim comision pentru conturile deschise; dacă un broker de aici devine sponsor, îl marcăm vizibil, după <a href={`${base}finantare/`}>regulile publice</a>.</p>
+    <div class="buy">
+      <div><h3>Crypto</h3><p>Burse centralizate pentru tokenurile deja lansate. Toate cer verificarea identității.</p><ul><li><a href="https://www.binance.com" rel="noopener" target="_blank">Binance</a> · cele mai multe tokenuri de pe radar</li><li><a href="https://www.coinbase.com" rel="noopener" target="_blank">Coinbase</a></li><li><a href="https://www.kraken.com" rel="noopener" target="_blank">Kraken</a></li><li><a href="https://www.okx.com" rel="noopener" target="_blank">OKX</a></li><li><a href="https://www.bybit.com" rel="noopener" target="_blank">Bybit</a></li></ul></div>
+      <div><h3>Acțiuni listate</h3><p>Companiile din S&P 500, cele listate recent și UiPath, prin brokeri cu acces la bursele din SUA și Hong Kong.</p><ul><li><a href="https://www.interactivebrokers.com" rel="noopener" target="_blank">Interactive Brokers</a></li><li><a href="https://www.xtb.com/ro" rel="noopener" target="_blank">XTB</a></li><li><a href="https://www.trading212.com" rel="noopener" target="_blank">Trading 212</a></li><li><a href="https://www.home.saxo" rel="noopener" target="_blank">Saxo</a></li><li><a href="https://www.etoro.com" rel="noopener" target="_blank">eToro</a> · include și CFD-uri, cu risc ridicat</li></ul></div>
+      <div><h3>Mărfuri</h3><p>În UE, cea mai simplă cale sunt ETC-urile listate în Europa. Futures-urile cer cont special și folosesc levier.</p><ul><li><a href="https://www.wisdomtree.eu" rel="noopener" target="_blank">WisdomTree Europe</a> · ETC</li><li><a href="https://www.cmegroup.com" rel="noopener" target="_blank">CME Group</a> · futures</li><li><a href="https://www.ice.com" rel="noopener" target="_blank">ICE</a> · futures</li><li><a href="https://www.lme.com" rel="noopener" target="_blank">London Metal Exchange</a></li></ul></div>
+      <div><h3>Forex</h3><p>Monedele se cumpără prin conturi multi-valută la bancă sau la broker. Tranzacționarea cu levier (CFD) poate pierde mai mult decât ai depus: majoritatea conturilor de retail pierd bani.</p><ul><li><a href="https://www.interactivebrokers.com" rel="noopener" target="_blank">Interactive Brokers</a> · conversie valutară la cursul pieței</li><li><a href="https://www.home.saxo" rel="noopener" target="_blank">Saxo</a></li><li>Contul multi-valută al băncii tale</li></ul></div>
+      <div><h3>Economii emergente</h3><p>Prin ETF-uri de țară listate la bursă (de exemplu EEM, INDA, EWZ), cumpărate prin brokerii de mai sus. Pentru România, ETF-ul pe indicele BET, listat la BVB.</p><ul><li><a href="https://www.bvb.ro" rel="noopener" target="_blank">Bursa de Valori București</a> · ETF-ul BET (TVBETETF)</li><li><a href="https://tradeville.ro" rel="noopener" target="_blank">Tradeville</a></li><li><a href="https://www.btcapitalpartners.ro" rel="noopener" target="_blank">BT Capital Partners</a></li><li><a href="https://www.brk.ro" rel="noopener" target="_blank">BRK Financial Group</a></li></ul></div>
+      <div><h3>Companii private (pre-IPO)</h3><p>Piețe secundare, de obicei doar pentru investitori acreditați și cu sume minime mari.</p><ul><li><a href="https://forgeglobal.com" rel="noopener" target="_blank">Forge Global</a></li><li><a href="https://equityzen.com" rel="noopener" target="_blank">EquityZen</a></li></ul></div>
+    </div>
+    <p class="notice">Atenție la site-urile false. Popularitatea unui proiect atrage copii frauduloase. Intră doar de pe adresa oficială și nu-ți da niciodată fraza secretă a portofelului.</p>
+  </section>
+
+  <section id="transparenta">
+    <p class="eyebrow">Transparență</p>
+    <h2>Cum lucrăm</h2>
+    <div class="how">
+      <div><h3>Date publice</h3><p>FMI, BIS, Banca Mondială, rapoarte anuale ale companiilor, burse și presă de specialitate. Fiecare cifră are sursă, link și dată de preluare.</p></div>
+      <div><h3>Formule și judecată, la vedere</h3><p>Unde există date, notele se calculează după formule publicate; restul sunt judecată, cu justificare. Le vezi pe fiecare, în profilul fiecărui activ.</p></div>
+      <div><h3>Actualizare săptămânală</h3><p>Prețurile și datele oficiale se actualizează automat în fiecare vineri. Data ultimei actualizări e mereu sus, pe această pagină.</p></div>
+      <div><h3>Bani și conflicte de interese</h3><p>Radarul rămâne gratuit; ne finanțăm din cursuri, servicii pentru companii și sponsorizări declarate. Autorul deține sau a deținut poziții în Lighter (LIT) și folosește Polymarket. <a href={`${base}finantare/`}>Cum ne finanțăm →</a></p></div>
+    </div>
+    <p class="notice"><b>Nu este o recomandare de investiții.</b> Radarul nu garantează nicio creștere. Cele mai multe active cu potențial de explozie nu explodează, iar mișcarea poate fi și în jos, cu pierderi de 80–90%. Investește doar bani pe care îți permiți să-i pierzi integral.</p>
   </section>
 </Base>
 
@@ -149,14 +229,40 @@ const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.inclu
   .sgrid h3 { font: 700 1.1rem var(--f-display); margin: .6rem 0 .4rem; }
   .sgrid p { margin: 0; color: var(--muted); font-size: .92rem; }
   table.snaps { min-width: 640px; }
+  .subnav { display: flex; gap: .4rem 1.1rem; flex-wrap: wrap; margin: 1.75rem 0 0; padding: .7rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); font-size: .9rem; }
+  .subnav a { color: var(--muted); text-decoration: none; } .subnav a:hover { color: var(--text); }
+  .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin-top: 1rem; }
+  .zn { border-radius: var(--radius); padding: .9rem 1rem; border: 1px solid var(--border); background: var(--surface); border-left-width: 4px; }
+  .zn b { display: block; font: 700 1.05rem var(--f-display); } .zn span { font-size: .88rem; color: var(--muted); }
+  .z-strong { border-left-color: #1f9d63; } .z-watch { border-left-color: #d4931f; } .z-weak { border-left-color: #8a97aa; }
+  .crit-h { margin: 1.8rem 0 .3rem; font-size: 1.2rem; }
+  .crit { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: .6rem; margin-top: .8rem; }
+  .crit div { display: grid; grid-template-columns: 3rem 1fr; gap: 0 .6rem; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: .6rem .8rem; }
+  .crit .w { grid-row: span 2; font: 700 1.1rem var(--f-display); color: var(--accent); align-self: center; }
+  .crit b { font-size: .92rem; } .crit small { color: var(--muted); font-size: .8rem; }
+  .hsteps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
+  .hsteps div { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem; }
+  .hsteps b { display: inline-grid; place-items: center; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--text); color: var(--bg); font: 700 .95rem var(--f-display); }
+  .hsteps h3 { margin: .5rem 0 .3rem; font-size: 1.05rem; } .hsteps p { margin: 0; color: var(--muted); font-size: .9rem; }
+  .test { margin-top: 1rem; background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius); padding: 1rem 1.2rem; }
+  .test h3 { margin: 0 0 .3rem; font-size: 1.05rem; } .test p { margin: .3rem 0; } .small { font-size: .82rem; }
+  .buy { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+  .buy > div { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.2rem; }
+  .buy h3 { margin: 0 0 .3rem; font-size: 1.1rem; } .buy p { margin: 0 0 .5rem; color: var(--muted); font-size: .88rem; }
+  .buy ul { margin: 0; padding-left: 1.1rem; font-size: .9rem; } .buy li { margin: .2rem 0; }
+  .how { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1rem; }
+  .how div { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem; }
+  .how h3 { margin: 0 0 .3rem; font-size: 1.02rem; } .how p { margin: 0; color: var(--muted); font-size: .88rem; }
   code { font: .82rem var(--f-mono); }
   @media (max-width: 900px) {
     .home-hero { grid-template-columns: 1fr; gap: 1.5rem; }
     .hh-radar { order: -1; }
     .sgrid { grid-template-columns: 1fr 1fr; }
+    .how { grid-template-columns: 1fr 1fr; }
+    .zones, .hsteps { grid-template-columns: 1fr; }
   }
   @media (max-width: 520px) {
-    .sgrid { grid-template-columns: 1fr; }
+    .sgrid, .how { grid-template-columns: 1fr; }
   }
   @media (max-width: 520px) {
     .hh-stats { grid-template-columns: repeat(2, 1fr); }

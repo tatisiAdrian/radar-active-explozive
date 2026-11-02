@@ -1,0 +1,65 @@
+---
+import { ITEMS, byRank } from '../data/home';
+import { OVERVIEW } from '../data/overview';
+
+const base = import.meta.env.BASE_URL;
+const picks = OVERVIEW.flatMap((d) => ITEMS.filter((i) => i.domain === d.slug).sort(byRank).slice(0, 2));
+// Profilul pe 14 condiții: un poligon pe 14 axe; punctele verzi = condiții îndeplinite (nota ≥ 7).
+const R = 46, C = 56;
+const ax = (i: number, v: number) => {
+  const a = -Math.PI / 2 + (i * 2 * Math.PI) / 14;
+  const r = (v / 10) * R;
+  return [C + r * Math.cos(a), C + r * Math.sin(a)];
+};
+const poly = (c: (number | null)[]) => c.map((v, i) => ax(i, v ?? 5).map((n) => n.toFixed(1)).join(',')).join(' ');
+const n2 = (x: number) => x.toLocaleString('ro-RO', { maximumFractionDigits: 2, minimumFractionDigits: 2 });
+const ACC: Record<string, string> = { 'Cumpărabil': 'a-buy', 'Prin utilizare': 'a-use', 'Acces restrâns': 'a-closed', 'Indirect': 'a-ind' };
+---
+<div class="picks">
+  {picks.map((p) => (
+    <a class="pick" href={`${base}domenii/${p.domain}/`} style={`--c:${p.color}`}>
+      <div class="pk-top">
+        <span class="pk-dom">{p.dshort}</span>
+        <span class:list={['pk-acc', ACC[p.access]]}>{p.access}</span>
+      </div>
+      <div class="pk-body">
+        <svg viewBox="0 0 112 112" class="pk-svg" aria-hidden="true">
+          <circle cx={C} cy={C} r={R} class="ring" />
+          <circle cx={C} cy={C} r={R * 0.7} class="ring thr" />
+          {Array.from({ length: 14 }, (_, i) => { const [x, y] = ax(i, 10); return <line x1={C} y1={C} x2={x.toFixed(1)} y2={y.toFixed(1)} class="spoke" />; })}
+          <polygon points={poly(p.c)} class="shape" />
+          {p.c.map((v, i) => { const [x, y] = ax(i, v ?? 5); return <circle cx={x.toFixed(1)} cy={y.toFixed(1)} r={(v ?? 0) >= 7 ? 2.6 : 1.6} class={(v ?? 0) >= 7 ? 'met' : 'dot'} />; })}
+        </svg>
+        <div>
+          <h3>{p.name}</h3>
+          <p class="pk-met"><b>{p.met}/14</b> condiții îndeplinite</p>
+          <p class="muted pk-sub">Scor {n2(p.score)} · {p.group}</p>
+          <p class="pk-fond">{p.fond}</p>
+        </div>
+      </div>
+      <span class="pk-cta">Vezi profilul →</span>
+    </a>
+  ))}
+</div>
+
+<style>
+  .picks { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+  .pick { display: flex; flex-direction: column; gap: .6rem; background: var(--surface); border: 1px solid var(--border); border-top: 3px solid var(--c); border-radius: var(--radius); padding: 1rem 1.1rem; color: var(--text); text-decoration: none; transition: transform .15s, box-shadow .15s; }
+  .pick:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(15, 29, 46, .1); }
+  .pk-top { display: flex; justify-content: space-between; gap: .5rem; font-size: .75rem; }
+  .pk-dom { font: 600 .75rem var(--f-mono); color: var(--c); text-transform: uppercase; letter-spacing: .04em; }
+  .pk-acc { padding: .05rem .5rem; border-radius: 999px; border: 1px solid currentColor; font-weight: 600; }
+  .a-buy { color: #1f9d63; } .a-use { color: var(--accent); } .a-closed { color: var(--muted); } .a-ind { color: var(--warn); }
+  .pk-body { display: grid; grid-template-columns: 96px 1fr; gap: .75rem; align-items: center; }
+  .pk-svg { width: 96px; height: 96px; }
+  .ring { fill: none; stroke: var(--border); }
+  .ring.thr { stroke-dasharray: 2 2; stroke: #1f9d63; opacity: .6; }
+  .spoke { stroke: var(--border); stroke-width: .6; }
+  .shape { fill: var(--c); fill-opacity: .2; stroke: var(--c); stroke-width: 1.4; }
+  .met { fill: #1f9d63; } .dot { fill: var(--c); opacity: .7; }
+  .pick h3 { margin: 0 0 .2rem; font-size: 1.05rem; line-height: 1.2; }
+  .pk-met { margin: 0; font-size: .85rem; } .pk-met b { font: 700 1.05rem var(--f-display); }
+  .pk-sub { margin: .1rem 0 0; font-size: .78rem; }
+  .pk-fond { margin: .3rem 0 0; font-size: .74rem; font-weight: 600; color: var(--muted); }
+  .pk-cta { margin-top: auto; color: var(--c); font-weight: 600; font-size: .88rem; }
+</style>
