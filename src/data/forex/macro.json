@@ -1,21 +1,21 @@
 {
- "updatedAt": "2026-11-01",
+ "updatedAt": "2026-11-02",
  "start": "2026-09-04",
  "sources": {
   "imf": {
    "name": "FMI, World Economic Outlook (API DataMapper)",
    "url": "https://www.imf.org/external/datamapper/datasets/WEO",
-   "retrievedAt": "2026-11-01"
+   "retrievedAt": "2026-11-02"
   },
   "bis": {
    "name": "BIS, Central bank policy rates și Consumer prices",
    "url": "https://data.bis.org/topics/CBPOL",
-   "retrievedAt": "2026-11-01"
+   "retrievedAt": "2026-11-02"
   },
   "fx": {
    "name": "Yahoo Finance (cursuri de schimb)",
    "url": "https://finance.yahoo.com/currencies",
-   "retrievedAt": "2026-11-01"
+   "retrievedAt": "2026-11-02"
   }
  },
  "imf": {
@@ -3893,7 +3893,7 @@
    ],
    "high52": 102.58,
    "low52": 96.22,
-   "last": 101.88,
+   "last": 101.683,
    "oneYearAgo": 99.87
   },
   "EUR": {
@@ -3940,8 +3940,8 @@
    ],
    "high52": 1.20176,
    "low52": 1.11297,
-   "last": 1.11828,
-   "oneYearAgo": 1.16034
+   "last": 1.12095,
+   "oneYearAgo": 1.1528
   },
   "JPY": {
    "symbol": "JPY=X",
@@ -3987,8 +3987,8 @@
    ],
    "high52": 0.0065594,
    "low52": 0.00610262,
-   "last": 0.00633697,
-   "oneYearAgo": 0.00654785
+   "last": 0.00633384,
+   "oneYearAgo": 0.00648529
   },
   "GBP": {
    "symbol": "GBPUSD=X",
@@ -4034,8 +4034,8 @@
    ],
    "high52": 1.38253,
    "low52": 1.30217,
-   "last": 1.3393,
-   "oneYearAgo": 1.31954
+   "last": 1.34194,
+   "oneYearAgo": 1.31347
   },
   "CHF": {
    "symbol": "CHF=X",
@@ -4081,8 +4081,8 @@
    ],
    "high52": 1.31027,
    "low52": 1.19666,
-   "last": 1.21227,
-   "oneYearAgo": 1.25031
+   "last": 1.2222,
+   "oneYearAgo": 1.24239
   },
   "CNY": {
    "symbol": "CNY=X",
@@ -4126,10 +4126,10 @@
      0.150128
     ]
    ],
-   "high52": 0.150491,
+   "high52": 0.150675,
    "low52": 0.139435,
-   "last": 0.150491,
-   "oneYearAgo": 0.140865
+   "last": 0.150675,
+   "oneYearAgo": 0.140511
   },
   "AUD": {
    "symbol": "AUDUSD=X",
@@ -4175,8 +4175,8 @@
    ],
    "high52": 0.7255,
    "low52": 0.64495,
-   "last": 0.702889,
-   "oneYearAgo": 0.65768
+   "last": 0.702001,
+   "oneYearAgo": 0.65457
   },
   "CAD": {
    "symbol": "CAD=X",
@@ -4222,8 +4222,8 @@
    ],
    "high52": 0.74118,
    "low52": 0.700265,
-   "last": 0.715973,
-   "oneYearAgo": 0.717293
+   "last": 0.715738,
+   "oneYearAgo": 0.713501
   },
   "RON": {
    "symbol": "RON=X",
@@ -4269,8 +4269,8 @@
    ],
    "high52": 0.2361,
    "low52": 0.208186,
-   "last": 0.209052,
-   "oneYearAgo": 0.228451
+   "last": 0.210036,
+   "oneYearAgo": 0.226845
   },
   "PLN": {
    "symbol": "PLN=X",
@@ -4316,8 +4316,8 @@
    ],
    "high52": 0.286327,
    "low52": 0.252992,
-   "last": 0.253691,
-   "oneYearAgo": 0.273808
+   "last": 0.253685,
+   "oneYearAgo": 0.271021
   },
   "INR": {
    "symbol": "INR=X",
@@ -4361,10 +4361,10 @@
      0.0105095
     ]
    ],
-   "high52": 0.0113192,
+   "high52": 0.0113037,
    "low52": 0.0103224,
-   "last": 0.010533,
-   "oneYearAgo": 0.0113192
+   "last": 0.0105385,
+   "oneYearAgo": 0.0112644
   },
   "BRL": {
    "symbol": "BRL=X",
@@ -4410,8 +4410,8 @@
    ],
    "high52": 0.203815,
    "low52": 0.178891,
-   "last": 0.185815,
-   "oneYearAgo": 0.186644
+   "last": 0.183928,
+   "oneYearAgo": 0.18606
   },
   "MXN": {
    "symbol": "MXN=X",
@@ -4457,8 +4457,8 @@
    ],
    "high52": 0.0592224,
    "low52": 0.0530445,
-   "last": 0.0532694,
-   "oneYearAgo": 0.0541545
+   "last": 0.05392,
+   "oneYearAgo": 0.0538965
   },
   "TRY": {
    "symbol": "TRY=X",
@@ -4502,10 +4502,10 @@
      0.0200229
     ]
    ],
-   "high52": 0.0238677,
-   "low52": 0.0200229,
-   "last": 0.0200258,
-   "oneYearAgo": 0.0238677
+   "high52": 0.0237871,
+   "low52": 0.0200148,
+   "last": 0.0200148,
+   "oneYearAgo": 0.0237871
   },
   "ZAR": {
    "symbol": "ZAR=X",
@@ -4551,8 +4551,8 @@
    ],
    "high52": 0.0636536,
    "low52": 0.0571721,
-   "last": 0.0599208,
-   "oneYearAgo": 0.0582659
+   "last": 0.060259,
+   "oneYearAgo": 0.0578393
   }
  },
  "errors": []

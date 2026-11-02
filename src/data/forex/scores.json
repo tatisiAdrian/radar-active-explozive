@@ -1,5 +1,5 @@
 {
- "date": "2026-11-01",
+ "date": "2026-11-02",
  "judgmentDate": "2026-11-01",
  "formulas": {
   "C1": "Cont curent 2026 (FMI, % din PIB): nota = 5 + 0,8 × sold. Excedent = cerere reală pentru monedă.",
@@ -13,24 +13,24 @@
   "imf": {
    "name": "FMI, World Economic Outlook (API DataMapper)",
    "url": "https://www.imf.org/external/datamapper/datasets/WEO",
-   "retrievedAt": "2026-11-01"
+   "retrievedAt": "2026-11-02"
   },
   "bis": {
    "name": "BIS, Central bank policy rates și Consumer prices",
    "url": "https://data.bis.org/topics/CBPOL",
-   "retrievedAt": "2026-11-01"
+   "retrievedAt": "2026-11-02"
   },
   "fx": {
    "name": "Yahoo Finance (cursuri de schimb)",
    "url": "https://finance.yahoo.com/currencies",
-   "retrievedAt": "2026-11-01"
+   "retrievedAt": "2026-11-02"
   }
  },
  "rows": [
   {
    "id": "CHF",
    "name": "Franc elvețian",
-   "score": 7.28,
+   "score": 7.22,
    "met": 8,
    "criteria": [
     10,
@@ -42,7 +42,7 @@
     4,
     7,
     9,
-    9,
+    8,
     6,
     3,
     5,
@@ -53,7 +53,7 @@
     "C2": "inflație 1,0% (2026-09)",
     "C3": "datorie 38,3%, sold bugetar -0,2%, cont curent 6,2% din PIB",
     "C7": "dobândă 0% (2026-10-27) − inflație 1,0% = -1,0 pp",
-    "C10": "la 14% din intervalul de 52 de săptămâni",
+    "C10": "la 22% din intervalul de 52 de săptămâni",
     "C12": "-2,0% în două luni"
    },
    "gaps": [],
@@ -85,7 +85,7 @@
     "C2": "inflație 3,8% (2026-09)",
     "C3": "datorie 88%, sold bugetar -3,6%, cont curent 1,2% din PIB",
     "C7": "dobândă 2,5% (2026-10-27) − inflație 3,8% = -1,3 pp",
-    "C10": "la 6% din intervalul de 52 de săptămâni",
+    "C10": "la 9% din intervalul de 52 de săptămâni",
     "C12": "-3,8% în două luni"
    },
    "gaps": [],
@@ -245,7 +245,7 @@
     "C2": "inflație 3,7% (2026-09)",
     "C3": "datorie 126,8%, sold bugetar -8,5%, cont curent -3,9% din PIB",
     "C7": "dobândă 3,875% (2026-10-27) − inflație 3,7% = 0,1 pp",
-    "C10": "la 89% din intervalul de 52 de săptămâni",
+    "C10": "la 86% din intervalul de 52 de săptămâni",
     "C12": "+2,7% în două luni"
    },
    "gaps": [],
@@ -277,7 +277,7 @@
     "C2": "inflație 3,9% (2026-06)",
     "C3": "datorie 52,6%, sold bugetar -3,2%, cont curent -3,1% din PIB",
     "C7": "dobândă 4,6% (2026-10-22) − inflație 3,9% = 0,7 pp",
-    "C10": "la 72% din intervalul de 52 de săptămâni",
+    "C10": "la 71% din intervalul de 52 de săptămâni",
     "C12": "-2,4% în două luni"
    },
    "gaps": [],
@@ -309,7 +309,7 @@
     "C2": "inflație 3,4% (2026-09)",
     "C3": "datorie 102%, sold bugetar -3,8%, cont curent -3,3% din PIB",
     "C7": "dobândă 3,75% (2026-10-26) − inflație 3,4% = 0,3 pp",
-    "C10": "la 46% din intervalul de 52 de săptămâni",
+    "C10": "la 49% din intervalul de 52 de săptămâni",
     "C12": "-1,1% în două luni"
    },
    "gaps": [],
@@ -318,7 +318,7 @@
   {
    "id": "MXN",
    "name": "Peso mexican",
-   "score": 5.46,
+   "score": 5.4,
    "met": 3,
    "criteria": [
     5,
@@ -330,7 +330,7 @@
     10,
     6,
     2,
-    10,
+    9,
     5,
     0,
     5,
@@ -341,7 +341,7 @@
     "C2": "inflație 3,5% (2026-09)",
     "C3": "datorie 62,1%, sold bugetar -4,2%, cont curent -0,3% din PIB",
     "C7": "dobândă 6,5% (2026-10-27) − inflație 3,5% = 3,0 pp",
-    "C10": "la 4% din intervalul de 52 de săptămâni",
+    "C10": "la 14% din intervalul de 52 de săptămâni",
     "C12": "-10,3% în două luni"
    },
    "gaps": [],
@@ -373,7 +373,7 @@
     "C2": "inflație 5,5% (2026-09)",
     "C3": "datorie 83,1%, sold bugetar -7,5%, cont curent -1,5% din PIB",
     "C7": "dobândă 5,5% (2026-10-19) − inflație 5,5% = -0,0 pp",
-    "C10": "la 21% din intervalul de 52 de săptămâni",
+    "C10": "la 22% din intervalul de 52 de săptămâni",
     "C12": "-0,7% în două luni"
    },
    "gaps": [],
@@ -414,7 +414,7 @@
   {
    "id": "BRL",
    "name": "Real brazilian",
-   "score": 4.38,
+   "score": 4.44,
    "met": 2,
    "criteria": [
     3,
@@ -426,7 +426,7 @@
     10,
     5,
     1,
-    7,
+    8,
     6,
     0,
     5,
@@ -437,7 +437,7 @@
     "C2": "inflație 4,6% (2026-09)",
     "C3": "datorie 97%, sold bugetar -8,1%, cont curent -2,4% din PIB",
     "C7": "dobândă 13,75% (2026-10-27) − inflație 4,6% = 9,2 pp",
-    "C10": "la 28% din intervalul de 52 de săptămâni",
+    "C10": "la 20% din intervalul de 52 de săptămâni",
     "C12": "-5,3% în două luni"
    },
    "gaps": [],
@@ -446,7 +446,7 @@
   {
    "id": "RON",
    "name": "Leu românesc",
-   "score": 3.86,
+   "score": 3.8,
    "met": 2,
    "criteria": [
     0,
@@ -458,7 +458,7 @@
     5,
     6,
     1,
-    10,
+    9,
     7,
     0,
     5,
@@ -469,7 +469,7 @@
     "C2": "inflație 6,6% (2026-09)",
     "C3": "datorie 62,6%, sold bugetar -6,2%, cont curent -7% din PIB",
     "C7": "dobândă 6,5% (2026-10-27) − inflație 6,6% = -0,1 pp",
-    "C10": "la 3% din intervalul de 52 de săptămâni",
+    "C10": "la 7% din intervalul de 52 de săptămâni",
     "C12": "-5,4% în două luni"
    },
    "gaps": [],
@@ -478,7 +478,7 @@
   {
    "id": "ZAR",
    "name": "Rand sud-african",
-   "score": 4.6,
+   "score": 4.54,
    "met": 1,
    "criteria": [
     4,
@@ -490,7 +490,7 @@
     9,
     4,
     1,
-    6,
+    5,
     6,
     1,
     5,
@@ -501,7 +501,7 @@
     "C2": "inflație 4,5% (2026-09)",
     "C3": "datorie 78%, sold bugetar -4,4%, cont curent -0,7% din PIB",
     "C7": "dobândă 7,25% (2026-10-26) − inflație 4,5% = 2,7 pp",
-    "C10": "la 42% din intervalul de 52 de săptămâni",
+    "C10": "la 48% din intervalul de 52 de săptămâni",
     "C12": "-3,8% în două luni"
    },
    "gaps": [],

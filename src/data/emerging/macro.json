@@ -1,21 +1,21 @@
 {
- "updatedAt": "2026-11-01",
+ "updatedAt": "2026-11-02",
  "start": "2026-09-04",
  "sources": {
   "imf": {
    "name": "FMI, World Economic Outlook (API DataMapper)",
    "url": "https://www.imf.org/external/datamapper/datasets/WEO",
-   "retrievedAt": "2026-11-01"
+   "retrievedAt": "2026-11-02"
   },
   "bis": {
    "name": "BIS, Central bank policy rates și Consumer prices",
    "url": "https://data.bis.org/topics/CBPOL",
-   "retrievedAt": "2026-11-01"
+   "retrievedAt": "2026-11-02"
   },
   "fx": {
    "name": "Yahoo Finance (ETF-uri de țară, indicele BET)",
    "url": "https://finance.yahoo.com/",
-   "retrievedAt": "2026-11-01"
+   "retrievedAt": "2026-11-02"
   }
  },
  "imf": {
@@ -3794,8 +3794,8 @@
    ],
    "high52": 64.7,
    "low52": 48.96,
-   "last": 49.07,
-   "oneYearAgo": 63.57
+   "last": 49.83,
+   "oneYearAgo": 63.55
   },
   "IN": {
    "symbol": "INDA",
@@ -3841,8 +3841,8 @@
    ],
    "high52": 54.83,
    "low52": 45.42,
-   "last": 47.72,
-   "oneYearAgo": 53.97
+   "last": 48.515,
+   "oneYearAgo": 54.24
   },
   "BR": {
    "symbol": "EWZ",
@@ -3888,8 +3888,8 @@
    ],
    "high52": 43.54,
    "low52": 30.97,
-   "last": 32.46,
-   "oneYearAgo": 31.17
+   "last": 32.6601,
+   "oneYearAgo": 31.52
   },
   "MX": {
    "symbol": "EWW",
@@ -3935,8 +3935,8 @@
    ],
    "high52": 81.23,
    "low52": 65.65,
-   "last": 74.47,
-   "oneYearAgo": 66.53
+   "last": 76.43,
+   "oneYearAgo": 66.23
   },
   "ID": {
    "symbol": "EIDO",
@@ -3982,8 +3982,8 @@
    ],
    "high52": 19.22,
    "low52": 9.61,
-   "last": 9.96,
-   "oneYearAgo": 18.28
+   "last": 10.075,
+   "oneYearAgo": 18.45
   },
   "TR": {
    "symbol": "TUR",
@@ -4029,8 +4029,8 @@
    ],
    "high52": 43.74,
    "low52": 29.53,
-   "last": 29.53,
-   "oneYearAgo": 34.15
+   "last": 30.17,
+   "oneYearAgo": 34.45
   },
   "ZA": {
    "symbol": "EZA",
@@ -4076,8 +4076,8 @@
    ],
    "high52": 81.6,
    "low52": 60.43,
-   "last": 61.78,
-   "oneYearAgo": 63.77
+   "last": 63.45,
+   "oneYearAgo": 63.76
   },
   "PL": {
    "symbol": "EPOL",
@@ -4123,8 +4123,8 @@
    ],
    "high52": 45.76,
    "low52": 32.56,
-   "last": 43.4,
-   "oneYearAgo": 33.71
+   "last": 43.045,
+   "oneYearAgo": 33.78
   },
   "RO": {
    "symbol": "TVBETETF.RO",
@@ -4169,9 +4169,9 @@
     ]
    ],
    "high52": 62.16,
-   "low52": 37.22,
-   "last": 59.67,
-   "oneYearAgo": 37.22
+   "low52": 37.5,
+   "last": 59.34,
+   "oneYearAgo": 37.5
   },
   "VN": {
    "symbol": "VNM",
@@ -4217,8 +4217,8 @@
    ],
    "high52": 19.8,
    "low52": 16.34,
-   "last": 16.65,
-   "oneYearAgo": 17.43
+   "last": 16.445,
+   "oneYearAgo": 17.09
   },
   "SA": {
    "symbol": "KSA",
@@ -4264,8 +4264,8 @@
    ],
    "high52": 40.63,
    "low52": 33.69,
-   "last": 34.22,
-   "oneYearAgo": 40.28
+   "last": 34.435,
+   "oneYearAgo": 40
   },
   "AR": {
    "symbol": "ARGT",
@@ -4311,18 +4311,18 @@
    ],
    "high52": 102.94,
    "low52": 79.18,
-   "last": 79.18,
-   "oneYearAgo": 94.39
+   "last": 79.3699,
+   "oneYearAgo": 95.43
   },
   "EG": {
    "symbol": "^CASE30",
    "url": "https://finance.yahoo.com/quote/%5ECASE30",
    "unit": "puncte (indice local)",
    "points": [],
-   "high52": 48744,
-   "low52": 48744,
-   "last": 48744,
-   "oneYearAgo": 48744
+   "high52": 48403.1,
+   "low52": 48403.1,
+   "last": 48403.1,
+   "oneYearAgo": 48403.1
   },
   "PH": {
    "symbol": "EPHE",
@@ -4368,8 +4368,8 @@
    ],
    "high52": 28.37,
    "low52": 22.26,
-   "last": 22.33,
-   "oneYearAgo": 24.55
+   "last": 22.57,
+   "oneYearAgo": 24.15
   },
   "CL": {
    "symbol": "ECH",
@@ -4415,8 +4415,8 @@
    ],
    "high52": 47.37,
    "low52": 34.5,
-   "last": 34.73,
-   "oneYearAgo": 35.32
+   "last": 35.6317,
+   "oneYearAgo": 35.93
   },
   "EM": {
    "symbol": "EEM",
@@ -4462,8 +4462,8 @@
    ],
    "high52": 71.21,
    "low52": 52.6,
-   "last": 61.04,
-   "oneYearAgo": 55.3
+   "last": 61.925,
+   "oneYearAgo": 55.65
   }
  },
  "errors": [
