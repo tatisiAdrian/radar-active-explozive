@@ -77,7 +77,7 @@ for (const [ind, label] of Object.entries(IMF_IND)) {
   } catch (e) { errors.push(`FMI ${ind}: ${e.message}`); console.warn('EROARE', ind, e.message); }
   await sleep(1000);
 }
-out.sources.imf = { name: 'FMI, World Economic Outlook și Global Debt Database (API DataMapper)', url: 'https://www.imf.org/external/datamapper/datasets', retrievedAt: out.updatedAt };
+out.sources.imf = { name: 'FMI, World Economic Outlook și baza globală de date privind datoria (API DataMapper)', url: 'https://www.imf.org/external/datamapper/datasets', retrievedAt: out.updatedAt };
 
 // ——— BIS ———
 for (const [c, [, bis, pol]] of Object.entries(COUNTRIES)) {
@@ -114,7 +114,7 @@ for (const [c, [, bis, pol]] of Object.entries(COUNTRIES)) {
   }
   console.log(`BIS ${c}: indice ${ri?.length ?? 0} trimestre, real ${JSON.stringify(out.bis[c].realYoY)}, dobândă ${JSON.stringify(out.bis[c].policyRate)}`);
 }
-out.sources.bis = { name: 'BIS, Selected residential property prices, Central bank policy rates și Consumer prices', url: 'https://data.bis.org/topics/RPP', retrievedAt: out.updatedAt };
+out.sources.bis = { name: 'BIS, prețurile locuințelor, dobânzile de politică monetară și prețurile de consum', url: 'https://data.bis.org/topics/RPP', retrievedAt: out.updatedAt };
 
 await mkdir(dirname(OUT.pathname), { recursive: true });
 await writeFile(OUT, JSON.stringify(out, null, 1) + '\n');

@@ -1,21 +1,31 @@
 ---
 import { CRITERIA } from '../data/criteria';
 import { explain } from '../data/explain';
+import { CRITERIA_EN, SETS_EN, NA_EN } from '../data/i18n';
+import { inputEn } from '../data/en-content';
 
 interface Props {
-  /** cheia setului de condiții: general, marfuri, forex, economii-emergente, sp500 */
+  /** cheia setului de condiții (src/data/criteria.ts) */
   set: string;
   values: (number | null | undefined)[];
   /** cifrele din spatele notelor calculate, pe chei C1..C14 */
   inputs?: Record<string, string>;
+  lang?: 'ro' | 'en';
 }
-const { set, values, inputs = {} } = Astro.props;
-const crit = CRITERIA[set];
+const { set, values, inputs = {}, lang = 'ro' } = Astro.props;
+const en = lang === 'en';
+const crit = en ? CRITERIA_EN[set] : CRITERIA[set];
+const say = (i: number, v: number | null | undefined) => {
+  if (!en) return explain(set, i, v);
+  if (v == null) return NA_EN;
+  const t = SETS_EN[set]?.[i];
+  return t ? (v >= 7 ? t[2] : v >= 5 ? t[1] : t[0]) : '';
+};
 const cls = (v: number | null | undefined) => (v == null ? 'slab' : v >= 7 ? 'puternic' : v >= 5 ? 'observatie' : 'slab');
 ---
 <div class="table-wrap">
   <table class="radar criteria explain">
-    <thead><tr><th>#</th><th>Condiție</th><th>Notă</th><th>Pe înțeles</th></tr></thead>
+    <thead><tr><th>#</th><th>{en ? 'Condition' : 'Condiție'}</th><th>{en ? 'Score' : 'Notă'}</th><th>{en ? 'In plain words' : 'Pe înțeles'}</th></tr></thead>
     <tbody>
       {crit.map(([name], i) => {
         const k = `C${i + 1}`;
@@ -26,8 +36,8 @@ const cls = (v: number | null | undefined) => (v == null ? 'slab' : v >= 7 ? 'pu
             <td><b>{name}</b></td>
             <td><span class:list={['k', cls(v)]}>{v ?? '—'}</span></td>
             <td>
-              {explain(set, i, v)}
-              {inputs[k] && <><br /><small class="muted">Date: {inputs[k]}</small></>}
+              {say(i, v)}
+              {inputs[k] && <><br /><small class="muted">{en ? 'Data' : 'Date'}: {en ? inputEn(inputs[k]) : inputs[k]}</small></>}
             </td>
           </tr>
         );

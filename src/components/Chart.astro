@@ -1,12 +1,14 @@
 ---
 import type { Dataset } from '../data/types';
-interface Props { dataset: Dataset; height?: number }
-const { dataset, height } = Astro.props;
+import type { Lang } from '../data/i18n';
+interface Props { dataset: Dataset; height?: number; lang?: Lang }
+const { dataset, height, lang = 'ro' } = Astro.props;
+const en = lang === 'en';
 ---
 <figure>
-  <div class="chart" style={height ? `height:${height}px` : undefined} data-dataset={JSON.stringify(dataset)} role="img" aria-label={dataset.title}></div>
+  <div class="chart" style={height ? `height:${height}px` : undefined} data-dataset={JSON.stringify(dataset)} data-locale={en ? 'en-GB' : 'ro-RO'} role="img" aria-label={dataset.title}></div>
   <figcaption class="muted">
-    {dataset.title} ({dataset.unit}). Sursa: <a href={dataset.source.url} target="_blank" rel="noopener">{dataset.source.name}</a>, preluat la {dataset.source.retrievedAt}.
+    {dataset.title} ({dataset.unit}). {en ? 'Source' : 'Sursa'}: <a href={dataset.source.url} target="_blank" rel="noopener">{dataset.source.name}</a>, {en ? 'retrieved on' : 'preluat la'} {dataset.source.retrievedAt}.
     {dataset.notes && <> {dataset.notes}</>}
   </figcaption>
 </figure>
@@ -38,7 +40,7 @@ const { dataset, height } = Astro.props;
       const rotate = ds.chart === 'bar' && x.length > 6;
       const many = ds.series.length > 6;
       const chart = echarts.init(el, dark ? 'dark' : undefined, { renderer: 'canvas' });
-      const fmt = (v: unknown) => (typeof v === 'number' ? v.toLocaleString('ro-RO', { maximumFractionDigits: 2 }) : '—');
+      const fmt = (v: unknown) => (typeof v === 'number' ? v.toLocaleString(el.dataset.locale ?? 'ro-RO', { maximumFractionDigits: 2 }) : '—');
       chart.setOption({
         backgroundColor: 'transparent',
         tooltip: { trigger: 'axis', valueFormatter: fmt, confine: true },

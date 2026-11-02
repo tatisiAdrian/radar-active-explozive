@@ -50,6 +50,12 @@ export const FOND_EN: Record<string, string> = {
   'Formă fără fond': 'Form without substance',
   'Fond în confirmare': 'Substance being confirmed',
 };
+export const FOND_HINT_EN: Record<string, string> = {
+  'fond-fara-forma': 'The substance is solid, but the market has not yet “inflated” it: price, press and crowd have not arrived. This is the zone we look for.',
+  'fond-confirmat': 'The substance is solid, and the market has already recognised it: less room for an upside surprise.',
+  'forma-fara-fond': 'More form is visible (price, press, crowding) than substance (usage, customers, finances). High risk of deflating.',
+  'in-confirmare': 'The substance exists only partly: worth watching whether it is confirmed.',
+};
 export const PHOTO_ALT_EN: Record<string, string> = {
   crypto: 'A bitcoin coin resting on gold nuggets',
   startups: 'A team working on laptops in a modern office',

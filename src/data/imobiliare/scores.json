@@ -10,12 +10,12 @@
  },
  "sources": {
   "imf": {
-   "name": "FMI, World Economic Outlook și Global Debt Database (API DataMapper)",
+   "name": "FMI, World Economic Outlook și baza globală de date privind datoria (API DataMapper)",
    "url": "https://www.imf.org/external/datamapper/datasets",
    "retrievedAt": "2026-11-02"
   },
   "bis": {
-   "name": "BIS, Selected residential property prices, Central bank policy rates și Consumer prices",
+   "name": "BIS, prețurile locuințelor, dobânzile de politică monetară și prețurile de consum",
    "url": "https://data.bis.org/topics/RPP",
    "retrievedAt": "2026-11-02"
   }

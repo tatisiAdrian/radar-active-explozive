@@ -10,7 +10,7 @@ const { lang = 'ro', only } = Astro.props;
 const en = lang === 'en';
 const base = import.meta.env.BASE_URL;
 const T = en
-  ? { assets: 'assets', with: 'with 10+', watch: 'on watch', fff: 'substance without form', fffTip: 'Solid substance, not yet inflated by price, press or crowding', cta: 'Open the analysis (RO) →' }
+  ? { assets: 'assets', with: 'with 10+', watch: 'on watch', fff: 'substance without form', fffTip: 'Solid substance, not yet inflated by price, press or crowding', cta: 'Open the analysis →' }
   : { assets: 'active', with: 'cu 10+', watch: 'în observație', fff: 'fond fără formă', fffTip: 'Fond solid, încă neumflat de preț, presă sau aglomerație', cta: 'Deschide analiza →' };
 const cards = overviewFor(lang, only).map((d) => ({
   d,
@@ -24,7 +24,7 @@ const cards = overviewFor(lang, only).map((d) => ({
 ---
 <div class="dgrid">
   {cards.map((c) => (
-    <a class="dcard" href={`${base}domenii/${c.d.slug}/`} hreflang={en ? 'ro' : undefined} style={`--c:${c.d.color}`}>
+    <a class="dcard" href={en ? `${base}en/domains/${c.d.slug}/` : `${base}domenii/${c.d.slug}/`} style={`--c:${c.d.color}`}>
       {c.ph ? <img class="dimg" src={`${base}images/${c.ph.key}-800.jpg`} alt={en ? PHOTO_ALT_EN[c.ph.key] ?? c.ph.alt : c.ph.alt} loading="lazy" decoding="async" width="800" height="533" style={c.ph.key === 'romania' ? 'object-position:center 35%' : undefined} /> : <span class="dbar"></span>}
       <h3>{c.d.title}</h3>
       <p class="muted">{c.summary}</p>

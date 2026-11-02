@@ -1,0 +1,28 @@
+---
+import Base from '../../../layouts/Base.astro';
+import DomainCard from '../../../components/DomainCard.astro';
+import { topLevel } from '../../../data/domains';
+import { CAT_LIST, catOf } from '../../../data/categories';
+const base = import.meta.env.BASE_URL;
+const all = topLevel();
+const active = all.filter((d) => d.status === 'activ');
+const planned = all.filter((d) => d.status === 'planificat');
+---
+<Base lang="en" alt="domenii/" title="Domains">
+  <h1>All domains</h1>
+  <p class="muted">The radar’s groundwork: prices and statistics taken directly from official sources (World Bank, CoinGecko and others), each with a link and a retrieval date. Each domain has its own page.</p>
+  <p><a href={`${base}en/`}>← Home</a></p>
+
+  {CAT_LIST.map((c) => (
+    <section>
+      <h2>{c.t.en.name}</h2>
+      <p class="muted">{c.t.en.question} <a href={`${base}${c.path.en}`}>{c.t.en.cta}</a></p>
+      <div class="grid">{active.filter((d) => catOf(d.slug).key === c.key).map((d) => <DomainCard domain={d} lang="en" />)}</div>
+    </section>
+  ))}
+
+  {planned.length > 0 && <section>
+    <h2>In preparation</h2>
+    <div class="grid">{planned.map((d) => <DomainCard domain={d} lang="en" />)}</div>
+  </section>}
+</Base>

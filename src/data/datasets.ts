@@ -9,13 +9,13 @@ import type { Dataset, Source } from './types';
 // ——— Surse ———
 
 const pinkSheetOct2026: Source = {
-  name: 'World Bank, Commodity Price Data (Pink Sheet), octombrie 2026',
+  name: 'Banca Mondială, prețurile mărfurilor (Pink Sheet), octombrie 2026',
   url: 'https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-October-2026.pdf',
   retrievedAt: '2026-11-01',
 };
 
 const coingeckoGlobal: Source = {
-  name: 'CoinGecko, Global Cryptocurrency Market Cap Charts',
+  name: 'CoinGecko, graficele capitalizării globale a pieței cripto',
   url: 'https://www.coingecko.com/en/global-charts',
   retrievedAt: '2026-11-01',
 };

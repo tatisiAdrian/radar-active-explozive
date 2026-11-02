@@ -1,0 +1,16 @@
+---
+import DomainView from '../../../components/DomainView.astro';
+import { domains } from '../../../data/domains';
+import { DOMAINS_EN } from '../../../data/en-content';
+import type { Domain } from '../../../data/types';
+
+export function getStaticPaths() {
+  // Fiecare domeniu trebuie să aibă și textul în engleză; altfel build-ul se oprește.
+  for (const d of domains) if (!DOMAINS_EN[d.slug]) throw new Error(`Lipsește traducerea în engleză pentru domeniul „${d.slug}” (src/data/en-content.ts).`);
+  return domains.map((domain) => ({ params: { slug: domain.slug }, props: { domain } }));
+}
+
+interface Props { domain: Domain }
+const { domain } = Astro.props;
+---
+<DomainView domain={domain} lang="en" />

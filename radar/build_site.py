@@ -176,7 +176,7 @@ RO.update(COMMON, nav_home="Toate domeniile", home_href="../", nav_data="Date of
  fq3_q="Dețineți activele de pe radar?", fq3_a="Uneori, da. Autorul deține sau a deținut poziții în Lighter (LIT) și folosește Polymarket. Le declarăm ca să poți judeca singur și nu modificăm notele în funcție de pozițiile noastre.",
  fq4_q="Pot verifica eu singur un instantaneu?", fq4_a="Da. Descarcă fișierul JSON și calculează-i amprenta SHA-256 cu orice utilitar (de exemplu, comanda sha256sum sau un calculator online). Trebuie să obții exact amprenta publicată mai sus.",
 )
-EN.update(COMMON, nav_home="All domains", home_href="../../", nav_data="Official data", data_href="../../domenii/", nav_history="Track record", nav_about="About", snap_href=f"../../snapshots/{SNAP_DATE}.json",
+EN.update(COMMON, nav_home="All domains", home_href="../../en/", nav_data="Official data", data_href="../../en/domains/", nav_history="Track record", nav_about="About", snap_href=f"../../snapshots/{SNAP_DATE}.json",
  hi_eyebrow="Verifiable track record", hi_title="Not just predictions: every radar is frozen and checkable",
  hi_lede="Every Friday we publish the radar as a dated file that never changes. At the following snapshots we measure how the assets moved — all of them, not only the ones that worked out.",
  hs1_t="We freeze the radar", hs1_p="The full list, with scores and conditions, is saved as a dated file. Anyone can download it.",
@@ -194,7 +194,7 @@ EN.update(COMMON, nav_home="All domains", home_href="../../", nav_data="Official
  ab_p3="The radar is the method I wish I had back then: the same 14 questions for every asset, rules written in advance and a public track record. I am building it with my son, to teach him to judge an investment with his head, not on impulse.",
  ab_p4="We don’t sell signals and we don’t tell you when to buy. We publish the method, the results and the mistakes. The radar stays free; we are funded by courses, services for companies and disclosed sponsorship.",
  fq1_q="If the method is good, why is it public?", fq1_a="Because we sell no signals based on it. The radar doesn’t tell you when to buy or sell: it only shows which assets meet the most conditions. Publishing it with a frozen track record forces us to be checked. A hidden method can’t be checked by anyone.",
- fq2_q="How are you funded?", fq2_a="The radar stays free. We are funded by courses, services for companies and disclosed sponsorship. Sponsors, brokers included, are clearly labelled and neither see nor influence the scores. We sell no signals and give no personal recommendations. Details on the <a href=\"../../finantare/\">How we are funded</a> page (in Romanian).",
+ fq2_q="How are you funded?", fq2_a="The radar stays free. We are funded by courses, services for companies and disclosed sponsorship. Sponsors, brokers included, are clearly labelled and neither see nor influence the scores. We sell no signals and give no personal recommendations. Details on the <a href=\"../../en/funding/\">How we are funded</a> page.",
  fq3_q="Do you hold the assets on the radar?", fq3_a="Sometimes, yes. The author holds or has held Lighter (LIT) and uses Polymarket. We disclose this so you can judge for yourself, and we don’t change scores based on our positions.",
  fq4_q="Can I verify a snapshot myself?", fq4_a="Yes. Download the JSON file and compute its SHA-256 fingerprint with any tool (for example the sha256sum command or an online calculator). You should get exactly the fingerprint published above.",
 )

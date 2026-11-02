@@ -1,0 +1,146 @@
+---
+import Base from '../layouts/Base.astro';
+import DomainCard from './DomainCard.astro';
+import Chart from './Chart.astro';
+import RadarSection from './RadarSection.astro';
+import ForexSection from './ForexSection.astro';
+import EmergingSection from './EmergingSection.astro';
+import SP500Section from './SP500Section.astro';
+import RomaniaSection from './RomaniaSection.astro';
+import ImobSection from './ImobSection.astro';
+import ProjectsSection from './ProjectsSection.astro';
+import PhotoHeader from './PhotoHeader.astro';
+import { photoForDomain } from '../data/photos';
+import spMacro from '../data/sp500/macro.json';
+import emMacro from '../data/emerging/macro.json';
+import forexMacro from '../data/forex/macro.json';
+import imobMacro from '../data/imobiliare/macro.json';
+import { childrenOf, breadcrumbs } from '../data/domains';
+import { catOf } from '../data/categories';
+import { datasetsFor, datasetById } from '../data/datasets';
+import { dbSource, radarView } from '../data/radar';
+import { CRITERIA, WEIGHTS } from '../data/criteria';
+import { CRITERIA_EN, type Lang } from '../data/i18n';
+import { DOMAINS_EN } from '../data/en-content';
+import { datasetL, domainHref, domainTitle, sourceL } from '../data/lang';
+import type { Domain, Source } from '../data/types';
+
+interface Props { domain: Domain; lang?: Lang }
+const { domain, lang = 'ro' } = Astro.props;
+const en = lang === 'en';
+const L = (ro: string, e: string) => (en ? e : ro);
+const base = import.meta.env.BASE_URL;
+const tr = en ? DOMAINS_EN[domain.slug] : undefined;
+const title = tr?.title ?? domain.title;
+const summary = tr?.summary ?? domain.summary;
+const questions = tr?.questions ?? domain.questions;
+const interpretations = (domain.interpretations ?? []).map((i, k) => ({ ...i, title: tr?.interpretations?.[k]?.title ?? i.title, text: tr?.interpretations?.[k]?.text ?? i.text }));
+const data = datasetsFor(domain.slug).map((d) => datasetL(d, lang));
+const subdomains = childrenOf(domain.slug);
+const crumbs = breadcrumbs(domain.slug);
+const cat = catOf(domain.slug);
+const sources: Source[] = [...new Map(data.map((d) => [d.source.url, d.source])).values()];
+const ph = photoForDomain(domain.slug);
+const radarRows = domain.radarMarket ? radarView(domain.radarMarket, domain.countries).rows.length : 0;
+if (radarRows) sources.push(dbSource);
+if (domain.slug === 'forex') sources.push(forexMacro.sources.imf, forexMacro.sources.bis, forexMacro.sources.fx);
+if (domain.slug === 'economii-emergente') sources.push(emMacro.sources.imf, emMacro.sources.bis, emMacro.sources.fx);
+if (domain.slug === 'sp500') sources.push(spMacro.sources.sec, spMacro.sources.prices);
+if (domain.slug === 'imobiliare') sources.push(imobMacro.sources.bis, imobMacro.sources.imf);
+if (domain.slug === 'proiecte-imobiliare') sources.push(dbSource);
+const scored = ['forex', 'economii-emergente', 'sp500', 'startups/europa/romania', 'imobiliare', 'proiecte-imobiliare'].includes(domain.slug);
+if (domain.slug === 'startups/europa/romania') sources.push(dbSource);
+const srcs = [...new Map(sources.map((s) => [s.url, sourceL(s, lang)])).values()];
+const criteria = domain.criteria ? (en ? CRITERIA_EN : CRITERIA)[domain.criteria] : undefined;
+if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domain.criteria}” nu există (${domain.slug}).`);
+const home = en ? `${base}en/` : base;
+---
+<Base lang={lang} alt={en ? `domenii/${domain.slug}/` : `en/domains/${domain.slug}/`} title={title} description={summary} image={ph ? `images/${ph.key}-1600.jpg` : undefined}>
+  <p class="crumbs">
+    <a href={home}>{L('Acasă', 'Home')}</a> / <a href={`${base}${cat.path[lang]}`}>{cat.t[lang].name}</a>
+    {crumbs.map((c) => <> / <a href={domainHref(c.slug, lang)}>{domainTitle(c, lang)}</a></>)}
+  </p>
+  {ph ? (
+    <PhotoHeader photo={ph} lang={lang} title={title} eyebrow={domain.status === 'activ' ? L('Analiză activă', 'Active analysis') : L('În pregătire', 'In preparation')} summary={summary} position={ph.key === 'romania' ? 'center 35%' : 'center'} />
+  ) : (
+    <>
+      <span class:list={['badge', domain.status]}>{domain.status === 'activ' ? L('Activ', 'Active') : L('Planificat', 'Planned')}</span>
+      <h1>{title}</h1>
+      <p>{summary}</p>
+    </>
+  )}
+
+  <section>
+    <h2>{L('Întrebări la care răspunde analiza', 'Questions the analysis answers')}</h2>
+    <ul>{questions.map((q) => <li>{q}</li>)}</ul>
+  </section>
+
+  {domain.slug === 'forex' && <ForexSection lang={lang} />}
+  {domain.slug === 'economii-emergente' && <EmergingSection lang={lang} />}
+  {domain.slug === 'sp500' && <SP500Section lang={lang} />}
+  {domain.slug === 'imobiliare' && <ImobSection lang={lang} />}
+  {domain.slug === 'proiecte-imobiliare' && <ProjectsSection lang={lang} />}
+  {domain.radarMarket && radarRows > 0 && <RadarSection market={domain.radarMarket} domain={domain.slug} countries={domain.countries} lang={lang} />}
+  {domain.slug === 'startups/europa/romania' && <RomaniaSection lang={lang} />}
+  {domain.radarMarket && radarRows === 0 && domain.slug !== 'startups/europa/romania' && (
+    <section>
+      <h2>{L('Activele de pe radar în această zonă', 'The assets on the radar in this area')}</h2>
+      <p class="notice">{L('Niciun activ din această zonă nu e încă pe radar. Le adăugăm doar după ce le notăm pe aceleași 14 condiții, cu date verificabile. Până atunci nu afișăm clasamente sau cifre.', 'No asset from this area is on the radar yet. We add them only after scoring them on the same 14 conditions, with verifiable data. Until then we show no rankings or figures.')}</p>
+    </section>
+  )}
+
+  {criteria && (
+    <section>
+      <h2>{en ? `How we apply the 14 conditions ${domain.radarMarket ? 'here' : 'in this domain'}` : `Cum aplicăm cele 14 condiții ${domain.radarMarket ? 'aici' : 'în acest domeniu'}`}</h2>
+      <p class="muted">
+        {L('Același algoritm ca la cripto, companii și mărfuri: fiecare condiție primește o notă de la 0 la 10 și e îndeplinită de la 7. Ponderile sunt identice în toate domeniile; se schimbă doar ce măsurăm concret.', 'The same algorithm as for crypto, companies and commodities: each condition gets a score from 0 to 10 and is met from 7. The weights are identical in every domain; only what we measure in practice changes.')}
+        {!domain.radarMarket && !scored && L(' Primele active din acest domeniu vor fi notate și publicate cu instantaneu înghețat, ca restul radarului.', ' The first assets in this domain will be scored and published with a frozen snapshot, like the rest of the radar.')}
+      </p>
+      <div class="table-wrap">
+        <table class="radar criteria">
+          <thead><tr><th>#</th><th>{L('Condiție', 'Condition')}</th><th>{L('Ce măsurăm', 'What we measure')}</th><th>{L('Pondere', 'Weight')}</th></tr></thead>
+          <tbody>
+            {criteria.map(([name, what], i) => (
+              <tr><td class="muted">C{i + 1}</td><td><b>{name}</b></td><td>{what}</td><td class="num">{WEIGHTS[i]}%</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )}
+
+  {!scored && <section>
+    <h2>{domain.radarMarket ? L('Fundamentare: date oficiale', 'Groundwork: official data') : L('Date și grafice', 'Data and charts')}</h2>
+    {data.length
+      ? data.map((ds) => <Chart dataset={ds} lang={lang} />)
+      : <p class="notice">{L('Datele sunt în curs de colectare din surse oficiale. Nu afișăm nicio cifră până nu are sursă verificabilă.', 'The data are being collected from official sources. We show no figure until it has a verifiable source.')}</p>}
+  </section>}
+
+  {interpretations.length ? (
+    <section>
+      <h2>{L('Interpretare', 'Interpretation')}</h2>
+      {interpretations.map((i) => (
+        <article>
+          <h3>{i.title}</h3>
+          <p>{i.text}</p>
+          <p class="muted">{L('Bazat pe', 'Based on')}: {i.basedOn.map((id) => { const d = datasetById(id); return d ? datasetL(d, lang).title : id; }).join('; ')}</p>
+        </article>
+      ))}
+    </section>
+  ) : null}
+
+  {subdomains.length > 0 && (
+    <section>
+      <h2>{L('Analize detaliate', 'Detailed analyses')}</h2>
+      <div class="grid">{subdomains.map((d) => <DomainCard domain={d} lang={lang} />)}</div>
+    </section>
+  )}
+
+  <section>
+    <h2>{L('Surse', 'Sources')}</h2>
+    {srcs.length
+      ? <ul>{srcs.map((s) => <li><a href={s.url} target="_blank" rel="noopener">{s.name}</a> ({L('preluat la', 'retrieved on')} {s.retrievedAt})</li>)}</ul>
+      : <p class="muted">{L('Sursele vor fi listate aici odată cu datele.', 'The sources will be listed here together with the data.')}</p>}
+    <p><a href={en ? `${base}en/methodology/` : `${base}metodologie/`}>{L('Cum verificăm datele →', 'How we check the data →')}</a></p>
+  </section>
+</Base>

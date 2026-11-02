@@ -127,7 +127,7 @@ for (const [cur, [, bis]] of Object.entries(CURRENCIES)) {
   console.log(`BIS ${cur}:`, JSON.stringify(out.bis[cur]));
 }
 out.sources.bis = {
-  name: 'BIS, Central bank policy rates și Consumer prices',
+  name: 'BIS, dobânzile de politică monetară și prețurile de consum',
   url: 'https://data.bis.org/topics/CBPOL',
   retrievedAt: out.updatedAt,
 };

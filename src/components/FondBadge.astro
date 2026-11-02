@@ -1,6 +1,10 @@
 ---
 import { fondTag, FOND_LABEL, FOND_HINT } from '../data/explain';
-interface Props { values: (number | null | undefined)[] }
-const tag = fondTag(Astro.props.values);
+import { FOND_EN } from '../data/i18n';
+import { FOND_HINT_EN } from '../data/i18n';
+interface Props { values: (number | null | undefined)[]; lang?: 'ro' | 'en' }
+const { values, lang = 'ro' } = Astro.props;
+const tag = fondTag(values);
+const en = lang === 'en';
 ---
-<span class:list={['fond', tag]} title={FOND_HINT[tag]}>{FOND_LABEL[tag]}</span>
+<span class:list={['fond', tag]} title={en ? FOND_HINT_EN[tag] : FOND_HINT[tag]}>{en ? FOND_EN[FOND_LABEL[tag]] : FOND_LABEL[tag]}</span>

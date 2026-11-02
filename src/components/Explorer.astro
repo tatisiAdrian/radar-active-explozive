@@ -14,8 +14,8 @@ const T = en
   ? { domains: 'Domains', all: 'All', search: 'Search', ph: 'Search an asset…', min: 'Minimum conditions', mAll: 'All', m6: '6+ (on watch)', m10: '10+ (strong candidates)', sort: 'Sort by', sMet: 'Conditions met', sScore: 'Score', sName: 'Name', th: ['#', 'Asset', 'Domain', 'Score', 'Conditions', 'Access', 'Substance / form', ''] }
   : { domains: 'Domenii', all: 'Toate', search: 'Caută', ph: 'Caută un activ…', min: 'Condiții minime', mAll: 'Toate', m6: '6+ (în observație)', m10: '10+ (candidați puternici)', sort: 'Ordonează după', sMet: 'Condiții îndeplinite', sScore: 'Scor', sName: 'Nume', th: ['#', 'Activ', 'Domeniu', 'Scor', 'Condiții', 'Acces', 'Fond / formă', ''] };
 const S = en
-  ? { na: NA_EN, full: 'Full analysis, with data and sources (in Romanian) →', found: 'assets found. Click a row to see the score for each condition, in plain words.', less: 'Show only the first 20', more: 'Show all {n} assets', locale: 'en-GB' }
-  : { na: 'Nu se poate evalua încă (de exemplu, activul nu se tranzacționează public).', full: 'Analiza completă, cu datele și sursele →', found: 'active găsite. Apasă pe un rând ca să vezi nota la fiecare condiție, explicată pe înțeles.', less: 'Arată doar primele 20', more: 'Arată toate cele {n} de active', locale: 'ro-RO' };
+  ? { na: NA_EN, full: 'Full analysis, with data and sources →', dom: `${import.meta.env.BASE_URL}en/domains/`, found: 'assets found. Click a row to see the score for each condition, in plain words.', less: 'Show only the first 20', more: 'Show all {n} assets', locale: 'en-GB' }
+  : { na: 'Nu se poate evalua încă (de exemplu, activul nu se tranzacționează public).', full: 'Analiza completă, cu datele și sursele →', dom: `${import.meta.env.BASE_URL}domenii/`, found: 'active găsite. Apasă pe un rând ca să vezi nota la fiecare condiție, explicată pe înțeles.', less: 'Arată doar primele 20', more: 'Arată toate cele {n} de active', locale: 'ro-RO' };
 
 const base = import.meta.env.BASE_URL;
 const items = [...ITEMS].sort(byRank);
@@ -85,7 +85,7 @@ const payload = {
         const cls = v == null ? 'slab' : v >= 7 ? 'puternic' : v >= 5 ? 'observatie' : 'slab';
         return `<li><span class="k ${cls}">${v ?? '—'}</span><b>${esc(n)}</b><span>${esc(say(it.set, i, v))}</span></li>`;
       }).join('');
-      return `<div class="ex-det"><ul>${rows}</ul><a href="${data.base}domenii/${it.domain}/">${data.s.full}</a></div>`;
+      return `<div class="ex-det"><ul>${rows}</ul><a href="${data.s.dom}${it.domain}/">${data.s.full}</a></div>`;
     };
     const render = () => {
       const term = q.value.trim().toLowerCase();

@@ -1,0 +1,310 @@
+/**
+ * Textele în engleză pentru paginile de domeniu (/en/domains/...): domenii, seturi de date,
+ * justificări, formule și datele de intrare. Notele și cifrele sunt aceleași ca în română;
+ * aici e doar textul. Când adaugi un domeniu sau un activ, adaugă și traducerea lui aici.
+ */
+
+export interface DomainEn { title: string; summary: string; questions: string[]; interpretations?: { title: string; text: string }[] }
+
+export const DOMAINS_EN: Record<string, DomainEn> = {
+  startups: { title: 'Start-ups worldwide', summary: 'Funding, valuations and the dynamics of start-up ecosystems worldwide.', questions: ['How much venture capital was invested, by year and by region?', 'Which sectors attract most of the funding?', 'How is the number of “unicorn” companies changing?'] },
+  'startups/europa': { title: 'Start-ups in Europe', summary: 'European start-up ecosystems, compared by country.', questions: ['Which European ecosystems are the best funded?', 'Which European start-ups meet the most conditions?'] },
+  'startups/europa/romania': { title: 'Start-ups in Romania', summary: '8 tech companies founded in Romania, from UiPath and Bitdefender to seed-stage start-ups, scored on the same 14 conditions.', questions: ['How does Romania compare with the region (Central and Eastern Europe)?', 'Which Romanian start-ups are worth following on the same 14 conditions?', 'What exits have there been, and at what valuations?'] },
+  'startups/europa/marea-britanie': { title: 'Start-ups in the United Kingdom', summary: 'London: fintech and AI, the largest ecosystem in Europe.', questions: ['Which British start-ups are on the radar, and how many conditions do they meet?'] },
+  'startups/europa/franta': { title: 'Start-ups in France', summary: 'Paris and Europe’s artificial intelligence champions.', questions: ['Which French start-ups are on the radar, and how many conditions do they meet?'] },
+  'startups/europa/suedia': { title: 'Start-ups in Sweden', summary: 'Stockholm: fintech and software with global ambitions.', questions: ['Which Swedish companies are on the radar, and how many conditions do they meet?'] },
+  'startups/america-de-nord': { title: 'Start-ups in North America', summary: 'The US and Canada: the largest pool of venture capital.', questions: ['What share of global funding goes to North America?', 'Which North American companies meet the most conditions?'] },
+  'startups/america-de-nord/sua': { title: 'Start-ups in the United States', summary: 'Silicon Valley, New York and the rest of the American ecosystem.', questions: ['Which American companies are on the radar, and how have the listed ones performed?'] },
+  'startups/asia': { title: 'Start-ups in Asia', summary: 'China, India, Southeast Asia and other Asian ecosystems.', questions: ['How has the funding balance between China and India changed?', 'Which Asian companies are on the radar?'] },
+  'startups/asia/china': { title: 'Start-ups in China', summary: 'Technology and industrial giants, with high geopolitical risk.', questions: ['Which Chinese companies are on the radar, and how much does geopolitical risk weigh?'] },
+  'startups/asia/singapore': { title: 'Start-ups in Singapore', summary: 'A regional hub for Southeast Asia.', questions: ['Which Singapore-based companies are on the radar?'] },
+  'startups/asia/india': { title: 'Start-ups in India', summary: 'The world’s third-largest start-up ecosystem by number of companies.', questions: ['Which Indian start-ups are worth following on the same 14 conditions?'] },
+  'startups/oceania': { title: 'Start-ups in Oceania', summary: 'Australia and New Zealand.', questions: ['Which companies from Oceania are on the radar?'] },
+  'startups/america-latina': { title: 'Start-ups in Latin America', summary: 'Brazil, Mexico and the rest of the region.', questions: ['Which Latin American fintechs are worth following?'] },
+  'startups/africa': { title: 'Start-ups in Africa', summary: 'Nigeria, Kenya, Egypt and South Africa.', questions: ['Where is Africa’s venture capital concentrated?'] },
+  crypto: {
+    title: 'Crypto assets', summary: 'Market capitalisation, volatility, adoption and regulation in the crypto market.',
+    questions: ['How has total market capitalisation evolved?', 'How volatile are the main assets compared with shares and gold?', 'Which adoption indicators can be checked publicly?'],
+    interpretations: [{ title: 'The market is dominated by Bitcoin', text: 'Bitcoin holds 57.7% of total market capitalisation, more than five times Ethereum’s share (10.2%). All other crypto assets together weigh about a third. In practice, Bitcoin’s direction largely decides the direction of the whole market, and a small asset can rise spectacularly only if it breaks out of that correlation.' }],
+  },
+  marfuri: {
+    title: 'Commodities', summary: 'Energy, metals and agricultural products: prices, demand and supply.',
+    questions: ['How have the prices of the main commodities evolved?', 'Which supply and demand factors explain the recent moves?'],
+    interpretations: [
+      { title: 'Energy: a price shock in Europe, but not in the US', text: 'In September 2026 Brent crude reached USD 116.8 a barrel, 69% above its 2025 average. European gas rose to USD 25.42/mmbtu, more than double its 2025 average, while US gas (2.95) is even below last year’s average. The gap between the two markets widened from about 3.4 times in 2025 to 8.6 times.' },
+      { title: 'Metals: copper and silver lead', text: 'Compared with the 2025 average, copper is up 45% (USD 14,474 a tonne), silver 62%, platinum 40% and gold 26%. Gold now costs more than twice its 2023 price. Nickel (+8%) and iron ore (slightly down) lag behind: their supply is abundant.' },
+      { title: 'Agriculture: grains rise, cocoa and oranges fall', text: 'US wheat is 43% above its 2025 average and corn 18%. In the other direction, cocoa has fallen 24% after the peak of the 2024 crisis, and oranges are at about a third of their 2024 average. Agricultural commodities can move sharply in both directions within a few months.' },
+    ],
+  },
+  forex: { title: 'Forex', summary: '15 currencies scored on the same 14 conditions, with IMF and BIS data and weekly exchange rates.', questions: ['Which currencies have the strongest fundamentals: current account, inflation, debt, real interest rate?', 'How do interest-rate differentials influence exchange rates?', 'Where does the Romanian leu stand against the region’s currencies and the major ones?'] },
+  'economii-emergente': { title: 'Emerging economies', summary: '15 emerging economies, including Romania, scored on the same 14 conditions, with IMF and BIS data and each country’s stock market.', questions: ['Which emerging economies have the strongest macro fundamentals?', 'Where is growth backed by sound public finances, and where by debt?', 'How does Romania compare with Poland and the rest of the emerging markets?'] },
+  sp500: { title: 'S&P 500', summary: '20 of the largest companies in the S&P 500 index, scored on the same 14 conditions, with figures from annual reports and weekly prices.', questions: ['Which of the largest US companies have the strongest fundamentals: growth, cash flow, balance sheet?', 'Where is the share price justified by cash flow, and where is it held up only by expectations?', 'How crowded are investments in companies linked to artificial intelligence?'] },
+  imobiliare: { title: 'National housing markets', summary: '16 national housing markets, including Romania, scored on the same 14 conditions, with BIS and IMF data: real house prices, household debt, real interest rates.', questions: ['In which countries are homes expensive or cheap compared with their own history, in real terms?', 'Where is demand backed by the economy and a real housing shortage, and where by cheap credit or foreign investors?', 'How does Romania’s housing market compare with the region and with the world’s large markets?'] },
+  'proiecte-imobiliare': { title: 'World real-estate projects', summary: '15 real-estate projects of worldwide interest, from data centres and logistics parks to new capitals, scored on the same 14 conditions.', questions: ['Which large real-estate projects have real demand, tenants and healthy funding?', 'Which are only form: spectacular buildings or new cities without people or income?', 'Through which listed companies can an investor reach these projects?'] },
+};
+
+/** Seturile de date fixe (Banca Mondială, CoinGecko): titlu, unitate, note și numele seriilor. */
+export const DATASETS_EN: Record<string, { title: string; unit: string; notes?: string; series?: Record<string, string> }> = {
+  'marfuri-petrol-brent': { title: 'Brent crude oil', unit: 'USD/barrel' },
+  'marfuri-gaz-sua-europa': { title: 'Natural gas: US (Henry Hub) vs. Europe', unit: 'USD/mmbtu', series: { SUA: 'US', Europa: 'Europe' } },
+  'marfuri-cereale': { title: 'Grains: wheat (US, HRW) and corn', unit: 'USD/tonne', series: { 'Grâu SUA HRW': 'US HRW wheat', Porumb: 'Corn' } },
+  'marfuri-softs': { title: 'Cocoa, Arabica coffee, sugar and oranges', unit: 'USD/kg', series: { Cacao: 'Cocoa', 'Cafea Arabica': 'Arabica coffee', 'Zahăr (mondial)': 'Sugar (world)', Portocale: 'Oranges' } },
+  'marfuri-metale-industriale': { title: 'Industrial metals: copper, nickel, aluminium', unit: 'USD/tonne', series: { Cupru: 'Copper', Nichel: 'Nickel', Aluminiu: 'Aluminium' } },
+  'marfuri-minereu-fier': { title: 'Iron ore', unit: 'USD/dry tonne', series: { 'Minereu de fier': 'Iron ore' } },
+  'marfuri-aur-platina': { title: 'Precious metals: gold and platinum', unit: 'USD/troy ounce', series: { Aur: 'Gold', Platină: 'Platinum' } },
+  'marfuri-argint': { title: 'Silver', unit: 'USD/troy ounce', series: { Argint: 'Silver' } },
+  'crypto-dominanta': { title: 'Share of total crypto market capitalisation', unit: '%', notes: 'Snapshot on the day of retrieval; total capitalisation shown: USD 2.711 trillion. “Rest of the market” is computed as 100% minus Bitcoin minus Ethereum.', series: { Pondere: 'Share' } },
+};
+export const PINK_NOTE_EN = 'The first three points are annual averages, the last three are monthly averages (nominal, USD).';
+export const LABEL_EN: Record<string, string> = {
+  'Medie 2023': '2023 average', 'Medie 2024': '2024 average', 'Medie 2025': '2025 average', 'Iul 2026': 'Jul 2026', 'Aug 2026': 'Aug 2026', 'Sep 2026': 'Sep 2026',
+  'Restul pieței': 'Rest of the market',
+};
+export const SOURCE_NAME_EN: Record<string, string> = {
+  'BIS, dobânzile de politică monetară și prețurile de consum': 'BIS, Central bank policy rates and Consumer prices',
+  'BIS, prețurile locuințelor, dobânzile de politică monetară și prețurile de consum': 'BIS, Selected residential property prices, Central bank policy rates and Consumer prices',
+  'FMI, World Economic Outlook și baza globală de date privind datoria (API DataMapper)': 'IMF, World Economic Outlook and Global Debt Database (DataMapper API)',
+  'CoinGecko, graficele capitalizării globale a pieței cripto': 'CoinGecko, Global Cryptocurrency Market Cap Charts',
+  'Banca Mondială, prețurile mărfurilor (Pink Sheet), octombrie 2026': 'World Bank, Commodity Price Data (Pink Sheet), October 2026',
+  'World Bank, Commodity Price Data (Pink Sheet), octombrie 2026': 'World Bank, Commodity Price Data (Pink Sheet), October 2026',
+  'Baza de date săptămânală Radar (închideri CoinGecko și Yahoo Finance)': 'Radar weekly database (CoinGecko and Yahoo Finance closes)',
+  'FMI, World Economic Outlook (API DataMapper)': 'IMF, World Economic Outlook (DataMapper API)',
+  'FMI, World Economic Outlook și Global Debt Database (API DataMapper)': 'IMF, World Economic Outlook and Global Debt Database (DataMapper API)',
+  'BIS, Central bank policy rates și Consumer prices': 'BIS, Central bank policy rates and Consumer prices',
+  'BIS, Selected residential property prices, Central bank policy rates și Consumer prices': 'BIS, Selected residential property prices, Central bank policy rates and Consumer prices',
+  'Yahoo Finance (ETF-uri de țară, indicele BET)': 'Yahoo Finance (country ETFs, BET index)',
+  'Yahoo Finance (cursuri de schimb)': 'Yahoo Finance (exchange rates)',
+  'Rapoarte anuale 10-K (SEC), cifre preluate prin seria fundamentală Yahoo Finance': '10-K annual reports (SEC), figures retrieved through the Yahoo Finance fundamentals series',
+  'Yahoo Finance (prețuri de închidere)': 'Yahoo Finance (closing prices)',
+  'Radar Active Explozive, instantaneul start-ups România': 'Explosive Assets Radar, Romanian start-ups snapshot',
+  'Radar Active Explozive, instantaneul proiectelor imobiliare': 'Explosive Assets Radar, real-estate projects snapshot',
+};
+export const PRICE_NOTE_EN: Record<string, string> = {
+  'ETF fizic': 'physical ETF', 'ETF pe carbon reglementat (aproximare)': 'regulated carbon ETF (approximation)',
+  'ETF pe companii de litiu (aproximare)': 'lithium companies ETF (approximation)', 'ETF pe companii de pământuri rare (aproximare)': 'rare-earth companies ETF (approximation)',
+  'futures CBOT': 'CBOT futures', 'futures ICE': 'ICE futures', 'futures KC HRW': 'KC HRW futures', 'futures NYMEX': 'NYMEX futures',
+  'Mărfuri (ETF DBC)': 'Commodities (DBC ETF)',
+};
+export const COUNTRY_NAME_EN: Record<string, string> = {
+  US: 'USA', CA: 'Canada', GB: 'United Kingdom', FR: 'France', SE: 'Sweden', DE: 'Germany', RO: 'Romania',
+  CN: 'China', SG: 'Singapore', IN: 'India', AU: 'Australia', BR: 'Brazil',
+};
+export const NO_PRICE_EN: Record<string, string> = {
+  pre: 'not launched yet', preipo: 'not listed (private market)', startup: 'not listed', seed: 'not listed',
+  ipo: 'no public source', post: 'the source did not respond at the last update', emerging: 'no liquid exchange', mature: 'no free public daily price',
+};
+
+/** Justificările notelor de judecată, în engleză (cheia = id-ul din fișierul de judecată). */
+export const WHY_EN: Record<string, Record<string, string>> = {
+  forex: {
+    USD: 'The world’s reserve currency and the main safe haven in crises. Political pressure on the Fed and a large budget deficit (IMF: -8.5% of GDP in 2026) weaken credibility; reserve diversification towards other currencies limits new roles.',
+    EUR: 'The second reserve currency, with an independent ECB. It gains from reserve diversification and the digital euro. The risk comes from weak growth and the 2026 energy shock.',
+    JPY: 'A traditional safe haven and a funding currency for the carry trade, so flows are partly speculative. Public debt of about 200% of GDP is the main weak point.',
+    GBP: 'A credible central bank and a deep financial market, but persistent current-account and budget deficits.',
+    CHF: 'The strongest fundamentals on the list: a current-account surplus, low debt, inflation below 1%. The zero interest rate and SNB interventions limit appreciation.',
+    CNY: 'A managed exchange rate and capital controls, so flows are mostly trade-related. It is gaining ground in settlements (CIPS), but geopolitical risk and deflation remain high.',
+    AUD: 'Solid institutions, but an economy tied to commodity exports and Chinese demand; it moves with global risk appetite.',
+    CAD: 'A credible central bank; dependent on oil and on the trade relationship with the US.',
+    RON: 'The largest current-account deficit on the list (IMF: -7% of GDP) and a large budget deficit, with an economy that contracts in 2026. The National Bank keeps the exchange rate stable, but the real interest rate is close to zero.',
+    PLN: 'A diversified economy with the fastest growth among the European currencies on the list; the budget deficit and proximity to the war in Ukraine are the risks.',
+    INR: 'The fastest growth on the list (IMF: 7% in 2026) and trade settled more and more often in rupees. Inflation rose in 2026, and the real interest rate is slightly negative.',
+    BRL: 'High real interest rates that attract the carry trade, so flows are partly speculative; a high budget deficit and dependence on commodities.',
+    MXN: 'It gains from production moving to North America (nearshoring), but it is a classic carry-trade currency and is exposed to US tariffs.',
+    TRY: 'Inflation of nearly 30% and a history of changing monetary policy. Today’s positive real interest rate attracts speculative capital, not long-term confidence.',
+    ZAR: 'A high real interest rate and a respected central bank, but weak growth, infrastructure problems and dependence on mining.',
+  },
+  'economii-emergente': {
+    CN: 'A leader in batteries, electric vehicles and critical-mineral processing, with very diversified exports. Foreign direct investment has fallen, and tensions with the US and the Taiwan risk keep geopolitical risk high.',
+    IN: 'The fastest growth among large economies and a beneficiary of production moving out of China. Very high media attention and high stock-market valuations are signals for caution.',
+    BR: 'An agricultural and commodity power with a credible central bank. The large budget deficit and dependence on commodities limit the score.',
+    MX: 'It gains directly from production moving to North America (nearshoring). The risks: US tariffs and the judicial reform, which weakens institutions.',
+    ID: 'It dominates world nickel supply and is building local battery processing. Institutions and policy predictability remain average.',
+    TR: 'A diversified industry and a strategic position between Europe and the Middle East, but inflation of nearly 30% and changing economic policies.',
+    ZA: 'Solid financial institutions and platinum-group metal reserves, but weak growth and energy and infrastructure problems.',
+    PL: 'A diversified economy integrated into European production chains, with steady foreign investment. The budget deficit and proximity to the war in Ukraine are the risks.',
+    RO: 'EU funds and investment in energy and IT, but large twin deficits (budget and current account), with a fiscal adjustment under way that slows growth.',
+    VN: 'The main beneficiary of electronics factories moving out of China, with large foreign direct investment. The stock market is still classified as frontier, with limited access for foreigners.',
+    SA: 'A central role in the oil market and a large diversification programme (Vision 2030), but the economy still depends on oil, and the war in the region raises the risk.',
+    AR: 'Lithium and shale gas (Vaca Muerta) with large potential and recent reforms, but a long history of currency and debt crises.',
+    EG: 'A strategic position through the Suez Canal, but high debt, dependence on foreign financing and direct exposure to the region’s conflicts.',
+    PH: 'A young population, domestic consumption and strong outsourced services (BPO); industry is less developed than in the region.',
+    CL: 'The strongest institutions in Latin America and a key role in copper and lithium, but exports depend on these two metals.',
+  },
+  sp500: {
+    AAPL: 'An ecosystem that is hard to leave and recurring services revenue, but heavy dependence on the iPhone, on production in China, and antitrust cases (App Store).',
+    MSFT: 'Cloud (Azure), office software and AI with corporate customers on subscription; a dominant position, but one of the most crowded stocks in the world.',
+    NVDA: 'The undisputed leader in AI chips, but revenue comes from a few very large customers, and export controls to China and media euphoria are risks.',
+    AMZN: 'Online retail, cloud (AWS) and advertising; diversified businesses with network effects. Very large data-centre investment weighs on cash flow.',
+    GOOGL: 'Search, YouTube and cloud, with its own AI models. Antitrust cases in the US and the EU are the biggest risk on the list for the core business.',
+    META: 'More than three billion users and very profitable advertising; heavy spending on AI and virtual reality and regulatory pressure are the risks.',
+    AVGO: 'Custom AI chips and infrastructure software (VMware); strong growth, but concentrated on a few large cloud customers.',
+    TSLA: 'A valuation tied mostly to promises (robotaxi, robots), while revenue fell in 2025. The share count rose sharply, mainly through the CEO’s share award; governance and extreme media attention lower the score.',
+    LLY: 'The leader in obesity and diabetes treatments; very fast growth, but dependent on a single family of drugs and on prices negotiated with the state.',
+    V: 'A global payments network with very high margins and revenue from every transaction; the risks are fee regulation and competing instant payments.',
+    XOM: 'The largest private oil producer in the US; it gains from the high oil price of 2026, but results follow the commodity cycle.',
+    WMT: 'The world’s largest retailer, with growing advertising and online sales; thin but stable margins, and a high valuation for a retailer.',
+    UNH: 'The largest health insurer in the US, hit by rising medical costs, federal investigations and leadership changes.',
+    JNJ: 'Diversified medicines and medical devices, a solid balance sheet; the talc lawsuits and some patent expiries are the risks.',
+    PG: 'Everyday consumer goods bought again and again (Pampers, Gillette, Tide); high stability, low growth.',
+    ORCL: 'Huge AI cloud contracts, but funded with fast-rising debt; data-centre investment makes free cash flow negative.',
+    COST: 'A subscription model with renewal above 90%; one of the best-run companies, but also one of the most expensive relative to earnings.',
+    NFLX: 'The streaming leader, with growing subscriptions and advertising; competition for users’ time remains intense.',
+    AMD: 'Nvidia’s main competitor in AI chips and a leader in server processors; it still has to prove large sales of AI accelerators.',
+    PLTR: 'Analytics software for governments and companies, with fast growth from AI; its valuation is among the highest in the index, and media attention is very high.',
+  },
+  'startups-ro': {
+    uipath: 'Founded in Bucharest, now headquartered in New York. Revenue of USD 1.61 billion in fiscal 2026 (+13%), ARR of USD 1.85 billion, USD 1.69 billion in cash and USD 329 million of buybacks in a year. It listed in 2021 near the market peak, at USD 56 a share; it now trades around USD 14, more than 75% below the listing price, with a high free-cash-flow yield for a software company. The main risk is that the AI agents of the large companies replace classic automation.',
+    bitdefender: 'Revenue of USD 480 million in 2025 (+11%) and operating profit of USD 57 million. The US listing, expected for June 2026, was moved to the end of 2028 from a comfortable financial position: the radar’s “launch from strength” pattern. Ordinary investors cannot buy the shares yet.',
+    fintechos: 'Raised USD 28 million in September 2026 (equity from existing investors and credit from Santander), after turning profitable in the first half of 2026. Recurring revenue grew 40%, and the US business 130%. Breakeven came later than the company had announced for 2024.',
+    'druid-ai': 'A USD 31 million Series C in September 2025, led by Cipio Partners; annual recurring revenue grew 2.7 times in 2024, with more than 300 customers. It brought in an experienced CEO (the former CEO of Sumo Logic). The AI-agent category is very crowded, and the large AI companies compete directly.',
+    'flowx-ai': 'Romania’s largest Series A round (USD 35 million, led by Dawn Capital), with customers such as Banca Transilvania and OTP. Published revenue is still small (USD 1.55 million in 2022, the latest figure available), so commercial traction has yet to be confirmed.',
+    dotlumen: 'An obvious problem and little competition: glasses that guide blind people without a guide dog. Funding from European grants (EIC) and a EUR 5 million round in 2024, EUR 1 million of it through SeedBlink. The product is at the start of commercialisation, so real customers are still few.',
+    'pentest-tools': 'Built without outside investors, profitable, with paying customers in more than 100 countries. With no funding rounds, nobody can sell heavily; on the other hand, there is no public way to invest.',
+    questo: 'App-guided tours and games in more than 100 cities, with revenue from tickets and corporate contracts; a EUR 1.8 million seed round. A smaller and more seasonal market than business software.',
+  },
+  imobiliare: {
+    RO: 'House prices rose 7.8% in nominal terms in the first quarter of 2026 (Eurostat), above the EU average; adjusted for inflation, which stayed high, the increase is much smaller. Premium developers report rising average prices. Home ownership is among the highest in Europe, and demand comes mostly from people who actually live in the flats, not from funds. The housing stock is old, and the large cities (Bucharest, Cluj, Iași, Brașov, Timișoara) attract people. The risks are fiscal: the large budget deficit brought tax increases and a still-high interest rate.',
+    PL: 'An economy with solid growth, several dynamic large cities (Warsaw, Kraków, Wrocław, Gdańsk, Poznań) and an acknowledged housing shortage. The 2023 subsidised credit pushed prices up; the pace has eased as interest rates fell. Investors buying to let hold a growing share in the large cities.',
+    HU: 'The 3% fixed-rate first-home loan programme (from September 2025) has boosted demand and prices. The market depends heavily on Budapest, and economic policies change often and follow the election cycle; inflation has been among the highest in the EU.',
+    CZ: 'Solid institutions and low political risk, but building permits are slow, and new supply stays below needs, especially in Prague. Homes are among the most expensive in Europe relative to income.',
+    DE: 'After the 2022–2024 correction, new construction fell sharply, and the housing shortage in the large cities deepened. A predominantly rental market, with stable rules and many large cities. Weak economic growth limits demand.',
+    ES: 'Economic growth above the euro-area average and strong immigration, with a shortage of new homes estimated in the hundreds of thousands. Foreign buyers and tourist lets compete with locals; the affordability crisis has become a major political issue, and the state intervenes more and more (rent caps, the end of the golden visa).',
+    PT: 'Prices have risen fast for more than a decade, with strong foreign and tourist demand in Lisbon, Porto and the Algarve. New supply is small, and affordability for locals is among the weakest in the EU.',
+    FR: 'The market corrected after interest rates rose and is recovering slowly. Demand is geographically diversified, but the political and budgetary instability of recent years weighs on confidence.',
+    IT: 'Real prices are still below their levels of 15 years ago. The population is shrinking and ageing, and economic growth is modest; Milan and the tourist cities are the exceptions.',
+    NL: 'One of the largest housing shortages in Europe, officially acknowledged. The 2024 rent regulation reduced rental supply, and prices have resumed fast growth.',
+    GB: 'A chronic construction shortfall, with government targets for new homes hard to reach. Prices have stagnated in real terms since 2022; weak economic growth and property taxes for investors limit demand.',
+    US: 'A shortage of homes for sale: owners with old, cheap mortgages do not sell, and sales of existing homes are at multi-decade lows. Prices are close to record highs, and mortgage rates remain high compared with the last decade.',
+    CA: 'One of the most expensive markets relative to income, with very indebted households. Immigration has been deliberately reduced, and new condos in Toronto and Vancouver are hard to sell; the ban on purchases by foreigners has been extended.',
+    AU: 'A housing shortage and strong immigration keep prices high, at very high levels relative to income. The state has expanded the 5% deposit scheme, which raises demand without raising supply.',
+    CN: 'New-home prices have been falling for more than three years, and stocks of unsold and unfinished flats are huge after the developers’ crisis. The population is shrinking, and buyers delay purchases while waiting for a price floor.',
+    AE: 'The BIS does not yet publish a house price index for the United Arab Emirates, so three computed conditions are missing. Dubai grew exceptionally after 2021, but in the second quarter of 2026 prices fell 4% and rents 6% from the previous quarter, amid a wave of deliveries (more than 13,000 homes in Q2 and about 32,000 expected in the second half of the year). Demand comes largely from foreign investors, and the war in the region has raised the risk.',
+  },
+  'proiecte-imobiliare': {
+    equinix: 'The world’s largest network of interconnection data centres, with more than 260 buildings in more than 70 cities. Demand for artificial intelligence and cloud keeps occupancy high and rents rising. The valuation is already high, and power consumption and grid access are the main limits.',
+    'digital-realty': 'The world’s second-largest data-centre owner, with more than 300 buildings on several continents, let to the large cloud and AI companies. It builds heavily with financial partners; the risk is a wave of new capacity worldwide at the same time.',
+    prologis: 'The world’s largest owner of logistics space, with tenants such as the large online retailers and transport companies. A solid balance sheet and a long delivery record. New warehouse supply in 2023–2024 has tempered rents in some markets, and trade tariffs can shift goods flows.',
+    welltower: 'Population ageing raises demand for housing with care, and little was built after the pandemic, so occupancy is rising. The substance is very good, but the market has already recognised it: the valuation is among the highest in listed real estate.',
+    vonovia: 'Europe’s largest owner of rental housing, with almost all flats occupied, in a Germany where new construction has fallen sharply. The shares trade below asset value, but debt is high, and higher interest rates forced asset sales and dividend cuts.',
+    ctp: 'The largest listed developer of industrial parks in Central and Eastern Europe, with parks in Romania too. It gains from production moving closer to Western Europe (nearshoring). The risks: concentration on the car industry and a slowdown of the German economy.',
+    emaar: 'The developer of the Burj Khalifa, the Dubai Mall and Dubai Creek Harbour, with a solid balance sheet and large cash from off-plan sales. But the Dubai market has turned: in Q2 2026 prices fell 4% and rents 6% from the previous quarter, and tens of thousands of new homes are being delivered in 2026. The war in the region adds risk.',
+    aldar: 'Abu Dhabi’s main developer (Saadiyat, Yas), with recurring rental income alongside sales. The Abu Dhabi market has less new supply than Dubai, but remains exposed to the same regional risk.',
+    'mitsui-fudosan': 'Japan’s largest real-estate developer, regenerating whole districts of Tokyo (Nihonbashi, Tokyo Midtown). New offices in central Tokyo let well, and foreign investors have increased their interest in Japanese real estate. Debt is moderate, and rising Japanese interest rates are the main risk.',
+    shkp: 'Hong Kong’s largest developer, with a conservative balance sheet. Hong Kong house prices have fallen sharply from the 2021 peak, and offices have high vacancy; the shares are cheap versus asset value, but demand and exposure to mainland China remain weak.',
+    'one-united': 'A developer of premium homes and offices in northern Bucharest. In the first half of 2026 it contracted EUR 106.1 million of residential transactions, at an average price of EUR 3,853 per square metre, 24% higher than a year earlier. Net profit in Q1 2026 fell 78%, however, and the company depends almost entirely on Bucharest’s premium market.',
+    'jeddah-tower': 'Construction has resumed, and the tower passed 116 floors (about 466 m) in September 2026, out of 157 planned, for a total height of about 1 km. Completion was postponed towards the end of 2028 because of higher costs. It cannot be bought directly; demand for the tower’s space is not yet proven.',
+    'egypt-new-capital': 'The ministries and parliament have moved, and about 70% of the land has been sold to developers. In July 2026 just over 30,000 people lived there, against the 500,000 capacity of the first phase. The official buildings exist, but city life is still missing: an example of form ahead of substance.',
+    nusantara: 'A project of more than USD 30 billion, with state funding halved in 2026 and its status reduced to “political capital” by 2028. About 10,000 people live in the city core, including roughly 1,000 civil servants, against a target of 1.2 million by 2029.',
+    'neom-the-line': 'Work on The Line, once estimated at more than USD 1 trillion, has been halted at least until after 2030, and NEOM’s 2030 population target was cut to at most 100,000 people. Only the Oxagon industrial zone and port continue. The clearest example of form without substance on the radar.',
+  },
+};
+
+/** Câmpuri descriptive în engleză pentru start-up-urile românești și proiectele imobiliare. */
+export const RO_STARTUP_EN: Record<string, { stage: string; sector: string; sources: string[] }> = {
+  uipath: { stage: 'Listed (NYSE: PATH)', sector: 'Software automation and AI agents', sources: ['UiPath, fiscal 2026 results (official release)', 'UiPath, 10-K annual report (SEC)'] },
+  bitdefender: { stage: 'Private, listing postponed', sector: 'Cybersecurity', sources: ['Financiarul: 2025 revenue and the postponed listing (6 July 2026)'] },
+  fintechos: { stage: 'Private (Series B + 2026 funding)', sector: 'Software for banks and insurers', sources: ['The Next Web: FintechOS raises $28M after turning profitable (22 Sept 2026)', 'Pîrvănescu: Romanian tech startups to watch in 2026'] },
+  'druid-ai': { stage: 'Private (Series C, 2025)', sector: 'Conversational AI agents for companies', sources: ['DRUID AI, Series C release (BusinessWire, Sept 2025)'] },
+  'flowx-ai': { stage: 'Private (Series A)', sector: 'Modernising banking applications with AI', sources: ['bne IntelliNews: FlowX.AI raises $35mn, Romania’s largest Series A'] },
+  dotlumen: { stage: 'Private (EU grants + seed round)', sector: 'Mobility glasses for blind people', sources: ['European Commission, EIC: the .lumen project', 'Romania Insider: EUR 5 million round (July 2024)'] },
+  'pentest-tools': { stage: 'Private, no outside investors', sector: 'Cybersecurity (automated testing)', sources: ['Pîrvănescu: Romanian tech startups to watch in 2026'] },
+  questo: { stage: 'Private (seed)', sector: 'Location-based tourism and games', sources: ['Pîrvănescu: Romanian tech startups to watch in 2026', 'Mean CEO: Startups in Romania news, October 2026'] },
+};
+export const PROJECT_REGION_EN: Record<string, string> = {
+  Global: 'Global', 'SUA, Canada, Regatul Unit': 'US, Canada, United Kingdom', 'Germania, Suedia, Austria': 'Germany, Sweden, Austria',
+  'Europa Centrală și de Est, inclusiv România': 'Central and Eastern Europe, including Romania', 'Emiratele Arabe Unite': 'United Arab Emirates',
+  'Japonia, SUA, Regatul Unit': 'Japan, US, United Kingdom', 'Hong Kong, China continentală': 'Hong Kong, mainland China', România: 'Romania',
+  'Arabia Saudită': 'Saudi Arabia', Egipt: 'Egypt', Indonezia: 'Indonesia',
+};
+export const KIND_EN: Record<string, string> = { 'Zgârie-nori, cel mai înalt din lume': 'Skyscraper, the world’s tallest', 'Oraș nou': 'New city', 'Oraș liniar': 'Linear city' };
+
+/** Titlurile surselor (link-urile rămân aceleași). */
+export const SOURCE_TITLE_EN: Record<string, string> = {
+  'Equinix, relația cu investitorii': 'Equinix, investor relations',
+  'Digital Realty, relația cu investitorii': 'Digital Realty, investor relations',
+  'Prologis, relația cu investitorii': 'Prologis, investor relations',
+  'Welltower, relația cu investitorii': 'Welltower, investor relations',
+  'Vonovia, relația cu investitorii': 'Vonovia, investor relations',
+  'CTP, relația cu investitorii': 'CTP, investor relations',
+  'Emaar, relația cu investitorii': 'Emaar, investor relations',
+  'Aldar, relația cu investitorii': 'Aldar, investor relations',
+  'Mitsui Fudosan, relația cu investitorii': 'Mitsui Fudosan, investor relations',
+  'Sun Hung Kai Properties, relația cu investitorii': 'Sun Hung Kai Properties, investor relations',
+  'Khaleej Times (Cushman & Wakefield), august 2026': 'Khaleej Times (Cushman & Wakefield), August 2026',
+  'Romania Insider: tranzacțiile din S1 2026': 'Romania Insider: H1 2026 transactions',
+  'Economedia: profitul din T1 2026': 'Economedia: Q1 2026 profit',
+  'Gulf News: Jeddah Tower trece de 116 etaje, septembrie 2026': 'Gulf News: Jeddah Tower passes 116 floors, September 2026',
+  'Asharq Al-Awsat, iulie 2026': 'Asharq Al-Awsat, July 2026',
+  'NPR: capitala viitorului, cu îndoieli în prezent (aprilie 2026)': 'NPR: Indonesia’s capital of the future faces doubts in the present (April 2026)',
+  'Semafor: NEOM oprește lucrările la The Line până după 2030 (mai 2026)': 'Semafor: NEOM halts work on The Line until after 2030 (May 2026)',
+  'Romania Insider: prețurile locuințelor +7,8% în T1 2026 (Eurostat)': 'Romania Insider: house prices +7.8% in Q1 2026 (Eurostat)',
+  'Agerpres: prețurile apartamentelor în 2026': 'Agerpres: apartment prices in 2026',
+  'BIS, prețurile locuințelor': 'BIS, residential property prices',
+  'Asia Times: piața imobiliară chineză în 2026': 'Asia Times: China’s housing market in 2026',
+  'Khaleej Times (Cushman & Wakefield): prețuri și chirii în scădere, august 2026': 'Khaleej Times (Cushman & Wakefield): prices and rents falling, August 2026',
+};
+
+/** Formulele condițiilor calculate, în engleză, pe domenii. */
+export const FORMULAS_EN: Record<string, Record<string, string>> = {
+  forex: {
+    C1: 'Current account 2026 (IMF, % of GDP): score = 5 + 0.8 × the balance. A surplus = real demand for the currency.',
+    C2: 'Annual inflation (BIS, latest month): score = 10 − 1.5 × |inflation − 2|. Inflation close to target = a disciplined central bank.',
+    C3: 'Debt and deficits (IMF 2026): score = 10 − debt/25 + 0.4 × the budget balance + 0.3 × the current-account deficit. FX reserves are not included yet.',
+    C7: 'Real interest rate = central bank rate − inflation (BIS): score = 5 + 1.5 × the real rate.',
+    C10: 'Position in the 52-week range (Yahoo Finance): close to the low = cheap = high score. An approximation until we add the real effective exchange rate.',
+    C12: 'The two-month trend (from 4 September): score = 5 + the change in %.',
+  },
+  'economii-emergente': {
+    C1: 'Real GDP growth in 2026 (IMF): score = 2 + 1.2 × growth in %.',
+    C2: 'Budget balance in 2026 (IMF, % of GDP): score = 10 + the balance (a 3% deficit gives 7).',
+    C3: 'Public debt and current account (IMF 2026): score = 10 − debt/15 + 0.4 × the current-account deficit.',
+    C7: 'Real interest rate (BIS): score = 5 + the real rate − 0.3 × inflation above 5%.',
+    C10: 'The stock market’s position (country ETF or local index) in its 52-week range: close to the low = cheap = high score. An approximation until we add the price/earnings ratio.',
+    C12: 'The stock market’s two-month trend (from 4 September): score = 5 + the change in %.',
+  },
+  sp500: {
+    C1: 'Revenue growth in the last fiscal year (10-K report): score = 5 + growth in % / 3. Growth of 15% gives 10.',
+    C2: 'Change in the share count over the last year (SEC): score = 6 − 1.5 × the change in %. Buybacks that reduce the share count raise the score; issuance lowers it.',
+    C3: 'Net debt (long-term debt − cash) relative to operating cash flow: score = 10 − 2 × the ratio. More cash than debt = 10.',
+    C7: 'Free-cash-flow margin = (operating cash flow − capital expenditure) / revenue: score = margin in % / 3. A 30% margin gives 10.',
+    C10: 'Free-cash-flow yield = free cash flow / market cap (Yahoo price × SEC share count): score = 2 × the yield in %. A 5% yield gives 10.',
+    C12: 'The share price’s two-month trend (from 4 September): score = 5 + the change in % / 2.',
+  },
+  imobiliare: {
+    C1: 'Real demand (IMF 2026): score = 2 + 1.2 × real GDP growth − 0.3 × unemployment above 5%.',
+    C3: 'Household debt (IMF, latest year available, % of GDP): score = 10 − debt / 12 (24% gives 8, 60% gives 5, 96% gives 2).',
+    C7: 'Cost of credit (BIS): real rate = policy rate − inflation; score = 9 − 1.5 × the distance from +1 pp (credit that is too expensive slows the market, credit that is too cheap inflates bubbles).',
+    C10: 'Valuation (BIS): real house prices versus their 10-year average; score = 6 − the deviation in % / 4 (20% above the average gives 1, 8% below gives 8).',
+    C12: 'Trend (BIS): annual change in real house prices, latest quarter; score = 5 + the change / 2.',
+  },
+};
+
+/** Traduce o linie de date de intrare (generată în română de scripturile de notare). */
+export function inputEn(s: string): string {
+  let t = s;
+  const R: [RegExp, string][] = [
+    [/bursa la (\S+)% din intervalul de (\d+) de săptămâni/, 'the stock market at $1% of its $2-week range'],
+    [/^la (\S+)% din intervalul de (\d+) de săptămâni/, 'at $1% of its $2-week range'],
+    [/bursa (\S+)% în două luni/, 'the stock market $1% in two months'],
+    [/acțiunea (\S+)% în două luni/, 'the share price $1% in two months'],
+    [/^(\S+)% în două luni/, '$1% in two months'],
+    [/prețul real (\S+)% față de media pe (\d+) ani/, 'real price $1% versus the $2-year average'],
+    [/prețul real (\S+)% într-un an/, 'real price $1% over a year'],
+    [/datoria gospodăriilor (\S+)% din PIB/, 'household debt $1% of GDP'],
+    [/creștere (\S+)% în (\d{4})/, 'growth $1% in $2'],
+    [/, șomaj (\S+)%/, ', unemployment $1%'],
+    [/sold bugetar (\S+)% din PIB/, 'budget balance $1% of GDP'],
+    [/datorie (\S+)% din PIB, cont curent (\S+)%/, 'debt $1% of GDP, current account $2%'],
+    [/datorie (\S+)%, sold bugetar (\S+)%, cont curent (\S+)% din PIB/, 'debt $1%, budget balance $2%, current account $3% of GDP'],
+    [/cont curent (\S+)% din PIB/, 'current account $1% of GDP'],
+    [/dobândă (\S+)% \(([^)]+)\) − inflație (\S+)% = (\S+) pp/, 'rate $1% ($2) − inflation $3% = $4 pp'],
+    [/^inflație (\S+)% \(([^)]+)\)/, 'inflation $1% ($2)'],
+    [/venituri (\S+) mld\. USD \(an fiscal încheiat ([^)]+)\), (\S+)% față de anul anterior/, 'revenue USD $1 billion (fiscal year ended $2), $3% year on year'],
+    [/acțiuni în circulație (\S+)% într-un an/, 'shares outstanding $1% over a year'],
+    [/datorie (\S+) mld\. USD, numerar (\S+) mld\. USD, flux din exploatare (\S+) mld\. USD/, 'debt USD $1 billion, cash USD $2 billion, operating cash flow USD $3 billion'],
+    [/flux de numerar liber (\S+) mld\. USD, marjă (\S+)%/, 'free cash flow USD $1 billion, margin $2%'],
+    [/capitalizare (\S+) trilioane USD, randament al fluxului liber (\S+)%/, 'market cap USD $1 trillion, free-cash-flow yield $2%'],
+  ];
+  for (const [re, en] of R) t = t.replace(re, en);
+  return t.replace(/(\d),(\d)/g, '$1.$2');
+}

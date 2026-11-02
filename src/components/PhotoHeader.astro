@@ -1,7 +1,9 @@
 ---
 import type { Photo } from '../data/photos';
-interface Props { photo: Photo; title: string; eyebrow?: string; summary?: string; position?: string }
-const { photo, title, eyebrow, summary, position = 'center' } = Astro.props;
+import { PHOTO_ALT_EN } from '../data/i18n';
+interface Props { photo: Photo; title: string; eyebrow?: string; summary?: string; position?: string; lang?: 'ro' | 'en' }
+const { photo, title, eyebrow, summary, position = 'center', lang = 'ro' } = Astro.props;
+const en = lang === 'en';
 const base = import.meta.env.BASE_URL;
 ---
 <header class="ph">
@@ -9,7 +11,7 @@ const base = import.meta.env.BASE_URL;
     src={`${base}images/${photo.key}-1600.jpg`}
     srcset={`${base}images/${photo.key}-800.jpg 800w, ${base}images/${photo.key}-1600.jpg 1600w`}
     sizes="(max-width: 800px) 100vw, 1180px"
-    alt={photo.alt}
+    alt={en ? PHOTO_ALT_EN[photo.key] ?? photo.alt : photo.alt}
     style={`object-position:${position}`}
     fetchpriority="high"
     decoding="async"
@@ -20,7 +22,7 @@ const base = import.meta.env.BASE_URL;
     {summary && <p class="ph-sum">{summary}</p>}
     <slot />
   </div>
-  <a class="ph-credit" href={photo.page} target="_blank" rel="noopener">Foto: {photo.author} / Unsplash</a>
+  <a class="ph-credit" href={photo.page} target="_blank" rel="noopener">{en ? 'Photo' : 'Foto'}: {photo.author} / Unsplash</a>
 </header>
 
 <style>

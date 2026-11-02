@@ -7,7 +7,7 @@ const { lang = 'ro', only, uid = 'hr', compact = false } = Astro.props;
 const en = lang === 'en';
 const OVERVIEW = overviewFor(lang, only);
 const T = en
-  ? { title: 'Radar of all domains', desc: 'Each dot is an analysed asset. The closer to the centre, the more of the 14 conditions it meets. Each sector leads to the domain page.', ring: '10 conditions', assets: 'assets', of: 'conditions', cap: 'Centre = all 14 conditions. Green zone = 10 or more. Dot size = score. Click a sector for the full analysis (in Romanian).' }
+  ? { title: 'Radar of all domains', desc: 'Each dot is an analysed asset. The closer to the centre, the more of the 14 conditions it meets. Each sector leads to the domain page.', ring: '10 conditions', assets: 'assets', of: 'conditions', cap: 'Centre = all 14 conditions. Green zone = 10 or more. Dot size = score. Click a sector for the full analysis.' }
   : { title: 'Radarul tuturor domeniilor', desc: 'Fiecare punct e un activ analizat. Cu cât e mai aproape de centru, cu atât îndeplinește mai multe din cele 14 condiții. Fiecare sector duce la pagina domeniului.', ring: '10 condiții', assets: 'active', of: 'condiții', cap: 'Centrul = toate cele 14 condiții. Zona verde = 10 sau mai multe. Mărimea punctului = scorul. Apasă pe un sector pentru analiza completă.' };
 
 const base = import.meta.env.BASE_URL;
@@ -34,7 +34,7 @@ const sectors = OVERVIEW.map((d, k) => {
     const [x, y] = pt(Math.max(R0 + 4, r), a);
     return { x, y, it, rad: 3.2 + Math.max(0, it.score - 3) * 0.75 };
   }));
-  return { d, path, lx, ly, anchor, dots, href: `${base}domenii/${d.slug}/` };
+  return { d, path, lx, ly, anchor, dots, href: en ? `${base}en/domains/${d.slug}/` : `${base}domenii/${d.slug}/` };
 });
 const ring = (met: number) => rOf(met);
 ---

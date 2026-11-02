@@ -1,0 +1,94 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PhotoHeader from '../../../components/PhotoHeader.astro';
+import { photo } from '../../../data/photos';
+import { overviewFor } from '../../../data/overview';
+import { fondTag, FOND_LABEL, type FondTag } from '../../../data/explain';
+import { FOND_EN, FOND_HINT_EN } from '../../../data/i18n';
+
+const base = import.meta.env.BASE_URL;
+const ph = photo('fond')!;
+const all = overviewFor('en').flatMap((d) => d.items.map((it) => ({ ...it, domain: d.short, slug: d.slug, tag: fondTag(it.c) })));
+const ORDER: FondTag[] = ['fond-fara-forma', 'fond-confirmat', 'in-confirmare', 'forma-fara-fond'];
+const groups = ORDER.map((t) => {
+  const items = all.filter((x) => x.tag === t).sort((a, b) => b.met - a.met || b.score - a.score);
+  return { t, n: items.length, examples: items.slice(0, 6) };
+});
+---
+<Base lang="en" alt="fond/" title="Why we look for substance, not form" description="The foundation of the method: behind every form (a listing, a valuation, attention) we look for the substance that supports it (usage, customers, finances, institutions)." image="images/fond-1600.jpg">
+  <PhotoHeader photo={ph} lang="en" title="Why we look for substance, not form" eyebrow="The foundation of the method" summary="Behind any shiny form (a stock-market listing, a multi-billion valuation, a wave of articles) we ask a single question: is there substance to support it?" position="center 30%" />
+
+  <section>
+    <h2>An idea more than 150 years old</h2>
+    <p>
+      In the second half of the 19th century, Romania was rapidly importing Western institutions: an academy, a university, a constitution, a press, scientific societies. In 1868 the critic Titu Maiorescu, of the Junimea circle in Iași, observed that many of them were <b>forms without substance</b>: they had the name and the building, but not the people, the culture and the economy to fill them with content.
+      His conclusion was that a form without substance is not just useless but harmful, because it discredits the institution and damages trust in it.
+    </p>
+    <p>
+      Later, Eugen Lovinescu added the nuance: sometimes the form comes first and creates its substance over time. An almost empty university can train, within a few generations, the people who fill it. Both ideas help us in markets.
+    </p>
+  </section>
+
+  <section>
+    <h2>Form and substance in markets</h2>
+    <p>Form is what you see from afar. Substance is what supports it. The radar gives the largest weight to substance and treats form signals with caution:</p>
+    <div class="table-wrap">
+      <table class="radar">
+        <thead><tr><th>Form (what you see)</th><th>Substance (what supports it)</th><th>Where it is in the radar</th></tr></thead>
+        <tbody>
+          <tr><td>A launched token, a stock-market listing, a funding round</td><td>Real users and revenue</td><td>“Actually used”, the largest weight (16%)</td></tr>
+          <tr><td>A multi-billion valuation, the “AI” label</td><td>Money generated, margins, production cost</td><td>Supply, cash flow, entry price</td></tr>
+          <tr><td>Heavy activity on a platform</td><td>Customers who pay, not only attracted by rewards</td><td>“Real customers”</td></tr>
+          <tr><td>A high interest rate on a currency</td><td>Credible institutions, exports, inflation under control</td><td>Real flows and institutions, in Forex</td></tr>
+          <tr><td>Press articles, the crowd buying</td><td>Nothing: noise</td><td>“Media” and “crowding”, scored inversely</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Four situations, across all {all.length} assets</h2>
+    <p class="muted">The label is computed automatically from the scores: substance (real usage, real customers, team or institutions, supply or finances) against signals of inflated form (an expensive price, press euphoria, crowding). You find it next to each asset, on the domain pages.</p>
+    <div class="tags">
+      {groups.map((g) => (
+        <div class="tagcard">
+          <p><span class:list={['fond', g.t]}>{FOND_EN[FOND_LABEL[g.t]]}</span> <b class="n">{g.n}</b> assets</p>
+          <p class="muted">{FOND_HINT_EN[g.t]}</p>
+          <ul>{g.examples.map((e) => <li><a href={`${base}en/domains/${e.slug}/`}>{e.name}</a> <small class="muted">{e.domain} · {e.met}/14</small></li>)}</ul>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <h2>When we enter: very early or very late</h2>
+    <div class="sgrid">
+      <div><h3>Very late</h3><p><b>The form has collapsed, the substance has stayed.</b> The price has fallen 80–90%, but usage is growing. It is the hardest test: only the substance has survived.</p></div>
+      <div><h3>Very early</h3><p><b>The bet that the form will create its substance.</b> Before launch, when there are already signs of substance. Risky, so only small amounts.</p></div>
+      <div><h3>Never in the middle</h3><p><b>Form at its peak, substance unconfirmed.</b> Price, press and crowd are at their maximum, and the evidence is missing. This is where most money is lost.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The limits of the idea</h2>
+    <p>
+      An analogy is not proof. Lovinescu himself showed that the theory of forms without substance has limits: sometimes the form does create the substance. That is why we rely not on the argument but on measurement:
+      the scores are frozen in public snapshots, and the outcome is compared with the market every week, including when we are wrong.
+    </p>
+    <p><a href={`${base}en/methodology/`}>The full methodology</a> · <a href={`${base}en/`}>The radar of all domains</a></p>
+  </section>
+</Base>
+
+<style>
+  .tags { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+  .tagcard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.2rem; }
+  .tagcard p { margin: 0 0 .5rem; }
+  .tagcard .n { font: 800 1.4rem var(--f-display); margin-left: .35rem; }
+  .tagcard ul { margin: .5rem 0 0; padding-left: 1.1rem; }
+  .tagcard li { margin: .2rem 0; }
+  .sgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .sgrid div { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; }
+  .sgrid h3 { margin: 0 0 .4rem; }
+  .sgrid p { margin: 0; color: var(--muted); }
+  @media (max-width: 800px) { .sgrid { grid-template-columns: 1fr; } }
+</style>

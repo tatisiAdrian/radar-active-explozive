@@ -6,7 +6,7 @@ import type { Lang } from '../data/i18n';
 interface Props { lang?: Lang; only?: string[] }
 const { lang = 'ro', only } = Astro.props;
 const en = lang === 'en';
-const T = en ? { met: 'conditions met', score: 'Score', cta: 'See the profile (in Romanian) →' } : { met: 'condiții îndeplinite', score: 'Scor', cta: 'Vezi profilul →' };
+const T = en ? { met: 'conditions met', score: 'Score', cta: 'See the profile →' } : { met: 'condiții îndeplinite', score: 'Scor', cta: 'Vezi profilul →' };
 
 const base = import.meta.env.BASE_URL;
 const picks = OVERVIEW.filter((d) => !only || only.includes(d.slug)).flatMap((d) => ITEMS.filter((i) => i.domain === d.slug).sort(byRank).slice(0, 2)).map((p) => ({ ...p, raw: p.access, ...localize(p, lang) }));
@@ -23,7 +23,7 @@ const ACC: Record<string, string> = { 'Cumpărabil': 'a-buy', 'Prin utilizare': 
 ---
 <div class="picks">
   {picks.map((p) => (
-    <a class="pick" href={`${base}domenii/${p.domain}/`} style={`--c:${p.color}`}>
+    <a class="pick" href={en ? `${base}en/domains/${p.domain}/` : `${base}domenii/${p.domain}/`} style={`--c:${p.color}`}>
       <div class="pk-top">
         <span class="pk-dom">{p.dshort}</span>
         <span class:list={['pk-acc', ACC[p.raw]]}>{p.access}</span>

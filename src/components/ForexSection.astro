@@ -3,43 +3,51 @@ import Chart from './Chart.astro';
 import CriteriaDetail from './CriteriaDetail.astro';
 import FondBadge from './FondBadge.astro';
 import type { Dataset, Source } from '../data/types';
+import type { Lang } from '../data/i18n';
+import { NAME_EN } from '../data/i18n';
+import { WHY_EN, FORMULAS_EN, inputEn } from '../data/en-content';
+import { fmtDate as fd, num as nm, sourceL } from '../data/lang';
 import scores from '../data/forex/scores.json';
 import macro from '../data/forex/macro.json';
 
+interface Props { lang?: Lang }
+const { lang = 'ro' } = Astro.props;
+const en = lang === 'en';
+const L = (ro: string, e: string) => (en ? e : ro);
 const base = import.meta.env.BASE_URL;
 type Row = { id: string; name: string; score: number; met: number; criteria: (number | null)[]; inputs: Record<string, string>; gaps: string[]; why: string };
-const rows = scores.rows as unknown as Row[];
+const rows = (scores.rows as unknown as Row[]).map((r) => (en ? { ...r, name: NAME_EN[r.id] ?? r.name, why: WHY_EN.forex[r.id] ?? r.why, inputs: Object.fromEntries(Object.entries(r.inputs).map(([k, v]) => [k, inputEn(v)])) } : r));
 const SNAP = scores.judgmentDate;
-const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-const num = (x: number, d = 1) => x.toLocaleString('ro-RO', { maximumFractionDigits: d, minimumFractionDigits: d });
+const fmtDate = (d: string) => fd(d, lang);
+const num = (x: number, d = 1) => nm(x, d, lang);
 const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
+const formulas = en ? FORMULAS_EN.forex : scores.formulas;
 
-const src = (s: { name: string; url: string; retrievedAt: string }): Source => s;
+const src = (s: { name: string; url: string; retrievedAt: string }): Source => sourceL(s, lang);
 const bis = macro.bis as unknown as Record<string, { policyRate?: { period: string; value: number }; cpiYoY?: { period: string; value: number } }>;
 const fx = macro.fx as unknown as Record<string, { points: [string, number][]; unit: string; symbol: string; url: string }>;
 const imf = macro.imf as unknown as Record<string, { label: string; values: Record<string, Record<string, number>> }>;
 const order = rows.map((r) => r.id);
 
 const realRates: Dataset = {
-  id: 'forex-dobanda-reala', domain: 'forex', title: 'Dobânda reală: dobânda băncii centrale minus inflația anuală', unit: 'puncte procentuale', chart: 'bar',
-  series: [{ name: 'Dobândă reală', points: order.filter((c) => bis[c]?.policyRate && bis[c]?.cpiYoY).map((c) => [c, +(bis[c].policyRate!.value - bis[c].cpiYoY!.value).toFixed(2)]) }],
+  id: 'forex-dobanda-reala', domain: 'forex', title: L('Dobânda reală: dobânda băncii centrale minus inflația anuală', 'Real interest rate: the central bank rate minus annual inflation'), unit: L('puncte procentuale', 'percentage points'), chart: 'bar',
+  series: [{ name: L('Dobândă reală', 'Real interest rate'), points: order.filter((c) => bis[c]?.policyRate && bis[c]?.cpiYoY).map((c) => [c, +(bis[c].policyRate!.value - bis[c].cpiYoY!.value).toFixed(2)]) }],
   source: src(macro.sources.bis),
-  notes: 'Ultima dobândă publicată și ultima inflație lunară disponibilă (pentru Australia, trimestrială).',
+  notes: L('Ultima dobândă publicată și ultima inflație lunară disponibilă (pentru Australia, trimestrială).', 'The latest published rate and the latest monthly inflation available (quarterly for Australia).'),
 };
 const currentAccount: Dataset = {
-  id: 'forex-cont-curent', domain: 'forex', title: 'Contul curent în 2026 (estimare FMI)', unit: '% din PIB', chart: 'bar',
-  series: [{ name: 'Cont curent', points: order.filter((c) => imf.BCA_NGDPD.values[c]?.['2026'] !== undefined).map((c) => [c, imf.BCA_NGDPD.values[c]['2026']]) }],
+  id: 'forex-cont-curent', domain: 'forex', title: L('Contul curent în 2026 (estimare FMI)', 'Current account in 2026 (IMF estimate)'), unit: L('% din PIB', '% of GDP'), chart: 'bar',
+  series: [{ name: L('Cont curent', 'Current account'), points: order.filter((c) => imf.BCA_NGDPD.values[c]?.['2026'] !== undefined).map((c) => [c, imf.BCA_NGDPD.values[c]['2026']]) }],
   source: src(macro.sources.imf),
-  notes: 'Pentru EUR: zona euro. Valori din World Economic Outlook, estimări pentru 2026.',
+  notes: L('Pentru EUR: zona euro. Valori din World Economic Outlook, estimări pentru 2026.', 'For EUR: the euro area. Values from the World Economic Outlook, estimates for 2026.'),
 };
 const fxChart: Dataset = {
-  id: 'forex-cursuri', domain: 'forex', title: 'Cursul fiecărei monede față de dolar, săptămânal', unit: 'indice, prima săptămână = 100', chart: 'line',
-  series: order.filter((c) => fx[c]?.points.length).map((c) => ({ name: c === 'USD' ? 'USD (indicele DXY)' : c, points: fx[c].points.map(([d, v]) => [d, +((v / fx[c].points[0][1]) * 100).toFixed(2)] as [string, number]) })),
+  id: 'forex-cursuri', domain: 'forex', title: L('Cursul fiecărei monede față de dolar, săptămânal', 'Each currency against the dollar, weekly'), unit: L('indice, prima săptămână = 100', 'index, first week = 100'), chart: 'line',
+  series: order.filter((c) => fx[c]?.points.length).map((c) => ({ name: c === 'USD' ? L('USD (indicele DXY)', 'USD (DXY index)') : c, points: fx[c].points.map(([d, v]) => [d, +((v / fx[c].points[0][1]) * 100).toFixed(2)] as [string, number]) })),
   source: src(macro.sources.fx),
-  notes: 'Peste 100 = moneda s-a apreciat față de dolar de la 4 septembrie. Dolarul e măsurat prin indicele DXY (față de un coș de monede).',
+  notes: L('Peste 100 = moneda s-a apreciat față de dolar de la 4 septembrie. Dolarul e măsurat prin indicele DXY (față de un coș de monede).', 'Above 100 = the currency has appreciated against the dollar since 4 September. The dollar is measured by the DXY index (against a basket of currencies).'),
 };
 
-// Interpretare calculată automat din date
 const real = realRates.series[0].points;
 const posReal = real.filter((p) => p[1] > 0).map((p) => p[0]);
 const negReal = real.filter((p) => p[1] < 0).map((p) => p[0]);
@@ -48,16 +56,14 @@ const top = rows[0];
 const ron = rows.find((r) => r.id === 'RON');
 ---
 <section id="radar">
-  <h2>Monedele de pe radar</h2>
+  <h2>{L('Monedele de pe radar', 'The currencies on the radar')}</h2>
   <p>
-    {rows.length} monede notate pe 14 condiții. Șase condiții se calculează automat din date oficiale (FMI, BIS, Yahoo Finance), după formule publice;
-    celelalte opt sunt judecată, cu justificare pentru fiecare monedă. Notele sunt înghețate în{' '}
-    <a href={`${base}snapshots/forex-${SNAP}.json`}>instantaneul din {fmtDate(SNAP)}</a>{' '}
-    (amprenta SHA-256 în <a href={`${base}snapshots/forex-${SNAP}.sha256`}>fișierul .sha256</a>). Datele de intrare se actualizează automat în fiecare vineri.
+    {en ? <>{rows.length} currencies scored on 14 conditions. Six conditions are computed automatically from official data (IMF, BIS, Yahoo Finance), using published formulas; the other eight are judgement, with a rationale for each currency. The scores are frozen in the{' '}<a href={`${base}snapshots/forex-${SNAP}.json`}>snapshot of {fmtDate(SNAP)}</a>{' '}(SHA-256 fingerprint in the <a href={`${base}snapshots/forex-${SNAP}.sha256`}>.sha256 file</a>). The input data update automatically every Friday.</>
+      : <>{rows.length} monede notate pe 14 condiții. Șase condiții se calculează automat din date oficiale (FMI, BIS, Yahoo Finance), după formule publice; celelalte opt sunt judecată, cu justificare pentru fiecare monedă. Notele sunt înghețate în{' '}<a href={`${base}snapshots/forex-${SNAP}.json`}>instantaneul din {fmtDate(SNAP)}</a>{' '}(amprenta SHA-256 în <a href={`${base}snapshots/forex-${SNAP}.sha256`}>fișierul .sha256</a>). Datele de intrare se actualizează automat în fiecare vineri.</>}
   </p>
   <div class="table-wrap">
     <table class="radar fx">
-      <thead><tr><th>#</th><th>Moneda</th><th>Condiții</th><th>Scor</th><th>Fond / formă</th><th>Dobândă reală</th><th>Cont curent 2026</th><th>Curs, 2 luni</th></tr></thead>
+      <thead><tr><th>#</th><th>{L('Moneda', 'Currency')}</th><th>{L('Condiții', 'Conditions')}</th><th>{L('Scor', 'Score')}</th><th>{L('Fond / formă', 'Substance / form')}</th><th>{L('Dobândă reală', 'Real rate')}</th><th>{L('Cont curent 2026', 'Current account 2026')}</th><th>{L('Curs, 2 luni', 'Rate, 2 months')}</th></tr></thead>
       <tbody>
         {rows.map((r, i) => (
           <tr>
@@ -65,50 +71,59 @@ const ron = rows.find((r) => r.id === 'RON');
             <td><b>{r.id}</b> <span class="muted">{r.name}</span></td>
             <td><span class:list={['k', zone(r.met)]}>{r.met}/14</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 14) * 100}%`} class={zone(r.met)}></i></span></td>
             <td>{num(r.score, 2)}</td>
-            <td><FondBadge values={r.criteria} /></td>
+            <td><FondBadge values={r.criteria} lang={lang} /></td>
             <td class="num">{r.inputs.C7 ? r.inputs.C7.split('= ')[1] : '—'}</td>
             <td class="num">{imf.BCA_NGDPD.values[r.id]?.['2026'] !== undefined ? `${num(imf.BCA_NGDPD.values[r.id]['2026'])}%` : '—'}</td>
-            <td class="num">{r.inputs.C12 ? r.inputs.C12.replace(' în două luni', '') : '—'}</td>
+            <td class="num">{r.inputs.C12 ? r.inputs.C12.replace(' în două luni', '').replace(' in two months', '') : '—'}</td>
           </tr>
         ))}
       </tbody>
     </table>
   </div>
 
-  <h3>Fiecare monedă, condiție cu condiție</h3>
-  <p class="muted">Deschide o monedă ca să vezi nota la fiecare condiție, datele din spatele notelor calculate și justificarea notelor de judecată.</p>
+  <h3>{L('Fiecare monedă, condiție cu condiție', 'Each currency, condition by condition')}</h3>
+  <p class="muted">{L('Deschide o monedă ca să vezi nota la fiecare condiție, datele din spatele notelor calculate și justificarea notelor de judecată.', 'Open a currency to see the score on each condition, the data behind the computed scores and the rationale for the judgement scores.')}</p>
   {rows.map((r) => (
     <details class="fxd">
-      <summary><b>{r.id}</b> · {r.name} · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · scor {num(r.score, 2)} · <FondBadge values={r.criteria} /></summary>
+      <summary><b>{r.id}</b> · {r.name} · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · {L('scor', 'score')} {num(r.score, 2)} · <FondBadge values={r.criteria} lang={lang} /></summary>
       <p>{r.why}</p>
-      <CriteriaDetail set="forex" values={r.criteria} inputs={r.inputs} />
+      <CriteriaDetail set="forex" values={r.criteria} inputs={r.inputs} lang={lang} />
     </details>
   ))}
 
-  <h3>Formulele condițiilor calculate</h3>
+  <h3>{L('Formulele condițiilor calculate', 'Formulas for the computed conditions')}</h3>
   <ul class="formulas">
-    {Object.entries(scores.formulas).map(([k, f]) => <li><b>{k}</b>: {f}</li>)}
+    {Object.entries(formulas).map(([k, f]) => <li><b>{k}</b>: {f}</li>)}
   </ul>
 </section>
 
 <section>
-  <h2>Datele din spatele notelor</h2>
-  <Chart dataset={realRates} />
-  <Chart dataset={currentAccount} />
-  <Chart dataset={fxChart} height={440} />
+  <h2>{L('Datele din spatele notelor', 'The data behind the scores')}</h2>
+  <Chart dataset={realRates} lang={lang} />
+  <Chart dataset={currentAccount} lang={lang} />
+  <Chart dataset={fxChart} height={440} lang={lang} />
 </section>
 
 <section>
-  <h2>Ce arată datele</h2>
-  <p class="muted">Paragraf calculat automat din datele de mai sus; se actualizează odată cu ele.</p>
-  <p>
-    <b>{top.name} ({top.id})</b> îndeplinește cele mai multe condiții ({top.met} din 14).{' '}
-    {posReal.length} din {real.length} monede au dobândă reală pozitivă ({posReal.join(', ')}), iar {negReal.length} o au negativă ({negReal.join(', ')}).{' '}
-    Doar {surplus.length} economii au excedent de cont curent în 2026 ({surplus.join(', ')}).{' '}
-    {ron && <> Leul (RON) e pe locul {rows.indexOf(ron) + 1} din {rows.length}, cu {ron.met} condiții îndeplinite: {ron.inputs.C1}, {ron.inputs.C7}.</>}
-  </p>
+  <h2>{L('Ce arată datele', 'What the data show')}</h2>
+  <p class="muted">{L('Paragraf calculat automat din datele de mai sus; se actualizează odată cu ele.', 'A paragraph computed automatically from the data above; it updates with them.')}</p>
+  {en ? (
+    <p>
+      <b>{top.name} ({top.id})</b> meets the most conditions ({top.met} of 14).{' '}
+      {posReal.length} of {real.length} currencies have a positive real interest rate ({posReal.join(', ')}), and {negReal.length} a negative one ({negReal.join(', ')}).{' '}
+      Only {surplus.length} economies have a current-account surplus in 2026 ({surplus.join(', ')}).{' '}
+      {ron && <> The leu (RON) ranks {rows.indexOf(ron) + 1} of {rows.length}, with {ron.met} conditions met: {ron.inputs.C1}, {ron.inputs.C7}.</>}
+    </p>
+  ) : (
+    <p>
+      <b>{top.name} ({top.id})</b> îndeplinește cele mai multe condiții ({top.met} din 14).{' '}
+      {posReal.length} din {real.length} monede au dobândă reală pozitivă ({posReal.join(', ')}), iar {negReal.length} o au negativă ({negReal.join(', ')}).{' '}
+      Doar {surplus.length} economii au excedent de cont curent în 2026 ({surplus.join(', ')}).{' '}
+      {ron && <> Leul (RON) e pe locul {rows.indexOf(ron) + 1} din {rows.length}, cu {ron.met} condiții îndeplinite: {ron.inputs.C1}, {ron.inputs.C7}.</>}
+    </p>
+  )}
   <p class="notice">
-    Atenție: o dobândă reală mare (Turcia, Brazilia) atrage capital pe termen scurt, dar nu înseamnă o monedă solidă. De aceea ponderea cea mai mare (16%) o au fluxurile reale din economie, nu dobânda.
-    Nu este o recomandare de investiții; tranzacționarea valutară cu efect de levier poate pierde mai mult decât suma depusă.
+    {L('Atenție: o dobândă reală mare (Turcia, Brazilia) atrage capital pe termen scurt, dar nu înseamnă o monedă solidă. De aceea ponderea cea mai mare (16%) o au fluxurile reale din economie, nu dobânda. Nu este o recomandare de investiții; tranzacționarea valutară cu efect de levier poate pierde mai mult decât suma depusă.',
+      'Note: a high real interest rate (Turkey, Brazil) attracts short-term capital, but it does not mean a solid currency. That is why the largest weight (16%) goes to real flows in the economy, not to the interest rate. This is not investment advice; leveraged currency trading can lose more than the amount deposited.')}
   </p>
 </section>

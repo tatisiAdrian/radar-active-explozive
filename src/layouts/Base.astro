@@ -1,8 +1,9 @@
 ---
 import '../styles/global.css';
 interface Props { title: string; description?: string; image?: string; lang?: 'ro' | 'en'; alt?: string }
-const { title, description = 'Analize argumentate, bazate pe date statistice reale și surse verificabile.', image = 'images/crypto-1600.jpg', lang = 'ro', alt } = Astro.props;
+const { title, description: desc0,  image = 'images/crypto-1600.jpg', lang = 'ro', alt } = Astro.props;
 const en = lang === 'en';
+const description = desc0 ?? (en ? 'Reasoned analyses based on real statistical data and verifiable sources.' : 'Analize argumentate, bazate pe date statistice reale și surse verificabile.');
 const base = import.meta.env.BASE_URL;
 const path = Astro.url.pathname;
 const site = Astro.site ? new URL(base, Astro.site).href : base;
@@ -14,11 +15,11 @@ const canonical = Astro.site ? new URL(path, Astro.site).href : path;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <title>{title} · Radar Active Explozive</title>
+    <title>{title} · {en ? 'Explosive Assets Radar' : 'Radar Active Explozive'}</title>
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Radar Active Explozive" />
-    <meta property="og:title" content={`${title} · Radar Active Explozive`} />
+    <meta property="og:site_name" content={en ? 'Explosive Assets Radar' : 'Radar Active Explozive'} />
+    <meta property="og:title" content={`${title} · ${en ? 'Explosive Assets Radar' : 'Radar Active Explozive'}`} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={`${site}${image}`} />
@@ -36,7 +37,7 @@ const canonical = Astro.site ? new URL(path, Astro.site).href : path;
       <div class="container">
         <a class="brand" href={en ? `${base}en/` : base}>
           <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="var(--scope)" /><circle cx="16" cy="16" r="9" fill="none" stroke="#6f8dff" stroke-width="1.5" /><circle cx="16" cy="16" r="4" fill="none" stroke="#6f8dff" stroke-width="1.5" /><path d="M16 16 L27 9" stroke="#6f8dff" stroke-width="2" /><circle cx="21" cy="12" r="2" fill="#45c48a" /></svg>
-          Radar Active Explozive
+          {en ? 'Explosive Assets Radar' : 'Radar Active Explozive'}
         </a>
         <nav aria-label={en ? "Main navigation" : "Navigare principală"}>
           {en ? (
@@ -44,8 +45,9 @@ const canonical = Astro.site ? new URL(path, Astro.site).href : path;
               <a href={`${base}en/`} aria-current={path === `${base}en/` ? 'page' : undefined}>Home</a>
               <a href={`${base}en/investments/`} aria-current={path.startsWith(`${base}en/investments/`) ? 'page' : undefined}>Investments</a>
               <a href={`${base}en/macro/`} aria-current={path.startsWith(`${base}en/macro/`) ? 'page' : undefined}>Macroeconomics</a>
+              <a href={`${base}en/substance/`} aria-current={path.startsWith(`${base}en/substance/`) ? 'page' : undefined}>Substance, not form</a>
               <a href={`${base}radar/en/`}>Original radar</a>
-              <a href={`${base}en/funding/`} aria-current={path.startsWith(`${base}en/funding/`) ? 'page' : undefined}>Funding</a>
+              <a href={`${base}en/methodology/`} aria-current={path.startsWith(`${base}en/methodology/`) ? 'page' : undefined}>Methodology</a>
             </>
           ) : (
             <>
