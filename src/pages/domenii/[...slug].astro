@@ -13,6 +13,7 @@ import spMacro from '../../data/sp500/macro.json';
 import emMacro from '../../data/emerging/macro.json';
 import forexMacro from '../../data/forex/macro.json';
 import { domains, childrenOf, breadcrumbs } from '../../data/domains';
+import { catOf } from '../../data/categories';
 import { datasets, datasetsFor, datasetById } from '../../data/datasets';
 import { dbSource, radarView } from '../../data/radar';
 import { CRITERIA, WEIGHTS } from '../../data/criteria';
@@ -40,6 +41,7 @@ const base = import.meta.env.BASE_URL;
 const data = datasetsFor(domain.slug);
 const subdomains = childrenOf(domain.slug);
 const crumbs = breadcrumbs(domain.slug);
+const cat = catOf(domain.slug);
 const sources = [...new Map(data.map((d) => [d.source.url, d.source])).values()];
 const ph = photoForDomain(domain.slug);
 const radarRows = domain.radarMarket ? radarView(domain.radarMarket, domain.countries).rows.length : 0;
@@ -54,7 +56,7 @@ if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domai
 ---
 <Base title={domain.title} description={domain.summary} image={ph ? `images/${ph.key}-1600.jpg` : undefined}>
   <p class="crumbs">
-    <a href={base}>Acasă</a> / <a href={`${base}domenii/`}>Domenii</a>
+    <a href={base}>Acasă</a> / <a href={`${base}${cat.path.ro}`}>{cat.t.ro.name}</a>
     {crumbs.map((c) => <> / <a href={`${base}domenii/${c.slug}/`}>{c.title}</a></>)}
   </p>
   {ph ? (

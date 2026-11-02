@@ -3,13 +3,13 @@ import { ITEMS, byRank, localize } from '../data/home';
 import { OVERVIEW } from '../data/overview';
 import type { Lang } from '../data/i18n';
 
-interface Props { lang?: Lang }
-const { lang = 'ro' } = Astro.props;
+interface Props { lang?: Lang; only?: string[] }
+const { lang = 'ro', only } = Astro.props;
 const en = lang === 'en';
 const T = en ? { met: 'conditions met', score: 'Score', cta: 'See the profile (in Romanian) →' } : { met: 'condiții îndeplinite', score: 'Scor', cta: 'Vezi profilul →' };
 
 const base = import.meta.env.BASE_URL;
-const picks = OVERVIEW.flatMap((d) => ITEMS.filter((i) => i.domain === d.slug).sort(byRank).slice(0, 2)).map((p) => ({ ...p, raw: p.access, ...localize(p, lang) }));
+const picks = OVERVIEW.filter((d) => !only || only.includes(d.slug)).flatMap((d) => ITEMS.filter((i) => i.domain === d.slug).sort(byRank).slice(0, 2)).map((p) => ({ ...p, raw: p.access, ...localize(p, lang) }));
 // Profilul pe 14 condiții: un poligon pe 14 axe; punctele verzi = condiții îndeplinite (nota ≥ 7).
 const R = 46, C = 56;
 const ax = (i: number, v: number) => {

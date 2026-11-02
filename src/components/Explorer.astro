@@ -5,11 +5,11 @@ import { CRITERIA } from '../data/criteria';
 import { SETS } from '../data/explain';
 import { type Lang, CRITERIA_EN, SETS_EN, NA_EN } from '../data/i18n';
 
-interface Props { lang?: Lang }
-const { lang = 'ro' } = Astro.props;
+interface Props { lang?: Lang; only?: string[] }
+const { lang = 'ro', only } = Astro.props;
 const en = lang === 'en';
-const ITEMS = itemsFor(lang);
-const OVERVIEW = overviewFor(lang);
+const ITEMS = itemsFor(lang, only);
+const OVERVIEW = overviewFor(lang, only);
 const T = en
   ? { domains: 'Domains', all: 'All', search: 'Search', ph: 'Search an asset…', min: 'Minimum conditions', mAll: 'All', m6: '6+ (on watch)', m10: '10+ (strong candidates)', sort: 'Sort by', sMet: 'Conditions met', sScore: 'Score', sName: 'Name', th: ['#', 'Asset', 'Domain', 'Score', 'Conditions', 'Access', 'Substance / form', ''] }
   : { domains: 'Domenii', all: 'Toate', search: 'Caută', ph: 'Caută un activ…', min: 'Condiții minime', mAll: 'Toate', m6: '6+ (în observație)', m10: '10+ (candidați puternici)', sort: 'Ordonează după', sMet: 'Condiții îndeplinite', sScore: 'Scor', sName: 'Nume', th: ['#', 'Activ', 'Domeniu', 'Scor', 'Condiții', 'Acces', 'Fond / formă', ''] };

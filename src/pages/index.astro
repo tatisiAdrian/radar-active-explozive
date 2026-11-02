@@ -1,13 +1,7 @@
 ---
+import HomeCats from '../components/HomeCats.astro';
 import Base from '../layouts/Base.astro';
-import HomeRadar from '../components/HomeRadar.astro';
 import { OVERVIEW, ALL, UPDATED } from '../data/overview';
-import { domains } from '../data/domains';
-import { photoForDomain } from '../data/photos';
-import { fondTag } from '../data/explain';
-import HomeCharts from '../components/HomeCharts.astro';
-import TopPicks from '../components/TopPicks.astro';
-import Explorer from '../components/Explorer.astro';
 import { CRITERIA, WEIGHTS } from '../data/criteria';
 import '../styles/home.css';
 
@@ -24,84 +18,29 @@ const snapshots = Object.values(shaFiles).map((txt) => {
   return { file, hash, date: m[2], label: m[1] ? LABEL[m[1]] ?? m[1] : 'Radarul inițial: cripto, companii, mărfuri (88 de active)' };
 }).sort((a, b) => b.date.localeCompare(a.date) || a.label.localeCompare(b.label));
 
-const cards = OVERVIEW.map((d) => {
-  const sorted = [...d.items].sort((a, b) => b.met - a.met || b.score - a.score);
-  return {
-    d,
-    strong: d.items.filter((x) => x.met >= 10).length,
-    watch: d.items.filter((x) => x.met >= 6 && x.met < 10).length,
-    top: sorted.slice(0, 3),
-    summary: domains.find((x) => x.slug === d.slug)?.summary ?? '',
-    ph: photoForDomain(d.slug),
-    fff: d.items.filter((x) => fondTag(x.c) === 'fond-fara-forma').length,
-  };
-});
 const general = CRITERIA.general;
-const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.includes('/'));
 ---
+
 <Base title="Toate domeniile" alt="en/" description="Un singur radar pentru cripto, start-ups, mărfuri, Forex, economii emergente și S&P 500: activele care adună cele mai multe din cele 14 condiții pentru o creștere puternică.">
-  <section class="home-hero">
+  <section class="home-hero home-intro">
     <div class="hh-text">
       <p class="eyebrow">Pre-identificare · date actualizate pe {fmtDate(UPDATED)}</p>
-      <h1>Un singur radar pentru <span class="accent">toate piețele</span> pe care le analizăm.</h1>
-      <p class="lede">Aceleași 14 condiții, aplicate la cripto, start-ups, mărfuri, monede, economii și cele mai mari companii americane. Cu cât un activ e mai aproape de centru, cu atât adună mai multe condiții pentru o creștere puternică. E o listă de urmărit, nu un sfat de cumpărare.</p>
+      <h1>Două radare: <span class="accent">investiții</span> și <span class="accent2">macroeconomie</span>.</h1>
+      <p class="lede">Nu amestecăm merele cu perele. Activele în care poți investi direct (cripto, start-ups, acțiuni) au radarul lor. Contextul în care trăiesc toate investițiile (monede, economii naționale, mărfuri) are alt radar. Ambele folosesc aceleași 14 condiții, adaptate fiecărui domeniu. E o listă de urmărit, nu un sfat de cumpărare.</p>
       <div class="hh-stats">
         <div><b>{ALL.length}</b><span>active analizate</span></div>
-        <div><b>{OVERVIEW.length}</b><span>domenii</span></div>
+        <div><b>2</b><span>categorii, {OVERVIEW.length} domenii</span></div>
         <div><b>{strongAll}</b><span>cu 10+ condiții</span></div>
         <div><b>{snapshots.length}</b><span>instantanee înghețate</span></div>
       </div>
-      <ul class="hh-legend">
-        {cards.map((c) => (
-          <li><a href={`${base}domenii/${c.d.slug}/`} style={`--c:${c.d.color}`}><i></i><span>{c.d.title}</span><small>{c.d.items.length} · {c.strong} cu 10+</small></a></li>
-        ))}
-      </ul>
     </div>
-    <div class="hh-radar"><HomeRadar /></div>
   </section>
+
+  <HomeCats lang="ro" />
 
   <nav class="subnav" aria-label="Pe această pagină">
-    <a href="#domenii">Domeniile</a><a href="#grafice">Pe scurt, în grafice</a><a href="#candidati">Candidați</a><a href="#metoda">Metoda</a><a href="#toate">Toate activele</a><a href="#istoric">Istoric</a><a href="#cumpar">Unde cumperi</a><a href="#transparenta">Transparență</a>
+    <a href={`${base}investitii/`}>Investiții</a><a href={`${base}macro/`}>Macroeconomie</a><a href="#metoda">Metoda</a><a href="#istoric">Istoric</a><a href="#transparenta">Transparență</a>
   </nav>
-
-  <section id="domenii">
-    <h2>Domeniile</h2>
-    <p class="muted">Fiecare domeniu are pagina lui: clasamentul complet, nota la fiecare condiție, datele oficiale din spatele notelor și sursele.</p>
-    <div class="dgrid">
-      {cards.map((c) => (
-        <a class="dcard" href={`${base}domenii/${c.d.slug}/`} style={`--c:${c.d.color}`}>
-          {c.ph ? <img class="dimg" src={`${base}images/${c.ph.key}-800.jpg`} alt={c.ph.alt} loading="lazy" decoding="async" width="800" height="533" style={c.ph.key === 'romania' ? 'object-position:center 35%' : undefined} /> : <span class="dbar"></span>}
-          <h3>{c.d.title}</h3>
-          <p class="muted">{c.summary}</p>
-          <div class="dstats">
-            <span><b>{c.d.items.length}</b> active</span>
-            <span class="strong"><b>{c.strong}</b> cu 10+</span>
-            <span class="watch"><b>{c.watch}</b> în observație</span>
-            <span class="fff" title="Fond solid, încă neumflat de preț, presă sau aglomerație"><b>{c.fff}</b> fond fără formă</span>
-          </div>
-          <ol class="dtop">
-            {c.top.map((t) => <li><span>{t.name}</span><b>{t.met}/14</b></li>)}
-          </ol>
-          <span class="dcta">Deschide analiza →</span>
-        </a>
-      ))}
-    </div>
-    {planned.length > 0 && <p class="muted">În pregătire: {planned.map((p) => p.title).join(', ')}.</p>}
-  </section>
-
-  <section id="grafice">
-    <p class="eyebrow">Pe scurt, în grafice</p>
-    <h2>Ce arată radarul acum</h2>
-    <p class="muted">Patru grafice simple, calculate din notele tuturor celor {ALL.length} de active. Treci cu mouse-ul peste bare ca să vezi detaliile.</p>
-    <HomeCharts />
-  </section>
-
-  <section id="candidati">
-    <p class="eyebrow">Acum pe radar</p>
-    <h2>Primii doi candidați din fiecare domeniu</h2>
-    <p class="muted">Desenul arată profilul pe cele 14 condiții: cu cât forma e mai mare și mai rotundă, cu atât activul e mai complet. Punctele verzi sunt condițiile îndeplinite; cercul punctat e pragul de 7.</p>
-    <TopPicks />
-  </section>
 
   <section class="steps" id="metoda">
     <p class="eyebrow">Metoda</p>
@@ -124,14 +63,7 @@ const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.inclu
     </div>
   </section>
 
-  <section id="toate">
-    <p class="eyebrow">Toate activele</p>
-    <h2>Caută, filtrează, compară</h2>
-    <p class="muted">Toate cele {ALL.length} de active din cele {OVERVIEW.length} domenii, într-un singur tabel. Alege un domeniu, caută un nume sau arată doar candidații puternici.</p>
-    <Explorer />
-  </section>
-
-  <section id="istoric">
+    <section id="istoric">
     <p class="eyebrow">Istoric verificabil</p>
     <h2>Nu doar predicții: fiecare radar rămâne înghețat și se verifică</h2>
     <div class="hsteps">
@@ -164,22 +96,7 @@ const planned = domains.filter((d) => d.status === 'planificat' && !d.slug.inclu
     </p>
   </section>
 
-  <section id="cumpar">
-    <p class="eyebrow">Unde cumperi</p>
-    <h2>Platforme, pe tipuri de active</h2>
-    <p class="muted">Exemple, nu recomandări. Verifică disponibilitatea în țara ta și comisioanele înainte să-ți deschizi un cont. Nu primim comision pentru conturile deschise; dacă un broker de aici devine sponsor, îl marcăm vizibil, după <a href={`${base}finantare/`}>regulile publice</a>.</p>
-    <div class="buy">
-      <div><h3>Crypto</h3><p>Burse centralizate pentru tokenurile deja lansate. Toate cer verificarea identității.</p><ul><li><a href="https://www.binance.com" rel="noopener" target="_blank">Binance</a> · cele mai multe tokenuri de pe radar</li><li><a href="https://www.coinbase.com" rel="noopener" target="_blank">Coinbase</a></li><li><a href="https://www.kraken.com" rel="noopener" target="_blank">Kraken</a></li><li><a href="https://www.okx.com" rel="noopener" target="_blank">OKX</a></li><li><a href="https://www.bybit.com" rel="noopener" target="_blank">Bybit</a></li></ul></div>
-      <div><h3>Acțiuni listate</h3><p>Companiile din S&P 500, cele listate recent și UiPath, prin brokeri cu acces la bursele din SUA și Hong Kong.</p><ul><li><a href="https://www.interactivebrokers.com" rel="noopener" target="_blank">Interactive Brokers</a></li><li><a href="https://www.xtb.com/ro" rel="noopener" target="_blank">XTB</a></li><li><a href="https://www.trading212.com" rel="noopener" target="_blank">Trading 212</a></li><li><a href="https://www.home.saxo" rel="noopener" target="_blank">Saxo</a></li><li><a href="https://www.etoro.com" rel="noopener" target="_blank">eToro</a> · include și CFD-uri, cu risc ridicat</li></ul></div>
-      <div><h3>Mărfuri</h3><p>În UE, cea mai simplă cale sunt ETC-urile listate în Europa. Futures-urile cer cont special și folosesc levier.</p><ul><li><a href="https://www.wisdomtree.eu" rel="noopener" target="_blank">WisdomTree Europe</a> · ETC</li><li><a href="https://www.cmegroup.com" rel="noopener" target="_blank">CME Group</a> · futures</li><li><a href="https://www.ice.com" rel="noopener" target="_blank">ICE</a> · futures</li><li><a href="https://www.lme.com" rel="noopener" target="_blank">London Metal Exchange</a></li></ul></div>
-      <div><h3>Forex</h3><p>Monedele se cumpără prin conturi multi-valută la bancă sau la broker. Tranzacționarea cu levier (CFD) poate pierde mai mult decât ai depus: majoritatea conturilor de retail pierd bani.</p><ul><li><a href="https://www.interactivebrokers.com" rel="noopener" target="_blank">Interactive Brokers</a> · conversie valutară la cursul pieței</li><li><a href="https://www.home.saxo" rel="noopener" target="_blank">Saxo</a></li><li>Contul multi-valută al băncii tale</li></ul></div>
-      <div><h3>Economii emergente</h3><p>Prin ETF-uri de țară listate la bursă (de exemplu EEM, INDA, EWZ), cumpărate prin brokerii de mai sus. Pentru România, ETF-ul pe indicele BET, listat la BVB.</p><ul><li><a href="https://www.bvb.ro" rel="noopener" target="_blank">Bursa de Valori București</a> · ETF-ul BET (TVBETETF)</li><li><a href="https://tradeville.ro" rel="noopener" target="_blank">Tradeville</a></li><li><a href="https://www.btcapitalpartners.ro" rel="noopener" target="_blank">BT Capital Partners</a></li><li><a href="https://www.brk.ro" rel="noopener" target="_blank">BRK Financial Group</a></li></ul></div>
-      <div><h3>Companii private (pre-IPO)</h3><p>Piețe secundare, de obicei doar pentru investitori acreditați și cu sume minime mari.</p><ul><li><a href="https://forgeglobal.com" rel="noopener" target="_blank">Forge Global</a></li><li><a href="https://equityzen.com" rel="noopener" target="_blank">EquityZen</a></li></ul></div>
-    </div>
-    <p class="notice">Atenție la site-urile false. Popularitatea unui proiect atrage copii frauduloase. Intră doar de pe adresa oficială și nu-ți da niciodată fraza secretă a portofelului.</p>
-  </section>
-
-  <section id="transparenta">
+    <section id="transparenta">
     <p class="eyebrow">Transparență</p>
     <h2>Cum lucrăm</h2>
     <div class="how">

@@ -37,11 +37,12 @@ export const ALL = OVERVIEW.flatMap((d) => d.items);
 export const UPDATED = db.updatedAt;
 
 /** Domeniile cu titluri și nume de active în limba cerută. */
-export function overviewFor(lang: Lang): DomainOverview[] {
-  if (lang === 'ro') return OVERVIEW;
+export function overviewFor(lang: Lang, only?: string[]): DomainOverview[] {
+  const pick = (xs: DomainOverview[]) => (only ? only.map((s) => xs.find((d) => d.slug === s)!).filter(Boolean) : xs);
+  if (lang === 'ro') return pick(OVERVIEW);
   const en = Object.fromEntries(assets.map((a) => [a.n.ro, a.n.en]));
   const sc = { forex, 'economii-emergente': emerging, sp500 } as Record<string, unknown>;
-  return OVERVIEW.map((d) => {
+  return pick(OVERVIEW).map((d) => {
     const t = DOMAIN_EN[d.slug];
     const rows = (sc[d.slug] as Scored | undefined)?.rows;
     const items = d.items.map((it, i) => {

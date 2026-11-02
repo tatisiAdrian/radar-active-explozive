@@ -74,3 +74,30 @@
     .hh-stats { grid-template-columns: repeat(2, 1fr); }
     .hh-legend { grid-template-columns: 1fr; }
   }
+.cat-hero h1 { margin-bottom: .4rem; }
+.cat-hero h1::before { content: ''; display: block; width: 3rem; height: 4px; border-radius: 2px; background: var(--cat); margin-bottom: .9rem; }
+.cat-q { font: 600 1.15rem var(--f-display); color: var(--cat); margin: 0 0 .8rem; }
+.subnav .sub-other { margin-left: auto; color: var(--text); font-weight: 600; }
+.cat-door { display: grid; gap: .25rem; background: var(--surface); border: 1px solid var(--border); border-left: 5px solid var(--cat); border-radius: var(--radius); padding: 1.1rem 1.3rem; color: var(--text); text-decoration: none; margin-bottom: 1rem; transition: transform .15s, box-shadow .15s; }
+.cat-door:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(15, 29, 46, .1); }
+.cat-door small { font: 500 .75rem var(--f-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.cat-door b { font: 700 1.3rem var(--f-display); }
+.cat-door span { color: var(--muted); }
+.cat-door em { font-style: normal; font-weight: 600; color: var(--cat); }
+.cats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.5rem; }
+.cat-panel { display: flex; flex-direction: column; gap: .6rem; background: var(--surface); border: 1px solid var(--border); border-top: 5px solid var(--cat); border-radius: var(--radius); padding: 1.3rem 1.4rem; color: var(--text); text-decoration: none; transition: transform .15s, box-shadow .15s; }
+.cat-panel:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(15, 29, 46, .12); }
+.cat-panel .eyebrow { margin: 0; }
+.cat-panel h2 { margin: 0; font: 800 1.7rem var(--f-display); }
+.cat-panel .cat-q { margin: 0; }
+.cat-panel p { margin: 0; color: var(--muted); font-size: .93rem; }
+.cat-panel .home-radar svg { max-width: 420px; }
+.cat-doms { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--border); }
+.cat-doms li { display: flex; align-items: center; gap: .5rem; padding: .4rem 0; border-bottom: 1px solid var(--border); font-size: .9rem; }
+.cat-doms i { width: .65rem; height: .65rem; border-radius: 50%; background: var(--c); flex: none; }
+.cat-doms small { margin-left: auto; font: 500 .75rem var(--f-mono); color: var(--muted); }
+.cat-panel .cta { margin-top: auto; font-weight: 700; color: var(--cat); }
+@media (max-width: 900px) { .cats { grid-template-columns: 1fr; } .subnav .sub-other { margin-left: 0; } }
+.home-intro { grid-template-columns: minmax(0, 1fr); }
+.home-intro .hh-text { max-width: 860px; }
+.accent2 { color: #c4433b; }

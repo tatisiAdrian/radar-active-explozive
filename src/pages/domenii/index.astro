@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import DomainCard from '../../components/DomainCard.astro';
 import { topLevel } from '../../data/domains';
+import { CAT_LIST, catOf } from '../../data/categories';
 const base = import.meta.env.BASE_URL;
 const all = topLevel();
 const active = all.filter((d) => d.status === 'activ');
@@ -10,15 +11,18 @@ const planned = all.filter((d) => d.status === 'planificat');
 <Base title="Domenii">
   <h1>Toate domeniile</h1>
   <p class="muted">Fundamentarea radarului: prețuri și statistici preluate direct din surse oficiale (World Bank, CoinGecko și altele), fiecare cu link și dată de preluare. Fiecare domeniu are pagina lui.</p>
-  <p><a href={base}>← Radarul tuturor domeniilor</a></p>
+  <p><a href={base}>← Prima pagină</a></p>
 
-  <section>
-    <h2>Domenii active</h2>
-    <div class="grid">{active.map((d) => <DomainCard domain={d} />)}</div>
-  </section>
+  {CAT_LIST.map((c) => (
+    <section>
+      <h2>{c.t.ro.name}</h2>
+      <p class="muted">{c.t.ro.question} <a href={`${base}${c.path.ro}`}>{c.t.ro.cta}</a></p>
+      <div class="grid">{active.filter((d) => catOf(d.slug).key === c.key).map((d) => <DomainCard domain={d} />)}</div>
+    </section>
+  ))}
 
-  <section>
+  {planned.length > 0 && <section>
     <h2>În pregătire</h2>
     <div class="grid">{planned.map((d) => <DomainCard domain={d} />)}</div>
-  </section>
+  </section>}
 </Base>

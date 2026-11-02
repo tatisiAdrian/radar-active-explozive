@@ -78,4 +78,4 @@ export function localize(it: HomeItem, lang: Lang): HomeItem {
     fond: FOND_EN[it.fond] ?? it.fond,
   };
 }
-export const itemsFor = (lang: Lang) => ITEMS.map((i) => localize(i, lang));
+export const itemsFor = (lang: Lang, only?: string[]) => ITEMS.filter((i) => !only || only.includes(i.domain)).map((i) => localize(i, lang));

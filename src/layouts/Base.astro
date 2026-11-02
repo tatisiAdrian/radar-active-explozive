@@ -42,14 +42,16 @@ const canonical = Astro.site ? new URL(path, Astro.site).href : path;
           {en ? (
             <>
               <a href={`${base}en/`} aria-current={path === `${base}en/` ? 'page' : undefined}>Home</a>
-              <a href={`${base}domenii/`} lang="ro">Domains (RO)</a>
+              <a href={`${base}en/investments/`} aria-current={path.startsWith(`${base}en/investments/`) ? 'page' : undefined}>Investments</a>
+              <a href={`${base}en/macro/`} aria-current={path.startsWith(`${base}en/macro/`) ? 'page' : undefined}>Macroeconomics</a>
               <a href={`${base}radar/en/`}>Original radar</a>
               <a href={`${base}en/funding/`} aria-current={path.startsWith(`${base}en/funding/`) ? 'page' : undefined}>Funding</a>
             </>
           ) : (
             <>
               <a href={base} aria-current={path === base ? 'page' : undefined}>Acasă</a>
-              <a href={`${base}domenii/`} aria-current={path.startsWith(`${base}domenii/`) ? 'page' : undefined}>Domenii</a>
+              <a href={`${base}investitii/`} aria-current={path.startsWith(`${base}investitii/`) ? 'page' : undefined}>Investiții</a>
+              <a href={`${base}macro/`} aria-current={path.startsWith(`${base}macro/`) ? 'page' : undefined}>Macroeconomie</a>
               <a href={`${base}fond/`} aria-current={path.startsWith(`${base}fond/`) ? 'page' : undefined}>Fond, nu formă</a>
               <a href={`${base}radar/`}>Radarul inițial</a>
               <a href={`${base}metodologie/`} aria-current={path.startsWith(`${base}metodologie/`) ? 'page' : undefined}>Metodologie</a>

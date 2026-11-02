@@ -3,11 +3,11 @@ import { itemsFor, byRank } from '../data/home';
 import { overviewFor } from '../data/overview';
 import type { Lang } from '../data/i18n';
 
-interface Props { lang?: Lang }
-const { lang = 'ro' } = Astro.props;
+interface Props { lang?: Lang; only?: string[] }
+const { lang = 'ro', only } = Astro.props;
 const en = lang === 'en';
-const ITEMS = itemsFor(lang);
-const OVERVIEW = overviewFor(lang);
+const ITEMS = itemsFor(lang, only);
+const OVERVIEW = overviewFor(lang, only);
 import { assets } from '../data/radar';
 
 const top = [...ITEMS].sort(byRank).slice(0, 10);
@@ -27,14 +27,20 @@ const avgOf = (gs: string[]) => {
   return xs.reduce((s, a) => s + a.k, 0) / (xs.length || 1);
 };
 const pairs = [
-  { label: en ? 'Crypto · not launched vs. launched' : 'Crypto · nelansate vs. lansate', before: avgOf(['pre']), after: avgOf(['post']) },
-  { label: en ? 'Companies · pre-IPO vs. listed' : 'Companii · pre-IPO vs. listate', before: avgOf(['preipo']), after: avgOf(['ipo']) },
-  { label: en ? 'Start-ups · without vs. with product' : 'Start-ups · fără vs. cu produs', before: avgOf(['seed']), after: avgOf(['startup']) },
-  { label: en ? 'Commodities · emerging vs. mature' : 'Mărfuri · emergente vs. mature', before: avgOf(['emerging']), after: avgOf(['mature']) },
-];
+  { dom: 'crypto', label: en ? 'Crypto · not launched vs. launched' : 'Crypto · nelansate vs. lansate', before: avgOf(['pre']), after: avgOf(['post']) },
+  { dom: 'startups', label: en ? 'Companies · pre-IPO vs. listed' : 'Companii · pre-IPO vs. listate', before: avgOf(['preipo']), after: avgOf(['ipo']) },
+  { dom: 'startups', label: en ? 'Start-ups · without vs. with product' : 'Start-ups · fără vs. cu produs', before: avgOf(['seed']), after: avgOf(['startup']) },
+  { dom: 'marfuri', label: en ? 'Commodities · emerging vs. mature' : 'Mărfuri · emergente vs. mature', before: avgOf(['emerging']), after: avgOf(['mature']) },
+].filter((p) => !only || only.includes(p.dom));
+const isMacro = !!only && !only.includes('crypto');
 const T = en
-  ? { h1: 'Top 10 assets, across all domains', p1: 'The dashed green line marks the 10-condition threshold, from which an asset becomes a strong candidate.', of: 'of 14 conditions', h2: 'How many assets sit in each zone', p2: 'Most assets do not gather enough conditions. That is normal: we are looking for the exceptions.', with: 'with 10+', watch: 'on watch', under: 'under 6', l1: '10+ of 14', h3: 'Average conditions met, by domain', p3: 'How “full” each domain is, on average, out of the 14 conditions.', h4: 'Before vs. after launch', p4: 'Average conditions met. Good projects that have not launched yet often tick more conditions.', before: 'before', after: 'after' }
-  : { h1: 'Top 10 active, din toate domeniile', p1: 'Linia verde punctată marchează pragul de 10 condiții, de la care un activ devine candidat puternic.', of: 'din 14 condiții', h2: 'Câte active sunt în fiecare zonă', p2: 'Cele mai multe active nu adună destule condiții. E normal: căutăm excepțiile.', with: 'cu 10+', watch: 'în observație', under: 'sub 6', l1: '10+ din 14', h3: 'Media condițiilor îndeplinite, pe domeniu', p3: 'Cât de „plin” e fiecare domeniu, în medie, din cele 14 condiții.', h4: 'Înainte vs. după lansare', p4: 'Media condițiilor îndeplinite. Proiectele bune care încă nu s-au lansat bifează, adesea, mai multe condiții.', before: 'înainte', after: 'după' };
+  ? { h1: only ? 'Top 10 in this category' : 'Top 10 assets, across all domains', p1: 'The dashed green line marks the 10-condition threshold, from which an asset becomes a strong candidate.', of: 'of 14 conditions', h2: 'How many assets sit in each zone', p2: 'Most assets do not gather enough conditions. That is normal: we are looking for the exceptions.', with: 'with 10+', watch: 'on watch', under: 'under 6', l1: '10+ of 14', h3: 'Average conditions met, by domain', p3: 'How “full” each domain is, on average, out of the 14 conditions.', h4: only && !only.includes('crypto') ? 'Emerging vs. mature' : 'Before vs. after launch', p4: pairsNote(true), before: isMacro ? 'emerging' : 'before', after: isMacro ? 'mature' : 'after' }
+  : { h1: only ? 'Top 10 din această categorie' : 'Top 10 active, din toate domeniile', p1: 'Linia verde punctată marchează pragul de 10 condiții, de la care un activ devine candidat puternic.', of: 'din 14 condiții', h2: 'Câte active sunt în fiecare zonă', p2: 'Cele mai multe active nu adună destule condiții. E normal: căutăm excepțiile.', with: 'cu 10+', watch: 'în observație', under: 'sub 6', l1: '10+ din 14', h3: 'Media condițiilor îndeplinite, pe domeniu', p3: 'Cât de „plin” e fiecare domeniu, în medie, din cele 14 condiții.', h4: only && !only.includes('crypto') ? 'Emergente vs. mature' : 'Înainte vs. după lansare', p4: pairsNote(false), before: isMacro ? 'emergente' : 'înainte', after: isMacro ? 'mature' : 'după' };
+function pairsNote(e: boolean) {
+  const macro = only && !only.includes('crypto');
+  if (macro) return e ? 'Average conditions met: emerging commodities (rare earths, gallium, GPU hours) versus mature ones (oil, gold, wheat).' : 'Media condițiilor îndeplinite: mărfurile emergente (pământuri rare, galiu, ore GPU) față de cele mature (petrol, aur, grâu).';
+  return e ? 'Average conditions met. Good projects that have not launched yet often tick more conditions.' : 'Media condițiilor îndeplinite. Proiectele bune care încă nu s-au lansat bifează, adesea, mai multe condiții.';
+}
 const n1 = (x: number) => x.toLocaleString(en ? 'en-GB' : 'ro-RO', { maximumFractionDigits: 1, minimumFractionDigits: 1 });
 ---
 <div class="hc-grid">
@@ -120,7 +126,7 @@ const n1 = (x: number) => x.toLocaleString(en ? 'en-GB' : 'ro-RO', { maximumFrac
   .legend i { display: inline-block; width: .7rem; height: .7rem; border-radius: 2px; margin-right: .3rem; vertical-align: -1px; }
   .pairs { display: grid; gap: .8rem; }
   .pair > .bar-name { display: block; font-weight: 600; font-size: .88rem; margin-bottom: .25rem; }
-  .bar-row.sm { grid-template-columns: 4rem 1fr 3rem; }
+  .bar-row.sm { grid-template-columns: 5rem 1fr 3rem; }
   .tag { font: 500 .72rem var(--f-mono); color: var(--muted); }
   .pre { background: var(--accent); } .post { background: color-mix(in srgb, var(--accent) 40%, var(--border)); }
   @media (max-width: 900px) { .hc-grid { grid-template-columns: 1fr; } .bar-row { grid-template-columns: minmax(0, 8rem) 1fr 2.6rem; } }

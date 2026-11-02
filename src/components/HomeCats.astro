@@ -1,0 +1,33 @@
+---
+import HomeRadar from './HomeRadar.astro';
+import { overviewFor } from '../data/overview';
+import { CAT_LIST } from '../data/categories';
+import type { Lang } from '../data/i18n';
+interface Props { lang?: Lang }
+const { lang = 'ro' } = Astro.props;
+const en = lang === 'en';
+const base = import.meta.env.BASE_URL;
+const cats = CAT_LIST.map((c) => {
+  const doms = overviewFor(lang, c.slugs);
+  const items = doms.flatMap((d) => d.items);
+  const best = [...items].sort((a, b) => b.met - a.met || b.score - a.score)[0];
+  return { c, t: c.t[lang], doms, n: items.length, strong: items.filter((x) => x.met >= 10).length, best };
+});
+const W = en ? { assets: 'assets', with: 'with 10+', lead: 'Leading now' } : { assets: 'active', with: 'cu 10+', lead: 'Pe primul loc acum' };
+---
+<div class="cats">
+  {cats.map((x) => (
+    <a class="cat-panel" href={`${base}${x.c.path[lang]}`} style={`--cat:${x.c.color}`}>
+      <p class="eyebrow">{x.t.eyebrow}</p>
+      <h2>{x.t.name}</h2>
+      <p class="cat-q">{x.t.question}</p>
+      <HomeRadar lang={lang} only={x.c.slugs} uid={`h-${x.c.key}`} compact />
+      <p>{x.t.lede}</p>
+      <ul class="cat-doms">
+        {x.doms.map((d) => <li style={`--c:${d.color}`}><i></i>{d.title}<small>{d.items.length} {W.assets} · {d.items.filter((i) => i.met >= 10).length} {W.with}</small></li>)}
+      </ul>
+      {x.best && <p><b>{W.lead}:</b> {x.best.name} · {x.best.met}/14</p>}
+      <span class="cta">{x.t.cta}</span>
+    </a>
+  ))}
+</div>

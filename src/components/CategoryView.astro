@@ -1,0 +1,112 @@
+---
+import HomeRadar from './HomeRadar.astro';
+import HomeCharts from './HomeCharts.astro';
+import TopPicks from './TopPicks.astro';
+import Explorer from './Explorer.astro';
+import DomainCards from './DomainCards.astro';
+import BuyBlocks from './BuyBlocks.astro';
+import { overviewFor, UPDATED } from '../data/overview';
+import { CATEGORIES, type CatKey } from '../data/categories';
+import type { Lang } from '../data/i18n';
+
+interface Props { lang?: Lang; cat: CatKey }
+const { lang = 'ro', cat } = Astro.props;
+const en = lang === 'en';
+const base = import.meta.env.BASE_URL;
+const C = CATEGORIES[cat];
+const other = CATEGORIES[cat === 'investitii' ? 'macro' : 'investitii'];
+const t = C.t[lang];
+const ot = other.t[lang];
+const doms = overviewFor(lang, C.slugs);
+const items = doms.flatMap((d) => d.items);
+const strong = items.filter((x) => x.met >= 10).length;
+const watch = items.filter((x) => x.met >= 6 && x.met < 10).length;
+const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString(en ? 'en-GB' : 'ro-RO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const home = en ? `${base}en/` : base;
+const T = en
+  ? { upd: 'data updated on', assets: 'assets analysed', domains: 'domains', strong: 'with 10+ conditions', watch: 'on watch (6–9)', with: 'with 10+', nav: 'On this page', s: ['Domains', 'At a glance', 'Candidates', 'All assets', 'Where to buy'], ids: ['domains', 'charts', 'candidates', 'all', 'buy'],
+      dH: 'The domains in this category', dP: 'Each domain has its own page with the full ranking, the official data behind the scores and the sources (in Romanian for now).',
+      gE: 'At a glance', gH: 'What the radar shows now', gP: (n: number) => `Four simple charts, computed from the scores of the ${n} assets in this category. Hover over the bars to see the details.`,
+      cE: 'On the radar now', cH: 'The top two candidates in each domain', cP: 'The drawing shows the profile across the 14 conditions: the larger and rounder the shape, the more complete the asset. Green dots are conditions met; the dotted circle is the threshold of 7.',
+      aE: 'All assets', aH: 'Search, filter, compare', aP: (n: number) => `All ${n} assets in this category, in one table. Click a row for the score on each condition, explained in plain words.`,
+      bE: 'Where to buy', bH: 'Platforms for this category',
+      other: 'The other category', method: 'How the 14 conditions work, the frozen history and how we are funded', methodLink: 'on the home page →' }
+  : { upd: 'date actualizate pe', assets: 'active analizate', domains: 'domenii', strong: 'cu 10+ condiții', watch: 'în observație (6–9)', with: 'cu 10+', nav: 'Pe această pagină', s: ['Domeniile', 'Pe scurt, în grafice', 'Candidați', 'Toate activele', 'Unde cumperi'], ids: ['domenii', 'grafice', 'candidati', 'toate', 'cumpar'],
+      dH: 'Domeniile din această categorie', dP: 'Fiecare domeniu are pagina lui, cu clasamentul complet, datele oficiale din spatele notelor și sursele.',
+      gE: 'Pe scurt, în grafice', gH: 'Ce arată radarul acum', gP: (n: number) => `Patru grafice simple, calculate din notele celor ${n} active din această categorie. Treci cu mouse-ul peste bare ca să vezi detaliile.`,
+      cE: 'Acum pe radar', cH: 'Primii doi candidați din fiecare domeniu', cP: 'Desenul arată profilul pe cele 14 condiții: cu cât forma e mai mare și mai rotundă, cu atât activul e mai complet. Punctele verzi sunt condițiile îndeplinite; cercul punctat e pragul de 7.',
+      aE: 'Toate activele', aH: 'Caută, filtrează, compară', aP: (n: number) => `Toate cele ${n} active din această categorie, într-un singur tabel. Apasă pe un rând ca să vezi nota la fiecare condiție, explicată pe înțeles.`,
+      bE: 'Unde cumperi', bH: 'Platforme pentru această categorie',
+      other: 'Cealaltă categorie', method: 'Cum funcționează cele 14 condiții, istoricul înghețat și cum ne finanțăm', methodLink: 'pe prima pagină →' };
+---
+<section class="home-hero cat-hero" style={`--cat:${C.color}`}>
+  <div class="hh-text">
+    <p class="eyebrow">{t.eyebrow} · {T.upd} {fmtDate(UPDATED)}</p>
+    <h1>{t.title}</h1>
+    <p class="cat-q">{t.question}</p>
+    <p class="lede">{t.lede}</p>
+    <div class="hh-stats">
+      <div><b>{items.length}</b><span>{T.assets}</span></div>
+      <div><b>{doms.length}</b><span>{T.domains}</span></div>
+      <div><b>{strong}</b><span>{T.strong}</span></div>
+      <div><b>{watch}</b><span>{T.watch}</span></div>
+    </div>
+    <ul class="hh-legend">
+      {doms.map((d) => (
+        <li><a href={`${base}domenii/${d.slug}/`} style={`--c:${d.color}`}><i></i><span>{d.title}</span><small>{d.items.length} · {d.items.filter((x) => x.met >= 10).length} {T.with}</small></a></li>
+      ))}
+    </ul>
+  </div>
+  <div class="hh-radar"><HomeRadar lang={lang} only={C.slugs} uid={`r-${cat}`} /></div>
+</section>
+
+<nav class="subnav" aria-label={T.nav}>
+  {T.s.map((s: string, i: number) => <a href={`#${T.ids[i]}`}>{s}</a>)}
+  <a class="sub-other" href={`${base}${other.path[lang]}`}>{ot.name} →</a>
+</nav>
+
+<section id={T.ids[0]}>
+  <h2>{T.dH}</h2>
+  <p class="muted">{T.dP}</p>
+  <DomainCards lang={lang} only={C.slugs} />
+</section>
+
+<section id={T.ids[1]}>
+  <p class="eyebrow">{T.gE}</p>
+  <h2>{T.gH}</h2>
+  <p class="muted">{T.gP(items.length)}</p>
+  <HomeCharts lang={lang} only={C.slugs} />
+</section>
+
+<section id={T.ids[2]}>
+  <p class="eyebrow">{T.cE}</p>
+  <h2>{T.cH}</h2>
+  <p class="muted">{T.cP}</p>
+  <TopPicks lang={lang} only={C.slugs} />
+</section>
+
+<section id={T.ids[3]}>
+  <p class="eyebrow">{T.aE}</p>
+  <h2>{T.aH}</h2>
+  <p class="muted">{T.aP(items.length)}</p>
+  <Explorer lang={lang} only={C.slugs} />
+</section>
+
+<section id={T.ids[4]}>
+  <p class="eyebrow">{T.bE}</p>
+  <h2>{T.bH}</h2>
+  <BuyBlocks lang={lang} cat={cat} />
+</section>
+
+<section>
+  <a class="cat-door" href={`${base}${other.path[lang]}`} style={`--cat:${other.color}`}>
+    <small>{T.other}</small>
+    <b>{ot.title}</b>
+    <span>{ot.question}</span>
+    <em>{ot.cta}</em>
+  </a>
+  <p class="muted">{T.method} <a href={home}>{T.methodLink}</a></p>
+  <p class="notice">{en
+    ? <><b>This is not investment advice.</b> The radar guarantees no growth. Most assets with explosive potential do not explode, and the move can also be down, with losses of 80–90%. Only invest money you can afford to lose entirely.</>
+    : <><b>Nu este o recomandare de investiții.</b> Radarul nu garantează nicio creștere. Cele mai multe active cu potențial de explozie nu explodează, iar mișcarea poate fi și în jos, cu pierderi de 80–90%. Investește doar bani pe care îți permiți să-i pierzi integral.</>}</p>
+</section>
