@@ -38,11 +38,17 @@ jobs:
       - name: Descarcă datele pentru economiile emergente (FMI, BIS, burse)
         run: node scripts/fetch-emerging.mjs && (test ! -f scripts/score-emerging.mjs || node scripts/score-emerging.mjs)
         continue-on-error: true
+      - name: Descarcă datele imobiliare (BIS, FMI)
+        run: node scripts/fetch-imobiliare.mjs && (test ! -f scripts/score-imobiliare.mjs || node scripts/score-imobiliare.mjs)
+        continue-on-error: true
+      - name: Recalculează proiectele imobiliare
+        run: node scripts/score-proiecte.mjs
+        continue-on-error: true
       - name: Salvează în repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/prices/weekly.json src/data/forex/ src/data/emerging/ src/data/sp500/ src/data/startups-ro/ 2>/dev/null || git add src/data/prices/weekly.json
+          git add src/data/prices/weekly.json src/data/forex/ src/data/emerging/ src/data/sp500/ src/data/startups-ro/ src/data/imobiliare/ src/data/proiecte-imobiliare/ 2>/dev/null || git add src/data/prices/weekly.json
           if git diff --cached --quiet; then echo "Nicio modificare."; exit 0; fi
           git commit -qm "Date săptămânale $(date -u +%F)"
           git push
