@@ -70,3 +70,22 @@ table.radar.explain td:last-child { min-width: 260px; }
   header.site nav { flex-wrap: nowrap; overflow-x: auto; width: 100%; margin-left: 0; gap: 1rem; padding-bottom: .15rem; scrollbar-width: none; }
   header.site nav a { white-space: nowrap; }
 }
+
+/* Întrebările cititorilor */
+.qa-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.1rem; margin: .9rem 0; }
+.qa-card h3 { margin-top: .2rem; }
+.qa form { display: grid; gap: .7rem; max-width: 640px; }
+.qa label { display: grid; gap: .3rem; font-weight: 500; }
+.qa input[type=email], .qa input[name=name], .qa textarea { font: inherit; padding: .55rem .7rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); width: 100%; box-sizing: border-box; }
+.qa .qa-check { display: flex; gap: .5rem; align-items: flex-start; font-weight: 400; }
+.qa .qa-check input { margin-top: .25rem; }
+.qa button:not(.linkish) { justify-self: start; font: 600 .95rem var(--f-body); padding: .55rem 1rem; border-radius: 8px; border: 0; background: var(--accent); color: #fff; cursor: pointer; }
+.qa button:disabled { opacity: .6; }
+.linkish { background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; font: inherit; text-decoration: underline; }
+.qa-item { border-top: 1px solid var(--border); padding: .7rem 0; }
+.qa-item:first-child { border-top: 0; }
+.qa-q { margin: 0 0 .35rem; }
+.qa-a { margin: 0; padding-left: .8rem; border-left: 3px solid var(--accent); }
+.qa-msg:empty { display: none; }
+.qa-msg { font-weight: 500; }
+.qa [hidden] { display: none !important; }

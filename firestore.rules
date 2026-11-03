@@ -1,0 +1,28 @@
+rules_version = '2';
+// Regulile bazei de date pentru întrebările cititorilor. Se copiază în consola Firebase: Firestore → Rules.
+// Cititorii pot crea întrebări doar cu adresa verificată și își pot vedea sau șterge doar întrebările proprii.
+// Răspunsurile publice (qa_public) se pot citi de oricine; scrie în ele doar fluxul săptămânal (cont de serviciu).
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /questions/{id} {
+      allow read, delete: if request.auth != null && resource.data.uid == request.auth.uid;
+      allow create: if request.auth != null
+        && request.auth.token.email_verified == true
+        && request.resource.data.keys().hasOnly(['uid', 'email', 'name', 'slug', 'lang', 'text', 'public', 'createdAt', 'status'])
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.name is string && request.resource.data.name.size() >= 2 && request.resource.data.name.size() <= 40
+        && request.resource.data.slug is string && request.resource.data.slug.size() <= 80
+        && request.resource.data.lang in ['ro', 'en']
+        && request.resource.data.text is string && request.resource.data.text.size() >= 10 && request.resource.data.text.size() <= 2000
+        && request.resource.data.public is bool
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.status == 'new';
+      allow update: if false;
+    }
+    match /qa_public/{id} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}

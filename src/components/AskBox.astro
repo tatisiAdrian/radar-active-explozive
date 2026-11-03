@@ -1,0 +1,123 @@
+---
+/** Întrebările cititorilor despre raționamentul unei analize: răspunsuri publicate, autentificare cu link pe email, formular. */
+import cfg from '../data/firebase-config.json';
+import type { Lang } from '../data/i18n';
+
+interface Props { slug: string; lang?: Lang }
+const { slug, lang = 'ro' } = Astro.props;
+const en = lang === 'en';
+const base = import.meta.env.BASE_URL;
+const on = Boolean(cfg.apiKey && cfg.projectId);
+const T = en
+  ? { h: 'Questions about the reasoning', p: 'Do you disagree with a score, or want to know why an asset is where it is? Ask. We answer with the weekly update, with sources, by email and, if you agree, here on the page.',
+      pubH: 'Answered questions', pubNone: 'No answered questions on this analysis yet.', loading: 'Loading…',
+      email: 'Your email address', send: 'Send me the sign-in link', why: 'No password: we send you a link that confirms your address.',
+      confirm: 'Confirm', out: 'Sign out', name: 'Name shown with the question', namePh: 'e.g. Andrei M.', q: 'Your question', qPh: 'What would you like us to explain about this analysis?',
+      pub: 'I agree that the question and the answer may be published on this page, with the name above (never the email).',
+      terms: 'I have read the', privacy: 'privacy information', submit: 'Send the question', mine: 'Your questions about this analysis', account: 'All your questions →' }
+  : { h: 'Întrebări despre raționament', p: 'Nu ești de acord cu o notă sau vrei să știi de ce un activ e unde e? Întreabă. Răspundem la actualizarea săptămânală, cu surse, pe email și, dacă ești de acord, aici pe pagină.',
+      pubH: 'Întrebări cu răspuns', pubNone: 'Încă nu există întrebări cu răspuns la această analiză.', loading: 'Se încarcă…',
+      email: 'Adresa ta de email', send: 'Trimite-mi linkul de autentificare', why: 'Fără parolă: îți trimitem un link care îți confirmă adresa.',
+      confirm: 'Confirmă', out: 'Ieși din cont', name: 'Numele afișat lângă întrebare', namePh: 'de exemplu, Andrei M.', q: 'Întrebarea ta', qPh: 'Ce ai vrea să-ți explicăm despre această analiză?',
+      pub: 'Sunt de acord ca întrebarea și răspunsul să fie publicate pe această pagină, cu numele de mai sus (niciodată emailul).',
+      terms: 'Am citit', privacy: 'informarea despre confidențialitate', submit: 'Trimite întrebarea', mine: 'Întrebările tale despre această analiză', account: 'Toate întrebările tale →' };
+const privacyHref = en ? `${base}en/privacy/` : `${base}confidentialitate/`;
+const accountHref = en ? `${base}en/account/` : `${base}cont/`;
+---
+{on && (
+<section id="intrebari" class="qa" data-slug={slug} data-lang={lang}>
+  <h2>{T.h}</h2>
+  <p class="muted">{T.p}</p>
+
+  <div class="qa-card">
+    <h3>{T.pubH}</h3>
+    <div class="qa-public" data-none={T.pubNone}><p class="muted">{T.loading}</p></div>
+  </div>
+
+  <div class="qa-card">
+    <form class="qa-signin" hidden>
+      <label>{T.email}<input type="email" name="email" required autocomplete="email" /></label>
+      <button type="submit">{T.send}</button>
+      <small class="muted">{T.why}</small>
+    </form>
+    <form class="qa-confirm" hidden>
+      <label><span class="qa-confirm-l"></span><input type="email" name="email" required autocomplete="email" /></label>
+      <button type="submit">{T.confirm}</button>
+    </form>
+    <div class="qa-in" hidden>
+      <p class="qa-who"><span></span> · <button type="button" class="linkish qa-out">{T.out}</button></p>
+      <form class="qa-ask">
+        <label>{T.name}<input name="name" required minlength="2" maxlength="40" placeholder={T.namePh} /></label>
+        <label>{T.q}<textarea name="text" required minlength="10" maxlength="2000" rows="5" placeholder={T.qPh}></textarea></label>
+        <label class="qa-check"><input type="checkbox" name="public" /> <span>{T.pub}</span></label>
+        <label class="qa-check"><input type="checkbox" name="terms" required /> <span>{T.terms} <a href={privacyHref}>{T.privacy}</a>.</span></label>
+        <button type="submit">{T.submit}</button>
+      </form>
+      <h3>{T.mine}</h3>
+      <div class="qa-mine"></div>
+      <p><a href={accountHref}>{T.account}</a></p>
+    </div>
+    <p class="qa-msg" role="status" aria-live="polite"></p>
+  </div>
+</section>
+)}
+
+<script>
+  import * as Q from '../scripts/qa';
+  const box = document.querySelector<HTMLElement>('section.qa');
+  if (box && Q.configured) {
+    const lang = (box.dataset.lang ?? 'ro') as Q.Lang;
+    const slug = box.dataset.slug!;
+    const t = Q.TXT[lang];
+    const $ = <T extends HTMLElement>(s: string) => box.querySelector<T>(s)!;
+    const msg = (s: string) => { $('.qa-msg').textContent = s; };
+    const signin = $<HTMLFormElement>('.qa-signin'), confirm = $<HTMLFormElement>('.qa-confirm'), inside = $('.qa-in');
+
+    // Răspunsurile publicate, în limba paginii
+    const pub = $('.qa-public');
+    Q.publicAnswers(slug).then((rows) => {
+      pub.innerHTML = rows.length
+        ? rows.map((r) => `<article class="qa-item"><p class="qa-q"><b>${Q.esc(r.name)}</b> · ${Q.fmt(r.answeredAt, lang)}<br>${Q.esc(r.q[lang] ?? '')}</p><p class="qa-a">${Q.esc(r.a[lang] ?? '')}</p></article>`).join('')
+        : `<p class="muted">${pub.dataset.none}</p>`;
+    }).catch(() => { pub.innerHTML = `<p class="muted">${pub.dataset.none}</p>`; });
+
+    const renderMine = async (u: import('firebase/auth').User) => {
+      const rows = (await Q.myQuestions(u)).filter((r) => r.slug === slug);
+      $('.qa-mine').innerHTML = rows.length
+        ? rows.map((r) => `<article class="qa-item"><p class="qa-q"><small class="muted">${Q.fmt(r.createdAt, lang)} · ${r.public ? t.pub : t.priv} · ${t.status[r.status] ?? r.status}</small><br>${Q.esc(r.text)}</p>${r.answer ? `<p class="qa-a"><b>${t.answer}:</b> ${Q.esc(r.answer)}</p>` : ''}</article>`).join('')
+        : `<p class="muted">${t.none}</p>`;
+    };
+
+    if (Q.pendingLink()) {
+      const e = Q.rememberedEmail();
+      const finish = (email: string) => Q.completeLink(email).catch(() => { msg(t.errLink); signin.hidden = false; confirm.hidden = true; });
+      if (e) finish(e);
+      else { confirm.hidden = false; $('.qa-confirm-l').textContent = t.confirm; confirm.addEventListener('submit', (ev) => { ev.preventDefault(); finish(new FormData(confirm).get('email') as string); }); }
+    }
+
+    Q.watchUser((u) => {
+      inside.hidden = !u;
+      signin.hidden = !!u || !confirm.hidden;
+      if (u) { confirm.hidden = true; $('.qa-who span').textContent = `${t.signedAs} ${u.email}`; renderMine(u).catch(() => {}); }
+    });
+
+    signin.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      try { await Q.sendLink(new FormData(signin).get('email') as string, lang); msg(t.sent); } catch { msg(t.err); }
+    });
+    $('.qa-out').addEventListener('click', () => Q.logout());
+
+    const form = $<HTMLFormElement>('.qa-ask');
+    form.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const f = new FormData(form);
+      const { getAuth } = await import('firebase/auth');
+      const u = getAuth().currentUser; if (!u) return;
+      const btn = form.querySelector('button')!; btn.disabled = true;
+      try {
+        await Q.ask(u, { slug, lang, name: String(f.get('name')).trim(), text: String(f.get('text')).trim(), public: f.get('public') === 'on' });
+        form.reset(); msg(t.thanks); await renderMine(u);
+      } catch { msg(t.err); } finally { btn.disabled = false; }
+    });
+  }
+</script>

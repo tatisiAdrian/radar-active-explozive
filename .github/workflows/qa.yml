@@ -1,0 +1,41 @@
+name: Întrebările cititorilor
+
+# Publică răspunsurile aprobate și exportă întrebările noi în depozitul privat de întrebări.
+# Rulează săptămânal, înainte de actualizarea datelor, și la cerere (după aprobarea răspunsurilor).
+# Are nevoie de: secretul FIREBASE_SERVICE_ACCOUNT, secretul QA_INBOX_TOKEN și variabila QA_INBOX_REPO (proprietar/nume).
+on:
+  schedule:
+    - cron: '47 20 * * 5'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    if: ${{ vars.QA_INBOX_REPO != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.QA_INBOX_REPO }}
+          token: ${{ secrets.QA_INBOX_TOKEN }}
+          path: inbox
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Instalează firebase-admin
+        run: npm i --no-save --no-package-lock firebase-admin@14.5.0
+      - name: Publică răspunsurile și exportă întrebările
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: node scripts/qa/sync.mjs inbox
+      - name: Salvează în depozitul privat
+        working-directory: inbox
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Întrebări: sincronizare $(date -u +%F)"
+          git push

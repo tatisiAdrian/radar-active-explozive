@@ -10,6 +10,7 @@ import RomaniaSection from './RomaniaSection.astro';
 import ImobSection from './ImobSection.astro';
 import ProjectsSection from './ProjectsSection.astro';
 import SocialSection from './SocialSection.astro';
+import AskBox from './AskBox.astro';
 import { SOCIAL, REGIONS, regionOf } from '../data/social';
 import PhotoHeader from './PhotoHeader.astro';
 import { photoForDomain } from '../data/photos';
@@ -139,6 +140,8 @@ const home = en ? `${base}en/` : base;
       <div class="grid">{subdomains.map((d) => <DomainCard domain={d} lang={lang} />)}</div>
     </section>
   )}
+
+  <AskBox slug={domain.slug} lang={lang} />
 
   <section>
     <h2>{L('Surse', 'Sources')}</h2>

@@ -1,0 +1,7 @@
+{
+ "_doc": "Configurația publică a aplicației web Firebase (nu e secretă: o vede orice browser). Câtă vreme apiKey e gol, secțiunea de întrebări nu apare pe site.",
+ "apiKey": "",
+ "authDomain": "",
+ "projectId": "",
+ "appId": ""
+}

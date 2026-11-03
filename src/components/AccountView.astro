@@ -1,0 +1,55 @@
+---
+/** Contul cititorului: toate întrebările lui, cu stadiul și răspunsul; ștergere și ieșire din cont. */
+import cfg from '../data/firebase-config.json';
+import { domains } from '../data/domains';
+import { DOMAINS_EN } from '../data/en-content';
+import type { Lang } from '../data/i18n';
+
+interface Props { lang?: Lang }
+const { lang = 'ro' } = Astro.props;
+const en = lang === 'en';
+const base = import.meta.env.BASE_URL;
+const on = Boolean(cfg.apiKey && cfg.projectId);
+const names = Object.fromEntries(domains.map((d) => [d.slug, { t: en ? DOMAINS_EN[d.slug]?.title ?? d.title : d.title, href: en ? `${base}en/domains/${d.slug}/` : `${base}domenii/${d.slug}/` }]));
+const T = en
+  ? { h: 'Your account', p: 'Your questions about the analyses, with their status and our answers.', off: 'Questions open soon. Until then, the analyses and their sources remain fully public.', out: 'Sign out', need: 'To see your questions, sign in from the “Questions about the reasoning” section of any analysis page.', go: 'Go to the analyses →' }
+  : { h: 'Contul tău', p: 'Întrebările tale despre analize, cu stadiul lor și răspunsurile noastre.', off: 'Întrebările se deschid în curând. Până atunci, analizele și sursele lor rămân complet publice.', out: 'Ieși din cont', need: 'Ca să-ți vezi întrebările, autentifică-te din secțiunea „Întrebări despre raționament” a oricărei pagini de analiză.', go: 'Mergi la analize →' };
+---
+<h1>{T.h}</h1>
+<p class="muted">{T.p}</p>
+{on ? (
+  <section class="qa qa-account" data-lang={lang} data-names={JSON.stringify(names)}>
+    <div class="qa-card">
+      <p class="qa-who" hidden><span></span> · <button type="button" class="linkish qa-out">{T.out}</button></p>
+      <p class="qa-need" hidden>{T.need} <a href={en ? `${base}en/domains/` : `${base}domenii/`}>{T.go}</a></p>
+      <div class="qa-mine"></div>
+    </div>
+  </section>
+) : <p class="notice">{T.off}</p>}
+
+<script>
+  import * as Q from '../scripts/qa';
+  const box = document.querySelector<HTMLElement>('.qa-account');
+  if (box && Q.configured) {
+    const lang = (box.dataset.lang ?? 'ro') as Q.Lang;
+    const t = Q.TXT[lang];
+    const names: Record<string, { t: string; href: string }> = JSON.parse(box.dataset.names ?? '{}');
+    const mine = box.querySelector<HTMLElement>('.qa-mine')!;
+    const render = async (u: import('firebase/auth').User) => {
+      const rows = await Q.myQuestions(u);
+      mine.innerHTML = rows.length
+        ? rows.map((r) => `<article class="qa-item"><p class="qa-q"><a href="${names[r.slug]?.href ?? '#'}">${Q.esc(names[r.slug]?.t ?? r.slug)}</a><br><small class="muted">${Q.fmt(r.createdAt, lang)} · ${r.public ? t.pub : t.priv} · ${t.status[r.status] ?? r.status}</small><br>${Q.esc(r.text)}</p>${r.answer ? `<p class="qa-a"><b>${t.answer}:</b> ${Q.esc(r.answer)}</p>` : ''}<button type="button" class="linkish" data-del="${r.id}">${t.del}</button></article>`).join('')
+        : `<p class="muted">${t.none}</p>`;
+      mine.querySelectorAll<HTMLButtonElement>('[data-del]').forEach((b) => b.addEventListener('click', async () => {
+        if (!confirm(t.delQ)) return;
+        await Q.removeQuestion(b.dataset.del!); await render(u);
+      }));
+    };
+    Q.watchUser((u) => {
+      box.querySelector<HTMLElement>('.qa-who')!.hidden = !u;
+      box.querySelector<HTMLElement>('.qa-need')!.hidden = !!u;
+      if (u) { box.querySelector('.qa-who span')!.textContent = `${t.signedAs} ${u.email}`; render(u).catch(() => {}); } else mine.innerHTML = '';
+    });
+    box.querySelector('.qa-out')!.addEventListener('click', () => Q.logout());
+  }
+</script>
