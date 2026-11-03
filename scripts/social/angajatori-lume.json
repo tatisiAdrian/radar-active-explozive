@@ -1,0 +1,481 @@
+{
+ "_doc": "Cei mai buni angajatori din lume. Note de judecată pe baza clasamentului Forbes World’s Best Employers 2026 (primele 11 locuri) și a contextului industriei.",
+ "date": "2026-11-03",
+ "set": "angajatori-lume",
+ "region": "lume",
+ "items": [
+  {
+   "id": "microsoft",
+   "name": "Microsoft",
+   "nameEn": "Microsoft",
+   "c": [
+    10,
+    null,
+    10,
+    8,
+    10,
+    7,
+    10,
+    9,
+    9,
+    3,
+    5,
+    4,
+    2,
+    6
+   ],
+   "why": "Locul 1 în Forbes World’s Best Employers 2026, la fel ca în 2025, pe baza a peste 300.000 de angajați. Salarii de top și prezență în aproape toate țările; concurența la angajare e foarte mare, iar compania a făcut concedieri.",
+   "whyEn": "First in Forbes World’s Best Employers 2026, as in 2025, based on more than 300,000 employees. Top pay and a presence in almost every country; competition for jobs is very strong, and the company has made layoffs.",
+   "sources": [
+    [
+     "Forbes World’s Best Employers 2026: primele 50 de companii (Forbes și Statista, peste 300.000 de angajați)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft conduce clasamentul Forbes 2026, Nvidia urcă pe 5",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes World’s Best Employers 2026: the top 50 companies (Forbes and Statista, over 300,000 employees)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft tops the 2026 Forbes list, Nvidia climbs to 5th",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ]
+  },
+  {
+   "id": "delta",
+   "name": "Delta Air Lines",
+   "nameEn": "Delta Air Lines",
+   "c": [
+    10,
+    null,
+    7,
+    7,
+    7,
+    6,
+    6,
+    8,
+    7,
+    7,
+    8,
+    7,
+    6,
+    5
+   ],
+   "why": "Locul 2 în Forbes 2026, cel mai bine clasat angajator din afara tehnologiei. Multe posturi accesibile (echipaj, aeroport, întreținere); aviația e însă o industrie ciclică.",
+   "whyEn": "Second in Forbes 2026, the best-ranked employer outside technology. Many accessible posts (crew, airport, maintenance); but aviation is a cyclical industry.",
+   "sources": [
+    [
+     "Forbes World’s Best Employers 2026: primele 50 de companii (Forbes și Statista, peste 300.000 de angajați)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft conduce clasamentul Forbes 2026, Nvidia urcă pe 5",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes World’s Best Employers 2026: the top 50 companies (Forbes and Statista, over 300,000 employees)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft tops the 2026 Forbes list, Nvidia climbs to 5th",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ]
+  },
+  {
+   "id": "shopify",
+   "name": "Shopify",
+   "nameEn": "Shopify",
+   "c": [
+    10,
+    null,
+    9,
+    8,
+    8,
+    9,
+    6,
+    6,
+    8,
+    3,
+    7,
+    6,
+    4,
+    6
+   ],
+   "why": "Locul 3 în Forbes 2026, cel mai bun angajator din Canada. Lucrează aproape complet la distanță, ceea ce înseamnă echilibru bun și acces din multe țări, dar puține posturi și concurență mare.",
+   "whyEn": "Third in Forbes 2026, Canada’s best employer. It works almost entirely remotely, which means a good balance and access from many countries, but few posts and strong competition.",
+   "sources": [
+    [
+     "Forbes World’s Best Employers 2026: primele 50 de companii (Forbes și Statista, peste 300.000 de angajați)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft conduce clasamentul Forbes 2026, Nvidia urcă pe 5",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes World’s Best Employers 2026: the top 50 companies (Forbes and Statista, over 300,000 employees)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft tops the 2026 Forbes list, Nvidia climbs to 5th",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ]
+  },
+  {
+   "id": "costco",
+   "name": "Costco Wholesale",
+   "nameEn": "Costco Wholesale",
+   "c": [
+    10,
+    null,
+    7,
+    7,
+    9,
+    6,
+    7,
+    6,
+    7,
+    9,
+    8,
+    8,
+    6,
+    8
+   ],
+   "why": "Locul 4 în Forbes 2026. Plătește peste media comerțului și are multe posturi pentru debutanți; este o excepție între retaileri, cu angajați care rămân mult în companie.",
+   "whyEn": "Fourth in Forbes 2026. It pays above the retail average and has many entry-level posts; an exception among retailers, with employees who stay a long time.",
+   "sources": [
+    [
+     "Forbes World’s Best Employers 2026: primele 50 de companii (Forbes și Statista, peste 300.000 de angajați)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft conduce clasamentul Forbes 2026, Nvidia urcă pe 5",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes World’s Best Employers 2026: the top 50 companies (Forbes and Statista, over 300,000 employees)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft tops the 2026 Forbes list, Nvidia climbs to 5th",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ]
+  },
+  {
+   "id": "nvidia",
+   "name": "NVIDIA",
+   "nameEn": "NVIDIA",
+   "c": [
+    10,
+    null,
+    10,
+    8,
+    10,
+    5,
+    7,
+    7,
+    10,
+    2,
+    2,
+    10,
+    1,
+    6
+   ],
+   "why": "Locul 5 în Forbes 2026, în urcare. Furnizorul principal de cipuri pentru inteligența artificială, cu salarii și acțiuni foarte valoroase pentru angajați; extrem de mediatizat și foarte greu de intrat.",
+   "whyEn": "Fifth in Forbes 2026, rising. The main supplier of chips for artificial intelligence, with very valuable pay and shares for employees; extremely publicised and very hard to get into.",
+   "sources": [
+    [
+     "Forbes World’s Best Employers 2026: primele 50 de companii (Forbes și Statista, peste 300.000 de angajați)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft conduce clasamentul Forbes 2026, Nvidia urcă pe 5",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes World’s Best Employers 2026: the top 50 companies (Forbes and Statista, over 300,000 employees)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft tops the 2026 Forbes list, Nvidia climbs to 5th",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ]
+  },
+  {
+   "id": "adobe",
+   "name": "Adobe",
+   "nameEn": "Adobe",
+   "c": [
+    9,
+    null,
+    9,
+    8,
+    8,
+    8,
+    7,
+    7,
+    7,
+    4,
+    7,
+    5,
+    4,
+    5
+   ],
+   "why": "Locul 6 în Forbes 2026. Echilibru bun între viață și muncă și salarii mari; inteligența artificială generativă pune însă presiune pe afacerea sa cu software creativ.",
+   "whyEn": "Sixth in Forbes 2026. A good work-life balance and high pay; but generative artificial intelligence is putting pressure on its creative-software business.",
+   "sources": [
+    [
+     "Forbes World’s Best Employers 2026: primele 50 de companii (Forbes și Statista, peste 300.000 de angajați)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft conduce clasamentul Forbes 2026, Nvidia urcă pe 5",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes World’s Best Employers 2026: the top 50 companies (Forbes and Statista, over 300,000 employees)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft tops the 2026 Forbes list, Nvidia climbs to 5th",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ]
+  },
+  {
+   "id": "apple",
+   "name": "Apple",
+   "nameEn": "Apple",
+   "c": [
+    9,
+    null,
+    9,
+    7,
+    10,
+    6,
+    10,
+    9,
+    9,
+    5,
+    4,
+    6,
+    3,
+    7
+   ],
+   "why": "Locul 7 în Forbes 2026. Prezentă în toată lumea, inclusiv prin magazine, unde există și posturi pentru debutanți; foarte solidă financiar, dar cu o cultură exigentă și secretoasă.",
+   "whyEn": "Seventh in Forbes 2026. Present worldwide, including through its stores, where there are entry-level posts too; very financially solid, but with a demanding, secretive culture.",
+   "sources": [
+    [
+     "Forbes World’s Best Employers 2026: primele 50 de companii (Forbes și Statista, peste 300.000 de angajați)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft conduce clasamentul Forbes 2026, Nvidia urcă pe 5",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes World’s Best Employers 2026: the top 50 companies (Forbes and Statista, over 300,000 employees)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft tops the 2026 Forbes list, Nvidia climbs to 5th",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ]
+  },
+  {
+   "id": "sony",
+   "name": "Sony Group",
+   "nameEn": "Sony Group",
+   "c": [
+    9,
+    null,
+    7,
+    7,
+    8,
+    7,
+    8,
+    9,
+    8,
+    5,
+    7,
+    6,
+    5,
+    7
+   ],
+   "why": "Locul 8 în Forbes 2026, cel mai bun angajator din Japonia. Foarte multe tipuri de roluri, de la jocuri și muzică la senzori și electronice.",
+   "whyEn": "Eighth in Forbes 2026, Japan’s best employer. Very many types of role, from games and music to sensors and electronics.",
+   "sources": [
+    [
+     "Forbes World’s Best Employers 2026: primele 50 de companii (Forbes și Statista, peste 300.000 de angajați)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft conduce clasamentul Forbes 2026, Nvidia urcă pe 5",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes World’s Best Employers 2026: the top 50 companies (Forbes and Statista, over 300,000 employees)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft tops the 2026 Forbes list, Nvidia climbs to 5th",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ]
+  },
+  {
+   "id": "alphabet",
+   "name": "Alphabet (Google)",
+   "nameEn": "Alphabet (Google)",
+   "c": [
+    9,
+    null,
+    10,
+    8,
+    10,
+    7,
+    9,
+    8,
+    9,
+    2,
+    4,
+    6,
+    1,
+    6
+   ],
+   "why": "Locul 9 în Forbes 2026. Salarii și beneficii de top, dar unul dintre cei mai greu accesibili angajatori din lume, cu sute de candidați pe un post.",
+   "whyEn": "Ninth in Forbes 2026. Top pay and benefits, but one of the hardest employers in the world to get into, with hundreds of candidates per post.",
+   "sources": [
+    [
+     "Forbes World’s Best Employers 2026: primele 50 de companii (Forbes și Statista, peste 300.000 de angajați)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft conduce clasamentul Forbes 2026, Nvidia urcă pe 5",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes World’s Best Employers 2026: the top 50 companies (Forbes and Statista, over 300,000 employees)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft tops the 2026 Forbes list, Nvidia climbs to 5th",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ]
+  },
+  {
+   "id": "lego",
+   "name": "LEGO Group",
+   "nameEn": "LEGO Group",
+   "c": [
+    9,
+    null,
+    7,
+    7,
+    9,
+    8,
+    7,
+    7,
+    9,
+    5,
+    7,
+    7,
+    4,
+    8
+   ],
+   "why": "Locul 10 în Forbes 2026, cel mai bun angajator din Danemarca. Companie de familie solidă, cu fabrici și pe alte continente; are o fabrică mare și în Ungaria, aproape de România.",
+   "whyEn": "Tenth in Forbes 2026, Denmark’s best employer. A solid family company, with factories on other continents too; it also has a large factory in Hungary, close to Romania.",
+   "sources": [
+    [
+     "Forbes World’s Best Employers 2026: primele 50 de companii (Forbes și Statista, peste 300.000 de angajați)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft conduce clasamentul Forbes 2026, Nvidia urcă pe 5",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes World’s Best Employers 2026: the top 50 companies (Forbes and Statista, over 300,000 employees)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft tops the 2026 Forbes list, Nvidia climbs to 5th",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ]
+  },
+  {
+   "id": "nintendo",
+   "name": "Nintendo",
+   "nameEn": "Nintendo",
+   "c": [
+    9,
+    null,
+    6,
+    7,
+    9,
+    8,
+    4,
+    5,
+    8,
+    2,
+    6,
+    7,
+    2,
+    7
+   ],
+   "why": "Locul 11 în Forbes 2026. Angajații rămân foarte mult în companie și lucrează într-un ritm echilibrat; compania e însă mică și angajează mai ales în Japonia.",
+   "whyEn": "Eleventh in Forbes 2026. Employees stay a very long time and work at a balanced pace; but the company is small and hires mostly in Japan.",
+   "sources": [
+    [
+     "Forbes World’s Best Employers 2026: primele 50 de companii (Forbes și Statista, peste 300.000 de angajați)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft conduce clasamentul Forbes 2026, Nvidia urcă pe 5",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes World’s Best Employers 2026: the top 50 companies (Forbes and Statista, over 300,000 employees)",
+     "https://insideiim.com/forbes-worlds-best-employers-2026-top-50-companies-revealed"
+    ],
+    [
+     "Tech Insider: Microsoft tops the 2026 Forbes list, Nvidia climbs to 5th",
+     "https://tech-insider.org/?p=28701"
+    ]
+   ]
+  }
+ ]
+}

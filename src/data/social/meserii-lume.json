@@ -1,0 +1,604 @@
+{
+ "slug": "meserii-lume",
+ "set": "meserii-lume",
+ "region": "lume",
+ "date": "2026-11-03",
+ "snapshot": "social-meserii-lume-2026-11-03",
+ "formulas": {},
+ "rows": [
+  {
+   "id": "securitate",
+   "name": "Specialist în securitate informatică",
+   "nameEn": "Information security specialist",
+   "c": [
+    9,
+    9,
+    9,
+    8,
+    5,
+    7,
+    9,
+    10,
+    8,
+    5,
+    7,
+    8,
+    7,
+    7
+   ],
+   "why": "Specialiștii în securitate sunt printre meseriile cu cea mai rapidă creștere în raportul WEF. Cerere stabilă în toate țările și în toate industriile, inclusiv în sectorul public.",
+   "whyEn": "Security specialists are among the fastest-growing jobs in the WEF report. Stable demand in every country and every industry, including the public sector.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul Future of Jobs 2025, meseriile viitorului",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: lipsa de talente în lume, 2025 (circa 40.000 de angajatori)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025, the jobs of the future",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: the global talent shortage, 2025 (about 40,000 employers)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.8,
+   "met": 12
+  },
+  {
+   "id": "energie",
+   "name": "Inginer în energie regenerabilă",
+   "nameEn": "Renewable energy engineer",
+   "c": [
+    8,
+    8,
+    9,
+    8,
+    4,
+    7,
+    7,
+    9,
+    8,
+    5,
+    8,
+    7,
+    8,
+    7
+   ],
+   "why": "Printre primele 15 meserii cu cea mai rapidă creștere în raportul WEF, alături de inginerii de mediu; tranziția energetică creează cerere pe toate continentele.",
+   "whyEn": "Among the 15 fastest-growing jobs in the WEF report, alongside environmental engineers; the energy transition creates demand on every continent.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul Future of Jobs 2025, meseriile viitorului",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: lipsa de talente în lume, 2025 (circa 40.000 de angajatori)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025, the jobs of the future",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: the global talent shortage, 2025 (about 40,000 employers)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.38,
+   "met": 12
+  },
+  {
+   "id": "asistent",
+   "name": "Asistent medical",
+   "nameEn": "Nurse",
+   "c": [
+    6,
+    10,
+    9,
+    10,
+    5,
+    4,
+    10,
+    8,
+    10,
+    6,
+    8,
+    7,
+    9,
+    5
+   ],
+   "why": "Printre meseriile cu cea mai mare creștere absolută până în 2030, potrivit WEF; sănătatea e sectorul cu cea mai mare lipsă de personal în lume (77% dintre angajatori), potrivit ManpowerGroup. Munca e grea, cu ture și stres.",
+   "whyEn": "Among the jobs with the largest absolute growth until 2030, according to the WEF; healthcare is the sector with the biggest staff shortage in the world (77% of employers), according to ManpowerGroup. The work is hard, with shifts and stress.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul Future of Jobs 2025, meseriile viitorului",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: lipsa de talente în lume, 2025 (circa 40.000 de angajatori)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025, the jobs of the future",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: the global talent shortage, 2025 (about 40,000 employers)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.44,
+   "met": 9
+  },
+  {
+   "id": "constructii",
+   "name": "Muncitor în construcții",
+   "nameEn": "Construction worker",
+   "c": [
+    5,
+    9,
+    9,
+    8,
+    9,
+    3,
+    6,
+    8,
+    8,
+    9,
+    8,
+    6,
+    8,
+    3
+   ],
+   "why": "Printre meseriile cu cea mai mare creștere absolută până în 2030, potrivit WEF. Pregătire scurtă și cerere mare peste tot, dar munca e grea și cu risc de accidente.",
+   "whyEn": "Among the jobs with the largest absolute growth until 2030, according to the WEF. Short training and high demand everywhere, but the work is hard and accident-prone.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul Future of Jobs 2025, meseriile viitorului",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: lipsa de talente în lume, 2025 (circa 40.000 de angajatori)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025, the jobs of the future",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: the global talent shortage, 2025 (about 40,000 employers)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.68,
+   "met": 9
+  },
+  {
+   "id": "ai",
+   "name": "Specialist în inteligență artificială și învățare automată",
+   "nameEn": "AI and machine learning specialist",
+   "c": [
+    10,
+    9,
+    10,
+    7,
+    4,
+    9,
+    6,
+    10,
+    7,
+    3,
+    3,
+    9,
+    4,
+    6
+   ],
+   "why": "Printre primele trei meserii cu cea mai rapidă creștere până în 2030, potrivit WEF; salarii foarte mari și cerere în toată lumea. Meseria e la modă, iar pregătirea e lungă și grea.",
+   "whyEn": "Among the three fastest-growing jobs until 2030, according to the WEF; very high pay and demand worldwide. The job is fashionable, and training is long and hard.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul Future of Jobs 2025, meseriile viitorului",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: lipsa de talente în lume, 2025 (circa 40.000 de angajatori)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025, the jobs of the future",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: the global talent shortage, 2025 (about 40,000 employers)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.18,
+   "met": 8
+  },
+  {
+   "id": "profesor",
+   "name": "Profesor (liceu și universitate)",
+   "nameEn": "Teacher (secondary and higher education)",
+   "c": [
+    5,
+    8,
+    8,
+    9,
+    4,
+    6,
+    9,
+    6,
+    10,
+    6,
+    8,
+    5,
+    8,
+    7
+   ],
+   "why": "Profesorii de liceu și din învățământul superior sunt printre meseriile cu cea mai mare creștere absolută în raportul WEF. Stabilitate mare, dar salariile diferă mult de la o țară la alta.",
+   "whyEn": "Secondary and higher education teachers are among the jobs with the largest absolute growth in the WEF report. High stability, but pay varies greatly from one country to another.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul Future of Jobs 2025, meseriile viitorului",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: lipsa de talente în lume, 2025 (circa 40.000 de angajatori)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025, the jobs of the future",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: the global talent shortage, 2025 (about 40,000 employers)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.94,
+   "met": 8
+  },
+  {
+   "id": "big-data",
+   "name": "Specialist în big data",
+   "nameEn": "Big data specialist",
+   "c": [
+    9,
+    8,
+    10,
+    6,
+    5,
+    9,
+    6,
+    10,
+    6,
+    5,
+    5,
+    8,
+    5,
+    7
+   ],
+   "why": "Meseria cu cea mai rapidă creștere până în 2030 în raportul WEF; datele și IT-ul sunt competențele cel mai greu de găsit pentru angajatori, potrivit ManpowerGroup.",
+   "whyEn": "The fastest-growing job until 2030 in the WEF report; data and IT are the skills employers find hardest to find, according to ManpowerGroup.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul Future of Jobs 2025, meseriile viitorului",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: lipsa de talente în lume, 2025 (circa 40.000 de angajatori)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025, the jobs of the future",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: the global talent shortage, 2025 (about 40,000 employers)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.2,
+   "met": 7
+  },
+  {
+   "id": "social",
+   "name": "Asistent social și consilier",
+   "nameEn": "Social worker and counsellor",
+   "c": [
+    4,
+    8,
+    8,
+    9,
+    5,
+    5,
+    8,
+    5,
+    10,
+    6,
+    8,
+    5,
+    8,
+    6
+   ],
+   "why": "Printre meseriile de îngrijire cu creștere mare în raportul WEF. Foarte greu de înlocuit de AI și esențială pentru ceilalți, dar plătită modest în majoritatea țărilor.",
+   "whyEn": "Among the care jobs with strong growth in the WEF report. Very hard for AI to replace and essential to others, but modestly paid in most countries.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul Future of Jobs 2025, meseriile viitorului",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: lipsa de talente în lume, 2025 (circa 40.000 de angajatori)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025, the jobs of the future",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: the global talent shortage, 2025 (about 40,000 employers)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.56,
+   "met": 7
+  },
+  {
+   "id": "agricol",
+   "name": "Lucrător agricol",
+   "nameEn": "Farmworker",
+   "c": [
+    2,
+    7,
+    10,
+    5,
+    10,
+    3,
+    5,
+    6,
+    9,
+    10,
+    8,
+    3,
+    6,
+    3
+   ],
+   "why": "Meseria cu cea mai mare creștere în cifre absolute până în 2030: circa 35 de milioane de locuri noi, potrivit WEF. Esențială, dar cu cel mai mic câștig din listă și condiții grele.",
+   "whyEn": "The job with the largest growth in absolute numbers until 2030: about 35 million new jobs, according to the WEF. Essential, but with the lowest earnings on the list and hard conditions.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul Future of Jobs 2025, meseriile viitorului",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: lipsa de talente în lume, 2025 (circa 40.000 de angajatori)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025, the jobs of the future",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: the global talent shortage, 2025 (about 40,000 employers)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "inputs": {},
+   "score": 5.62,
+   "met": 6
+  },
+  {
+   "id": "livrari",
+   "name": "Șofer de livrări",
+   "nameEn": "Delivery driver",
+   "c": [
+    3,
+    8,
+    9,
+    3,
+    10,
+    4,
+    4,
+    7,
+    6,
+    10,
+    8,
+    4,
+    4,
+    4
+   ],
+   "why": "A doua meserie ca număr de locuri noi până în 2030, potrivit WEF, datorită comerțului online. Ușor de intrat în ea, dar câștig mic, multă muncă pe cont propriu și riscul vehiculelor autonome pe termen lung.",
+   "whyEn": "The second job by number of new places until 2030, according to the WEF, thanks to online shopping. Easy to get into, but low earnings, much self-employed work and the long-term risk of autonomous vehicles.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul Future of Jobs 2025, meseriile viitorului",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: lipsa de talente în lume, 2025 (circa 40.000 de angajatori)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025, the jobs of the future",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: the global talent shortage, 2025 (about 40,000 employers)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "inputs": {},
+   "score": 5.5,
+   "met": 6
+  },
+  {
+   "id": "software",
+   "name": "Dezvoltator software",
+   "nameEn": "Software developer",
+   "c": [
+    8,
+    6,
+    9,
+    4,
+    6,
+    9,
+    5,
+    10,
+    6,
+    6,
+    3,
+    5,
+    2,
+    5
+   ],
+   "why": "Printre meseriile cu cea mai mare creștere până în 2030, în cifre absolute, potrivit WEF. Totuși, AI preia o parte din munca de bază, iar posturile pentru debutanți sunt tot mai disputate.",
+   "whyEn": "Among the jobs with the largest growth until 2030, in absolute numbers, according to the WEF. But AI is taking over part of the basic work, and entry-level posts are increasingly contested.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: raportul Future of Jobs 2025, meseriile viitorului",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: lipsa de talente în lume, 2025 (circa 40.000 de angajatori)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs Report 2025, the jobs of the future",
+     "https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+    ],
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "ManpowerGroup: the global talent shortage, 2025 (about 40,000 employers)",
+     "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.1,
+   "met": 4
+  }
+ ]
+}

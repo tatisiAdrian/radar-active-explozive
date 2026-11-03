@@ -44,12 +44,11 @@ const T = en
       bE: 'Unde cumperi', bH: 'Platforme pentru această categorie',
       other: 'Cealaltă categorie', method: 'Cum funcționează cele 14 condiții, istoricul înghețat și cum ne finanțăm', methodLink: 'pe prima pagină →' };
 ---
-<PhotoHeader photo={photo(cat === 'social' && region === 'europa' ? 'europa' : cat)!} lang={lang} title={cat === 'social' ? `${t.title}: ${reg.name[lang]}` : t.title} eyebrow={`${t.eyebrow} · ${T.upd} ${fmtDate(UPDATED)}`} summary={t.question} />
+<PhotoHeader photo={photo(cat === 'social' && region === 'europa' ? 'europa' : cat === 'social' && region === 'lume' ? 'domenii' : cat)!} lang={lang} title={cat === 'social' ? `${t.title}: ${reg.name[lang]}` : t.title} eyebrow={`${t.eyebrow} · ${T.upd} ${fmtDate(UPDATED)}`} summary={t.question} />
 {cat === 'social' && (
   <nav class="region-switch" aria-label={en ? 'Region' : 'Regiune'}>
     <span>{en ? 'Region' : 'Regiune'}:</span>
     {REGIONS.map((r) => <a href={`${base}${r.path[lang]}`} aria-current={r.key === region ? 'page' : undefined} title={r.name[lang]}>{r.code}</a>)}
-    <small>{en ? 'Worldwide: coming next' : 'Lume: urmează'}</small>
   </nav>
 )}
 <section class="home-hero cat-hero" style={`--cat:${C.color}`}>

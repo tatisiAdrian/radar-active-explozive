@@ -1,0 +1,604 @@
+{
+ "slug": "facultati-lume",
+ "set": "facultati-lume",
+ "region": "lume",
+ "date": "2026-11-03",
+ "snapshot": "social-facultati-lume-2026-11-03",
+ "formulas": {},
+ "rows": [
+  {
+   "id": "eth",
+   "name": "ETH Zürich",
+   "nameEn": "ETH Zurich",
+   "c": [
+    10,
+    9,
+    9,
+    10,
+    8,
+    10,
+    3,
+    10,
+    9,
+    6,
+    8,
+    7,
+    6,
+    9
+   ],
+   "why": "Locul 7 în QS 2026, cea mai bună universitate din Europa continentală. Taxele de școlarizare sunt mici față de nivelul ei, iar admiterea e mai accesibilă decât la universitățile americane și britanice; Zürich e însă foarte scump.",
+   "whyEn": "Seventh in QS 2026, the best university in continental Europe. Tuition is low for its level, and admission is more accessible than at US and British universities; but Zurich is very expensive.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: clasamentul mondial (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: cele mai bune universități din lume în 2026, după Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the world ranking (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: the world’s best universities for 2026, according to Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "inputs": {},
+   "score": 8.28,
+   "met": 11
+  },
+  {
+   "id": "nus",
+   "name": "Universitatea Națională din Singapore (NUS)",
+   "nameEn": "National University of Singapore (NUS)",
+   "c": [
+    10,
+    9,
+    9,
+    9,
+    9,
+    9,
+    4,
+    9,
+    9,
+    4,
+    8,
+    7,
+    4,
+    8
+   ],
+   "why": "Locul 8 în QS 2026, cea mai bine clasată universitate din Asia. Predare în engleză, foarte bine conectată cu angajatorii din regiune; în afara primelor 10 la Times Higher Education.",
+   "whyEn": "Eighth in QS 2026, the best-ranked university in Asia. Teaching in English, very well connected with employers in the region; outside the top 10 in Times Higher Education.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: clasamentul mondial (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: cele mai bune universități din lume în 2026, după Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the world ranking (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: the world’s best universities for 2026, according to Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.9,
+   "met": 11
+  },
+  {
+   "id": "imperial",
+   "name": "Imperial College London",
+   "nameEn": "Imperial College London",
+   "c": [
+    10,
+    9,
+    10,
+    9,
+    9,
+    10,
+    2,
+    10,
+    9,
+    2,
+    6,
+    8,
+    2,
+    7
+   ],
+   "why": "Locul 2 în QS 2026 și 8 la Times Higher Education. Specializat în știință, inginerie, medicină și afaceri, domenii foarte cerute; Londra e scumpă pentru studenți.",
+   "whyEn": "Second in QS 2026 and 8th in Times Higher Education. Specialised in science, engineering, medicine and business, all in high demand; London is expensive for students.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: clasamentul mondial (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: cele mai bune universități din lume în 2026, după Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the world ranking (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: the world’s best universities for 2026, according to Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.54,
+   "met": 10
+  },
+  {
+   "id": "hku",
+   "name": "Universitatea din Hong Kong (HKU)",
+   "nameEn": "The University of Hong Kong (HKU)",
+   "c": [
+    10,
+    8,
+    8,
+    8,
+    8,
+    8,
+    3,
+    10,
+    8,
+    5,
+    8,
+    10,
+    5,
+    5
+   ],
+   "why": "Locul 11 în QS 2026, după un salt de șase locuri (de pe 17). Predare în engleză și foarte mulți studenți străini; contextul politic e un risc de urmărit.",
+   "whyEn": "Eleventh in QS 2026, after a six-place jump (from 17th). Teaching in English and very many foreign students; the political context is a risk to watch.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: clasamentul mondial (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: cele mai bune universități din lume în 2026, după Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the world ranking (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: the world’s best universities for 2026, according to Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.52,
+   "met": 10
+  },
+  {
+   "id": "ucl",
+   "name": "University College London (UCL)",
+   "nameEn": "University College London (UCL)",
+   "c": [
+    10,
+    8,
+    9,
+    9,
+    10,
+    8,
+    2,
+    10,
+    9,
+    4,
+    7,
+    6,
+    3,
+    7
+   ],
+   "why": "Locul 9 în QS 2026. Foarte multe programe și mulți studenți străini, ceea ce o face mai accesibilă decât Oxford sau Cambridge; Londra e scumpă, iar la Times Higher Education e în afara primelor 10.",
+   "whyEn": "Ninth in QS 2026. Very many programmes and many foreign students, which makes it more accessible than Oxford or Cambridge; London is expensive, and it is outside the top 10 in Times Higher Education.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: clasamentul mondial (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: cele mai bune universități din lume în 2026, după Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the world ranking (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: the world’s best universities for 2026, according to Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.44,
+   "met": 10
+  },
+  {
+   "id": "caltech",
+   "name": "California Institute of Technology (Caltech)",
+   "nameEn": "California Institute of Technology (Caltech)",
+   "c": [
+    10,
+    10,
+    8,
+    10,
+    9,
+    10,
+    3,
+    8,
+    7,
+    1,
+    8,
+    7,
+    1,
+    6
+   ],
+   "why": "Locul 10 în QS 2026 și 7 la Times Higher Education. Foarte mică, cu cercetare de vârf în fizică și inginerie; admiterea e printre cele mai selective din lume.",
+   "whyEn": "Tenth in QS 2026 and 7th in Times Higher Education. Very small, with top research in physics and engineering; admission is among the most selective in the world.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: clasamentul mondial (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: cele mai bune universități din lume în 2026, după Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the world ranking (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: the world’s best universities for 2026, according to Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.3,
+   "met": 10
+  },
+  {
+   "id": "cambridge",
+   "name": "Universitatea Cambridge",
+   "nameEn": "University of Cambridge",
+   "c": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    8,
+    3,
+    10,
+    7,
+    2,
+    4,
+    6,
+    2,
+    8
+   ],
+   "why": "Locul 4 la Times Higher Education 2026 și 6 în QS. Reputație globală maximă, cu un ecosistem tehnologic puternic în jur; admitere foarte selectivă și costuri mari pentru străini.",
+   "whyEn": "Fourth in Times Higher Education 2026 and 6th in QS. Top global reputation, with a strong technology ecosystem around it; very selective admission and high costs for foreigners.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: clasamentul mondial (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: cele mai bune universități din lume în 2026, după Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the world ranking (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: the world’s best universities for 2026, according to Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.38,
+   "met": 9
+  },
+  {
+   "id": "oxford",
+   "name": "Universitatea Oxford",
+   "nameEn": "University of Oxford",
+   "c": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    8,
+    2,
+    10,
+    8,
+    2,
+    4,
+    6,
+    2,
+    8
+   ],
+   "why": "Primul la Times Higher Education 2026 și 4 în QS (de pe 3). Reputație globală maximă, dar admitere extrem de selectivă și costuri foarte mari pentru studenții din afara Regatului Unit.",
+   "whyEn": "First in Times Higher Education 2026 and 4th in QS (down from 3rd). Top global reputation, but extremely selective admission and very high costs for students from outside the UK.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: clasamentul mondial (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: cele mai bune universități din lume în 2026, după Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the world ranking (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: the world’s best universities for 2026, according to Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.36,
+   "met": 9
+  },
+  {
+   "id": "mit",
+   "name": "Massachusetts Institute of Technology (MIT)",
+   "nameEn": "Massachusetts Institute of Technology (MIT)",
+   "c": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    2,
+    9,
+    9,
+    1,
+    4,
+    8,
+    1,
+    5
+   ],
+   "why": "Locul 1 în QS 2026 (din nou) și 2 la Times Higher Education. Lider mondial în inginerie și informatică; admiterea e extrem de selectivă, iar Boston e un oraș scump.",
+   "whyEn": "First in QS 2026 (again) and 2nd in Times Higher Education. The world leader in engineering and computer science; admission is extremely selective and Boston is an expensive city.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: clasamentul mondial (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: cele mai bune universități din lume în 2026, după Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the world ranking (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: the world’s best universities for 2026, according to Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.3,
+   "met": 9
+  },
+  {
+   "id": "stanford",
+   "name": "Universitatea Stanford",
+   "nameEn": "Stanford University",
+   "c": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    1,
+    8,
+    10,
+    1,
+    3,
+    9,
+    1,
+    5
+   ],
+   "why": "Locul 3 în QS 2026 (de pe 6) și 6 la Times Higher Education. În inima Silicon Valley, cu cele mai bune legături cu start-up-urile din lume; costurile și concurența la admitere sunt foarte mari.",
+   "whyEn": "Third in QS 2026 (up from 6th) and 6th in Times Higher Education. At the heart of Silicon Valley, with the world’s best links to start-ups; costs and competition for admission are very high.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: clasamentul mondial (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: cele mai bune universități din lume în 2026, după Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the world ranking (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: the world’s best universities for 2026, according to Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.24,
+   "met": 9
+  },
+  {
+   "id": "harvard",
+   "name": "Universitatea Harvard",
+   "nameEn": "Harvard University",
+   "c": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    8,
+    2,
+    9,
+    9,
+    1,
+    2,
+    5,
+    1,
+    4
+   ],
+   "why": "Locul 5 atât în QS 2026, cât și la Times Higher Education. Cea mai cunoscută universitate din lume, deci și cea mai mediatizată; presiunile politice asupra finanțării și asupra studenților străini din SUA sunt un risc real.",
+   "whyEn": "Fifth in both QS 2026 and Times Higher Education. The best-known university in the world, and so the most publicised; political pressure in the US on funding and on foreign students is a real risk.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: clasamentul mondial (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: cele mai bune universități din lume în 2026, după Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the world ranking (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ],
+    [
+     "Time Out: the world’s best universities for 2026, according to Times Higher Education",
+     "https://www.timeout.com/news/these-are-the-worlds-best-universities-for-2026-according-to-the-times-100925"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.76,
+   "met": 8
+  }
+ ]
+}

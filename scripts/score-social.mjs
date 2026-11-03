@@ -24,6 +24,11 @@ export const FORMULAS = {
     C2: 'Citire, PISA 2022: nota = (scorul − 440) / 7.',
     C3: 'Științe, PISA 2022: nota = (scorul − 450) / 7 (500 dă 7).',
   },
+  'licee-lume': {
+    C1: 'Matematică, PISA 2022: nota = (scorul − 450) / 10 (520 dă 7, 550 sau mai mult dă 10).',
+    C2: 'Citire, PISA 2022: nota = (scorul − 450) / 10.',
+    C3: 'Științe, PISA 2022: nota = (scorul − 450) / 10.',
+  },
 };
 
 const files = (await readdir(new URL('./social/', import.meta.url))).filter((f) => f.endsWith('.json'));
@@ -50,6 +55,12 @@ for (const f of files) {
       c[0] = clamp((math - 440) / 7); inputs.C1 = `matematică: ${math} puncte`;
       c[1] = clamp((read - 440) / 7); inputs.C2 = `citire: ${read} puncte`;
       c[2] = clamp((sci - 450) / 7); inputs.C3 = `științe: ${sci} puncte`;
+    }
+    if (cfg.set === 'licee-lume' && it.data) {
+      const { math, read, sci } = it.data;
+      c[0] = clamp((math - 450) / 10); inputs.C1 = `matematică: ${math} puncte`;
+      c[1] = clamp((read - 450) / 10); inputs.C2 = `citire: ${read} puncte`;
+      c[2] = clamp((sci - 450) / 10); inputs.C3 = `științe: ${sci} puncte`;
     }
     const score = +(c.map((v) => v ?? 5).reduce((s, v, i) => s + v * W[i], 0) / 100).toFixed(2);
     const met = c.filter((v) => v != null && v >= 7).length;

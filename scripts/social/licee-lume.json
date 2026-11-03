@@ -1,0 +1,536 @@
+{
+ "_doc": "Cele mai bune sisteme de licee din lume, pe țări și economii (nu există un clasament mondial al școlilor). C1–C3 se calculează din scorurile PISA 2022; restul sunt judecată.",
+ "date": "2026-11-03",
+ "set": "licee-lume",
+ "region": "lume",
+ "items": [
+  {
+   "id": "singapore",
+   "name": "Singapore",
+   "nameEn": "Singapore",
+   "data": {
+    "math": 575,
+    "read": 543,
+    "sci": 561
+   },
+   "c": [
+    null,
+    null,
+    null,
+    7,
+    10,
+    8,
+    9,
+    8,
+    9,
+    5,
+    5,
+    7,
+    3,
+    null
+   ],
+   "why": "Cel mai bun sistem școlar din lume la PISA 2022: primul la toate cele trei probe (matematică 575, citire 543, științe 561). Predarea e în engleză, dar locurile pentru elevii străini sunt puține și cu taxe, iar presiunea examenelor e mare.",
+   "whyEn": "The world’s best school system in PISA 2022: first in all three tests (mathematics 575, reading 543, science 561). Teaching is in English, but places for foreign pupils are few and fee-paying, and exam pressure is high.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "japonia",
+   "name": "Japonia",
+   "nameEn": "Japan",
+   "data": {
+    "math": 536,
+    "read": 516,
+    "sci": 547
+   },
+   "c": [
+    null,
+    null,
+    null,
+    8,
+    9,
+    8,
+    8,
+    6,
+    3,
+    3,
+    7,
+    8,
+    4,
+    null
+   ],
+   "why": "Al doilea la științe (547) și printre primii la citire (516) și matematică (536), cu rezultate în creștere în 2022, când multe țări au scăzut. Engleza e slab învățată, iar pentru o familie străină intrarea în sistem e grea.",
+   "whyEn": "Second in science (547) and among the first in reading (516) and mathematics (536), with results rising in 2022, when many countries fell. English is poorly learned, and entering the system is hard for a foreign family.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "taiwan",
+   "name": "Taiwan",
+   "nameEn": "Taiwan",
+   "data": {
+    "math": 547,
+    "read": 515,
+    "sci": 537
+   },
+   "c": [
+    null,
+    null,
+    null,
+    6,
+    10,
+    8,
+    8,
+    7,
+    6,
+    3,
+    7,
+    7,
+    3,
+    null
+   ],
+   "why": "Al treilea la matematică (547), cu una dintre cele mai mari ponderi de elevi de top din lume; diferențele dintre elevi sunt însă mari, iar presiunea examenelor e puternică.",
+   "whyEn": "Third in mathematics (547), with one of the largest shares of top performers in the world; but the gaps between pupils are large and exam pressure is strong.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "macao",
+   "name": "Macao (China)",
+   "nameEn": "Macao (China)",
+   "data": {
+    "math": 552,
+    "read": 510,
+    "sci": 543
+   },
+   "c": [
+    null,
+    null,
+    null,
+    9,
+    8,
+    8,
+    7,
+    5,
+    6,
+    4,
+    8,
+    8,
+    5,
+    null
+   ],
+   "why": "Al doilea la matematică (552) și al treilea la științe (543), cu rezultate bune pentru aproape toți elevii, indiferent de familie. Un sistem mic, puțin mediatizat.",
+   "whyEn": "Second in mathematics (552) and third in science (543), with good results for almost all pupils, whatever their family. A small, little-publicised system.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "coreea",
+   "name": "Coreea de Sud",
+   "nameEn": "South Korea",
+   "data": {
+    "math": 527,
+    "read": 515,
+    "sci": 528
+   },
+   "c": [
+    null,
+    null,
+    null,
+    7,
+    9,
+    7,
+    9,
+    5,
+    6,
+    3,
+    6,
+    7,
+    2,
+    null
+   ],
+   "why": "Printre primii la toate probele (matematică 527, citire 515, științe 528), cu profesori foarte bine pregătiți și respectați. Rezultatele au un cost: meditații private aproape generale și una dintre cele mai mari presiuni asupra elevilor din lume.",
+   "whyEn": "Among the first in all tests (mathematics 527, reading 515, science 528), with very well trained and respected teachers. The results come at a cost: near-universal private tutoring and some of the heaviest pressure on pupils in the world.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "hong-kong",
+   "name": "Hong Kong (China)",
+   "nameEn": "Hong Kong (China)",
+   "data": {
+    "math": 540,
+    "read": 500,
+    "sci": 520
+   },
+   "c": [
+    null,
+    null,
+    null,
+    7,
+    8,
+    7,
+    7,
+    5,
+    8,
+    6,
+    6,
+    4,
+    3,
+    null
+   ],
+   "why": "Al patrulea la matematică (540), cu predare și în engleză; la citire a scăzut însă puternic față de 2018, iar OCDE cere prudență la interpretare, pentru că eșantionul nu a respectat toate standardele.",
+   "whyEn": "Fourth in mathematics (540), with teaching in English too; but reading fell sharply compared with 2018, and the OECD asks for caution in interpretation, because the sample did not meet all standards.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "estonia",
+   "name": "Estonia",
+   "nameEn": "Estonia",
+   "data": {
+    "math": 510,
+    "read": 511,
+    "sci": 526
+   },
+   "c": [
+    null,
+    null,
+    null,
+    9,
+    9,
+    10,
+    7,
+    6,
+    7,
+    6,
+    7,
+    8,
+    7,
+    null
+   ],
+   "why": "Cel mai bun sistem din Europa și al șaptelea din lume la matematică (510), cu rezultate foarte bune și pentru elevii din familii modeste, licee de stat gratuite și o presiune mică asupra elevilor.",
+   "whyEn": "Europe’s best system and seventh in the world in mathematics (510), with very good results for pupils from modest families too, free state high schools and little pressure on pupils.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "elvetia",
+   "name": "Elveția",
+   "nameEn": "Switzerland",
+   "data": {
+    "math": 508,
+    "read": 483,
+    "sci": 503
+   },
+   "c": [
+    null,
+    null,
+    null,
+    7,
+    9,
+    9,
+    9,
+    10,
+    8,
+    4,
+    7,
+    7,
+    5,
+    null
+   ],
+   "why": "Al optulea din lume la matematică (508), cu un sistem dual în care ucenicia e la fel de respectată ca liceul teoretic; citirea e mai slabă (483).",
+   "whyEn": "Eighth in the world in mathematics (508), with a dual system in which apprenticeship is as respected as academic high school; reading is weaker (483).",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "canada",
+   "name": "Canada",
+   "nameEn": "Canada",
+   "data": {
+    "math": 497,
+    "read": 507,
+    "sci": 515
+   },
+   "c": [
+    null,
+    null,
+    null,
+    8,
+    7,
+    9,
+    8,
+    6,
+    7,
+    9,
+    8,
+    4,
+    8,
+    null
+   ],
+   "why": "Al optulea la citire (507) și la științe (515), cu școli publice bune, gratuite, predare în engleză sau franceză și o primire bună pentru familiile de imigranți. Matematica a scăzut față de testele anterioare.",
+   "whyEn": "Eighth in reading (507) and science (515), with good, free public schools, teaching in English or French and a good welcome for immigrant families. Mathematics has fallen compared with earlier tests.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "irlanda",
+   "name": "Irlanda",
+   "nameEn": "Ireland",
+   "data": {
+    "math": 492,
+    "read": 516,
+    "sci": 504
+   },
+   "c": [
+    null,
+    null,
+    null,
+    8,
+    8,
+    10,
+    7,
+    6,
+    9,
+    8,
+    7,
+    7,
+    7,
+    null
+   ],
+   "why": "Al doilea din lume la citire (516), la egalitate cu Japonia, cu predare în engleză și o comunitate românească mare; la matematică (492) e mai jos.",
+   "whyEn": "Second in the world in reading (516), level with Japan, with teaching in English and a large Romanian community; it is lower in mathematics (492).",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  },
+  {
+   "id": "australia",
+   "name": "Australia",
+   "nameEn": "Australia",
+   "data": {
+    "math": 487,
+    "read": 498,
+    "sci": 507
+   },
+   "c": [
+    null,
+    null,
+    null,
+    6,
+    6,
+    6,
+    6,
+    7,
+    3,
+    9,
+    7,
+    3,
+    8,
+    null
+   ],
+   "why": "Al zecelea la științe (507), cu predare în engleză și un sistem deschis familiilor de imigranți. Rezultatele scad de mai bine de un deceniu, iar o parte mare a elevilor merg la școli private.",
+   "whyEn": "Tenth in science (507), with teaching in English and a system open to immigrant families. Results have been falling for more than a decade, and a large share of pupils attend private schools.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ]
+  }
+ ]
+}

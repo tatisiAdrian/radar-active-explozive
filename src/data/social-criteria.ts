@@ -410,4 +410,52 @@ const liceeEu: SetDef = {
   ],
 };
 
-export const SOCIAL_SETS: Record<string, SetDef> = { licee, 'licee-eu': liceeEu, facultati, meserii, angajatori, localitati };
+/** Variantele mondiale: aceleași 14 condiții, cu textul adaptat acolo unde setul de bază vorbește despre România sau UE. */
+type Over = { ro?: Record<number, [string, string]>; en?: Record<number, [string, string]>; exRo?: Record<number, Three>; exEn?: Record<number, Three> };
+const world = (s: SetDef, o: Over): SetDef => ({
+  ro: s.ro.map((x, i) => o.ro?.[i] ?? x),
+  en: s.en.map((x, i) => o.en?.[i] ?? x),
+  exRo: s.exRo.map((x, i) => o.exRo?.[i] ?? x),
+  exEn: s.exEn.map((x, i) => o.exEn?.[i] ?? x),
+});
+const liceeLume = world(liceeEu, {
+  exRo: {
+    0: ['Sub media OCDE la matematică.', 'Aproape de media OCDE la matematică.', 'Printre cele mai bune scoruri la matematică din lume.'],
+    1: ['Sub media OCDE la citire.', 'Aproape de media OCDE la citire.', 'Printre cele mai bune scoruri la citire din lume.'],
+    2: ['Sub media OCDE la științe.', 'Aproape de media OCDE la științe.', 'Printre cele mai bune scoruri la științe din lume.'],
+  },
+  exEn: {
+    0: ['Below the OECD average in mathematics.', 'Close to the OECD average in mathematics.', 'Among the best mathematics scores in the world.'],
+    1: ['Below the OECD average in reading.', 'Close to the OECD average in reading.', 'Among the best reading scores in the world.'],
+    2: ['Below the OECD average in science.', 'Close to the OECD average in science.', 'Among the best science scores in the world.'],
+  },
+});
+const facultatiLume = world(facultati, {
+  ro: { 0: ['Recunoaștere QS', 'Poziția în clasamentul mondial QS 2026.'] },
+  en: { 0: ['QS recognition', 'Position in the 2026 QS world ranking.'] },
+  exRo: { 0: ['Poziție slabă sau absentă în QS.', 'Poziție medie în QS.', 'Printre primele locuri din lume în QS.'] },
+  exEn: { 0: ['A weak or missing QS position.', 'An average QS position.', 'Among the top places in the world in QS.'] },
+});
+const meseriiLume = world(meserii, {
+  ro: { 0: ['Câștig', 'Salariul față de media din țările în care e cerută.'], 7: ['Mobilitate internațională', 'Calificarea e recunoscută și cerută în multe țări.'] },
+  en: { 0: ['Earnings', 'Pay compared with the average in the countries where it is in demand.'], 7: ['International mobility', 'The qualification is recognised and in demand in many countries.'] },
+  exRo: { 7: ['Greu de practicat în altă țară.', 'Parțial recunoscută.', 'Cerută și recunoscută în multe țări.'] },
+  exEn: { 7: ['Hard to practise in another country.', 'Partly recognised.', 'In demand and recognised in many countries.'] },
+});
+const angajatoriLume = world(angajatori, {
+  ro: { 0: ['Dorința candidaților', 'Locul în clasamentul mondial Forbes al celor mai buni angajatori.'], 6: ['Prezență globală', 'Locuri de muncă în multe țări.'] },
+  en: { 0: ['Candidate demand', 'Place in the Forbes world ranking of the best employers.'], 6: ['Global presence', 'Jobs in many countries.'] },
+  exRo: { 0: ['Puțin dorit de angajați.', 'Apreciat de mulți angajați.', 'Printre cei mai apreciați angajatori din lume.'], 6: ['Prezent în puține țări.', 'Pe câteva continente.', 'În toată lumea.'] },
+  exEn: { 0: ['Little valued by employees.', 'Valued by many employees.', 'Among the most valued employers in the world.'], 6: ['Present in few countries.', 'On a few continents.', 'All over the world.'] },
+});
+const localitatiLume = world(localitati, {
+  ro: { 0: ['Venituri', 'Nivelul salariilor din oraș.'], 5: ['Servicii publice', 'Calitatea administrației, a transportului și a serviciilor publice.'] },
+  en: { 0: ['Income', 'The level of wages in the city.'], 5: ['Public services', 'The quality of administration, transport and public services.'] },
+  exRo: { 2: ['Puțin atractiv.', 'Atractiv.', 'Printre cele mai dorite orașe din lume.'], 5: ['Servicii publice slabe.', 'Servicii publice medii.', 'Servicii publice excelente.'] },
+  exEn: { 2: ['Little appeal.', 'Attractive.', 'Among the most desired cities in the world.'], 5: ['Weak public services.', 'Average public services.', 'Excellent public services.'] },
+});
+
+export const SOCIAL_SETS: Record<string, SetDef> = {
+  licee, 'licee-eu': liceeEu, facultati, meserii, angajatori, localitati,
+  'licee-lume': liceeLume, 'facultati-lume': facultatiLume, 'meserii-lume': meseriiLume, 'angajatori-lume': angajatoriLume, 'localitati-lume': localitatiLume,
+};

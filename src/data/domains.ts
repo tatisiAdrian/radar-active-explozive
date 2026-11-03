@@ -384,6 +384,46 @@ export const domains: Domain[] = [
     status: 'activ',
     questions: ["În ce orașe europene se trăiește cel mai bine?", "Unde e viața bună fără prețurile din Zürich sau Copenhaga?", "Cum se compară Clujul cu marile orașe ale Europei?"],
   },
+  {
+    slug: 'licee-lume',
+    criteria: 'licee-lume',
+    title: "Cele mai bune sisteme de licee din lume",
+    summary: "11 sisteme de licee din lume, comparate pe țări și economii: scorurile PISA 2022 la matematică, citire și științe, echitate, profesori, presiunea asupra elevilor și accesul pentru familiile care se mută.",
+    status: 'activ',
+    questions: ["În ce țări din lume învață cel mai bine elevii de liceu?", "Cât costă rezultatele din Asia de Est, ca presiune asupra elevilor?", "Unde e cel mai ușor pentru o familie din România care se mută?"],
+  },
+  {
+    slug: 'facultati-lume',
+    criteria: 'facultati-lume',
+    title: "Cele mai bune universități din lume",
+    summary: "11 universități din lume, notate pe 14 condiții: clasamentul mondial QS 2026, Times Higher Education 2026, angajabilitatea, cercetarea, costurile și cât de greu e să intri.",
+    status: 'activ',
+    questions: ["Care sunt cele mai bune universități din lume?", "Care dintre ele sunt mai accesibile ca admitere și costuri?", "Cum se compară universitățile americane cu cele europene și asiatice?"],
+  },
+  {
+    slug: 'meserii-lume',
+    criteria: 'meserii-lume',
+    title: "Cele mai bune meserii în lume",
+    summary: "11 meserii, notate pe 14 condiții, pe baza raportului WEF Future of Jobs 2025 (cele mai rapide creșteri și cele mai multe locuri noi până în 2030) și a studiului ManpowerGroup 2025 privind lipsa de talente.",
+    status: 'activ',
+    questions: ["Ce meserii cresc cel mai repede în lume până în 2030?", "Care meserii creează cele mai multe locuri de muncă noi?", "Care combină câștigul bun cu rezistența la AI?"],
+  },
+  {
+    slug: 'angajatori-lume',
+    criteria: 'angajatori-lume',
+    title: "Cei mai buni angajatori din lume",
+    summary: "Primii 11 angajatori din clasamentul Forbes World’s Best Employers 2026, notați pe 14 condiții: salarii, dezvoltare, soliditate, prezență globală și șansele reale de angajare.",
+    status: 'activ',
+    questions: ["Care sunt cei mai apreciați angajatori din lume?", "La care dintre ei ai șanse reale să fii angajat?", "Ce angajatori sunt prezenți și în Europa sau în România?"],
+  },
+  {
+    slug: 'localitati-lume',
+    criteria: 'localitati-lume',
+    title: "Cele mai bune orașe din lume pentru o viață de calitate",
+    summary: "11 orașe din lume, notate pe 14 condiții: indicele EIU de calitate a vieții 2026, venituri, servicii publice, siguranță, costul locuinței față de venit și riscuri.",
+    status: 'activ',
+    questions: ["În ce orașe din lume se trăiește cel mai bine?", "Unde e viața bună fără prețurile locuințelor din Sydney sau Vancouver?", "Ce riscuri au orașele de top, de la cutremure la incendii?"],
+  },
 ];
 
 export const getDomain = (slug: string) => domains.find((d) => d.slug === slug);

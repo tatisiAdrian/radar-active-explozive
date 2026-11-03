@@ -4,7 +4,7 @@ import type { Lang } from '../data/i18n';
 
 interface Props { lang?: Lang; only?: string[]; uid?: string; compact?: boolean }
 const { lang = 'ro', only, uid = 'hr', compact = false } = Astro.props;
-const social = !!only && only.every((s) => (s.endsWith('-romania') || s.endsWith('-europa')) && !s.startsWith('startups'));
+const social = !!only && only.every((s) => (s.endsWith('-romania') || s.endsWith('-europa') || s.endsWith('-lume')) && !s.startsWith('startups'));
 const en = lang === 'en';
 const OVERVIEW = overviewFor(lang, only);
 const T = en
