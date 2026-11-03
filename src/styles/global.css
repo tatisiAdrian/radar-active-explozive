@@ -89,3 +89,8 @@ table.radar.explain td:last-child { min-width: 260px; }
 .qa-msg:empty { display: none; }
 .qa-msg { font-weight: 500; }
 .qa [hidden] { display: none !important; }
+
+.qa input[type=password] { font: inherit; padding: .55rem .7rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); width: 100%; box-sizing: border-box; }
+.qa-row { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+.qa button.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.qa form .linkish { justify-self: start; }

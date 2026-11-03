@@ -1,5 +1,5 @@
 ---
-/** Întrebările cititorilor despre raționamentul unei analize: răspunsuri publicate, autentificare cu link pe email, formular. */
+/** Întrebările cititorilor despre raționamentul unei analize: răspunsuri publicate, cont cu email verificat, formular. */
 import cfg from '../data/firebase-config.json';
 import type { Lang } from '../data/i18n';
 
@@ -11,14 +11,14 @@ const on = Boolean(cfg.apiKey && cfg.projectId);
 const T = en
   ? { h: 'Questions about the reasoning', p: 'Do you disagree with a score, or want to know why an asset is where it is? Ask. We answer with the weekly update, with sources, by email and, if you agree, here on the page.',
       pubH: 'Answered questions', pubNone: 'No answered questions on this analysis yet.', loading: 'Loading…',
-      email: 'Your email address', send: 'Send me the sign-in link', why: 'No password: we send you a link that confirms your address.',
-      confirm: 'Confirm', out: 'Sign out', name: 'Name shown with the question', namePh: 'e.g. Andrei M.', q: 'Your question', qPh: 'What would you like us to explain about this analysis?',
+      email: 'Email address', pass: 'Password (at least 8 characters)', signin: 'Sign in', signup: 'Create an account', forgot: 'Forgot your password?', why: 'When you create an account, we send you an email that confirms your address. Only verified addresses can ask questions.',
+      verified: 'I have verified', resend: 'Send the email again', out: 'Sign out', name: 'Name shown with the question', namePh: 'e.g. Andrei M.', q: 'Your question', qPh: 'What would you like us to explain about this analysis?',
       pub: 'I agree that the question and the answer may be published on this page, with the name above (never the email).',
       terms: 'I have read the', privacy: 'privacy information', submit: 'Send the question', mine: 'Your questions about this analysis', account: 'All your questions →' }
   : { h: 'Întrebări despre raționament', p: 'Nu ești de acord cu o notă sau vrei să știi de ce un activ e unde e? Întreabă. Răspundem la actualizarea săptămânală, cu surse, pe email și, dacă ești de acord, aici pe pagină.',
       pubH: 'Întrebări cu răspuns', pubNone: 'Încă nu există întrebări cu răspuns la această analiză.', loading: 'Se încarcă…',
-      email: 'Adresa ta de email', send: 'Trimite-mi linkul de autentificare', why: 'Fără parolă: îți trimitem un link care îți confirmă adresa.',
-      confirm: 'Confirmă', out: 'Ieși din cont', name: 'Numele afișat lângă întrebare', namePh: 'de exemplu, Andrei M.', q: 'Întrebarea ta', qPh: 'Ce ai vrea să-ți explicăm despre această analiză?',
+      email: 'Adresa de email', pass: 'Parola (cel puțin 8 caractere)', signin: 'Intră în cont', signup: 'Creează cont', forgot: 'Ai uitat parola?', why: 'Când îți creezi contul, îți trimitem un email care îți confirmă adresa. Doar adresele verificate pot pune întrebări.',
+      verified: 'Am verificat', resend: 'Retrimite emailul', out: 'Ieși din cont', name: 'Numele afișat lângă întrebare', namePh: 'de exemplu, Andrei M.', q: 'Întrebarea ta', qPh: 'Ce ai vrea să-ți explicăm despre această analiză?',
       pub: 'Sunt de acord ca întrebarea și răspunsul să fie publicate pe această pagină, cu numele de mai sus (niciodată emailul).',
       terms: 'Am citit', privacy: 'informarea despre confidențialitate', submit: 'Trimite întrebarea', mine: 'Întrebările tale despre această analiză', account: 'Toate întrebările tale →' };
 const privacyHref = en ? `${base}en/privacy/` : `${base}confidentialitate/`;
@@ -37,13 +37,15 @@ const accountHref = en ? `${base}en/account/` : `${base}cont/`;
   <div class="qa-card">
     <form class="qa-signin" hidden>
       <label>{T.email}<input type="email" name="email" required autocomplete="email" /></label>
-      <button type="submit">{T.send}</button>
+      <label>{T.pass}<input type="password" name="password" required minlength="8" autocomplete="current-password" /></label>
+      <div class="qa-row"><button type="submit" name="mode" value="in">{T.signin}</button><button type="submit" name="mode" value="up" class="ghost">{T.signup}</button></div>
+      <button type="button" class="linkish qa-forgot">{T.forgot}</button>
       <small class="muted">{T.why}</small>
     </form>
-    <form class="qa-confirm" hidden>
-      <label><span class="qa-confirm-l"></span><input type="email" name="email" required autocomplete="email" /></label>
-      <button type="submit">{T.confirm}</button>
-    </form>
+    <div class="qa-verify" hidden>
+      <p class="qa-verify-t"></p>
+      <div class="qa-row"><button type="button" class="qa-done">{T.verified}</button><button type="button" class="ghost qa-resend">{T.resend}</button><button type="button" class="linkish qa-out">{T.out}</button></div>
+    </div>
     <div class="qa-in" hidden>
       <p class="qa-who"><span></span> · <button type="button" class="linkish qa-out">{T.out}</button></p>
       <form class="qa-ask">
@@ -71,7 +73,7 @@ const accountHref = en ? `${base}en/account/` : `${base}cont/`;
     const t = Q.TXT[lang];
     const $ = <T extends HTMLElement>(s: string) => box.querySelector<T>(s)!;
     const msg = (s: string) => { $('.qa-msg').textContent = s; };
-    const signin = $<HTMLFormElement>('.qa-signin'), confirm = $<HTMLFormElement>('.qa-confirm'), inside = $('.qa-in');
+    const signin = $<HTMLFormElement>('.qa-signin'), inside = $('.qa-in');
 
     // Răspunsurile publicate, în limba paginii
     const pub = $('.qa-public');
@@ -88,24 +90,52 @@ const accountHref = en ? `${base}en/account/` : `${base}cont/`;
         : `<p class="muted">${t.none}</p>`;
     };
 
-    if (Q.pendingLink()) {
-      const e = Q.rememberedEmail();
-      const finish = (email: string) => Q.completeLink(email).catch(() => { msg(t.errLink); signin.hidden = false; confirm.hidden = true; });
-      if (e) finish(e);
-      else { confirm.hidden = false; $('.qa-confirm-l').textContent = t.confirm; confirm.addEventListener('submit', (ev) => { ev.preventDefault(); finish(new FormData(confirm).get('email') as string); }); }
-    }
-
-    Q.watchUser((u) => {
-      inside.hidden = !u;
-      signin.hidden = !!u || !confirm.hidden;
-      if (u) { confirm.hidden = true; $('.qa-who span').textContent = `${t.signedAs} ${u.email}`; renderMine(u).catch(() => {}); }
+    const verify = $('.qa-verify');
+    const code = (e: unknown) => (e as { code?: string })?.code ?? '';
+    const show = (u: import('firebase/auth').User | null) => {
+      signin.hidden = !!u;
+      verify.hidden = !u || u.emailVerified;
+      inside.hidden = !u || !u.emailVerified;
+      if (u && !u.emailVerified) $('.qa-verify-t').textContent = t.verify;
+      if (u && u.emailVerified) { $('.qa-who span').textContent = `${t.signedAs} ${u.email}`; renderMine(u).catch(() => {}); }
+    };
+    Q.watchUser(async (u) => {
+      if (u && !u.emailVerified) await Q.refreshVerified(u).catch(() => false);
+      show(u);
     });
 
     signin.addEventListener('submit', async (ev) => {
       ev.preventDefault();
-      try { await Q.sendLink(new FormData(signin).get('email') as string, lang); msg(t.sent); } catch { msg(t.err); }
+      const f = new FormData(signin);
+      const mode = (ev as SubmitEvent).submitter?.getAttribute('value');
+      const email = String(f.get('email')).trim(), pass = String(f.get('password'));
+      msg('');
+      try {
+        if (mode === 'up') { await Q.register(email, pass, lang); msg(t.sent); }
+        else await Q.login(email, pass);
+      } catch (e) {
+        const c = code(e);
+        msg(c === 'auth/email-already-in-use' ? t.exists : c === 'auth/weak-password' ? t.weak : c.startsWith('auth/invalid') || c === 'auth/wrong-password' || c === 'auth/user-not-found' ? t.wrong : t.err);
+      }
     });
-    $('.qa-out').addEventListener('click', () => Q.logout());
+    $('.qa-forgot').addEventListener('click', async () => {
+      const email = String(new FormData(signin).get('email') ?? '').trim();
+      if (!email) { signin.querySelector<HTMLInputElement>('input[name=email]')!.focus(); return; }
+      try { await Q.resetPassword(email, lang); } catch { /* același mesaj, ca să nu dezvăluim ce adrese au cont */ }
+      msg(t.reset);
+    });
+    $('.qa-done').addEventListener('click', async () => {
+      const { getAuth } = await import('firebase/auth');
+      const u = getAuth().currentUser; if (!u) return;
+      const ok = await Q.refreshVerified(u).catch(() => false);
+      if (ok) { msg(''); show(u); } else msg(t.notyet);
+    });
+    $('.qa-resend').addEventListener('click', async () => {
+      const { getAuth } = await import('firebase/auth');
+      const u = getAuth().currentUser; if (!u) return;
+      try { await Q.resendVerification(u, lang); msg(t.resent); } catch { msg(t.err); }
+    });
+    box.querySelectorAll('.qa-out').forEach((b) => b.addEventListener('click', () => { msg(''); Q.logout(); }));
 
     const form = $<HTMLFormElement>('.qa-ask');
     form.addEventListener('submit', async (ev) => {

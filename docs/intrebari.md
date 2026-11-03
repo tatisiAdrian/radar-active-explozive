@@ -1,7 +1,7 @@
 # Întrebările cititorilor
 
 ## Cum funcționează
-1. Pe fiecare pagină de analiză, secțiunea „Întrebări despre raționament” (componenta `AskBox`) permite autentificarea cu un link trimis pe email (Firebase Auth, „Email link”), care verifică adresa.
+1. Pe fiecare pagină de analiză, secțiunea „Întrebări despre raționament” (componenta `AskBox`) permite crearea unui cont cu email și parolă (Firebase Auth); adresa se verifică printr-un email, iar doar adresele verificate pot pune întrebări.
 2. Întrebarea se salvează în Firestore, colecția `questions` (regulile sunt în `firestore.rules`).
 3. Vinerea, workflow-ul `qa.yml` exportă întrebările fără răspuns în depozitul PRIVAT de întrebări (`pending.json`). Adresele de email nu ajung niciodată în depozitul public.
 4. Sarcina săptămânală Claude citește `pending.json`, pregătește răspunsurile (RO și EN, cu surse din analize) și le trimite lui Daniel spre aprobare.
