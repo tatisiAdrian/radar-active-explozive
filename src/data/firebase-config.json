@@ -1,7 +1,7 @@
 {
  "_doc": "Configurația publică a aplicației web Firebase (nu e secretă: o vede orice browser). Câtă vreme apiKey e gol, secțiunea de întrebări nu apare pe site.",
- "apiKey": "",
- "authDomain": "",
- "projectId": "",
- "appId": ""
+ "apiKey": "AIzaSyBr1Iv3QRobMM9l0F5Dgz5RXWGZJlHgPHY",
+ "authDomain": "radar-active-explozive.firebaseapp.com",
+ "projectId": "radar-active-explozive",
+ "appId": "1:608337289331:web:3905252fc84ca3110a8a06"
 }
