@@ -14,4 +14,5 @@
 
 ## Configurare (o singură dată)
 - `src/data/firebase-config.json`: configurația publică a aplicației web. Cât timp e goală, secțiunea nu apare.
-- Un singur secret, `FIREBASE_SERVICE_ACCOUNT` (cheia contului de serviciu Firebase), pus în depozitul privat `radar-intrebari` (Settings → Secrets and variables → Actions). Workflow-ul rulează acolo și scrie cu tokenul automat al GitHub.
+- Varianta fără chei: pagina /admin/ (doar adresa verificată a lui Daniel, regula `isAdmin` din firestore.rules) arată întrebările, primește răspunsurile pregătite de Claude (JSON) și le publică; butonul „Trimite pe email” deschide emailul cu răspunsul.
+- Varianta automată (opțională): un singur secret, `FIREBASE_SERVICE_ACCOUNT` (cheia contului de serviciu Firebase), pus în depozitul privat `radar-intrebari` (Settings → Secrets and variables → Actions). Workflow-ul rulează acolo și scrie cu tokenul automat al GitHub.

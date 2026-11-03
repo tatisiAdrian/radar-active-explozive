@@ -1,0 +1,127 @@
+---
+/** Pagina de administrare a întrebărilor (doar pentru Daniel; regulile Firestore blochează pe oricine altcineva). */
+import Base from '../../layouts/Base.astro';
+import { domains } from '../../data/domains';
+const base = import.meta.env.BASE_URL;
+const names = Object.fromEntries(domains.map((d) => [d.slug, { t: d.title, href: `${base}domenii/${d.slug}/` }]));
+---
+<Base lang="ro" title="Administrare întrebări" description="Pagină internă." noindex>
+  <h1>Administrare întrebări</h1>
+  <section class="qa qa-admin" data-names={JSON.stringify(names)}>
+    <div class="qa-card">
+      <form class="qa-signin" hidden>
+        <label>Adresa de email<input type="email" name="email" required autocomplete="email" /></label>
+        <label>Parola<input type="password" name="password" required autocomplete="current-password" /></label>
+        <button type="submit">Intră în cont</button>
+        <small class="muted">Folosește contul creat din secțiunea de întrebări a site-ului, cu adresa nitadanielcristian@gmail.com verificată.</small>
+      </form>
+      <p class="qa-who" hidden><span></span> · <button type="button" class="linkish qa-out">Ieși din cont</button></p>
+      <p class="qa-msg" role="status" aria-live="polite"></p>
+    </div>
+
+    <div class="qa-tools" hidden>
+      <div class="qa-row">
+        <button type="button" class="qa-f" data-f="new">Noi</button>
+        <button type="button" class="ghost qa-f" data-f="answered">Cu răspuns</button>
+        <button type="button" class="ghost qa-copy">Copiază întrebările noi pentru Claude</button>
+      </div>
+      <details class="qa-card">
+        <summary>Lipește răspunsurile pregătite de Claude</summary>
+        <p class="muted">Lipește aici textul primit de la Claude (JSON). Completează doar câmpurile de mai jos; nimic nu se publică până nu apeși „Publică” la fiecare întrebare.</p>
+        <textarea class="qa-paste" rows="6"></textarea>
+        <button type="button" class="qa-fill">Completează câmpurile</button>
+      </details>
+      <div class="qa-list"></div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  import * as Q from '../../scripts/qa';
+  const box = document.querySelector<HTMLElement>('.qa-admin')!;
+  const $ = <T extends HTMLElement>(s: string) => box.querySelector<T>(s)!;
+  const msg = (s: string) => { $('.qa-msg').textContent = s; };
+  const names: Record<string, { t: string; href: string }> = JSON.parse(box.dataset.names ?? '{}');
+  let rows: Q.MyQuestion[] = [];
+  let filter = 'new';
+
+  const card = (r: Q.MyQuestion) => `
+    <article class="qa-card qa-item" data-id="${r.id}">
+      <p><small class="muted">${Q.fmt(r.createdAt, 'ro')} · ${r.lang.toUpperCase()} · ${r.public ? 'acord de publicare' : 'doar privat'} · ${Q.esc(r.name)} · ${Q.esc(r.email ?? '')}</small><br>
+      <a href="${names[r.slug]?.href ?? '#'}">${Q.esc(names[r.slug]?.t ?? r.slug)}</a></p>
+      <p class="qa-q">${Q.esc(r.text)}</p>
+      ${r.status === 'answered' ? `<p class="qa-a"><b>Răspuns publicat:</b> ${Q.esc(r.answer ?? '')}</p>` : `
+      <label>Întrebarea, în română (pentru pagina publică)<textarea name="qro" rows="2">${r.lang === 'ro' ? Q.esc(r.text) : ''}</textarea></label>
+      <label>Întrebarea, în engleză<textarea name="qen" rows="2">${r.lang === 'en' ? Q.esc(r.text) : ''}</textarea></label>
+      <label>Răspunsul, în română<textarea name="aro" rows="5"></textarea></label>
+      <label>Răspunsul, în engleză<textarea name="aen" rows="5"></textarea></label>
+      <div class="qa-row"><button type="button" class="qa-pub">Publică</button><button type="button" class="ghost qa-mail">Trimite pe email</button></div>`}
+    </article>`;
+
+  const render = () => {
+    const list = rows.filter((r) => r.status === filter);
+    $('.qa-list').innerHTML = list.length ? list.map(card).join('') : '<p class="muted">Nicio întrebare aici.</p>';
+    box.querySelectorAll<HTMLButtonElement>('.qa-f').forEach((b) => b.classList.toggle('ghost', b.dataset.f !== filter));
+  };
+  const load = async () => { rows = await Q.allQuestions(); render(); };
+  const field = (el: Element, n: string) => (el.querySelector<HTMLTextAreaElement>(`[name=${n}]`)?.value ?? '').trim();
+
+  Q.watchUser(async (u) => {
+    if (u && !u.emailVerified) await Q.refreshVerified(u).catch(() => false);
+    const admin = Q.isAdmin(u);
+    $('.qa-signin').hidden = !!u;
+    $('.qa-who').hidden = !u;
+    $('.qa-tools').hidden = !admin;
+    if (u) $('.qa-who span').textContent = `Autentificat ca ${u.email}`;
+    if (u && !admin) msg('Acest cont nu are drept de administrare.');
+    if (admin) { msg(''); load().catch(() => msg('Nu am putut citi întrebările. Verifică regulile Firestore.')); }
+  });
+
+  $<HTMLFormElement>('.qa-signin').addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    const f = new FormData(ev.target as HTMLFormElement);
+    try { await Q.login(String(f.get('email')).trim(), String(f.get('password'))); } catch { msg('Email sau parolă greșită.'); }
+  });
+  $('.qa-out').addEventListener('click', () => Q.logout());
+  box.querySelectorAll<HTMLButtonElement>('.qa-f').forEach((b) => b.addEventListener('click', () => { filter = b.dataset.f!; render(); }));
+
+  $('.qa-copy').addEventListener('click', async () => {
+    const out = rows.filter((r) => r.status === 'new').map((r) => ({ id: r.id, analiza: r.slug, limba: r.lang, public: r.public, intrebare: r.text }));
+    try { await navigator.clipboard.writeText(JSON.stringify(out, null, 1)); msg(`Am copiat ${out.length} întrebări. Lipește-le în conversația cu Claude.`); }
+    catch { msg('Nu am putut copia automat.'); }
+  });
+
+  $('.qa-fill').addEventListener('click', () => {
+    try {
+      const data = JSON.parse($<HTMLTextAreaElement>('.qa-paste').value) as { id: string; question?: Record<string, string>; answer?: Record<string, string> }[];
+      let n = 0;
+      for (const a of data) {
+        const el = box.querySelector(`[data-id="${a.id}"]`); if (!el) continue;
+        const set = (k: string, v?: string) => { const t = el.querySelector<HTMLTextAreaElement>(`[name=${k}]`); if (t && v) t.value = v; };
+        set('qro', a.question?.ro); set('qen', a.question?.en); set('aro', a.answer?.ro); set('aen', a.answer?.en); n++;
+      }
+      msg(`Am completat ${n} răspunsuri. Verifică-le și apasă „Publică” la fiecare.`);
+    } catch { msg('Textul lipit nu e în formatul așteptat.'); }
+  });
+
+  $('.qa-list').addEventListener('click', async (ev) => {
+    const btn = (ev.target as HTMLElement).closest('button'); if (!btn) return;
+    const el = btn.closest<HTMLElement>('[data-id]')!; const r = rows.find((x) => x.id === el.dataset.id)!;
+    const question = { ro: field(el, 'qro'), en: field(el, 'qen') };
+    const answer = { ro: field(el, 'aro'), en: field(el, 'aen') };
+    if (btn.classList.contains('qa-mail')) {
+      const body = answer[r.lang] || answer.ro || answer.en;
+      const subject = r.lang === 'en' ? 'Your question on the Explosive Assets Radar' : 'Întrebarea ta de pe Radar Active Explozive';
+      const intro = r.lang === 'en' ? `Hello, ${r.name},\n\nYou asked:\n"${r.text}"\n\nOur answer:\n` : `Bună, ${r.name},\n\nAi întrebat:\n„${r.text}”\n\nRăspunsul nostru:\n`;
+      location.href = `mailto:${encodeURIComponent(r.email ?? '')}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(intro + body)}`;
+      return;
+    }
+    if (btn.classList.contains('qa-pub')) {
+      if (!(answer[r.lang] || answer.ro)) { msg('Scrie întâi răspunsul.'); return; }
+      if (r.public && (!question.ro || !question.en || !answer.ro || !answer.en)) { msg('Întrebarea va fi publică: completează întrebarea și răspunsul în ambele limbi.'); return; }
+      btn.disabled = true;
+      try { await Q.publishAnswer(r, question, answer); msg('Răspuns publicat.'); await load(); }
+      catch { msg('Nu am putut publica. Verifică regulile Firestore.'); btn.disabled = false; }
+    }
+  });
+</script>

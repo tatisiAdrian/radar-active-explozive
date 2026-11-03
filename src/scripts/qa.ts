@@ -4,11 +4,11 @@
  */
 import { initializeApp, type FirebaseApp } from 'firebase/app';
 import { createUserWithEmailAndPassword, getAuth, getIdToken, onAuthStateChanged, reload, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, type Auth, type User } from 'firebase/auth';
-import { addDoc, collection, deleteDoc, doc, getDocs, getFirestore, query, serverTimestamp, where, type Firestore, type Timestamp } from 'firebase/firestore';
+import { addDoc, collection, deleteDoc, doc, getDocs, getFirestore, query, serverTimestamp, setDoc, updateDoc, where, type Firestore, type Timestamp } from 'firebase/firestore';
 import cfg from '../data/firebase-config.json';
 
 export type Lang = 'ro' | 'en';
-export interface MyQuestion { id: string; slug: string; lang: Lang; name: string; text: string; public: boolean; status: string; answer?: string; createdAt?: Timestamp; answeredAt?: Timestamp }
+export interface MyQuestion { id: string; slug: string; lang: Lang; name: string; email?: string; text: string; public: boolean; status: string; answer?: string; createdAt?: Timestamp; answeredAt?: Timestamp }
 export interface PublicQA { id: string; slug: string; name: string; q: Record<Lang, string>; a: Record<Lang, string>; answeredAt?: Timestamp }
 
 export const configured = Boolean(cfg.apiKey && cfg.projectId);
@@ -67,6 +67,22 @@ export async function publicAnswers(slug?: string): Promise<PublicQA[]> {
   const c = collection(db, 'qa_public');
   const snap = await getDocs(slug ? query(c, where('slug', '==', slug)) : c);
   return snap.docs.map((d) => ({ id: d.id, ...(d.data() as Omit<PublicQA, 'id'>) })).sort((a, b) => (b.answeredAt?.seconds ?? 0) - (a.answeredAt?.seconds ?? 0));
+}
+
+/** Administrare: doar adresa verificată a lui Daniel (aceeași regulă e în firestore.rules). */
+export const ADMIN_EMAIL = 'nitadanielcristian@gmail.com';
+export const isAdmin = (u: User | null) => !!u && u.emailVerified && u.email === ADMIN_EMAIL;
+
+export async function allQuestions(): Promise<MyQuestion[]> {
+  const snap = await getDocs(collection(init().db, 'questions'));
+  return snap.docs.map((d) => ({ id: d.id, ...(d.data() as Omit<MyQuestion, 'id'>) })).sort((a, b) => (a.createdAt?.seconds ?? 0) - (b.createdAt?.seconds ?? 0));
+}
+
+/** Publică răspunsul: în întrebare (cititorul îl vede în cont) și, cu acordul lui, în qa_public (apare pe pagina analizei). */
+export async function publishAnswer(q: MyQuestion, question: Record<Lang, string>, answer: Record<Lang, string>) {
+  const { db } = init();
+  await updateDoc(doc(db, 'questions', q.id), { status: 'answered', answer: answer[q.lang] || answer.ro || answer.en, answeredAt: serverTimestamp() });
+  if (q.public) await setDoc(doc(db, 'qa_public', q.id), { slug: q.slug, name: q.name, q: question, a: answer, answeredAt: serverTimestamp() });
 }
 
 export const fmt = (t: Timestamp | undefined, lang: Lang) =>

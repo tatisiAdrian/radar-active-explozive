@@ -1,11 +1,15 @@
 rules_version = '2';
 // Regulile bazei de date pentru întrebările cititorilor. Se copiază în consola Firebase: Firestore → Rules.
 // Cititorii pot crea întrebări doar cu adresa verificată și își pot vedea sau șterge doar întrebările proprii.
-// Răspunsurile publice (qa_public) se pot citi de oricine; scrie în ele doar fluxul săptămânal (cont de serviciu).
+// Administratorul (adresa verificată a lui Daniel) vede toate întrebările și publică răspunsurile.
+// Răspunsurile publice (qa_public) se pot citi de oricine.
 service cloud.firestore {
   match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == 'nitadanielcristian@gmail.com' && request.auth.token.email_verified == true;
+    }
     match /questions/{id} {
-      allow read, delete: if request.auth != null && resource.data.uid == request.auth.uid;
+      allow read, delete: if isAdmin() || (request.auth != null && resource.data.uid == request.auth.uid);
       allow create: if request.auth != null
         && request.auth.token.email_verified == true
         && request.resource.data.keys().hasOnly(['uid', 'email', 'name', 'slug', 'lang', 'text', 'public', 'createdAt', 'status'])
@@ -18,11 +22,11 @@ service cloud.firestore {
         && request.resource.data.public is bool
         && request.resource.data.createdAt == request.time
         && request.resource.data.status == 'new';
-      allow update: if false;
+      allow update: if isAdmin() && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'answer', 'answeredAt']);
     }
     match /qa_public/{id} {
       allow read: if true;
-      allow write: if false;
+      allow write: if isAdmin();
     }
   }
 }

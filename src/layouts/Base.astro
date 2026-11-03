@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
-interface Props { title: string; description?: string; image?: string; lang?: 'ro' | 'en'; alt?: string }
-const { title, description: desc0,  image = 'images/crypto-1600.jpg', lang = 'ro', alt } = Astro.props;
+interface Props { title: string; description?: string; image?: string; lang?: 'ro' | 'en'; alt?: string; noindex?: boolean }
+const { title, description: desc0,  image = 'images/crypto-1600.jpg', lang = 'ro', alt, noindex = false } = Astro.props;
 const en = lang === 'en';
 const description = desc0 ?? (en ? 'Reasoned analyses based on real statistical data and verifiable sources.' : 'Analize argumentate, bazate pe date statistice reale și surse verificabile.');
 const base = import.meta.env.BASE_URL;
@@ -15,6 +15,7 @@ const canonical = Astro.site ? new URL(path, Astro.site).href : path;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <title>{title} · {en ? 'Explosive Assets Radar' : 'Radar Active Explozive'}</title>
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content="website" />
