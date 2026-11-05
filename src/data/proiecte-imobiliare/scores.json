@@ -1,5 +1,7 @@
 {
  "date": "2026-11-05",
+ "snapshot": "proiecte-imobiliare-r2-2026-11-05",
+ "previousSnapshot": "proiecte-imobiliare-2026-11-05",
  "updatedAt": "2026-11-05",
  "rows": [
   {
@@ -35,11 +37,25 @@
      "https://www.mitsuifudosan.co.jp/english/corporate/ir/"
     ]
    ],
+   "v": [
+    10,
+    10,
+    8,
+    10,
+    9,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Raportări auditate la bursa din Tokyo și peste 80 de ani de istoric, cu chiriași și parteneri cu nume.",
+   "vwhyEn": "Audited filings on the Tokyo exchange and more than 80 years of history, with named tenants and partners.",
    "inputs": {
     "C12": "acțiunea +4,7% în două luni (Yahoo Finance, 8801.T)"
    },
-   "score": 7.34,
-   "met": 11,
+   "score": 7.74,
+   "met": 19,
+   "met14": 11,
+   "trust": 8,
    "price": {
     "symbol": "8801.T",
     "url": "https://finance.yahoo.com/quote/8801.T",
@@ -84,87 +100,6 @@
    }
   },
   {
-   "id": "welltower",
-   "name": "Welltower (locuințe pentru seniori)",
-   "nameEn": "Welltower (senior housing)",
-   "stage": "Listată (NYSE: WELL)",
-   "stageEn": "Listed (NYSE: WELL)",
-   "region": "SUA, Canada, Regatul Unit",
-   "kind": "Locuințe pentru seniori",
-   "kindEn": "Senior housing",
-   "priceId": "pi-welltower",
-   "c": [
-    9,
-    8,
-    7,
-    7,
-    9,
-    8,
-    7,
-    7,
-    9,
-    3,
-    6,
-    5,
-    4,
-    8
-   ],
-   "why": "Îmbătrânirea populației crește cererea pentru locuințe cu îngrijire, iar construcțiile noi au fost puține după pandemie, deci gradul de ocupare urcă. Fondul e foarte bun, dar piața l-a recunoscut deja: evaluarea e printre cele mai mari din sectorul imobiliar listat.",
-   "sources": [
-    [
-     "Welltower, relația cu investitorii",
-     "https://welltower.com/investors/"
-    ]
-   ],
-   "inputs": {
-    "C12": "acțiunea -0,7% în două luni (Yahoo Finance, WELL)"
-   },
-   "score": 7.18,
-   "met": 10,
-   "price": {
-    "symbol": "WELL",
-    "url": "https://finance.yahoo.com/quote/WELL",
-    "points": [
-     [
-      "2026-09-04",
-      236.17
-     ],
-     [
-      "2026-09-11",
-      235.62
-     ],
-     [
-      "2026-09-18",
-      228.87
-     ],
-     [
-      "2026-09-25",
-      231.37
-     ],
-     [
-      "2026-10-02",
-      227.71
-     ],
-     [
-      "2026-10-09",
-      225.47
-     ],
-     [
-      "2026-10-16",
-      234.85
-     ],
-     [
-      "2026-10-23",
-      237.32
-     ],
-     [
-      "2026-10-30",
-      234.6
-     ]
-    ]
-   }
-  },
-  {
    "id": "nepi-rockcastle",
    "name": "NEPI Rockcastle (mall-uri în Europa Centrală și de Est)",
    "nameEn": "NEPI Rockcastle (malls in Central and Eastern Europe)",
@@ -197,11 +132,25 @@
      "https://nepirockcastle.com/investors/"
     ]
    ],
+   "v": [
+    10,
+    10,
+    8,
+    9,
+    8,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Raportări auditate la bursele din Johannesburg și Amsterdam, chiriași mari cu nume; a revenit repede după pandemie.",
+   "vwhyEn": "Audited filings on the Johannesburg and Amsterdam exchanges, large named tenants; it recovered quickly after the pandemic.",
    "inputs": {
     "C12": "acțiunea -4,4% în două luni (Yahoo Finance, NRP.JO)"
    },
-   "score": 7,
-   "met": 10,
+   "score": 7.39,
+   "met": 18,
+   "met14": 10,
+   "trust": 8,
    "price": {
     "symbol": "NRP.JO",
     "url": "https://finance.yahoo.com/quote/NRP.JO",
@@ -246,87 +195,6 @@
    }
   },
   {
-   "id": "equinix",
-   "name": "Equinix (centre de date)",
-   "nameEn": "Equinix (data centres)",
-   "stage": "Listată (NASDAQ: EQIX)",
-   "stageEn": "Listed (NASDAQ: EQIX)",
-   "region": "Global",
-   "kind": "Centre de date",
-   "kindEn": "Data centres",
-   "priceId": "pi-equinix",
-   "c": [
-    9,
-    8,
-    7,
-    9,
-    9,
-    8,
-    6,
-    7,
-    9,
-    5,
-    6,
-    4,
-    5,
-    7
-   ],
-   "why": "Cea mai mare rețea de centre de date de interconectare din lume, cu peste 260 de clădiri în peste 70 de orașe. Cererea pentru inteligență artificială și cloud ține gradul de ocupare ridicat și chiriile în creștere. Evaluarea e deja ridicată, iar consumul de energie și accesul la rețea sunt principalele limite.",
-   "sources": [
-    [
-     "Equinix, relația cu investitorii",
-     "https://investor.equinix.com/"
-    ]
-   ],
-   "inputs": {
-    "C12": "acțiunea -2,2% în două luni (Yahoo Finance, EQIX)"
-   },
-   "score": 7.3,
-   "met": 9,
-   "price": {
-    "symbol": "EQIX",
-    "url": "https://finance.yahoo.com/quote/EQIX",
-    "points": [
-     [
-      "2026-09-04",
-      1035.98
-     ],
-     [
-      "2026-09-11",
-      1037.72
-     ],
-     [
-      "2026-09-18",
-      1021.34
-     ],
-     [
-      "2026-09-25",
-      1008.08
-     ],
-     [
-      "2026-10-02",
-      1025.72
-     ],
-     [
-      "2026-10-09",
-      1026.06
-     ],
-     [
-      "2026-10-16",
-      985.98
-     ],
-     [
-      "2026-10-23",
-      955.03
-     ],
-     [
-      "2026-10-30",
-      1013.7
-     ]
-    ]
-   }
-  },
-  {
    "id": "prologis",
    "name": "Prologis (parcuri logistice)",
    "nameEn": "Prologis (logistics parks)",
@@ -359,11 +227,25 @@
      "https://ir.prologis.com/"
     ]
    ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Rapoarte auditate la SEC, cel mai mare proprietar logistic din lume, a trecut bine prin criza dobânzilor din 2022–2023.",
+   "vwhyEn": "Audited SEC reports, the world’s largest logistics owner, came through the 2022–2023 rate shock well.",
    "inputs": {
     "C12": "acțiunea -6,8% în două luni (Yahoo Finance, PLD)"
    },
-   "score": 7.16,
-   "met": 9,
+   "score": 7.63,
+   "met": 17,
+   "met14": 9,
+   "trust": 8,
    "price": {
     "symbol": "PLD",
     "url": "https://finance.yahoo.com/quote/PLD",
@@ -408,6 +290,101 @@
    }
   },
   {
+   "id": "welltower",
+   "name": "Welltower (locuințe pentru seniori)",
+   "nameEn": "Welltower (senior housing)",
+   "stage": "Listată (NYSE: WELL)",
+   "stageEn": "Listed (NYSE: WELL)",
+   "region": "SUA, Canada, Regatul Unit",
+   "kind": "Locuințe pentru seniori",
+   "kindEn": "Senior housing",
+   "priceId": "pi-welltower",
+   "c": [
+    9,
+    8,
+    7,
+    7,
+    9,
+    8,
+    7,
+    7,
+    9,
+    3,
+    6,
+    5,
+    4,
+    8
+   ],
+   "why": "Îmbătrânirea populației crește cererea pentru locuințe cu îngrijire, iar construcțiile noi au fost puține după pandemie, deci gradul de ocupare urcă. Fondul e foarte bun, dar piața l-a recunoscut deja: evaluarea e printre cele mai mari din sectorul imobiliar listat.",
+   "sources": [
+    [
+     "Welltower, relația cu investitorii",
+     "https://welltower.com/investors/"
+    ]
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    8,
+    8,
+    6,
+    10
+   ],
+   "vwhy": "Rapoarte auditate la SEC și istoric lung; pandemia a lovit puternic locuințele pentru seniori, iar revenirea a venit abia după 2022.",
+   "vwhyEn": "Audited SEC reports and a long history; the pandemic hit senior housing hard, and recovery only came after 2022.",
+   "inputs": {
+    "C12": "acțiunea -0,7% în două luni (Yahoo Finance, WELL)"
+   },
+   "score": 7.58,
+   "met": 17,
+   "met14": 10,
+   "trust": 7,
+   "price": {
+    "symbol": "WELL",
+    "url": "https://finance.yahoo.com/quote/WELL",
+    "points": [
+     [
+      "2026-09-04",
+      236.17
+     ],
+     [
+      "2026-09-11",
+      235.62
+     ],
+     [
+      "2026-09-18",
+      228.87
+     ],
+     [
+      "2026-09-25",
+      231.37
+     ],
+     [
+      "2026-10-02",
+      227.71
+     ],
+     [
+      "2026-10-09",
+      225.47
+     ],
+     [
+      "2026-10-16",
+      234.85
+     ],
+     [
+      "2026-10-23",
+      237.32
+     ],
+     [
+      "2026-10-30",
+      234.6
+     ]
+    ]
+   }
+  },
+  {
    "id": "segro",
    "name": "Segro (depozite logistice și centre de date)",
    "nameEn": "Segro (logistics warehouses and data centres)",
@@ -440,11 +417,25 @@
      "https://www.segro.com/investors"
     ]
    ],
+   "v": [
+    10,
+    10,
+    8,
+    10,
+    8,
+    9,
+    7,
+    10
+   ],
+   "vwhy": "Raportări auditate la bursa din Londra și istoric de peste 100 de ani; a trecut fără probleme mari prin criza dobânzilor.",
+   "vwhyEn": "Audited filings on the London exchange and more than 100 years of history; it came through the rate shock without major trouble.",
    "inputs": {
     "C12": "acțiunea -4,0% în două luni (Yahoo Finance, SGRO.L)"
    },
-   "score": 7,
-   "met": 9,
+   "score": 7.44,
+   "met": 17,
+   "met14": 9,
+   "trust": 8,
    "price": {
     "symbol": "SGRO.L",
     "url": "https://finance.yahoo.com/quote/SGRO.L",
@@ -489,6 +480,101 @@
    }
   },
   {
+   "id": "equinix",
+   "name": "Equinix (centre de date)",
+   "nameEn": "Equinix (data centres)",
+   "stage": "Listată (NASDAQ: EQIX)",
+   "stageEn": "Listed (NASDAQ: EQIX)",
+   "region": "Global",
+   "kind": "Centre de date",
+   "kindEn": "Data centres",
+   "priceId": "pi-equinix",
+   "c": [
+    9,
+    8,
+    7,
+    9,
+    9,
+    8,
+    6,
+    7,
+    9,
+    5,
+    6,
+    4,
+    5,
+    7
+   ],
+   "why": "Cea mai mare rețea de centre de date de interconectare din lume, cu peste 260 de clădiri în peste 70 de orașe. Cererea pentru inteligență artificială și cloud ține gradul de ocupare ridicat și chiriile în creștere. Evaluarea e deja ridicată, iar consumul de energie și accesul la rețea sunt principalele limite.",
+   "sources": [
+    [
+     "Equinix, relația cu investitorii",
+     "https://investor.equinix.com/"
+    ]
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    6,
+    9,
+    10
+   ],
+   "vwhy": "Rapoarte auditate depuse la SEC și decenii de istoric; în 2024 un raport al unui investitor care pariază pe scădere a dus la investigații ale autorităților americane, încă de urmărit.",
+   "vwhyEn": "Audited reports filed with the SEC and decades of history; in 2024 a short-seller report led to US regulatory inquiries, still to watch.",
+   "inputs": {
+    "C12": "acțiunea -2,2% în două luni (Yahoo Finance, EQIX)"
+   },
+   "score": 7.69,
+   "met": 16,
+   "met14": 9,
+   "trust": 7,
+   "price": {
+    "symbol": "EQIX",
+    "url": "https://finance.yahoo.com/quote/EQIX",
+    "points": [
+     [
+      "2026-09-04",
+      1035.98
+     ],
+     [
+      "2026-09-11",
+      1037.72
+     ],
+     [
+      "2026-09-18",
+      1021.34
+     ],
+     [
+      "2026-09-25",
+      1008.08
+     ],
+     [
+      "2026-10-02",
+      1025.72
+     ],
+     [
+      "2026-10-09",
+      1026.06
+     ],
+     [
+      "2026-10-16",
+      985.98
+     ],
+     [
+      "2026-10-23",
+      955.03
+     ],
+     [
+      "2026-10-30",
+      1013.7
+     ]
+    ]
+   }
+  },
+  {
    "id": "american-tower",
    "name": "American Tower (turnuri de telecomunicații și centre de date)",
    "nameEn": "American Tower (telecom towers and data centres)",
@@ -521,11 +607,25 @@
      "https://www.americantower.com/investor-relations/"
     ]
    ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Rapoarte auditate la SEC și contracte lungi cu operatori mobili cu nume; datoria mare a apăsat în perioada dobânzilor ridicate.",
+   "vwhyEn": "Audited SEC reports and long contracts with named mobile operators; high debt weighed during the period of high interest rates.",
    "inputs": {
     "C12": "acțiunea +6,8% în două luni (Yahoo Finance, AMT)"
    },
-   "score": 7.2,
-   "met": 8,
+   "score": 7.64,
+   "met": 16,
+   "met14": 8,
+   "trust": 8,
    "price": {
     "symbol": "AMT",
     "url": "https://finance.yahoo.com/quote/AMT",
@@ -602,11 +702,25 @@
      "https://www.goodman.com/investor-centre"
     ]
    ],
+   "v": [
+    10,
+    10,
+    8,
+    10,
+    9,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Raportări auditate la bursa din Sydney, parteneri instituționali cu nume și creștere și în perioada dobânzilor mari.",
+   "vwhyEn": "Audited filings on the Sydney exchange, named institutional partners and growth even during the period of high rates.",
    "inputs": {
     "C12": "acțiunea -2,0% în două luni (Yahoo Finance, GMG.AX)"
    },
-   "score": 7.08,
-   "met": 8,
+   "score": 7.53,
+   "met": 16,
+   "met14": 8,
+   "trust": 8,
    "price": {
     "symbol": "GMG.AX",
     "url": "https://finance.yahoo.com/quote/GMG.AX",
@@ -683,11 +797,25 @@
      "https://ctp.eu/investors/"
     ]
    ],
+   "v": [
+    10,
+    10,
+    8,
+    8,
+    8,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Raportări auditate la Euronext Amsterdam din 2021 și chiriași cu nume; istoric mai scurt ca firmă listată.",
+   "vwhyEn": "Audited filings on Euronext Amsterdam since 2021 and named tenants; a shorter record as a listed company.",
    "inputs": {
     "C12": "acțiunea -12,8% în două luni (Yahoo Finance, CTPNV.AS)"
    },
-   "score": 6.7,
-   "met": 8,
+   "score": 7.12,
+   "met": 16,
+   "met14": 8,
+   "trust": 8,
    "price": {
     "symbol": "CTPNV.AS",
     "url": "https://finance.yahoo.com/quote/CTPNV.AS",
@@ -732,91 +860,6 @@
    }
   },
   {
-   "id": "emaar",
-   "name": "Emaar Properties (Dubai)",
-   "nameEn": "Emaar Properties (Dubai)",
-   "stage": "Listată (DFM: EMAAR)",
-   "stageEn": "Listed (DFM: EMAAR)",
-   "region": "Emiratele Arabe Unite",
-   "kind": "Dezvoltare mixtă",
-   "kindEn": "Mixed-use development",
-   "priceId": "pi-emaar",
-   "c": [
-    8,
-    7,
-    8,
-    8,
-    6,
-    8,
-    3,
-    7,
-    6,
-    7,
-    4,
-    8,
-    4,
-    4
-   ],
-   "why": "Dezvoltatorul Burj Khalifa, Dubai Mall și Dubai Creek Harbour, cu un bilanț solid și numerar mare din vânzările în avans. Piața din Dubai a întors însă: în T2 2026 prețurile au scăzut cu 4% și chiriile cu 6% față de trimestrul anterior, iar zeci de mii de locuințe noi se livrează în 2026. Războiul din regiune adaugă risc.",
-   "sources": [
-    [
-     "Emaar, relația cu investitorii",
-     "https://properties.emaar.com/en/investor-relations/"
-    ],
-    [
-     "Khaleej Times (Cushman & Wakefield), august 2026",
-     "https://www.khaleejtimes.com/business/dubai-home-prices-rents-decline-as-supply-rises-32000-more-units-due-this-year"
-    ]
-   ],
-   "inputs": {
-    "C12": "acțiunea +6,7% în două luni (Yahoo Finance, EMAAR.AE)"
-   },
-   "score": 6.4,
-   "met": 8,
-   "price": {
-    "symbol": "EMAAR.AE",
-    "url": "https://finance.yahoo.com/quote/EMAAR.AE",
-    "points": [
-     [
-      "2026-09-04",
-      10.76
-     ],
-     [
-      "2026-09-11",
-      10.94
-     ],
-     [
-      "2026-09-18",
-      11.8
-     ],
-     [
-      "2026-09-25",
-      11.68
-     ],
-     [
-      "2026-10-02",
-      11.32
-     ],
-     [
-      "2026-10-09",
-      11.26
-     ],
-     [
-      "2026-10-16",
-      11.4
-     ],
-     [
-      "2026-10-23",
-      11.38
-     ],
-     [
-      "2026-10-30",
-      11.48
-     ]
-    ]
-   }
-  },
-  {
    "id": "digital-realty",
    "name": "Digital Realty (centre de date)",
    "nameEn": "Digital Realty (data centres)",
@@ -849,11 +892,25 @@
      "https://investor.digitalrealty.com/"
     ]
    ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Rapoarte auditate la SEC, clienți și parteneri mari cu nume, istoric de peste 20 de ani.",
+   "vwhyEn": "Audited SEC reports, large named clients and partners, more than 20 years of history.",
    "inputs": {
     "C12": "acțiunea -4,1% în două luni (Yahoo Finance, DLR)"
    },
-   "score": 6.62,
-   "met": 7,
+   "score": 7.17,
+   "met": 15,
+   "met14": 7,
+   "trust": 8,
    "price": {
     "symbol": "DLR",
     "url": "https://finance.yahoo.com/quote/DLR",
@@ -930,9 +987,122 @@
      "https://www.aldar.com/en/investor-relations"
     ]
    ],
+   "v": [
+    9,
+    9,
+    7,
+    10,
+    8,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Raportări auditate la bursa din Abu Dhabi, parteneriate cu statul și istoric lung.",
+   "vwhyEn": "Audited filings on the Abu Dhabi exchange, partnerships with the state and a long history.",
    "inputs": {},
-   "score": 6.58,
-   "met": 7
+   "score": 6.98,
+   "met": 15,
+   "met14": 7,
+   "trust": 8
+  },
+  {
+   "id": "emaar",
+   "name": "Emaar Properties (Dubai)",
+   "nameEn": "Emaar Properties (Dubai)",
+   "stage": "Listată (DFM: EMAAR)",
+   "stageEn": "Listed (DFM: EMAAR)",
+   "region": "Emiratele Arabe Unite",
+   "kind": "Dezvoltare mixtă",
+   "kindEn": "Mixed-use development",
+   "priceId": "pi-emaar",
+   "c": [
+    8,
+    7,
+    8,
+    8,
+    6,
+    8,
+    3,
+    7,
+    6,
+    7,
+    4,
+    8,
+    4,
+    4
+   ],
+   "why": "Dezvoltatorul Burj Khalifa, Dubai Mall și Dubai Creek Harbour, cu un bilanț solid și numerar mare din vânzările în avans. Piața din Dubai a întors însă: în T2 2026 prețurile au scăzut cu 4% și chiriile cu 6% față de trimestrul anterior, iar zeci de mii de locuințe noi se livrează în 2026. Războiul din regiune adaugă risc.",
+   "sources": [
+    [
+     "Emaar, relația cu investitorii",
+     "https://properties.emaar.com/en/investor-relations/"
+    ],
+    [
+     "Khaleej Times (Cushman & Wakefield), august 2026",
+     "https://www.khaleejtimes.com/business/dubai-home-prices-rents-decline-as-supply-rises-32000-more-units-due-this-year"
+    ]
+   ],
+   "v": [
+    9,
+    9,
+    8,
+    10,
+    8,
+    8,
+    6,
+    10
+   ],
+   "vwhy": "Raportări auditate la bursa din Dubai și proiecte livrate de peste 25 de ani; a trecut prin prăbușirea din 2009 și și-a revenit.",
+   "vwhyEn": "Audited filings on the Dubai exchange and projects delivered for more than 25 years; it went through the 2009 crash and recovered.",
+   "inputs": {
+    "C12": "acțiunea +6,7% în două luni (Yahoo Finance, EMAAR.AE)"
+   },
+   "score": 6.87,
+   "met": 15,
+   "met14": 8,
+   "trust": 7,
+   "price": {
+    "symbol": "EMAAR.AE",
+    "url": "https://finance.yahoo.com/quote/EMAAR.AE",
+    "points": [
+     [
+      "2026-09-04",
+      10.76
+     ],
+     [
+      "2026-09-11",
+      10.94
+     ],
+     [
+      "2026-09-18",
+      11.8
+     ],
+     [
+      "2026-09-25",
+      11.68
+     ],
+     [
+      "2026-10-02",
+      11.32
+     ],
+     [
+      "2026-10-09",
+      11.26
+     ],
+     [
+      "2026-10-16",
+      11.4
+     ],
+     [
+      "2026-10-23",
+      11.38
+     ],
+     [
+      "2026-10-30",
+      11.48
+     ]
+    ]
+   }
   },
   {
    "id": "vonovia",
@@ -967,11 +1137,25 @@
      "https://investoren.vonovia.de/en/"
     ]
    ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    8,
+    7,
+    4,
+    10
+   ],
+   "vwhy": "Raportări auditate la bursa din Frankfurt; criza dobânzilor din 2022–2023 a adus deprecieri mari ale activelor și tăierea dividendului.",
+   "vwhyEn": "Audited filings on the Frankfurt exchange; the 2022–2023 rate shock brought large asset write-downs and a dividend cut.",
    "inputs": {
     "C12": "acțiunea -15,5% în două luni (Yahoo Finance, VNA.DE)"
    },
-   "score": 6.4,
-   "met": 7,
+   "score": 6.93,
+   "met": 14,
+   "met14": 7,
+   "trust": 7,
    "price": {
     "symbol": "VNA.DE",
     "url": "https://finance.yahoo.com/quote/VNA.DE",
@@ -1048,11 +1232,25 @@
      "https://www.invh.com/investors/"
     ]
    ],
+   "v": [
+    10,
+    10,
+    8,
+    8,
+    8,
+    5,
+    7,
+    10
+   ],
+   "vwhy": "Rapoarte auditate la SEC din 2017; în 2024 a plătit 48 de milioane de dolari pentru a încheia acuzațiile autorității americane de protecția consumatorilor (FTC) privind taxele ascunse.",
+   "vwhyEn": "Audited SEC reports since 2017; in 2024 it paid USD 48 million to settle charges by the US Federal Trade Commission over hidden fees.",
    "inputs": {
     "C12": "acțiunea -6,4% în două luni (Yahoo Finance, INVH)"
    },
-   "score": 6.64,
-   "met": 6,
+   "score": 7.02,
+   "met": 13,
+   "met14": 6,
+   "trust": 7,
    "price": {
     "symbol": "INVH",
     "url": "https://finance.yahoo.com/quote/INVH",
@@ -1097,91 +1295,6 @@
    }
   },
   {
-   "id": "one-united",
-   "name": "One United Properties (București)",
-   "nameEn": "One United Properties (Bucharest)",
-   "stage": "Listată (BVB: ONE)",
-   "stageEn": "Listed (BVB: ONE)",
-   "region": "România",
-   "kind": "Locuințe și birouri premium",
-   "kindEn": "Premium housing and offices",
-   "priceId": "pi-one-united",
-   "c": [
-    7,
-    6,
-    6,
-    6,
-    6,
-    7,
-    6,
-    7,
-    6,
-    6,
-    7,
-    7,
-    7,
-    6
-   ],
-   "why": "Dezvoltator de locuințe și birouri premium în nordul Bucureștiului. În primul semestru din 2026 a contractat tranzacții rezidențiale de 106,1 mil. euro, cu un preț mediu de 3.853 euro/mp, cu 24% mai mare decât acum un an. Profitul net din T1 2026 a scăzut însă cu 78%, iar compania depinde aproape în întregime de piața premium din București.",
-   "sources": [
-    [
-     "Romania Insider: tranzacțiile din S1 2026",
-     "https://www.romania-insider.com/one-united-properties-sales-h1-2026"
-    ],
-    [
-     "Economedia: profitul din T1 2026",
-     "https://economedia.ro/dezvoltatorul-imobiliar-one-united-properites-a-inregistrat-un-profit-net-de-215-milioane-de-lei-in-primul-trimestru-din-2026-in-scadere-cu-78-fata-de-aceeasi-perioada-din-2025.html"
-    ]
-   ],
-   "inputs": {
-    "C12": "acțiunea +4,6% în două luni (Yahoo Finance, ONE.RO)"
-   },
-   "score": 6.46,
-   "met": 6,
-   "price": {
-    "symbol": "ONE.RO",
-    "url": "https://finance.yahoo.com/quote/ONE.RO",
-    "points": [
-     [
-      "2026-09-04",
-      32.8
-     ],
-     [
-      "2026-09-11",
-      32.4
-     ],
-     [
-      "2026-09-18",
-      29.15
-     ],
-     [
-      "2026-09-25",
-      30.35
-     ],
-     [
-      "2026-10-02",
-      29.9
-     ],
-     [
-      "2026-10-09",
-      34.8
-     ],
-     [
-      "2026-10-16",
-      35.2
-     ],
-     [
-      "2026-10-23",
-      34.05
-     ],
-     [
-      "2026-10-30",
-      34.3
-     ]
-    ]
-   }
-  },
-  {
    "id": "shkp",
    "name": "Sun Hung Kai Properties (Hong Kong)",
    "nameEn": "Sun Hung Kai Properties (Hong Kong)",
@@ -1214,11 +1327,25 @@
      "https://www.shkp.com/en-US/investors"
     ]
    ],
+   "v": [
+    10,
+    10,
+    8,
+    10,
+    8,
+    6,
+    4,
+    10
+   ],
+   "vwhy": "Raportări auditate la bursa din Hong Kong; în 2014 un fost copreședinte a fost condamnat pentru corupție, iar prețurile din Hong Kong au scăzut puternic din 2021.",
+   "vwhyEn": "Audited filings on the Hong Kong exchange; in 2014 a former co-chairman was convicted of corruption, and Hong Kong prices have fallen sharply since 2021.",
    "inputs": {
     "C12": "acțiunea -8,9% în două luni (Yahoo Finance, 0016.HK)"
    },
-   "score": 5.92,
-   "met": 6,
+   "score": 6.5,
+   "met": 12,
+   "met14": 6,
+   "trust": 6,
    "price": {
     "symbol": "0016.HK",
     "url": "https://finance.yahoo.com/quote/0016.HK",
@@ -1263,6 +1390,105 @@
    }
   },
   {
+   "id": "one-united",
+   "name": "One United Properties (București)",
+   "nameEn": "One United Properties (Bucharest)",
+   "stage": "Listată (BVB: ONE)",
+   "stageEn": "Listed (BVB: ONE)",
+   "region": "România",
+   "kind": "Locuințe și birouri premium",
+   "kindEn": "Premium housing and offices",
+   "priceId": "pi-one-united",
+   "c": [
+    7,
+    6,
+    6,
+    6,
+    6,
+    7,
+    6,
+    7,
+    6,
+    6,
+    7,
+    7,
+    7,
+    6
+   ],
+   "why": "Dezvoltator de locuințe și birouri premium în nordul Bucureștiului. În primul semestru din 2026 a contractat tranzacții rezidențiale de 106,1 mil. euro, cu un preț mediu de 3.853 euro/mp, cu 24% mai mare decât acum un an. Profitul net din T1 2026 a scăzut însă cu 78%, iar compania depinde aproape în întregime de piața premium din București.",
+   "sources": [
+    [
+     "Romania Insider: tranzacțiile din S1 2026",
+     "https://www.romania-insider.com/one-united-properties-sales-h1-2026"
+    ],
+    [
+     "Economedia: profitul din T1 2026",
+     "https://economedia.ro/dezvoltatorul-imobiliar-one-united-properites-a-inregistrat-un-profit-net-de-215-milioane-de-lei-in-primul-trimestru-din-2026-in-scadere-cu-78-fata-de-aceeasi-perioada-din-2025.html"
+    ]
+   ],
+   "v": [
+    9,
+    10,
+    7,
+    6,
+    7,
+    6,
+    6,
+    10
+   ],
+   "vwhy": "Listată la BVB din 2021, cu rapoarte auditate; istoric scurt și dispute legate de autorizațiile urbanistice din București.",
+   "vwhyEn": "Listed on the Bucharest Stock Exchange since 2021, with audited reports; a short record and disputes over Bucharest planning permits.",
+   "inputs": {
+    "C12": "acțiunea +4,6% în două luni (Yahoo Finance, ONE.RO)"
+   },
+   "score": 6.74,
+   "met": 11,
+   "met14": 6,
+   "trust": 5,
+   "price": {
+    "symbol": "ONE.RO",
+    "url": "https://finance.yahoo.com/quote/ONE.RO",
+    "points": [
+     [
+      "2026-09-04",
+      32.8
+     ],
+     [
+      "2026-09-11",
+      32.4
+     ],
+     [
+      "2026-09-18",
+      29.15
+     ],
+     [
+      "2026-09-25",
+      30.35
+     ],
+     [
+      "2026-10-02",
+      29.9
+     ],
+     [
+      "2026-10-09",
+      34.8
+     ],
+     [
+      "2026-10-16",
+      35.2
+     ],
+     [
+      "2026-10-23",
+      34.05
+     ],
+     [
+      "2026-10-30",
+      34.3
+     ]
+    ]
+   }
+  },
+  {
    "id": "urw",
    "name": "Unibail-Rodamco-Westfield (mall-uri mari)",
    "nameEn": "Unibail-Rodamco-Westfield (flagship malls)",
@@ -1295,9 +1521,23 @@
      "https://www.urw.com/en/investors"
     ]
    ],
+   "v": [
+    10,
+    10,
+    8,
+    10,
+    8,
+    7,
+    3,
+    10
+   ],
+   "vwhy": "Raportări auditate la Euronext Paris; pandemia și datoria mare au adus pierderi grele, iar compania încă vinde active ca să se redreseze.",
+   "vwhyEn": "Audited filings on Euronext Paris; the pandemic and heavy debt brought large losses, and the company is still selling assets to recover.",
    "inputs": {},
-   "score": 5.88,
-   "met": 4
+   "score": 6.47,
+   "met": 11,
+   "met14": 4,
+   "trust": 7
   },
   {
    "id": "jeddah-tower",
@@ -1332,9 +1572,23 @@
      "https://gulfnews.com/business/property/jeddah-tower-crosses-116-floors-completion-timeline-moves-1.500699924"
     ]
    ],
+   "v": [
+    3,
+    3,
+    6,
+    8,
+    4,
+    5,
+    2,
+    10
+   ],
+   "vwhy": "Nu publică cifre auditate; construcția a stat aproape cinci ani (2018–2023), deci proiectul a cedat la ultima perioadă grea.",
+   "vwhyEn": "It publishes no audited figures; construction stopped for almost five years (2018–2023), so the project failed the last hard period.",
    "inputs": {},
    "score": 4.78,
-   "met": 0
+   "met": 2,
+   "met14": 0,
+   "trust": 2
   },
   {
    "id": "diriyah",
@@ -1369,9 +1623,23 @@
      "https://www.diriyah.sa/"
     ]
    ],
+   "v": [
+    3,
+    3,
+    6,
+    5,
+    5,
+    7,
+    4,
+    10
+   ],
+   "vwhy": "Proiect al fondului suveran saudit fără cifre auditate publice; o parte s-a deschis, dar bugetele megaproiectelor au fost reduse.",
+   "vwhyEn": "A Saudi sovereign-fund project with no public audited figures; part has opened, but giga-project budgets have been cut.",
    "inputs": {},
-   "score": 4.58,
-   "met": 0
+   "score": 4.61,
+   "met": 2,
+   "met14": 0,
+   "trust": 2
   },
   {
    "id": "egypt-new-capital",
@@ -1406,46 +1674,23 @@
      "https://english.aawsat.com/arab-world/5296623-egypt%E2%80%99s-new-administrative-capital-gains-official-momentum-residential-occupancy"
     ]
    ],
-   "inputs": {},
-   "score": 4.28,
-   "met": 0
-  },
-  {
-   "id": "nusantara",
-   "name": "Nusantara, noua capitală a Indoneziei",
-   "nameEn": "Nusantara, Indonesia's new capital",
-   "stage": "Proiect de stat",
-   "stageEn": "State project",
-   "region": "Indonezia",
-   "kind": "Oraș nou",
-   "kindEn": "New city",
-   "priceId": null,
-   "c": [
-    3,
-    2,
+   "v": [
     3,
     4,
-    3,
-    4,
-    null,
-    2,
     5,
-    null,
-    6,
-    null,
-    null,
-    4
+    7,
+    4,
+    5,
+    3,
+    10
    ],
-   "why": "Proiect de peste 30 mld. USD, cu finanțarea de stat înjumătățită în 2026 și statutul redus la „capitală politică” până în 2028. În nucleul orașului locuiesc circa 10.000 de oameni, inclusiv aproximativ 1.000 de funcționari, față de ținta de 1,2 milioane până în 2029.",
-   "sources": [
-    [
-     "NPR: capitala viitorului, cu îndoieli în prezent (aprilie 2026)",
-     "https://www.wlrn.org/npr-breaking-news/2026-04-16/indonesias-capital-of-the-future-faces-doubts-in-the-present"
-    ]
-   ],
+   "vwhy": "Proiect de stat fără cifre auditate publice; finanțarea depinde de un stat cu datorii mari și cu sprijin de la FMI.",
+   "vwhyEn": "A state project with no public audited figures; funding depends on a heavily indebted state backed by the IMF.",
    "inputs": {},
-   "score": 3.96,
-   "met": 0
+   "score": 4.38,
+   "met": 2,
+   "met14": 0,
+   "trust": 2
   },
   {
    "id": "neom-the-line",
@@ -1480,9 +1725,74 @@
      "https://www.semafor.com/article/05/22/2026/saudis-neom-halts-work-on-the-line-until-after-2030"
     ]
    ],
+   "v": [
+    2,
+    2,
+    7,
+    4,
+    3,
+    3,
+    1,
+    10
+   ],
+   "vwhy": "Fără cifre auditate; multe surse independente confirmă reducerea drastică a proiectului și oprirea lucrărilor.",
+   "vwhyEn": "No audited figures; many independent sources confirm the drastic scaling back of the project and the halt of work.",
    "inputs": {},
-   "score": 2.74,
-   "met": 0
+   "score": 2.91,
+   "met": 2,
+   "met14": 0,
+   "trust": 2
+  },
+  {
+   "id": "nusantara",
+   "name": "Nusantara, noua capitală a Indoneziei",
+   "nameEn": "Nusantara, Indonesia's new capital",
+   "stage": "Proiect de stat",
+   "stageEn": "State project",
+   "region": "Indonezia",
+   "kind": "Oraș nou",
+   "kindEn": "New city",
+   "priceId": null,
+   "c": [
+    3,
+    2,
+    3,
+    4,
+    3,
+    4,
+    null,
+    2,
+    5,
+    null,
+    6,
+    null,
+    null,
+    4
+   ],
+   "why": "Proiect de peste 30 mld. USD, cu finanțarea de stat înjumătățită în 2026 și statutul redus la „capitală politică” până în 2028. În nucleul orașului locuiesc circa 10.000 de oameni, inclusiv aproximativ 1.000 de funcționari, față de ținta de 1,2 milioane până în 2029.",
+   "sources": [
+    [
+     "NPR: capitala viitorului, cu îndoieli în prezent (aprilie 2026)",
+     "https://www.wlrn.org/npr-breaking-news/2026-04-16/indonesias-capital-of-the-future-faces-doubts-in-the-present"
+    ]
+   ],
+   "v": [
+    3,
+    5,
+    6,
+    4,
+    4,
+    6,
+    3,
+    10
+   ],
+   "vwhy": "Bugetul apare în documentele guvernului indonezian, dar investitorii privați promiși nu s-au confirmat, iar ritmul a încetinit după 2024.",
+   "vwhyEn": "The budget appears in Indonesian government documents, but the promised private investors have not been confirmed, and the pace has slowed since 2024.",
+   "inputs": {},
+   "score": 4.12,
+   "met": 1,
+   "met14": 0,
+   "trust": 1
   }
  ]
 }

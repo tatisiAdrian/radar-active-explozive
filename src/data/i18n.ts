@@ -32,7 +32,7 @@ export const DOMAIN_EN: Record<string, { title: string; short: string; what: str
   marfuri: { title: 'Commodities', short: 'Commodities', what: 'mature and emerging commodities', summary: 'Energy, metals and agricultural products: prices, demand and supply.' },
   forex: { title: 'Forex', short: 'Forex', what: 'major and emerging currencies', summary: '22 currencies scored on the same 14 conditions, with IMF and BIS data and weekly exchange rates.' },
   imobiliare: { title: 'National housing markets', short: 'Housing', what: 'national housing markets, including Romania', summary: '22 national housing markets, including Romania, scored on the same 14 conditions, with BIS and IMF data: real house prices, household debt, real interest rates.' },
-  'proiecte-imobiliare': { title: 'World real-estate projects', short: 'Real-estate projects', what: 'landmark real-estate projects and the companies behind them', summary: '22 real-estate projects of worldwide interest, from data centres and logistics parks to new capitals, scored on the same 14 conditions.' },
+  'proiecte-imobiliare': { title: 'World real-estate projects', short: 'Real-estate projects', what: 'landmark real-estate projects and the companies behind them', summary: '22 real-estate projects of worldwide interest, from data centres and logistics parks to new capitals, scored on 22 conditions: the 14 adapted conditions and 8 that verify the evidence.' },
   'economii-emergente': { title: 'Emerging economies', short: 'Emerging economies', what: 'emerging economies, including Romania', summary: '22 emerging economies, including Romania, scored on the same 14 conditions, with IMF and BIS data and each country’s stock market.' },
 };
 

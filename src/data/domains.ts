@@ -296,7 +296,7 @@ export const domains: Domain[] = [
     slug: 'proiecte-imobiliare',
     criteria: 'proiecte-imobiliare',
     title: 'Proiecte imobiliare de interes mondial',
-    summary: '22 de proiecte imobiliare de interes mondial, de la centre de date și parcuri logistice la capitale noi, notate pe aceleași 14 condiții.',
+    summary: '22 de proiecte imobiliare de interes mondial, de la centre de date și parcuri logistice la capitale noi, notate pe 22 de condiții: cele 14 adaptate și 8 de verificare a dovezilor.',
     status: 'activ',
     questions: [
       'Care proiecte imobiliare mari au cerere reală, chiriași și finanțare sănătoasă?',

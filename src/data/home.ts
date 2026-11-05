@@ -56,22 +56,22 @@ export const ITEMS: HomeItem[] = [
     name: r.name, group: r.stage ?? 'Start-up', access: r.priceId ? 'Cumpărabil' : 'Acces restrâns', met: (r as { met14?: number }).met14 ?? r.met, score: r.score, c: r.c ?? [], set: 'general', launched: null, gkey: r.stage,
   })),
   ...(sp500.rows as unknown as Row[]).map((r) => mk('sp500', {
-    name: `${r.name} (${r.id})`, group: 'Listată în S&P 500', access: 'Cumpărabil', met: r.met, score: r.score, c: r.criteria ?? [], set: 'sp500', launched: null, gkey: 'sp',
+    name: `${r.name} (${r.id})`, group: 'Listată în S&P 500', access: 'Cumpărabil', met: (r as { met14?: number }).met14 ?? r.met, score: r.score, c: r.criteria ?? [], set: 'sp500', launched: null, gkey: 'sp',
   })),
   ...(forex.rows as unknown as Row[]).map((r) => mk('forex', {
-    name: `${r.name} (${r.id})`, group: 'Monedă', access: 'Cumpărabil', met: r.met, score: r.score, c: r.criteria ?? [], set: 'forex', launched: null, nameEn: `${NAME_EN[r.id] ?? r.name} (${r.id})`, gkey: 'fx',
+    name: `${r.name} (${r.id})`, group: 'Monedă', access: 'Cumpărabil', met: (r as { met14?: number }).met14 ?? r.met, score: r.score, c: r.criteria ?? [], set: 'forex', launched: null, nameEn: `${NAME_EN[r.id] ?? r.name} (${r.id})`, gkey: 'fx',
   })),
   ...(emerging.rows as unknown as Row[]).map((r) => mk('economii-emergente', {
-    name: r.name, group: 'Economie emergentă', access: 'Indirect', met: r.met, score: r.score, c: r.criteria ?? [], set: 'economii-emergente', launched: null, nameEn: COUNTRY_EN[r.id] ?? r.name, gkey: 'em',
+    name: r.name, group: 'Economie emergentă', access: 'Indirect', met: (r as { met14?: number }).met14 ?? r.met, score: r.score, c: r.criteria ?? [], set: 'economii-emergente', launched: null, nameEn: COUNTRY_EN[r.id] ?? r.name, gkey: 'em',
   })),
   ...(imob.rows as unknown as Row[]).map((r) => mk('imobiliare', {
-    name: r.name, group: 'Piață imobiliară națională', access: 'Indirect', met: r.met, score: r.score, c: r.criteria ?? [], set: 'imobiliare', launched: null, nameEn: r.nameEn, gkey: 'imob',
+    name: r.name, group: 'Piață imobiliară națională', access: 'Indirect', met: (r as { met14?: number }).met14 ?? r.met, score: r.score, c: r.criteria ?? [], set: 'imobiliare', launched: null, nameEn: r.nameEn, gkey: 'imob',
   })),
   ...(proj.rows as unknown as Row[]).map((r) => mk('proiecte-imobiliare', {
-    name: r.name, group: r.stage ?? 'Proiect', access: r.stage?.startsWith('Listată') ? 'Cumpărabil' : 'Acces restrâns', met: r.met, score: r.score, c: r.c ?? [], set: 'proiecte-imobiliare', launched: null, nameEn: r.nameEn, gkey: r.stageEn ? `en:${r.stageEn}` : undefined,
+    name: r.name, group: r.stage ?? 'Proiect', access: r.stage?.startsWith('Listată') ? 'Cumpărabil' : 'Acces restrâns', met: (r as { met14?: number }).met14 ?? r.met, score: r.score, c: r.c ?? [], set: 'proiecte-imobiliare', launched: null, nameEn: r.nameEn, gkey: r.stageEn ? `en:${r.stageEn}` : undefined,
   })),
   ...Object.values(SOCIAL).flatMap((d) => d.rows.map((r) => mk(d.slug, {
-    name: r.name, group: '', access: 'Deschis tuturor', met: r.met, score: r.score, c: r.c, set: d.set, launched: null, nameEn: r.nameEn, gkey: `soc:${d.slug}`,
+    name: r.name, group: '', access: 'Deschis tuturor', met: (r as { met14?: number }).met14 ?? r.met, score: r.score, c: r.c, set: d.set, launched: null, nameEn: r.nameEn, gkey: `soc:${d.slug}`,
   }))),
 ];
 
