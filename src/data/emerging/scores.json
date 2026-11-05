@@ -1,4 +1,6 @@
 {
+ "snapshot": "emergente-r2-2026-11-01",
+ "previousSnapshot": "emergente-2026-11-01",
  "date": "2026-11-05",
  "judgmentDate": "2026-11-01",
  "formulas": {
@@ -30,8 +32,22 @@
   {
    "id": "CL",
    "name": "Chile",
-   "score": 5.92,
-   "met": 9,
+   "score": 6.42,
+   "met": 17,
+   "met14": 9,
+   "trust": 8,
+   "v": [
+    8,
+    9,
+    8,
+    9,
+    8,
+    8,
+    8,
+    10
+   ],
+   "vwhy": "Cele mai solide instituții din America Latină, statistici de calitate și ratinguri bune.",
+   "vwhyEn": "Latin America’s strongest institutions, high-quality statistics and good ratings.",
    "criteria": [
     3,
     8,
@@ -60,109 +76,70 @@
    "why": "Cele mai solide instituții din America Latină și rol cheie în cupru și litiu, dar exporturile depind de aceste două metale."
   },
   {
-   "id": "AE",
-   "name": "Emiratele Arabe Unite",
-   "score": 5.68,
-   "met": 8,
-   "criteria": [
-    0,
-    10,
-    8,
-    8,
-    8,
-    7,
-    null,
-    7,
-    8,
-    6,
-    6,
-    3,
-    5,
-    7
-   ],
-   "inputs": {
-    "C1": "creștere -3,9% în 2026",
-    "C2": "sold bugetar 1,5% din PIB",
-    "C3": "datorie 32,8% din PIB, cont curent 4,8%",
-    "C10": "bursa la 44% din intervalul de 52 de săptămâni (UAE)",
-    "C12": "bursa -2,4% în două luni"
-   },
-   "gaps": [
-    "C7"
-   ],
-   "why": "Diversificare reală dinspre petrol spre finanțe, logistică, turism și inteligență artificială, cu migrație puternică de capital și oameni. Dependența de prețul petrolului și riscurile regionale rămân."
-  },
-  {
-   "id": "VN",
-   "name": "Vietnam",
-   "score": 6.88,
-   "met": 7,
-   "criteria": [
-    10,
+   "id": "KR",
+   "name": "Coreea de Sud",
+   "score": 6.67,
+   "met": 15,
+   "met14": 7,
+   "trust": 8,
+   "v": [
+    9,
+    9,
+    9,
     9,
     8,
+    7,
     8,
+    10
+   ],
+   "vwhy": "Statistici de calitate și ratinguri solide; criza politică provocată de legea marțială din decembrie 2024 e un semnal de urmărit.",
+   "vwhyEn": "High-quality statistics and solid ratings; the political crisis caused by martial law in December 2024 is a signal to watch.",
+   "criteria": [
+    6,
+    9,
+    7,
     8,
+    7,
+    7,
     5,
-    null,
+    8,
+    6,
     6,
     7,
-    9,
-    6,
     0,
     5,
     6
    ],
    "inputs": {
-    "C1": "creștere 8,4% în 2026",
-    "C2": "sold bugetar -0,8% din PIB",
-    "C3": "datorie 28,3% din PIB, cont curent 0,3%",
-    "C10": "bursa la 15% din intervalul de 52 de săptămâni (VNM)",
-    "C12": "bursa -8,3% în două luni"
+    "C1": "creștere 3,3% în 2026",
+    "C2": "sold bugetar -1,3% din PIB",
+    "C3": "datorie 47,3% din PIB, cont curent 18,8%",
+    "C7": "dobândă 3% (2026-10-08) − inflație 2,9% = 0,1 pp",
+    "C10": "bursa la 37% din intervalul de 52 de săptămâni (EWY)",
+    "C12": "bursa -19,1% în două luni"
    },
-   "gaps": [
-    "C7"
-   ],
-   "why": "Principalul beneficiar al mutării fabricilor de electronice din China, cu investiții străine directe mari. Bursa e încă clasificată de frontieră, cu acces limitat pentru străini."
-  },
-  {
-   "id": "TW",
-   "name": "Taiwan",
-   "score": 6.8,
-   "met": 7,
-   "criteria": [
-    10,
-    10,
-    9,
-    9,
-    8,
-    8,
-    null,
-    6,
-    7,
-    5,
-    6,
-    0,
-    3,
-    4
-   ],
-   "inputs": {
-    "C1": "creștere 10,7% în 2026",
-    "C2": "sold bugetar 0,3% din PIB",
-    "C3": "datorie 21,1% din PIB, cont curent 22%",
-    "C10": "bursa la 46% din intervalul de 52 de săptămâni (EWT)",
-    "C12": "bursa -9,9% în două luni"
-   },
-   "gaps": [
-    "C7"
-   ],
-   "why": "Centrul mondial al producției de cip-uri avansate, cu investiții uriașe legate de inteligența artificială. Concentrarea pe semiconductori și tensiunile cu China continentală sunt riscurile majore."
+   "gaps": [],
+   "why": "Lider mondial la cip-uri de memorie și construcții navale, cu exporturi sofisticate. Îmbătrânirea rapidă a populației și tensiunile cu Coreea de Nord sunt riscurile."
   },
   {
    "id": "ID",
    "name": "Indonezia",
-   "score": 6.5,
-   "met": 7,
+   "score": 6.66,
+   "met": 15,
+   "met14": 7,
+   "trust": 8,
+   "v": [
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    10
+   ],
+   "vwhy": "Evaluări FMI și ratinguri în categoria de investiții; disciplina fiscală e testată de programele noului guvern.",
+   "vwhyEn": "IMF reviews and investment-grade ratings; fiscal discipline is being tested by the new government’s programmes.",
    "criteria": [
     8,
     7,
@@ -193,8 +170,22 @@
   {
    "id": "MY",
    "name": "Malaezia",
-   "score": 6.26,
-   "met": 7,
+   "score": 6.62,
+   "met": 15,
+   "met14": 7,
+   "trust": 8,
+   "v": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    10
+   ],
+   "vwhy": "Statistici de calitate, evaluări FMI și ratinguri în categoria de investiții.",
+   "vwhyEn": "High-quality statistics, IMF reviews and investment-grade ratings.",
    "criteria": [
     8,
     7,
@@ -223,42 +214,71 @@
    "why": "Beneficiază de mutarea lanțurilor de producție din China: centre de date, ambalare de cip-uri, electronice. Datoria publică ridicată și dependența de materii prime sunt punctele slabe."
   },
   {
-   "id": "KR",
-   "name": "Coreea de Sud",
-   "score": 6.18,
-   "met": 7,
-   "criteria": [
-    6,
+   "id": "TW",
+   "name": "Taiwan",
+   "score": 7.01,
+   "met": 14,
+   "met14": 7,
+   "trust": 7,
+   "v": [
+    7,
+    8,
+    8,
     9,
-    7,
     8,
-    7,
+    6,
+    8,
+    10
+   ],
+   "vwhy": "Statistici de calitate și ratinguri bune, dar nu e membru FMI, deci fără evaluările lui; riscul geopolitic e major.",
+   "vwhyEn": "High-quality statistics and good ratings, but it is not an IMF member, so it has no IMF reviews; geopolitical risk is major.",
+   "criteria": [
+    10,
+    10,
+    9,
+    9,
+    8,
+    8,
+    null,
+    6,
     7,
     5,
-    8,
     6,
-    6,
-    7,
     0,
-    5,
-    6
+    3,
+    4
    ],
    "inputs": {
-    "C1": "creștere 3,3% în 2026",
-    "C2": "sold bugetar -1,3% din PIB",
-    "C3": "datorie 47,3% din PIB, cont curent 18,8%",
-    "C7": "dobândă 3% (2026-10-08) − inflație 2,9% = 0,1 pp",
-    "C10": "bursa la 37% din intervalul de 52 de săptămâni (EWY)",
-    "C12": "bursa -19,1% în două luni"
+    "C1": "creștere 10,7% în 2026",
+    "C2": "sold bugetar 0,3% din PIB",
+    "C3": "datorie 21,1% din PIB, cont curent 22%",
+    "C10": "bursa la 46% din intervalul de 52 de săptămâni (EWT)",
+    "C12": "bursa -9,9% în două luni"
    },
-   "gaps": [],
-   "why": "Lider mondial la cip-uri de memorie și construcții navale, cu exporturi sofisticate. Îmbătrânirea rapidă a populației și tensiunile cu Coreea de Nord sunt riscurile."
+   "gaps": [
+    "C7"
+   ],
+   "why": "Centrul mondial al producției de cip-uri avansate, cu investiții uriașe legate de inteligența artificială. Concentrarea pe semiconductori și tensiunile cu China continentală sunt riscurile majore."
   },
   {
    "id": "IN",
    "name": "India",
-   "score": 6.12,
-   "met": 6,
+   "score": 6.34,
+   "met": 14,
+   "met14": 6,
+   "trust": 8,
+   "v": [
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    8,
+    10
+   ],
+   "vwhy": "Evaluări FMI și ratinguri în categoria de investiții; metodologia unor statistici oficiale e contestată de unii economiști.",
+   "vwhyEn": "IMF reviews and investment-grade ratings; the methodology of some official statistics is disputed by some economists.",
    "criteria": [
     10,
     3,
@@ -287,74 +307,71 @@
    "why": "Cea mai rapidă creștere dintre economiile mari și beneficiar al mutării producției din China. Atenția mediatică foarte mare și evaluările bursiere ridicate sunt semnale de prudență."
   },
   {
-   "id": "CN",
-   "name": "China",
-   "score": 5.54,
-   "met": 6,
+   "id": "AE",
+   "name": "Emiratele Arabe Unite",
+   "score": 5.96,
+   "met": 14,
+   "met14": 8,
+   "trust": 6,
+   "v": [
+    8,
+    6,
+    6,
+    7,
+    8,
+    7,
+    8,
+    10
+   ],
+   "vwhy": "Ratinguri solide, dar statistici publice mai puțin complete; BIS nu publică încă un indice al prețurilor locuințelor.",
+   "vwhyEn": "Solid ratings, but less complete public statistics; the BIS does not yet publish a house price index.",
    "criteria": [
-    7,
-    2,
-    3,
-    8,
-    5,
-    5,
-    7,
-    9,
-    9,
-    8,
-    5,
     0,
-    5,
-    3
-   ],
-   "inputs": {
-    "C1": "creștere 4,5% în 2026",
-    "C2": "sold bugetar -8% din PIB",
-    "C3": "datorie 104,4% din PIB, cont curent 4%",
-    "C7": "dobândă 3% (2026-11-03) − inflație 0,9% = 2,1 pp",
-    "C10": "bursa la 18% din intervalul de 52 de săptămâni (MCHI)",
-    "C12": "bursa -10,6% în două luni"
-   },
-   "gaps": [],
-   "why": "Lider în baterii, vehicule electrice și procesarea mineralelor critice, cu exporturi foarte diversificate. Investițiile străine directe au scăzut, iar tensiunile cu SUA și riscul legat de Taiwan țin riscul geopolitic sus."
-  },
-  {
-   "id": "MX",
-   "name": "Mexic",
-   "score": 5.38,
-   "met": 4,
-   "criteria": [
-    4,
-    6,
-    6,
+    10,
+    8,
+    8,
     8,
     7,
-    4,
+    null,
+    7,
     8,
     6,
-    7,
-    4,
     6,
-    2,
+    3,
     5,
-    4
+    7
    ],
    "inputs": {
-    "C1": "creștere 1,5% în 2026",
-    "C2": "sold bugetar -4,2% din PIB",
-    "C3": "datorie 62,1% din PIB, cont curent -0,3%",
-    "C7": "dobândă 6,5% (2026-11-03) − inflație 3,5% = 3,0 pp",
-    "C10": "bursa la 64% din intervalul de 52 de săptămâni (EWW)",
-    "C12": "bursa -2,8% în două luni"
+    "C1": "creștere -3,9% în 2026",
+    "C2": "sold bugetar 1,5% din PIB",
+    "C3": "datorie 32,8% din PIB, cont curent 4,8%",
+    "C10": "bursa la 44% din intervalul de 52 de săptămâni (UAE)",
+    "C12": "bursa -2,4% în două luni"
    },
-   "gaps": [],
-   "why": "Câștigă direct din relocarea producției spre America de Nord (nearshoring). Riscurile: tarifele SUA și reforma judiciară, care slăbește instituțiile."
+   "gaps": [
+    "C7"
+   ],
+   "why": "Diversificare reală dinspre petrol spre finanțe, logistică, turism și inteligență artificială, cu migrație puternică de capital și oameni. Dependența de prețul petrolului și riscurile regionale rămân."
   },
   {
    "id": "PL",
    "name": "Polonia",
-   "score": 5.36,
-   "met": 4,
+   "score": 5.96,
+   "met": 12,
+   "met14": 4,
+   "trust": 8,
+   "v": [
+    8,
+    9,
+    9,
+    9,
+    8,
+    7,
+    8,
+    10
+   ],
+   "vwhy": "Statistici Eurostat, evaluări FMI și ratinguri solide; procedura UE de deficit excesiv e un semnal de urmărit.",
+   "vwhyEn": "Eurostat statistics, IMF reviews and solid ratings; the EU excessive-deficit procedure is a signal to watch.",
    "criteria": [
     6,
     3,
@@ -383,10 +400,70 @@
    "why": "Economie diversificată, integrată în lanțurile de producție europene, cu investiții străine constante. Deficitul bugetar și apropierea de războiul din Ucraina sunt riscurile."
   },
   {
+   "id": "MX",
+   "name": "Mexic",
+   "score": 5.84,
+   "met": 11,
+   "met14": 4,
+   "trust": 7,
+   "v": [
+    7,
+    9,
+    8,
+    8,
+    7,
+    6,
+    7,
+    10
+   ],
+   "vwhy": "Statistici de calitate și evaluări FMI; ratingurile au fost reduse, iar tarifele SUA sunt un risc major.",
+   "vwhyEn": "High-quality statistics and IMF reviews; ratings have been cut, and US tariffs are a major risk.",
+   "criteria": [
+    4,
+    6,
+    6,
+    8,
+    7,
+    4,
+    8,
+    6,
+    7,
+    4,
+    6,
+    2,
+    5,
+    4
+   ],
+   "inputs": {
+    "C1": "creștere 1,5% în 2026",
+    "C2": "sold bugetar -4,2% din PIB",
+    "C3": "datorie 62,1% din PIB, cont curent -0,3%",
+    "C7": "dobândă 6,5% (2026-11-03) − inflație 3,5% = 3,0 pp",
+    "C10": "bursa la 64% din intervalul de 52 de săptămâni (EWW)",
+    "C12": "bursa -2,8% în două luni"
+   },
+   "gaps": [],
+   "why": "Câștigă direct din relocarea producției spre America de Nord (nearshoring). Riscurile: tarifele SUA și reforma judiciară, care slăbește instituțiile."
+  },
+  {
    "id": "PE",
    "name": "Peru",
-   "score": 5.36,
-   "met": 3,
+   "score": 5.88,
+   "met": 10,
+   "met14": 3,
+   "trust": 7,
+   "v": [
+    8,
+    8,
+    8,
+    9,
+    7,
+    6,
+    7,
+    10
+   ],
+   "vwhy": "Bancă centrală foarte credibilă și ratinguri în categoria de investiții; schimbările dese de președinte sunt un semnal de alarmă.",
+   "vwhyEn": "A highly credible central bank and investment-grade ratings; frequent changes of president are a warning sign.",
    "criteria": [
     6,
     9,
@@ -415,106 +492,24 @@
    "why": "Banca centrală foarte credibilă și datorie publică mică; cupru și aur ca motor, dar instabilitate politică cronică, cu președinți schimbați des."
   },
   {
-   "id": "BR",
-   "name": "Brazilia",
-   "score": 5.28,
-   "met": 3,
-   "criteria": [
-    5,
-    2,
-    3,
-    5,
-    6,
-    5,
-    10,
-    5,
-    7,
-    9,
-    6,
-    0,
-    5,
-    5
-   ],
-   "inputs": {
-    "C1": "creștere 2,2% în 2026",
-    "C2": "sold bugetar -8,1% din PIB",
-    "C3": "datorie 97% din PIB, cont curent -2,4%",
-    "C7": "dobândă 13,75% (2026-11-03) − inflație 4,6% = 9,2 pp",
-    "C10": "bursa la 7% din intervalul de 52 de săptămâni (EWZ)",
-    "C12": "bursa -14,3% în două luni"
-   },
-   "gaps": [],
-   "why": "Putere agricolă și de materii prime, cu bancă centrală credibilă. Deficitul bugetar mare și dependența de materii prime limitează scorul."
-  },
-  {
-   "id": "TR",
-   "name": "Turcia",
-   "score": 4.68,
-   "met": 3,
-   "criteria": [
-    5,
-    7,
-    7,
-    4,
-    3,
-    3,
-    4,
-    6,
-    6,
-    9,
-    5,
-    0,
-    5,
-    3
-   ],
-   "inputs": {
-    "C1": "creștere 2,7% în 2026",
-    "C2": "sold bugetar -3,1% din PIB",
-    "C3": "datorie 22,5% din PIB, cont curent -2,9%",
-    "C7": "dobândă 36% (2026-11-03) − inflație 29,7% = 6,3 pp",
-    "C10": "bursa la 7% din intervalul de 52 de săptămâni (TUR)",
-    "C12": "bursa -24,7% în două luni"
-   },
-   "gaps": [],
-   "why": "Industrie diversificată și poziție strategică între Europa și Orientul Mijlociu, dar inflație de aproape 30% și politici economice schimbătoare."
-  },
-  {
-   "id": "SA",
-   "name": "Arabia Saudită",
-   "score": 4.5,
-   "met": 3,
-   "criteria": [
-    0,
-    4,
-    6,
-    6,
-    5,
-    5,
-    8,
-    2,
-    9,
-    8,
-    6,
-    0,
-    5,
-    4
-   ],
-   "inputs": {
-    "C1": "creștere -3,3% în 2026",
-    "C2": "sold bugetar -6,5% din PIB",
-    "C3": "datorie 35,4% din PIB, cont curent -3,5%",
-    "C7": "dobândă 4,5% (2026-10-29) − inflație 1,9% = 2,6 pp",
-    "C10": "bursa la 18% din intervalul de 52 de săptămâni (KSA)",
-    "C12": "bursa -11,1% în două luni"
-   },
-   "gaps": [],
-   "why": "Rol central în piața petrolului și program mare de diversificare (Vision 2030), dar economia depinde încă de petrol, iar războiul din regiune ridică riscul."
-  },
-  {
    "id": "PH",
    "name": "Filipine",
-   "score": 5.14,
-   "met": 2,
+   "score": 5.65,
+   "met": 10,
+   "met14": 2,
+   "trust": 8,
+   "v": [
+    7,
+    8,
+    8,
+    8,
+    7,
+    7,
+    7,
+    10
+   ],
+   "vwhy": "Statistici de calitate și ratinguri în categoria de investiții.",
+   "vwhyEn": "High-quality statistics and investment-grade ratings.",
    "criteria": [
     6,
     6,
@@ -543,42 +538,117 @@
    "why": "Populație tânără, consum intern și servicii externalizate (BPO) puternice; industria e mai puțin dezvoltată decât în regiune."
   },
   {
-   "id": "ZA",
-   "name": "Africa de Sud",
-   "score": 4.82,
-   "met": 2,
-   "criteria": [
-    3,
-    6,
+   "id": "VN",
+   "name": "Vietnam",
+   "score": 6.6,
+   "met": 9,
+   "met14": 7,
+   "trust": 2,
+   "v": [
     5,
     4,
-    4,
+    5,
     6,
-    8,
-    4,
+    5,
     6,
     7,
+    10
+   ],
+   "vwhy": "Statistici mai puțin transparente și ratinguri sub categoria de investiții, dar creștere constantă și în crize.",
+   "vwhyEn": "Less transparent statistics and ratings below investment grade, but steady growth even in crises.",
+   "criteria": [
+    10,
+    9,
+    8,
+    8,
+    8,
+    5,
+    null,
+    6,
+    7,
+    9,
     6,
     0,
     5,
-    5
+    6
    ],
    "inputs": {
-    "C1": "creștere 1% în 2026",
-    "C2": "sold bugetar -4,4% din PIB",
-    "C3": "datorie 78% din PIB, cont curent -0,7%",
-    "C7": "dobândă 7,25% (2026-11-02) − inflație 4,5% = 2,7 pp",
-    "C10": "bursa la 29% din intervalul de 52 de săptămâni (EZA)",
-    "C12": "bursa -13,8% în două luni"
+    "C1": "creștere 8,4% în 2026",
+    "C2": "sold bugetar -0,8% din PIB",
+    "C3": "datorie 28,3% din PIB, cont curent 0,3%",
+    "C10": "bursa la 15% din intervalul de 52 de săptămâni (VNM)",
+    "C12": "bursa -8,3% în două luni"
+   },
+   "gaps": [
+    "C7"
+   ],
+   "why": "Principalul beneficiar al mutării fabricilor de electronice din China, cu investiții străine directe mari. Bursa e încă clasificată de frontieră, cu acces limitat pentru străini."
+  },
+  {
+   "id": "CN",
+   "name": "China",
+   "score": 5.63,
+   "met": 9,
+   "met14": 6,
+   "trust": 3,
+   "v": [
+    6,
+    5,
+    5,
+    8,
+    6,
+    5,
+    7,
+    10
+   ],
+   "vwhy": "Evaluări FMI există, dar calitatea și transparența statisticilor sunt contestate; controalele de capital și tensiunile comerciale cu SUA sunt semnale de alarmă.",
+   "vwhyEn": "IMF reviews exist, but the quality and transparency of statistics are disputed; capital controls and trade tensions with the US are warning signs.",
+   "criteria": [
+    7,
+    2,
+    3,
+    8,
+    5,
+    5,
+    7,
+    9,
+    9,
+    8,
+    5,
+    0,
+    5,
+    3
+   ],
+   "inputs": {
+    "C1": "creștere 4,5% în 2026",
+    "C2": "sold bugetar -8% din PIB",
+    "C3": "datorie 104,4% din PIB, cont curent 4%",
+    "C7": "dobândă 3% (2026-11-03) − inflație 0,9% = 2,1 pp",
+    "C10": "bursa la 18% din intervalul de 52 de săptămâni (MCHI)",
+    "C12": "bursa -10,6% în două luni"
    },
    "gaps": [],
-   "why": "Instituții financiare solide și rezerve de metale din grupa platinei, dar creștere slabă, probleme de energie și infrastructură."
+   "why": "Lider în baterii, vehicule electrice și procesarea mineralelor critice, cu exporturi foarte diversificate. Investițiile străine directe au scăzut, iar tensiunile cu SUA și riscul legat de Taiwan țin riscul geopolitic sus."
   },
   {
    "id": "TH",
    "name": "Thailanda",
-   "score": 4.76,
-   "met": 2,
+   "score": 5.33,
+   "met": 9,
+   "met14": 2,
+   "trust": 7,
+   "v": [
+    7,
+    8,
+    8,
+    8,
+    7,
+    6,
+    7,
+    10
+   ],
+   "vwhy": "Statistici bune și ratinguri în categoria de investiții; instabilitatea politică e recurentă.",
+   "vwhyEn": "Good statistics and investment-grade ratings; political instability is recurrent.",
    "criteria": [
     5,
     7,
@@ -607,42 +677,116 @@
    "why": "Industrie auto și turism puternice, dar creștere lentă, datorii mari ale gospodăriilor și instabilitate politică recurentă."
   },
   {
-   "id": "AR",
-   "name": "Argentina",
-   "score": 4.58,
-   "met": 2,
+   "id": "BR",
+   "name": "Brazilia",
+   "score": 5.65,
+   "met": 8,
+   "met14": 3,
+   "trust": 5,
+   "v": [
+    7,
+    8,
+    8,
+    7,
+    6,
+    6,
+    6,
+    10
+   ],
+   "vwhy": "Statistici oficiale bune, dar ratinguri sub categoria de investiții și un istoric de crize de monedă.",
+   "vwhyEn": "Good official statistics, but ratings below investment grade and a history of currency crises.",
    "criteria": [
+    5,
+    2,
+    3,
+    5,
+    6,
     5,
     10,
     5,
+    7,
+    9,
     6,
-    3,
-    3,
+    0,
+    5,
+    5
+   ],
+   "inputs": {
+    "C1": "creștere 2,2% în 2026",
+    "C2": "sold bugetar -8,1% din PIB",
+    "C3": "datorie 97% din PIB, cont curent -2,4%",
+    "C7": "dobândă 13,75% (2026-11-03) − inflație 4,6% = 9,2 pp",
+    "C10": "bursa la 7% din intervalul de 52 de săptămâni (EWZ)",
+    "C12": "bursa -14,3% în două luni"
+   },
+   "gaps": [],
+   "why": "Putere agricolă și de materii prime, cu bancă centrală credibilă. Deficitul bugetar mare și dependența de materii prime limitează scorul."
+  },
+  {
+   "id": "SA",
+   "name": "Arabia Saudită",
+   "score": 4.97,
+   "met": 8,
+   "met14": 3,
+   "trust": 5,
+   "v": [
+    8,
+    6,
+    6,
+    7,
+    7,
+    6,
+    7,
+    10
+   ],
+   "vwhy": "Ratinguri solide, dar statistici mai puțin complete și dependență mare de prețul petrolului.",
+   "vwhyEn": "Solid ratings, but less complete statistics and heavy dependence on the oil price.",
+   "criteria": [
     0,
     4,
     6,
-    10,
-    4,
+    6,
+    5,
+    5,
+    8,
+    2,
+    9,
+    8,
+    6,
     0,
     5,
     4
    ],
    "inputs": {
-    "C1": "creștere 2,1% în 2026",
-    "C2": "sold bugetar 0,4% din PIB",
-    "C3": "datorie 69,3% din PIB, cont curent 0,6%",
-    "C7": "dobândă 29% (2025-06) − inflație 33,5% = -4,5 pp",
-    "C10": "bursa la 0% din intervalul de 52 de săptămâni (ARGT)",
-    "C12": "bursa -17,9% în două luni"
+    "C1": "creștere -3,3% în 2026",
+    "C2": "sold bugetar -6,5% din PIB",
+    "C3": "datorie 35,4% din PIB, cont curent -3,5%",
+    "C7": "dobândă 4,5% (2026-10-29) − inflație 1,9% = 2,6 pp",
+    "C10": "bursa la 18% din intervalul de 52 de săptămâni (KSA)",
+    "C12": "bursa -11,1% în două luni"
    },
    "gaps": [],
-   "why": "Litiu și gaze de șist (Vaca Muerta) cu potențial mare și reforme recente, dar istoric lung de crize valutare și de datorie."
+   "why": "Rol central în piața petrolului și program mare de diversificare (Vision 2030), dar economia depinde încă de petrol, iar războiul din regiune ridică riscul."
   },
   {
    "id": "RO",
    "name": "România",
-   "score": 4.14,
-   "met": 2,
+   "score": 4.78,
+   "met": 7,
+   "met14": 2,
+   "trust": 5,
+   "v": [
+    7,
+    9,
+    8,
+    8,
+    6,
+    4,
+    6,
+    10
+   ],
+   "vwhy": "Statistici raportate la Eurostat și evaluări FMI, dar cel mai mare deficit bugetar din UE, procedură de deficit excesiv și ratinguri la limita categoriei de investiții, cu perspectivă negativă.",
+   "vwhyEn": "Statistics reported to Eurostat and IMF reviews, but the EU’s largest budget deficit, an excessive-deficit procedure and ratings at the edge of investment grade, with a negative outlook.",
    "criteria": [
     1,
     4,
@@ -673,8 +817,22 @@
   {
    "id": "CO",
    "name": "Columbia",
-   "score": 4.94,
-   "met": 1,
+   "score": 5.38,
+   "met": 6,
+   "met14": 1,
+   "trust": 5,
+   "v": [
+    7,
+    8,
+    8,
+    8,
+    6,
+    5,
+    6,
+    10
+   ],
+   "vwhy": "Statistici bune, dar ratingurile au coborât sub categoria de investiții, iar deficitul bugetar crește.",
+   "vwhyEn": "Good statistics, but ratings have fallen below investment grade, and the budget deficit is growing.",
    "criteria": [
     5,
     3,
@@ -703,10 +861,162 @@
    "why": "Economie mai diversificată decât pare, dar dependentă de petrol, cu deficit bugetar în creștere și incertitudine politică înaintea alegerilor din 2026."
   },
   {
+   "id": "ZA",
+   "name": "Africa de Sud",
+   "score": 5.29,
+   "met": 6,
+   "met14": 2,
+   "trust": 4,
+   "v": [
+    6,
+    9,
+    8,
+    8,
+    6,
+    5,
+    5,
+    10
+   ],
+   "vwhy": "Statistici de calitate, dar ratinguri sub categoria de investiții; a ieșit abia în 2024 de pe lista gri a GAFI privind spălarea banilor.",
+   "vwhyEn": "High-quality statistics, but ratings below investment grade; it only left the FATF money-laundering grey list in 2024.",
+   "criteria": [
+    3,
+    6,
+    5,
+    4,
+    4,
+    6,
+    8,
+    4,
+    6,
+    7,
+    6,
+    0,
+    5,
+    5
+   ],
+   "inputs": {
+    "C1": "creștere 1% în 2026",
+    "C2": "sold bugetar -4,4% din PIB",
+    "C3": "datorie 78% din PIB, cont curent -0,7%",
+    "C7": "dobândă 7,25% (2026-11-02) − inflație 4,5% = 2,7 pp",
+    "C10": "bursa la 29% din intervalul de 52 de săptămâni (EZA)",
+    "C12": "bursa -13,8% în două luni"
+   },
+   "gaps": [],
+   "why": "Instituții financiare solide și rezerve de metale din grupa platinei, dar creștere slabă, probleme de energie și infrastructură."
+  },
+  {
+   "id": "TR",
+   "name": "Turcia",
+   "score": 4.79,
+   "met": 5,
+   "met14": 3,
+   "trust": 2,
+   "v": [
+    5,
+    7,
+    5,
+    4,
+    4,
+    3,
+    3,
+    10
+   ],
+   "vwhy": "Ratinguri mult sub categoria de investiții, crize repetate de monedă și ani de politică monetară neortodoxă.",
+   "vwhyEn": "Ratings well below investment grade, repeated currency crises and years of unorthodox monetary policy.",
+   "criteria": [
+    5,
+    7,
+    7,
+    4,
+    3,
+    3,
+    4,
+    6,
+    6,
+    9,
+    5,
+    0,
+    5,
+    3
+   ],
+   "inputs": {
+    "C1": "creștere 2,7% în 2026",
+    "C2": "sold bugetar -3,1% din PIB",
+    "C3": "datorie 22,5% din PIB, cont curent -2,9%",
+    "C7": "dobândă 36% (2026-11-03) − inflație 29,7% = 6,3 pp",
+    "C10": "bursa la 7% din intervalul de 52 de săptămâni (TUR)",
+    "C12": "bursa -24,7% în două luni"
+   },
+   "gaps": [],
+   "why": "Industrie diversificată și poziție strategică între Europa și Orientul Mijlociu, dar inflație de aproape 30% și politici economice schimbătoare."
+  },
+  {
+   "id": "AR",
+   "name": "Argentina",
+   "score": 4.46,
+   "met": 3,
+   "met14": 2,
+   "trust": 1,
+   "v": [
+    4,
+    5,
+    4,
+    2,
+    3,
+    2,
+    2,
+    10
+   ],
+   "vwhy": "Nouă intrări în incapacitate de plată în istorie, controale de capital repetate și ratinguri foarte slabe; reformele din 2024 sunt încă la început.",
+   "vwhyEn": "Nine defaults in its history, repeated capital controls and very weak ratings; the 2024 reforms are still at an early stage.",
+   "criteria": [
+    5,
+    10,
+    5,
+    6,
+    3,
+    3,
+    0,
+    4,
+    6,
+    10,
+    4,
+    0,
+    5,
+    4
+   ],
+   "inputs": {
+    "C1": "creștere 2,1% în 2026",
+    "C2": "sold bugetar 0,4% din PIB",
+    "C3": "datorie 69,3% din PIB, cont curent 0,6%",
+    "C7": "dobândă 29% (2025-06) − inflație 33,5% = -4,5 pp",
+    "C10": "bursa la 0% din intervalul de 52 de săptămâni (ARGT)",
+    "C12": "bursa -17,9% în două luni"
+   },
+   "gaps": [],
+   "why": "Litiu și gaze de șist (Vaca Muerta) cu potențial mare și reforme recente, dar istoric lung de crize valutare și de datorie."
+  },
+  {
    "id": "EG",
    "name": "Egipt",
-   "score": 4.54,
-   "met": 1,
+   "score": 4.59,
+   "met": 2,
+   "met14": 1,
+   "trust": 1,
+   "v": [
+    5,
+    5,
+    5,
+    4,
+    4,
+    3,
+    3,
+    10
+   ],
+   "vwhy": "Program FMI, devalorizări repetate și ratinguri mult sub categoria de investiții.",
+   "vwhyEn": "An IMF programme, repeated devaluations and ratings well below investment grade.",
    "criteria": [
     8,
     0,

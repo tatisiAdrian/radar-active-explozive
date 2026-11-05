@@ -7,7 +7,9 @@ import { createHash } from 'node:crypto';
 
 const macro = JSON.parse(await readFile(new URL('../src/data/imobiliare/macro.json', import.meta.url), 'utf8'));
 const judg = JSON.parse(await readFile(new URL('./imobiliare-judgment.json', import.meta.url), 'utf8'));
-const W = [16, 6, 6, 8, 6, 8, 8, 4, 6, 6, 6, 6, 6, 8];
+// 22 de condiții: primele 14 cântăresc 80%, cele 8 de verificare (C15–C22) 20% (aprobat pe 5 noiembrie 2026).
+const W = [13, 5, 5, 6, 5, 6, 6, 3, 5, 5, 5, 5, 5, 6];
+const WV = [4, 4, 3, 3, 2, 2, 1, 1];
 const clamp = (x) => Math.max(0, Math.min(10, Math.round(x)));
 
 export const FORMULAS = {
@@ -56,26 +58,32 @@ for (const [id, j] of Object.entries(judg.countries)) {
   const vec = Array.from({ length: 14 }, (_, i) => c[`C${i + 1}`]);
   const gaps = vec.map((v, i) => (v === undefined ? `C${i + 1}` : null)).filter(Boolean);
   if (gaps.length) missing.push(`${id}: ${gaps.join(', ')}`);
-  const score = +(vec.map((v) => v ?? 5).reduce((s, v, i) => s + v * W[i], 0) / 100).toFixed(2);
-  const met = vec.filter((v) => v !== undefined && v >= 7).length;
+  const v = j.v ?? Array(8).fill(null);
+  const score = +((vec.map((v) => v ?? 5).reduce((s, x, i) => s + x * W[i], 0) + v.map((x) => x ?? 5).reduce((s, x, i) => s + x * WV[i], 0)) / 100).toFixed(2);
+  const met14 = vec.filter((x) => x !== undefined && x >= 7).length;
+  const trust = v.filter((x) => x != null && x >= 7).length;
+  const met = met14 + trust;
   for (const k of Object.keys(inputs)) inputs[k] = inputs[k].replace(/(\d)\.(\d)/g, '$1,$2');
-  rows.push({ id, name: j.name, nameEn: j.nameEn, score, met, criteria: vec.map((v) => v ?? null), inputs, gaps, why: j.why, sources: j.sources ?? [] });
+  rows.push({ id, name: j.name, nameEn: j.nameEn, score, met, met14, trust, v, vwhy: j.vwhy, vwhyEn: j.vwhyEn, criteria: vec.map((v) => v ?? null), inputs, gaps, why: j.why, sources: j.sources ?? [] });
 }
 rows.sort((a, b) => b.met - a.met || b.score - a.score);
 
-const out = { date: macro.updatedAt, judgmentDate: judg.date, formulas: FORMULAS, sources: macro.sources, rows, missing };
+const out = {
+  snapshot: `imobiliare${judg.revision ? `-r${judg.revision}` : ''}-${judg.date}`, previousSnapshot: judg.revision ? `imobiliare-${judg.date}` : undefined,
+  date: macro.updatedAt, judgmentDate: judg.date, formulas: FORMULAS, sources: macro.sources, rows, missing };
 await writeFile(new URL('../src/data/imobiliare/scores.json', import.meta.url), JSON.stringify(out, null, 1) + '\n');
-console.log(rows.map((r) => `${r.id} ${r.met}/14 ${r.score}${r.gaps.length ? ' lipsă ' + r.gaps : ''}`).join('\n'));
+console.log(rows.map((r) => `${r.id} ${r.met}/22 (verificare ${r.trust}/8) ${r.score}${r.gaps.length ? ' lipsă ' + r.gaps : ''}`).join('\n'));
 
 if (process.argv.includes('--snapshot')) {
   const date = judg.date;
-  const file = new URL(`../public/snapshots/imobiliare-${date}.json`, import.meta.url);
+  const SNAPN = `imobiliare${judg.revision ? `-r${judg.revision}` : ''}-${date}`;
+  const file = new URL(`../public/snapshots/${SNAPN}.json`, import.meta.url);
   try { await access(file); console.log('Instantaneul există deja; nu îl modific.'); }
   catch {
-    const snap = Buffer.from(JSON.stringify({ domain: 'imobiliare', date, weights: W, met_threshold: 7, formulas: FORMULAS, sources: macro.sources, rows: rows.map(({ why, sources, ...r }) => r) }, null, 1));
+    const snap = Buffer.from(JSON.stringify({ domain: 'imobiliare', date, weights: W, verification_weights: WV, met_threshold: 7, formulas: FORMULAS, sources: macro.sources, rows: rows.map(({ why, vwhy, vwhyEn, sources, ...r }) => r) }, null, 1));
     await writeFile(file, snap);
     const h = createHash('sha256').update(snap).digest('hex');
-    await writeFile(new URL(`../public/snapshots/imobiliare-${date}.sha256`, import.meta.url), `${h}  imobiliare-${date}.json\n`);
+    await writeFile(new URL(`../public/snapshots/${SNAPN}.sha256`, import.meta.url), `${h}  ${SNAPN}.json\n`);
     console.log('Instantaneu înghețat:', h);
   }
 }

@@ -15,9 +15,9 @@ const en = lang === 'en';
 const L = (ro: string, e: string) => (en ? e : ro);
 
 const base = import.meta.env.BASE_URL;
-type Row = { id: string; name: string; nameEn?: string; score: number; met: number; criteria: (number | null)[]; inputs: Record<string, string>; gaps: string[]; why: string; sources: [string, string][] };
+type Row = { id: string; name: string; nameEn?: string; score: number; met: number; v?: (number | null)[]; trust?: number; met14?: number; vwhy?: string; vwhyEn?: string; criteria: (number | null)[]; inputs: Record<string, string>; gaps: string[]; why: string; sources: [string, string][] };
 type Bis = { realIndex?: [string, number][]; realYoY?: { period: string; value: number }; policyRate?: { period: string; value: number }; cpiYoY?: { period: string; value: number } };
-const rows = (scores.rows as unknown as Row[]).map((r) => (en ? { ...r, name: r.nameEn ?? r.name, why: WHY_EN.imobiliare[r.id] ?? r.why, sources: r.sources.map(([t, u]) => [SOURCE_TITLE_EN[t] ?? t, u] as [string, string]), inputs: Object.fromEntries(Object.entries(r.inputs).map(([k, v]) => [k, inputEn(v)])) } : r));
+const rows = (scores.rows as unknown as Row[]).map((r) => (en ? { ...r, vwhy: r.vwhyEn ?? r.vwhy, name: r.nameEn ?? r.name, why: WHY_EN.imobiliare[r.id] ?? r.why, sources: r.sources.map(([t, u]) => [SOURCE_TITLE_EN[t] ?? t, u] as [string, string]), inputs: Object.fromEntries(Object.entries(r.inputs).map(([k, v]) => [k, inputEn(v)])) } : r));
 const formulas = en ? FORMULAS_EN.imobiliare : scores.formulas;
 const bis = macro.bis as unknown as Record<string, Bis>;
 const imf = macro.imf as unknown as Record<string, { label: string; values: Record<string, Record<string, number>> }>;
@@ -25,7 +25,10 @@ const SNAP = scores.judgmentDate;
 const fmtDate = (d: string) => fd(d, lang);
 const num = (x: number, d = 1) => nm(x, d, lang);
 const pct = (x: number | undefined) => (x === undefined ? '—' : `${x > 0 ? '+' : ''}${num(x)}%`);
-const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
+const zone = (k: number) => (k >= 16 ? 'puternic' : k >= 10 ? 'observatie' : 'slab');
+const tzone = (k: number) => (k >= 6 ? 'puternic' : k >= 4 ? 'observatie' : 'slab');
+const snap = (scores as { snapshot?: string }).snapshot ?? `imobiliare-${SNAP}`;
+const prev = (scores as { previousSnapshot?: string }).previousSnapshot;
 const src = (s: { name: string; url: string; retrievedAt: string }): Source => sourceL(s, lang);
 const nameOf = Object.fromEntries(rows.map((r) => [r.id, r.name]));
 const hhOf = (id: string) => { const v = imf.HH_LS?.values[id]; const k = v && Object.keys(v).sort().at(-1); return k ? v[k] : undefined; };
@@ -71,18 +74,19 @@ const falling = rows.filter((r) => (bis[r.id]?.realYoY?.value ?? 0) < 0).map((r)
 <section id="radar">
   <h2>{L('Piețele imobiliare de pe radar', 'The housing markets on the radar')}</h2>
   <p>
-    {en ? <>{rows.length} national housing markets, scored on 14 conditions adapted to housing. Five conditions are computed automatically from official data (BIS and IMF), using published formulas; the other nine are judgement, with a rationale and sources for each country. The scores are frozen in the{' '}<a href={`${base}snapshots/imobiliare-${SNAP}.json`}>snapshot of {fmtDate(SNAP)}</a>{' '}(SHA-256 fingerprint in the <a href={`${base}snapshots/imobiliare-${SNAP}.sha256`}>.sha256 file</a>). The input data update automatically every Friday; the BIS publishes house prices quarterly, with a delay of a few months.</>
-      : <>{rows.length} piețe imobiliare naționale, notate pe 14 condiții adaptate locuințelor. Cinci condiții se calculează automat din date oficiale (BIS și FMI), după formule publice; celelalte nouă sunt judecată, cu justificare și surse pentru fiecare țară. Notele sunt înghețate în{' '}<a href={`${base}snapshots/imobiliare-${SNAP}.json`}>instantaneul din {fmtDate(SNAP)}</a>{' '}(amprenta SHA-256 în <a href={`${base}snapshots/imobiliare-${SNAP}.sha256`}>fișierul .sha256</a>). Datele de intrare se actualizează automat în fiecare vineri; BIS publică prețurile locuințelor trimestrial, cu o întârziere de câteva luni.</>}
+    {en ? <>{rows.length} national housing markets, scored on 22 conditions: 14 adapted to housing (80% of the score) and 8 that verify the evidence (20%): IMF reviews and credit ratings, the quality of official statistics, agreement of sources, track record, outside confirmation (ratings, index inclusion), warning signs (sanctions, capital controls, defaults, EU deficit procedures), resilience in crises and independence from 22Radar. Of the first 14, five conditions are computed automatically from official data (BIS and IMF), using published formulas; the other nine are judgement, with a rationale and sources for each country. The scores are frozen in the{' '}<a href={`${base}snapshots/${snap}.json`}>snapshot of {fmtDate(SNAP)}</a>{' '}(SHA-256 fingerprint in the <a href={`${base}snapshots/${snap}.sha256`}>.sha256 file</a>){prev && <>; the earlier 14-condition snapshot stays published: <a href={`${base}snapshots/${prev}.json`}>{prev}.json</a></>}. The input data update automatically every Friday; the BIS publishes house prices quarterly, with a delay of a few months.</>
+      : <>{rows.length} piețe imobiliare naționale, notate pe 22 de condiții: 14 adaptate locuințelor (80% din scor) și 8 care verifică dovezile (20%): evaluări FMI și ratinguri, calitatea statisticilor oficiale, concordanța surselor, istoric, confirmări externe (ratinguri, includerea în indici), semnale de alarmă (sancțiuni, controale de capital, incapacitate de plată, proceduri UE de deficit), rezistență la crize și independență față de 22Radar. Din primele 14, cinci condiții se calculează automat din date oficiale (BIS și FMI), după formule publice; celelalte nouă sunt judecată, cu justificare și surse pentru fiecare țară. Notele sunt înghețate în{' '}<a href={`${base}snapshots/${snap}.json`}>instantaneul din {fmtDate(SNAP)}</a>{' '}(amprenta SHA-256 în <a href={`${base}snapshots/${snap}.sha256`}>fișierul .sha256</a>){prev && <>; instantaneul anterior, cu 14 condiții, rămâne publicat: <a href={`${base}snapshots/${prev}.json`}>{prev}.json</a></>}. Datele de intrare se actualizează automat în fiecare vineri; BIS publică prețurile locuințelor trimestrial, cu o întârziere de câteva luni.</>}
   </p>
   <div class="table-wrap">
     <table class="radar fx">
-      <thead><tr><th>#</th><th>{L('Țara', 'Country')}</th><th>{L('Condiții', 'Conditions')}</th><th>{L('Scor', 'Score')}</th><th>{L('Fond / formă', 'Substance / form')}</th><th>{L('Preț real, 1 an', 'Real price, 1 year')}</th><th>{L('Față de media pe 10 ani', 'Versus 10-year average')}</th><th>{L('Datoria gospodăriilor', 'Household debt')}</th><th>{L('Dobânda reală', 'Real rate')}</th></tr></thead>
+      <thead><tr><th>#</th><th>{L('Țara', 'Country')}</th><th>{L('Condiții', 'Conditions')}</th><th>{L('Verificare', 'Verification')}</th><th>{L('Scor', 'Score')}</th><th>{L('Fond / formă', 'Substance / form')}</th><th>{L('Preț real, 1 an', 'Real price, 1 year')}</th><th>{L('Față de media pe 10 ani', 'Versus 10-year average')}</th><th>{L('Datoria gospodăriilor', 'Household debt')}</th><th>{L('Dobânda reală', 'Real rate')}</th></tr></thead>
       <tbody>
         {rows.map((r, i) => (
           <tr>
             <td class="muted">{i + 1}</td>
             <td><b>{r.name}</b></td>
-            <td><span class:list={['k', zone(r.met)]}>{r.met}/14</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 14) * 100}%`} class={zone(r.met)}></i></span></td>
+            <td><span class:list={['k', zone(r.met)]}>{r.met}/22</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 22) * 100}%`} class={zone(r.met)}></i></span></td>
+            <td><span class:list={['k', tzone(r.trust ?? 0)]}>{r.trust}/8</span></td>
             <td>{num(r.score, 2)}</td>
             <td><FondBadge values={r.criteria} lang={lang} /></td>
             <td class="num">{pct(bis[r.id]?.realYoY?.value)}</td>
@@ -99,9 +103,12 @@ const falling = rows.filter((r) => (bis[r.id]?.realYoY?.value ?? 0) < 0).map((r)
   <p class="muted">{L('Deschide o țară ca să vezi nota la fiecare condiție, datele din spatele notelor calculate și justificarea notelor de judecată. Condițiile fără date primesc 5 (neutru) în scor și nu sunt considerate îndeplinite.', 'Open a country to see the score on each condition, the data behind the computed scores and the rationale for the judgement scores. Conditions without data get 5 (neutral) in the score and do not count as met.')}</p>
   {rows.map((r) => (
     <details class="fxd">
-      <summary><b>{r.name}</b> · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · {L('scor', 'score')} {num(r.score, 2)} · <FondBadge values={r.criteria} lang={lang} />{r.gaps.length > 0 && <span class="muted"> · {L('fără date', 'no data')}: {r.gaps.join(', ')}</span>}</summary>
+      <summary><b>{r.name}</b> · <span class:list={['k', zone(r.met)]}>{r.met}/22</span> · {L('verificare', 'verification')} {r.trust}/8 · {L('scor', 'score')} {num(r.score, 2)} · <FondBadge values={r.criteria} lang={lang} />{r.gaps.length > 0 && <span class="muted"> · {L('fără date', 'no data')}: {r.gaps.join(', ')}</span>}</summary>
       <p>{r.why}</p>
       <CriteriaDetail set="imobiliare" values={r.criteria} inputs={r.inputs} lang={lang} />
+      <h4>{L('Verificare (C15–C22)', 'Verification (C15–C22)')}</h4>
+      {r.vwhy && <p>{r.vwhy}</p>}
+      <CriteriaDetail set="verificare" values={r.v ?? []} lang={lang} offset={14} />
       {r.sources.length > 0 && <p class="muted">{L('Surse', 'Sources')}: {r.sources.map(([t, u], i) => <>{i > 0 && '; '}<a href={u} target="_blank" rel="noopener">{t}</a></>)}</p>}
     </details>
   ))}
@@ -125,14 +132,14 @@ const falling = rows.filter((r) => (bis[r.id]?.realYoY?.value ?? 0) < 0).map((r)
   <p class="muted">{L('Paragraf calculat automat din datele de mai sus; se actualizează odată cu ele.', 'A paragraph computed automatically from the data above; it updates with them.')}</p>
   {en ? (
     <p>
-      <b>{top.name}</b> meets the most conditions ({top.met} of 14).{' '}
+      <b>{top.name}</b> meets the most conditions ({top.met} of 22).{' '}
       {expensive.length > 0 && <>Homes expensive compared with their own history (real prices more than 15% above the 10-year average): {expensive.join(', ')}.{' '}</>}
       {falling.length > 0 && <>Real prices are lower than a year earlier in: {falling.join(', ')}.{' '}</>}
       {ro && <>Romania ranks {rows.indexOf(ro) + 1} of {rows.length}, with {ro.met} {ro.met === 1 ? 'condition' : 'conditions'} met{ro.inputs.C12 ? `: ${ro.inputs.C12}` : ''}{ro.inputs.C3 ? `, ${ro.inputs.C3}` : ''}.</>}
     </p>
   ) : (
     <p>
-      <b>{top.name}</b> îndeplinește cele mai multe condiții ({top.met} din 14).{' '}
+      <b>{top.name}</b> îndeplinește cele mai multe condiții ({top.met} din 22).{' '}
       {expensive.length > 0 && <>Locuințe scumpe față de propriul istoric (prețul real cu peste 15% peste media pe 10 ani): {expensive.join(', ')}.{' '}</>}
       {falling.length > 0 && <>Prețul real scade față de acum un an în: {falling.join(', ')}.{' '}</>}
       {ro && <>România e pe locul {rows.indexOf(ro) + 1} din {rows.length}, cu {ro.met} {ro.met === 1 ? 'condiție îndeplinită' : 'condiții îndeplinite'}{ro.inputs.C12 ? `: ${ro.inputs.C12}` : ''}{ro.inputs.C3 ? `, ${ro.inputs.C3}` : ''}.</>}

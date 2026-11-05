@@ -1,4 +1,6 @@
 {
+ "snapshot": "imobiliare-r2-2026-11-02",
+ "previousSnapshot": "imobiliare-2026-11-02",
  "date": "2026-11-05",
  "judgmentDate": "2026-11-02",
  "formulas": {
@@ -25,8 +27,22 @@
    "id": "DE",
    "name": "Germania",
    "nameEn": "Germany",
-   "score": 6.48,
-   "met": 9,
+   "score": 7.08,
+   "met": 17,
+   "met14": 9,
+   "trust": 8,
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Ratinguri maxime și statistici de calitate; stagnarea economică din 2023–2025 e principalul semnal.",
+   "vwhyEn": "Top ratings and high-quality statistics; the 2023–2025 economic stagnation is the main signal.",
    "criteria": [
     4,
     8,
@@ -63,8 +79,22 @@
    "id": "PL",
    "name": "Polonia",
    "nameEn": "Poland",
-   "score": 6.48,
-   "met": 8,
+   "score": 6.86,
+   "met": 16,
+   "met14": 8,
+   "trust": 8,
+   "v": [
+    8,
+    9,
+    9,
+    9,
+    8,
+    7,
+    8,
+    10
+   ],
+   "vwhy": "Statistici Eurostat, evaluări FMI și ratinguri solide; procedura UE de deficit excesiv e un semnal de urmărit.",
+   "vwhyEn": "Eurostat statistics, IMF reviews and solid ratings; the EU excessive-deficit procedure is a signal to watch.",
    "criteria": [
     6,
     6,
@@ -98,49 +128,25 @@
    ]
   },
   {
-   "id": "FR",
-   "name": "Franța",
-   "nameEn": "France",
-   "score": 5.42,
-   "met": 8,
-   "criteria": [
-    1,
-    7,
-    5,
-    5,
-    7,
-    7,
-    7,
-    7,
-    6,
-    8,
-    7,
-    4,
-    7,
-    5
-   ],
-   "inputs": {
-    "C1": "creștere 0,4% în 2026, șomaj 8,4%",
-    "C3": "datoria gospodăriilor 60,5% din PIB (2024)",
-    "C7": "dobândă 2,5% (2026-11-03) − inflație 3,1% = -0,6 pp",
-    "C10": "prețul real -6,4% față de media pe 10 ani (2026-Q2)",
-    "C12": "prețul real -2,8% într-un an (2026-Q2)"
-   },
-   "gaps": [],
-   "why": "Piața a corectat după creșterea dobânzilor și se redresează lent. Cererea e diversificată geografic, dar instabilitatea politică și bugetară din ultimii ani apasă încrederea.",
-   "sources": [
-    [
-     "BIS, prețurile locuințelor",
-     "https://data.bis.org/topics/RPP"
-    ]
-   ]
-  },
-  {
    "id": "CZ",
    "name": "Cehia",
    "nameEn": "Czechia",
-   "score": 6.08,
-   "met": 7,
+   "score": 6.65,
+   "met": 15,
+   "met14": 7,
+   "trust": 8,
+   "v": [
+    9,
+    10,
+    9,
+    9,
+    8,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Ratinguri solide, statistici de calitate și o bancă centrală credibilă.",
+   "vwhyEn": "Solid ratings, high-quality statistics and a credible central bank.",
    "criteria": [
     4,
     4,
@@ -174,11 +180,597 @@
    ]
   },
   {
+   "id": "FR",
+   "name": "Franța",
+   "nameEn": "France",
+   "score": 6.13,
+   "met": 15,
+   "met14": 8,
+   "trust": 7,
+   "v": [
+    9,
+    10,
+    9,
+    10,
+    9,
+    6,
+    7,
+    10
+   ],
+   "vwhy": "Statistici de calitate, dar ratinguri reduse în 2024–2025, procedură de deficit excesiv și instabilitate guvernamentală.",
+   "vwhyEn": "High-quality statistics, but ratings cut in 2024–2025, an excessive-deficit procedure and government instability.",
+   "criteria": [
+    1,
+    7,
+    5,
+    5,
+    7,
+    7,
+    7,
+    7,
+    6,
+    8,
+    7,
+    4,
+    7,
+    5
+   ],
+   "inputs": {
+    "C1": "creștere 0,4% în 2026, șomaj 8,4%",
+    "C3": "datoria gospodăriilor 60,5% din PIB (2024)",
+    "C7": "dobândă 2,5% (2026-11-03) − inflație 3,1% = -0,6 pp",
+    "C10": "prețul real -6,4% față de media pe 10 ani (2026-Q2)",
+    "C12": "prețul real -2,8% într-un an (2026-Q2)"
+   },
+   "gaps": [],
+   "why": "Piața a corectat după creșterea dobânzilor și se redresează lent. Cererea e diversificată geografic, dar instabilitatea politică și bugetară din ultimii ani apasă încrederea.",
+   "sources": [
+    [
+     "BIS, prețurile locuințelor",
+     "https://data.bis.org/topics/RPP"
+    ]
+   ]
+  },
+  {
+   "id": "IE",
+   "name": "Irlanda",
+   "nameEn": "Ireland",
+   "score": 6.09,
+   "met": 14,
+   "met14": 6,
+   "trust": 8,
+   "v": [
+    9,
+    10,
+    8,
+    9,
+    9,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Ratinguri solide și statistici de calitate; PIB-ul e distorsionat de multinaționale, iar criza din 2008 a fost severă.",
+   "vwhyEn": "Solid ratings and high-quality statistics; GDP is distorted by multinationals, and the 2008 crash was severe.",
+   "criteria": [
+    1,
+    3,
+    8,
+    8,
+    8,
+    7,
+    6,
+    5,
+    9,
+    2,
+    6,
+    6,
+    5,
+    7
+   ],
+   "inputs": {
+    "C1": "creștere -1% în 2026, șomaj 5%",
+    "C3": "datoria gospodăriilor 29,6% din PIB (2024)",
+    "C7": "dobândă 2,5% (2026-11-03) − inflație 3,4% = -0,9 pp",
+    "C10": "prețul real +15,4% față de media pe 10 ani (2026-Q2)",
+    "C12": "prețul real +2,3% într-un an (2026-Q2)"
+   },
+   "gaps": [],
+   "why": "Deficit acut de locuințe, cerere puternică din partea angajaților multinaționalelor și imigrație ridicată. Prețurile au depășit vârful din 2007; oferta nouă rămâne mult sub nevoi.",
+   "sources": [
+    [
+     "BIS, prețurile locuințelor",
+     "https://data.bis.org/topics/RPP"
+    ]
+   ]
+  },
+  {
+   "id": "DK",
+   "name": "Danemarca",
+   "nameEn": "Denmark",
+   "score": 6.87,
+   "met": 13,
+   "met14": 5,
+   "trust": 8,
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    9,
+    9,
+    10
+   ],
+   "vwhy": "Ratinguri maxime, statistici de calitate și un sistem ipotecar foarte stabil.",
+   "vwhyEn": "Top ratings, high-quality statistics and a very stable mortgage system.",
+   "criteria": [
+    6,
+    6,
+    3,
+    5,
+    7,
+    9,
+    7,
+    6,
+    5,
+    3,
+    6,
+    9,
+    6,
+    8
+   ],
+   "inputs": {
+    "C1": "creștere 3,7% în 2026, șomaj 3%",
+    "C3": "datoria gospodăriilor 85,2% din PIB (2024)",
+    "C7": "dobândă 2,1% (2026-11-02) − inflație 2,2% = -0,1 pp",
+    "C10": "prețul real +13,4% față de media pe 10 ani (2026-Q2)",
+    "C12": "prețul real +7,6% într-un an (2026-Q2)"
+   },
+   "gaps": [],
+   "why": "Sistem de credit ipotecar prin obligațiuni, unic și foarte stabil; prețurile cresc moderat, susținute de o economie puternică. Datoria brută a gospodăriilor este foarte mare, dar acoperită de active.",
+   "sources": [
+    [
+     "BIS, prețurile locuințelor",
+     "https://data.bis.org/topics/RPP"
+    ]
+   ]
+  },
+  {
+   "id": "AT",
+   "name": "Austria",
+   "nameEn": "Austria",
+   "score": 6.55,
+   "met": 13,
+   "met14": 5,
+   "trust": 8,
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    8,
+    8,
+    10
+   ],
+   "vwhy": "Ratinguri de top și statistici de calitate.",
+   "vwhyEn": "Top ratings and high-quality statistics.",
+   "criteria": [
+    3,
+    6,
+    6,
+    5,
+    8,
+    8,
+    6,
+    5,
+    5,
+    7,
+    7,
+    5,
+    6,
+    8
+   ],
+   "inputs": {
+    "C1": "creștere 0,6% în 2026, șomaj 5,7%",
+    "C3": "datoria gospodăriilor 44,0% din PIB (2024)",
+    "C7": "dobândă 2,5% (2026-11-03) − inflație 3,6% = -1,1 pp",
+    "C10": "prețul real -4,5% față de media pe 10 ani (2026-Q2)",
+    "C12": "prețul real +0,1% într-un an (2026-Q2)"
+   },
+   "gaps": [],
+   "why": "Piață dominată de chirii și locuințe sociale (mai ales Viena), ceea ce temperează speculația. Regulile mai stricte de creditare din 2022 au răcit prețurile; acum se stabilizează.",
+   "sources": [
+    [
+     "BIS, prețurile locuințelor",
+     "https://data.bis.org/topics/RPP"
+    ]
+   ]
+  },
+  {
+   "id": "GB",
+   "name": "Regatul Unit",
+   "nameEn": "United Kingdom",
+   "score": 6.34,
+   "met": 13,
+   "met14": 5,
+   "trust": 8,
+   "v": [
+    9,
+    10,
+    9,
+    10,
+    9,
+    7,
+    7,
+    10
+   ],
+   "vwhy": "Statistici și evaluări de calitate; criza obligațiunilor de stat din 2022 a arătat cât de repede se poate pierde încrederea.",
+   "vwhyEn": "High-quality statistics and reviews; the 2022 gilt crisis showed how quickly confidence can be lost.",
+   "criteria": [
+    3,
+    5,
+    4,
+    5,
+    6,
+    8,
+    8,
+    7,
+    7,
+    7,
+    6,
+    5,
+    6,
+    6
+   ],
+   "inputs": {
+    "C1": "creștere 1,3% în 2026, șomaj 5,3%",
+    "C3": "datoria gospodăriilor 76,2% din PIB (2024)",
+    "C7": "dobândă 3,75% (2026-11-02) − inflație 3,4% = 0,3 pp",
+    "C10": "prețul real -4,7% față de media pe 10 ani (2026-Q2)",
+    "C12": "prețul real +0,1% într-un an (2026-Q2)"
+   },
+   "gaps": [],
+   "why": "Deficit cronic de construcții, cu ținte guvernamentale de locuințe noi greu de atins. Prețurile au stagnat în termeni reali din 2022; creșterea economică slabă și taxele pe proprietate pentru investitori limitează cererea.",
+   "sources": [
+    [
+     "BIS, prețurile locuințelor",
+     "https://data.bis.org/topics/RPP"
+    ]
+   ]
+  },
+  {
+   "id": "AU",
+   "name": "Australia",
+   "nameEn": "Australia",
+   "score": 6.27,
+   "met": 13,
+   "met14": 5,
+   "trust": 8,
+   "v": [
+    9,
+    10,
+    9,
+    10,
+    9,
+    9,
+    9,
+    10
+   ],
+   "vwhy": "Ratinguri maxime, statistici de calitate și peste 30 de ani fără recesiune profundă până în 2020.",
+   "vwhyEn": "Top ratings, high-quality statistics and more than 30 years without a deep recession until 2020.",
+   "criteria": [
+    4,
+    4,
+    1,
+    7,
+    6,
+    8,
+    8,
+    6,
+    8,
+    3,
+    5,
+    7,
+    5,
+    6
+   ],
+   "inputs": {
+    "C1": "creștere 1,9% în 2026, șomaj 4,4%",
+    "C3": "datoria gospodăriilor 112,1% din PIB (2024)",
+    "C7": "dobândă 4,6% (2026-10-29) − inflație 3,9% = 0,7 pp",
+    "C10": "prețul real +11,7% față de media pe 10 ani (2026-Q2)",
+    "C12": "prețul real +4,2% într-un an (2026-Q2)"
+   },
+   "gaps": [],
+   "why": "Deficit de locuințe și imigrație puternică țin prețurile sus, la niveluri foarte mari față de venituri. Statul a extins schema de cumpărare cu avans de 5%, care crește cererea fără să crească oferta.",
+   "sources": [
+    [
+     "BIS, prețurile locuințelor",
+     "https://data.bis.org/topics/RPP"
+    ]
+   ]
+  },
+  {
+   "id": "ES",
+   "name": "Spania",
+   "nameEn": "Spain",
+   "score": 6.18,
+   "met": 13,
+   "met14": 5,
+   "trust": 8,
+   "v": [
+    9,
+    10,
+    9,
+    9,
+    9,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Statistici Eurostat și ratinguri în creștere; criza imobiliară din 2008 a lăsat urme lungi.",
+   "vwhyEn": "Eurostat statistics and rising ratings; the 2008 property crash left long-lasting marks.",
+   "criteria": [
+    4,
+    7,
+    6,
+    8,
+    6,
+    6,
+    4,
+    7,
+    8,
+    0,
+    4,
+    9,
+    4,
+    6
+   ],
+   "inputs": {
+    "C1": "creștere 2,5% în 2026, șomaj 9,8%",
+    "C3": "datoria gospodăriilor 43,7% din PIB (2024)",
+    "C7": "dobândă 2,5% (2026-11-03) − inflație 4,9% = -2,4 pp",
+    "C10": "prețul real +24,1% față de media pe 10 ani (2026-Q2)",
+    "C12": "prețul real +8,6% într-un an (2026-Q2)"
+   },
+   "gaps": [],
+   "why": "Creștere economică peste media zonei euro și imigrație puternică, cu un deficit de locuințe noi estimat la sute de mii. Cumpărătorii străini și închirierile turistice concurează cu localnicii; criza accesibilității a devenit temă politică majoră, iar statul intervine tot mai des (chirii plafonate, eliminarea vizei de aur).",
+   "sources": [
+    [
+     "BIS, prețurile locuințelor",
+     "https://data.bis.org/topics/RPP"
+    ]
+   ]
+  },
+  {
+   "id": "SE",
+   "name": "Suedia",
+   "nameEn": "Sweden",
+   "score": 6.65,
+   "met": 12,
+   "met14": 4,
+   "trust": 8,
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Ratinguri maxime, statistici de calitate și finanțe publice disciplinate.",
+   "vwhyEn": "Top ratings, high-quality statistics and disciplined public finances.",
+   "criteria": [
+    4,
+    5,
+    3,
+    6,
+    6,
+    9,
+    8,
+    6,
+    6,
+    7,
+    6,
+    7,
+    6,
+    6
+   ],
+   "inputs": {
+    "C1": "creștere 2,5% în 2026, șomaj 8,5%",
+    "C3": "datoria gospodăriilor 82,7% din PIB (2024)",
+    "C7": "dobândă 1,75% (2026-11-03) − inflație 1,1% = 0,6 pp",
+    "C10": "prețul real -4,8% față de media pe 10 ani (2026-Q2)",
+    "C12": "prețul real +4,3% într-un an (2026-Q2)"
+   },
+   "gaps": [],
+   "why": "Prețurile au corectat puternic în 2022-2023, iar acum se stabilizează odată cu scăderea dobânzilor. Datoria gospodăriilor este printre cele mai mari din Europa, iar construcțiile noi au scăzut mult, ceea ce poate readuce deficitul.",
+   "sources": [
+    [
+     "BIS, prețurile locuințelor",
+     "https://data.bis.org/topics/RPP"
+    ]
+   ]
+  },
+  {
+   "id": "US",
+   "name": "Statele Unite",
+   "nameEn": "United States",
+   "score": 6.54,
+   "met": 12,
+   "met14": 5,
+   "trust": 7,
+   "v": [
+    9,
+    10,
+    9,
+    10,
+    9,
+    6,
+    9,
+    10
+   ],
+   "vwhy": "Evaluări anuale FMI, statistici la cel mai înalt standard și ratinguri de top; Moody’s a retras ratingul maxim în 2025, iar disputele privind plafonul datoriei și presiunile asupra Fed sunt semnale de urmărit.",
+   "vwhyEn": "Annual IMF reviews, top-standard statistics and top ratings; Moody’s removed the top rating in 2025, and debt-ceiling disputes and pressure on the Fed are signals to watch.",
+   "criteria": [
+    5,
+    6,
+    4,
+    6,
+    7,
+    8,
+    8,
+    8,
+    7,
+    4,
+    6,
+    4,
+    5,
+    6
+   ],
+   "inputs": {
+    "C1": "creștere 2,3% în 2026, șomaj 4,2%",
+    "C3": "datoria gospodăriilor 69,4% din PIB (2024)",
+    "C7": "dobândă 3,875% (2026-11-03) − inflație 3,7% = 0,1 pp",
+    "C10": "prețul real +6,8% față de media pe 10 ani (2026-Q2)",
+    "C12": "prețul real -2,6% într-un an (2026-Q2)"
+   },
+   "gaps": [],
+   "why": "Lipsă de case pe piață: proprietarii cu credite vechi, ieftine, nu vând, iar vânzările de case existente sunt la minime de decenii. Prețurile sunt aproape de maximele istorice, iar dobânzile ipotecare rămân ridicate față de ultimul deceniu.",
+   "sources": [
+    [
+     "BIS, prețurile locuințelor",
+     "https://data.bis.org/topics/RPP"
+    ]
+   ]
+  },
+  {
+   "id": "NL",
+   "name": "Țările de Jos",
+   "nameEn": "Netherlands",
+   "score": 6.33,
+   "met": 12,
+   "met14": 4,
+   "trust": 8,
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Ratinguri maxime și statistici de calitate.",
+   "vwhyEn": "Top ratings and high-quality statistics.",
+   "criteria": [
+    4,
+    5,
+    2,
+    6,
+    7,
+    8,
+    6,
+    6,
+    9,
+    2,
+    5,
+    6,
+    6,
+    7
+   ],
+   "inputs": {
+    "C1": "creștere 1,5% în 2026, șomaj 4%",
+    "C3": "datoria gospodăriilor 93,6% din PIB (2024)",
+    "C7": "dobândă 2,5% (2026-11-03) − inflație 3,3% = -0,8 pp",
+    "C10": "prețul real +16,1% față de media pe 10 ani (2026-Q2)",
+    "C12": "prețul real +1,2% într-un an (2026-Q2)"
+   },
+   "gaps": [],
+   "why": "Unul dintre cele mai mari deficite de locuințe din Europa, recunoscut oficial. Reglementarea chiriilor din 2024 a redus oferta de închiriere, iar prețurile au reluat creșterea rapidă.",
+   "sources": [
+    [
+     "BIS, prețurile locuințelor",
+     "https://data.bis.org/topics/RPP"
+    ]
+   ]
+  },
+  {
+   "id": "JP",
+   "name": "Japonia",
+   "nameEn": "Japan",
+   "score": 6.31,
+   "met": 12,
+   "met14": 4,
+   "trust": 8,
+   "v": [
+    9,
+    10,
+    9,
+    10,
+    8,
+    8,
+    8,
+    10
+   ],
+   "vwhy": "Statistici oficiale de calitate și evaluări FMI; datoria publică foarte mare e principalul semnal de urmărit.",
+   "vwhyEn": "High-quality official statistics and IMF reviews; very high public debt is the main signal to watch.",
+   "criteria": [
+    3,
+    7,
+    5,
+    6,
+    6,
+    8,
+    6,
+    7,
+    4,
+    4,
+    6,
+    6,
+    6,
+    8
+   ],
+   "inputs": {
+    "C1": "creștere 0,7% în 2026, șomaj 2,5%",
+    "C3": "datoria gospodăriilor 65,1% din PIB (2024)",
+    "C7": "dobândă 1,25% (2026-11-03) − inflație 2,1% = -0,8 pp",
+    "C10": "prețul real +7,2% față de media pe 10 ani (2025-Q4)",
+    "C12": "prețul real +2,4% într-un an (2025-Q4)"
+   },
+   "gaps": [],
+   "why": "Locuințele din Tokio și alte mari orașe se scumpesc, cu cerere din partea investitorilor străini atrași de yenul slab, în timp ce în restul țării populația în scădere ține prețurile jos. Banca Japoniei crește treptat dobânzile.",
+   "sources": [
+    [
+     "BIS, prețurile locuințelor",
+     "https://data.bis.org/topics/RPP"
+    ]
+   ]
+  },
+  {
    "id": "RO",
    "name": "România",
    "nameEn": "Romania",
-   "score": 5.82,
-   "met": 7,
+   "score": 6.14,
+   "met": 12,
+   "met14": 7,
+   "trust": 5,
+   "v": [
+    7,
+    9,
+    8,
+    8,
+    6,
+    4,
+    6,
+    10
+   ],
+   "vwhy": "Statistici raportate la Eurostat și evaluări FMI, dar cel mai mare deficit bugetar din UE, procedură de deficit excesiv și ratinguri la limita categoriei de investiții, cu perspectivă negativă.",
+   "vwhyEn": "Statistics reported to Eurostat and IMF reviews, but the EU’s largest budget deficit, an excessive-deficit procedure and ratings at the edge of investment grade, with a negative outlook.",
    "criteria": [
     1,
     6,
@@ -216,277 +808,25 @@
    ]
   },
   {
-   "id": "IE",
-   "name": "Irlanda",
-   "nameEn": "Ireland",
-   "score": 5.42,
-   "met": 6,
-   "criteria": [
-    1,
-    3,
-    8,
-    8,
-    8,
-    7,
-    6,
-    5,
-    9,
-    2,
-    6,
-    6,
-    5,
-    7
-   ],
-   "inputs": {
-    "C1": "creștere -1% în 2026, șomaj 5%",
-    "C3": "datoria gospodăriilor 29,6% din PIB (2024)",
-    "C7": "dobândă 2,5% (2026-11-03) − inflație 3,4% = -0,9 pp",
-    "C10": "prețul real +15,4% față de media pe 10 ani (2026-Q2)",
-    "C12": "prețul real +2,3% într-un an (2026-Q2)"
-   },
-   "gaps": [],
-   "why": "Deficit acut de locuințe, cerere puternică din partea angajaților multinaționalelor și imigrație ridicată. Prețurile au depășit vârful din 2007; oferta nouă rămâne mult sub nevoi.",
-   "sources": [
-    [
-     "BIS, prețurile locuințelor",
-     "https://data.bis.org/topics/RPP"
-    ]
-   ]
-  },
-  {
-   "id": "DK",
-   "name": "Danemarca",
-   "nameEn": "Denmark",
-   "score": 6.22,
-   "met": 5,
-   "criteria": [
-    6,
-    6,
-    3,
-    5,
-    7,
-    9,
-    7,
-    6,
-    5,
-    3,
-    6,
-    9,
-    6,
-    8
-   ],
-   "inputs": {
-    "C1": "creștere 3,7% în 2026, șomaj 3%",
-    "C3": "datoria gospodăriilor 85,2% din PIB (2024)",
-    "C7": "dobândă 2,1% (2026-11-02) − inflație 2,2% = -0,1 pp",
-    "C10": "prețul real +13,4% față de media pe 10 ani (2026-Q2)",
-    "C12": "prețul real +7,6% într-un an (2026-Q2)"
-   },
-   "gaps": [],
-   "why": "Sistem de credit ipotecar prin obligațiuni, unic și foarte stabil; prețurile cresc moderat, susținute de o economie puternică. Datoria brută a gospodăriilor este foarte mare, dar acoperită de active.",
-   "sources": [
-    [
-     "BIS, prețurile locuințelor",
-     "https://data.bis.org/topics/RPP"
-    ]
-   ]
-  },
-  {
-   "id": "US",
-   "name": "Statele Unite",
-   "nameEn": "United States",
-   "score": 5.94,
-   "met": 5,
-   "criteria": [
-    5,
-    6,
-    4,
-    6,
-    7,
-    8,
-    8,
-    8,
-    7,
-    4,
-    6,
-    4,
-    5,
-    6
-   ],
-   "inputs": {
-    "C1": "creștere 2,3% în 2026, șomaj 4,2%",
-    "C3": "datoria gospodăriilor 69,4% din PIB (2024)",
-    "C7": "dobândă 3,875% (2026-11-03) − inflație 3,7% = 0,1 pp",
-    "C10": "prețul real +6,8% față de media pe 10 ani (2026-Q2)",
-    "C12": "prețul real -2,6% într-un an (2026-Q2)"
-   },
-   "gaps": [],
-   "why": "Lipsă de case pe piață: proprietarii cu credite vechi, ieftine, nu vând, iar vânzările de case existente sunt la minime de decenii. Prețurile sunt aproape de maximele istorice, iar dobânzile ipotecare rămân ridicate față de ultimul deceniu.",
-   "sources": [
-    [
-     "BIS, prețurile locuințelor",
-     "https://data.bis.org/topics/RPP"
-    ]
-   ]
-  },
-  {
-   "id": "AT",
-   "name": "Austria",
-   "nameEn": "Austria",
-   "score": 5.84,
-   "met": 5,
-   "criteria": [
-    3,
-    6,
-    6,
-    5,
-    8,
-    8,
-    6,
-    5,
-    5,
-    7,
-    7,
-    5,
-    6,
-    8
-   ],
-   "inputs": {
-    "C1": "creștere 0,6% în 2026, șomaj 5,7%",
-    "C3": "datoria gospodăriilor 44,0% din PIB (2024)",
-    "C7": "dobândă 2,5% (2026-11-03) − inflație 3,6% = -1,1 pp",
-    "C10": "prețul real -4,5% față de media pe 10 ani (2026-Q2)",
-    "C12": "prețul real +0,1% într-un an (2026-Q2)"
-   },
-   "gaps": [],
-   "why": "Piață dominată de chirii și locuințe sociale (mai ales Viena), ceea ce temperează speculația. Regulile mai stricte de creditare din 2022 au răcit prețurile; acum se stabilizează.",
-   "sources": [
-    [
-     "BIS, prețurile locuințelor",
-     "https://data.bis.org/topics/RPP"
-    ]
-   ]
-  },
-  {
-   "id": "GB",
-   "name": "Regatul Unit",
-   "nameEn": "United Kingdom",
-   "score": 5.68,
-   "met": 5,
-   "criteria": [
-    3,
-    5,
-    4,
-    5,
-    6,
-    8,
-    8,
-    7,
-    7,
-    7,
-    6,
-    5,
-    6,
-    6
-   ],
-   "inputs": {
-    "C1": "creștere 1,3% în 2026, șomaj 5,3%",
-    "C3": "datoria gospodăriilor 76,2% din PIB (2024)",
-    "C7": "dobândă 3,75% (2026-11-02) − inflație 3,4% = 0,3 pp",
-    "C10": "prețul real -4,7% față de media pe 10 ani (2026-Q2)",
-    "C12": "prețul real +0,1% într-un an (2026-Q2)"
-   },
-   "gaps": [],
-   "why": "Deficit cronic de construcții, cu ținte guvernamentale de locuințe noi greu de atins. Prețurile au stagnat în termeni reali din 2022; creșterea economică slabă și taxele pe proprietate pentru investitori limitează cererea.",
-   "sources": [
-    [
-     "BIS, prețurile locuințelor",
-     "https://data.bis.org/topics/RPP"
-    ]
-   ]
-  },
-  {
-   "id": "AU",
-   "name": "Australia",
-   "nameEn": "Australia",
-   "score": 5.54,
-   "met": 5,
-   "criteria": [
-    4,
-    4,
-    1,
-    7,
-    6,
-    8,
-    8,
-    6,
-    8,
-    3,
-    5,
-    7,
-    5,
-    6
-   ],
-   "inputs": {
-    "C1": "creștere 1,9% în 2026, șomaj 4,4%",
-    "C3": "datoria gospodăriilor 112,1% din PIB (2024)",
-    "C7": "dobândă 4,6% (2026-10-29) − inflație 3,9% = 0,7 pp",
-    "C10": "prețul real +11,7% față de media pe 10 ani (2026-Q2)",
-    "C12": "prețul real +4,2% într-un an (2026-Q2)"
-   },
-   "gaps": [],
-   "why": "Deficit de locuințe și imigrație puternică țin prețurile sus, la niveluri foarte mari față de venituri. Statul a extins schema de cumpărare cu avans de 5%, care crește cererea fără să crească oferta.",
-   "sources": [
-    [
-     "BIS, prețurile locuințelor",
-     "https://data.bis.org/topics/RPP"
-    ]
-   ]
-  },
-  {
-   "id": "ES",
-   "name": "Spania",
-   "nameEn": "Spain",
-   "score": 5.48,
-   "met": 5,
-   "criteria": [
-    4,
-    7,
-    6,
-    8,
-    6,
-    6,
-    4,
-    7,
-    8,
-    0,
-    4,
-    9,
-    4,
-    6
-   ],
-   "inputs": {
-    "C1": "creștere 2,5% în 2026, șomaj 9,8%",
-    "C3": "datoria gospodăriilor 43,7% din PIB (2024)",
-    "C7": "dobândă 2,5% (2026-11-03) − inflație 4,9% = -2,4 pp",
-    "C10": "prețul real +24,1% față de media pe 10 ani (2026-Q2)",
-    "C12": "prețul real +8,6% într-un an (2026-Q2)"
-   },
-   "gaps": [],
-   "why": "Creștere economică peste media zonei euro și imigrație puternică, cu un deficit de locuințe noi estimat la sute de mii. Cumpărătorii străini și închirierile turistice concurează cu localnicii; criza accesibilității a devenit temă politică majoră, iar statul intervine tot mai des (chirii plafonate, eliminarea vizei de aur).",
-   "sources": [
-    [
-     "BIS, prețurile locuințelor",
-     "https://data.bis.org/topics/RPP"
-    ]
-   ]
-  },
-  {
    "id": "IT",
    "name": "Italia",
    "nameEn": "Italy",
-   "score": 5.4,
-   "met": 5,
+   "score": 6.02,
+   "met": 12,
+   "met14": 5,
+   "trust": 7,
+   "v": [
+    8,
+    10,
+    9,
+    9,
+    7,
+    6,
+    7,
+    10
+   ],
+   "vwhy": "Statistici Eurostat, dar datorie publică foarte mare și procedură de deficit excesiv.",
+   "vwhyEn": "Eurostat statistics, but very high public debt and an excessive-deficit procedure.",
    "criteria": [
     3,
     7,
@@ -520,163 +860,25 @@
    ]
   },
   {
-   "id": "SE",
-   "name": "Suedia",
-   "nameEn": "Sweden",
-   "score": 5.96,
-   "met": 4,
-   "criteria": [
-    4,
-    5,
-    3,
-    6,
-    6,
-    9,
-    8,
-    6,
-    6,
-    7,
-    6,
-    7,
-    6,
-    6
-   ],
-   "inputs": {
-    "C1": "creștere 2,5% în 2026, șomaj 8,5%",
-    "C3": "datoria gospodăriilor 82,7% din PIB (2024)",
-    "C7": "dobândă 1,75% (2026-11-03) − inflație 1,1% = 0,6 pp",
-    "C10": "prețul real -4,8% față de media pe 10 ani (2026-Q2)",
-    "C12": "prețul real +4,3% într-un an (2026-Q2)"
-   },
-   "gaps": [],
-   "why": "Prețurile au corectat puternic în 2022-2023, iar acum se stabilizează odată cu scăderea dobânzilor. Datoria gospodăriilor este printre cele mai mari din Europa, iar construcțiile noi au scăzut mult, ceea ce poate readuce deficitul.",
-   "sources": [
-    [
-     "BIS, prețurile locuințelor",
-     "https://data.bis.org/topics/RPP"
-    ]
-   ]
-  },
-  {
-   "id": "JP",
-   "name": "Japonia",
-   "nameEn": "Japan",
-   "score": 5.64,
-   "met": 4,
-   "criteria": [
-    3,
-    7,
-    5,
-    6,
-    6,
-    8,
-    6,
-    7,
-    4,
-    4,
-    6,
-    6,
-    6,
-    8
-   ],
-   "inputs": {
-    "C1": "creștere 0,7% în 2026, șomaj 2,5%",
-    "C3": "datoria gospodăriilor 65,1% din PIB (2024)",
-    "C7": "dobândă 1,25% (2026-11-03) − inflație 2,1% = -0,8 pp",
-    "C10": "prețul real +7,2% față de media pe 10 ani (2025-Q4)",
-    "C12": "prețul real +2,4% într-un an (2025-Q4)"
-   },
-   "gaps": [],
-   "why": "Locuințele din Tokio și alte mari orașe se scumpesc, cu cerere din partea investitorilor străini atrași de yenul slab, în timp ce în restul țării populația în scădere ține prețurile jos. Banca Japoniei crește treptat dobânzile.",
-   "sources": [
-    [
-     "BIS, prețurile locuințelor",
-     "https://data.bis.org/topics/RPP"
-    ]
-   ]
-  },
-  {
-   "id": "NL",
-   "name": "Țările de Jos",
-   "nameEn": "Netherlands",
-   "score": 5.56,
-   "met": 4,
-   "criteria": [
-    4,
-    5,
-    2,
-    6,
-    7,
-    8,
-    6,
-    6,
-    9,
-    2,
-    5,
-    6,
-    6,
-    7
-   ],
-   "inputs": {
-    "C1": "creștere 1,5% în 2026, șomaj 4%",
-    "C3": "datoria gospodăriilor 93,6% din PIB (2024)",
-    "C7": "dobândă 2,5% (2026-11-03) − inflație 3,3% = -0,8 pp",
-    "C10": "prețul real +16,1% față de media pe 10 ani (2026-Q2)",
-    "C12": "prețul real +1,2% într-un an (2026-Q2)"
-   },
-   "gaps": [],
-   "why": "Unul dintre cele mai mari deficite de locuințe din Europa, recunoscut oficial. Reglementarea chiriilor din 2024 a redus oferta de închiriere, iar prețurile au reluat creșterea rapidă.",
-   "sources": [
-    [
-     "BIS, prețurile locuințelor",
-     "https://data.bis.org/topics/RPP"
-    ]
-   ]
-  },
-  {
-   "id": "PT",
-   "name": "Portugalia",
-   "nameEn": "Portugal",
-   "score": 5.42,
-   "met": 3,
-   "criteria": [
-    4,
-    6,
-    6,
-    7,
-    5,
-    6,
-    6,
-    5,
-    8,
-    0,
-    4,
-    10,
-    4,
-    6
-   ],
-   "inputs": {
-    "C1": "creștere 2,1% în 2026, șomaj 5,9%",
-    "C3": "datoria gospodăriilor 53,3% din PIB (2024)",
-    "C7": "dobândă 2,5% (2026-11-03) − inflație 3,6% = -1,1 pp",
-    "C10": "prețul real +47,1% față de media pe 10 ani (2026-Q2)",
-    "C12": "prețul real +12,8% într-un an (2026-Q2)"
-   },
-   "gaps": [],
-   "why": "Prețuri în creștere rapidă de peste un deceniu, cu cerere străină și turistică puternică în Lisabona, Porto și Algarve. Oferta nouă e mică, iar accesibilitatea pentru localnici e printre cele mai slabe din UE.",
-   "sources": [
-    [
-     "BIS, prețurile locuințelor",
-     "https://data.bis.org/topics/RPP"
-    ]
-   ]
-  },
-  {
    "id": "NZ",
    "name": "Noua Zeelandă",
    "nameEn": "New Zealand",
-   "score": 5.34,
-   "met": 3,
+   "score": 6.12,
+   "met": 11,
+   "met14": 3,
+   "trust": 8,
+   "v": [
+    9,
+    10,
+    9,
+    10,
+    9,
+    9,
+    7,
+    10
+   ],
+   "vwhy": "Ratinguri de top și statistici de calitate; economia a intrat în recesiune în 2024.",
+   "vwhyEn": "Top ratings and high-quality statistics; the economy went into recession in 2024.",
    "criteria": [
     4,
     6,
@@ -710,11 +912,77 @@
    ]
   },
   {
+   "id": "PT",
+   "name": "Portugalia",
+   "nameEn": "Portugal",
+   "score": 6.11,
+   "met": 11,
+   "met14": 3,
+   "trust": 8,
+   "v": [
+    9,
+    10,
+    9,
+    9,
+    8,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Statistici Eurostat și ratinguri îmbunătățite după programul de ajutor din 2011.",
+   "vwhyEn": "Eurostat statistics and ratings improved since the 2011 bailout programme.",
+   "criteria": [
+    4,
+    6,
+    6,
+    7,
+    5,
+    6,
+    6,
+    5,
+    8,
+    0,
+    4,
+    10,
+    4,
+    6
+   ],
+   "inputs": {
+    "C1": "creștere 2,1% în 2026, șomaj 5,9%",
+    "C3": "datoria gospodăriilor 53,3% din PIB (2024)",
+    "C7": "dobândă 2,5% (2026-11-03) − inflație 3,6% = -1,1 pp",
+    "C10": "prețul real +47,1% față de media pe 10 ani (2026-Q2)",
+    "C12": "prețul real +12,8% într-un an (2026-Q2)"
+   },
+   "gaps": [],
+   "why": "Prețuri în creștere rapidă de peste un deceniu, cu cerere străină și turistică puternică în Lisabona, Porto și Algarve. Oferta nouă e mică, iar accesibilitatea pentru localnici e printre cele mai slabe din UE.",
+   "sources": [
+    [
+     "BIS, prețurile locuințelor",
+     "https://data.bis.org/topics/RPP"
+    ]
+   ]
+  },
+  {
    "id": "CA",
    "name": "Canada",
    "nameEn": "Canada",
-   "score": 5.06,
-   "met": 3,
+   "score": 5.89,
+   "met": 11,
+   "met14": 3,
+   "trust": 8,
+   "v": [
+    9,
+    10,
+    9,
+    10,
+    9,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Ratinguri de top și statistici de calitate; tarifele SUA din 2025 sunt principalul risc.",
+   "vwhyEn": "Top ratings and high-quality statistics; US tariffs from 2025 are the main risk.",
    "criteria": [
     3,
     5,
@@ -748,40 +1016,55 @@
    ]
   },
   {
-   "id": "CN",
-   "name": "China",
-   "nameEn": "China",
-   "score": 4.84,
-   "met": 3,
-   "criteria": [
-    7,
-    3,
-    5,
-    3,
-    4,
-    4,
-    7,
-    5,
-    2,
-    10,
-    4,
-    2,
+   "id": "AE",
+   "name": "Emiratele Arabe Unite",
+   "nameEn": "United Arab Emirates",
+   "score": 4.68,
+   "met": 8,
+   "met14": 2,
+   "trust": 6,
+   "v": [
+    8,
     6,
-    3
+    6,
+    7,
+    8,
+    7,
+    8,
+    10
+   ],
+   "vwhy": "Ratinguri solide, dar statistici publice mai puțin complete; BIS nu publică încă un indice al prețurilor locuințelor.",
+   "vwhyEn": "Solid ratings, but less complete public statistics; the BIS does not yet publish a house price index.",
+   "criteria": [
+    0,
+    3,
+    8,
+    8,
+    4,
+    6,
+    null,
+    4,
+    3,
+    null,
+    4,
+    null,
+    3,
+    4
    ],
    "inputs": {
-    "C1": "creștere 4,5% în 2026, șomaj 5,1%",
-    "C3": "datoria gospodăriilor 61,4% din PIB (2024)",
-    "C7": "dobândă 3% (2026-11-03) − inflație 0,9% = 2,1 pp",
-    "C10": "prețul real -18,0% față de media pe 10 ani (2026-Q2)",
-    "C12": "prețul real -7,0% într-un an (2026-Q2)"
+    "C1": "creștere -3,9% în 2026",
+    "C3": "datoria gospodăriilor 24,8% din PIB (2024)"
    },
-   "gaps": [],
-   "why": "Prețurile caselor noi scad de peste trei ani, iar stocurile de apartamente nevândute și neterminate sunt uriașe după criza dezvoltatorilor. Populația scade, iar cumpărătorii amână achizițiile așteptând un prag minim de preț.",
+   "gaps": [
+    "C7",
+    "C10",
+    "C12"
+   ],
+   "why": "BIS nu publică încă un indice al prețurilor locuințelor pentru Emiratele Arabe Unite, deci trei condiții calculate lipsesc. Dubai a avut o creștere excepțională după 2021, dar în al doilea trimestru din 2026 prețurile au scăzut cu 4% și chiriile cu 6% față de trimestrul anterior, pe fondul unui val de livrări (peste 13.000 de locuințe în T2 și circa 32.000 așteptate în a doua jumătate a anului). Cererea vine mult din partea investitorilor străini, iar războiul din regiune a crescut riscul.",
    "sources": [
     [
-     "Asia Times: piața imobiliară chineză în 2026",
-     "https://asiatimes.com/2026/07/chinas-housing-market-free-falls-as-buyers-wait-for-floor-prices/"
+     "Khaleej Times (Cushman & Wakefield): prețuri și chirii în scădere, august 2026",
+     "https://www.khaleejtimes.com/business/dubai-home-prices-rents-decline-as-supply-rises-32000-more-units-due-this-year"
     ]
    ]
   },
@@ -789,8 +1072,22 @@
    "id": "HU",
    "name": "Ungaria",
    "nameEn": "Hungary",
-   "score": 4.94,
-   "met": 2,
+   "score": 5.35,
+   "met": 6,
+   "met14": 2,
+   "trust": 4,
+   "v": [
+    6,
+    9,
+    8,
+    7,
+    5,
+    4,
+    5,
+    10
+   ],
+   "vwhy": "Statistici Eurostat, dar ratinguri la limita categoriei de investiții, fonduri UE înghețate pentru probleme de stat de drept și inflație ridicată.",
+   "vwhyEn": "Eurostat statistics, but ratings at the edge of investment grade, EU funds frozen over rule-of-law concerns and high inflation.",
    "criteria": [
     4,
     5,
@@ -824,41 +1121,54 @@
    ]
   },
   {
-   "id": "AE",
-   "name": "Emiratele Arabe Unite",
-   "nameEn": "United Arab Emirates",
-   "score": 4.1,
-   "met": 2,
-   "criteria": [
-    0,
-    3,
-    8,
-    8,
-    4,
+   "id": "CN",
+   "name": "China",
+   "nameEn": "China",
+   "score": 5.1,
+   "met": 6,
+   "met14": 3,
+   "trust": 3,
+   "v": [
     6,
-    null,
-    4,
+    5,
+    5,
+    8,
+    6,
+    5,
+    7,
+    10
+   ],
+   "vwhy": "Evaluări FMI există, dar calitatea și transparența statisticilor sunt contestate; controalele de capital și tensiunile comerciale cu SUA sunt semnale de alarmă.",
+   "vwhyEn": "IMF reviews exist, but the quality and transparency of statistics are disputed; capital controls and trade tensions with the US are warning signs.",
+   "criteria": [
+    7,
     3,
-    null,
-    4,
-    null,
+    5,
     3,
-    4
+    4,
+    4,
+    7,
+    5,
+    2,
+    10,
+    4,
+    2,
+    6,
+    3
    ],
    "inputs": {
-    "C1": "creștere -3,9% în 2026",
-    "C3": "datoria gospodăriilor 24,8% din PIB (2024)"
+    "C1": "creștere 4,5% în 2026, șomaj 5,1%",
+    "C3": "datoria gospodăriilor 61,4% din PIB (2024)",
+    "C7": "dobândă 3% (2026-11-03) − inflație 0,9% = 2,1 pp",
+    "C10": "prețul real -18,0% față de media pe 10 ani (2026-Q2)",
+    "C12": "prețul real -7,0% într-un an (2026-Q2)"
    },
-   "gaps": [
-    "C7",
-    "C10",
-    "C12"
-   ],
-   "why": "BIS nu publică încă un indice al prețurilor locuințelor pentru Emiratele Arabe Unite, deci trei condiții calculate lipsesc. Dubai a avut o creștere excepțională după 2021, dar în al doilea trimestru din 2026 prețurile au scăzut cu 4% și chiriile cu 6% față de trimestrul anterior, pe fondul unui val de livrări (peste 13.000 de locuințe în T2 și circa 32.000 așteptate în a doua jumătate a anului). Cererea vine mult din partea investitorilor străini, iar războiul din regiune a crescut riscul.",
+   "gaps": [],
+   "why": "Prețurile caselor noi scad de peste trei ani, iar stocurile de apartamente nevândute și neterminate sunt uriașe după criza dezvoltatorilor. Populația scade, iar cumpărătorii amână achizițiile așteptând un prag minim de preț.",
    "sources": [
     [
-     "Khaleej Times (Cushman & Wakefield): prețuri și chirii în scădere, august 2026",
-     "https://www.khaleejtimes.com/business/dubai-home-prices-rents-decline-as-supply-rises-32000-more-units-due-this-year"
+     "Asia Times: piața imobiliară chineză în 2026",
+     "https://asiatimes.com/2026/07/chinas-housing-market-free-falls-as-buyers-wait-for-floor-prices/"
     ]
    ]
   }

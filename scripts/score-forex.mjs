@@ -9,7 +9,9 @@ import { createHash } from 'node:crypto';
 
 const macro = JSON.parse(await readFile(new URL('../src/data/forex/macro.json', import.meta.url), 'utf8'));
 const judg = JSON.parse(await readFile(new URL('./forex-judgment.json', import.meta.url), 'utf8'));
-const W = [16, 6, 6, 8, 6, 8, 8, 4, 6, 6, 6, 6, 6, 8];
+// 22 de condiții: primele 14 cântăresc 80%, cele 8 de verificare (C15–C22) 20% (aprobat pe 5 noiembrie 2026).
+const W = [13, 5, 5, 6, 5, 6, 6, 3, 5, 5, 5, 5, 5, 6];
+const WV = [4, 4, 3, 3, 2, 2, 1, 1];
 const clamp = (x) => Math.max(0, Math.min(10, Math.round(x)));
 const BASELINE = '2026-10-30';
 
@@ -61,15 +63,19 @@ for (const [cur, j] of Object.entries(judg.currencies)) {
   if (gaps.length) missing.push(`${cur}: ${gaps.join(', ')}`);
   // Condițiile fără date primesc 5 (neutru) și sunt marcate; nu le considerăm îndeplinite.
   const filled = vec.map((v) => v ?? 5);
-  const score = +(filled.reduce((s, v, i) => s + v * W[i], 0) / 100).toFixed(2);
-  const met = vec.filter((v) => v !== undefined && v >= 7).length;
+  const v = j.v ?? Array(8).fill(null);
+  const score = +((filled.reduce((s, x, i) => s + x * W[i], 0) + v.map((x) => x ?? 5).reduce((s, x, i) => s + x * WV[i], 0)) / 100).toFixed(2);
+  const met14 = vec.filter((x) => x !== undefined && x >= 7).length;
+  const trust = v.filter((x) => x != null && x >= 7).length;
+  const met = met14 + trust;
   // Zecimale cu virgulă, ca în restul site-ului (datele calendaristice nu sunt afectate).
   for (const k of Object.keys(inputs)) inputs[k] = inputs[k].replace(/(\d)\.(\d)/g, '$1,$2');
-  rows.push({ id: cur, name: j.name, score, met, criteria: vec, inputs, gaps, why: j.why });
+  rows.push({ id: cur, name: j.name, score, met, met14, trust, v, vwhy: j.vwhy, vwhyEn: j.vwhyEn, criteria: vec, inputs, gaps, why: j.why });
 }
 rows.sort((a, b) => b.met - a.met || b.score - a.score);
 
 const out = {
+  snapshot: `forex${judg.revision ? `-r${judg.revision}` : ''}-${judg.date}`, previousSnapshot: judg.revision ? `forex-${judg.date}` : undefined,
   date: macro.updatedAt,
   judgmentDate: judg.date,
   formulas: FORMULAS,
@@ -78,17 +84,18 @@ const out = {
   missing,
 };
 await writeFile(new URL('../src/data/forex/scores.json', import.meta.url), JSON.stringify(out, null, 1) + '\n');
-console.log(rows.map((r) => `${r.id} ${r.met}/14 ${r.score}${r.gaps.length ? ' lipsă ' + r.gaps : ''}`).join('\n'));
+console.log(rows.map((r) => `${r.id} ${r.met}/22 (verificare ${r.trust}/8) ${r.score}${r.gaps.length ? ' lipsă ' + r.gaps : ''}`).join('\n'));
 
 if (process.argv.includes('--snapshot')) {
   const date = judg.date;
-  const file = new URL(`../public/snapshots/forex-${date}.json`, import.meta.url);
+  const SNAPN = `forex${judg.revision ? `-r${judg.revision}` : ''}-${date}`;
+  const file = new URL(`../public/snapshots/${SNAPN}.json`, import.meta.url);
   try { await access(file); console.log('Instantaneul există deja; nu îl modific.'); }
   catch {
-    const snap = Buffer.from(JSON.stringify({ domain: 'forex', date, weights: W, met_threshold: 7, formulas: FORMULAS, sources: macro.sources, rows: rows.map(({ why, ...r }) => r) }, null, 1));
+    const snap = Buffer.from(JSON.stringify({ domain: 'forex', date, weights: W, verification_weights: WV, met_threshold: 7, formulas: FORMULAS, sources: macro.sources, rows: rows.map(({ why, vwhy, vwhyEn, ...r }) => r) }, null, 1));
     await writeFile(file, snap);
     const h = createHash('sha256').update(snap).digest('hex');
-    await writeFile(new URL(`../public/snapshots/forex-${date}.sha256`, import.meta.url), `${h}  forex-${date}.json\n`);
+    await writeFile(new URL(`../public/snapshots/${SNAPN}.sha256`, import.meta.url), `${h}  ${SNAPN}.json\n`);
     console.log('Instantaneu înghețat:', h);
   }
 }

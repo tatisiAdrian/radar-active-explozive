@@ -15,13 +15,16 @@ const { lang = 'ro' } = Astro.props;
 const en = lang === 'en';
 const L = (ro: string, e: string) => (en ? e : ro);
 const base = import.meta.env.BASE_URL;
-type Row = { id: string; name: string; score: number; met: number; criteria: (number | null)[]; inputs: Record<string, string>; gaps: string[]; why: string };
-const rows = (scores.rows as unknown as Row[]).map((r) => (en ? { ...r, name: COUNTRY_EN[r.id] ?? r.name, why: WHY_EN['economii-emergente'][r.id] ?? r.why, inputs: Object.fromEntries(Object.entries(r.inputs).map(([k, v]) => [k, inputEn(v)])) } : r));
+type Row = { id: string; name: string; score: number; met: number; v?: (number | null)[]; trust?: number; met14?: number; vwhy?: string; vwhyEn?: string; criteria: (number | null)[]; inputs: Record<string, string>; gaps: string[]; why: string };
+const rows = (scores.rows as unknown as Row[]).map((r) => (en ? { ...r, vwhy: r.vwhyEn ?? r.vwhy, name: COUNTRY_EN[r.id] ?? r.name, why: WHY_EN['economii-emergente'][r.id] ?? r.why, inputs: Object.fromEntries(Object.entries(r.inputs).map(([k, v]) => [k, inputEn(v)])) } : r));
 const SNAP = scores.judgmentDate;
 const fmtDate = (d: string) => fd(d, lang);
 const num = (x: number, d = 1) => nm(x, d, lang);
 const pct = (x: number | undefined) => (x === undefined ? '—' : `${x > 0 ? '+' : ''}${num(x)}%`);
-const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
+const zone = (k: number) => (k >= 16 ? 'puternic' : k >= 10 ? 'observatie' : 'slab');
+const tzone = (k: number) => (k >= 6 ? 'puternic' : k >= 4 ? 'observatie' : 'slab');
+const snap = (scores as { snapshot?: string }).snapshot ?? `emergente-${SNAP}`;
+const prev = (scores as { previousSnapshot?: string }).previousSnapshot;
 const formulas = en ? FORMULAS_EN['economii-emergente'] : scores.formulas;
 
 const src = (s: { name: string; url: string; retrievedAt: string }): Source => sourceL(s, lang);
@@ -65,18 +68,19 @@ const c12 = (s?: string) => (s ? s.replace('bursa ', '').replace(' în două lun
 <section id="radar">
   <h2>{L('Economiile de pe radar', 'The economies on the radar')}</h2>
   <p>
-    {en ? <>{rows.length} emerging economies scored on 14 conditions. Six conditions are computed automatically from official data (IMF, BIS, each country’s stock market), using published formulas; the other eight are judgement, with a rationale for each country. The scores are frozen in the{' '}<a href={`${base}snapshots/emergente-${SNAP}.json`}>snapshot of {fmtDate(SNAP)}</a>{' '}(SHA-256 fingerprint in the <a href={`${base}snapshots/emergente-${SNAP}.sha256`}>.sha256 file</a>). The input data update automatically every Friday.</>
-      : <>{rows.length} economii emergente notate pe 14 condiții. Șase condiții se calculează automat din date oficiale (FMI, BIS, bursa fiecărei țări), după formule publice; celelalte opt sunt judecată, cu justificare pentru fiecare țară. Notele sunt înghețate în{' '}<a href={`${base}snapshots/emergente-${SNAP}.json`}>instantaneul din {fmtDate(SNAP)}</a>{' '}(amprenta SHA-256 în <a href={`${base}snapshots/emergente-${SNAP}.sha256`}>fișierul .sha256</a>). Datele de intrare se actualizează automat în fiecare vineri.</>}
+    {en ? <>{rows.length} emerging economies scored on 22 conditions: 14 (80% of the score) and 8 that verify the evidence (20%): IMF reviews and credit ratings, the quality of official statistics, agreement of sources, track record, outside confirmation (ratings, index inclusion), warning signs (sanctions, capital controls, defaults, EU deficit procedures), resilience in crises and independence from 22Radar. Of the first 14, six conditions are computed automatically from official data (IMF, BIS, each country’s stock market), using published formulas; the other eight are judgement, with a rationale for each country. The scores are frozen in the{' '}<a href={`${base}snapshots/${snap}.json`}>snapshot of {fmtDate(SNAP)}</a>{' '}(SHA-256 fingerprint in the <a href={`${base}snapshots/${snap}.sha256`}>.sha256 file</a>){prev && <>; the earlier 14-condition snapshot stays published: <a href={`${base}snapshots/${prev}.json`}>{prev}.json</a></>}. The input data update automatically every Friday.</>
+      : <>{rows.length} economii emergente notate pe 22 de condiții: 14 (80% din scor) și 8 care verifică dovezile (20%): evaluări FMI și ratinguri, calitatea statisticilor oficiale, concordanța surselor, istoric, confirmări externe (ratinguri, includerea în indici), semnale de alarmă (sancțiuni, controale de capital, incapacitate de plată, proceduri UE de deficit), rezistență la crize și independență față de 22Radar. Din primele 14, șase condiții se calculează automat din date oficiale (FMI, BIS, bursa fiecărei țări), după formule publice; celelalte opt sunt judecată, cu justificare pentru fiecare țară. Notele sunt înghețate în{' '}<a href={`${base}snapshots/${snap}.json`}>instantaneul din {fmtDate(SNAP)}</a>{' '}(amprenta SHA-256 în <a href={`${base}snapshots/${snap}.sha256`}>fișierul .sha256</a>){prev && <>; instantaneul anterior, cu 14 condiții, rămâne publicat: <a href={`${base}snapshots/${prev}.json`}>{prev}.json</a></>}. Datele de intrare se actualizează automat în fiecare vineri.</>}
   </p>
   <div class="table-wrap">
     <table class="radar fx">
-      <thead><tr><th>#</th><th>{L('Țara', 'Country')}</th><th>{L('Condiții', 'Conditions')}</th><th>{L('Scor', 'Score')}</th><th>{L('Fond / formă', 'Substance / form')}</th><th>{L('Creștere 2026', 'Growth 2026')}</th><th>{L('Sold bugetar', 'Budget balance')}</th><th>{L('Datorie publică', 'Public debt')}</th><th>{L('Bursa, 2 luni', 'Stocks, 2 months')}</th></tr></thead>
+      <thead><tr><th>#</th><th>{L('Țara', 'Country')}</th><th>{L('Condiții', 'Conditions')}</th><th>{L('Verificare', 'Verification')}</th><th>{L('Scor', 'Score')}</th><th>{L('Fond / formă', 'Substance / form')}</th><th>{L('Creștere 2026', 'Growth 2026')}</th><th>{L('Sold bugetar', 'Budget balance')}</th><th>{L('Datorie publică', 'Public debt')}</th><th>{L('Bursa, 2 luni', 'Stocks, 2 months')}</th></tr></thead>
       <tbody>
         {rows.map((r, i) => (
           <tr>
             <td class="muted">{i + 1}</td>
             <td><b>{r.name}</b></td>
-            <td><span class:list={['k', zone(r.met)]}>{r.met}/14</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 14) * 100}%`} class={zone(r.met)}></i></span></td>
+            <td><span class:list={['k', zone(r.met)]}>{r.met}/22</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 22) * 100}%`} class={zone(r.met)}></i></span></td>
+            <td><span class:list={['k', tzone(r.trust ?? 0)]}>{r.trust}/8</span></td>
             <td>{num(r.score, 2)}</td>
             <td><FondBadge values={r.criteria} lang={lang} /></td>
             <td class="num">{pct(y26('NGDP_RPCH', r.id))}</td>
@@ -93,9 +97,12 @@ const c12 = (s?: string) => (s ? s.replace('bursa ', '').replace(' în două lun
   <p class="muted">{L('Deschide o țară ca să vezi nota la fiecare condiție, datele din spatele notelor calculate și justificarea notelor de judecată. Condițiile fără date primesc 5 (neutru) în scor și nu sunt considerate îndeplinite.', 'Open a country to see the score on each condition, the data behind the computed scores and the rationale for the judgement scores. Conditions without data get 5 (neutral) in the score and do not count as met.')}</p>
   {rows.map((r) => (
     <details class="fxd">
-      <summary><b>{r.name}</b> · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · {L('scor', 'score')} {num(r.score, 2)} · <FondBadge values={r.criteria} lang={lang} />{r.gaps.length > 0 && <span class="muted"> · {L('fără date', 'no data')}: {r.gaps.join(', ')}</span>}</summary>
+      <summary><b>{r.name}</b> · <span class:list={['k', zone(r.met)]}>{r.met}/22</span> · {L('verificare', 'verification')} {r.trust}/8 · {L('scor', 'score')} {num(r.score, 2)} · <FondBadge values={r.criteria} lang={lang} />{r.gaps.length > 0 && <span class="muted"> · {L('fără date', 'no data')}: {r.gaps.join(', ')}</span>}</summary>
       <p>{r.why}</p>
       <CriteriaDetail set="economii-emergente" values={r.criteria} inputs={r.inputs} lang={lang} />
+      <h4>{L('Verificare (C15–C22)', 'Verification (C15–C22)')}</h4>
+      {r.vwhy && <p>{r.vwhy}</p>}
+      <CriteriaDetail set="verificare" values={r.v ?? []} lang={lang} offset={14} />
     </details>
   ))}
 
@@ -117,14 +124,14 @@ const c12 = (s?: string) => (s ? s.replace('bursa ', '').replace(' în două lun
   <p class="muted">{L('Paragraf calculat automat din datele de mai sus; se actualizează odată cu ele.', 'A paragraph computed automatically from the data above; it updates with them.')}</p>
   {en ? (
     <p>
-      <b>{top.name}</b> meets the most conditions ({top.met} of 14).{' '}
+      <b>{top.name}</b> meets the most conditions ({top.met} of 22).{' '}
       The fastest growth estimated by the IMF for 2026: {fastest.map(([n, v]) => `${n} (${pct(v)})`).join(', ')}.{' '}
       {twin.length > 0 && <>Twin deficits above 3% of GDP (budget and current account): {twin.join(', ')}.{' '}</>}
       {ro && <>Romania ranks {rows.indexOf(ro) + 1} of {rows.length}, with {ro.met} {ro.met === 1 ? 'condition' : 'conditions'} met: {ro.inputs.C1}, {ro.inputs.C2}, {ro.inputs.C3}.</>}
     </p>
   ) : (
     <p>
-      <b>{top.name}</b> îndeplinește cele mai multe condiții ({top.met} din 14).{' '}
+      <b>{top.name}</b> îndeplinește cele mai multe condiții ({top.met} din 22).{' '}
       Cea mai rapidă creștere estimată de FMI pentru 2026: {fastest.map(([n, v]) => `${n} (${pct(v)})`).join(', ')}.{' '}
       {twin.length > 0 && <>Deficite gemene de peste 3% din PIB (buget și cont curent): {twin.join(', ')}.{' '}</>}
       {ro && <>România e pe locul {rows.indexOf(ro) + 1} din {rows.length}, cu {ro.met} {ro.met === 1 ? 'condiție îndeplinită' : 'condiții îndeplinite'}: {ro.inputs.C1}, {ro.inputs.C2}, {ro.inputs.C3}.</>}
