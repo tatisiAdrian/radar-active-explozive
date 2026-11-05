@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
-// Publicare pe GitHub Pages: https://tatisiadrian.github.io/radar-active-explozive/
+// Publicare pe GitHub Pages, cu domeniul propriu https://22radar.com/ (fișierul public/CNAME)
 export default defineConfig({
-  site: 'https://tatisiadrian.github.io',
-  base: '/radar-active-explozive',
+  site: 'https://22radar.com',
+  base: '/',
   trailingSlash: 'always',
 });
