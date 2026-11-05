@@ -9,6 +9,7 @@ export type Lang = 'ro' | 'en';
 type Three = [low: string, mid: string, high: string];
 
 export const DOMAIN_EN: Record<string, { title: string; short: string; what: string; summary: string }> = {
+  'investitori-startups': { title: 'Investors in start-ups like ours', short: 'Investors', what: 'international investors in start-ups like ours', summary: '22 international investors that have backed start-ups like ours, scored on 14 adapted conditions: fresh capital, the right cheque, a matching thesis, access from Romania.' },
   'licee-europa': { title: "Europe’s best high-school systems", short: "High schools", what: "europe’s best high-school systems", summary: "11 European high-school systems, compared by country: PISA 2022 scores in mathematics, reading and science, equity, teachers and access for families who move." },
   'facultati-europa': { title: "Europe’s best universities", short: "Universities", what: "europe’s best universities", summary: "11 European universities, scored on 14 conditions: the QS Europe 2026 ranking, global reputation, employability, costs and accessibility." },
   'meserii-europa': { title: "The best jobs in Europe", short: "Jobs", what: "the best jobs in europe", summary: "11 jobs, scored on 14 conditions, based on the labour shortages reported by EURES in 2025 and the WEF Future of Jobs report." },
@@ -178,6 +179,22 @@ export const CRITERIA_EN: Record<string, [string, string][]> = {
     ['Crowding (inverse)', 'Few foreign investors or funds betting on the same market.'],
     ['Risk', 'No credit bubble, political crises or sudden property taxes.'],
   ],
+  investitori: [
+    ['Really invests', 'New investments announced in the last 12 months, not just a fund on paper.'],
+    ['Fresh fund available', 'A recently closed fund with money still to invest.'],
+    ['Fair terms', 'Public, standard terms, no aggressive structures for founders.'],
+    ['Network and help', 'Mentors, co-investors and access to customers, not just money.'],
+    ['Follow-on investing', 'Reserves for later rounds: stays with its portfolio.'],
+    ['Proven record', 'Exits and large companies grown from the start.'],
+    ['Right ticket', 'The first cheque fits a pre-seed or seed start-up (up to about EUR 1.5 million).'],
+    ['Founders come back', 'Portfolio founders recommend it or invest in its funds themselves.'],
+    ['Thesis fits', 'Invests in fintech, financial data, capital markets or financial education.'],
+    ['Access for us', 'Invests in Romania or Central and Eastern Europe, with open applications.'],
+    ['Media (non-linear)', 'Balanced attention; a very famous name draws thousands of applications.'],
+    ['Investment pace', 'The number of new investments is rising or steady.'],
+    ['Crowding (inverse)', 'How many founders compete for the same attention: the acceptance rate.'],
+    ['Low risks', 'No restructuring, change of control, scandals or a fund near its end.'],
+  ],
   'proiecte-imobiliare': [
     ['Real demand', 'Space let or sold, real rental or sales income.'],
     ['Launch from strength', 'Launched or expanded from a strong balance sheet, not out of need for money.'],
@@ -341,5 +358,21 @@ const proiecteEn: Three[] = [
   ['Many investors on the same bet.', 'Moderate positioning.', 'Few investors on the same bet.'],
   ['High risks: delays, lawsuits or geopolitics.', 'A few risks to watch.', 'Low risks.'],
 ];
-export const SETS_EN: Record<string, Three[]> = { general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare: imobiliareEn, 'proiecte-imobiliare': proiecteEn, ...Object.fromEntries(Object.entries(SOCIAL_SETS).map(([k, v]) => [k, v.exEn])) };
+const investitoriEn: Three[] = [
+  ['No new investments announced recently.', 'Invests, but at a slow or unclear pace.', 'Invests actively: new deals in the last 12 months.'],
+  ['Old fund, mostly invested.', 'A fund still deploying, without fresh capital.', 'A recently closed fund with money to invest.'],
+  ['Terms that are costly or unclear for founders.', 'Usual terms, without special transparency.', 'Fair, public and standard terms.'],
+  ['Brings little beyond money.', 'A useful network, without special programmes.', 'A strong network: mentors, co-investors, customers.'],
+  ['Rarely follows its companies into later rounds.', 'Sometimes follows on.', 'Has reserves and follows its companies.'],
+  ['Few or no notable exits.', 'A few good exits.', 'Major exits and companies grown from the start.'],
+  ['The first cheque is far too large for a start-up like ours.', 'The first cheque is at the upper limit of what we need.', 'The first cheque fits a pre-seed or seed start-up.'],
+  ['Little sign of founder loyalty.', 'A good reputation among founders.', 'Founders come back, recommend it or invest in it.'],
+  ['Its thesis is elsewhere (for example, deep tech or defence).', 'Generalist: our sector is possible, not preferred.', 'Invests exactly in fintech, financial data or education.'],
+  ['Does not invest in our region.', 'Invests in Europe, rarely in Romania.', 'Invests in Romania or CEE, with open applications.'],
+  ['A name so famous that it draws thousands of applications.', 'Moderate attention.', 'Balanced attention.'],
+  ['Fewer and fewer new investments.', 'A steady pace.', 'A rising pace of new investments.'],
+  ['Very selective: acceptance below 1-2%.', 'Moderate competition.', 'Few founders competing for the same attention.'],
+  ['High risks: change of control, restructuring or a fund near its end.', 'A few risks to watch.', 'Low risks.'],
+];
+export const SETS_EN: Record<string, Three[]> = { investitori: investitoriEn, general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare: imobiliareEn, 'proiecte-imobiliare': proiecteEn, ...Object.fromEntries(Object.entries(SOCIAL_SETS).map(([k, v]) => [k, v.exEn])) };
 export const NA_EN = 'Cannot be assessed yet (for example, the asset is not publicly traded).';

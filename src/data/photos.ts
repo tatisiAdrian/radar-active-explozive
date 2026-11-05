@@ -19,6 +19,6 @@ export function photoForDomain(slug: string): Photo | undefined {
   if (W[slug]) return photo(W[slug]);
   if (slug.endsWith('-lume') && photo(slug.replace('-lume', '-romania'))) return photo(slug.replace('-lume', '-romania'));
   const top = slug.split('/')[0];
-  const map: Record<string, string> = { crypto: 'crypto', startups: 'startups', marfuri: 'marfuri', forex: 'forex', 'economii-emergente': 'emergente', sp500: 'sp500', imobiliare: 'imobiliare', 'proiecte-imobiliare': 'proiecte' };
+  const map: Record<string, string> = { crypto: 'crypto', startups: 'startups', marfuri: 'marfuri', forex: 'forex', 'economii-emergente': 'emergente', sp500: 'sp500', imobiliare: 'imobiliare', 'proiecte-imobiliare': 'proiecte', 'investitori-startups': 'startups' };
   return map[top] ? photo(map[top]) : undefined;
 }

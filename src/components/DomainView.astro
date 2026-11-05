@@ -9,6 +9,7 @@ import SP500Section from './SP500Section.astro';
 import RomaniaSection from './RomaniaSection.astro';
 import ImobSection from './ImobSection.astro';
 import ProjectsSection from './ProjectsSection.astro';
+import InvestorsSection from './InvestorsSection.astro';
 import SocialSection from './SocialSection.astro';
 import AskBox from './AskBox.astro';
 import { SOCIAL, REGIONS, regionOf } from '../data/social';
@@ -52,7 +53,7 @@ if (domain.slug === 'sp500') sources.push(spMacro.sources.sec, spMacro.sources.p
 if (domain.slug === 'imobiliare') sources.push(imobMacro.sources.bis, imobMacro.sources.imf);
 if (domain.slug === 'proiecte-imobiliare') sources.push(dbSource);
 const isSocial = Boolean(SOCIAL[domain.slug]);
-const scored = isSocial || ['forex', 'economii-emergente', 'sp500', 'startups/europa/romania', 'imobiliare', 'proiecte-imobiliare'].includes(domain.slug);
+const scored = isSocial || ['forex', 'economii-emergente', 'sp500', 'startups/europa/romania', 'imobiliare', 'proiecte-imobiliare', 'investitori-startups'].includes(domain.slug);
 if (domain.slug === 'startups/europa/romania') sources.push(dbSource);
 const srcs = [...new Map(sources.map((s) => [s.url, sourceL(s, lang)])).values()];
 const criteria = domain.criteria ? (en ? CRITERIA_EN : CRITERIA)[domain.criteria] : undefined;
@@ -84,6 +85,7 @@ const home = en ? `${base}en/` : base;
   {domain.slug === 'sp500' && <SP500Section lang={lang} />}
   {domain.slug === 'imobiliare' && <ImobSection lang={lang} />}
   {domain.slug === 'proiecte-imobiliare' && <ProjectsSection lang={lang} />}
+  {domain.slug === 'investitori-startups' && <InvestorsSection lang={lang} />}
   {isSocial && <SocialSection slug={domain.slug} lang={lang} />}
   {domain.radarMarket && radarRows > 0 && <RadarSection market={domain.radarMarket} domain={domain.slug} countries={domain.countries} lang={lang} />}
   {domain.slug === 'startups/europa/romania' && <RomaniaSection lang={lang} />}

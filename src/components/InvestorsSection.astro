@@ -1,0 +1,96 @@
+---
+import Chart from './Chart.astro';
+import CriteriaDetail from './CriteriaDetail.astro';
+import FondBadge from './FondBadge.astro';
+import type { Dataset } from '../data/types';
+import data from '../data/investitori/scores.json';
+import type { Lang } from '../data/i18n';
+import { fmtDate as fd, num as nm, sourceL } from '../data/lang';
+
+interface Props { lang?: Lang }
+const { lang = 'ro' } = Astro.props;
+const en = lang === 'en';
+const L = (ro: string, e: string) => (en ? e : ro);
+
+const base = import.meta.env.BASE_URL;
+type Row = { id: string; name: string; nameEn?: string; kind: string; kindEn: string; region: string; regionEn: string; ticket: string; ticketEn: string; c: (number | null)[]; why: string; whyEn: string; sources: [string, string][]; score: number; met: number };
+const rows = (data.rows as unknown as Row[]).map((r) => (en ? { ...r, name: r.nameEn ?? r.name, kind: r.kindEn, region: r.regionEn, ticket: r.ticketEn, why: r.whyEn } : r));
+const fmtDate = (d: string) => fd(d, lang);
+const num = (x: number, d = 2) => nm(x, d, lang);
+const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
+const short = (n: string) => n.replace(/ \(.*\)$/, '');
+
+const metChart: Dataset = {
+  id: 'inv-conditii', domain: 'investitori-startups', title: L('Condiții îndeplinite din 14, pe investitori', 'Conditions met out of 14, by investor'), unit: L('condiții', 'conditions'), chart: 'bar',
+  series: [{ name: L('Condiții îndeplinite', 'Conditions met'), points: rows.map((r) => [short(r.name), r.met]) }],
+  source: sourceL({ name: 'Radar Active Explozive, instantaneul investitorilor', url: 'https://github.com/TatisiAdrian/radar-active-explozive/blob/main/scripts/investitori.json', retrievedAt: data.date }, lang),
+  notes: L('Notele și sursa fiecăreia sunt în detaliile de mai jos.', 'The scores and the source of each are in the details below.'),
+};
+const fit = rows.filter((r) => (r.c[6] ?? 0) >= 7 && (r.c[9] ?? 0) >= 7).map((r) => short(r.name));
+const thesis = rows.filter((r) => (r.c[8] ?? 0) >= 8).map((r) => short(r.name));
+const top = rows[0];
+---
+<section id="radar">
+  <h2>{L('Investitorii de pe radar', 'The investors on the radar')}</h2>
+  <p>
+    {en ? <>{rows.length} international investors that have backed start-ups like ours (fintech, financial data, capital markets, financial education), scored on 14 adapted conditions with the same weights as the rest of the radar. Each score rests on public sources, listed for each investor. The scores are frozen in the{' '}<a href={`${base}snapshots/investitori-${data.date}.json`}>snapshot of {fmtDate(data.date)}</a>{' '}(fingerprint in the <a href={`${base}snapshots/investitori-${data.date}.sha256`}>.sha256 file</a>). “Conditions” measures how well each investor fits a start-up like ours, not how good the investor is in general.</>
+      : <>{rows.length} investitori internaționali care au finanțat start-ups ca al nostru (fintech, date financiare, piețe de capital, educație financiară), notați pe 14 condiții adaptate, cu aceleași ponderi ca în restul radarului. Fiecare notă se sprijină pe surse publice, listate la fiecare investitor. Notele sunt înghețate în{' '}<a href={`${base}snapshots/investitori-${data.date}.json`}>instantaneul din {fmtDate(data.date)}</a>{' '}(amprenta în <a href={`${base}snapshots/investitori-${data.date}.sha256`}>fișierul .sha256</a>). „Condiții” arată cât de potrivit e fiecare investitor pentru un start-up ca al nostru, nu cât de bun e investitorul în general.</>}
+  </p>
+  <div class="table-wrap">
+    <table class="radar fx">
+      <thead><tr><th>#</th><th>{L('Investitorul', 'Investor')}</th><th>{L('Tip', 'Type')}</th><th>{L('Unde', 'Where')}</th><th>{L('Prima investiție', 'First cheque')}</th><th>{L('Condiții', 'Conditions')}</th><th>{L('Scor', 'Score')}</th><th>{L('Fond / formă', 'Substance / form')}</th></tr></thead>
+      <tbody>
+        {rows.map((r, i) => (
+          <tr>
+            <td class="muted">{i + 1}</td>
+            <td><b>{r.name}</b></td>
+            <td class="muted">{r.kind}</td>
+            <td class="muted">{r.region}</td>
+            <td class="muted">{r.ticket}</td>
+            <td><span class:list={['k', zone(r.met)]}>{r.met}/14</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 14) * 100}%`} class={zone(r.met)}></i></span></td>
+            <td>{num(r.score)}</td>
+            <td><FondBadge values={r.c} lang={lang} /></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h3>{L('Fiecare investitor, condiție cu condiție', 'Each investor, condition by condition')}</h3>
+  {rows.map((r) => (
+    <details class="fxd">
+      <summary><b>{r.name}</b> · {r.ticket} · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · {L('scor', 'score')} {num(r.score)} · <FondBadge values={r.c} lang={lang} /></summary>
+      <p>{r.why}</p>
+      <CriteriaDetail set="investitori" values={r.c} lang={lang} />
+      <p class="muted">{L('Surse', 'Sources')}: {r.sources.map(([t, u], i) => <>{i > 0 && '; '}<a href={u} target="_blank" rel="noopener">{t}</a></>)}</p>
+    </details>
+  ))}
+</section>
+
+<section>
+  <h2>{L('Datele din spatele notelor', 'The data behind the scores')}</h2>
+  <Chart dataset={metChart} lang={lang} />
+</section>
+
+<section>
+  <h2>{L('Ce arată analiza', 'What the analysis shows')}</h2>
+  {en ? (
+    <p>
+      <b>{short(top.name)}</b> fits best ({top.met} of 14 conditions).{' '}
+      Investors with both a cheque that fits our stage and real access from Romania: {fit.join(', ')}.{' '}
+      The funds whose thesis is closest to ours (fintech, financial data, capital markets) are {thesis.join(', ')}, but most of them come in only once a company has revenue, or do not invest in our region.{' '}
+      The practical order is therefore: first the pre-seed funds and programmes active in Romania, then the large seed funds, and the fintech specialists after the first revenue.
+    </p>
+  ) : (
+    <p>
+      <b>{short(top.name)}</b> se potrivește cel mai bine ({top.met} din 14 condiții).{' '}
+      Investitorii care au și un tichet potrivit etapei noastre, și acces real din România: {fit.join(', ')}.{' '}
+      Fondurile cu teza cea mai apropiată de noi (fintech, date financiare, piețe de capital) sunt {thesis.join(', ')}, dar cele mai multe intră abia după ce o companie are venituri sau nu investesc în regiunea noastră.{' '}
+      Ordinea practică e deci: întâi fondurile și programele de pre-seed active în România, apoi marile fonduri de seed, iar specialiștii în fintech după primele venituri.
+    </p>
+  )}
+  <p class="notice">
+    {L('Lista arată potrivirea pe surse publice, nu un acord: niciunul dintre acești investitori nu ne-a evaluat și nu a promis că investește. Nu este o recomandare de investiții.',
+      'The list shows fit on public sources, not an agreement: none of these investors has assessed us or promised to invest. This is not investment advice.')}
+  </p>
+</section>

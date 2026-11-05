@@ -125,7 +125,24 @@ const proiecte: Three[] = [
   ['Riscuri mari: întârzieri, procese sau geopolitică.', 'Câteva riscuri de urmărit.', 'Riscuri mici.'],
 ];
 
-export const SETS: Record<string, Three[]> = { general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare, 'proiecte-imobiliare': proiecte, ...Object.fromEntries(Object.entries(SOCIAL_SETS).map(([k, v]) => [k, v.exRo])) };
+const investitori: Three[] = [
+  ['Nicio investiție nouă anunțată recent.', 'Investește, dar într-un ritm lent sau neclar.', 'Investește activ: tranzacții noi în ultimele 12 luni.'],
+  ['Fond vechi, în mare parte investit.', 'Fond încă în investire, fără capital proaspăt.', 'Fond închis recent, cu bani de investit.'],
+  ['Termeni costisitori sau neclari pentru fondatori.', 'Termeni obișnuiți, fără transparență specială.', 'Termeni corecți, publici și standard.'],
+  ['Aduce puțin în afară de bani.', 'Rețea utilă, fără programe speciale.', 'Rețea puternică: mentori, co-investitori, clienți.'],
+  ['Urmează rar companiile în rundele următoare.', 'Uneori reinvestește.', 'Are rezerve și își urmează companiile.'],
+  ['Puține exit-uri notabile sau deloc.', 'Câteva exit-uri bune.', 'Exit-uri mari și companii crescute de la început.'],
+  ['Prima investiție e mult prea mare pentru un start-up ca al nostru.', 'Prima investiție e la limita de sus a nevoii noastre.', 'Prima investiție se potrivește unui start-up la pre-seed sau seed.'],
+  ['Puține semne de loialitate a fondatorilor.', 'Reputație bună printre fondatori.', 'Fondatorii revin, îl recomandă sau investesc în el.'],
+  ['Teza lui e în altă parte (de exemplu deep tech sau apărare).', 'Generalist: sectorul nostru e posibil, nu preferat.', 'Investește exact în fintech, date financiare sau educație.'],
+  ['Nu investește în regiunea noastră.', 'Investește în Europa, rar în România.', 'Investește în România sau CEE, cu aplicare deschisă.'],
+  ['Un nume atât de faimos încât atrage mii de cereri.', 'Atenție moderată.', 'Atenție echilibrată.'],
+  ['Tot mai puține investiții noi.', 'Ritm constant.', 'Ritm în creștere al investițiilor noi.'],
+  ['Foarte selectiv: acceptare sub 1-2%.', 'Concurență moderată.', 'Puțini fondatori concurează pentru aceeași atenție.'],
+  ['Riscuri mari: schimbare de control, restructurare sau fond pe final.', 'Câteva riscuri de urmărit.', 'Riscuri mici.'],
+];
+
+export const SETS: Record<string, Three[]> = { investitori, general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare, 'proiecte-imobiliare': proiecte, ...Object.fromEntries(Object.entries(SOCIAL_SETS).map(([k, v]) => [k, v.exRo])) };
 
 /** Propoziția pe înțeles pentru nota v la condiția i (0-13) din setul dat. */
 export function explain(set: string, i: number, v: number | null | undefined): string {

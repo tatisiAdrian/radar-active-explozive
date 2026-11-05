@@ -305,6 +305,18 @@ export const domains: Domain[] = [
     ],
   },
   {
+    slug: 'investitori-startups',
+    criteria: 'investitori',
+    title: 'Investitori în start-ups ca al nostru',
+    summary: '22 de investitori internaționali care au finanțat start-ups ca al nostru, notați pe 14 condiții adaptate: capital proaspăt, tichet potrivit, teză care se potrivește, acces din România.',
+    status: 'activ',
+    questions: [
+      'Ce investitori internaționali finanțează start-ups de fintech, date financiare și educație financiară, și au mai făcut-o?',
+      'Care au capital proaspăt și o primă investiție potrivită pentru un start-up la pre-seed sau seed?',
+      'Care investesc cu adevărat în România și în Europa Centrală și de Est?',
+    ],
+  },
+  {
     slug: 'licee-romania',
     criteria: 'licee',
     title: 'Cele mai bune licee din România',
