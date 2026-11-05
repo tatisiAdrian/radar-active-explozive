@@ -3,7 +3,10 @@
  "set": "meserii",
  "region": "romania",
  "date": "2026-11-03",
- "snapshot": "social-meserii-romania-2026-11-03",
+ "snapshot": "social-meserii-romania-r2-2026-11-03",
+ "previousSnapshot": "social-meserii-romania-2026-11-03",
+ "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
+ "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
  "formulas": {},
  "rows": [
   {
@@ -191,6 +194,90 @@
    "met": 11
   },
   {
+   "id": "mecanic-auto-ro",
+   "name": "Mecanic auto",
+   "nameEn": "Motor vehicle mechanic",
+   "c": [
+    6,
+    9,
+    7,
+    8,
+    8,
+    5,
+    8,
+    9,
+    7,
+    8,
+    8,
+    7,
+    7,
+    6
+   ],
+   "why": "Parcul auto mare și tot mai multe mașini electrice și hibride cer mecanici; meserie cerută și în alte țări din UE.",
+   "whyEn": "A large car fleet and more and more electric and hybrid cars need mechanics; a job also in demand in other EU countries.",
+   "sources": [
+    [
+     "EURES: pagina rapoartelor despre lipsa și surplusul de personal",
+     "https://eures.europa.eu/living-and-working/labour-shortages-and-surpluses-europe_en"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "EURES: the page of reports on labour shortages and surpluses",
+     "https://eures.europa.eu/living-and-working/labour-shortages-and-surpluses-europe_en"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.14,
+   "met": 11
+  },
+  {
+   "id": "sudor-ro",
+   "name": "Sudor",
+   "nameEn": "Welder",
+   "c": [
+    6,
+    10,
+    7,
+    8,
+    8,
+    4,
+    8,
+    10,
+    7,
+    8,
+    8,
+    7,
+    8,
+    4
+   ],
+   "why": "Sudorii sunt pe lista meseriilor cu lipsă în cel puțin trei sferturi din țările europene (EURES), iar România e printre țările cu cele mai multe meserii deficitare. Cerere și în străinătate; muncă grea, cu risc.",
+   "whyEn": "Welders are on the list of occupations short in at least three quarters of European countries (EURES), and Romania is among the countries with the most shortage occupations. Demand abroad too; heavy work, with risk.",
+   "sources": [
+    [
+     "Autoritatea Europeană a Muncii: meseriile cu lipsă în cel puțin trei sferturi din țări (raportul 2024)",
+     "https://www.ela.europa.eu/ru/node/1651"
+    ],
+    [
+     "EURES: lipsa și surplusul de personal în Europa (iulie 2025)",
+     "https://eures.europa.eu/whats-latest-labour-shortages-and-surpluses-europe-2025-07-02_en"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "European Labour Authority: occupations short in at least three quarters of countries (2024 report)",
+     "https://www.ela.europa.eu/ru/node/1651"
+    ],
+    [
+     "EURES: labour shortages and surpluses in Europe (July 2025)",
+     "https://eures.europa.eu/whats-latest-labour-shortages-and-surpluses-europe-2025-07-02_en"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.06,
+   "met": 11
+  },
+  {
    "id": "meserias",
    "name": "Meseriaș calificat în construcții (zidar, fierar-betonist, instalator)",
    "nameEn": "Skilled construction worker (bricklayer, steel fixer, plumber)",
@@ -237,6 +324,212 @@
    "met": 11
   },
   {
+   "id": "ev-ro",
+   "name": "Tehnician pentru vehicule electrice",
+   "nameEn": "Electric vehicle technician",
+   "c": [
+    6,
+    7,
+    9,
+    8,
+    6,
+    7,
+    7,
+    9,
+    7,
+    7,
+    7,
+    7,
+    8,
+    6
+   ],
+   "why": "Vehiculele electrice și autonome sunt pe locul 7 la creștere în raportul WEF; Dacia, Ford Otosan și furnizorii auto din România trec la producția electrică.",
+   "whyEn": "Electric and autonomous vehicles are 7th for growth in the WEF report; Dacia, Ford Otosan and Romania’s car suppliers are moving to electric production.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "Platforma UE pentru competențe digitale: cele mai rapide 10 creșteri până în 2030 (WEF)",
+     "https://digital-skills-jobs.europa.eu/en/latest/news/these-are-10-fastest-growing-and-falling-jobs-2030"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "EU Digital Skills Platform: the 10 fastest-growing jobs to 2030 (WEF)",
+     "https://digital-skills-jobs.europa.eu/en/latest/news/these-are-10-fastest-growing-and-falling-jobs-2030"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.04,
+   "met": 11
+  },
+  {
+   "id": "bucatar-ro",
+   "name": "Bucătar",
+   "nameEn": "Cook",
+   "c": [
+    4,
+    10,
+    7,
+    9,
+    8,
+    4,
+    7,
+    9,
+    7,
+    9,
+    8,
+    7,
+    7,
+    6
+   ],
+   "why": "Bucătarii sunt pe lista meseriilor cu lipsă în majoritatea țărilor europene; în România, restaurantele și hotelurile aduc personal din afara UE. Program lung.",
+   "whyEn": "Cooks are on the shortage list in most European countries; in Romania, restaurants and hotels bring in staff from outside the EU. Long hours.",
+   "sources": [
+    [
+     "Autoritatea Europeană a Muncii: meseriile cu lipsă în cel puțin trei sferturi din țări (raportul 2024)",
+     "https://www.ela.europa.eu/ru/node/1651"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "European Labour Authority: occupations short in at least three quarters of countries (2024 report)",
+     "https://www.ela.europa.eu/ru/node/1651"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.86,
+   "met": 11
+  },
+  {
+   "id": "ingrijitor-ro",
+   "name": "Îngrijitor la domiciliu",
+   "nameEn": "Home carer",
+   "c": [
+    3,
+    9,
+    9,
+    10,
+    9,
+    4,
+    8,
+    10,
+    10,
+    9,
+    8,
+    6,
+    9,
+    5
+   ],
+   "why": "Îmbătrânirea populației crește cererea în țară și mai ales în străinătate, unde sute de mii de românce lucrează deja în îngrijire. Plătită modest în țară.",
+   "whyEn": "Population ageing raises demand at home and especially abroad, where hundreds of thousands of Romanian women already work in care. Modestly paid at home.",
+   "sources": [
+    [
+     "Autoritatea Europeană a Muncii: raportul EURES 2025 (analize pentru kinetoterapeuți, infirmieri, asistenți medicali)",
+     "https://www.ela.europa.eu/node/1925"
+    ],
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "European Labour Authority: the 2025 EURES report (analyses of physiotherapists, health care assistants, nurses)",
+     "https://www.ela.europa.eu/node/1925"
+    ],
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.18,
+   "met": 10
+  },
+  {
+   "id": "kinetoterapeut-ro",
+   "name": "Kinetoterapeut",
+   "nameEn": "Physiotherapist",
+   "c": [
+    5,
+    8,
+    8,
+    9,
+    5,
+    7,
+    8,
+    9,
+    9,
+    6,
+    7,
+    6,
+    7,
+    8
+   ],
+   "why": "Una dintre meseriile din sănătate cu lipsă de personal analizate separat de EURES în 2025; cerere în clinici private și în străinătate.",
+   "whyEn": "One of the health occupations with shortages analysed separately by EURES in 2025; demand in private clinics and abroad.",
+   "sources": [
+    [
+     "Autoritatea Europeană a Muncii: raportul EURES 2025 (analize pentru kinetoterapeuți, infirmieri, asistenți medicali)",
+     "https://www.ela.europa.eu/node/1925"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "European Labour Authority: the 2025 EURES report (analyses of physiotherapists, health care assistants, nurses)",
+     "https://www.ela.europa.eu/node/1925"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.08,
+   "met": 10
+  },
+  {
+   "id": "farmacist",
+   "name": "Farmacist",
+   "nameEn": "Pharmacist",
+   "c": [
+    7,
+    8,
+    7,
+    8,
+    3,
+    7,
+    9,
+    9,
+    9,
+    4,
+    7,
+    6,
+    6,
+    8
+   ],
+   "why": "Lanțurile de farmacii s-au extins rapid, iar zonele rurale au lipsă de farmaciști. Facultate de cinci ani și diplomă recunoscută în UE; o parte din muncă se poate automatiza.",
+   "whyEn": "Pharmacy chains have expanded fast, and rural areas lack pharmacists. A five-year degree recognised across the EU; part of the work can be automated.",
+   "sources": [
+    [
+     "Autoritatea Europeană a Muncii: raportul EURES 2025 (analize pentru kinetoterapeuți, infirmieri, asistenți medicali)",
+     "https://www.ela.europa.eu/node/1925"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "European Labour Authority: the 2025 EURES report (analyses of physiotherapists, health care assistants, nurses)",
+     "https://www.ela.europa.eu/node/1925"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.04,
+   "met": 10
+  },
+  {
    "id": "medic",
    "name": "Medic",
    "nameEn": "Doctor",
@@ -272,6 +565,82 @@
    ],
    "inputs": {},
    "score": 7.4,
+   "met": 9
+  },
+  {
+   "id": "fintech-ro",
+   "name": "Inginer fintech",
+   "nameEn": "FinTech engineer",
+   "c": [
+    9,
+    7,
+    10,
+    7,
+    5,
+    8,
+    7,
+    9,
+    7,
+    5,
+    5,
+    8,
+    5,
+    6
+   ],
+   "why": "A doua meserie cu cea mai rapidă creștere până în 2030 la WEF. În România, FintechOS, FlowX.AI și băncile mari angajează; salarii la nivelul IT.",
+   "whyEn": "The second fastest-growing job to 2030 in the WEF report. In Romania, FintechOS, FlowX.AI and the big banks are hiring; pay at IT level.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.16,
+   "met": 9
+  },
+  {
+   "id": "manager-proiect-ro",
+   "name": "Manager de proiect (IT, fonduri europene, construcții)",
+   "nameEn": "Project manager (IT, EU funds, construction)",
+   "c": [
+    8,
+    8,
+    8,
+    7,
+    6,
+    6,
+    7,
+    9,
+    7,
+    6,
+    7,
+    6,
+    6,
+    7
+   ],
+   "why": "Printre meseriile cu cea mai mare creștere absolută la WEF; în România, fondurile europene și PNRR au creat cerere mare. Certificările PMP și PRINCE2 sunt recunoscute oriunde.",
+   "whyEn": "Among the jobs with the largest absolute growth in the WEF report; in Romania, EU funds and the recovery plan (PNRR) have created strong demand. PMP and PRINCE2 certifications are recognised everywhere.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.04,
    "met": 9
   },
   {
@@ -433,6 +802,98 @@
    "inputs": {},
    "score": 6.86,
    "met": 7
+  },
+  {
+   "id": "ux-ro",
+   "name": "Designer UI/UX",
+   "nameEn": "UI and UX designer",
+   "c": [
+    7,
+    6,
+    9,
+    5,
+    7,
+    8,
+    6,
+    9,
+    6,
+    7,
+    5,
+    6,
+    4,
+    6
+   ],
+   "why": "Locul 8 între meseriile cu cea mai rapidă creștere la WEF; poate fi făcută de la distanță pentru clienți din străinătate. Concurență mare la început de carieră și presiune din partea AI.",
+   "whyEn": "Eighth among the fastest-growing jobs in the WEF report; it can be done remotely for foreign clients. Strong competition early in a career and pressure from AI.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "Platforma UE pentru competențe digitale: cele mai rapide 10 creșteri până în 2030 (WEF)",
+     "https://digital-skills-jobs.europa.eu/en/latest/news/these-are-10-fastest-growing-and-falling-jobs-2030"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "EU Digital Skills Platform: the 10 fastest-growing jobs to 2030 (WEF)",
+     "https://digital-skills-jobs.europa.eu/en/latest/news/these-are-10-fastest-growing-and-falling-jobs-2030"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.48,
+   "met": 6
+  },
+  {
+   "id": "ospatar-ro",
+   "name": "Ospătar",
+   "nameEn": "Waiter",
+   "c": [
+    3,
+    9,
+    6,
+    8,
+    10,
+    4,
+    5,
+    9,
+    5,
+    10,
+    8,
+    6,
+    6,
+    6
+   ],
+   "why": "HoReCa are lipsă constantă de personal în România și în toată Europa (EURES). Ușor de intrat în meserie, dar plătită slab și sezonieră.",
+   "whyEn": "Hospitality has a constant staff shortage in Romania and across Europe (EURES). Easy to enter, but poorly paid and seasonal.",
+   "sources": [
+    [
+     "EURES: pagina rapoartelor despre lipsa și surplusul de personal",
+     "https://eures.europa.eu/living-and-working/labour-shortages-and-surpluses-europe_en"
+    ],
+    [
+     "Undelucram.ro (ANOFM, INS): locuri de muncă vacante și salarii, septembrie 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "EURES: the page of reports on labour shortages and surpluses",
+     "https://eures.europa.eu/living-and-working/labour-shortages-and-surpluses-europe_en"
+    ],
+    [
+     "Undelucram.ro (ANOFM, INS): job vacancies and wages, September 2026",
+     "https://www.undelucram.ro/en/cumlucram/32905-job-vacancies-romania-tighter-market-september-2026-2479"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.28,
+   "met": 6
   },
   {
    "id": "programator",

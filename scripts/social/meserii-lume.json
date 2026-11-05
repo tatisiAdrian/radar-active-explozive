@@ -564,6 +564,426 @@
      "https://manpowerthailand.com/blog/2025/01/talent-shortage-2025-global"
     ]
    ]
+  },
+  {
+   "id": "fintech",
+   "name": "Inginer fintech",
+   "nameEn": "FinTech engineer",
+   "c": [
+    9,
+    9,
+    10,
+    7,
+    5,
+    8,
+    7,
+    9,
+    7,
+    5,
+    5,
+    8,
+    5,
+    6
+   ],
+   "why": "A doua meserie cu cea mai rapidă creștere până în 2030, după specialiștii în big data, potrivit WEF. Combină programarea cu finanțele și reglementarea; e expusă ciclurilor din sectorul financiar.",
+   "whyEn": "The second fastest-growing job to 2030, after big data specialists, according to the WEF. It combines programming with finance and regulation; it is exposed to cycles in the financial sector.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "Platforma UE pentru competențe digitale: cele mai rapide 10 creșteri până în 2030 (WEF)",
+     "https://digital-skills-jobs.europa.eu/en/latest/news/these-are-10-fastest-growing-and-falling-jobs-2030"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "EU Digital Skills Platform: the 10 fastest-growing jobs to 2030 (WEF)",
+     "https://digital-skills-jobs.europa.eu/en/latest/news/these-are-10-fastest-growing-and-falling-jobs-2030"
+    ]
+   ]
+  },
+  {
+   "id": "ev",
+   "name": "Specialist în vehicule electrice și autonome",
+   "nameEn": "Autonomous and electric vehicle specialist",
+   "c": [
+    8,
+    8,
+    9,
+    8,
+    4,
+    7,
+    7,
+    9,
+    7,
+    5,
+    7,
+    7,
+    7,
+    6
+   ],
+   "why": "Locul 7 între meseriile cu cea mai rapidă creștere la WEF, datorită tranziției spre mașini electrice și autonome. Cererea depinde de ritmul investițiilor din industria auto.",
+   "whyEn": "Seventh among the fastest-growing jobs in the WEF report, thanks to the shift to electric and autonomous cars. Demand depends on the pace of investment in the car industry.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "Platforma UE pentru competențe digitale: cele mai rapide 10 creșteri până în 2030 (WEF)",
+     "https://digital-skills-jobs.europa.eu/en/latest/news/these-are-10-fastest-growing-and-falling-jobs-2030"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "EU Digital Skills Platform: the 10 fastest-growing jobs to 2030 (WEF)",
+     "https://digital-skills-jobs.europa.eu/en/latest/news/these-are-10-fastest-growing-and-falling-jobs-2030"
+    ]
+   ]
+  },
+  {
+   "id": "ux",
+   "name": "Designer UI/UX",
+   "nameEn": "UI and UX designer",
+   "c": [
+    7,
+    7,
+    9,
+    5,
+    7,
+    8,
+    6,
+    9,
+    6,
+    7,
+    5,
+    6,
+    4,
+    6
+   ],
+   "why": "Locul 8 între meseriile cu cea mai rapidă creștere la WEF. Pregătire relativ scurtă și muncă de la distanță, dar instrumentele AI preiau o parte din munca de bază, iar concurența la nivel de începător e mare.",
+   "whyEn": "Eighth among the fastest-growing jobs in the WEF report. Relatively short training and remote work, but AI tools are taking over part of the basic work, and competition at entry level is high.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "Platforma UE pentru competențe digitale: cele mai rapide 10 creșteri până în 2030 (WEF)",
+     "https://digital-skills-jobs.europa.eu/en/latest/news/these-are-10-fastest-growing-and-falling-jobs-2030"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "EU Digital Skills Platform: the 10 fastest-growing jobs to 2030 (WEF)",
+     "https://digital-skills-jobs.europa.eu/en/latest/news/these-are-10-fastest-growing-and-falling-jobs-2030"
+    ]
+   ]
+  },
+  {
+   "id": "iot",
+   "name": "Specialist în Internetul lucrurilor (IoT)",
+   "nameEn": "Internet of Things specialist",
+   "c": [
+    8,
+    8,
+    9,
+    7,
+    5,
+    7,
+    7,
+    9,
+    7,
+    6,
+    7,
+    7,
+    7,
+    6
+   ],
+   "why": "Locul 10 între meseriile cu cea mai rapidă creștere la WEF: senzori, fabrici și orașe conectate. Combină electronica cu software-ul, o combinație rară pe piață.",
+   "whyEn": "Tenth among the fastest-growing jobs in the WEF report: sensors, factories and connected cities. It combines electronics with software, a rare combination on the market.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "Platforma UE pentru competențe digitale: cele mai rapide 10 creșteri până în 2030 (WEF)",
+     "https://digital-skills-jobs.europa.eu/en/latest/news/these-are-10-fastest-growing-and-falling-jobs-2030"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ],
+    [
+     "EU Digital Skills Platform: the 10 fastest-growing jobs to 2030 (WEF)",
+     "https://digital-skills-jobs.europa.eu/en/latest/news/these-are-10-fastest-growing-and-falling-jobs-2030"
+    ]
+   ]
+  },
+  {
+   "id": "analist-date",
+   "name": "Analist și cercetător de date",
+   "nameEn": "Data analyst and scientist",
+   "c": [
+    8,
+    8,
+    9,
+    6,
+    5,
+    8,
+    7,
+    10,
+    7,
+    6,
+    5,
+    7,
+    5,
+    7
+   ],
+   "why": "Printre primele 15 meserii cu cea mai rapidă creștere la WEF. Cerere în toate industriile; analiza de rutină e însă tot mai automatizată, deci valoarea vine din înțelegerea afacerii.",
+   "whyEn": "Among the top 15 fastest-growing jobs in the WEF report. Demand in every industry; but routine analysis is increasingly automated, so the value comes from understanding the business.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ]
+  },
+  {
+   "id": "mediu",
+   "name": "Inginer de mediu",
+   "nameEn": "Environmental engineer",
+   "c": [
+    7,
+    7,
+    9,
+    8,
+    4,
+    7,
+    8,
+    8,
+    9,
+    6,
+    7,
+    6,
+    8,
+    7
+   ],
+   "why": "Printre primele 15 meserii cu cea mai rapidă creștere la WEF, alături de inginerii în energie regenerabilă. Reglementările de mediu țin cererea stabilă.",
+   "whyEn": "Among the top 15 fastest-growing jobs in the WEF report, alongside renewable energy engineers. Environmental regulation keeps demand stable.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ]
+  },
+  {
+   "id": "devops",
+   "name": "Inginer DevOps și cloud",
+   "nameEn": "DevOps and cloud engineer",
+   "c": [
+    9,
+    8,
+    9,
+    6,
+    5,
+    6,
+    7,
+    10,
+    6,
+    5,
+    6,
+    7,
+    6,
+    7
+   ],
+   "why": "Locul 14 între meseriile cu cea mai rapidă creștere la WEF. Salarii mari și muncă de la distanță; tura de gardă pentru incidente face programul solicitant.",
+   "whyEn": "Fourteenth among the fastest-growing jobs in the WEF report. High pay and remote work; on-call duty for incidents makes the schedule demanding.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ]
+  },
+  {
+   "id": "manager-proiect",
+   "name": "Manager de proiect",
+   "nameEn": "Project manager",
+   "c": [
+    8,
+    8,
+    8,
+    7,
+    6,
+    6,
+    7,
+    9,
+    7,
+    6,
+    7,
+    6,
+    6,
+    7
+   ],
+   "why": "Printre meseriile cu cea mai mare creștere în cifre absolute până în 2030, potrivit WEF. Certificările internaționale (PMP, PRINCE2) sunt recunoscute peste tot, dar rolul cere ani de experiență.",
+   "whyEn": "Among the jobs with the largest absolute growth to 2030, according to the WEF. International certifications (PMP, PRINCE2) are recognised everywhere, but the role needs years of experience.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ]
+  },
+  {
+   "id": "ingrijitor",
+   "name": "Îngrijitor personal (vârstnici și persoane cu dizabilități)",
+   "nameEn": "Personal care aide",
+   "c": [
+    3,
+    10,
+    9,
+    10,
+    9,
+    4,
+    8,
+    8,
+    10,
+    9,
+    8,
+    6,
+    9,
+    5
+   ],
+   "why": "Printre meseriile de îngrijire cu cea mai mare creștere absolută la WEF; îmbătrânirea populației crește cererea în toată lumea. Plătită modest și grea fizic și emoțional.",
+   "whyEn": "Among the care jobs with the largest absolute growth in the WEF report; ageing populations raise demand everywhere. Modestly paid and physically and emotionally hard.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ]
+  },
+  {
+   "id": "vanzator",
+   "name": "Vânzător",
+   "nameEn": "Salesperson",
+   "c": [
+    4,
+    8,
+    7,
+    4,
+    10,
+    5,
+    5,
+    6,
+    5,
+    10,
+    8,
+    4,
+    3,
+    5
+   ],
+   "why": "Printre primele cinci meserii ca număr de locuri noi până în 2030, potrivit WEF. Ușor de intrat în ea, dar câștig mic și expunere la automatizarea comerțului.",
+   "whyEn": "Among the top five jobs by number of new positions to 2030, according to the WEF. Easy to enter, but low pay and exposure to automation in retail.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ]
+  },
+  {
+   "id": "alimentar",
+   "name": "Lucrător în prelucrarea alimentelor",
+   "nameEn": "Food processing worker",
+   "c": [
+    3,
+    8,
+    8,
+    5,
+    9,
+    4,
+    6,
+    6,
+    8,
+    9,
+    8,
+    4,
+    6,
+    4
+   ],
+   "why": "Printre meseriile cu cea mai mare creștere în cifre absolute la WEF, odată cu cererea de hrană. Muncă în schimburi, plătită modest și parțial automatizabilă.",
+   "whyEn": "Among the jobs with the largest absolute growth in the WEF report, as demand for food rises. Shift work, modestly paid and partly automatable.",
+   "sources": [
+    [
+     "Forumul Economic Mondial: Future of Jobs 2025, capitolul despre perspectivele locurilor de muncă",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "World Economic Forum: Future of Jobs 2025, the jobs outlook chapter",
+     "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+    ]
+   ]
   }
- ]
+ ],
+ "revision": 2,
+ "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
+ "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources."
 }
