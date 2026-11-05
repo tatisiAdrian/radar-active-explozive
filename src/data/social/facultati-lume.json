@@ -3,7 +3,10 @@
  "set": "facultati-lume",
  "region": "lume",
  "date": "2026-11-03",
- "snapshot": "social-facultati-lume-2026-11-03",
+ "snapshot": "social-facultati-lume-r2-2026-11-03",
+ "previousSnapshot": "social-facultati-lume-2026-11-03",
+ "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
+ "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
  "formulas": {},
  "rows": [
   {
@@ -61,6 +64,52 @@
    "met": 11
   },
   {
+   "id": "epfl-lume",
+   "name": "EPFL, Lausanne",
+   "nameEn": "EPFL, Lausanne",
+   "c": [
+    9,
+    9,
+    9,
+    10,
+    8,
+    10,
+    3,
+    10,
+    8,
+    6,
+    8,
+    7,
+    6,
+    9
+   ],
+   "why": "Locul 22 în QS 2026, la egalitate cu TUM. Inginerie și informatică de vârf, taxe mici, foarte internațională; costurile de trai din Elveția sunt mari.",
+   "whyEn": "Twenty-second in QS 2026, tied with TUM. Top engineering and computer science, low fees, very international; living costs in Switzerland are high.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "inputs": {},
+   "score": 8.06,
+   "met": 11
+  },
+  {
    "id": "nus",
    "name": "Universitatea Națională din Singapore (NUS)",
    "nameEn": "National University of Singapore (NUS)",
@@ -113,6 +162,98 @@
    "inputs": {},
    "score": 7.9,
    "met": 11
+  },
+  {
+   "id": "ntu",
+   "name": "Universitatea Tehnologică Nanyang (NTU Singapore)",
+   "nameEn": "Nanyang Technological University (NTU Singapore)",
+   "c": [
+    9,
+    8,
+    9,
+    9,
+    8,
+    10,
+    4,
+    9,
+    9,
+    5,
+    8,
+    8,
+    5,
+    8
+   ],
+   "why": "Locul 12 în QS 2026, în urcare. A doua universitate din Singapore, puternică în inginerie, informatică și materiale; predare în engleză, campus modern, dar costuri de trai ridicate.",
+   "whyEn": "Twelfth in QS 2026, rising. Singapore’s second university, strong in engineering, computer science and materials; teaching in English and a modern campus, but high living costs.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.88,
+   "met": 11
+  },
+  {
+   "id": "tsinghua",
+   "name": "Universitatea Tsinghua",
+   "nameEn": "Tsinghua University",
+   "c": [
+    9,
+    9,
+    9,
+    10,
+    10,
+    10,
+    7,
+    6,
+    8,
+    2,
+    7,
+    8,
+    2,
+    6
+   ],
+   "why": "Locul 17 în QS 2026, în urcare. Cea mai puternică universitate tehnică din China, în inteligență artificială și inginerie; admitere foarte grea și restricții pentru colaborările cu unele țări occidentale.",
+   "whyEn": "Seventeenth in QS 2026, rising. China’s strongest technical university, in artificial intelligence and engineering; very hard admission and restrictions on collaboration with some Western countries.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "Yicai: universitățile chineze în QS 2026",
+     "https://www2.yicaiglobal.com/flashdetail/90430766166725"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "Yicai: Chinese universities in QS 2026",
+     "https://www2.yicaiglobal.com/flashdetail/90430766166725"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.62,
+   "met": 10
   },
   {
    "id": "imperial",
@@ -331,6 +472,98 @@
    "met": 10
   },
   {
+   "id": "peking",
+   "name": "Universitatea Peking",
+   "nameEn": "Peking University",
+   "c": [
+    9,
+    9,
+    8,
+    9,
+    10,
+    8,
+    7,
+    6,
+    8,
+    2,
+    7,
+    7,
+    2,
+    6
+   ],
+   "why": "Locul 14 în QS 2026, cea mai bine clasată universitate din China. Concurența la admitere pentru studenții chinezi e uriașă; pentru străini, limba și contextul politic sunt obstacole.",
+   "whyEn": "Fourteenth in QS 2026, China’s highest-ranked university. Competition for admission among Chinese students is huge; for foreigners, language and the political context are obstacles.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "Yicai: universitățile chineze în QS 2026",
+     "https://www2.yicaiglobal.com/flashdetail/90430766166725"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "Yicai: Chinese universities in QS 2026",
+     "https://www2.yicaiglobal.com/flashdetail/90430766166725"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.26,
+   "met": 10
+  },
+  {
+   "id": "chicago",
+   "name": "Universitatea din Chicago",
+   "nameEn": "University of Chicago",
+   "c": [
+    9,
+    9,
+    9,
+    10,
+    9,
+    7,
+    4,
+    8,
+    8,
+    2,
+    7,
+    9,
+    2,
+    6
+   ],
+   "why": "Locul 13 în QS 2026, unul dintre cele mai mari salturi din vârful clasamentului. Foarte puternică în economie, fizică și drept; admitere extrem de selectivă și taxe foarte mari.",
+   "whyEn": "Thirteenth in QS 2026, one of the biggest jumps at the top of the ranking. Very strong in economics, physics and law; extremely selective admission and very high fees.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.22,
+   "met": 10
+  },
+  {
    "id": "cambridge",
    "name": "Universitatea Cambridge",
    "nameEn": "University of Cambridge",
@@ -493,6 +726,98 @@
    "met": 9
   },
   {
+   "id": "melbourne",
+   "name": "Universitatea din Melbourne",
+   "nameEn": "University of Melbourne",
+   "c": [
+    9,
+    8,
+    8,
+    9,
+    8,
+    8,
+    4,
+    10,
+    9,
+    6,
+    7,
+    4,
+    5,
+    6
+   ],
+   "why": "Locul 19 în QS 2026, în coborâre, ca toate universitățile australiene din primele 30. Foarte deschisă studenților străini, într-un oraș cu calitate a vieții mare; Australia a limitat însă numărul de vize pentru studenți.",
+   "whyEn": "Nineteenth in QS 2026, falling, like all Australian universities in the top 30. Very open to foreign students, in a city with a high quality of life; but Australia has capped student visa numbers.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS World University Rankings 2026: clasamentul mondial (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS World University Rankings 2026: the world ranking (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.3,
+   "met": 9
+  },
+  {
+   "id": "unsw",
+   "name": "Universitatea New South Wales (UNSW Sydney)",
+   "nameEn": "University of New South Wales (UNSW Sydney)",
+   "c": [
+    9,
+    7,
+    9,
+    8,
+    8,
+    9,
+    4,
+    10,
+    9,
+    6,
+    7,
+    4,
+    5,
+    6
+   ],
+   "why": "Locul 20 în QS 2026. Puternică în inginerie și cu legături bune cu angajatorii; foarte mulți studenți străini. Sydney e scump, iar plafonul de vize pentru studenți e un risc.",
+   "whyEn": "Twentieth in QS 2026. Strong in engineering, with good links to employers; very many foreign students. Sydney is expensive, and the student visa cap is a risk.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS World University Rankings 2026: clasamentul mondial (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS World University Rankings 2026: the world ranking (Hotcourses Abroad)",
+     "https://www.hotcoursesabroad.com/study-abroad-info/destination-guides/qs-world-university-rankings-2026/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.3,
+   "met": 9
+  },
+  {
    "id": "stanford",
    "name": "Universitatea Stanford",
    "nameEn": "Stanford University",
@@ -545,6 +870,190 @@
    "inputs": {},
    "score": 7.24,
    "met": 9
+  },
+  {
+   "id": "berkeley",
+   "name": "Universitatea California, Berkeley",
+   "nameEn": "University of California, Berkeley",
+   "c": [
+    9,
+    10,
+    9,
+    10,
+    9,
+    9,
+    3,
+    8,
+    9,
+    3,
+    7,
+    4,
+    3,
+    5
+   ],
+   "why": "Locul 17 în QS 2026, în coborâre. Universitate publică de vârf lângă Silicon Valley, cu informatică și inginerie de prim rang; costurile din zona San Francisco sunt foarte mari, iar finanțarea publică e sub presiune.",
+   "whyEn": "Seventeenth in QS 2026, falling. A top public university near Silicon Valley, with first-rate computer science and engineering; living costs around San Francisco are very high, and public funding is under pressure.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.16,
+   "met": 9
+  },
+  {
+   "id": "penn",
+   "name": "Universitatea Pennsylvania",
+   "nameEn": "University of Pennsylvania",
+   "c": [
+    9,
+    9,
+    10,
+    9,
+    9,
+    8,
+    4,
+    8,
+    8,
+    2,
+    7,
+    4,
+    2,
+    5
+   ],
+   "why": "Locul 15 în QS 2026, în coborâre. Wharton, școala ei de afaceri, e printre cele mai cunoscute din lume, cu angajabilitate foarte mare; taxele și presiunile politice asupra universităților americane sunt riscurile.",
+   "whyEn": "Fifteenth in QS 2026, falling. Wharton, its business school, is among the best known in the world, with very high employability; fees and political pressure on US universities are the risks.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.9,
+   "met": 9
+  },
+  {
+   "id": "cornell",
+   "name": "Universitatea Cornell",
+   "nameEn": "Cornell University",
+   "c": [
+    9,
+    9,
+    9,
+    9,
+    9,
+    8,
+    6,
+    8,
+    6,
+    3,
+    7,
+    5,
+    3,
+    5
+   ],
+   "why": "Locul 16 în QS 2026. Universitate mare din grupul Ivy League, puternică în inginerie, agricultură și hotelărie, cu un campus tehnologic la New York; orașul principal, Ithaca, e mic.",
+   "whyEn": "Sixteenth in QS 2026. A large Ivy League university, strong in engineering, agriculture and hospitality, with a tech campus in New York; its main town, Ithaca, is small.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.06,
+   "met": 8
+  },
+  {
+   "id": "yale",
+   "name": "Universitatea Yale",
+   "nameEn": "Yale University",
+   "c": [
+    9,
+    10,
+    9,
+    9,
+    9,
+    7,
+    5,
+    8,
+    6,
+    2,
+    6,
+    7,
+    2,
+    5
+   ],
+   "why": "Locul 21 în QS 2026, în urcare. Una dintre cele mai prestigioase universități americane, puternică în drept și științe umaniste; admitere extrem de selectivă, iar presiunile federale asupra universităților sunt un risc.",
+   "whyEn": "Twenty-first in QS 2026, rising. One of the most prestigious US universities, strong in law and the humanities; extremely selective admission, and federal pressure on universities is a risk.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: rezultatele clasamentului mondial 2026",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ],
+    [
+     "QS: the 2026 world ranking results",
+     "https://www.qs.com/insights/qs-world-university-rankings-2026"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.9,
+   "met": 8
   },
   {
    "id": "harvard",

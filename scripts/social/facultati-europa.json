@@ -476,6 +476,394 @@
      "https://www.topuniversities.com/qs-europe-rankings"
     ]
    ]
+  },
+  {
+   "id": "ip-paris",
+   "name": "Institut Polytechnique de Paris",
+   "nameEn": "Institut Polytechnique de Paris",
+   "c": [
+    8,
+    8,
+    9,
+    8,
+    7,
+    10,
+    4,
+    8,
+    9,
+    5,
+    7,
+    7,
+    null,
+    8
+   ],
+   "why": "Locul 41 în QS mondial 2026. Grupează École Polytechnique și alte școli de inginerie de elită; programe tot mai multe în engleză, dar costurile din regiunea Paris sunt mari.",
+   "whyEn": "Forty-first in the 2026 QS world ranking. It groups École Polytechnique and other elite engineering schools; more and more programmes in English, but costs in the Paris region are high.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "delft",
+   "name": "Universitatea Tehnică Delft",
+   "nameEn": "Delft University of Technology",
+   "c": [
+    8,
+    8,
+    9,
+    9,
+    8,
+    10,
+    4,
+    9,
+    8,
+    6,
+    7,
+    6,
+    null,
+    7
+   ],
+   "why": "Locul 47 în QS mondial 2026, cea mai bună universitate tehnică din Țările de Jos. Inginerie, arhitectură și energie; criza locuințelor pentru studenți și reducerile de buget din Țările de Jos sunt riscurile.",
+   "whyEn": "Forty-seventh in the 2026 QS world ranking, the best technical university in the Netherlands. Engineering, architecture and energy; the student housing crisis and Dutch budget cuts are the risks.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "bristol",
+   "name": "Universitatea din Bristol",
+   "nameEn": "University of Bristol",
+   "c": [
+    8,
+    7,
+    9,
+    8,
+    8,
+    8,
+    5,
+    8,
+    7,
+    6,
+    7,
+    6,
+    null,
+    7
+   ],
+   "why": "Locul 51 în QS mondial 2026. Foarte căutată de angajatori, puternică în inginerie aerospațială; Bristol e mai ieftin decât Londra, dar taxele pentru străini sunt mari.",
+   "whyEn": "Fifty-first in the 2026 QS world ranking. Much sought after by employers, strong in aerospace engineering; Bristol is cheaper than London, but fees for foreigners are high.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "amsterdam",
+   "name": "Universitatea din Amsterdam",
+   "nameEn": "University of Amsterdam",
+   "c": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    7,
+    3,
+    9,
+    9,
+    6,
+    7,
+    6,
+    null,
+    7
+   ],
+   "why": "Locul 53 în QS mondial 2026. Puternică în științe sociale, economie și comunicare, cu multe programe în engleză; locuințele din Amsterdam sunt foarte greu de găsit.",
+   "whyEn": "Fifty-third in the 2026 QS world ranking. Strong in social sciences, economics and communication, with many programmes in English; housing in Amsterdam is very hard to find.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "lse",
+   "name": "London School of Economics (LSE)",
+   "nameEn": "London School of Economics (LSE)",
+   "c": [
+    8,
+    9,
+    10,
+    8,
+    9,
+    8,
+    2,
+    10,
+    10,
+    4,
+    7,
+    5,
+    null,
+    8
+   ],
+   "why": "Locul 56 în QS mondial, dar printre primele din lume în economie și științe politice. Absolvenții sunt foarte căutați în finanțe; Londra e scumpă și admiterea e grea.",
+   "whyEn": "Fifty-sixth in the QS world ranking, but among the world’s best in economics and political science. Graduates are much sought after in finance; London is expensive and admission is hard.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "lmu",
+   "name": "Universitatea Ludwig Maximilian din München (LMU)",
+   "nameEn": "Ludwig Maximilian University of Munich (LMU)",
+   "c": [
+    8,
+    9,
+    8,
+    9,
+    8,
+    7,
+    4,
+    7,
+    9,
+    7,
+    7,
+    6,
+    null,
+    8
+   ],
+   "why": "Locul 58 în QS mondial 2026, una dintre cele mai bune universități generaliste din Germania. Fără taxe de școlarizare pentru majoritatea programelor; München are însă chirii mari.",
+   "whyEn": "Fifty-eighth in the 2026 QS world ranking, one of Germany’s best general universities. No tuition fees for most programmes; but Munich has high rents.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "ku-leuven",
+   "name": "KU Leuven",
+   "nameEn": "KU Leuven",
+   "c": [
+    8,
+    8,
+    8,
+    9,
+    7,
+    8,
+    6,
+    8,
+    7,
+    7,
+    7,
+    6,
+    null,
+    8
+   ],
+   "why": "Locul 60 în QS mondial 2026, cea mai bună universitate din Belgia și una dintre cele mai inovatoare din Europa. Taxe mici pentru europeni, într-un oraș mic, dar bine conectat.",
+   "whyEn": "Sixtieth in the 2026 QS world ranking, Belgium’s best university and one of Europe’s most innovative. Low fees for Europeans, in a small but well-connected town.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "paris-saclay",
+   "name": "Universitatea Paris-Saclay",
+   "nameEn": "Université Paris-Saclay",
+   "c": [
+    7,
+    8,
+    7,
+    9,
+    7,
+    8,
+    5,
+    7,
+    8,
+    7,
+    7,
+    6,
+    null,
+    7
+   ],
+   "why": "Locul 70 în QS mondial 2026, foarte puternică în matematică și fizică. Taxe mici pentru europeni; campusul de la sud de Paris e în plină dezvoltare.",
+   "whyEn": "Seventieth in the 2026 QS world ranking, very strong in mathematics and physics. Low fees for Europeans; the campus south of Paris is still developing.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "lund",
+   "name": "Universitatea Lund",
+   "nameEn": "Lund University",
+   "c": [
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    6,
+    8,
+    7,
+    7,
+    7,
+    6,
+    null,
+    8
+   ],
+   "why": "Locul 72 în QS mondial 2026, cea mai bine clasată universitate din Suedia. Multe programe de master în engleză, gratuite pentru europeni, într-un oraș studențesc lângă Copenhaga.",
+   "whyEn": "Seventy-second in the 2026 QS world ranking, Sweden’s highest-ranked university. Many master’s programmes in English, free for Europeans, in a student town near Copenhagen.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "sorbonne",
+   "name": "Universitatea Sorbona",
+   "nameEn": "Sorbonne University",
+   "c": [
+    7,
+    8,
+    7,
+    8,
+    8,
+    7,
+    4,
+    7,
+    9,
+    6,
+    7,
+    6,
+    null,
+    7
+   ],
+   "why": "Locul 72 în QS mondial 2026. Puternică în medicină, științe și litere, cu un nume cunoscut în toată lumea; predarea e mai ales în franceză, iar Parisul e scump.",
+   "whyEn": "Seventy-second in the 2026 QS world ranking. Strong in medicine, sciences and humanities, with a name known worldwide; teaching is mostly in French, and Paris is expensive.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "warwick",
+   "name": "Universitatea Warwick",
+   "nameEn": "University of Warwick",
+   "c": [
+    7,
+    7,
+    9,
+    7,
+    8,
+    8,
+    6,
+    9,
+    6,
+    6,
+    7,
+    5,
+    null,
+    7
+   ],
+   "why": "Locul 74 în QS mondial 2026. Foarte apreciată de angajatori în economie, matematică și afaceri; campus în afara orașului, mai ieftin decât Londra, dar cu taxe mari pentru străini.",
+   "whyEn": "Seventy-fourth in the 2026 QS world ranking. Highly valued by employers in economics, mathematics and business; a campus outside the city, cheaper than London, but with high fees for foreigners.",
+   "sources": [
+    [
+     "QS World University Rankings 2026: lista oficială (PDF publicat de Universitatea Masaryk)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "QS World University Rankings 2026: the official list (PDF published by Masaryk University)",
+     "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+    ]
+   ]
   }
- ]
+ ],
+ "revision": 2,
+ "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
+ "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources."
 }
