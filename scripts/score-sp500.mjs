@@ -39,7 +39,10 @@ for (const [tk, j] of Object.entries(judg.companies)) {
     c.C2 = clamp(6 - 1.5 * ch);
     inputs.C2 = `acțiuni în circulație ${ch >= 0 ? '+' : ''}${ch.toFixed(1)}% într-un an`;
   }
-  const ocf = co?.opCashFlow?.value, capex = co?.capex?.value ?? 0, rev = co?.revenue?.value;
+  // La bănci, fluxul de numerar include depozitele clienților, deci C3, C7 și C10 nu au sens: rămân fără notă (5 în scor, neîndeplinite).
+  const BANK_NOTE = 'nu se aplică la bănci: fluxul de numerar include depozitele și creditele clienților';
+  if (j.bank) { inputs.C3 = BANK_NOTE; inputs.C7 = BANK_NOTE; inputs.C10 = BANK_NOTE; }
+  const ocf = j.bank ? undefined : co?.opCashFlow?.value, capex = co?.capex?.value ?? 0, rev = co?.revenue?.value;
   if (ocf !== undefined && co?.cash) {
     const net = (co.debt?.value ?? 0) - co.cash.value;
     const ratio = ocf > 0 ? net / ocf : 99;

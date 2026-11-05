@@ -37,13 +37,13 @@ const rawOf = Object.fromEntries(raw.map((r) => [r.id, r]));
 
 const growth: Dataset = {
   id: 'sp-crestere', domain: 'sp500', title: L('Creșterea veniturilor în ultimul an fiscal (rapoarte 10-K)', 'Revenue growth in the last fiscal year (10-K reports)'), unit: '%', chart: 'bar',
-  series: [{ name: L('Creșterea veniturilor', 'Revenue growth'), points: raw.filter((r) => r.inputs.C1).map((r) => [r.id, val(r.inputs.C1)!]) }],
+  series: [{ name: L('Creșterea veniturilor', 'Revenue growth'), points: raw.filter((r) => val(r.inputs.C1) !== undefined).map((r) => [r.id, val(r.inputs.C1)!]) }],
   source: src(macro.sources.sec),
   notes: L('Fiecare companie are propriul an fiscal; data de închidere apare în detaliile companiei.', 'Each company has its own fiscal year; the closing date appears in the company details.'),
 };
 const fcf: Dataset = {
   id: 'sp-marja-fcf', domain: 'sp500', title: L('Marja fluxului de numerar liber (flux din exploatare minus investiții, raportat la venituri)', 'Free-cash-flow margin (operating cash flow minus capital expenditure, relative to revenue)'), unit: '%', chart: 'bar',
-  series: [{ name: L('Marja fluxului liber', 'Free-cash-flow margin'), points: raw.filter((r) => r.inputs.C7).map((r) => [r.id, val(r.inputs.C7)!]) }],
+  series: [{ name: L('Marja fluxului liber', 'Free-cash-flow margin'), points: raw.filter((r) => val(r.inputs.C7) !== undefined).map((r) => [r.id, val(r.inputs.C7)!]) }],
   source: src(macro.sources.sec),
 };
 const markets: Dataset = {

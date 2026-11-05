@@ -383,6 +383,7 @@ export const FORMULAS_EN: Record<string, Record<string, string>> = {
 export function inputEn(s: string): string {
   let t = s;
   const R: [RegExp, string][] = [
+    [/^nu se aplică la bănci: fluxul de numerar include depozitele și creditele clienților$/, 'not applicable to banks: cash flow includes customer deposits and loans'],
     [/bursa la (\S+)% din intervalul de (\d+) de săptămâni/, 'the stock market at $1% of its $2-week range'],
     [/^la (\S+)% din intervalul de (\d+) de săptămâni/, 'at $1% of its $2-week range'],
     [/bursa (\S+)% în două luni/, 'the stock market $1% in two months'],

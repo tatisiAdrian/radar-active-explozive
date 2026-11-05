@@ -636,6 +636,57 @@
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001730168&type=10-K"
   },
   {
+   "id": "JPM",
+   "name": "JPMorgan Chase",
+   "score": 7.08,
+   "met": 14,
+   "met14": 7,
+   "trust": 7,
+   "criteria": [
+    7,
+    10,
+    null,
+    6,
+    8,
+    9,
+    null,
+    8,
+    8,
+    null,
+    6,
+    2,
+    5,
+    7
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    6,
+    9,
+    10
+   ],
+   "inputs": {
+    "C1": "venituri 181,8 mld. USD (an fiscal încheiat 2025-12-31), +7,3% față de anul anterior",
+    "C2": "acțiuni în circulație -3,6% într-un an",
+    "C3": "nu se aplică la bănci: fluxul de numerar include depozitele și creditele clienților",
+    "C7": "nu se aplică la bănci: fluxul de numerar include depozitele și creditele clienților",
+    "C10": "nu se aplică la bănci: fluxul de numerar include depozitele și creditele clienților",
+    "C12": "acțiunea -6,0% în două luni"
+   },
+   "gaps": [
+    "C3",
+    "C7",
+    "C10"
+   ],
+   "why": "Cea mai mare bancă americană, cu activități diversificate (retail, investiții, administrare de active) și management apreciat; sensibilă la ciclul economic și la reglementare.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; amenzi repetate de la autorități și înțelegeri în procese mari; a trecut bine prin crize.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; repeated regulatory fines and settlements in large lawsuits; it has come through crises well.",
+   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=10-K"
+  },
+  {
    "id": "PLTR",
    "name": "Palantir",
    "score": 7.07,
@@ -728,53 +779,6 @@
    "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; autoritatea americană de concurență (FTC) a dat-o în judecată pentru monopol în 2023; a avut pierdere în 2022.",
    "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; the US Federal Trade Commission sued it for monopolisation in 2023; it made a loss in 2022.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724&type=10-K"
-  },
-  {
-   "id": "JPM",
-   "name": "JPMorgan Chase",
-   "score": 6.28,
-   "met": 14,
-   "met14": 7,
-   "trust": 7,
-   "criteria": [
-    7,
-    10,
-    0,
-    6,
-    8,
-    9,
-    0,
-    8,
-    8,
-    0,
-    6,
-    2,
-    5,
-    7
-   ],
-   "v": [
-    10,
-    10,
-    9,
-    10,
-    9,
-    6,
-    9,
-    10
-   ],
-   "inputs": {
-    "C1": "venituri 181,8 mld. USD (an fiscal încheiat 2025-12-31), +7,3% față de anul anterior",
-    "C2": "acțiuni în circulație -3,6% într-un an",
-    "C3": "datorie 434,0 mld. USD, numerar 343,3 mld. USD, flux din exploatare -147,8 mld. USD",
-    "C7": "flux de numerar liber -147,8 mld. USD, marjă -81,3%",
-    "C10": "capitalizare 0,91 trilioane USD, randament al fluxului liber -16,2%",
-    "C12": "acțiunea -6,0% în două luni"
-   },
-   "gaps": [],
-   "why": "Cea mai mare bancă americană, cu activități diversificate (retail, investiții, administrare de active) și management apreciat; sensibilă la ciclul economic și la reglementare.",
-   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; amenzi repetate de la autorități și înțelegeri în procese mari; a trecut bine prin crize.",
-   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; repeated regulatory fines and settlements in large lawsuits; it has come through crises well.",
-   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=10-K"
   },
   {
    "id": "AMD",

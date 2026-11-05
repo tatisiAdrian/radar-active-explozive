@@ -483,7 +483,8 @@
     10
    ],
    "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; amenzi repetate de la autorități și înțelegeri în procese mari; a trecut bine prin crize.",
-   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; repeated regulatory fines and settlements in large lawsuits; it has come through crises well."
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; repeated regulatory fines and settlements in large lawsuits; it has come through crises well.",
+   "bank": true
   },
   "MA": {
    "C4": 6,
