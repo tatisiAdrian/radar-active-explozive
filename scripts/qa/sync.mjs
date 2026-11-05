@@ -11,12 +11,14 @@ const inbox = process.argv[2] ?? 'inbox';
 // Cheia contului de serviciu. Copiată de pe telefon, poate avea rupturi de rând reale în loc de „\n”
 // (JSON invalid); atunci se extrag doar câmpurile necesare.
 function serviceAccount(raw = '') {
-  try { return JSON.parse(raw); } catch { /* format stricat la copiere */ }
+  const diag = (how, email, key) => console.log(`cheie: ${how}; cont: ${email}; lungime cheie: ${key.replace(/-----[A-Z ]+-----|\\n|\s/g, '').length} (normal ~1620)`);
+  try { const j = JSON.parse(raw); diag('JSON valid', j.client_email, j.private_key ?? ''); return j; } catch { /* format stricat la copiere */ }
   const field = (k) => raw.match(new RegExp(`"${k}"\\s*:\\s*"([^"]*)"`))?.[1];
   const pem = raw.match(/-----BEGIN PRIVATE KEY-----[\s\S]*?-----END PRIVATE KEY-----/)?.[0];
   if (!pem || !field('client_email') || !field('project_id')) throw new Error('FIREBASE_SERVICE_ACCOUNT lipsește sau nu e o cheie de cont de serviciu');
   const body = pem.replace(/\\n/g, '\n').replace(/-----(BEGIN|END) PRIVATE KEY-----/g, '').replace(/\s+/g, '');
   const privateKey = `-----BEGIN PRIVATE KEY-----\n${body.match(/.{1,64}/g).join('\n')}\n-----END PRIVATE KEY-----\n`;
+  diag('reparată', field('client_email'), privateKey);
   return { projectId: field('project_id'), clientEmail: field('client_email'), privateKey };
 }
 initializeApp({ credential: cert(serviceAccount(process.env.FIREBASE_SERVICE_ACCOUNT)) });
