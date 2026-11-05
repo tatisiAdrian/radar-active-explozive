@@ -13,7 +13,7 @@ const en = lang === 'en';
 const L = (ro: string, e: string) => (en ? e : ro);
 
 const base = import.meta.env.BASE_URL;
-type Row = { id: string; name: string; nameEn?: string; kind: string; kindEn: string; region: string; regionEn: string; ticket: string; ticketEn: string; c: (number | null)[]; why: string; whyEn: string; sources: [string, string][]; score: number; met: number };
+type Row = { id: string; name: string; nameEn?: string; kind: string; kindEn: string; region: string; regionEn: string; ticket: string; ticketEn: string; c: (number | null)[]; why: string; whyEn: string; sources: [string, string][]; score: number; met: number; trust?: number; v?: (number | null)[]; vwhy?: string; vwhyEn?: string };
 const rows = (data.rows as unknown as Row[]).map((r) => (en ? { ...r, vwhy: r.vwhyEn ?? r.vwhy, name: r.nameEn ?? r.name, kind: r.kindEn, region: r.regionEn, ticket: r.ticketEn, why: r.whyEn } : r));
 const fmtDate = (d: string) => fd(d, lang);
 const num = (x: number, d = 2) => nm(x, d, lang);
