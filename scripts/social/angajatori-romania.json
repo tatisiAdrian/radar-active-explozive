@@ -1,5 +1,5 @@
 {
- "_doc": "Cei mai buni angajatori din România. Note de judecată pe baza sondajului Catalyst 2025, a certificării Top Employers 2026 și a contextului industriei.",
+ "_doc": "Cei mai buni angajatori din România. Note de judecată pe baza sondajelor Catalyst (2025 și 2026), a certificării Top Employers 2026 și a contextului industriei.",
  "date": "2026-11-03",
  "set": "angajatori",
  "items": [
@@ -387,6 +387,410 @@
      "https://www.hipo.ro/locuri-de-munca/vizualizareArticol/4008/Top-Employers-2026-in-Romania"
     ]
    ]
+  },
+  {
+   "id": "bitdefender",
+   "name": "Bitdefender",
+   "nameEn": "Bitdefender",
+   "c": [
+    8,
+    null,
+    8,
+    8,
+    9,
+    7,
+    5,
+    7,
+    9,
+    5,
+    7,
+    6,
+    5,
+    7
+   ],
+   "why": "În top 100 Catalyst 2025, una dintre companiile românești cu ADN tehnologic local cele mai dorite; profitabilă și în creștere, cu centre în București, Iași, Cluj și Timișoara.",
+   "whyEn": "In the Catalyst 2025 top 100, one of the most desired Romanian-rooted tech companies; profitable and growing, with centres in Bucharest, Iași, Cluj and Timișoara.",
+   "sources": [
+    [
+     "Playtech: Catalyst, top 100 cei mai doriți angajatori din România în 2025",
+     "https://playtech.ro/2025/angajatorii-de-top-din-romania-aici-te-angajezi-ca-sa-fii-bine-si-cu-sanatatea-mintala-nu-doar-financiara/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Playtech: Catalyst, top 100 most desired employers in Romania in 2025",
+     "https://playtech.ro/2025/angajatorii-de-top-din-romania-aici-te-angajezi-ca-sa-fii-bine-si-cu-sanatatea-mintala-nu-doar-financiara/"
+    ]
+   ]
+  },
+  {
+   "id": "uipath",
+   "name": "UiPath",
+   "nameEn": "UiPath",
+   "c": [
+    8,
+    null,
+    9,
+    8,
+    8,
+    7,
+    3,
+    6,
+    8,
+    4,
+    6,
+    5,
+    4,
+    5
+   ],
+   "why": "În top 100 Catalyst 2025; cea mai cunoscută companie tech fondată în România. A redus personalul în ultimii ani, iar echipa din țară e mai mică decât înainte.",
+   "whyEn": "In the Catalyst 2025 top 100; the best-known tech company founded in Romania. It has cut staff in recent years, and its Romanian team is smaller than before.",
+   "sources": [
+    [
+     "Playtech: Catalyst, top 100 cei mai doriți angajatori din România în 2025",
+     "https://playtech.ro/2025/angajatorii-de-top-din-romania-aici-te-angajezi-ca-sa-fii-bine-si-cu-sanatatea-mintala-nu-doar-financiara/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Playtech: Catalyst, top 100 most desired employers in Romania in 2025",
+     "https://playtech.ro/2025/angajatorii-de-top-din-romania-aici-te-angajezi-ca-sa-fii-bine-si-cu-sanatatea-mintala-nu-doar-financiara/"
+    ]
+   ]
+  },
+  {
+   "id": "lidl",
+   "name": "Lidl România",
+   "nameEn": "Lidl Romania",
+   "c": [
+    7,
+    9,
+    6,
+    7,
+    9,
+    6,
+    10,
+    7,
+    7,
+    9,
+    7,
+    7,
+    7,
+    7
+   ],
+   "why": "Top Employer în România pentru al nouălea an la rând și în top 100 Catalyst 2025; magazine în toată țara, cu salarii peste media comerțului și multe posturi pentru debutanți.",
+   "whyEn": "Top Employer in Romania for the ninth year in a row and in the Catalyst 2025 top 100; stores across the country, with pay above the retail average and many entry-level jobs.",
+   "sources": [
+    [
+     "Revista Cariere: Lidl România, Top Employer pentru al nouălea an",
+     "https://revistacariere.ro/leadership/piata-muncii-employment/politicile-de-resurse-umane-premiate-pentru-al-noualea-an-consecutiv-in-echipa-lidl-romania"
+    ],
+    [
+     "Playtech: Catalyst, top 100 cei mai doriți angajatori din România în 2025",
+     "https://playtech.ro/2025/angajatorii-de-top-din-romania-aici-te-angajezi-ca-sa-fii-bine-si-cu-sanatatea-mintala-nu-doar-financiara/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Revista Cariere: Lidl Romania, Top Employer for the ninth year",
+     "https://revistacariere.ro/leadership/piata-muncii-employment/politicile-de-resurse-umane-premiate-pentru-al-noualea-an-consecutiv-in-echipa-lidl-romania"
+    ],
+    [
+     "Playtech: Catalyst, top 100 most desired employers in Romania in 2025",
+     "https://playtech.ro/2025/angajatorii-de-top-din-romania-aici-te-angajezi-ca-sa-fii-bine-si-cu-sanatatea-mintala-nu-doar-financiara/"
+    ]
+   ]
+  },
+  {
+   "id": "kaufland",
+   "name": "Kaufland România",
+   "nameEn": "Kaufland Romania",
+   "c": [
+    7,
+    9,
+    6,
+    7,
+    9,
+    6,
+    10,
+    7,
+    7,
+    9,
+    7,
+    6,
+    7,
+    7
+   ],
+   "why": "Certificată Top Employers 2026 în România și în top 100 Catalyst 2025; hipermarketuri în toată țara, cu mii de posturi accesibile.",
+   "whyEn": "Certified Top Employers 2026 in Romania and in the Catalyst 2025 top 100; hypermarkets across the country, with thousands of accessible jobs.",
+   "sources": [
+    [
+     "Hipo.ro: companiile certificate Top Employers 2026 în România",
+     "https://www.hipo.ro/locuri-de-munca/vizualizareArticol/4008/Top-Employers-2026-in-Romania"
+    ],
+    [
+     "Playtech: Catalyst, top 100 cei mai doriți angajatori din România în 2025",
+     "https://playtech.ro/2025/angajatorii-de-top-din-romania-aici-te-angajezi-ca-sa-fii-bine-si-cu-sanatatea-mintala-nu-doar-financiara/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Hipo.ro: the companies certified Top Employers 2026 in Romania",
+     "https://www.hipo.ro/locuri-de-munca/vizualizareArticol/4008/Top-Employers-2026-in-Romania"
+    ],
+    [
+     "Playtech: Catalyst, top 100 most desired employers in Romania in 2025",
+     "https://playtech.ro/2025/angajatorii-de-top-din-romania-aici-te-angajezi-ca-sa-fii-bine-si-cu-sanatatea-mintala-nu-doar-financiara/"
+    ]
+   ]
+  },
+  {
+   "id": "metro-ro",
+   "name": "METRO România",
+   "nameEn": "METRO Romania",
+   "c": [
+    6,
+    10,
+    6,
+    8,
+    7,
+    6,
+    9,
+    7,
+    6,
+    8,
+    7,
+    6,
+    7,
+    6
+   ],
+   "why": "Top Employer România și Europa pentru al șaselea an la rând, cu un scor de peste 90% în 2026 (8 domenii la 100%); peste 4.000 de angajați.",
+   "whyEn": "Top Employer Romania and Europe for the sixth year in a row, with a score above 90% in 2026 (8 areas at 100%); more than 4,000 employees.",
+   "sources": [
+    [
+     "Revista Biz: METRO România, Top Employer 2026",
+     "https://www.revistabiz.ro/metro-romania-isi-reconfirma-statutul-de-top-employer-in-2026/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Revista Biz: METRO Romania, Top Employer 2026",
+     "https://www.revistabiz.ro/metro-romania-isi-reconfirma-statutul-de-top-employer-in-2026/"
+    ]
+   ]
+  },
+  {
+   "id": "omv-petrom",
+   "name": "OMV Petrom",
+   "nameEn": "OMV Petrom",
+   "c": [
+    8,
+    null,
+    9,
+    7,
+    10,
+    7,
+    7,
+    8,
+    8,
+    6,
+    6,
+    6,
+    5,
+    6
+   ],
+   "why": "Constant în primele 10 în studiile Catalyst; cea mai mare companie din România, cu investiții în gazele din Marea Neagră (Neptun Deep). Sectorul petrolier e sub presiunea tranziției energetice.",
+   "whyEn": "Consistently in the top 10 of the Catalyst studies; Romania’s largest company, investing in Black Sea gas (Neptun Deep). The oil sector is under pressure from the energy transition.",
+   "sources": [
+    [
+     "Revista Cariere: Catalyst, topul celor mai doriți angajatori din România (ediție anterioară)",
+     "https://revistacariere.ro/leadership/piata-muncii-employment/cei-mai-doriti-angajatori-din-romania-potrivit-catalyst-solutions"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Revista Cariere: Catalyst, Romania’s most desired employers (earlier edition)",
+     "https://revistacariere.ro/leadership/piata-muncii-employment/cei-mai-doriti-angajatori-din-romania-potrivit-catalyst-solutions"
+    ]
+   ]
+  },
+  {
+   "id": "renault",
+   "name": "Grupul Renault România (Dacia)",
+   "nameEn": "Renault Group Romania (Dacia)",
+   "c": [
+    8,
+    null,
+    7,
+    8,
+    8,
+    6,
+    7,
+    9,
+    8,
+    6,
+    7,
+    5,
+    6,
+    5
+   ],
+   "why": "În primele 20 în studiile Catalyst; uzina Dacia de la Mioveni și centrul de inginerie de la Titu. Industria auto europeană se restructurează.",
+   "whyEn": "In the top 20 of the Catalyst studies; the Dacia plant at Mioveni and the Titu engineering centre. The European car industry is restructuring.",
+   "sources": [
+    [
+     "Revista Cariere: Catalyst, topul celor mai doriți angajatori din România (ediție anterioară)",
+     "https://revistacariere.ro/leadership/piata-muncii-employment/cei-mai-doriti-angajatori-din-romania-potrivit-catalyst-solutions"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Revista Cariere: Catalyst, Romania’s most desired employers (earlier edition)",
+     "https://revistacariere.ro/leadership/piata-muncii-employment/cei-mai-doriti-angajatori-din-romania-potrivit-catalyst-solutions"
+    ]
+   ]
+  },
+  {
+   "id": "novartis",
+   "name": "Novartis România",
+   "nameEn": "Novartis Romania",
+   "c": [
+    6,
+    9,
+    8,
+    7,
+    9,
+    7,
+    4,
+    6,
+    9,
+    5,
+    7,
+    6,
+    6,
+    8
+   ],
+   "why": "Certificată Top Employers 2026 în România; medicamente, un sector stabil, cu centru de servicii în București. Puține posturi în afara Bucureștiului.",
+   "whyEn": "Certified Top Employers 2026 in Romania; pharmaceuticals, a stable sector, with a service centre in Bucharest. Few jobs outside Bucharest.",
+   "sources": [
+    [
+     "Hipo.ro: companiile certificate Top Employers 2026 în România",
+     "https://www.hipo.ro/locuri-de-munca/vizualizareArticol/4008/Top-Employers-2026-in-Romania"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Hipo.ro: the companies certified Top Employers 2026 in Romania",
+     "https://www.hipo.ro/locuri-de-munca/vizualizareArticol/4008/Top-Employers-2026-in-Romania"
+    ]
+   ]
+  },
+  {
+   "id": "ntt-data",
+   "name": "NTT DATA România",
+   "nameEn": "NTT DATA Romania",
+   "c": [
+    6,
+    9,
+    7,
+    7,
+    8,
+    6,
+    7,
+    8,
+    6,
+    7,
+    7,
+    5,
+    6,
+    6
+   ],
+   "why": "Certificată Top Employers 2026 în România; servicii IT pentru clienți din toată lumea, cu centre în mai multe orașe. Serviciile IT externalizate sunt sub presiunea AI.",
+   "whyEn": "Certified Top Employers 2026 in Romania; IT services for clients worldwide, with centres in several cities. Outsourced IT services are under pressure from AI.",
+   "sources": [
+    [
+     "Hipo.ro: companiile certificate Top Employers 2026 în România",
+     "https://www.hipo.ro/locuri-de-munca/vizualizareArticol/4008/Top-Employers-2026-in-Romania"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Hipo.ro: the companies certified Top Employers 2026 in Romania",
+     "https://www.hipo.ro/locuri-de-munca/vizualizareArticol/4008/Top-Employers-2026-in-Romania"
+    ]
+   ]
+  },
+  {
+   "id": "holcim-ro",
+   "name": "Holcim România",
+   "nameEn": "Holcim Romania",
+   "c": [
+    5,
+    9,
+    7,
+    7,
+    8,
+    6,
+    7,
+    7,
+    7,
+    7,
+    7,
+    6,
+    7,
+    6
+   ],
+   "why": "Certificată Top Employer România și Europa 2026; ciment și materiale de construcții, cu fabrici în mai multe județe și cerere susținută de infrastructură.",
+   "whyEn": "Certified Top Employer Romania and Europe 2026; cement and building materials, with plants in several counties and demand backed by infrastructure.",
+   "sources": [
+    [
+     "Undelucram.ro: Holcim România, Top Employer România și Europa 2026",
+     "https://www.undelucram.ro/en/news-holcim-romania-all-about-the-working-environment-349/holcim-romania-certificata-top-employer-romania-si-top-employer-europa-4674"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Undelucram.ro: Holcim Romania, Top Employer Romania and Europe 2026",
+     "https://www.undelucram.ro/en/news-holcim-romania-all-about-the-working-environment-349/holcim-romania-certificata-top-employer-romania-si-top-employer-europa-4674"
+    ]
+   ]
+  },
+  {
+   "id": "booking",
+   "name": "Booking Holdings România",
+   "nameEn": "Booking Holdings Romania",
+   "c": [
+    6,
+    null,
+    8,
+    7,
+    9,
+    7,
+    3,
+    6,
+    6,
+    6,
+    7,
+    7,
+    6,
+    7
+   ],
+   "why": "Intrată în 2026 în top 100 Catalyst; centru tehnologic în București pentru Booking.com și alte branduri de călătorii. Puține posturi și doar în capitală.",
+   "whyEn": "Entered the Catalyst top 100 in 2026; a tech centre in Bucharest for Booking.com and other travel brands. Few openings, and only in the capital.",
+   "sources": [
+    [
+     "Hipo.ro: Catalyst, cei mai doriți angajatori din România în 2026",
+     "https://www.hipo.ro/locuri-de-munca/angajatoridetop/articol/4038/Top-100-Cei-mai-Doriti-Angajatori-din-Romania-in-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Hipo.ro: Catalyst, the most desired employers in Romania in 2026",
+     "https://www.hipo.ro/locuri-de-munca/angajatoridetop/articol/4038/Top-100-Cei-mai-Doriti-Angajatori-din-Romania-in-2026"
+    ]
+   ]
   }
- ]
+ ],
+ "revision": 2,
+ "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
+ "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources."
 }

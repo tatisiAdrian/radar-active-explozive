@@ -3,9 +3,88 @@
  "set": "angajatori",
  "region": "europa",
  "date": "2026-11-03",
- "snapshot": "social-angajatori-europa-2026-11-03",
+ "snapshot": "social-angajatori-europa-r2-2026-11-03",
+ "previousSnapshot": "social-angajatori-europa-2026-11-03",
+ "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
+ "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
  "formulas": {},
  "rows": [
+  {
+   "id": "ikea",
+   "name": "IKEA",
+   "nameEn": "IKEA",
+   "c": [
+    7,
+    null,
+    6,
+    7,
+    8,
+    7,
+    9,
+    8,
+    7,
+    9,
+    7,
+    6,
+    7,
+    7
+   ],
+   "why": "Locul 8 la Forbes în 2024; magazine în aproape toată Europa, cu multe posturi pentru debutanți. Salariile din comerț sunt moderate.",
+   "whyEn": "Eighth at Forbes in 2024; stores across almost all of Europe, with many entry-level jobs. Retail pay is moderate.",
+   "sources": [
+    [
+     "Katadata: primii 10 angajatori Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Katadata: the top 10 in Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.14,
+   "met": 11
+  },
+  {
+   "id": "airbus",
+   "name": "Airbus",
+   "nameEn": "Airbus",
+   "c": [
+    7,
+    null,
+    8,
+    8,
+    9,
+    7,
+    8,
+    9,
+    8,
+    6,
+    7,
+    6,
+    5,
+    7
+   ],
+   "why": "Locul 7 la Forbes în 2024; fabrici în Franța, Germania, Spania și Regatul Unit și comenzi pentru mulți ani înainte. Angajează constant ingineri.",
+   "whyEn": "Seventh at Forbes in 2024; factories in France, Germany, Spain and the UK and orders for many years ahead. It hires engineers steadily.",
+   "sources": [
+    [
+     "Katadata: primii 10 angajatori Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Katadata: the top 10 in Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.12,
+   "met": 10
+  },
   {
    "id": "lego",
    "name": "LEGO Group",
@@ -43,6 +122,204 @@
    "inputs": {},
    "score": 6.98,
    "met": 10
+  },
+  {
+   "id": "jysk",
+   "name": "JYSK",
+   "nameEn": "JYSK",
+   "c": [
+    5,
+    9,
+    5,
+    7,
+    7,
+    7,
+    9,
+    7,
+    6,
+    9,
+    7,
+    6,
+    7,
+    7
+   ],
+   "why": "Top Employer Europe 2026, certificată în 14 țări; magazine în toată Europa, cu posturi accesibile. Salariile din comerț sunt modeste.",
+   "whyEn": "Top Employer Europe 2026, certified in 14 countries; stores across Europe, with accessible jobs. Retail pay is modest.",
+   "sources": [
+    [
+     "JYSK: Top Employer Europe 2026 în 14 țări",
+     "https://www.interiordaily.com/article/9802388/jysk-earns-top-employer-europe-2026-certification-across-14-countries/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "JYSK: Top Employer Europe 2026 in 14 countries",
+     "https://www.interiordaily.com/article/9802388/jysk-earns-top-employer-europe-2026-certification-across-14-countries/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.84,
+   "met": 10
+  },
+  {
+   "id": "decathlon-eu",
+   "name": "Decathlon",
+   "nameEn": "Decathlon",
+   "c": [
+    5,
+    null,
+    5,
+    7,
+    8,
+    7,
+    9,
+    8,
+    7,
+    9,
+    7,
+    6,
+    7,
+    7
+   ],
+   "why": "În primele 20 la Forbes în 2022; magazine de sport în toată Europa, cu mulți angajați tineri. Salariile din comerț sunt modeste.",
+   "whyEn": "In the top 20 at Forbes in 2022; sports stores across Europe, with many young staff. Retail pay is modest.",
+   "sources": [
+    [
+     "Marketing Mind: Forbes World’s Best Employers 2022, primele 20 de locuri",
+     "https://marketingmind.in/reliance-industries-is-the-20th-best-employer-samsung-group-tops-the-list/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Marketing Mind: Forbes World’s Best Employers 2022, the top 20",
+     "https://marketingmind.in/reliance-industries-is-the-20th-best-employer-samsung-group-tops-the-list/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.76,
+   "met": 10
+  },
+  {
+   "id": "verisure",
+   "name": "Verisure",
+   "nameEn": "Verisure",
+   "c": [
+    5,
+    9,
+    6,
+    7,
+    7,
+    6,
+    8,
+    6,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7
+   ],
+   "why": "Certificată Top Employer Europe 2026; sisteme de alarmă în multe țări europene, cu multe posturi în vânzări și instalare.",
+   "whyEn": "Certified Top Employer Europe 2026; alarm systems in many European countries, with many jobs in sales and installation.",
+   "sources": [
+    [
+     "Money.it: companiile Top Employers Italia și Europa 2026",
+     "https://www.money.it/aziende-dove-lavora-meglio-italia-classifica-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Money.it: Top Employers Italy and Europe 2026 companies",
+     "https://www.money.it/aziende-dove-lavora-meglio-italia-classifica-2026"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.76,
+   "met": 10
+  },
+  {
+   "id": "holcim",
+   "name": "Holcim",
+   "nameEn": "Holcim",
+   "c": [
+    5,
+    9,
+    7,
+    7,
+    8,
+    6,
+    8,
+    7,
+    7,
+    7,
+    7,
+    6,
+    7,
+    6
+   ],
+   "why": "Certificată Top Employer Europe 2026, inclusiv în România; materiale de construcții, un sector solid, dar sub presiunea reducerii emisiilor.",
+   "whyEn": "Certified Top Employer Europe 2026, including in Romania; building materials, a solid sector, but under pressure to cut emissions.",
+   "sources": [
+    [
+     "Undelucram.ro: Holcim România, Top Employer România și Europa 2026",
+     "https://www.undelucram.ro/en/news-holcim-romania-all-about-the-working-environment-349/holcim-romania-certificata-top-employer-romania-si-top-employer-europa-4674"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Undelucram.ro: Holcim Romania, Top Employer Romania and Europe 2026",
+     "https://www.undelucram.ro/en/news-holcim-romania-all-about-the-working-environment-349/holcim-romania-certificata-top-employer-romania-si-top-employer-europa-4674"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.72,
+   "met": 10
+  },
+  {
+   "id": "bnp",
+   "name": "BNP Paribas",
+   "nameEn": "BNP Paribas",
+   "c": [
+    6,
+    9,
+    8,
+    8,
+    8,
+    6,
+    9,
+    8,
+    6,
+    7,
+    7,
+    6,
+    6,
+    7
+   ],
+   "why": "Certificată Top Employer Europe 2026, cu un scor de peste 95% în Spania; cea mai mare bancă din zona euro, cu multe tipuri de roluri.",
+   "whyEn": "Certified Top Employer Europe 2026, with a score above 95% in Spain; the largest bank in the euro area, with many kinds of roles.",
+   "sources": [
+    [
+     "BNP Paribas: certificată Top Employer Europe 2026",
+     "https://group.bnpparibas/en/news/bnp-paribas-certified-top-employer-europe-in-2026"
+    ],
+    [
+     "Top Employers Institute: certificările Top Employers 2026",
+     "https://www.top-employers.com/blog/announcing-the-2026-top-employers/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "BNP Paribas: certified Top Employer Europe 2026",
+     "https://group.bnpparibas/en/news/bnp-paribas-certified-top-employer-europe-in-2026"
+    ],
+    [
+     "Top Employers Institute: the 2026 Top Employers certifications",
+     "https://www.top-employers.com/blog/announcing-the-2026-top-employers/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.1,
+   "met": 9
   },
   {
    "id": "bmw",
@@ -349,6 +626,52 @@
    "met": 7
   },
   {
+   "id": "samsung-eu",
+   "name": "Samsung Electronics",
+   "nameEn": "Samsung Electronics",
+   "c": [
+    7,
+    null,
+    8,
+    8,
+    10,
+    5,
+    7,
+    8,
+    9,
+    4,
+    6,
+    6,
+    3,
+    6
+   ],
+   "why": "Primul loc la Forbes în 2020–2023 și locul 3 în 2024; în Europa are centre de cercetare, vânzări și fabrici (Ungaria, Polonia, Slovacia). Cultura de muncă e exigentă.",
+   "whyEn": "First at Forbes in 2020–2023 and 3rd in 2024; in Europe it has research, sales and factories (Hungary, Poland, Slovakia). The work culture is demanding.",
+   "sources": [
+    [
+     "SamMobile: primii angajatori Forbes World’s Best Employers 2023",
+     "https://www.sammobile.com/?p=15046903"
+    ],
+    [
+     "Katadata: primii 10 angajatori Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "SamMobile: the top employers in Forbes World’s Best Employers 2023",
+     "https://www.sammobile.com/?p=15046903"
+    ],
+    [
+     "Katadata: the top 10 in Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.58,
+   "met": 7
+  },
+  {
    "id": "sulzer",
    "name": "Sulzer",
    "nameEn": "Sulzer",
@@ -384,6 +707,120 @@
    ],
    "inputs": {},
    "score": 6.38,
+   "met": 7
+  },
+  {
+   "id": "adidas-eu",
+   "name": "Adidas",
+   "nameEn": "Adidas",
+   "c": [
+    5,
+    null,
+    7,
+    7,
+    8,
+    7,
+    8,
+    8,
+    6,
+    6,
+    7,
+    6,
+    5,
+    6
+   ],
+   "why": "În primele 20 la Forbes în 2022; sediu în Germania și prezență în toată Europa. Profitul a fost volatil în ultimii ani.",
+   "whyEn": "In the top 20 at Forbes in 2022; headquartered in Germany and present across Europe. Profits have been volatile in recent years.",
+   "sources": [
+    [
+     "Marketing Mind: Forbes World’s Best Employers 2022, primele 20 de locuri",
+     "https://marketingmind.in/reliance-industries-is-the-20th-best-employer-samsung-group-tops-the-list/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Marketing Mind: Forbes World’s Best Employers 2022, the top 20",
+     "https://marketingmind.in/reliance-industries-is-the-20th-best-employer-samsung-group-tops-the-list/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.36,
+   "met": 7
+  },
+  {
+   "id": "beko",
+   "name": "Beko Europe",
+   "nameEn": "Beko Europe",
+   "c": [
+    5,
+    9,
+    6,
+    7,
+    6,
+    6,
+    8,
+    7,
+    6,
+    7,
+    7,
+    5,
+    7,
+    5
+   ],
+   "why": "Top Employer Europe 2026 pentru al nouălea an la rând, cu un scor de 85%, inclusiv în România; electrocasnicele europene sunt însă sub presiunea concurenței asiatice.",
+   "whyEn": "Top Employer Europe 2026 for the ninth year in a row, with a score of 85%, including in Romania; but European appliance makers are under pressure from Asian competition.",
+   "sources": [
+    [
+     "Beko Europe: Top Employer Europe 2026, al nouălea an la rând",
+     "https://persportaal.anp.nl/artikel/CSN-230126367/beko-europe-certified-top-employer-europe-2026-for-the-ninth-consecutive-year-and-top-employer-in-italy-france-germany-poland-uk-romania-sl"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Beko Europe: Top Employer Europe 2026, ninth year in a row",
+     "https://persportaal.anp.nl/artikel/CSN-230126367/beko-europe-certified-top-employer-europe-2026-for-the-ninth-consecutive-year-and-top-employer-in-italy-france-germany-poland-uk-romania-sl"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.34,
+   "met": 7
+  },
+  {
+   "id": "ferrari-eu",
+   "name": "Ferrari",
+   "nameEn": "Ferrari",
+   "c": [
+    6,
+    null,
+    8,
+    7,
+    10,
+    7,
+    2,
+    5,
+    7,
+    3,
+    7,
+    6,
+    3,
+    8
+   ],
+   "why": "Locul 5 la Forbes în 2023; foarte profitabilă și dorită, dar cu puține posturi, aproape toate în Italia.",
+   "whyEn": "Fifth at Forbes in 2023; very profitable and desired, but with few openings, almost all in Italy.",
+   "sources": [
+    [
+     "SamMobile: primii angajatori Forbes World’s Best Employers 2023",
+     "https://www.sammobile.com/?p=15046903"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "SamMobile: the top employers in Forbes World’s Best Employers 2023",
+     "https://www.sammobile.com/?p=15046903"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.02,
    "met": 7
   },
   {

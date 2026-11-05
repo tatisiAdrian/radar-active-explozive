@@ -1,5 +1,5 @@
 {
- "_doc": "Cei mai buni angajatori din lume. Note de judecată pe baza clasamentului Forbes World’s Best Employers 2026 (primele 11 locuri) și a contextului industriei.",
+ "_doc": "Cei mai buni angajatori din lume. Note de judecată pe baza clasamentului Forbes World’s Best Employers 2026 (primele 11 locuri), a edițiilor anterioare Forbes (2022–2025) pentru celelalte poziții și a contextului industriei.",
  "date": "2026-11-03",
  "set": "angajatori-lume",
  "region": "lume",
@@ -476,6 +476,410 @@
      "https://tech-insider.org/?p=28701"
     ]
    ]
+  },
+  {
+   "id": "samsung",
+   "name": "Samsung Electronics",
+   "nameEn": "Samsung Electronics",
+   "c": [
+    7,
+    null,
+    9,
+    8,
+    10,
+    5,
+    9,
+    9,
+    9,
+    4,
+    6,
+    6,
+    3,
+    6
+   ],
+   "why": "Primul loc la Forbes patru ani la rând (2020–2023) și locul 3 în 2024. Lider mondial la cip-uri de memorie și telefoane; cultura de muncă e exigentă.",
+   "whyEn": "First at Forbes four years in a row (2020–2023) and 3rd in 2024. A world leader in memory chips and phones; the work culture is demanding.",
+   "sources": [
+    [
+     "SamMobile: primii angajatori Forbes World’s Best Employers 2023",
+     "https://www.sammobile.com/?p=15046903"
+    ],
+    [
+     "Katadata: primii 10 angajatori Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "SamMobile: the top employers in Forbes World’s Best Employers 2023",
+     "https://www.sammobile.com/?p=15046903"
+    ],
+    [
+     "Katadata: the top 10 in Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ]
+  },
+  {
+   "id": "bmw-lume",
+   "name": "BMW Group",
+   "nameEn": "BMW Group",
+   "c": [
+    7,
+    null,
+    8,
+    8,
+    8,
+    7,
+    8,
+    8,
+    8,
+    6,
+    7,
+    5,
+    4,
+    5
+   ],
+   "why": "Locul 5 la Forbes în 2024 și în 2025, cel mai bine clasat angajator european. Industria auto europeană e sub presiunea concurenței chineze și a tranziției la electric.",
+   "whyEn": "Fifth at Forbes in 2024 and 2025, the highest-ranked European employer. The European car industry is under pressure from Chinese competition and the shift to electric.",
+   "sources": [
+    [
+     "Katadata: primii 10 angajatori Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Katadata: the top 10 in Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ]
+  },
+  {
+   "id": "airbus-lume",
+   "name": "Airbus",
+   "nameEn": "Airbus",
+   "c": [
+    7,
+    null,
+    8,
+    8,
+    9,
+    7,
+    8,
+    9,
+    8,
+    6,
+    7,
+    6,
+    5,
+    7
+   ],
+   "why": "Locul 7 la Forbes în 2024; comenzi pe mulți ani înainte și angajări constante de ingineri în Europa și în lume.",
+   "whyEn": "Seventh at Forbes in 2024; orders for many years ahead and steady hiring of engineers in Europe and worldwide.",
+   "sources": [
+    [
+     "Katadata: primii 10 angajatori Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Katadata: the top 10 in Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ]
+  },
+  {
+   "id": "ikea-lume",
+   "name": "IKEA",
+   "nameEn": "IKEA",
+   "c": [
+    7,
+    null,
+    6,
+    7,
+    8,
+    7,
+    9,
+    8,
+    7,
+    9,
+    7,
+    6,
+    7,
+    7
+   ],
+   "why": "Locul 8 la Forbes în 2024; magazine în toată lumea, cu multe posturi pentru debutanți și o cultură apreciată de angajați. Salariile din comerț sunt moderate.",
+   "whyEn": "Eighth at Forbes in 2024; stores worldwide, with many entry-level jobs and a culture valued by employees. Retail pay is moderate.",
+   "sources": [
+    [
+     "Katadata: primii 10 angajatori Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Katadata: the top 10 in Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ]
+  },
+  {
+   "id": "ibm-lume",
+   "name": "IBM",
+   "nameEn": "IBM",
+   "c": [
+    7,
+    null,
+    8,
+    8,
+    8,
+    7,
+    9,
+    8,
+    7,
+    6,
+    6,
+    5,
+    5,
+    5
+   ],
+   "why": "Locul 10 la Forbes în 2024 și 8 în 2025; prezentă în aproape toate țările, cu consultanță, software și cercetare. Restructurările sunt frecvente.",
+   "whyEn": "Tenth at Forbes in 2024 and 8th in 2025; present in almost every country, with consulting, software and research. Restructurings are frequent.",
+   "sources": [
+    [
+     "Katadata: primii 10 angajatori Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Katadata: the top 10 in Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
+    ]
+   ]
+  },
+  {
+   "id": "ferrari",
+   "name": "Ferrari",
+   "nameEn": "Ferrari",
+   "c": [
+    6,
+    null,
+    8,
+    7,
+    10,
+    7,
+    3,
+    5,
+    7,
+    3,
+    7,
+    6,
+    3,
+    8
+   ],
+   "why": "Locul 5 la Forbes în 2023; companie foarte profitabilă și dorită, dar mică, concentrată la Maranello, cu puține posturi.",
+   "whyEn": "Fifth at Forbes in 2023; a very profitable and desired company, but small, concentrated in Maranello, with few openings.",
+   "sources": [
+    [
+     "SamMobile: primii angajatori Forbes World’s Best Employers 2023",
+     "https://www.sammobile.com/?p=15046903"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "SamMobile: the top employers in Forbes World’s Best Employers 2023",
+     "https://www.sammobile.com/?p=15046903"
+    ]
+   ]
+  },
+  {
+   "id": "cisco",
+   "name": "Cisco",
+   "nameEn": "Cisco",
+   "c": [
+    6,
+    null,
+    9,
+    8,
+    9,
+    8,
+    9,
+    8,
+    7,
+    5,
+    6,
+    5,
+    5,
+    6
+   ],
+   "why": "Locul 10 la Forbes în 2023; rețele și securitate informatică în toată lumea, cu muncă hibridă. A redus personalul în mai multe valuri.",
+   "whyEn": "Tenth at Forbes in 2023; networking and cybersecurity worldwide, with hybrid work. It has cut staff in several rounds.",
+   "sources": [
+    [
+     "SamMobile: primii angajatori Forbes World’s Best Employers 2023",
+     "https://www.sammobile.com/?p=15046903"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "SamMobile: the top employers in Forbes World’s Best Employers 2023",
+     "https://www.sammobile.com/?p=15046903"
+    ]
+   ]
+  },
+  {
+   "id": "decathlon",
+   "name": "Decathlon",
+   "nameEn": "Decathlon",
+   "c": [
+    5,
+    null,
+    5,
+    7,
+    8,
+    7,
+    9,
+    8,
+    7,
+    9,
+    7,
+    6,
+    7,
+    7
+   ],
+   "why": "În primele 20 la Forbes în 2022; magazine de sport în zeci de țări, cu mulți angajați tineri și posturi pentru debutanți. Salariile din comerț sunt modeste.",
+   "whyEn": "In the top 20 at Forbes in 2022; sports stores in dozens of countries, with many young staff and entry-level jobs. Retail pay is modest.",
+   "sources": [
+    [
+     "Marketing Mind: Forbes World’s Best Employers 2022, primele 20 de locuri",
+     "https://marketingmind.in/reliance-industries-is-the-20th-best-employer-samsung-group-tops-the-list/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Marketing Mind: Forbes World’s Best Employers 2022, the top 20",
+     "https://marketingmind.in/reliance-industries-is-the-20th-best-employer-samsung-group-tops-the-list/"
+    ]
+   ]
+  },
+  {
+   "id": "adidas",
+   "name": "Adidas",
+   "nameEn": "Adidas",
+   "c": [
+    5,
+    null,
+    7,
+    7,
+    8,
+    7,
+    9,
+    8,
+    6,
+    6,
+    7,
+    6,
+    5,
+    6
+   ],
+   "why": "În primele 20 la Forbes în 2022; prezență globală, de la design la magazine. Profitul a fost volatil în ultimii ani.",
+   "whyEn": "In the top 20 at Forbes in 2022; global presence, from design to stores. Profits have been volatile in recent years.",
+   "sources": [
+    [
+     "Marketing Mind: Forbes World’s Best Employers 2022, primele 20 de locuri",
+     "https://marketingmind.in/reliance-industries-is-the-20th-best-employer-samsung-group-tops-the-list/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Marketing Mind: Forbes World’s Best Employers 2022, the top 20",
+     "https://marketingmind.in/reliance-industries-is-the-20th-best-employer-samsung-group-tops-the-list/"
+    ]
+   ]
+  },
+  {
+   "id": "nedbank",
+   "name": "Nedbank",
+   "nameEn": "Nedbank",
+   "c": [
+    7,
+    null,
+    7,
+    7,
+    7,
+    7,
+    4,
+    7,
+    7,
+    7,
+    8,
+    6,
+    7,
+    5
+   ],
+   "why": "Locul 26 la Forbes în 2026, cea mai bine clasată bancă africană. Prezență mai ales în Africa de Sud, unde economia crește lent.",
+   "whyEn": "Twenty-sixth at Forbes in 2026, the highest-ranked African bank. Present mainly in South Africa, where the economy is growing slowly.",
+   "sources": [
+    [
+     "Sigmalive: Forbes, cei mai buni 50 de angajatori din lume în 2026",
+     "https://en.sigmalive.com/forbes-names-50-best-employers-for-2026/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Sigmalive: Forbes, the world’s 50 best employers for 2026",
+     "https://en.sigmalive.com/forbes-names-50-best-employers-for-2026/"
+    ]
+   ]
+  },
+  {
+   "id": "trader-joes",
+   "name": "Trader Joe’s",
+   "nameEn": "Trader Joe’s",
+   "c": [
+    6,
+    null,
+    6,
+    6,
+    9,
+    7,
+    4,
+    5,
+    6,
+    9,
+    8,
+    6,
+    6,
+    8
+   ],
+   "why": "Printre primii angajatori mari din SUA în clasamentul Forbes 2026; plătește peste media comerțului, cu multe posturi pentru debutanți. Prezentă doar în SUA.",
+   "whyEn": "Among the top large US employers in the Forbes 2026 ranking; it pays above the retail average, with many entry-level jobs. Present only in the US.",
+   "sources": [
+    [
+     "Forbes: cei mai buni angajatori mari din SUA în 2026",
+     "https://www.forbes.com/sites/rachelpeachman/2026/03/24/americas-best-large-employers--the-top-100-for-2026/"
+    ],
+    [
+     "Visual Capitalist: cei mai buni angajatori din SUA în 2026",
+     "https://www.visualcapitalist.com/the-best-places-to-work-in-america-in-2026-ranked/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes: America’s Best Large Employers 2026",
+     "https://www.forbes.com/sites/rachelpeachman/2026/03/24/americas-best-large-employers--the-top-100-for-2026/"
+    ],
+    [
+     "Visual Capitalist: the best places to work in America in 2026",
+     "https://www.visualcapitalist.com/the-best-places-to-work-in-america-in-2026-ranked/"
+    ]
+   ]
   }
- ]
+ ],
+ "revision": 2,
+ "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
+ "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources."
 }
