@@ -1,5 +1,5 @@
 {
-  "_doc": "Investitori internaționali care au finanțat start-ups ca Radar Active Explozive (fintech, date financiare, educație financiară, piețe de capital), notați pe setul „investitori” din src/data/criteria.ts. Notele 0-10 sunt judecăți pe surse publice, citate la fiecare investitor; o condiție e îndeplinită de la 7. Tichet = prima investiție tipică, din sursa citată. Nu înseamnă că investitorul ne-a evaluat sau că ar investi în noi.",
+  "_doc": "Investitori internaționali care au finanțat start-ups ca Radar Active Explozive (fintech, date financiare, educație financiară, piețe de capital), notați pe setul „investitori” din src/data/criteria.ts. Notele 0-10 sunt judecăți pe surse publice, citate la fiecare investitor; o condiție e îndeplinită de la 7. Tichet = prima investiție tipică, din sursa citată. Nu înseamnă că investitorul ne-a evaluat sau că ar investi în noi. Din 5 noiembrie 2026, fiecare investitor (și autoevaluarea noastră) are și 8 condiții de verificare (C15–C22), în câmpul v; scorul: primele 14 condiții 80%, verificarea 20%.",
   "date": "2026-11-05",
   "investors": [
     {
@@ -38,7 +38,19 @@
           "F4 Fund, profilul Seedcamp",
           "https://f4.fund/firms/seedcamp"
         ]
-      ]
+      ],
+      "v": [
+        8,
+        8,
+        9,
+        10,
+        9,
+        9,
+        8,
+        10
+      ],
+      "vwhy": "Fond din Londra activ din 2007, cu portofoliu public și exit-uri confirmate de baze de date independente (Dealroom, Crunchbase); a investit și în anii grei 2022–2023.",
+      "vwhyEn": "A London fund active since 2007, with a public portfolio and exits confirmed by independent databases (Dealroom, Crunchbase); it kept investing in the hard years 2022–2023."
     },
     {
       "id": "credo",
@@ -76,7 +88,19 @@
           "Credo Ventures",
           "https://credoventures.com/"
         ]
-      ]
+      ],
+      "v": [
+        7,
+        7,
+        8,
+        9,
+        8,
+        9,
+        7,
+        10
+      ],
+      "vwhy": "Fond din Praga activ din 2009, cu mai multe generații de fonduri și fondatori care îl recomandă public.",
+      "vwhyEn": "A Prague fund active since 2009, with several fund generations and founders who recommend it publicly."
     },
     {
       "id": "speedinvest",
@@ -114,7 +138,19 @@
           "PitchBook, Speedinvest",
           "https://pitchbook.com/profiles/investor/56745-10"
         ]
-      ]
+      ],
+      "v": [
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        7,
+        10
+      ],
+      "vwhy": "Fond din Viena activ din 2011, cu fonduri succesive și investiții confirmate de multe surse independente.",
+      "vwhyEn": "A Vienna fund active since 2011, with successive funds and investments confirmed by many independent sources."
     },
     {
       "id": "fil-rouge",
@@ -152,7 +188,19 @@
           "Ziarul Financiar, tichete între 50.000 și 350.000 €",
           "https://www.zf.ro/business-hi-tech/fondul-croat-fil-rouge-capital-intra-pe-piata-locala-pe-un-segment-22810236"
         ]
-      ]
+      ],
+      "v": [
+        6,
+        6,
+        7,
+        6,
+        7,
+        9,
+        6,
+        10
+      ],
+      "vwhy": "Fond mai nou, cu portofoliu public, dar cu un istoric mai scurt de exit-uri verificabile.",
+      "vwhyEn": "A newer fund with a public portfolio, but a shorter record of verifiable exits."
     },
     {
       "id": "y-combinator",
@@ -190,7 +238,19 @@
           "Yespress, profilul Y Combinator",
           "https://yespress.io/y-combinator"
         ]
-      ]
+      ],
+      "v": [
+        9,
+        8,
+        10,
+        10,
+        10,
+        8,
+        9,
+        10
+      ],
+      "vwhy": "Cel mai documentat accelerator din lume, din 2005, cu mii de companii și exit-uri publice; a investit și în crize.",
+      "vwhyEn": "The world’s most documented accelerator, since 2005, with thousands of companies and public exits; it kept investing through crises."
     },
     {
       "id": "startup-wise-guys",
@@ -228,7 +288,19 @@
           "Startup Intros, Startup Wise Guys 2026",
           "https://startupintros.com/resources/startup-wise-guys-2026"
         ]
-      ]
+      ],
+      "v": [
+        7,
+        7,
+        8,
+        9,
+        8,
+        9,
+        6,
+        10
+      ],
+      "vwhy": "Accelerator din Tallinn activ din 2012, cu peste 400 de companii în portofoliu, confirmate public.",
+      "vwhyEn": "A Tallinn accelerator active since 2012, with more than 400 portfolio companies, confirmed publicly."
     },
     {
       "id": "bloomberg-beta",
@@ -266,7 +338,19 @@
           "F4 Fund, profilul Bloomberg Beta",
           "https://f4.fund/firms/bloomberg-beta"
         ]
-      ]
+      ],
+      "v": [
+        8,
+        7,
+        8,
+        9,
+        8,
+        9,
+        8,
+        10
+      ],
+      "vwhy": "Fondul de capital de risc al Bloomberg, activ din 2013, cu portofoliu și teză publice.",
+      "vwhyEn": "Bloomberg’s venture fund, active since 2013, with a public portfolio and thesis."
     },
     {
       "id": "techstars",
@@ -304,7 +388,19 @@
           "Startup Intros, Techstars Anywhere toamna 2026",
           "https://startupintros.com/resources/techstars-anywhere-fall-2026-cohort"
         ]
-      ]
+      ],
+      "v": [
+        8,
+        8,
+        9,
+        10,
+        9,
+        6,
+        5,
+        10
+      ],
+      "vwhy": "Accelerator cu istoric lung și mii de companii; în 2024 s-a restructurat, cu concedieri și programe închise.",
+      "vwhyEn": "An accelerator with a long history and thousands of companies; in 2024 it restructured, with layoffs and closed programmes."
     },
     {
       "id": "ebrd-star-venture",
@@ -342,7 +438,19 @@
           "EBRD, investiția în GapMinder Fund II",
           "https://www.ebrd.com/news/2024/ebrd-invests-10-million-in-gapminder-fund-ii.html"
         ]
-      ]
+      ],
+      "v": [
+        10,
+        10,
+        9,
+        9,
+        9,
+        9,
+        9,
+        10
+      ],
+      "vwhy": "Program al BERD, bancă multilaterală cu conturi auditate și raportări publice; activ în regiune și în crize.",
+      "vwhyEn": "A programme of the EBRD, a multilateral bank with audited accounts and public reporting; active in the region and through crises."
     },
     {
       "id": "qed",
@@ -380,7 +488,19 @@
           "F4 Fund, profilul QED",
           "https://f4.fund/firms/qed-investors"
         ]
-      ]
+      ],
+      "v": [
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        8,
+        10
+      ],
+      "vwhy": "Fond fintech american activ din 2007, cu exit-uri mari confirmate public (Nubank, Credit Karma).",
+      "vwhyEn": "A US fintech fund active since 2007, with large exits confirmed publicly (Nubank, Credit Karma)."
     },
     {
       "id": "inovo",
@@ -418,7 +538,19 @@
           "F4 Fund, profilul Inovo",
           "https://f4.fund/firms/inovo"
         ]
-      ]
+      ],
+      "v": [
+        7,
+        7,
+        8,
+        8,
+        8,
+        9,
+        7,
+        10
+      ],
+      "vwhy": "Fond din Varșovia cu mai multe generații de fonduri și portofoliu public în Europa Centrală și de Est.",
+      "vwhyEn": "A Warsaw fund with several fund generations and a public portfolio in Central and Eastern Europe."
     },
     {
       "id": "bek-ventures",
@@ -457,7 +589,19 @@
           "The Recursive, investiții în FintechOS și Payhawk",
           "https://therecursive.com/?p=1042"
         ]
-      ]
+      ],
+      "v": [
+        7,
+        7,
+        8,
+        8,
+        8,
+        9,
+        7,
+        10
+      ],
+      "vwhy": "Fond cu portofoliu public în regiune, inclusiv FintechOS, confirmat de mai multe surse.",
+      "vwhyEn": "A fund with a public portfolio in the region, including FintechOS, confirmed by several sources."
     },
     {
       "id": "500-emerging-europe",
@@ -495,7 +639,19 @@
           "Seedtable, 500 Emerging Europe",
           "https://seedtable.com/investors/500-emerging-europe"
         ]
-      ]
+      ],
+      "v": [
+        7,
+        7,
+        7,
+        8,
+        7,
+        6,
+        5,
+        10
+      ],
+      "vwhy": "Fondul regional al 500 Global; rețeaua-mamă s-a restructurat după 2022, iar activitatea regională e mai greu de urmărit.",
+      "vwhyEn": "The regional fund of 500 Global; the parent network restructured after 2022, and regional activity is harder to track."
     },
     {
       "id": "nasdaq-ventures",
@@ -533,7 +689,19 @@
           "Finviz, investiția în Juniper Square",
           "https://finviz.com/news/157962/juniper-square-announces-strategic-investment-from-nasdaq-ventures-to-accelerate-innovation-in-private-markets-technology"
         ]
-      ]
+      ],
+      "v": [
+        10,
+        10,
+        8,
+        8,
+        8,
+        9,
+        8,
+        10
+      ],
+      "vwhy": "Brațul de investiții al Nasdaq, companie listată cu rapoarte auditate la SEC.",
+      "vwhyEn": "The investment arm of Nasdaq, a listed company with audited SEC reports."
     },
     {
       "id": "anthemis",
@@ -571,7 +739,19 @@
           "Finextra, Anthemis strânge 700 mil. $",
           "https://finextra.com/pressarticle/90815/anthemis-raises-700-million-for-fintech-investment-strategy"
         ]
-      ]
+      ],
+      "v": [
+        8,
+        8,
+        8,
+        9,
+        8,
+        8,
+        6,
+        10
+      ],
+      "vwhy": "Platformă fintech activă din 2010, cu fonduri și portofoliu publice; ritmul a scăzut în 2023.",
+      "vwhyEn": "A fintech platform active since 2010, with public funds and portfolio; its pace slowed in 2023."
     },
     {
       "id": "point-nine",
@@ -609,7 +789,19 @@
           "Incubator List, Point Nine",
           "https://incubatorlist.com/point-nine-capital"
         ]
-      ]
+      ],
+      "v": [
+        8,
+        8,
+        9,
+        10,
+        9,
+        9,
+        8,
+        10
+      ],
+      "vwhy": "Fond din Berlin activ din 2011, cu exit-uri mari confirmate public (Zendesk, Delivery Hero).",
+      "vwhyEn": "A Berlin fund active since 2011, with large exits confirmed publicly (Zendesk, Delivery Hero)."
     },
     {
       "id": "eic-accelerator",
@@ -648,7 +840,19 @@
           "Romania Insider, Amsimcel finanțat de EIC",
           "https://romania-insider.com/amsimcel-funding-european-innovation-council-accelerator"
         ]
-      ]
+      ],
+      "v": [
+        10,
+        10,
+        9,
+        8,
+        9,
+        8,
+        8,
+        10
+      ],
+      "vwhy": "Program al Comisiei Europene, cu rezultate și beneficiari publicați oficial; procedurile de selecție au fost criticate pentru lentoare.",
+      "vwhyEn": "A European Commission programme, with results and beneficiaries published officially; its selection procedures have been criticised as slow."
     },
     {
       "id": "commerzventures",
@@ -686,7 +890,19 @@
           "CB Insights, CommerzVentures",
           "https://www.cbinsights.com/investor/commerzventures"
         ]
-      ]
+      ],
+      "v": [
+        9,
+        9,
+        8,
+        9,
+        8,
+        9,
+        7,
+        10
+      ],
+      "vwhy": "Fondul Commerzbank, bancă listată cu conturi auditate; fonduri succesive din 2014.",
+      "vwhyEn": "Commerzbank’s fund, a listed bank with audited accounts; successive funds since 2014."
     },
     {
       "id": "finch-capital",
@@ -724,7 +940,19 @@
           "CB Insights, Finch Capital",
           "https://www.cbinsights.com/investor/finch-capital"
         ]
-      ]
+      ],
+      "v": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        9,
+        7,
+        10
+      ],
+      "vwhy": "Fond fintech din Amsterdam și Londra, cu fonduri succesive și portofoliu public.",
+      "vwhyEn": "A fintech fund from Amsterdam and London, with successive funds and a public portfolio."
     },
     {
       "id": "otb-ventures",
@@ -762,7 +990,19 @@
           "F4 Fund, profilul OTB Ventures",
           "https://f4.fund/firms/otb-ventures"
         ]
-      ]
+      ],
+      "v": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        9,
+        7,
+        10
+      ],
+      "vwhy": "Fond din Varșovia, cu portofoliu public în regiune, inclusiv Veridion.",
+      "vwhyEn": "A Warsaw fund, with a public portfolio in the region, including Veridion."
     },
     {
       "id": "db1-ventures",
@@ -800,7 +1040,19 @@
           "Deutsche Börse, investiția în Performativ (aprilie 2026)",
           "https://deutsche-boerse.com/dbg-en/about-us/deutsche-boerse-group/db1-ventures"
         ]
-      ]
+      ],
+      "v": [
+        9,
+        9,
+        7,
+        8,
+        8,
+        9,
+        7,
+        10
+      ],
+      "vwhy": "Fondul Deutsche Börse, companie listată cu rapoarte auditate.",
+      "vwhyEn": "Deutsche Börse’s fund, a listed company with audited reports."
     },
     {
       "id": "augmentum",
@@ -838,7 +1090,19 @@
           "Cision, raportul anual Augmentum 2025",
           "https://news.cision.com/augmentum-fintech-plc/r/annual-financial-report,c4172682"
         ]
-      ]
+      ],
+      "v": [
+        9,
+        10,
+        8,
+        8,
+        8,
+        9,
+        6,
+        10
+      ],
+      "vwhy": "Fond fintech listat la bursa din Londra, cu rapoarte auditate; acțiunile se tranzacționează sub valoarea activelor.",
+      "vwhyEn": "A fintech fund listed on the London Stock Exchange, with audited reports; its shares trade below asset value."
     }
   ],
   "self": {
@@ -891,7 +1155,38 @@
       "Not traded: cannot be assessed.",
       "Few platforms publicly score every asset class, with sources.",
       "Market rules (we give no personal advice) and dependence on one founder."
+    ],
+    "v": [
+      3,
+      7,
+      2,
+      2,
+      3,
+      9,
+      3,
+      null
+    ],
+    "vnotes": [
+      "Nicio verificare externă încă: fără audit, certificare sau clasament independent.",
+      "EtiQ Events SRL e înregistrată, cu bilanțuri depuse la registrul comerțului.",
+      "Cifrele site-ului vin doar de la noi; nu există încă surse independente care să scrie despre noi.",
+      "Proiect lansat în 2026: fără istoric pe mai mulți ani.",
+      "Niciun client sau partener nu confirmă încă public relația cu noi.",
+      "Fără litigii, sancțiuni sau insolvență.",
+      "Netestat într-o perioadă grea.",
+      "Nu se aplică: nu ne putem nota independența față de noi înșine."
+    ],
+    "vnotesEn": [
+      "No outside verification yet: no audit, certification or independent ranking.",
+      "EtiQ Events SRL is registered, with accounts filed at the trade register.",
+      "The site’s figures come only from us; no independent sources have written about us yet.",
+      "A project launched in 2026: no multi-year record.",
+      "No client or partner confirms a relationship with us publicly yet.",
+      "No litigation, sanctions or insolvency.",
+      "Untested in a hard period.",
+      "Not applicable: we cannot score our independence from ourselves."
     ]
   },
-  "replies": []
+  "replies": [],
+  "revision": 2
 }

@@ -1,46 +1,8 @@
 {
  "date": "2026-11-05",
+ "snapshot": "investitori-r2-2026-11-05",
+ "previousSnapshot": "investitori-2026-11-05",
  "rows": [
-  {
-   "id": "fil-rouge",
-   "name": "Fil Rouge Capital",
-   "kind": "Fond pre-seed și accelerator",
-   "kindEn": "Pre-seed fund and accelerator",
-   "region": "Zagreb; birou la București",
-   "regionEn": "Zagreb; office in Bucharest",
-   "ticket": "50.000–350.000 €",
-   "ticketEn": "EUR 50k–350k",
-   "c": [
-    8,
-    8,
-    7,
-    7,
-    7,
-    5,
-    9,
-    7,
-    5,
-    10,
-    7,
-    7,
-    7,
-    7
-   ],
-   "why": "Fond croat care a intrat oficial în România în 2025, cu fondul FRC3 de 60 de milioane de euro și un venture partner român, Matei Dumitrescu. Investește tichete pre-seed de 50.000–350.000 de euro, exact etapa noastră, cu posibilitate de reinvestire până la 4 milioane. Nu are încă exit-uri mari cunoscute.",
-   "whyEn": "A Croatian fund that officially entered Romania in 2025, with its EUR 60 million FRC3 fund and a Romanian venture partner, Matei Dumitrescu. It writes EUR 50,000–350,000 pre-seed cheques, exactly our stage, with follow-ons of up to EUR 4 million. It has no large known exits yet.",
-   "sources": [
-    [
-     "Business Forum, Fil Rouge Capital intră în România",
-     "https://www.businessforum.ro/finance/20250415/fil-rouge-capital-expands-into-romania-1690"
-    ],
-    [
-     "Ziarul Financiar, tichete între 50.000 și 350.000 €",
-     "https://www.zf.ro/business-hi-tech/fondul-croat-fil-rouge-capital-intra-pe-piata-locala-pe-un-segment-22810236"
-    ]
-   ],
-   "score": 7.28,
-   "met": 12
-  },
   {
    "id": "seedcamp",
    "name": "Seedcamp",
@@ -78,8 +40,22 @@
      "https://f4.fund/firms/seedcamp"
     ]
    ],
-   "score": 7.82,
-   "met": 11
+   "v": [
+    8,
+    8,
+    9,
+    10,
+    9,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Fond din Londra activ din 2007, cu portofoliu public și exit-uri confirmate de baze de date independente (Dealroom, Crunchbase); a investit și în anii grei 2022–2023.",
+   "vwhyEn": "A London fund active since 2007, with a public portfolio and exits confirmed by independent databases (Dealroom, Crunchbase); it kept investing in the hard years 2022–2023.",
+   "score": 7.98,
+   "met": 19,
+   "met14": 11,
+   "trust": 8
   },
   {
    "id": "bloomberg-beta",
@@ -118,8 +94,22 @@
      "https://f4.fund/firms/bloomberg-beta"
     ]
    ],
-   "score": 7.14,
-   "met": 11
+   "v": [
+    8,
+    7,
+    8,
+    9,
+    8,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Fondul de capital de risc al Bloomberg, activ din 2013, cu portofoliu și teză publice.",
+   "vwhyEn": "Bloomberg’s venture fund, active since 2013, with a public portfolio and thesis.",
+   "score": 7.32,
+   "met": 19,
+   "met14": 11,
+   "trust": 8
   },
   {
    "id": "y-combinator",
@@ -158,8 +148,22 @@
      "https://yespress.io/y-combinator"
     ]
    ],
-   "score": 7.78,
-   "met": 10
+   "v": [
+    9,
+    8,
+    10,
+    10,
+    10,
+    8,
+    9,
+    10
+   ],
+   "vwhy": "Cel mai documentat accelerator din lume, din 2005, cu mii de companii și exit-uri publice; a investit și în crize.",
+   "vwhyEn": "The world’s most documented accelerator, since 2005, with thousands of companies and public exits; it kept investing through crises.",
+   "score": 8.01,
+   "met": 18,
+   "met14": 10,
+   "trust": 8
   },
   {
    "id": "credo",
@@ -198,8 +202,22 @@
      "https://credoventures.com/"
     ]
    ],
-   "score": 7.58,
-   "met": 10
+   "v": [
+    7,
+    7,
+    8,
+    9,
+    8,
+    9,
+    7,
+    10
+   ],
+   "vwhy": "Fond din Praga activ din 2009, cu mai multe generații de fonduri și fondatori care îl recomandă public.",
+   "vwhyEn": "A Prague fund active since 2009, with several fund generations and founders who recommend it publicly.",
+   "score": 7.63,
+   "met": 18,
+   "met14": 10,
+   "trust": 8
   },
   {
    "id": "speedinvest",
@@ -238,8 +256,22 @@
      "https://pitchbook.com/profiles/investor/56745-10"
     ]
    ],
-   "score": 7.3,
-   "met": 10
+   "v": [
+    8,
+    8,
+    9,
+    9,
+    9,
+    9,
+    7,
+    10
+   ],
+   "vwhy": "Fond din Viena activ din 2011, cu fonduri succesive și investiții confirmate de multe surse independente.",
+   "vwhyEn": "A Vienna fund active since 2011, with successive funds and investments confirmed by many independent sources.",
+   "score": 7.55,
+   "met": 18,
+   "met14": 10,
+   "trust": 8
   },
   {
    "id": "ebrd-star-venture",
@@ -278,48 +310,22 @@
      "https://www.ebrd.com/news/2024/ebrd-invests-10-million-in-gapminder-fund-ii.html"
     ]
    ],
-   "score": 7.24,
-   "met": 9
-  },
-  {
-   "id": "startup-wise-guys",
-   "name": "Startup Wise Guys",
-   "kind": "Accelerator B2B și fintech",
-   "kindEn": "B2B and fintech accelerator",
-   "region": "Tallinn; program în România cu EBRD",
-   "regionEn": "Tallinn; Romanian programme with the EBRD",
-   "ticket": "până la 65.000 €",
-   "ticketEn": "up to EUR 65k",
-   "c": [
-    8,
-    5,
-    5,
-    8,
-    5,
-    5,
+   "v": [
+    10,
+    10,
     9,
-    6,
-    8,
-    8,
-    7,
-    7,
-    7,
-    7
+    9,
+    9,
+    9,
+    9,
+    10
    ],
-   "why": "Accelerator cu program dedicat fintech și peste 700 de investiții, care a lansat un accelerator în România împreună cu EBRD. Tichetul mic se potrivește etapei noastre, dar termenii sunt scumpi: până la 12% din companie pentru aproximativ 65.000 de euro, bani și program.",
-   "whyEn": "An accelerator with a dedicated fintech programme and more than 700 investments, which launched an accelerator in Romania together with the EBRD. The small cheque fits our stage, but the terms are expensive: up to 12% of the company for about EUR 65,000 in cash and programme.",
-   "sources": [
-    [
-     "The Recursive, Startup Wise Guys strânge 25 mil. €",
-     "https://therecursive.com/?p=27394"
-    ],
-    [
-     "Startup Intros, Startup Wise Guys 2026",
-     "https://startupintros.com/resources/startup-wise-guys-2026"
-    ]
-   ],
-   "score": 6.96,
-   "met": 9
+   "vwhy": "Program al BERD, bancă multilaterală cu conturi auditate și raportări publice; activ în regiune și în crize.",
+   "vwhyEn": "A programme of the EBRD, a multilateral bank with audited accounts and public reporting; active in the region and through crises.",
+   "score": 7.66,
+   "met": 17,
+   "met14": 9,
+   "trust": 8
   },
   {
    "id": "inovo",
@@ -358,8 +364,22 @@
      "https://f4.fund/firms/inovo"
     ]
    ],
-   "score": 6.82,
-   "met": 9
+   "v": [
+    7,
+    7,
+    8,
+    8,
+    8,
+    9,
+    7,
+    10
+   ],
+   "vwhy": "Fond din Varșovia cu mai multe generații de fonduri și portofoliu public în Europa Centrală și de Est.",
+   "vwhyEn": "A Warsaw fund with several fund generations and a public portfolio in Central and Eastern Europe.",
+   "score": 6.99,
+   "met": 17,
+   "met14": 9,
+   "trust": 8
   },
   {
    "id": "qed",
@@ -398,8 +418,238 @@
      "https://f4.fund/firms/qed-investors"
     ]
    ],
-   "score": 7.02,
-   "met": 8
+   "v": [
+    8,
+    8,
+    9,
+    9,
+    9,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Fond fintech american activ din 2007, cu exit-uri mari confirmate public (Nubank, Credit Karma).",
+   "vwhyEn": "A US fintech fund active since 2007, with large exits confirmed publicly (Nubank, Credit Karma).",
+   "score": 7.31,
+   "met": 16,
+   "met14": 8,
+   "trust": 8
+  },
+  {
+   "id": "fil-rouge",
+   "name": "Fil Rouge Capital",
+   "kind": "Fond pre-seed și accelerator",
+   "kindEn": "Pre-seed fund and accelerator",
+   "region": "Zagreb; birou la București",
+   "regionEn": "Zagreb; office in Bucharest",
+   "ticket": "50.000–350.000 €",
+   "ticketEn": "EUR 50k–350k",
+   "c": [
+    8,
+    8,
+    7,
+    7,
+    7,
+    5,
+    9,
+    7,
+    5,
+    10,
+    7,
+    7,
+    7,
+    7
+   ],
+   "why": "Fond croat care a intrat oficial în România în 2025, cu fondul FRC3 de 60 de milioane de euro și un venture partner român, Matei Dumitrescu. Investește tichete pre-seed de 50.000–350.000 de euro, exact etapa noastră, cu posibilitate de reinvestire până la 4 milioane. Nu are încă exit-uri mari cunoscute.",
+   "whyEn": "A Croatian fund that officially entered Romania in 2025, with its EUR 60 million FRC3 fund and a Romanian venture partner, Matei Dumitrescu. It writes EUR 50,000–350,000 pre-seed cheques, exactly our stage, with follow-ons of up to EUR 4 million. It has no large known exits yet.",
+   "sources": [
+    [
+     "Business Forum, Fil Rouge Capital intră în România",
+     "https://www.businessforum.ro/finance/20250415/fil-rouge-capital-expands-into-romania-1690"
+    ],
+    [
+     "Ziarul Financiar, tichete între 50.000 și 350.000 €",
+     "https://www.zf.ro/business-hi-tech/fondul-croat-fil-rouge-capital-intra-pe-piata-locala-pe-un-segment-22810236"
+    ]
+   ],
+   "v": [
+    6,
+    6,
+    7,
+    6,
+    7,
+    9,
+    6,
+    10
+   ],
+   "vwhy": "Fond mai nou, cu portofoliu public, dar cu un istoric mai scurt de exit-uri verificabile.",
+   "vwhyEn": "A newer fund with a public portfolio, but a shorter record of verifiable exits.",
+   "score": 7.18,
+   "met": 16,
+   "met14": 12,
+   "trust": 4
+  },
+  {
+   "id": "startup-wise-guys",
+   "name": "Startup Wise Guys",
+   "kind": "Accelerator B2B și fintech",
+   "kindEn": "B2B and fintech accelerator",
+   "region": "Tallinn; program în România cu EBRD",
+   "regionEn": "Tallinn; Romanian programme with the EBRD",
+   "ticket": "până la 65.000 €",
+   "ticketEn": "up to EUR 65k",
+   "c": [
+    8,
+    5,
+    5,
+    8,
+    5,
+    5,
+    9,
+    6,
+    8,
+    8,
+    7,
+    7,
+    7,
+    7
+   ],
+   "why": "Accelerator cu program dedicat fintech și peste 700 de investiții, care a lansat un accelerator în România împreună cu EBRD. Tichetul mic se potrivește etapei noastre, dar termenii sunt scumpi: până la 12% din companie pentru aproximativ 65.000 de euro, bani și program.",
+   "whyEn": "An accelerator with a dedicated fintech programme and more than 700 investments, which launched an accelerator in Romania together with the EBRD. The small cheque fits our stage, but the terms are expensive: up to 12% of the company for about EUR 65,000 in cash and programme.",
+   "sources": [
+    [
+     "The Recursive, Startup Wise Guys strânge 25 mil. €",
+     "https://therecursive.com/?p=27394"
+    ],
+    [
+     "Startup Intros, Startup Wise Guys 2026",
+     "https://startupintros.com/resources/startup-wise-guys-2026"
+    ]
+   ],
+   "v": [
+    7,
+    7,
+    8,
+    9,
+    8,
+    9,
+    6,
+    10
+   ],
+   "vwhy": "Accelerator din Tallinn activ din 2012, cu peste 400 de companii în portofoliu, confirmate public.",
+   "vwhyEn": "A Tallinn accelerator active since 2012, with more than 400 portfolio companies, confirmed publicly.",
+   "score": 7.13,
+   "met": 16,
+   "met14": 9,
+   "trust": 7
+  },
+  {
+   "id": "point-nine",
+   "name": "Point Nine",
+   "kind": "Fond seed B2B și AI",
+   "kindEn": "B2B and AI seed fund",
+   "region": "Berlin; investește global",
+   "regionEn": "Berlin; invests globally",
+   "ticket": "0,5–3 mil. €",
+   "ticketEn": "EUR 0.5–3m",
+   "c": [
+    8,
+    5,
+    7,
+    8,
+    8,
+    9,
+    5,
+    7,
+    4,
+    5,
+    6,
+    6,
+    5,
+    7
+   ],
+   "why": "Investitor timpuriu în Revolut și Delivery Hero, cunoscut pentru SaaS și marketplace-uri B2B. În 2026 și-a mutat teza spre AI, iar investițiile încep de la 500.000 de euro, peste ce cere acum un start-up ca al nostru.",
+   "whyEn": "An early investor in Revolut and Delivery Hero, known for SaaS and B2B marketplaces. In 2026 it shifted its thesis towards AI, and cheques start at EUR 500,000, above what a start-up like ours needs now.",
+   "sources": [
+    [
+     "Sifted, Point Nine strânge 180 mil. €",
+     "https://sifted.eu/articles/point-nine-raised-seed-fund"
+    ],
+    [
+     "Incubator List, Point Nine",
+     "https://incubatorlist.com/point-nine-capital"
+    ]
+   ],
+   "v": [
+    8,
+    8,
+    9,
+    10,
+    9,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Fond din Berlin activ din 2011, cu exit-uri mari confirmate public (Zendesk, Delivery Hero).",
+   "vwhyEn": "A Berlin fund active since 2011, with large exits confirmed publicly (Zendesk, Delivery Hero).",
+   "score": 7.04,
+   "met": 15,
+   "met14": 7,
+   "trust": 8
+  },
+  {
+   "id": "commerzventures",
+   "name": "CommerzVentures",
+   "kind": "Fond fintech (capital Commerzbank)",
+   "kindEn": "Fintech fund (Commerzbank capital)",
+   "region": "Frankfurt; Europa, SUA, Israel, Africa",
+   "regionEn": "Frankfurt; Europe, US, Israel, Africa",
+   "ticket": "Series A și B",
+   "ticketEn": "Series A and B",
+   "c": [
+    8,
+    5,
+    7,
+    7,
+    7,
+    9,
+    2,
+    6,
+    9,
+    4,
+    6,
+    6,
+    6,
+    7
+   ],
+   "why": "Fond fintech cu 550 de milioane de euro, investitor timpuriu în eToro și Marqeta. A investit și în februarie 2026. Teza e foarte apropiată, dar intră la Series A și B, deci abia după ce un start-up are venituri clare.",
+   "whyEn": "A fintech fund with EUR 550 million, an early investor in eToro and Marqeta. It invested as recently as February 2026. The thesis is very close, but it comes in at Series A and B, so only once a start-up has clear revenue.",
+   "sources": [
+    [
+     "Silicon Canals, CommerzVentures fondul III",
+     "https://siliconcanals.com/?p=6927"
+    ],
+    [
+     "CB Insights, CommerzVentures",
+     "https://www.cbinsights.com/investor/commerzventures"
+    ]
+   ],
+   "v": [
+    9,
+    9,
+    8,
+    9,
+    8,
+    9,
+    7,
+    10
+   ],
+   "vwhy": "Fondul Commerzbank, bancă listată cu conturi auditate; fonduri succesive din 2014.",
+   "vwhyEn": "Commerzbank’s fund, a listed bank with audited accounts; successive funds since 2014.",
+   "score": 6.96,
+   "met": 15,
+   "met14": 7,
+   "trust": 8
   },
   {
    "id": "bek-ventures",
@@ -439,128 +689,22 @@
      "https://therecursive.com/?p=1042"
     ]
    ],
-   "score": 6.74,
-   "met": 7
-  },
-  {
-   "id": "point-nine",
-   "name": "Point Nine",
-   "kind": "Fond seed B2B și AI",
-   "kindEn": "B2B and AI seed fund",
-   "region": "Berlin; investește global",
-   "regionEn": "Berlin; invests globally",
-   "ticket": "0,5–3 mil. €",
-   "ticketEn": "EUR 0.5–3m",
-   "c": [
-    8,
-    5,
+   "v": [
     7,
+    7,
+    8,
     8,
     8,
     9,
-    5,
     7,
-    4,
-    5,
-    6,
-    6,
-    5,
-    7
+    10
    ],
-   "why": "Investitor timpuriu în Revolut și Delivery Hero, cunoscut pentru SaaS și marketplace-uri B2B. În 2026 și-a mutat teza spre AI, iar investițiile încep de la 500.000 de euro, peste ce cere acum un start-up ca al nostru.",
-   "whyEn": "An early investor in Revolut and Delivery Hero, known for SaaS and B2B marketplaces. In 2026 it shifted its thesis towards AI, and cheques start at EUR 500,000, above what a start-up like ours needs now.",
-   "sources": [
-    [
-     "Sifted, Point Nine strânge 180 mil. €",
-     "https://sifted.eu/articles/point-nine-raised-seed-fund"
-    ],
-    [
-     "Incubator List, Point Nine",
-     "https://incubatorlist.com/point-nine-capital"
-    ]
-   ],
-   "score": 6.64,
-   "met": 7
-  },
-  {
-   "id": "commerzventures",
-   "name": "CommerzVentures",
-   "kind": "Fond fintech (capital Commerzbank)",
-   "kindEn": "Fintech fund (Commerzbank capital)",
-   "region": "Frankfurt; Europa, SUA, Israel, Africa",
-   "regionEn": "Frankfurt; Europe, US, Israel, Africa",
-   "ticket": "Series A și B",
-   "ticketEn": "Series A and B",
-   "c": [
-    8,
-    5,
-    7,
-    7,
-    7,
-    9,
-    2,
-    6,
-    9,
-    4,
-    6,
-    6,
-    6,
-    7
-   ],
-   "why": "Fond fintech cu 550 de milioane de euro, investitor timpuriu în eToro și Marqeta. A investit și în februarie 2026. Teza e foarte apropiată, dar intră la Series A și B, deci abia după ce un start-up are venituri clare.",
-   "whyEn": "A fintech fund with EUR 550 million, an early investor in eToro and Marqeta. It invested as recently as February 2026. The thesis is very close, but it comes in at Series A and B, so only once a start-up has clear revenue.",
-   "sources": [
-    [
-     "Silicon Canals, CommerzVentures fondul III",
-     "https://siliconcanals.com/?p=6927"
-    ],
-    [
-     "CB Insights, CommerzVentures",
-     "https://www.cbinsights.com/investor/commerzventures"
-    ]
-   ],
-   "score": 6.52,
-   "met": 7
-  },
-  {
-   "id": "otb-ventures",
-   "name": "OTB Ventures",
-   "kind": "Fond early growth",
-   "kindEn": "Early-growth fund",
-   "region": "Varșovia, Luxemburg; Europa",
-   "regionEn": "Warsaw, Luxembourg; Europe",
-   "ticket": "până la 15 mil. $",
-   "ticketEn": "up to USD 15m",
-   "c": [
-    8,
-    6,
-    7,
-    7,
-    8,
-    7,
-    2,
-    6,
-    4,
-    7,
-    6,
-    6,
-    6,
-    7
-   ],
-   "why": "A investit în FintechOS, din România, și are un fond separat pentru rundele următoare. În 2025-2026 s-a mutat însă spre apărare și AI suveran și investește în companii cu venituri, cu tichete mari.",
-   "whyEn": "Invested in Romania’s FintechOS and has a separate fund for follow-on rounds. In 2025-2026, however, it moved towards defence and sovereign AI, and it invests in companies with revenue, with large cheques.",
-   "sources": [
-    [
-     "The Recursive, OTB Growth Fund I și FintechOS",
-     "https://therecursive.com/?p=5605"
-    ],
-    [
-     "F4 Fund, profilul OTB Ventures",
-     "https://f4.fund/firms/otb-ventures"
-    ]
-   ],
-   "score": 6.36,
-   "met": 7
+   "vwhy": "Fond cu portofoliu public în regiune, inclusiv FintechOS, confirmat de mai multe surse.",
+   "vwhyEn": "A fund with a public portfolio in the region, including FintechOS, confirmed by several sources.",
+   "score": 6.94,
+   "met": 15,
+   "met14": 7,
+   "trust": 8
   },
   {
    "id": "eic-accelerator",
@@ -600,8 +744,76 @@
      "https://romania-insider.com/amsimcel-funding-european-innovation-council-accelerator"
     ]
    ],
-   "score": 6.14,
-   "met": 7
+   "v": [
+    10,
+    10,
+    9,
+    8,
+    9,
+    8,
+    8,
+    10
+   ],
+   "vwhy": "Program al Comisiei Europene, cu rezultate și beneficiari publicați oficial; procedurile de selecție au fost criticate pentru lentoare.",
+   "vwhyEn": "A European Commission programme, with results and beneficiaries published officially; its selection procedures have been criticised as slow.",
+   "score": 6.75,
+   "met": 15,
+   "met14": 7,
+   "trust": 8
+  },
+  {
+   "id": "otb-ventures",
+   "name": "OTB Ventures",
+   "kind": "Fond early growth",
+   "kindEn": "Early-growth fund",
+   "region": "Varșovia, Luxemburg; Europa",
+   "regionEn": "Warsaw, Luxembourg; Europe",
+   "ticket": "până la 15 mil. $",
+   "ticketEn": "up to USD 15m",
+   "c": [
+    8,
+    6,
+    7,
+    7,
+    8,
+    7,
+    2,
+    6,
+    4,
+    7,
+    6,
+    6,
+    6,
+    7
+   ],
+   "why": "A investit în FintechOS, din România, și are un fond separat pentru rundele următoare. În 2025-2026 s-a mutat însă spre apărare și AI suveran și investește în companii cu venituri, cu tichete mari.",
+   "whyEn": "Invested in Romania’s FintechOS and has a separate fund for follow-on rounds. In 2025-2026, however, it moved towards defence and sovereign AI, and it invests in companies with revenue, with large cheques.",
+   "sources": [
+    [
+     "The Recursive, OTB Growth Fund I și FintechOS",
+     "https://therecursive.com/?p=5605"
+    ],
+    [
+     "F4 Fund, profilul OTB Ventures",
+     "https://f4.fund/firms/otb-ventures"
+    ]
+   ],
+   "v": [
+    7,
+    8,
+    8,
+    8,
+    8,
+    9,
+    7,
+    10
+   ],
+   "vwhy": "Fond din Varșovia, cu portofoliu public în regiune, inclusiv Veridion.",
+   "vwhyEn": "A Warsaw fund, with a public portfolio in the region, including Veridion.",
+   "score": 6.69,
+   "met": 15,
+   "met14": 7,
+   "trust": 8
   },
   {
    "id": "finch-capital",
@@ -640,88 +852,22 @@
      "https://www.cbinsights.com/investor/finch-capital"
     ]
    ],
-   "score": 6.14,
-   "met": 7
-  },
-  {
-   "id": "techstars",
-   "name": "Techstars",
-   "kind": "Accelerator",
-   "kindEn": "Accelerator",
-   "region": "Global; programul Anywhere e la distanță",
-   "regionEn": "Global; the Anywhere programme is remote",
-   "ticket": "220.000 $",
-   "ticketEn": "USD 220k",
-   "c": [
+   "v": [
+    7,
     8,
-    6,
-    6,
+    8,
+    8,
+    8,
     9,
-    5,
     7,
-    8,
-    7,
-    6,
-    7,
-    6,
-    6,
-    3,
-    6
+    10
    ],
-   "why": "Accelerator cu peste 10.000 de mentori și programe dedicate fintech, inclusiv la New York și Londra. Programul Techstars Anywhere se poate face de la distanță, deci și din România. Investiția e de 220.000 de dolari, pentru circa 5% plus un SAFE. Acceptarea e în jur de 1%.",
-   "whyEn": "An accelerator with more than 10,000 mentors and fintech-focused programmes, including New York and London. Techstars Anywhere can be done remotely, so also from Romania. The investment is USD 220,000, for about 5% plus a SAFE. Acceptance is around 1%.",
-   "sources": [
-    [
-     "Techstars, termenii investiției",
-     "https://techstars.com/accelerators/new-york"
-    ],
-    [
-     "Startup Intros, Techstars Anywhere toamna 2026",
-     "https://startupintros.com/resources/techstars-anywhere-fall-2026-cohort"
-    ]
-   ],
-   "score": 6.66,
-   "met": 6
-  },
-  {
-   "id": "anthemis",
-   "name": "Anthemis Group",
-   "kind": "Fond fintech",
-   "kindEn": "Fintech fund",
-   "region": "Londra, New York",
-   "regionEn": "London, New York",
-   "ticket": "1–5 mil. $",
-   "ticketEn": "USD 1–5m",
-   "c": [
-    7,
-    5,
-    7,
-    8,
-    7,
-    7,
-    6,
-    6,
-    8,
-    4,
-    6,
-    5,
-    6,
-    6
-   ],
-   "why": "Considerat primul fond dedicat fintech, investitor timpuriu în Betterment, și cu cel mai mare fond pentru fintech fondat de femei. A făcut 7 investiții în 2025, dar și-a lărgit teza spre climă, sănătate și AI, iar ultimul fond mare e din 2021.",
-   "whyEn": "Considered the first fund dedicated to fintech, an early investor in Betterment, and with the largest fund for women-founded fintech. It made 7 investments in 2025, but has broadened its thesis towards climate, health and AI, and its last large fund dates from 2021.",
-   "sources": [
-    [
-     "F4 Fund, profilul Anthemis",
-     "https://app.f4.fund/firms/anthemis-group"
-    ],
-    [
-     "Finextra, Anthemis strânge 700 mil. $",
-     "https://finextra.com/pressarticle/90815/anthemis-raises-700-million-for-fintech-investment-strategy"
-    ]
-   ],
-   "score": 6.4,
-   "met": 6
+   "vwhy": "Fond fintech din Amsterdam și Londra, cu fonduri succesive și portofoliu public.",
+   "vwhyEn": "A fintech fund from Amsterdam and London, with successive funds and a public portfolio.",
+   "score": 6.51,
+   "met": 15,
+   "met14": 7,
+   "trust": 8
   },
   {
    "id": "db1-ventures",
@@ -760,48 +906,130 @@
      "https://deutsche-boerse.com/dbg-en/about-us/deutsche-boerse-group/db1-ventures"
     ]
    ],
-   "score": 6.4,
-   "met": 5
+   "v": [
+    9,
+    9,
+    7,
+    8,
+    8,
+    9,
+    7,
+    10
+   ],
+   "vwhy": "Fondul Deutsche Börse, companie listată cu rapoarte auditate.",
+   "vwhyEn": "Deutsche Börse’s fund, a listed company with audited reports.",
+   "score": 6.81,
+   "met": 13,
+   "met14": 5,
+   "trust": 8
   },
   {
-   "id": "500-emerging-europe",
-   "name": "500 Emerging Europe",
-   "kind": "Fond pre-seed și seed",
-   "kindEn": "Pre-seed and seed fund",
-   "region": "Polonia, România, Țările Baltice, Turcia",
-   "regionEn": "Poland, Romania, the Baltics, Turkey",
-   "ticket": "până la 1 mil. €",
-   "ticketEn": "up to EUR 1m",
+   "id": "anthemis",
+   "name": "Anthemis Group",
+   "kind": "Fond fintech",
+   "kindEn": "Fintech fund",
+   "region": "Londra, New York",
+   "regionEn": "London, New York",
+   "ticket": "1–5 mil. $",
+   "ticketEn": "USD 1–5m",
    "c": [
-    6,
+    7,
     5,
     7,
     8,
+    7,
+    7,
     6,
     6,
     8,
-    6,
-    5,
-    8,
+    4,
     6,
     5,
     6,
     6
    ],
-   "why": "Brațul regional al 500 Global, cu România printre piețele prioritare și tichete de până la un milion de euro pentru 5-10% din companie. Fondul II e din 2022, iar despre investițiile recente am găsit puține informații publice, de aceea notele de activitate sunt prudente.",
-   "whyEn": "The regional arm of 500 Global, with Romania among its priority markets and cheques of up to EUR 1 million for 5-10% of the company. Fund II dates from 2022, and we found little public information about recent investments, so the activity scores are cautious.",
+   "why": "Considerat primul fond dedicat fintech, investitor timpuriu în Betterment, și cu cel mai mare fond pentru fintech fondat de femei. A făcut 7 investiții în 2025, dar și-a lărgit teza spre climă, sănătate și AI, iar ultimul fond mare e din 2021.",
+   "whyEn": "Considered the first fund dedicated to fintech, an early investor in Betterment, and with the largest fund for women-founded fintech. It made 7 investments in 2025, but has broadened its thesis towards climate, health and AI, and its last large fund dates from 2021.",
    "sources": [
     [
-     "InforCapital, 500 Emerging Europe Fund II",
-     "https://inforcapital.com/funds/500-emerging-europe-fund-ii/"
+     "F4 Fund, profilul Anthemis",
+     "https://app.f4.fund/firms/anthemis-group"
     ],
     [
-     "Seedtable, 500 Emerging Europe",
-     "https://seedtable.com/investors/500-emerging-europe"
+     "Finextra, Anthemis strânge 700 mil. $",
+     "https://finextra.com/pressarticle/90815/anthemis-raises-700-million-for-fintech-investment-strategy"
     ]
    ],
-   "score": 6.32,
-   "met": 4
+   "v": [
+    8,
+    8,
+    8,
+    9,
+    8,
+    8,
+    6,
+    10
+   ],
+   "vwhy": "Platformă fintech activă din 2010, cu fonduri și portofoliu publice; ritmul a scăzut în 2023.",
+   "vwhyEn": "A fintech platform active since 2010, with public funds and portfolio; its pace slowed in 2023.",
+   "score": 6.74,
+   "met": 13,
+   "met14": 6,
+   "trust": 7
+  },
+  {
+   "id": "techstars",
+   "name": "Techstars",
+   "kind": "Accelerator",
+   "kindEn": "Accelerator",
+   "region": "Global; programul Anywhere e la distanță",
+   "regionEn": "Global; the Anywhere programme is remote",
+   "ticket": "220.000 $",
+   "ticketEn": "USD 220k",
+   "c": [
+    8,
+    6,
+    6,
+    9,
+    5,
+    7,
+    8,
+    7,
+    6,
+    7,
+    6,
+    6,
+    3,
+    6
+   ],
+   "why": "Accelerator cu peste 10.000 de mentori și programe dedicate fintech, inclusiv la New York și Londra. Programul Techstars Anywhere se poate face de la distanță, deci și din România. Investiția e de 220.000 de dolari, pentru circa 5% plus un SAFE. Acceptarea e în jur de 1%.",
+   "whyEn": "An accelerator with more than 10,000 mentors and fintech-focused programmes, including New York and London. Techstars Anywhere can be done remotely, so also from Romania. The investment is USD 220,000, for about 5% plus a SAFE. Acceptance is around 1%.",
+   "sources": [
+    [
+     "Techstars, termenii investiției",
+     "https://techstars.com/accelerators/new-york"
+    ],
+    [
+     "Startup Intros, Techstars Anywhere toamna 2026",
+     "https://startupintros.com/resources/techstars-anywhere-fall-2026-cohort"
+    ]
+   ],
+   "v": [
+    8,
+    8,
+    9,
+    10,
+    9,
+    6,
+    5,
+    10
+   ],
+   "vwhy": "Accelerator cu istoric lung și mii de companii; în 2024 s-a restructurat, cu concedieri și programe închise.",
+   "vwhyEn": "An accelerator with a long history and thousands of companies; in 2024 it restructured, with layoffs and closed programmes.",
+   "score": 6.96,
+   "met": 12,
+   "met14": 6,
+   "trust": 6
   },
   {
    "id": "nasdaq-ventures",
@@ -840,8 +1068,76 @@
      "https://finviz.com/news/157962/juniper-square-announces-strategic-investment-from-nasdaq-ventures-to-accelerate-innovation-in-private-markets-technology"
     ]
    ],
-   "score": 6.3,
-   "met": 4
+   "v": [
+    10,
+    10,
+    8,
+    8,
+    8,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Brațul de investiții al Nasdaq, companie listată cu rapoarte auditate la SEC.",
+   "vwhyEn": "The investment arm of Nasdaq, a listed company with audited SEC reports.",
+   "score": 6.83,
+   "met": 12,
+   "met14": 4,
+   "trust": 8
+  },
+  {
+   "id": "500-emerging-europe",
+   "name": "500 Emerging Europe",
+   "kind": "Fond pre-seed și seed",
+   "kindEn": "Pre-seed and seed fund",
+   "region": "Polonia, România, Țările Baltice, Turcia",
+   "regionEn": "Poland, Romania, the Baltics, Turkey",
+   "ticket": "până la 1 mil. €",
+   "ticketEn": "up to EUR 1m",
+   "c": [
+    6,
+    5,
+    7,
+    8,
+    6,
+    6,
+    8,
+    6,
+    5,
+    8,
+    6,
+    5,
+    6,
+    6
+   ],
+   "why": "Brațul regional al 500 Global, cu România printre piețele prioritare și tichete de până la un milion de euro pentru 5-10% din companie. Fondul II e din 2022, iar despre investițiile recente am găsit puține informații publice, de aceea notele de activitate sunt prudente.",
+   "whyEn": "The regional arm of 500 Global, with Romania among its priority markets and cheques of up to EUR 1 million for 5-10% of the company. Fund II dates from 2022, and we found little public information about recent investments, so the activity scores are cautious.",
+   "sources": [
+    [
+     "InforCapital, 500 Emerging Europe Fund II",
+     "https://inforcapital.com/funds/500-emerging-europe-fund-ii/"
+    ],
+    [
+     "Seedtable, 500 Emerging Europe",
+     "https://seedtable.com/investors/500-emerging-europe"
+    ]
+   ],
+   "v": [
+    7,
+    7,
+    7,
+    8,
+    7,
+    6,
+    5,
+    10
+   ],
+   "vwhy": "Fondul regional al 500 Global; rețeaua-mamă s-a restructurat după 2022, iar activitatea regională e mai greu de urmărit.",
+   "vwhyEn": "The regional fund of 500 Global; the parent network restructured after 2022, and regional activity is harder to track.",
+   "score": 6.46,
+   "met": 10,
+   "met14": 4,
+   "trust": 6
   },
   {
    "id": "augmentum",
@@ -880,8 +1176,22 @@
      "https://news.cision.com/augmentum-fintech-plc/r/annual-financial-report,c4172682"
     ]
    ],
-   "score": 4.7,
-   "met": 1
+   "v": [
+    9,
+    10,
+    8,
+    8,
+    8,
+    9,
+    6,
+    10
+   ],
+   "vwhy": "Fond fintech listat la bursa din Londra, cu rapoarte auditate; acțiunile se tranzacționează sub valoarea activelor.",
+   "vwhyEn": "A fintech fund listed on the London Stock Exchange, with audited reports; its shares trade below asset value.",
+   "score": 5.5,
+   "met": 8,
+   "met14": 1,
+   "trust": 7
   }
  ],
  "self": {
@@ -935,8 +1245,40 @@
    "Few platforms publicly score every asset class, with sources.",
    "Market rules (we give no personal advice) and dependence on one founder."
   ],
-  "score": 6.12,
-  "met": 7
+  "v": [
+   3,
+   7,
+   2,
+   2,
+   3,
+   9,
+   3,
+   null
+  ],
+  "vnotes": [
+   "Nicio verificare externă încă: fără audit, certificare sau clasament independent.",
+   "EtiQ Events SRL e înregistrată, cu bilanțuri depuse la registrul comerțului.",
+   "Cifrele site-ului vin doar de la noi; nu există încă surse independente care să scrie despre noi.",
+   "Proiect lansat în 2026: fără istoric pe mai mulți ani.",
+   "Niciun client sau partener nu confirmă încă public relația cu noi.",
+   "Fără litigii, sancțiuni sau insolvență.",
+   "Netestat într-o perioadă grea.",
+   "Nu se aplică: nu ne putem nota independența față de noi înșine."
+  ],
+  "vnotesEn": [
+   "No outside verification yet: no audit, certification or independent ranking.",
+   "EtiQ Events SRL is registered, with accounts filed at the trade register.",
+   "The site’s figures come only from us; no independent sources have written about us yet.",
+   "A project launched in 2026: no multi-year record.",
+   "No client or partner confirms a relationship with us publicly yet.",
+   "No litigation, sanctions or insolvency.",
+   "Untested in a hard period.",
+   "Not applicable: we cannot score our independence from ourselves."
+  ],
+  "score": 5.74,
+  "met": 9,
+  "met14": 7,
+  "trust": 2
  },
  "replies": []
 }

@@ -14,14 +14,17 @@ const L = (ro: string, e: string) => (en ? e : ro);
 
 const base = import.meta.env.BASE_URL;
 type Row = { id: string; name: string; nameEn?: string; kind: string; kindEn: string; region: string; regionEn: string; ticket: string; ticketEn: string; c: (number | null)[]; why: string; whyEn: string; sources: [string, string][]; score: number; met: number };
-const rows = (data.rows as unknown as Row[]).map((r) => (en ? { ...r, name: r.nameEn ?? r.name, kind: r.kindEn, region: r.regionEn, ticket: r.ticketEn, why: r.whyEn } : r));
+const rows = (data.rows as unknown as Row[]).map((r) => (en ? { ...r, vwhy: r.vwhyEn ?? r.vwhy, name: r.nameEn ?? r.name, kind: r.kindEn, region: r.regionEn, ticket: r.ticketEn, why: r.whyEn } : r));
 const fmtDate = (d: string) => fd(d, lang);
 const num = (x: number, d = 2) => nm(x, d, lang);
-const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
+const zone = (k: number) => (k >= 16 ? 'puternic' : k >= 10 ? 'observatie' : 'slab');
+const tzone = (k: number) => (k >= 6 ? 'puternic' : k >= 4 ? 'observatie' : 'slab');
+const snap = (data as { snapshot?: string }).snapshot ?? `investitori-${data.date}`;
+const prev = (data as { previousSnapshot?: string }).previousSnapshot;
 const short = (n: string) => n.replace(/ \(.*\)$/, '');
 
 const metChart: Dataset = {
-  id: 'inv-conditii', domain: 'investitori-startups', title: L('Condiții îndeplinite din 14, pe investitori', 'Conditions met out of 14, by investor'), unit: L('condiții', 'conditions'), chart: 'bar',
+  id: 'inv-conditii', domain: 'investitori-startups', title: L('Condiții îndeplinite din 22, pe investitori', 'Conditions met out of 22, by investor'), unit: L('condiții', 'conditions'), chart: 'bar',
   series: [{ name: L('Condiții îndeplinite', 'Conditions met'), points: rows.map((r) => [short(r.name), r.met]) }],
   source: sourceL({ name: 'Radar Active Explozive, instantaneul investitorilor', url: 'https://github.com/TatisiAdrian/radar-active-explozive/blob/main/scripts/investitori.json', retrievedAt: data.date }, lang),
   notes: L('Notele și sursa fiecăreia sunt în detaliile de mai jos.', 'The scores and the source of each are in the details below.'),
@@ -29,16 +32,17 @@ const metChart: Dataset = {
 const fit = rows.filter((r) => (r.c[6] ?? 0) >= 7 && (r.c[9] ?? 0) >= 7).map((r) => short(r.name));
 const thesis = rows.filter((r) => (r.c[8] ?? 0) >= 8).map((r) => short(r.name));
 const top = rows[0];
-type Self = { name: string; c: (number | null)[]; notes: string[]; notesEn: string[]; score: number; met: number };
+type Self = { name: string; c: (number | null)[]; notes: string[]; notesEn: string[]; score: number; met: number; v?: (number | null)[]; vnotes?: string[]; vnotesEn?: string[]; trust?: number };
 type Reply = { investor: string; date: string; text: string; textEn?: string };
 const self = (data as unknown as { self: Self }).self;
 const replies = ((data as unknown as { replies?: Reply[] }).replies ?? []);
 const selfInputs = Object.fromEntries((en ? self.notesEn : self.notes).map((t, i) => [`C${i + 1}`, t]));
+const selfVInputs = Object.fromEntries(((en ? self.vnotesEn : self.vnotes) ?? []).map((t, i) => [`C${i + 15}`, t]));
 const mail = 'nitadanielcristian@gmail.com';
-const replyEn = (name: string) => `mailto:${mail}?subject=${encodeURIComponent(`Open invitation, reply from ${name}`)}&body=${encodeURIComponent(`Hello,\n\nWe are writing on behalf of ${name}.\n\n[ ] We correct our score (condition, correct value, source):\n[ ] We score Radar Active Explozive on the 14 conditions:\n[ ] We would like a 20-minute call about a direct collaboration.\n[ ] You may / may not publish this reply on the page.\n\nName, role:\n`)}`;
+const replyEn = (name: string) => `mailto:${mail}?subject=${encodeURIComponent(`Open invitation, reply from ${name}`)}&body=${encodeURIComponent(`Hello,\n\nWe are writing on behalf of ${name}.\n\n[ ] We correct our score (condition, correct value, source):\n[ ] We score Radar Active Explozive on the 22 conditions:\n[ ] We would like a 20-minute call about a direct collaboration.\n[ ] You may / may not publish this reply on the page.\n\nName, role:\n`)}`;
 const reply = (name: string) => `mailto:${mail}?subject=${encodeURIComponent(en ? `Open invitation, reply from ${name}` : `Invitație deschisă, răspuns de la ${name}`)}&body=${encodeURIComponent(en
   ? `Hello,\n\nWe are writing on behalf of ${name}.\n\n[ ] We correct our score (condition, correct value, source):\n[ ] We score Radar Active Explozive on the 14 conditions:\n[ ] We would like a 20-minute call about a direct collaboration.\n[ ] You may / may not publish this reply on the page.\n\nName, role:\n`
-  : `Bună ziua,\n\nVă scriem din partea ${name}.\n\n[ ] Corectăm nota noastră (condiția, valoarea corectă, sursa):\n[ ] Notăm Radar Active Explozive pe cele 14 condiții:\n[ ] Am dori o discuție de 20 de minute despre o colaborare directă.\n[ ] Puteți / nu puteți publica acest răspuns pe pagină.\n\nNume, funcție:\n`)}`;
+  : `Bună ziua,\n\nVă scriem din partea ${name}.\n\n[ ] Corectăm nota noastră (condiția, valoarea corectă, sursa):\n[ ] Notăm Radar Active Explozive pe cele 22 de condiții:\n[ ] Am dori o discuție de 20 de minute despre o colaborare directă.\n[ ] Puteți / nu puteți publica acest răspuns pe pagină.\n\nNume, funcție:\n`)}`;
 ---
 <section id="invitatie" class="invite">
   <h2>An open invitation to all 22</h2>
@@ -47,7 +51,7 @@ const reply = (name: string) => `mailto:${mail}?subject=${encodeURIComponent(en 
       <p>So we invite you, publicly and with respect, to do the same for us. Three things, any of them is welcome:</p>
       <ol>
         <li><b>Check your score.</b> If a score is wrong, send us the correct value with a source. We publish the correction within 7 days and say who asked for it.</li>
-        <li><b>Score us on the same 14 conditions.</b> Our own assessment is below, without embellishment. Yours would be worth more than ours.</li>
+        <li><b>Score us on the same 22 conditions.</b> Our own assessment is below, without embellishment. Yours would be worth more than ours.</li>
         <li><b>Evaluate a direct collaboration.</b> An investment, a programme, a data partnership or simply a 20-minute call. We publish the outcome only with your consent.</li>
       </ol>
       <p class="muted">One rule protects both sides: a reply, a collaboration or an investment does not change any score. Only factual corrections with a source change scores, and every change is visible in the snapshots.</p>
@@ -57,23 +61,25 @@ const reply = (name: string) => `mailto:${mail}?subject=${encodeURIComponent(en 
 </section>
 
 <section id="noi">
-  <h2>{L('Noi, pe aceleași 14 condiții', 'Us, on the same 14 conditions')}</h2>
-  <p>{en ? <>Our self-assessment on the radar’s general set: <b>{self.met} of 14 conditions met</b>, score {num(self.score)}. Honestly: the substance is in the method and the structure, the form we still owe is revenue, users and a team. That is precisely where an investor makes the difference.</> : <>Autoevaluarea noastră pe setul general al radarului: <b>{self.met} din 14 condiții îndeplinite</b>, scor {num(self.score)}. Sincer: fondul e în metodă și în structură; ce mai datorăm sunt veniturile, utilizatorii și echipa. Exact acolo face diferența un investitor.</>} <FondBadge values={self.c} lang={lang} /></p>
+  <h2>{L('Noi, pe aceleași 22 de condiții', 'Us, on the same 22 conditions')}</h2>
+  <p>{en ? <>Our self-assessment on the radar’s general set: <b>{self.met} of 22 conditions met</b>, of which {self.trust} of 8 verification conditions, score {num(self.score)}. Honestly: the substance is in the method and the structure; what we still owe is revenue, users, a team and outside verification of our own figures, because we are new. That is precisely where an investor makes the difference.</> : <>Autoevaluarea noastră pe setul general al radarului: <b>{self.met} din 22 de condiții îndeplinite</b>, dintre care {self.trust} din 8 de verificare, scor {num(self.score)}. Sincer: fondul e în metodă și în structură; ce mai datorăm sunt veniturile, utilizatorii, echipa și verificarea externă a propriilor cifre, pentru că suntem noi. Exact acolo face diferența un investitor.</>} <FondBadge values={self.c} lang={lang} /></p>
   <details class="fxd">
-    <summary><b>Radar Active Explozive</b> · <span class:list={['k', zone(self.met)]}>{self.met}/14</span> · {L('scor', 'score')} {num(self.score)}</summary>
+    <summary><b>Radar Active Explozive</b> · <span class:list={['k', zone(self.met)]}>{self.met}/22</span> · {L('verificare', 'verification')} {self.trust}/8 · {L('scor', 'score')} {num(self.score)}</summary>
     <CriteriaDetail set="general" values={self.c} inputs={selfInputs} lang={lang} />
+    <h4>{L('Verificare (C15–C22)', 'Verification (C15–C22)')}</h4>
+    <CriteriaDetail set="verificare" values={self.v ?? []} inputs={selfVInputs} lang={lang} offset={14} />
   </details>
 </section>
 
 <section id="radar">
   <h2>{L('Investitorii de pe radar', 'The investors on the radar')}</h2>
   <p>
-    {en ? <>{rows.length} international investors that have backed start-ups like ours (fintech, financial data, capital markets, financial education), scored on 14 adapted conditions with the same weights as the rest of the radar. Each score rests on public sources, listed for each investor. The scores are frozen in the{' '}<a href={`${base}snapshots/investitori-${data.date}.json`}>snapshot of {fmtDate(data.date)}</a>{' '}(fingerprint in the <a href={`${base}snapshots/investitori-${data.date}.sha256`}>.sha256 file</a>). “Conditions” measures how well each investor fits a start-up like ours, not how good the investor is in general.</>
-      : <>{rows.length} investitori internaționali care au finanțat start-ups ca al nostru (fintech, date financiare, piețe de capital, educație financiară), notați pe 14 condiții adaptate, cu aceleași ponderi ca în restul radarului. Fiecare notă se sprijină pe surse publice, listate la fiecare investitor. Notele sunt înghețate în{' '}<a href={`${base}snapshots/investitori-${data.date}.json`}>instantaneul din {fmtDate(data.date)}</a>{' '}(amprenta în <a href={`${base}snapshots/investitori-${data.date}.sha256`}>fișierul .sha256</a>). „Condiții” arată cât de potrivit e fiecare investitor pentru un start-up ca al nostru, nu cât de bun e investitorul în general.</>}
+    {en ? <>{rows.length} international investors that have backed start-ups like ours (fintech, financial data, capital markets, financial education), scored on 22 conditions: 14 adapted conditions (80% of the score) and 8 verification conditions (20%), which check whether the facts can be confirmed independently: regulator or audit, official registers, agreement of sources, track record, third-party confirmation, warning signs, resilience under stress and independence from 22Radar. Each score rests on public sources, listed for each investor. The scores are frozen in the{' '}<a href={`${base}snapshots/${snap}.json`}>snapshot of {fmtDate(data.date)}</a>{' '}(fingerprint in the <a href={`${base}snapshots/${snap}.sha256`}>.sha256 file</a>){prev && <>; the earlier 14-condition snapshot stays published: <a href={`${base}snapshots/${prev}.json`}>{prev}.json</a></>}. “Conditions” measures how well each investor fits a start-up like ours, not how good the investor is in general.</>
+      : <>{rows.length} investitori internaționali care au finanțat start-ups ca al nostru (fintech, date financiare, piețe de capital, educație financiară), notați pe 22 de condiții: 14 condiții adaptate (80% din scor) și 8 condiții de verificare (20%), care arată dacă faptele se pot confirma independent: autoritate de supraveghere sau audit, registre oficiale, concordanța surselor, istoric, confirmare de la terți, semnale de alarmă, rezistență la stres și independență față de 22Radar. Fiecare notă se sprijină pe surse publice, listate la fiecare investitor. Notele sunt înghețate în{' '}<a href={`${base}snapshots/${snap}.json`}>instantaneul din {fmtDate(data.date)}</a>{' '}(amprenta în <a href={`${base}snapshots/${snap}.sha256`}>fișierul .sha256</a>){prev && <>; instantaneul anterior, cu 14 condiții, rămâne publicat: <a href={`${base}snapshots/${prev}.json`}>{prev}.json</a></>}. „Condiții” arată cât de potrivit e fiecare investitor pentru un start-up ca al nostru, nu cât de bun e investitorul în general.</>}
   </p>
   <div class="table-wrap">
     <table class="radar fx">
-      <thead><tr><th>#</th><th>{L('Investitorul', 'Investor')}</th><th>{L('Tip', 'Type')}</th><th>{L('Unde', 'Where')}</th><th>{L('Prima investiție', 'First cheque')}</th><th>{L('Condiții', 'Conditions')}</th><th>{L('Scor', 'Score')}</th><th>{L('Fond / formă', 'Substance / form')}</th></tr></thead>
+      <thead><tr><th>#</th><th>{L('Investitorul', 'Investor')}</th><th>{L('Tip', 'Type')}</th><th>{L('Unde', 'Where')}</th><th>{L('Prima investiție', 'First cheque')}</th><th>{L('Condiții', 'Conditions')}</th><th>{L('Verificare', 'Verification')}</th><th>{L('Scor', 'Score')}</th><th>{L('Fond / formă', 'Substance / form')}</th></tr></thead>
       <tbody>
         {rows.map((r, i) => (
           <tr>
@@ -82,7 +88,8 @@ const reply = (name: string) => `mailto:${mail}?subject=${encodeURIComponent(en 
             <td class="muted">{r.kind}</td>
             <td class="muted">{r.region}</td>
             <td class="muted">{r.ticket}</td>
-            <td><span class:list={['k', zone(r.met)]}>{r.met}/14</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 14) * 100}%`} class={zone(r.met)}></i></span></td>
+            <td><span class:list={['k', zone(r.met)]}>{r.met}/22</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 22) * 100}%`} class={zone(r.met)}></i></span></td>
+            <td><span class:list={['k', tzone(r.trust ?? 0)]}>{r.trust}/8</span></td>
             <td>{num(r.score)}</td>
             <td><FondBadge values={r.c} lang={lang} /></td>
           </tr>
@@ -94,9 +101,12 @@ const reply = (name: string) => `mailto:${mail}?subject=${encodeURIComponent(en 
   <h3>{L('Fiecare investitor, condiție cu condiție', 'Each investor, condition by condition')}</h3>
   {rows.map((r) => (
     <details class="fxd">
-      <summary><b>{r.name}</b> · {r.ticket} · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · {L('scor', 'score')} {num(r.score)} · <FondBadge values={r.c} lang={lang} /></summary>
+      <summary><b>{r.name}</b> · {r.ticket} · <span class:list={['k', zone(r.met)]}>{r.met}/22</span> · {L('verificare', 'verification')} {r.trust}/8 · {L('scor', 'score')} {num(r.score)} · <FondBadge values={r.c} lang={lang} /></summary>
       <p>{r.why}</p>
       <CriteriaDetail set="investitori" values={r.c} lang={lang} />
+      <h4>{L('Verificare (C15–C22)', 'Verification (C15–C22)')}</h4>
+      {r.vwhy && <p>{r.vwhy}</p>}
+      <CriteriaDetail set="verificare" values={r.v ?? []} lang={lang} offset={14} />
       <p class="muted">{L('Surse', 'Sources')}: {r.sources.map(([t, u], i) => <>{i > 0 && '; '}<a href={u} target="_blank" rel="noopener">{t}</a></>)}</p>
       <p lang="en"><a href={replyEn(short(r.name))}>{short(r.name)}: correct your score, score us or propose a call →</a></p>
     </details>
@@ -119,14 +129,14 @@ const reply = (name: string) => `mailto:${mail}?subject=${encodeURIComponent(en 
   <h2>{L('Ce arată analiza', 'What the analysis shows')}</h2>
   {en ? (
     <p>
-      <b>{short(top.name)}</b> fits best ({top.met} of 14 conditions).{' '}
+      <b>{short(top.name)}</b> fits best ({top.met} of 22 conditions).{' '}
       Investors with both a cheque that fits our stage and real access from Romania: {fit.join(', ')}.{' '}
       The funds whose thesis is closest to ours (fintech, financial data, capital markets) are {thesis.join(', ')}, but most of them come in only once a company has revenue, or do not invest in our region.{' '}
       The practical order is therefore: first the pre-seed funds and programmes active in Romania, then the large seed funds, and the fintech specialists after the first revenue.
     </p>
   ) : (
     <p>
-      <b>{short(top.name)}</b> se potrivește cel mai bine ({top.met} din 14 condiții).{' '}
+      <b>{short(top.name)}</b> se potrivește cel mai bine ({top.met} din 22 de condiții).{' '}
       Investitorii care au și un tichet potrivit etapei noastre, și acces real din România: {fit.join(', ')}.{' '}
       Fondurile cu teza cea mai apropiată de noi (fintech, date financiare, piețe de capital) sunt {thesis.join(', ')}, dar cele mai multe intră abia după ce o companie are venituri sau nu investesc în regiunea noastră.{' '}
       Ordinea practică e deci: întâi fondurile și programele de pre-seed active în România, apoi marile fonduri de seed, iar specialiștii în fintech după primele venituri.

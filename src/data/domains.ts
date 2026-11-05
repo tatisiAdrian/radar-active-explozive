@@ -308,7 +308,7 @@ export const domains: Domain[] = [
     slug: 'investitori-startups',
     criteria: 'investitori',
     title: 'Investitori în start-ups ca al nostru',
-    summary: '22 de investitori internaționali care au finanțat start-ups ca al nostru, notați pe 14 condiții adaptate: capital proaspăt, tichet potrivit, teză care se potrivește, acces din România.',
+    summary: '22 de investitori internaționali care au finanțat start-ups ca al nostru, notați pe 22 de condiții (14 adaptate și 8 de verificare a dovezilor): capital proaspăt, tichet potrivit, teză care se potrivește, acces din România.',
     status: 'activ',
     questions: [
       'Ce investitori internaționali finanțează start-ups de fintech, date financiare și educație financiară, și au mai făcut-o?',

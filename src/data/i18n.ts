@@ -9,7 +9,7 @@ export type Lang = 'ro' | 'en';
 type Three = [low: string, mid: string, high: string];
 
 export const DOMAIN_EN: Record<string, { title: string; short: string; what: string; summary: string }> = {
-  'investitori-startups': { title: 'Investors in start-ups like ours', short: 'Investors', what: 'international investors in start-ups like ours', summary: '22 international investors that have backed start-ups like ours, scored on 14 adapted conditions: fresh capital, the right cheque, a matching thesis, access from Romania.' },
+  'investitori-startups': { title: 'Investors in start-ups like ours', short: 'Investors', what: 'international investors in start-ups like ours', summary: '22 international investors that have backed start-ups like ours, scored on 22 conditions (14 adapted ones and 8 that verify the evidence): fresh capital, the right cheque, a matching thesis, access from Romania.' },
   'licee-europa': { title: "Europe’s best high-school systems", short: "High schools", what: "europe’s best high-school systems", summary: "22 European high-school systems, compared by country: PISA 2022 scores in mathematics, reading and science, equity, teachers and access for families who move." },
   'facultati-europa': { title: "Europe’s best universities", short: "Universities", what: "europe’s best universities", summary: "22 European universities, scored on 14 conditions: the QS Europe 2026 ranking, global reputation, employability, costs and accessibility." },
   'meserii-europa': { title: "The best jobs in Europe", short: "Jobs", what: "the best jobs in europe", summary: "22 jobs, scored on 14 conditions, based on the labour shortages reported by EURES in 2025 and the WEF Future of Jobs report." },
