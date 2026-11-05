@@ -1,0 +1,1006 @@
+{
+ "domain": "licee-lume",
+ "date": "2026-11-03",
+ "weights": [
+  13,
+  5,
+  5,
+  6,
+  5,
+  6,
+  6,
+  3,
+  5,
+  5,
+  5,
+  5,
+  5,
+  6
+ ],
+ "verification_weights": [
+  4,
+  4,
+  3,
+  3,
+  2,
+  2,
+  1,
+  1
+ ],
+ "met_threshold": 7,
+ "formulas": {
+  "C1": "Matematică, PISA 2022: nota = (scorul − 450) / 10 (520 dă 7, 550 sau mai mult dă 10).",
+  "C2": "Citire, PISA 2022: nota = (scorul − 450) / 10.",
+  "C3": "Științe, PISA 2022: nota = (scorul − 450) / 10."
+ },
+ "rows": [
+  {
+   "id": "singapore",
+   "name": "Singapore",
+   "data": {
+    "math": 575,
+    "read": 543,
+    "sci": 561
+   },
+   "c": [
+    10,
+    9,
+    10,
+    7,
+    10,
+    8,
+    9,
+    8,
+    9,
+    5,
+    5,
+    7,
+    3,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    10,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 575 puncte",
+    "C2": "citire: 543 puncte",
+    "C3": "științe: 561 puncte"
+   },
+   "score": 7.99,
+   "met": 18,
+   "met14": 10,
+   "trust": 8
+  },
+  {
+   "id": "taiwan",
+   "name": "Taiwan",
+   "data": {
+    "math": 547,
+    "read": 515,
+    "sci": 537
+   },
+   "c": [
+    10,
+    7,
+    9,
+    6,
+    10,
+    8,
+    8,
+    7,
+    6,
+    3,
+    7,
+    7,
+    3,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    10,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 547 puncte",
+    "C2": "citire: 515 puncte",
+    "C3": "științe: 537 puncte"
+   },
+   "score": 7.54,
+   "met": 17,
+   "met14": 9,
+   "trust": 8
+  },
+  {
+   "id": "japonia",
+   "name": "Japonia",
+   "data": {
+    "math": 536,
+    "read": 516,
+    "sci": 547
+   },
+   "c": [
+    9,
+    7,
+    10,
+    8,
+    9,
+    8,
+    8,
+    6,
+    3,
+    3,
+    7,
+    8,
+    4,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    10,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 536 puncte",
+    "C2": "citire: 516 puncte",
+    "C3": "științe: 547 puncte"
+   },
+   "score": 7.45,
+   "met": 17,
+   "met14": 9,
+   "trust": 8
+  },
+  {
+   "id": "irlanda",
+   "name": "Irlanda",
+   "data": {
+    "math": 492,
+    "read": 516,
+    "sci": 504
+   },
+   "c": [
+    4,
+    7,
+    5,
+    8,
+    8,
+    10,
+    7,
+    6,
+    9,
+    8,
+    7,
+    7,
+    7,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    6,
+    8,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 492 puncte",
+    "C2": "citire: 516 puncte",
+    "C3": "științe: 504 puncte"
+   },
+   "score": 7.13,
+   "met": 17,
+   "met14": 10,
+   "trust": 7
+  },
+  {
+   "id": "macao",
+   "name": "Macao (China)",
+   "data": {
+    "math": 552,
+    "read": 510,
+    "sci": 543
+   },
+   "c": [
+    10,
+    6,
+    9,
+    9,
+    8,
+    8,
+    7,
+    5,
+    6,
+    4,
+    8,
+    8,
+    5,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    8,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 552 puncte",
+    "C2": "citire: 510 puncte",
+    "C3": "științe: 543 puncte"
+   },
+   "score": 7.68,
+   "met": 16,
+   "met14": 8,
+   "trust": 8
+  },
+  {
+   "id": "estonia",
+   "name": "Estonia",
+   "data": {
+    "math": 510,
+    "read": 511,
+    "sci": 526
+   },
+   "c": [
+    6,
+    6,
+    8,
+    9,
+    9,
+    10,
+    7,
+    6,
+    7,
+    6,
+    7,
+    8,
+    7,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    6,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 510 puncte",
+    "C2": "citire: 511 puncte",
+    "C3": "științe: 526 puncte"
+   },
+   "score": 7.49,
+   "met": 16,
+   "met14": 9,
+   "trust": 7
+  },
+  {
+   "id": "coreea",
+   "name": "Coreea de Sud",
+   "data": {
+    "math": 527,
+    "read": 515,
+    "sci": 528
+   },
+   "c": [
+    8,
+    7,
+    8,
+    7,
+    9,
+    7,
+    9,
+    5,
+    6,
+    3,
+    6,
+    7,
+    2,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    10,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 527 puncte",
+    "C2": "citire: 515 puncte",
+    "C3": "științe: 528 puncte"
+   },
+   "score": 7.08,
+   "met": 16,
+   "met14": 8,
+   "trust": 8
+  },
+  {
+   "id": "elvetia",
+   "name": "Elveția",
+   "data": {
+    "math": 508,
+    "read": 483,
+    "sci": 503
+   },
+   "c": [
+    6,
+    3,
+    5,
+    7,
+    9,
+    9,
+    9,
+    10,
+    8,
+    4,
+    7,
+    7,
+    5,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    8,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 508 puncte",
+    "C2": "citire: 483 puncte",
+    "C3": "științe: 503 puncte"
+   },
+   "score": 7.07,
+   "met": 16,
+   "met14": 8,
+   "trust": 8
+  },
+  {
+   "id": "canada",
+   "name": "Canada",
+   "data": {
+    "math": 497,
+    "read": 507,
+    "sci": 515
+   },
+   "c": [
+    5,
+    6,
+    7,
+    8,
+    7,
+    9,
+    8,
+    6,
+    7,
+    9,
+    8,
+    4,
+    8,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    6,
+    6,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 497 puncte",
+    "C2": "citire: 507 puncte",
+    "C3": "științe: 515 puncte"
+   },
+   "score": 7.14,
+   "met": 15,
+   "met14": 9,
+   "trust": 6
+  },
+  {
+   "id": "finlanda",
+   "name": "Finlanda",
+   "data": {
+    "math": 484,
+    "read": 490,
+    "sci": 511
+   },
+   "c": [
+    3,
+    4,
+    6,
+    8,
+    7,
+    10,
+    10,
+    7,
+    7,
+    5,
+    7,
+    8,
+    4,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    4,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 484 puncte",
+    "C2": "citire: 490 puncte",
+    "C3": "științe: 511 puncte"
+   },
+   "score": 6.73,
+   "met": 15,
+   "met14": 8,
+   "trust": 7
+  },
+  {
+   "id": "hong-kong",
+   "name": "Hong Kong (China)",
+   "data": {
+    "math": 540,
+    "read": 500,
+    "sci": 520
+   },
+   "c": [
+    9,
+    5,
+    7,
+    7,
+    8,
+    7,
+    7,
+    5,
+    8,
+    6,
+    6,
+    4,
+    3,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    6,
+    6,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 540 puncte",
+    "C2": "citire: 500 puncte",
+    "C3": "științe: 520 puncte"
+   },
+   "score": 6.94,
+   "met": 13,
+   "met14": 7,
+   "trust": 6
+  },
+  {
+   "id": "danemarca",
+   "name": "Danemarca",
+   "data": {
+    "math": 489,
+    "read": 489,
+    "sci": 494
+   },
+   "c": [
+    4,
+    4,
+    4,
+    8,
+    6,
+    10,
+    8,
+    7,
+    9,
+    5,
+    7,
+    7,
+    6,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    6,
+    4,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 489 puncte",
+    "C2": "citire: 489 puncte",
+    "C3": "științe: 494 puncte"
+   },
+   "score": 6.68,
+   "met": 13,
+   "met14": 7,
+   "trust": 6
+  },
+  {
+   "id": "polonia",
+   "name": "Polonia",
+   "data": {
+    "math": 489,
+    "read": 489,
+    "sci": 499
+   },
+   "c": [
+    4,
+    4,
+    5,
+    7,
+    7,
+    10,
+    6,
+    6,
+    6,
+    6,
+    7,
+    8,
+    6,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    3,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 489 puncte",
+    "C2": "citire: 489 puncte",
+    "C3": "științe: 499 puncte"
+   },
+   "score": 6.57,
+   "met": 12,
+   "met14": 5,
+   "trust": 7
+  },
+  {
+   "id": "cehia",
+   "name": "Cehia",
+   "data": {
+    "math": 487,
+    "read": 489,
+    "sci": 498
+   },
+   "c": [
+    4,
+    4,
+    5,
+    5,
+    7,
+    10,
+    6,
+    7,
+    6,
+    6,
+    7,
+    7,
+    6,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    6,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 487 puncte",
+    "C2": "citire: 489 puncte",
+    "C3": "științe: 498 puncte"
+   },
+   "score": 6.46,
+   "met": 12,
+   "met14": 5,
+   "trust": 7
+  },
+  {
+   "id": "austria",
+   "name": "Austria",
+   "data": {
+    "math": 487,
+    "read": 480,
+    "sci": 491
+   },
+   "c": [
+    4,
+    3,
+    4,
+    5,
+    8,
+    10,
+    7,
+    9,
+    7,
+    5,
+    6,
+    6,
+    5,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    6,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 487 puncte",
+    "C2": "citire: 480 puncte",
+    "C3": "științe: 491 puncte"
+   },
+   "score": 6.38,
+   "met": 12,
+   "met14": 5,
+   "trust": 7
+  },
+  {
+   "id": "belgia",
+   "name": "Belgia",
+   "data": {
+    "math": 489,
+    "read": 479,
+    "sci": 491
+   },
+   "c": [
+    4,
+    3,
+    4,
+    5,
+    8,
+    10,
+    6,
+    8,
+    8,
+    5,
+    6,
+    7,
+    5,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    4,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 489 puncte",
+    "C2": "citire: 479 puncte",
+    "C3": "științe: 491 puncte"
+   },
+   "score": 6.37,
+   "met": 12,
+   "met14": 5,
+   "trust": 7
+  },
+  {
+   "id": "slovenia",
+   "name": "Slovenia",
+   "data": {
+    "math": 485,
+    "read": 469,
+    "sci": 500
+   },
+   "c": [
+    4,
+    2,
+    5,
+    7,
+    6,
+    10,
+    6,
+    7,
+    6,
+    4,
+    7,
+    8,
+    6,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    4,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 485 puncte",
+    "C2": "citire: 469 puncte",
+    "C3": "științe: 500 puncte"
+   },
+   "score": 6.36,
+   "met": 12,
+   "met14": 5,
+   "trust": 7
+  },
+  {
+   "id": "suedia",
+   "name": "Suedia",
+   "data": {
+    "math": 482,
+    "read": 487,
+    "sci": 494
+   },
+   "c": [
+    3,
+    4,
+    4,
+    6,
+    6,
+    10,
+    7,
+    6,
+    8,
+    4,
+    7,
+    7,
+    6,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    4,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 482 puncte",
+    "C2": "citire: 487 puncte",
+    "C3": "științe: 494 puncte"
+   },
+   "score": 6.3,
+   "met": 12,
+   "met14": 5,
+   "trust": 7
+  },
+  {
+   "id": "olanda",
+   "name": "Țările de Jos",
+   "data": {
+    "math": 493,
+    "read": 459,
+    "sci": 488
+   },
+   "c": [
+    4,
+    1,
+    4,
+    6,
+    8,
+    10,
+    7,
+    9,
+    10,
+    5,
+    6,
+    6,
+    4,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    6,
+    3,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 493 puncte",
+    "C2": "citire: 459 puncte",
+    "C3": "științe: 488 puncte"
+   },
+   "score": 6.35,
+   "met": 11,
+   "met14": 5,
+   "trust": 6
+  },
+  {
+   "id": "noua-zeelanda",
+   "name": "Noua Zeelandă",
+   "data": {
+    "math": 479,
+    "read": 501,
+    "sci": 504
+   },
+   "c": [
+    3,
+    5,
+    5,
+    6,
+    6,
+    8,
+    6,
+    6,
+    9,
+    4,
+    7,
+    7,
+    7,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    6,
+    6,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 479 puncte",
+    "C2": "citire: 501 puncte",
+    "C3": "științe: 504 puncte"
+   },
+   "score": 6.28,
+   "met": 11,
+   "met14": 5,
+   "trust": 6
+  },
+  {
+   "id": "australia",
+   "name": "Australia",
+   "data": {
+    "math": 487,
+    "read": 498,
+    "sci": 507
+   },
+   "c": [
+    4,
+    5,
+    6,
+    6,
+    6,
+    6,
+    6,
+    7,
+    3,
+    9,
+    7,
+    3,
+    8,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    6,
+    8,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 487 puncte",
+    "C2": "citire: 498 puncte",
+    "C3": "științe: 507 puncte"
+   },
+   "score": 6.19,
+   "met": 11,
+   "met14": 4,
+   "trust": 7
+  },
+  {
+   "id": "regatul-unit",
+   "name": "Regatul Unit",
+   "data": {
+    "math": 489,
+    "read": 494,
+    "sci": 500
+   },
+   "c": [
+    4,
+    4,
+    5,
+    6,
+    8,
+    9,
+    6,
+    6,
+    9,
+    8,
+    6,
+    6,
+    6,
+    null
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    6,
+    6,
+    10
+   ],
+   "inputs": {
+    "C1": "matematică: 489 puncte",
+    "C2": "citire: 494 puncte",
+    "C3": "științe: 500 puncte"
+   },
+   "score": 6.57,
+   "met": 10,
+   "met14": 4,
+   "trust": 6
+  }
+ ]
+}

@@ -43,7 +43,7 @@ export const domains: Domain[] = [
     status: 'activ',
     questions: [
       'Cum se compară România cu regiunea (Europa Centrală și de Est)?',
-      'Care start-ups românești merită urmărite pe aceleași 14 condiții?',
+      'Care start-ups românești merită urmărite pe cele 22 de condiții?',
       'Ce exit-uri au avut loc și la ce evaluări?',
     ],
   },
@@ -321,7 +321,7 @@ export const domains: Domain[] = [
     slug: 'licee-romania',
     criteria: 'licee',
     title: 'Cele mai bune licee din România',
-    summary: '22 de licee de top, notate pe 14 condiții: media la BAC 2025, promovarea, ultima medie de admitere și ce primesc elevii față de cât de greu intră.',
+    summary: '22 de licee de top, notate pe 22 de condiții (14 și 8 de verificare a dovezilor): media la BAC 2025, promovarea, ultima medie de admitere și ce primesc elevii față de cât de greu intră.',
     status: 'activ',
     questions: ["Care licee au cele mai bune rezultate la bacalaureat?", "Unde primesc elevii cel mai mult față de cât de greu e să intri?", "Merită un liceu de top din București față de unul din Iași sau Cluj?"],
   },

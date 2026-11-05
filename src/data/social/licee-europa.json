@@ -3,11 +3,11 @@
  "set": "licee-eu",
  "region": "europa",
  "date": "2026-11-03",
- "snapshot": "social-licee-europa-r2-2026-11-03",
- "previousSnapshot": "social-licee-europa-2026-11-03",
- "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
- "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
- "verified": false,
+ "snapshot": "social-licee-europa-r3-2026-11-03",
+ "previousSnapshot": "social-licee-europa-r2-2026-11-03",
+ "revisionNote": "Pe 5 noiembrie 2026 topul a trecut la 22 de condiții: cele 14 de până acum (80% din scor) și 8 condiții de verificare a dovezilor (20%), notate la fiecare poziție cu justificare.",
+ "revisionNoteEn": "On 5 November 2026 the ranking moved to 22 conditions: the existing 14 (80% of the score) and 8 conditions that verify the evidence (20%), scored for each position with a justification.",
+ "verified": true,
  "formulas": {
   "C1": "Matematică, PISA 2022: nota = (scorul − 440) / 7 (510 dă 10, 489 dă 7).",
   "C2": "Citire, PISA 2022: nota = (scorul − 440) / 7.",
@@ -61,14 +61,27 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    6,
+    8,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. OCDE a semnalat că eșantionul din 2022 nu a respectat integral standardele (rată de participare sub prag), deci rezultatele trebuie citite cu prudență. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −8 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. The OECD flagged that the 2022 sample did not fully meet the standards (participation below the threshold), so the results should be read with caution. As a stress test, the pandemic: in mathematics, the score changed by -8 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 492 puncte",
     "C2": "citire: 516 puncte",
     "C3": "științe: 504 puncte"
    },
-   "score": 7.6,
-   "met": 12,
-   "met14": 12
+   "score": 7.82,
+   "met": 19,
+   "met14": 12,
+   "trust": 7
   },
   {
    "id": "estonia",
@@ -117,14 +130,27 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    6,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −13 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -13 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 510 puncte",
     "C2": "citire: 511 puncte",
     "C3": "științe: 526 puncte"
    },
-   "score": 8.16,
-   "met": 11,
-   "met14": 11
+   "score": 8.31,
+   "met": 18,
+   "met14": 11,
+   "trust": 7
   },
   {
    "id": "elvetia",
@@ -173,14 +199,27 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −7 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -7 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 508 puncte",
     "C2": "citire: 483 puncte",
     "C3": "științe: 503 puncte"
    },
-   "score": 7.64,
-   "met": 10,
-   "met14": 10
+   "score": 7.89,
+   "met": 18,
+   "met14": 10,
+   "trust": 8
   },
   {
    "id": "finlanda",
@@ -229,14 +268,27 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    4,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −23 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -23 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 484 puncte",
     "C2": "citire: 490 puncte",
     "C3": "științe: 511 puncte"
    },
-   "score": 7.12,
-   "met": 10,
-   "met14": 10
+   "score": 7.42,
+   "met": 17,
+   "met14": 10,
+   "trust": 7
   },
   {
    "id": "danemarca",
@@ -285,14 +337,27 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    6,
+    4,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. OCDE a semnalat că eșantionul din 2022 nu a respectat integral standardele (rată de participare sub prag), deci rezultatele trebuie citite cu prudență. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −20 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. The OECD flagged that the 2022 sample did not fully meet the standards (participation below the threshold), so the results should be read with caution. As a stress test, the pandemic: in mathematics, the score changed by -20 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 489 puncte",
     "C2": "citire: 489 puncte",
     "C3": "științe: 494 puncte"
    },
-   "score": 7.06,
-   "met": 9,
-   "met14": 9
+   "score": 7.32,
+   "met": 15,
+   "met14": 9,
+   "trust": 6
   },
   {
    "id": "polonia",
@@ -341,14 +406,27 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    3,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −27 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -27 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 489 puncte",
     "C2": "citire: 489 puncte",
     "C3": "științe: 499 puncte"
    },
-   "score": 6.84,
-   "met": 8,
-   "met14": 8
+   "score": 7.21,
+   "met": 15,
+   "met14": 8,
+   "trust": 7
   },
   {
    "id": "cehia",
@@ -397,14 +475,27 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    6,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −12 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -12 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 487 puncte",
     "C2": "citire: 489 puncte",
     "C3": "științe: 498 puncte"
    },
-   "score": 6.66,
-   "met": 8,
-   "met14": 8
+   "score": 7.1,
+   "met": 15,
+   "met14": 8,
+   "trust": 7
   },
   {
    "id": "regatul-unit",
@@ -453,126 +544,27 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    6,
+    6,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. OCDE a semnalat că eșantionul din 2022 nu a respectat integral standardele (rată de participare sub prag), deci rezultatele trebuie citite cu prudență. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −13 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. The OECD flagged that the 2022 sample did not fully meet the standards (participation below the threshold), so the results should be read with caution. As a stress test, the pandemic: in mathematics, the score changed by -13 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 489 puncte",
     "C2": "citire: 494 puncte",
     "C3": "științe: 500 puncte"
    },
-   "score": 6.92,
-   "met": 7,
-   "met14": 7
-  },
-  {
-   "id": "olanda",
-   "name": "Țările de Jos",
-   "nameEn": "Netherlands",
-   "data": {
-    "math": 493,
-    "read": 459,
-    "sci": 488
-   },
-   "c": [
-    8,
-    3,
-    5,
-    6,
-    8,
-    10,
-    7,
-    9,
-    10,
-    5,
-    6,
-    6,
-    4,
-    null
-   ],
-   "why": "A doua matematică din UE după Estonia (493), dar o scădere puternică la citire (459); orientarea timpurie spre trasee diferite e un punct sensibil.",
-   "whyEn": "The second-best mathematics in the EU after Estonia (493), but a sharp drop in reading (459); early tracking into different paths is a sensitive point.",
-   "sources": [
-    [
-     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
-     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
-    ],
-    [
-     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
-     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
-    ]
-   ],
-   "sourcesEn": [
-    [
-     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
-     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
-    ],
-    [
-     "OECD, PISA 2022, Volume I: how countries performed",
-     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
-    ]
-   ],
-   "inputs": {
-    "C1": "matematică: 493 puncte",
-    "C2": "citire: 459 puncte",
-    "C3": "științe: 488 puncte"
-   },
-   "score": 6.7,
-   "met": 6,
-   "met14": 6
-  },
-  {
-   "id": "belgia",
-   "name": "Belgia",
-   "nameEn": "Belgium",
-   "data": {
-    "math": 489,
-    "read": 479,
-    "sci": 491
-   },
-   "c": [
-    7,
-    6,
-    6,
-    5,
-    8,
-    10,
-    6,
-    8,
-    8,
-    5,
-    6,
-    7,
-    5,
-    null
-   ],
-   "why": "Rezultate bune la matematică (489) și științe (491), dar diferențe mari între comunitățile flamandă și franceză și între școli.",
-   "whyEn": "Good results in mathematics (489) and science (491), but large gaps between the Flemish and French communities and between schools.",
-   "sources": [
-    [
-     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
-     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
-    ],
-    [
-     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
-     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
-    ]
-   ],
-   "sourcesEn": [
-    [
-     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
-     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
-    ],
-    [
-     "OECD, PISA 2022, Volume I: how countries performed",
-     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
-    ]
-   ],
-   "inputs": {
-    "C1": "matematică: 489 puncte",
-    "C2": "citire: 479 puncte",
-    "C3": "științe: 491 puncte"
-   },
-   "score": 6.58,
-   "met": 6,
-   "met14": 6
+   "score": 7.26,
+   "met": 13,
+   "met14": 7,
+   "trust": 6
   },
   {
    "id": "austria-eu",
@@ -621,14 +613,96 @@
      "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    6,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −12 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -12 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 487 puncte",
     "C2": "citire: 480 puncte",
     "C3": "științe: 491 puncte"
    },
-   "score": 6.58,
-   "met": 6,
-   "met14": 6
+   "score": 7.02,
+   "met": 13,
+   "met14": 6,
+   "trust": 7
+  },
+  {
+   "id": "belgia",
+   "name": "Belgia",
+   "nameEn": "Belgium",
+   "data": {
+    "math": 489,
+    "read": 479,
+    "sci": 491
+   },
+   "c": [
+    7,
+    6,
+    6,
+    5,
+    8,
+    10,
+    6,
+    8,
+    8,
+    5,
+    6,
+    7,
+    5,
+    null
+   ],
+   "why": "Rezultate bune la matematică (489) și științe (491), dar diferențe mari între comunitățile flamandă și franceză și între școli.",
+   "whyEn": "Good results in mathematics (489) and science (491), but large gaps between the Flemish and French communities and between schools.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    4,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −19 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -19 points between 2018 and 2022 (OECD average: -15).",
+   "inputs": {
+    "C1": "matematică: 489 puncte",
+    "C2": "citire: 479 puncte",
+    "C3": "științe: 491 puncte"
+   },
+   "score": 7.01,
+   "met": 13,
+   "met14": 6,
+   "trust": 7
   },
   {
    "id": "suedia-eu",
@@ -677,14 +751,27 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    4,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −20 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -20 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 482 puncte",
     "C2": "citire: 487 puncte",
     "C3": "științe: 494 puncte"
    },
-   "score": 6.5,
-   "met": 6,
-   "met14": 6
+   "score": 6.94,
+   "met": 13,
+   "met14": 6,
+   "trust": 7
   },
   {
    "id": "slovenia",
@@ -733,14 +820,27 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    4,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −24 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -24 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 485 puncte",
     "C2": "citire: 469 puncte",
     "C3": "științe: 500 puncte"
    },
-   "score": 6.36,
-   "met": 6,
-   "met14": 6
+   "score": 6.82,
+   "met": 13,
+   "met14": 6,
+   "trust": 7
   },
   {
    "id": "norvegia",
@@ -789,14 +889,157 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    3,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −33 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -33 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 468 puncte",
     "C2": "citire: 477 puncte",
     "C3": "științe: 478 puncte"
    },
-   "score": 6.04,
-   "met": 6,
-   "met14": 6
+   "score": 6.54,
+   "met": 13,
+   "met14": 6,
+   "trust": 7
+  },
+  {
+   "id": "olanda",
+   "name": "Țările de Jos",
+   "nameEn": "Netherlands",
+   "data": {
+    "math": 493,
+    "read": 459,
+    "sci": 488
+   },
+   "c": [
+    8,
+    3,
+    5,
+    6,
+    8,
+    10,
+    7,
+    9,
+    10,
+    5,
+    6,
+    6,
+    4,
+    null
+   ],
+   "why": "A doua matematică din UE după Estonia (493), dar o scădere puternică la citire (459); orientarea timpurie spre trasee diferite e un punct sensibil.",
+   "whyEn": "The second-best mathematics in the EU after Estonia (493), but a sharp drop in reading (459); early tracking into different paths is a sensitive point.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    6,
+    3,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. OCDE a semnalat că eșantionul din 2022 nu a respectat integral standardele (rată de participare sub prag), deci rezultatele trebuie citite cu prudență. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −26 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. The OECD flagged that the 2022 sample did not fully meet the standards (participation below the threshold), so the results should be read with caution. As a stress test, the pandemic: in mathematics, the score changed by -26 points between 2018 and 2022 (OECD average: -15).",
+   "inputs": {
+    "C1": "matematică: 493 puncte",
+    "C2": "citire: 459 puncte",
+    "C3": "științe: 488 puncte"
+   },
+   "score": 7.02,
+   "met": 12,
+   "met14": 6,
+   "trust": 6
+  },
+  {
+   "id": "lituania",
+   "name": "Lituania",
+   "nameEn": "Lithuania",
+   "data": {
+    "math": 475,
+    "read": 472,
+    "sci": 484
+   },
+   "c": [
+    5,
+    5,
+    5,
+    6,
+    6,
+    10,
+    6,
+    6,
+    6,
+    6,
+    8,
+    8,
+    7,
+    null
+   ],
+   "why": "Rezultate apropiate de media OCDE (475, 472, 484) și stabile în timp, spre deosebire de scăderile din majoritatea țărilor.",
+   "whyEn": "Results close to the OECD average (475, 472, 484) and stable over time, unlike the falls in most countries.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: tabelul-sinteză al rezultatelor",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: the results snapshot table",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ]
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −6 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -6 points between 2018 and 2022 (OECD average: -15).",
+   "inputs": {
+    "C1": "matematică: 475 puncte",
+    "C2": "citire: 472 puncte",
+    "C3": "științe: 484 puncte"
+   },
+   "score": 6.79,
+   "met": 12,
+   "met14": 4,
+   "trust": 8
   },
   {
    "id": "germania",
@@ -845,62 +1088,27 @@
      "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    3,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −25 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -25 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 475 puncte",
     "C2": "citire: 480 puncte",
     "C3": "științe: 492 puncte"
    },
-   "score": 6.14,
-   "met": 5,
-   "met14": 5
-  },
-  {
-   "id": "lituania",
-   "name": "Lituania",
-   "nameEn": "Lithuania",
-   "data": {
-    "math": 475,
-    "read": 472,
-    "sci": 484
-   },
-   "c": [
-    5,
-    5,
-    5,
-    6,
-    6,
-    10,
-    6,
-    6,
-    6,
-    6,
-    8,
-    8,
-    7,
-    null
-   ],
-   "why": "Rezultate apropiate de media OCDE (475, 472, 484) și stabile în timp, spre deosebire de scăderile din majoritatea țărilor.",
-   "whyEn": "Results close to the OECD average (475, 472, 484) and stable over time, unlike the falls in most countries.",
-   "sources": [
-    [
-     "OCDE, PISA 2022: tabelul-sinteză al rezultatelor",
-     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
-    ]
-   ],
-   "sourcesEn": [
-    [
-     "OECD, PISA 2022: the results snapshot table",
-     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
-    ]
-   ],
-   "inputs": {
-    "C1": "matematică: 475 puncte",
-    "C2": "citire: 472 puncte",
-    "C3": "științe: 484 puncte"
-   },
-   "score": 6.26,
-   "met": 4,
-   "met14": 4
+   "score": 6.64,
+   "met": 12,
+   "met14": 5,
+   "trust": 7
   },
   {
    "id": "spania",
@@ -941,14 +1149,27 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −8 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -8 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 473 puncte",
     "C2": "citire: 474 puncte",
     "C3": "științe: 485 puncte"
    },
-   "score": 6.06,
-   "met": 4,
-   "met14": 4
+   "score": 6.62,
+   "met": 12,
+   "met14": 4,
+   "trust": 8
   },
   {
    "id": "franta",
@@ -989,14 +1210,88 @@
      "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    4,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −21 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -21 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 474 puncte",
     "C2": "citire: 474 puncte",
     "C3": "științe: 487 puncte"
    },
-   "score": 5.9,
-   "met": 4,
-   "met14": 4
+   "score": 6.45,
+   "met": 11,
+   "met14": 4,
+   "trust": 7
+  },
+  {
+   "id": "ungaria",
+   "name": "Ungaria",
+   "nameEn": "Hungary",
+   "data": {
+    "math": 473,
+    "read": 473,
+    "sci": 486
+   },
+   "c": [
+    5,
+    5,
+    5,
+    4,
+    6,
+    10,
+    5,
+    6,
+    6,
+    5,
+    7,
+    7,
+    5,
+    null
+   ],
+   "why": "Rezultate apropiate de media OCDE (473, 473, 486), dar diferențe mari între școli în funcție de mediul social al elevilor.",
+   "whyEn": "Results close to the OECD average (473, 473, 486), but large differences between schools according to students’ social background.",
+   "sources": [
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −8 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -8 points between 2018 and 2022 (OECD average: -15).",
+   "inputs": {
+    "C1": "matematică: 473 puncte",
+    "C2": "citire: 473 puncte",
+    "C3": "științe: 486 puncte"
+   },
+   "score": 6.36,
+   "met": 11,
+   "met14": 3,
+   "trust": 8
   },
   {
    "id": "italia",
@@ -1045,70 +1340,27 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    4,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −16 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -16 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 471 puncte",
     "C2": "citire: 482 puncte",
     "C3": "științe: 477 puncte"
    },
-   "score": 5.76,
-   "met": 4,
-   "met14": 4
-  },
-  {
-   "id": "letonia",
-   "name": "Letonia",
-   "nameEn": "Latvia",
-   "data": {
-    "math": 483,
-    "read": 475,
-    "sci": 494
-   },
-   "c": [
-    6,
-    5,
-    6,
-    6,
-    6,
-    10,
-    6,
-    6,
-    6,
-    6,
-    8,
-    8,
-    6,
-    null
-   ],
-   "why": "Matematică 483 și științe 494, peste media OCDE, cu rezultate stabile față de 2018; datele au avut abateri de la standardele de eșantionare PISA.",
-   "whyEn": "Mathematics 483 and science 494, above the OECD average, with results stable since 2018; the data deviated from PISA sampling standards.",
-   "sources": [
-    [
-     "OCDE, PISA 2022: tabelul-sinteză al rezultatelor",
-     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
-    ],
-    [
-     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
-     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
-    ]
-   ],
-   "sourcesEn": [
-    [
-     "OECD, PISA 2022: the results snapshot table",
-     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
-    ],
-    [
-     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
-     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
-    ]
-   ],
-   "inputs": {
-    "C1": "matematică: 483 puncte",
-    "C2": "citire: 475 puncte",
-    "C3": "științe: 494 puncte"
-   },
-   "score": 6.42,
-   "met": 3,
-   "met14": 3
+   "score": 6.34,
+   "met": 11,
+   "met14": 4,
+   "trust": 7
   },
   {
    "id": "portugalia",
@@ -1157,62 +1409,96 @@
      "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    9,
+    4,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. Nu sunt semnale de alarmă privind datele. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −20 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. There are no warning signs about the data. As a stress test, the pandemic: in mathematics, the score changed by -20 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
     "C1": "matematică: 472 puncte",
     "C2": "citire: 477 puncte",
     "C3": "științe: 484 puncte"
    },
-   "score": 6.02,
-   "met": 3,
-   "met14": 3
+   "score": 6.55,
+   "met": 10,
+   "met14": 3,
+   "trust": 7
   },
   {
-   "id": "ungaria",
-   "name": "Ungaria",
-   "nameEn": "Hungary",
+   "id": "letonia",
+   "name": "Letonia",
+   "nameEn": "Latvia",
    "data": {
-    "math": 473,
-    "read": 473,
-    "sci": 486
+    "math": 483,
+    "read": 475,
+    "sci": 494
    },
    "c": [
+    6,
     5,
-    5,
-    5,
-    4,
+    6,
+    6,
     6,
     10,
-    5,
     6,
     6,
-    5,
-    7,
-    7,
-    5,
+    6,
+    6,
+    8,
+    8,
+    6,
     null
    ],
-   "why": "Rezultate apropiate de media OCDE (473, 473, 486), dar diferențe mari între școli în funcție de mediul social al elevilor.",
-   "whyEn": "Results close to the OECD average (473, 473, 486), but large differences between schools according to students’ social background.",
+   "why": "Matematică 483 și științe 494, peste media OCDE, cu rezultate stabile față de 2018; datele au avut abateri de la standardele de eșantionare PISA.",
+   "whyEn": "Mathematics 483 and science 494, above the OECD average, with results stable since 2018; the data deviated from PISA sampling standards.",
    "sources": [
     [
-     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
-     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+     "OCDE, PISA 2022: tabelul-sinteză al rezultatelor",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
     ]
    ],
    "sourcesEn": [
     [
-     "OECD, PISA 2022, Volume I: how countries performed",
-     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+     "OECD, PISA 2022: the results snapshot table",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
     ]
    ],
+   "v": [
+    10,
+    9,
+    8,
+    9,
+    8,
+    6,
+    6,
+    10
+   ],
+   "vwhy": "Scorurile vin din PISA 2022, un test independent al OCDE, aplicat pe eșantioane reprezentative; țara participă la PISA de multe cicluri, iar rezultatele sunt în linie cu alte evaluări internaționale. OCDE a semnalat că eșantionul din 2022 nu a respectat integral standardele (rată de participare sub prag), deci rezultatele trebuie citite cu prudență. Ca test de rezistență, pandemia: la matematică, scorul s-a schimbat cu −13 puncte între 2018 și 2022 (media OCDE: −15).",
+   "vwhyEn": "The scores come from PISA 2022, an independent OECD test applied to representative samples; the country has taken part in many PISA cycles, and the results are in line with other international assessments. The OECD flagged that the 2022 sample did not fully meet the standards (participation below the threshold), so the results should be read with caution. As a stress test, the pandemic: in mathematics, the score changed by -13 points between 2018 and 2022 (OECD average: -15).",
    "inputs": {
-    "C1": "matematică: 473 puncte",
-    "C2": "citire: 473 puncte",
-    "C3": "științe: 486 puncte"
+    "C1": "matematică: 483 puncte",
+    "C2": "citire: 475 puncte",
+    "C3": "științe: 494 puncte"
    },
-   "score": 5.72,
-   "met": 3,
-   "met14": 3
+   "score": 6.84,
+   "met": 9,
+   "met14": 3,
+   "trust": 6
   }
  ]
 }

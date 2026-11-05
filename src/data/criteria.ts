@@ -4,6 +4,9 @@
  * O condiție e „îndeplinită” de la nota 7 (din 10).
  */
 export const WEIGHTS = [16, 6, 6, 8, 6, 8, 8, 4, 6, 6, 6, 6, 6, 8] as const;
+/** Topurile pe 22 de condiții: primele 14 cântăresc 80%, cele 8 de verificare (C15–C22) 20% (aprobat pe 5 noiembrie 2026). */
+export const WEIGHTS80 = [13, 5, 5, 6, 5, 6, 6, 3, 5, 5, 5, 5, 5, 6] as const;
+export const WEIGHTS_V = [4, 4, 3, 3, 2, 2, 1, 1] as const;
 
 import { SOCIAL_SETS } from './social-criteria';
 

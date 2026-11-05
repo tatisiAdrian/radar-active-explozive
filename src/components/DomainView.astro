@@ -23,7 +23,7 @@ import { childrenOf, breadcrumbs } from '../data/domains';
 import { catOf } from '../data/categories';
 import { datasetsFor, datasetById } from '../data/datasets';
 import { dbSource, radarView } from '../data/radar';
-import { CRITERIA, WEIGHTS } from '../data/criteria';
+import { CRITERIA, WEIGHTS, WEIGHTS80, WEIGHTS_V } from '../data/criteria';
 import { CRITERIA_EN, type Lang } from '../data/i18n';
 import { DOMAINS_EN } from '../data/en-content';
 import { datasetL, domainHref, domainTitle, sourceL } from '../data/lang';
@@ -57,6 +57,10 @@ const scored = isSocial || ['forex', 'economii-emergente', 'sp500', 'startups/eu
 if (domain.slug === 'startups/europa/romania') sources.push(dbSource);
 const srcs = [...new Map(sources.map((s) => [s.url, sourceL(s, lang)])).values()];
 const criteria = domain.criteria ? (en ? CRITERIA_EN : CRITERIA)[domain.criteria] : undefined;
+// Topurile trecute pe 22 de condiții: cele 14 adaptate (80%) și cele 8 de verificare a dovezilor (20%).
+const v22 = (isSocial && !!SOCIAL[domain.slug].verified) || ['forex', 'economii-emergente', 'sp500', 'startups/europa/romania', 'imobiliare', 'proiecte-imobiliare', 'investitori-startups'].includes(domain.slug);
+const verif = (en ? CRITERIA_EN : CRITERIA).verificare;
+const critRows: [string, string, number][] = criteria ? [...criteria.map(([n, w], i) => [n, w, v22 ? WEIGHTS80[i] : WEIGHTS[i]] as [string, string, number]), ...(v22 ? verif.map(([n, w], i) => [n, w, WEIGHTS_V[i]] as [string, string, number]) : [])] : [];
 if (domain.criteria && !criteria) throw new Error(`Setul de condiții „${domain.criteria}” nu există (${domain.slug}).`);
 const home = en ? `${base}en/` : base;
 ---
@@ -98,17 +102,22 @@ const home = en ? `${base}en/` : base;
 
   {criteria && (
     <section>
-      <h2>{en ? `How we apply the 14 conditions ${domain.radarMarket ? 'here' : 'in this domain'}` : `Cum aplicăm cele 14 condiții ${domain.radarMarket ? 'aici' : 'în acest domeniu'}`}</h2>
+      <h2>{en ? `How we apply the ${v22 ? 22 : 14} conditions ${domain.radarMarket ? 'here' : 'in this domain'}` : `Cum aplicăm cele ${v22 ? '22 de' : '14'} condiții ${domain.radarMarket ? 'aici' : 'în acest domeniu'}`}</h2>
       <p class="muted">
-        {L('Același algoritm ca la cripto, companii și mărfuri: fiecare condiție primește o notă de la 0 la 10 și e îndeplinită de la 7. Ponderile sunt identice în toate domeniile; se schimbă doar ce măsurăm concret.', 'The same algorithm as for crypto, companies and commodities: each condition gets a score from 0 to 10 and is met from 7. The weights are identical in every domain; only what we measure in practice changes.')}
+        {v22
+          ? L('Fiecare condiție primește o notă de la 0 la 10 și e îndeplinită de la 7. Primele 14 condiții măsoară ce contează în acest domeniu și cântăresc 80% din scor; ultimele 8 (C15–C22) verifică dovezile din spatele notelor, cu surse externe, și cântăresc 20%. O legătură nedeclarată cu noi (C22) înseamnă excludere din top. Ponderile sunt aceleași în toate topurile pe 22 de condiții.', 'Each condition gets a score from 0 to 10 and is met from 7. The first 14 conditions measure what matters in this domain and weigh 80% of the score; the last 8 (C15–C22) verify the evidence behind the scores, with outside sources, and weigh 20%. An undeclared relationship with us (C22) means exclusion from the ranking. The weights are the same in every 22-condition ranking.')
+          : L('Același algoritm ca la cripto, companii și mărfuri: fiecare condiție primește o notă de la 0 la 10 și e îndeplinită de la 7. Ponderile sunt identice în toate domeniile; se schimbă doar ce măsurăm concret.', 'The same algorithm as for crypto, companies and commodities: each condition gets a score from 0 to 10 and is met from 7. The weights are identical in every domain; only what we measure in practice changes.')}
         {!domain.radarMarket && !scored && L(' Primele active din acest domeniu vor fi notate și publicate cu instantaneu înghețat, ca restul radarului.', ' The first assets in this domain will be scored and published with a frozen snapshot, like the rest of the radar.')}
       </p>
       <div class="table-wrap">
         <table class="radar criteria">
           <thead><tr><th>#</th><th>{L('Condiție', 'Condition')}</th><th>{L('Ce măsurăm', 'What we measure')}</th><th>{L('Pondere', 'Weight')}</th></tr></thead>
           <tbody>
-            {criteria.map(([name, what], i) => (
-              <tr><td class="muted">C{i + 1}</td><td><b>{name}</b></td><td>{what}</td><td class="num">{WEIGHTS[i]}%</td></tr>
+            {critRows.map(([name, what, w], i) => (
+              <>
+                {v22 && i === 14 && <tr><td colspan="4"><b>{L('Verificarea dovezilor (C15–C22), 20% din scor', 'Verifying the evidence (C15–C22), 20% of the score')}</b></td></tr>}
+                <tr><td class="muted">C{i + 1}</td><td><b>{name}</b></td><td>{what}</td><td class="num">{w}%</td></tr>
+              </>
             ))}
           </tbody>
         </table>
