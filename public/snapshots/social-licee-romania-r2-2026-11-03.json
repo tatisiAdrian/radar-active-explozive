@@ -1,0 +1,774 @@
+{
+ "domain": "licee-romania",
+ "date": "2026-11-03",
+ "weights": [
+  16,
+  6,
+  6,
+  8,
+  6,
+  8,
+  8,
+  4,
+  6,
+  6,
+  6,
+  6,
+  6,
+  8
+ ],
+ "met_threshold": 7,
+ "formulas": {
+  "C1": "Media la BAC 2025: nota = 10 − (9,6 − media) × 8 (o medie de 9,35 dă 8).",
+  "C2": "Rata de promovare la BAC 2025: nota = 10 − (100 − rata) × 2 (99% dă 8).",
+  "C3": "Ultima medie de admitere 2025: nota = 10 − (9,7 − media) × 10 (9,4 dă 7). Fără date dacă liceul nu e în topul național la admitere.",
+  "C4": "Rezultate față de cerere: media la BAC minus ultima medie de admitere, din același an; nota = 6 + diferența × 10. O aproximare: cele două medii aparțin unor generații diferite.",
+  "C5": "Constanță: liceul apare în ambele topuri naționale (BAC și admitere) = 9; doar într-unul = 5.",
+  "C10": "Accesibilitate la intrare (inversul cererii): nota = (9,7 − ultima medie de admitere) × 20 (9,4 dă 6). Fără date dacă liceul nu e în topul la admitere."
+ },
+ "rows": [
+  {
+   "id": "racovita-is",
+   "name": "Colegiul Național „Emil Racoviță”, Iași",
+   "data": {
+    "bac": 9.31,
+    "rate": 99.3,
+    "adm": 9.37
+   },
+   "c": [
+    8,
+    9,
+    7,
+    5,
+    9,
+    10,
+    9,
+    8,
+    8,
+    7,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,31",
+    "C2": "promovare: 99,3%",
+    "C3": "ultima medie de admitere 2025: 9,37",
+    "C4": "BAC 9,31 − admitere 9,37 = -0,06",
+    "C10": "ultima medie de admitere 2025: 9,37",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.34,
+   "met": 10
+  },
+  {
+   "id": "negruzzi",
+   "name": "Colegiul Național „Costache Negruzzi”, Iași",
+   "data": {
+    "bac": 9.27,
+    "rate": 100,
+    "adm": 9.37
+   },
+   "c": [
+    7,
+    10,
+    7,
+    5,
+    9,
+    10,
+    9,
+    8,
+    8,
+    7,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,27",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,37",
+    "C4": "BAC 9,27 − admitere 9,37 = -0,10",
+    "C10": "ultima medie de admitere 2025: 9,37",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.24,
+   "met": 10
+  },
+  {
+   "id": "racovita-cj",
+   "name": "Colegiul Național „Emil Racoviță”, Cluj-Napoca",
+   "data": {
+    "bac": 9.33,
+    "rate": 100,
+    "adm": 9.32
+   },
+   "c": [
+    8,
+    10,
+    6,
+    6,
+    9,
+    10,
+    9,
+    8,
+    8,
+    8,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,33",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,32",
+    "C4": "BAC 9,33 − admitere 9,32 = 0,01",
+    "C10": "ultima medie de admitere 2025: 9,32",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.48,
+   "met": 9
+  },
+  {
+   "id": "lazar",
+   "name": "Colegiul Național „Gheorghe Lazăr”, București",
+   "data": {
+    "bac": 9.53,
+    "rate": 100,
+    "adm": 9.62
+   },
+   "c": [
+    9,
+    10,
+    9,
+    5,
+    9,
+    10,
+    9,
+    8,
+    8,
+    2,
+    5,
+    8,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,53",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,62",
+    "C4": "BAC 9,53 − admitere 9,62 = -0,09",
+    "C10": "ultima medie de admitere 2025: 9,62",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.44,
+   "met": 9
+  },
+  {
+   "id": "cn-iasi",
+   "name": "Colegiul Național, Iași",
+   "data": {
+    "bac": 9.41,
+    "rate": 100,
+    "adm": 9.42
+   },
+   "c": [
+    8,
+    10,
+    7,
+    6,
+    9,
+    10,
+    9,
+    8,
+    8,
+    6,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,41",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,42",
+    "C4": "BAC 9,41 − admitere 9,42 = -0,01",
+    "C10": "ultima medie de admitere 2025: 9,42",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.42,
+   "met": 9
+  },
+  {
+   "id": "cosbuc",
+   "name": "Colegiul Național Bilingv „George Coșbuc”, București",
+   "data": {
+    "bac": 9.23,
+    "rate": 100,
+    "adm": 9.3
+   },
+   "c": [
+    7,
+    10,
+    6,
+    5,
+    9,
+    10,
+    9,
+    8,
+    8,
+    8,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,23",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,3",
+    "C4": "BAC 9,23 − admitere 9,3 = -0,07",
+    "C10": "ultima medie de admitere 2025: 9,3",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.24,
+   "met": 9
+  },
+  {
+   "id": "avram-iancu",
+   "name": "Liceul Teoretic „Avram Iancu”, Cluj-Napoca",
+   "data": {
+    "bac": 9.21,
+    "rate": 99,
+    "adm": 9.35
+   },
+   "c": [
+    7,
+    8,
+    7,
+    5,
+    9,
+    10,
+    9,
+    6,
+    8,
+    7,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,21",
+    "C2": "promovare: 99%",
+    "C3": "ultima medie de admitere 2025: 9,35",
+    "C4": "BAC 9,21 − admitere 9,35 = -0,14",
+    "C10": "ultima medie de admitere 2025: 9,35",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.04,
+   "met": 9
+  },
+  {
+   "id": "mircea",
+   "name": "Colegiul Național „Mircea cel Bătrân”, Constanța",
+   "data": {
+    "bac": 9.24,
+    "rate": 99.5,
+    "adm": 9.57
+   },
+   "c": [
+    7,
+    9,
+    9,
+    3,
+    9,
+    10,
+    7,
+    8,
+    8,
+    3,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,24",
+    "C2": "promovare: 99,5%",
+    "C3": "ultima medie de admitere 2025: 9,57",
+    "C4": "BAC 9,24 − admitere 9,57 = -0,33",
+    "C10": "ultima medie de admitere 2025: 9,57",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 6.74,
+   "met": 9
+  },
+  {
+   "id": "vianu",
+   "name": "Colegiul Național de Informatică „Tudor Vianu”, București",
+   "data": {
+    "bac": 9.38,
+    "rate": 100,
+    "adm": 9.62
+   },
+   "c": [
+    8,
+    10,
+    9,
+    4,
+    9,
+    10,
+    9,
+    9,
+    8,
+    2,
+    5,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,38",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,62",
+    "C4": "BAC 9,38 − admitere 9,62 = -0,24",
+    "C10": "ultima medie de admitere 2025: 9,62",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.06,
+   "met": 8
+  },
+  {
+   "id": "sava",
+   "name": "Colegiul Național „Sfântul Sava”, București",
+   "data": {
+    "bac": 9.35,
+    "rate": 100,
+    "adm": 9.6
+   },
+   "c": [
+    8,
+    10,
+    9,
+    4,
+    9,
+    10,
+    9,
+    8,
+    8,
+    2,
+    5,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,35",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,6",
+    "C4": "BAC 9,35 − admitere 9,6 = -0,25",
+    "C10": "ultima medie de admitere 2025: 9,6",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 7.02,
+   "met": 8
+  },
+  {
+   "id": "spiru-haret",
+   "name": "Colegiul Național „Spiru Haret”, București",
+   "data": {
+    "bac": 9.17,
+    "rate": 99.5,
+    "adm": 9.52
+   },
+   "c": [
+    7,
+    9,
+    8,
+    3,
+    9,
+    10,
+    9,
+    8,
+    8,
+    4,
+    5,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,17",
+    "C2": "promovare: 99,5%",
+    "C3": "ultima medie de admitere 2025: 9,52",
+    "C4": "BAC 9,17 − admitere 9,52 = -0,35",
+    "C10": "ultima medie de admitere 2025: 9,52",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 6.78,
+   "met": 8
+  },
+  {
+   "id": "saguna",
+   "name": "Colegiul Național „Andrei Șaguna”, Brașov",
+   "data": {
+    "bac": 9.3,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    8,
+    10,
+    null,
+    null,
+    5,
+    10,
+    7,
+    8,
+    8,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,3",
+    "C2": "promovare: 100%",
+    "C5": "doar în topul la BAC"
+   },
+   "score": 6.76,
+   "met": 7
+  },
+  {
+   "id": "mihai-viteazul",
+   "name": "Colegiul Național „Mihai Viteazul”, București",
+   "data": {
+    "bac": 9.08,
+    "rate": 100,
+    "adm": 9.4
+   },
+   "c": [
+    6,
+    10,
+    7,
+    3,
+    9,
+    10,
+    9,
+    8,
+    8,
+    6,
+    5,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,08",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,4",
+    "C4": "BAC 9,08 − admitere 9,4 = -0,32",
+    "C10": "ultima medie de admitere 2025: 9,4",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 6.74,
+   "met": 7
+  },
+  {
+   "id": "matei-basarab",
+   "name": "Colegiul Național „Matei Basarab”, București",
+   "data": {
+    "bac": 9.06,
+    "rate": 100,
+    "adm": 9.42
+   },
+   "c": [
+    6,
+    10,
+    7,
+    2,
+    9,
+    10,
+    9,
+    8,
+    8,
+    6,
+    5,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,06",
+    "C2": "promovare: 100%",
+    "C3": "ultima medie de admitere 2025: 9,42",
+    "C4": "BAC 9,06 − admitere 9,42 = -0,36",
+    "C10": "ultima medie de admitere 2025: 9,42",
+    "C5": "în topul la BAC și în cel la admitere"
+   },
+   "score": 6.66,
+   "met": 7
+  },
+  {
+   "id": "unirea-fs",
+   "name": "Colegiul Național „Unirea”, Focșani",
+   "data": {
+    "bac": 9.32,
+    "rate": 99.4,
+    "adm": null
+   },
+   "c": [
+    8,
+    9,
+    null,
+    null,
+    5,
+    10,
+    7,
+    8,
+    7,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,32",
+    "C2": "promovare: 99,4%",
+    "C5": "doar în topul la BAC"
+   },
+   "score": 6.64,
+   "met": 7
+  },
+  {
+   "id": "balcescu-cj",
+   "name": "Liceul Teoretic „Nicolae Bălcescu”, Cluj-Napoca",
+   "data": {
+    "bac": 9.21,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    7,
+    10,
+    null,
+    null,
+    5,
+    10,
+    7,
+    8,
+    8,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,21",
+    "C2": "promovare: 100%",
+    "C5": "doar în topul la BAC"
+   },
+   "score": 6.6,
+   "met": 7
+  },
+  {
+   "id": "sincai-cj",
+   "name": "Colegiul Național „Gheorghe Șincai”, Cluj-Napoca",
+   "data": {
+    "bac": 9.19,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    7,
+    10,
+    null,
+    null,
+    5,
+    10,
+    7,
+    8,
+    8,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,19",
+    "C2": "promovare: 100%",
+    "C5": "doar în topul la BAC"
+   },
+   "score": 6.6,
+   "met": 7
+  },
+  {
+   "id": "alecsandri-gl",
+   "name": "Colegiul Național „Vasile Alecsandri”, Galați",
+   "data": {
+    "bac": 9.25,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    7,
+    10,
+    null,
+    null,
+    5,
+    10,
+    7,
+    8,
+    7,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,25",
+    "C2": "promovare: 100%",
+    "C5": "doar în topul la BAC"
+   },
+   "score": 6.54,
+   "met": 7
+  },
+  {
+   "id": "scm-sv",
+   "name": "Colegiul Național „Ștefan cel Mare”, Suceava",
+   "data": {
+    "bac": 9.22,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    7,
+    10,
+    null,
+    null,
+    5,
+    10,
+    7,
+    8,
+    7,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,22",
+    "C2": "promovare: 100%",
+    "C5": "doar în topul la BAC"
+   },
+   "score": 6.54,
+   "met": 7
+  },
+  {
+   "id": "murgoci-br",
+   "name": "Colegiul Național „Gheorghe Munteanu Murgoci”, Brăila",
+   "data": {
+    "bac": 9.22,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    7,
+    10,
+    null,
+    null,
+    5,
+    10,
+    7,
+    8,
+    7,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,22",
+    "C2": "promovare: 100%",
+    "C5": "doar în topul la BAC"
+   },
+   "score": 6.54,
+   "met": 7
+  },
+  {
+   "id": "eminescu-is",
+   "name": "Colegiul Național „Mihai Eminescu”, Iași",
+   "data": {
+    "bac": 9.19,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    7,
+    10,
+    null,
+    null,
+    5,
+    10,
+    7,
+    8,
+    7,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,19",
+    "C2": "promovare: 100%",
+    "C5": "doar în topul la BAC"
+   },
+   "score": 6.54,
+   "met": 7
+  },
+  {
+   "id": "bratianu-pt",
+   "name": "Colegiul Național „Ion C. Brătianu”, Pitești",
+   "data": {
+    "bac": 9.19,
+    "rate": 99.2,
+    "adm": null
+   },
+   "c": [
+    7,
+    8,
+    null,
+    null,
+    5,
+    10,
+    7,
+    8,
+    7,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "inputs": {
+    "C1": "media la BAC 2025: 9,19",
+    "C2": "promovare: 99,2%",
+    "C5": "doar în topul la BAC"
+   },
+   "score": 6.42,
+   "met": 7
+  }
+ ]
+}

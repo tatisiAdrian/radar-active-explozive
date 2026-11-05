@@ -522,6 +522,473 @@
      "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/"
     ]
    ]
+  },
+  {
+   "id": "unirea-fs",
+   "name": "Colegiul Național „Unirea”, Focșani",
+   "nameEn": "Colegiul Național „Unirea”, Focșani",
+   "data": {
+    "bac": 9.32,
+    "rate": 99.4,
+    "adm": null
+   },
+   "c": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    10,
+    7,
+    8,
+    7,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "Locul 6 în țară la BAC 2025 (9,32), înaintea multor colegii din marile orașe; nu apare în topul național la admitere, deci intrarea e mai accesibilă.",
+   "whyEn": "Sixth in Romania at the BAC 2025 (9.32), ahead of many colleges in the big cities; it is not in the national admission top, so entry is more accessible.",
+   "sources": [
+    [
+     "Edupedu (date BacPlus): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BacPlus data): top 20 high schools by BAC 2025 average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ]
+  },
+  {
+   "id": "alecsandri-gl",
+   "name": "Colegiul Național „Vasile Alecsandri”, Galați",
+   "nameEn": "Colegiul Național „Vasile Alecsandri”, Galați",
+   "data": {
+    "bac": 9.25,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    10,
+    7,
+    8,
+    7,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "BAC 2025: 9,25, cu promovare 100%; cel mai bun liceu din Galați.",
+   "whyEn": "BAC 2025: 9.25, with a 100% pass rate; the best high school in Galați.",
+   "sources": [
+    [
+     "Edupedu (date BacPlus): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BacPlus data): top 20 high schools by BAC 2025 average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ]
+  },
+  {
+   "id": "scm-sv",
+   "name": "Colegiul Național „Ștefan cel Mare”, Suceava",
+   "nameEn": "Colegiul Național „Ștefan cel Mare”, Suceava",
+   "data": {
+    "bac": 9.22,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    10,
+    7,
+    8,
+    7,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "BAC 2025: 9,22 (promovare 100%), față de o medie de admitere 2024 de 8,50: elevii ies mult peste nivelul cu care intră.",
+   "whyEn": "BAC 2025: 9.22 (100% pass rate), against a 2024 admission average of 8.50: students leave well above the level at which they enter.",
+   "sources": [
+    [
+     "Edupedu (date BacPlus): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BacPlus data): top 20 high schools by BAC 2025 average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ]
+  },
+  {
+   "id": "murgoci-br",
+   "name": "Colegiul Național „Gheorghe Munteanu Murgoci”, Brăila",
+   "nameEn": "Colegiul Național „Gheorghe Munteanu Murgoci”, Brăila",
+   "data": {
+    "bac": 9.22,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    10,
+    7,
+    8,
+    7,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "BAC 2025: 9,22 cu promovare 100%, față de o medie de admitere 2024 de 8,40, unul dintre cele mai mari salturi din top.",
+   "whyEn": "BAC 2025: 9.22 with a 100% pass rate, against a 2024 admission average of 8.40, one of the biggest jumps in the top list.",
+   "sources": [
+    [
+     "Edupedu (date BacPlus): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BacPlus data): top 20 high schools by BAC 2025 average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ]
+  },
+  {
+   "id": "balcescu-cj",
+   "name": "Liceul Teoretic „Nicolae Bălcescu”, Cluj-Napoca",
+   "nameEn": "Liceul Teoretic „Nicolae Bălcescu”, Cluj-Napoca",
+   "data": {
+    "bac": 9.21,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    10,
+    7,
+    8,
+    8,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "BAC 2025: 9,21, cu promovare 100%, într-un oraș cu multe licee bune și universități puternice.",
+   "whyEn": "BAC 2025: 9.21, with a 100% pass rate, in a city with many good high schools and strong universities.",
+   "sources": [
+    [
+     "Edupedu (date BacPlus): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BacPlus data): top 20 high schools by BAC 2025 average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ]
+  },
+  {
+   "id": "eminescu-is",
+   "name": "Colegiul Național „Mihai Eminescu”, Iași",
+   "nameEn": "Colegiul Național „Mihai Eminescu”, Iași",
+   "data": {
+    "bac": 9.19,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    10,
+    7,
+    8,
+    7,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "BAC 2025: 9,19 (promovare 100%), față de o medie de admitere 2024 de 8,05: cel mai mare salt dintre primele 20 de licee din țară.",
+   "whyEn": "BAC 2025: 9.19 (100% pass rate), against a 2024 admission average of 8.05: the biggest jump among Romania’s top 20 high schools.",
+   "sources": [
+    [
+     "Edupedu (date BacPlus): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BacPlus data): top 20 high schools by BAC 2025 average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ]
+  },
+  {
+   "id": "sincai-cj",
+   "name": "Colegiul Național „Gheorghe Șincai”, Cluj-Napoca",
+   "nameEn": "Colegiul Național „Gheorghe Șincai”, Cluj-Napoca",
+   "data": {
+    "bac": 9.19,
+    "rate": 100,
+    "adm": null
+   },
+   "c": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    10,
+    7,
+    8,
+    8,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "BAC 2025: 9,19, cu promovare 100%, peste media de admitere 2024 (8,67).",
+   "whyEn": "BAC 2025: 9.19, with a 100% pass rate, above the 2024 admission average (8.67).",
+   "sources": [
+    [
+     "Edupedu (date BacPlus): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BacPlus data): top 20 high schools by BAC 2025 average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ]
+  },
+  {
+   "id": "bratianu-pt",
+   "name": "Colegiul Național „Ion C. Brătianu”, Pitești",
+   "nameEn": "Colegiul Național „Ion C. Brătianu”, Pitești",
+   "data": {
+    "bac": 9.19,
+    "rate": 99.2,
+    "adm": null
+   },
+   "c": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    10,
+    7,
+    8,
+    7,
+    null,
+    7,
+    null,
+    null,
+    null
+   ],
+   "why": "BAC 2025: 9,19, cu 242 de absolvenți, unul dintre cele mai mari colegii din top.",
+   "whyEn": "BAC 2025: 9.19, with 242 graduates, one of the largest colleges in the top list.",
+   "sources": [
+    [
+     "Edupedu (date BacPlus): top 20 licee după media la BAC 2025",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu (BacPlus data): top 20 high schools by BAC 2025 average",
+     "https://www.edupedu.ro/lista-top-20-de-licee-din-tara-dupa-media-de-la-bac-2025-potrivit-platformei-bacplus-colegiul-national-gheorghe-lazar-din-bucuresti-scoala-pilot-de-4-ani-este-primul-din-tara/amp/"
+    ]
+   ]
+  },
+  {
+   "id": "spiru-haret",
+   "name": "Colegiul Național „Spiru Haret”, București",
+   "nameEn": "Colegiul Național „Spiru Haret”, București",
+   "data": {
+    "bac": 9.17,
+    "rate": 99.5,
+    "adm": 9.52
+   },
+   "c": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    10,
+    9,
+    8,
+    8,
+    null,
+    5,
+    null,
+    null,
+    null
+   ],
+   "why": "Al cincilea liceu din țară după ultima medie de admitere (9,52), dar cu BAC 9,17: intrarea e foarte grea pentru un rezultat sub cel al primelor colegii.",
+   "whyEn": "Fifth in Romania by last admission average (9.52), but with a BAC of 9.17: entry is very hard for a result below the top colleges.",
+   "sources": [
+    [
+     "Edupedu: top 20 licee după ultima medie de admitere 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/amp/"
+    ],
+    [
+     "Edupedu (date BacPlus): top 20 licee din București după media la BAC 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-bucuresti-dupa-media-la-bac-2025-noua-licee-de-stat-au-rata-de-promovare-a-examenului-de-bacalaureat-100-date-bacplus/amp/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: top 20 high schools by last admission average 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/amp/"
+    ],
+    [
+     "Edupedu (BacPlus data): top 20 Bucharest high schools by BAC 2025 average",
+     "https://www.edupedu.ro/top-20-de-licee-din-bucuresti-dupa-media-la-bac-2025-noua-licee-de-stat-au-rata-de-promovare-a-examenului-de-bacalaureat-100-date-bacplus/amp/"
+    ]
+   ]
+  },
+  {
+   "id": "mihai-viteazul",
+   "name": "Colegiul Național „Mihai Viteazul”, București",
+   "nameEn": "Colegiul Național „Mihai Viteazul”, București",
+   "data": {
+    "bac": 9.08,
+    "rate": 100,
+    "adm": 9.4
+   },
+   "c": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    10,
+    9,
+    8,
+    8,
+    null,
+    5,
+    null,
+    null,
+    null
+   ],
+   "why": "Admitere 9,40 (locul 9 în țară), BAC 9,08 cu promovare 100%; cel mai mare număr de absolvenți dintre colegiile de top din București.",
+   "whyEn": "Admission 9.40 (9th in Romania), BAC 9.08 with a 100% pass rate; the largest number of graduates among Bucharest’s top colleges.",
+   "sources": [
+    [
+     "Edupedu: top 20 licee după ultima medie de admitere 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/amp/"
+    ],
+    [
+     "Edupedu (date BacPlus): top 20 licee din București după media la BAC 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-bucuresti-dupa-media-la-bac-2025-noua-licee-de-stat-au-rata-de-promovare-a-examenului-de-bacalaureat-100-date-bacplus/amp/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: top 20 high schools by last admission average 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/amp/"
+    ],
+    [
+     "Edupedu (BacPlus data): top 20 Bucharest high schools by BAC 2025 average",
+     "https://www.edupedu.ro/top-20-de-licee-din-bucuresti-dupa-media-la-bac-2025-noua-licee-de-stat-au-rata-de-promovare-a-examenului-de-bacalaureat-100-date-bacplus/amp/"
+    ]
+   ]
+  },
+  {
+   "id": "matei-basarab",
+   "name": "Colegiul Național „Matei Basarab”, București",
+   "nameEn": "Colegiul Național „Matei Basarab”, București",
+   "data": {
+    "bac": 9.06,
+    "rate": 100,
+    "adm": 9.42
+   },
+   "c": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    10,
+    9,
+    8,
+    8,
+    null,
+    5,
+    null,
+    null,
+    null
+   ],
+   "why": "Admitere 9,42 (locul 8 în țară) și BAC 9,06 cu promovare 100%; rezultatul final e sub prețul de intrare.",
+   "whyEn": "Admission 9.42 (8th in Romania) and BAC 9.06 with a 100% pass rate; the final result is below the price of entry.",
+   "sources": [
+    [
+     "Edupedu: top 20 licee după ultima medie de admitere 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/amp/"
+    ],
+    [
+     "Edupedu (date BacPlus): top 20 licee din București după media la BAC 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-bucuresti-dupa-media-la-bac-2025-noua-licee-de-stat-au-rata-de-promovare-a-examenului-de-bacalaureat-100-date-bacplus/amp/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Edupedu: top 20 high schools by last admission average 2025",
+     "https://www.edupedu.ro/top-20-de-licee-din-tara-dupa-ultima-medie-de-admitere-din-2025-pe-primul-loc-a-urcat-colegiul-national-gheorghe-lazar/amp/"
+    ],
+    [
+     "Edupedu (BacPlus data): top 20 Bucharest high schools by BAC 2025 average",
+     "https://www.edupedu.ro/top-20-de-licee-din-bucuresti-dupa-media-la-bac-2025-noua-licee-de-stat-au-rata-de-promovare-a-examenului-de-bacalaureat-100-date-bacplus/amp/"
+    ]
+   ]
   }
- ]
+ ],
+ "revision": 2,
+ "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
+ "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources."
 }

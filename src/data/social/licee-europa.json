@@ -3,7 +3,10 @@
  "set": "licee-eu",
  "region": "europa",
  "date": "2026-11-03",
- "snapshot": "social-licee-europa-2026-11-03",
+ "snapshot": "social-licee-europa-r2-2026-11-03",
+ "previousSnapshot": "social-licee-europa-2026-11-03",
+ "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
+ "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
  "formulas": {
   "C1": "Matematică, PISA 2022: nota = (scorul − 440) / 7 (510 dă 10, 489 dă 7).",
   "C2": "Citire, PISA 2022: nota = (scorul − 440) / 7.",
@@ -561,6 +564,116 @@
    "met": 6
   },
   {
+   "id": "austria-eu",
+   "name": "Austria",
+   "nameEn": "Austria",
+   "data": {
+    "math": 487,
+    "read": 480,
+    "sci": 491
+   },
+   "c": [
+    7,
+    6,
+    6,
+    5,
+    8,
+    10,
+    7,
+    9,
+    7,
+    5,
+    6,
+    6,
+    5,
+    null
+   ],
+   "why": "Peste media OCDE la matematică (487) și științe (491), cu un sistem de ucenicie foarte respectat; orientarea timpurie, la 10 ani, accentuează diferențele sociale.",
+   "whyEn": "Above the OECD average in mathematics (487) and science (491), with a highly respected apprenticeship system; early tracking at age 10 widens social gaps.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: tabelul-sinteză al rezultatelor",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: the results snapshot table",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ]
+   ],
+   "inputs": {
+    "C1": "matematică: 487 puncte",
+    "C2": "citire: 480 puncte",
+    "C3": "științe: 491 puncte"
+   },
+   "score": 6.58,
+   "met": 6
+  },
+  {
+   "id": "suedia-eu",
+   "name": "Suedia",
+   "nameEn": "Sweden",
+   "data": {
+    "math": 482,
+    "read": 487,
+    "sci": 494
+   },
+   "c": [
+    6,
+    7,
+    6,
+    6,
+    6,
+    10,
+    7,
+    6,
+    8,
+    4,
+    7,
+    7,
+    6,
+    null
+   ],
+   "why": "Citire 487 și științe 494; scăderea din 2022 a anulat mare parte din progresul dintre 2012 și 2018.",
+   "whyEn": "Reading 487 and science 494; the 2022 fall wiped out much of the progress made between 2012 and 2018.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: tabelul-sinteză al rezultatelor",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: the results snapshot table",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "inputs": {
+    "C1": "matematică: 482 puncte",
+    "C2": "citire: 487 puncte",
+    "C3": "științe: 494 puncte"
+   },
+   "score": 6.5,
+   "met": 6
+  },
+  {
    "id": "slovenia",
    "name": "Slovenia",
    "nameEn": "Slovenia",
@@ -614,6 +727,469 @@
    },
    "score": 6.36,
    "met": 6
+  },
+  {
+   "id": "norvegia",
+   "name": "Norvegia",
+   "nameEn": "Norway",
+   "data": {
+    "math": 468,
+    "read": 477,
+    "sci": 478
+   },
+   "c": [
+    4,
+    5,
+    4,
+    7,
+    6,
+    10,
+    8,
+    6,
+    9,
+    4,
+    7,
+    7,
+    4,
+    null
+   ],
+   "why": "Școli bine finanțate și echitabile, dar rezultatele (468, 477, 478) au scăzut puternic în 2022, mai mult decât în majoritatea țărilor.",
+   "whyEn": "Well-funded, fair schools, but results (468, 477, 478) fell sharply in 2022, more than in most countries.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "inputs": {
+    "C1": "matematică: 468 puncte",
+    "C2": "citire: 477 puncte",
+    "C3": "științe: 478 puncte"
+   },
+   "score": 6.04,
+   "met": 6
+  },
+  {
+   "id": "germania",
+   "name": "Germania",
+   "nameEn": "Germany",
+   "data": {
+    "math": 475,
+    "read": 480,
+    "sci": 492
+   },
+   "c": [
+    5,
+    6,
+    6,
+    5,
+    8,
+    10,
+    6,
+    8,
+    7,
+    4,
+    6,
+    7,
+    5,
+    null
+   ],
+   "why": "Științe 492, peste media OCDE, dar 2022 a adus cele mai slabe rezultate măsurate vreodată în Germania la toate trei probele.",
+   "whyEn": "Science 492, above the OECD average, but 2022 brought Germany’s weakest results ever measured in all three subjects.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: tabelul-sinteză al rezultatelor",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: the results snapshot table",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ]
+   ],
+   "inputs": {
+    "C1": "matematică: 475 puncte",
+    "C2": "citire: 480 puncte",
+    "C3": "științe: 492 puncte"
+   },
+   "score": 6.14,
+   "met": 5
+  },
+  {
+   "id": "lituania",
+   "name": "Lituania",
+   "nameEn": "Lithuania",
+   "data": {
+    "math": 475,
+    "read": 472,
+    "sci": 484
+   },
+   "c": [
+    5,
+    5,
+    5,
+    6,
+    6,
+    10,
+    6,
+    6,
+    6,
+    6,
+    8,
+    8,
+    7,
+    null
+   ],
+   "why": "Rezultate apropiate de media OCDE (475, 472, 484) și stabile în timp, spre deosebire de scăderile din majoritatea țărilor.",
+   "whyEn": "Results close to the OECD average (475, 472, 484) and stable over time, unlike the falls in most countries.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: tabelul-sinteză al rezultatelor",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: the results snapshot table",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ]
+   ],
+   "inputs": {
+    "C1": "matematică: 475 puncte",
+    "C2": "citire: 472 puncte",
+    "C3": "științe: 484 puncte"
+   },
+   "score": 6.26,
+   "met": 4
+  },
+  {
+   "id": "spania",
+   "name": "Spania",
+   "nameEn": "Spain",
+   "data": {
+    "math": 473,
+    "read": 474,
+    "sci": 485
+   },
+   "c": [
+    5,
+    5,
+    5,
+    6,
+    6,
+    10,
+    6,
+    7,
+    6,
+    6,
+    7,
+    7,
+    5,
+    null
+   ],
+   "why": "Rezultate apropiate de media OCDE (473, 474, 485), cu diferențe mici între elevi, dar cu o rată mare de repetare a anului.",
+   "whyEn": "Results close to the OECD average (473, 474, 485), with small gaps between students, but a high rate of grade repetition.",
+   "sources": [
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "inputs": {
+    "C1": "matematică: 473 puncte",
+    "C2": "citire: 474 puncte",
+    "C3": "științe: 485 puncte"
+   },
+   "score": 6.06,
+   "met": 4
+  },
+  {
+   "id": "franta",
+   "name": "Franța",
+   "nameEn": "France",
+   "data": {
+    "math": 474,
+    "read": 474,
+    "sci": 487
+   },
+   "c": [
+    5,
+    5,
+    5,
+    5,
+    7,
+    10,
+    6,
+    8,
+    8,
+    4,
+    6,
+    6,
+    4,
+    null
+   ],
+   "why": "Rezultate în jurul mediei OCDE (474, 474, 487), dar cu una dintre cele mai puternice legături între mediul familial și rezultate din Europa.",
+   "whyEn": "Results around the OECD average (474, 474, 487), but with one of Europe’s strongest links between family background and results.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ]
+   ],
+   "inputs": {
+    "C1": "matematică: 474 puncte",
+    "C2": "citire: 474 puncte",
+    "C3": "științe: 487 puncte"
+   },
+   "score": 5.9,
+   "met": 4
+  },
+  {
+   "id": "italia",
+   "name": "Italia",
+   "nameEn": "Italy",
+   "data": {
+    "math": 471,
+    "read": 482,
+    "sci": 477
+   },
+   "c": [
+    4,
+    6,
+    4,
+    5,
+    6,
+    10,
+    6,
+    7,
+    6,
+    5,
+    7,
+    7,
+    5,
+    null
+   ],
+   "why": "Citire 482, peste media OCDE, dar matematică (471) și științe (477) sub ea; diferențe mari între nordul și sudul țării.",
+   "whyEn": "Reading 482, above the OECD average, but mathematics (471) and science (477) below it; large differences between the north and south of the country.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "inputs": {
+    "C1": "matematică: 471 puncte",
+    "C2": "citire: 482 puncte",
+    "C3": "științe: 477 puncte"
+   },
+   "score": 5.76,
+   "met": 4
+  },
+  {
+   "id": "letonia",
+   "name": "Letonia",
+   "nameEn": "Latvia",
+   "data": {
+    "math": 483,
+    "read": 475,
+    "sci": 494
+   },
+   "c": [
+    6,
+    5,
+    6,
+    6,
+    6,
+    10,
+    6,
+    6,
+    6,
+    6,
+    8,
+    8,
+    6,
+    null
+   ],
+   "why": "Matematică 483 și științe 494, peste media OCDE, cu rezultate stabile față de 2018; datele au avut abateri de la standardele de eșantionare PISA.",
+   "whyEn": "Mathematics 483 and science 494, above the OECD average, with results stable since 2018; the data deviated from PISA sampling standards.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: tabelul-sinteză al rezultatelor",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: the results snapshot table",
+     "https://hayatschool.com/qatar/articles/PISA_Ranking_2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ]
+   ],
+   "inputs": {
+    "C1": "matematică: 483 puncte",
+    "C2": "citire: 475 puncte",
+    "C3": "științe: 494 puncte"
+   },
+   "score": 6.42,
+   "met": 3
+  },
+  {
+   "id": "portugalia",
+   "name": "Portugalia",
+   "nameEn": "Portugal",
+   "data": {
+    "math": 472,
+    "read": 477,
+    "sci": 484
+   },
+   "c": [
+    5,
+    5,
+    5,
+    6,
+    6,
+    10,
+    6,
+    6,
+    6,
+    6,
+    7,
+    7,
+    5,
+    null
+   ],
+   "why": "Rezultate apropiate de media OCDE (472, 477, 484), după două decenii de progres; în 2022 a scăzut, ca majoritatea țărilor.",
+   "whyEn": "Results close to the OECD average (472, 477, 484), after two decades of progress; it fell in 2022, like most countries.",
+   "sources": [
+    [
+     "OCDE, PISA 2022: scorurile medii pe țări (anexa publicată de Ministerul Educației din Singapore)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022: mean scores by country (annex published by Singapore’s Ministry of Education)",
+     "https://www.moe.gov.sg/-/media/files/news/press/2023/annex-a---pisa-2022.pdf"
+    ],
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "inputs": {
+    "C1": "matematică: 472 puncte",
+    "C2": "citire: 477 puncte",
+    "C3": "științe: 484 puncte"
+   },
+   "score": 6.02,
+   "met": 3
+  },
+  {
+   "id": "ungaria",
+   "name": "Ungaria",
+   "nameEn": "Hungary",
+   "data": {
+    "math": 473,
+    "read": 473,
+    "sci": 486
+   },
+   "c": [
+    5,
+    5,
+    5,
+    4,
+    6,
+    10,
+    5,
+    6,
+    6,
+    5,
+    7,
+    7,
+    5,
+    null
+   ],
+   "why": "Rezultate apropiate de media OCDE (473, 473, 486), dar diferențe mari între școli în funcție de mediul social al elevilor.",
+   "whyEn": "Results close to the OECD average (473, 473, 486), but large differences between schools according to students’ social background.",
+   "sources": [
+    [
+     "OCDE, PISA 2022, volumul I: cum s-au descurcat țările",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, PISA 2022, Volume I: how countries performed",
+     "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/how-did-countries-perform-in-pisa_dc514907"
+    ]
+   ],
+   "inputs": {
+    "C1": "matematică: 473 puncte",
+    "C2": "citire: 473 puncte",
+    "C3": "științe: 486 puncte"
+   },
+   "score": 5.72,
+   "met": 3
   }
  ]
 }
