@@ -95,7 +95,7 @@
   {
    "id": "VN",
    "name": "Vietnam",
-   "score": 6.82,
+   "score": 6.88,
    "met": 7,
    "criteria": [
     10,
@@ -107,7 +107,7 @@
     null,
     6,
     7,
-    8,
+    9,
     6,
     0,
     5,
@@ -117,7 +117,7 @@
     "C1": "creștere 8,4% în 2026",
     "C2": "sold bugetar -0,8% din PIB",
     "C3": "datorie 28,3% din PIB, cont curent 0,3%",
-    "C10": "bursa la 16% din intervalul de 52 de săptămâni (VNM)",
+    "C10": "bursa la 15% din intervalul de 52 de săptămâni (VNM)",
     "C12": "bursa -8,3% în două luni"
    },
    "gaps": [
@@ -150,7 +150,7 @@
     "C1": "creștere 10,7% în 2026",
     "C2": "sold bugetar 0,3% din PIB",
     "C3": "datorie 21,1% din PIB, cont curent 22%",
-    "C10": "bursa la 47% din intervalul de 52 de săptămâni (EWT)",
+    "C10": "bursa la 46% din intervalul de 52 de săptămâni (EWT)",
     "C12": "bursa -9,9% în două luni"
    },
    "gaps": [
@@ -216,7 +216,7 @@
     "C2": "sold bugetar -3,5% din PIB",
     "C3": "datorie 69,2% din PIB, cont curent 2,1%",
     "C7": "dobândă 2,75% (2026-11-03) − inflație 1,8% = 1,0 pp",
-    "C10": "bursa la 32% din intervalul de 52 de săptămâni (EWM)",
+    "C10": "bursa la 31% din intervalul de 52 de săptămâni (EWM)",
     "C12": "bursa -4,5% în două luni"
    },
    "gaps": [],
@@ -344,7 +344,7 @@
     "C2": "sold bugetar -4,2% din PIB",
     "C3": "datorie 62,1% din PIB, cont curent -0,3%",
     "C7": "dobândă 6,5% (2026-11-03) − inflație 3,5% = 3,0 pp",
-    "C10": "bursa la 62% din intervalul de 52 de săptămâni (EWW)",
+    "C10": "bursa la 64% din intervalul de 52 de săptămâni (EWW)",
     "C12": "bursa -2,8% în două luni"
    },
    "gaps": [],
@@ -376,7 +376,7 @@
     "C2": "sold bugetar -7,2% din PIB",
     "C3": "datorie 66,6% din PIB, cont curent -1,9%",
     "C7": "dobândă 3,75% (2026-11-03) − inflație 4,0% = -0,2 pp",
-    "C10": "bursa la 84% din intervalul de 52 de săptămâni (EPOL)",
+    "C10": "bursa la 83% din intervalul de 52 de săptămâni (EPOL)",
     "C12": "bursa -3,8% în două luni"
    },
    "gaps": [],
@@ -408,7 +408,7 @@
     "C2": "sold bugetar -1,5% din PIB",
     "C3": "datorie 28,6% din PIB, cont curent 4%",
     "C7": "dobândă 4,25% (2026-11-03) − inflație 4,5% = -0,3 pp",
-    "C10": "bursa la 60% din intervalul de 52 de săptămâni (EPU)",
+    "C10": "bursa la 59% din intervalul de 52 de săptămâni (EPU)",
     "C12": "bursa -13,0% în două luni"
    },
    "gaps": [],
@@ -472,7 +472,7 @@
     "C2": "sold bugetar -3,1% din PIB",
     "C3": "datorie 22,5% din PIB, cont curent -2,9%",
     "C7": "dobândă 36% (2026-11-03) − inflație 29,7% = 6,3 pp",
-    "C10": "bursa la 8% din intervalul de 52 de săptămâni (TUR)",
+    "C10": "bursa la 7% din intervalul de 52 de săptămâni (TUR)",
     "C12": "bursa -24,7% în două luni"
    },
    "gaps": [],
@@ -504,7 +504,7 @@
     "C2": "sold bugetar -6,5% din PIB",
     "C3": "datorie 35,4% din PIB, cont curent -3,5%",
     "C7": "dobândă 4,5% (2026-10-29) − inflație 1,9% = 2,6 pp",
-    "C10": "bursa la 19% din intervalul de 52 de săptămâni (KSA)",
+    "C10": "bursa la 18% din intervalul de 52 de săptămâni (KSA)",
     "C12": "bursa -11,1% în două luni"
    },
    "gaps": [],
@@ -536,7 +536,7 @@
     "C2": "sold bugetar -4,2% din PIB",
     "C3": "datorie 60,5% din PIB, cont curent -4,8%",
     "C7": "dobândă 5,5% (2026-10-30) − inflație 7,2% = -1,7 pp",
-    "C10": "bursa la 9% din intervalul de 52 de săptămâni (EPHE)",
+    "C10": "bursa la 8% din intervalul de 52 de săptămâni (EPHE)",
     "C12": "bursa -7,9% în două luni"
    },
    "gaps": [],
@@ -568,7 +568,7 @@
     "C2": "sold bugetar -4,4% din PIB",
     "C3": "datorie 78% din PIB, cont curent -0,7%",
     "C7": "dobândă 7,25% (2026-11-02) − inflație 4,5% = 2,7 pp",
-    "C10": "bursa la 31% din intervalul de 52 de săptămâni (EZA)",
+    "C10": "bursa la 29% din intervalul de 52 de săptămâni (EZA)",
     "C12": "bursa -13,8% în două luni"
    },
    "gaps": [],
@@ -600,7 +600,7 @@
     "C2": "sold bugetar -3,3% din PIB",
     "C3": "datorie 67,2% din PIB, cont curent -1,2%",
     "C7": "dobândă 1% (2026-10-29) − inflație 2,8% = -1,8 pp",
-    "C10": "bursa la 56% din intervalul de 52 de săptămâni (THD)",
+    "C10": "bursa la 55% din intervalul de 52 de săptămâni (THD)",
     "C12": "bursa -6,7% în două luni"
    },
    "gaps": [],
@@ -696,7 +696,7 @@
     "C2": "sold bugetar -6,9% din PIB",
     "C3": "datorie 59,5% din PIB, cont curent -2,6%",
     "C7": "dobândă 12,25% (2026-11-03) − inflație 6,3% = 6,0 pp",
-    "C10": "bursa la 69% din intervalul de 52 de săptămâni (COLO)",
+    "C10": "bursa la 70% din intervalul de 52 de săptămâni (COLO)",
     "C12": "bursa -5,3% în două luni"
    },
    "gaps": [],

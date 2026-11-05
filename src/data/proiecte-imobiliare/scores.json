@@ -186,7 +186,7 @@
     7,
     6,
     7,
-    null,
+    3,
     7,
     6
    ],
@@ -197,9 +197,53 @@
      "https://nepirockcastle.com/investors/"
     ]
    ],
-   "inputs": {},
-   "score": 7.12,
-   "met": 10
+   "inputs": {
+    "C12": "acțiunea -4,4% în două luni (Yahoo Finance, NRP.JO)"
+   },
+   "score": 7,
+   "met": 10,
+   "price": {
+    "symbol": "NRP.JO",
+    "url": "https://finance.yahoo.com/quote/NRP.JO",
+    "points": [
+     [
+      "2026-09-04",
+      15028
+     ],
+     [
+      "2026-09-11",
+      14366
+     ],
+     [
+      "2026-09-18",
+      14382
+     ],
+     [
+      "2026-09-25",
+      14379
+     ],
+     [
+      "2026-10-02",
+      14119
+     ],
+     [
+      "2026-10-09",
+      14156
+     ],
+     [
+      "2026-10-16",
+      14003
+     ],
+     [
+      "2026-10-23",
+      14143
+     ],
+     [
+      "2026-10-30",
+      14367
+     ]
+    ]
+   }
   },
   {
    "id": "equinix",
@@ -385,7 +429,7 @@
     8,
     6,
     6,
-    null,
+    3,
     6,
     7
    ],
@@ -396,9 +440,134 @@
      "https://www.segro.com/investors"
     ]
    ],
-   "inputs": {},
-   "score": 7.12,
-   "met": 9
+   "inputs": {
+    "C12": "acțiunea -4,0% în două luni (Yahoo Finance, SGRO.L)"
+   },
+   "score": 7,
+   "met": 9,
+   "price": {
+    "symbol": "SGRO.L",
+    "url": "https://finance.yahoo.com/quote/SGRO.L",
+    "points": [
+     [
+      "2026-09-04",
+      950.2
+     ],
+     [
+      "2026-09-11",
+      933.4
+     ],
+     [
+      "2026-09-18",
+      936.8
+     ],
+     [
+      "2026-09-25",
+      941.2
+     ],
+     [
+      "2026-10-02",
+      915.2
+     ],
+     [
+      "2026-10-09",
+      919.2
+     ],
+     [
+      "2026-10-16",
+      913.2
+     ],
+     [
+      "2026-10-23",
+      908.2
+     ],
+     [
+      "2026-10-30",
+      912.2
+     ]
+    ]
+   }
+  },
+  {
+   "id": "american-tower",
+   "name": "American Tower (turnuri de telecomunicații și centre de date)",
+   "nameEn": "American Tower (telecom towers and data centres)",
+   "stage": "Listată (NYSE: AMT)",
+   "stageEn": "Listed (NYSE: AMT)",
+   "region": "Global",
+   "kind": "Infrastructură digitală",
+   "kindEn": "Digital infrastructure",
+   "priceId": "pi-american-tower",
+   "c": [
+    8,
+    7,
+    5,
+    8,
+    9,
+    8,
+    7,
+    6,
+    9,
+    6,
+    6,
+    8,
+    6,
+    6
+   ],
+   "why": "Cel mai mare proprietar independent de turnuri de telecomunicații din lume, închiriate operatorilor mobili pe contracte lungi, plus centrele de date CoreSite din SUA. Datoria este mare, iar câțiva operatori americani aduc o parte importantă din venituri.",
+   "sources": [
+    [
+     "American Tower, relația cu investitorii",
+     "https://www.americantower.com/investor-relations/"
+    ]
+   ],
+   "inputs": {
+    "C12": "acțiunea +6,8% în două luni (Yahoo Finance, AMT)"
+   },
+   "score": 7.2,
+   "met": 8,
+   "price": {
+    "symbol": "AMT",
+    "url": "https://finance.yahoo.com/quote/AMT",
+    "points": [
+     [
+      "2026-09-04",
+      175.85
+     ],
+     [
+      "2026-09-11",
+      177.85
+     ],
+     [
+      "2026-09-18",
+      173.98
+     ],
+     [
+      "2026-09-25",
+      169.03
+     ],
+     [
+      "2026-10-02",
+      162.2
+     ],
+     [
+      "2026-10-09",
+      182.24
+     ],
+     [
+      "2026-10-16",
+      185.27
+     ],
+     [
+      "2026-10-23",
+      188.97
+     ],
+     [
+      "2026-10-30",
+      187.78
+     ]
+    ]
+   }
   },
   {
    "id": "goodman",
@@ -422,7 +591,7 @@
     9,
     4,
     5,
-    null,
+    4,
     4,
     7
    ],
@@ -433,9 +602,53 @@
      "https://www.goodman.com/investor-centre"
     ]
    ],
-   "inputs": {},
-   "score": 7.14,
-   "met": 8
+   "inputs": {
+    "C12": "acțiunea -2,0% în două luni (Yahoo Finance, GMG.AX)"
+   },
+   "score": 7.08,
+   "met": 8,
+   "price": {
+    "symbol": "GMG.AX",
+    "url": "https://finance.yahoo.com/quote/GMG.AX",
+    "points": [
+     [
+      "2026-09-04",
+      27.55
+     ],
+     [
+      "2026-09-11",
+      26.91
+     ],
+     [
+      "2026-09-18",
+      25.62
+     ],
+     [
+      "2026-09-25",
+      26.38
+     ],
+     [
+      "2026-10-02",
+      25.91
+     ],
+     [
+      "2026-10-09",
+      27.16
+     ],
+     [
+      "2026-10-16",
+      26.39
+     ],
+     [
+      "2026-10-23",
+      25.27
+     ],
+     [
+      "2026-10-30",
+      27
+     ]
+    ]
+   }
   },
   {
    "id": "ctp",
@@ -602,43 +815,6 @@
      ]
     ]
    }
-  },
-  {
-   "id": "american-tower",
-   "name": "American Tower (turnuri de telecomunicații și centre de date)",
-   "nameEn": "American Tower (telecom towers and data centres)",
-   "stage": "Listată (NYSE: AMT)",
-   "stageEn": "Listed (NYSE: AMT)",
-   "region": "Global",
-   "kind": "Infrastructură digitală",
-   "kindEn": "Digital infrastructure",
-   "priceId": "pi-american-tower",
-   "c": [
-    8,
-    7,
-    5,
-    8,
-    9,
-    8,
-    7,
-    6,
-    9,
-    6,
-    6,
-    null,
-    6,
-    6
-   ],
-   "why": "Cel mai mare proprietar independent de turnuri de telecomunicații din lume, închiriate operatorilor mobili pe contracte lungi, plus centrele de date CoreSite din SUA. Datoria este mare, iar câțiva operatori americani aduc o parte importantă din venituri.",
-   "sources": [
-    [
-     "American Tower, relația cu investitorii",
-     "https://www.americantower.com/investor-relations/"
-    ]
-   ],
-   "inputs": {},
-   "score": 7.02,
-   "met": 7
   },
   {
    "id": "digital-realty",
@@ -861,7 +1037,7 @@
     8,
     6,
     6,
-    null,
+    2,
     6,
     5
    ],
@@ -872,9 +1048,53 @@
      "https://www.invh.com/investors/"
     ]
    ],
-   "inputs": {},
-   "score": 6.82,
-   "met": 6
+   "inputs": {
+    "C12": "acțiunea -6,4% în două luni (Yahoo Finance, INVH)"
+   },
+   "score": 6.64,
+   "met": 6,
+   "price": {
+    "symbol": "INVH",
+    "url": "https://finance.yahoo.com/quote/INVH",
+    "points": [
+     [
+      "2026-09-04",
+      28.39
+     ],
+     [
+      "2026-09-11",
+      27.54
+     ],
+     [
+      "2026-09-18",
+      26.91
+     ],
+     [
+      "2026-09-25",
+      26.62
+     ],
+     [
+      "2026-10-02",
+      26.04
+     ],
+     [
+      "2026-10-09",
+      26.79
+     ],
+     [
+      "2026-10-16",
+      27.07
+     ],
+     [
+      "2026-10-23",
+      27.54
+     ],
+     [
+      "2026-10-30",
+      26.56
+     ]
+    ]
+   }
   },
   {
    "id": "one-united",
