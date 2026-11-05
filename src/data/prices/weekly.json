@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-02",
+ "updatedAt": "2026-11-05",
  "method": "Închiderea zilnică publicată de sursă, luată pentru fiecare vineri (UTC). Punctele mai vechi de 7 zile nu se mai modifică.",
  "start": "2026-09-04",
  "series": {
@@ -2043,7 +2043,5 @@
    ]
   }
  },
- "errors": [
-  "pi-aldar: 404 https://query1.finance.yahoo.com/v8/finance/chart/ALDAR.AE?range=6mo&interval=1d"
- ]
+ "errors": []
 }
