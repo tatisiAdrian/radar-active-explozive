@@ -358,6 +358,14 @@ export const domains: Domain[] = [
     questions: ["În ce orașe se trăiește cel mai bine, luând în calcul și costurile?", "Unde sunt salarii și locuri de muncă bune, fără aglomerația Capitalei?", "Ce oraș mic oferă o viață bună la costuri mici?"],
   },
   {
+    slug: 'gradinite-romania',
+    criteria: 'gradinite',
+    title: "Cele mai bune grădinițe cu afterschool din România",
+    summary: "7 grădinițe acreditate ARACIP și evaluate extern (IB, Cambridge, inspecția britanică BSO), notate pe 22 de condiții (14 și 8 de verificare a dovezilor): calitate verificată, program prelungit și afterschool, grupe, limbi străine, siguranță și cost.",
+    status: 'activ',
+    questions: ["Care grădinițe din România au calitatea verificată de un organism extern?", "Unde poate rămâne copilul după-amiaza, cu activități, în aceeași unitate?", "Cum verifici dacă o grădiniță e acreditată ARACIP?"],
+  },
+  {
     slug: 'licee-europa',
     criteria: 'licee-eu',
     title: "Cele mai bune sisteme de licee din Europa",
@@ -398,6 +406,14 @@ export const domains: Domain[] = [
     questions: ["În ce orașe europene se trăiește cel mai bine?", "Unde e viața bună fără prețurile din Zürich sau Copenhaga?", "Cum se compară Clujul cu marile orașe ale Europei?"],
   },
   {
+    slug: 'gradinite-europa',
+    criteria: 'gradinite-tari',
+    title: "Cele mai bune sisteme de grădinițe din Europa",
+    summary: "22 de sisteme de grădinițe europene, comparate pe țări și notate pe 22 de condiții (14 și 8 de verificare a dovezilor): participarea de la 3 ani și sub 3 ani, programul lung (30 de ore pe săptămână), costul și calitatea, din datele Eurostat 2024–2025, OCDE și UNICEF.",
+    status: 'activ',
+    questions: ["În ce țări europene au copiii cel mai ușor loc la grădiniță și la creșă?", "Unde pot sta copiii toată ziua, ca într-un afterschool?", "Unde se află România față de restul Europei?"],
+  },
+  {
     slug: 'licee-lume',
     criteria: 'licee-lume',
     title: "Cele mai bune sisteme de licee din lume",
@@ -436,6 +452,14 @@ export const domains: Domain[] = [
     summary: "22 de orașe din lume, notate pe 14 condiții: indicele EIU de calitate a vieții 2026, clasamentele Mercer, Happy City și Monocle, venituri, servicii publice, siguranță, costul locuinței față de venit și riscuri.",
     status: 'activ',
     questions: ["În ce orașe din lume se trăiește cel mai bine?", "Unde e viața bună fără prețurile locuințelor din Sydney sau Vancouver?", "Ce riscuri au orașele de top, de la cutremure la incendii?"],
+  },
+  {
+    slug: 'gradinite-lume',
+    criteria: 'gradinite-tari',
+    title: "Cele mai bune sisteme de grădinițe din lume",
+    summary: "22 de sisteme de grădinițe din lume, comparate pe țări și notate pe 22 de condiții (14 și 8 de verificare a dovezilor): participarea, programul lung, costul pentru părinți și calitatea, din datele OCDE Education at a Glance 2025, Eurostat și clasamentul UNICEF în 41 de țări bogate.",
+    status: 'activ',
+    questions: ["Care țări au cele mai bune grădinițe din lume?", "Unde e grădinița gratuită și unde costă o jumătate de salariu?", "Cum se compară Asia și America cu Europa de Nord?"],
   },
 ];
 

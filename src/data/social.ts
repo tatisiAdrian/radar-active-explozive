@@ -13,6 +13,9 @@ import facultatiW from './social/facultati-lume.json';
 import meseriiW from './social/meserii-lume.json';
 import angajatoriW from './social/angajatori-lume.json';
 import localitatiW from './social/localitati-lume.json';
+import gradiniteRo from './social/gradinite-romania.json';
+import gradiniteEu from './social/gradinite-europa.json';
+import gradiniteW from './social/gradinite-lume.json';
 
 /** Analizele din categoria Social (calculate de scripts/score-social.mjs). */
 export interface SocialRow {
@@ -22,7 +25,7 @@ export interface SocialRow {
 }
 export interface SocialData { slug: string; set: string; region: string; date: string; snapshot: string; previousSnapshot?: string; revisionNote?: string; revisionNoteEn?: string; verified?: boolean; formulas: Record<string, string>; rows: SocialRow[] }
 export const SOCIAL: Record<string, SocialData> = Object.fromEntries(
-  [licee, facultati, meserii, angajatori, localitati, liceeEu, facultatiEu, meseriiEu, angajatoriEu, localitatiEu, liceeW, facultatiW, meseriiW, angajatoriW, localitatiW].map((d) => [d.slug, d as unknown as SocialData]),
+  [licee, facultati, meserii, angajatori, localitati, liceeEu, facultatiEu, meseriiEu, angajatoriEu, localitatiEu, liceeW, facultatiW, meseriiW, angajatoriW, localitatiW, gradiniteRo, gradiniteEu, gradiniteW].map((d) => [d.slug, d as unknown as SocialData]),
 );
 export const SOCIAL_SLUGS = Object.keys(SOCIAL);
 

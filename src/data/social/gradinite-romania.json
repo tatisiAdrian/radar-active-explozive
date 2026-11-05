@@ -1,0 +1,513 @@
+{
+ "slug": "gradinite-romania",
+ "set": "gradinite",
+ "region": "romania",
+ "date": "2026-11-05",
+ "snapshot": "social-gradinite-romania-2026-11-05",
+ "revisionNote": "Regula de intrare: grădinița e acreditată ARACIP la nivelul preșcolar (registrul din 12.06.2026) și are cel puțin o evaluare externă (IB, Cambridge, inspecția britanică BSO, COBIS). Programul prelungit și afterschool-ul se notează la C4, din ce publică unitatea; unde nu sunt confirmate public, nota e mai mică. Notăm pe 22 de condiții: 14 adaptate grădinițelor (80% din scor) și 8 de verificare a dovezilor (20%). Orice grădiniță, de stat sau particulară, care îndeplinește regula poate cere evaluarea. Câteva școli internaționale cunoscute (de exemplu AISB, British School of Bucharest, International School of Bucharest, Cambridge School of Bucharest, Verita, Deutsche Schule Bukarest, Lycée Français Anna de Noailles) au evaluări externe solide, dar nu le-am găsit, sub aceste nume, în registrul ARACIP al grădinițelor acreditate; intră în top când acreditarea se poate verifica.",
+ "revisionNoteEn": "Entry rule: the kindergarten is ARACIP-accredited at pre-school level (the register of 12.06.2026) and has at least one outside evaluation (IB, Cambridge, the British BSO inspection, COBIS). The extended day and the afterschool are scored at C4, from what the unit publishes; where they are not confirmed publicly, the score is lower. We score on 22 conditions: 14 adapted to kindergartens (80% of the score) and 8 that verify the evidence (20%). Any kindergarten, state or private, that meets the rule can request evaluation. Several well-known international schools (for example AISB, the British School of Bucharest, the International School of Bucharest, the Cambridge School of Bucharest, Verita, Deutsche Schule Bukarest, Lycée Français Anna de Noailles) have solid outside evaluations, but we did not find them, under these names, in the ARACIP register of accredited kindergartens; they enter the ranking once the accreditation can be verified.",
+ "verified": true,
+ "formulas": {},
+ "rows": [
+  {
+   "id": "mark-twain",
+   "name": "Mark Twain International School (Voluntari)",
+   "nameEn": "Mark Twain International School (Voluntari)",
+   "c": [
+    9,
+    7,
+    9,
+    9,
+    10,
+    9,
+    9,
+    8,
+    10,
+    3,
+    6,
+    9,
+    null,
+    6
+   ],
+   "why": "Școală IB din 2006, cu Primary Years Programme de la grădiniță; grădinița e acreditată ARACIP. Grupe mici, campus verde de 16.000 m², program de după-amiază (late-stay) și afterschool cu activități. Taxa e printre cele mai mari: aproximativ 33.000–79.000 de lei pe an.",
+   "whyEn": "An IB school since 2006, with the Primary Years Programme from kindergarten; the kindergarten is ARACIP-accredited. Small groups, a 16,000 m² green campus, a late-stay programme and an afterschool with activities. The fee is among the highest: about 33,000–79,000 lei a year.",
+   "sources": [
+    [
+     "Registrul ARACIP al grădinițelor particulare acreditate, actualizat la 12.06.2026 (în forma publicată de InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "IBO: Mark Twain International School, școală IB din 14 iunie 2006",
+     "https://ibo.org/school/002707/"
+    ],
+    [
+     "doris.school: Mark Twain International School – Junior (program, grupe, taxe)",
+     "https://www.doris.school/schools/romania/mark-twain-international-school-junior"
+    ],
+    [
+     "Romania Insider: campus nou de 30 de milioane de euro (martie 2026)",
+     "https://www.romania-insider.com/mark-twain-international-school-campus-near-bucharest-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "The ARACIP register of accredited private kindergartens, updated 12.06.2026 (as published by InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "IBO: Mark Twain International School, an IB school since 14 June 2006",
+     "https://ibo.org/school/002707/"
+    ],
+    [
+     "doris.school: Mark Twain International School – Junior (programme, groups, fees)",
+     "https://www.doris.school/schools/romania/mark-twain-international-school-junior"
+    ],
+    [
+     "Romania Insider: a new EUR 30 million campus (March 2026)",
+     "https://www.romania-insider.com/mark-twain-international-school-campus-near-bucharest-2026"
+    ]
+   ],
+   "v": [
+    9,
+    9,
+    9,
+    10,
+    8,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Autorizare IB din 2006, confirmată pe site-ul IBO, și acreditare ARACIP în registru; istoric din 1995. Proprietatea a trecut la o platformă cu fond de investiții (Morphosis Capital): de urmărit cum influențează extinderea rapidă.",
+   "vwhyEn": "IB authorisation since 2006, confirmed on the IBO site, and ARACIP accreditation in the register; a record since 1995. Ownership moved to a platform with an investment fund (Morphosis Capital): worth watching how the fast expansion affects it.",
+   "inputs": {},
+   "score": 8.1,
+   "met": 17,
+   "met14": 10,
+   "trust": 7
+  },
+  {
+   "id": "genesis",
+   "name": "Genesis College (București)",
+   "nameEn": "Genesis College (Bucharest)",
+   "c": [
+    9,
+    null,
+    null,
+    6,
+    8,
+    9,
+    8,
+    7,
+    10,
+    3,
+    6,
+    8,
+    null,
+    7
+   ],
+   "why": "Grădinița urmează IB Primary Years Programme din 2018, împreună cu pedagogia finlandeză; acreditată ARACIP. Programul zilnic combină activități academice și extracurriculare, cu masa inclusă, dar un afterschool separat nu e descris public. Taxa: 12.500 de euro pe an.",
+   "whyEn": "The kindergarten has followed the IB Primary Years Programme since 2018, together with Finnish pedagogy; ARACIP-accredited. The daily programme combines academic and extracurricular activities, with meals included, but a separate afterschool is not described publicly. Fee: EUR 12,500 a year.",
+   "sources": [
+    [
+     "Registrul ARACIP al grădinițelor particulare acreditate, actualizat la 12.06.2026 (în forma publicată de InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "doris.school: Genesis College (PYP la grădiniță, membru IB din 2018, taxa anuală)",
+     "https://www.doris.school/schools/romania/genesis-college"
+    ],
+    [
+     "bucharest.ro: Genesis College, programul zilnic",
+     "https://www.bucharest.ro/locations/education-genessis-college-primary-school-265"
+    ],
+    [
+     "Revista Biz: pedagogia finlandeză la Genesis",
+     "https://www.revistabiz.ro/educatie-finlandeza-in-mijlocul-bucurestiului/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "The ARACIP register of accredited private kindergartens, updated 12.06.2026 (as published by InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "doris.school: Genesis College (PYP in kindergarten, IB member since 2018, yearly fee)",
+     "https://www.doris.school/schools/romania/genesis-college"
+    ],
+    [
+     "bucharest.ro: Genesis College, the daily programme",
+     "https://www.bucharest.ro/locations/education-genessis-college-primary-school-265"
+    ],
+    [
+     "Revista Biz: Finnish pedagogy at Genesis",
+     "https://www.revistabiz.ro/educatie-finlandeza-in-mijlocul-bucurestiului/"
+    ]
+   ],
+   "v": [
+    9,
+    8,
+    8,
+    9,
+    7,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Programul IB PYP e autorizat, iar școala a avut evaluarea IB de cinci ani pe PYP, MYP și DP; acreditare ARACIP în registru, istoric din 1999. Afterschool-ul nu e confirmat de o sursă independentă.",
+   "vwhyEn": "The IB PYP is authorised, and the school had the five-year IB evaluation across PYP, MYP and DP; ARACIP accreditation in the register, a record since 1999. The afterschool is not confirmed by an independent source.",
+   "inputs": {},
+   "score": 7.32,
+   "met": 15,
+   "met14": 8,
+   "trust": 7
+  },
+  {
+   "id": "avenor",
+   "name": "Avenor College (București)",
+   "nameEn": "Avenor College (Bucharest)",
+   "c": [
+    9,
+    null,
+    null,
+    5,
+    8,
+    9,
+    8,
+    7,
+    10,
+    null,
+    6,
+    7,
+    null,
+    7
+   ],
+   "why": "Grădinița urmează curriculumul britanic EYFS și e acreditată ARACIP; școala are și acreditarea britanică BSO. Raportul de inspecție BSO a notat școala „bună, cu elemente remarcabile” și a numit predarea din grădiniță remarcabilă. Fundație non-profit, cu peste 800 de elevi.",
+   "whyEn": "The kindergarten follows the British EYFS curriculum and is ARACIP-accredited; the school also has British BSO accreditation. The BSO inspection report rated the school “good with outstanding features” and called the kindergarten teaching outstanding. A non-profit foundation with more than 800 pupils.",
+   "sources": [
+    [
+     "Registrul ARACIP al grădinițelor particulare acreditate, actualizat la 12.06.2026 (în forma publicată de InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "bucharest.ro: Avenor College, acreditare ARACIP și BSO",
+     "https://www.bucharest.ro/locations/education-avenor-college-261"
+    ],
+    [
+     "Avenor: raportul anual, cu citate din inspecția BSO",
+     "https://express.adobe.com/page/BU8lULv2NzXto"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "The ARACIP register of accredited private kindergartens, updated 12.06.2026 (as published by InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "bucharest.ro: Avenor College, ARACIP and BSO accreditation",
+     "https://www.bucharest.ro/locations/education-avenor-college-261"
+    ],
+    [
+     "Avenor: the annual report, quoting the BSO inspection",
+     "https://express.adobe.com/page/BU8lULv2NzXto"
+    ]
+   ],
+   "v": [
+    8,
+    8,
+    7,
+    10,
+    8,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Inspecție britanică BSO și acreditare ARACIP în registru; istoric din anii 2000 (fostă Little London School). Citatele din inspecție vin din raportul școlii, nu direct din raportul publicat de inspectorat; afterschool-ul nu e confirmat independent.",
+   "vwhyEn": "A British BSO inspection and ARACIP accreditation in the register; a record since the 2000s (formerly Little London School). The inspection quotes come from the school’s report, not directly from the inspectorate’s published report; the afterschool is not confirmed independently.",
+   "inputs": {},
+   "score": 7.29,
+   "met": 15,
+   "met14": 8,
+   "trust": 7
+  },
+  {
+   "id": "transylvania-college",
+   "name": "Transylvania College – grădinița Happy Kids (Cluj-Napoca)",
+   "nameEn": "Transylvania College – Happy Kids kindergarten (Cluj-Napoca)",
+   "c": [
+    8,
+    null,
+    null,
+    5,
+    9,
+    9,
+    8,
+    8,
+    10,
+    null,
+    6,
+    7,
+    null,
+    7
+   ],
+   "why": "Grădinița Happy Kids, deschisă în 1993, e acreditată ARACIP și face parte din Transylvania College, școală Cambridge cu statut britanic BSO din 2013. În 2015 a fost singura școală din Europa nominalizată la premiul TES pentru cea mai bună școală britanică internațională. Singura opțiune de acest nivel din afara Bucureștiului.",
+   "whyEn": "The Happy Kids kindergarten, opened in 1993, is ARACIP-accredited and part of Transylvania College, a Cambridge school with British BSO status since 2013. In 2015 it was the only school in Europe shortlisted for the TES award for the best British international school. The only option of this level outside Bucharest.",
+   "sources": [
+    [
+     "Registrul ARACIP al grădinițelor particulare acreditate, actualizat la 12.06.2026 (în forma publicată de InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "Transylvania College: istoria școlii (BSO din 2013, TES 2015)",
+     "https://transylvania-college.ro/about-us/school-history"
+    ],
+    [
+     "doris.school: școlile internaționale din Cluj-Napoca",
+     "https://www.doris.school/international-schools/romania/cluj-napoca/compare"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "The ARACIP register of accredited private kindergartens, updated 12.06.2026 (as published by InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "Transylvania College: school history (BSO since 2013, TES 2015)",
+     "https://transylvania-college.ro/about-us/school-history"
+    ],
+    [
+     "doris.school: international schools in Cluj-Napoca",
+     "https://www.doris.school/international-schools/romania/cluj-napoca/compare"
+    ]
+   ],
+   "v": [
+    8,
+    8,
+    8,
+    10,
+    9,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Statut BSO acordat de Ministerul Educației britanic, centru Cambridge din 2010, nominalizare TES în 2015 și grădiniță în registrul ARACIP; istoric din 1993. Afterschool-ul nu e confirmat de o sursă independentă.",
+   "vwhyEn": "BSO status granted by the UK Department for Education, a Cambridge centre since 2010, a TES shortlisting in 2015 and a kindergarten in the ARACIP register; a record since 1993. The afterschool is not confirmed by an independent source.",
+   "inputs": {},
+   "score": 7.29,
+   "met": 15,
+   "met14": 8,
+   "trust": 7
+  },
+  {
+   "id": "olga-gudynn",
+   "name": "Olga Gudynn International School (București și Voluntari)",
+   "nameEn": "Olga Gudynn International School (Bucharest and Voluntari)",
+   "c": [
+    7,
+    null,
+    null,
+    5,
+    8,
+    9,
+    7,
+    7,
+    10,
+    7,
+    6,
+    8,
+    null,
+    6
+   ],
+   "why": "Grădinițe acreditate ARACIP în trei locații (București, sectoarele 1 și 2, și Voluntari), cu program bilingv și elemente din curriculumul britanic EYFS. Școala are IB Diploma din 2023 și program Cambridge, dar la grădiniță evaluarea externă e indirectă. Taxe mai mici decât la majoritatea școlilor internaționale din listă.",
+   "whyEn": "ARACIP-accredited kindergartens in three locations (Bucharest sectors 1 and 2, and Voluntari), with a bilingual programme and elements of the British EYFS curriculum. The school has had the IB Diploma since 2023 and a Cambridge programme, but at kindergarten level the outside evaluation is indirect. Fees lower than at most international schools on the list.",
+   "sources": [
+    [
+     "Registrul ARACIP al grădinițelor particulare acreditate, actualizat la 12.06.2026 (în forma publicată de InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "IBO: Liceul Bilingv Olga Gudynn, școală IB din 26 mai 2023",
+     "https://ibo.org/school/062144/"
+    ],
+    [
+     "doris.school: Olga Gudynn International School (curricule, taxe)",
+     "https://www.doris.school/schools/romania/olga-gudynn-international-school"
+    ],
+    [
+     "bucharest.ro: Olga Gudynn, program bilingv cu elemente EYFS",
+     "https://www.bucharest.ro/locations/education-olga-gudynn-international-primary-school-floreasca-269"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "The ARACIP register of accredited private kindergartens, updated 12.06.2026 (as published by InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "IBO: Liceul Bilingv Olga Gudynn, an IB school since 26 May 2023",
+     "https://ibo.org/school/062144/"
+    ],
+    [
+     "doris.school: Olga Gudynn International School (curricula, fees)",
+     "https://www.doris.school/schools/romania/olga-gudynn-international-school"
+    ],
+    [
+     "bucharest.ro: Olga Gudynn, a bilingual programme with EYFS elements",
+     "https://www.bucharest.ro/locations/education-olga-gudynn-international-primary-school-floreasca-269"
+    ]
+   ],
+   "v": [
+    7,
+    8,
+    8,
+    10,
+    7,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Trei grădinițe în registrul ARACIP și autorizare IB confirmată pe site-ul IBO, dar pentru liceu, nu pentru grădiniță; istoric din 2001. Afterschool-ul nu e confirmat de o sursă independentă.",
+   "vwhyEn": "Three kindergartens in the ARACIP register and IB authorisation confirmed on the IBO site, but for the high school, not the kindergarten; a record since 2001. The afterschool is not confirmed by an independent source.",
+   "inputs": {},
+   "score": 7.03,
+   "met": 15,
+   "met14": 8,
+   "trust": 7
+  },
+  {
+   "id": "king-george",
+   "name": "King George British International School (București)",
+   "nameEn": "King George British International School (Bucharest)",
+   "c": [
+    7,
+    null,
+    null,
+    5,
+    9,
+    9,
+    null,
+    7,
+    10,
+    null,
+    6,
+    8,
+    null,
+    6
+   ],
+   "why": "Grădinițe acreditate ARACIP în sectoarele 4 și 6, cu curriculumul britanic EYFS; școala a fost înregistrată ca a 25-a școală internațională Cambridge din România și are acreditarea britanică BSO. Programul de după-amiază al grădiniței nu e descris public.",
+   "whyEn": "ARACIP-accredited kindergartens in sectors 4 and 6, with the British EYFS curriculum; the school was registered as the 25th Cambridge International School in Romania and has British BSO accreditation. The kindergarten’s afternoon programme is not described publicly.",
+   "sources": [
+    [
+     "Registrul ARACIP al grădinițelor particulare acreditate, actualizat la 12.06.2026 (în forma publicată de InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "doris.school: King George British International School",
+     "https://www.doris.school/schools/romania/king-george-british-international-school"
+    ],
+    [
+     "Outsourcing Today: a 25-a școală Cambridge din România",
+     "https://outsourcing-today.ro/?p=9871"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "The ARACIP register of accredited private kindergartens, updated 12.06.2026 (as published by InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "doris.school: King George British International School",
+     "https://www.doris.school/schools/romania/king-george-british-international-school"
+    ],
+    [
+     "Outsourcing Today: the 25th Cambridge school in Romania",
+     "https://outsourcing-today.ro/?p=9871"
+    ]
+   ],
+   "v": [
+    7,
+    8,
+    7,
+    7,
+    7,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Înregistrare Cambridge și acreditare ARACIP în registru; statutul BSO apare în catalogul doris.school, nu l-am verificat direct pe lista guvernului britanic. Afterschool-ul nu e confirmat.",
+   "vwhyEn": "Cambridge registration and ARACIP accreditation in the register; the BSO status appears in the doris.school catalogue, and we have not checked it directly on the UK government list. The afterschool is not confirmed.",
+   "inputs": {},
+   "score": 6.74,
+   "met": 13,
+   "met14": 6,
+   "trust": 7
+  },
+  {
+   "id": "maria-international",
+   "name": "Maria International School of Bucharest",
+   "nameEn": "Maria International School of Bucharest",
+   "c": [
+    6,
+    null,
+    8,
+    9,
+    8,
+    9,
+    4,
+    7,
+    6,
+    7,
+    5,
+    6,
+    null,
+    5
+   ],
+   "why": "Grădiniță britanică mică, în centrul Bucureștiului (Piața Amzei), acreditată ARACIP. Are program lung de grădiniță, 08:00–17:00, și cluburi după ore (sport, arte, limbi, robotică); grupe în medie de 8 copii. Taxa: 5.500–6.500 de euro pe an la grădiniță. Merge doar până la 11 ani.",
+   "whyEn": "A small British kindergarten in central Bucharest (Piața Amzei), ARACIP-accredited. It has a long kindergarten day, 08:00–17:00, and after-school clubs (sport, arts, languages, robotics); groups of 8 children on average. Fee: EUR 5,500–6,500 a year for kindergarten. It only goes up to age 11.",
+   "sources": [
+    [
+     "Registrul ARACIP al grădinițelor particulare acreditate, actualizat la 12.06.2026 (în forma publicată de InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "doris.school: Maria International School (programe, ore, cluburi, taxe)",
+     "https://www.doris.school/schools/romania/maria-international-school"
+    ],
+    [
+     "bucharest.ro: Maria International School, conformă COBIS",
+     "https://www.bucharest.ro/locations/education-maria-international-primary-school-256"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "The ARACIP register of accredited private kindergartens, updated 12.06.2026 (as published by InfoCons)",
+     "https://infocons.ro/cum-verifici-daca-o-gradinita-particulara-este-acreditata-consulta-registrul-national-al-unitatilor-de-invatamant-preuniversitar-acreditate-infocons-te-informeaza/"
+    ],
+    [
+     "doris.school: Maria International School (programmes, hours, clubs, fees)",
+     "https://www.doris.school/schools/romania/maria-international-school"
+    ],
+    [
+     "bucharest.ro: Maria International School, COBIS compliant",
+     "https://www.bucharest.ro/locations/education-maria-international-primary-school-256"
+    ]
+   ],
+   "v": [
+    6,
+    8,
+    6,
+    6,
+    6,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Acreditare ARACIP în registru; afilierea COBIS și BSO apare doar în cataloage (bucharest.ro o descrie ca „conformă COBIS”), nu am găsit raportul de inspecție. Școală mică, cu istoric public scurt.",
+   "vwhyEn": "ARACIP accreditation in the register; the COBIS and BSO affiliation appears only in catalogues (bucharest.ro describes it as “COBIS compliant”), and we did not find the inspection report. A small school with a short public record.",
+   "inputs": {},
+   "score": 6.46,
+   "met": 9,
+   "met14": 6,
+   "trust": 3
+  }
+ ]
+}

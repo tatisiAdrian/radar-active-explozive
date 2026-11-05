@@ -1,0 +1,1549 @@
+{
+ "_doc": "Cele mai bune sisteme de grădinițe din Europa, comparate pe țări: date Eurostat 2024–2025 (participare, program lung), OCDE Education at a Glance 2025 și clasamentul UNICEF al politicilor de îngrijire a copiilor.",
+ "date": "2026-11-05",
+ "set": "gradinite-tari",
+ "region": "europa",
+ "verified": true,
+ "revisionNote": "Topul se notează direct pe 22 de condiții: cele 14 adaptate sistemelor de grădinițe (80% din scor) și 8 condiții de verificare a dovezilor (20%).",
+ "revisionNoteEn": "The ranking is scored directly on 22 conditions: 14 adapted to kindergarten systems (80% of the score) and 8 that verify the evidence (20%).",
+ "items": [
+  {
+   "id": "lu",
+   "name": "Luxemburg",
+   "nameEn": "Luxembourg",
+   "c": [
+    7,
+    9,
+    null,
+    10,
+    null,
+    7,
+    7,
+    7,
+    null,
+    9,
+    6,
+    5,
+    null,
+    6
+   ],
+   "v": [
+    8,
+    9,
+    8,
+    9,
+    10,
+    8,
+    null,
+    10
+   ],
+   "why": "Locul 1 în clasamentul UNICEF al politicilor de îngrijire a copiilor (acces locul 3). 56% dintre copiii sub 3 ani au loc la creșă și 65% dintre cei mai mari stau 30 de ore sau mai mult pe săptămână. Totuși, 17,6% dintre copiii de la 3 ani nu merg deloc la grădiniță.",
+   "whyEn": "First in the UNICEF ranking of childcare policies (3rd for access). 56% of children under 3 have a childcare place and 65% of the older ones stay 30 hours a week or more. Yet 17.6% of children from age 3 attend no kindergarten at all.",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat și OCDE; clasamentul UNICEF (2021) e mai vechi de 3 ani, dar concordă cu datele noi.",
+   "vwhyEn": "Official Eurostat and OECD data; the UNICEF ranking (2021) is more than 3 years old, but it agrees with the newer data."
+  },
+  {
+   "id": "is",
+   "name": "Islanda",
+   "nameEn": "Iceland",
+   "c": [
+    10,
+    9,
+    10,
+    9,
+    null,
+    7,
+    null,
+    10,
+    null,
+    9,
+    6,
+    null,
+    null,
+    6
+   ],
+   "v": [
+    7,
+    8,
+    8,
+    9,
+    10,
+    8,
+    null,
+    10
+   ],
+   "why": "Locul 2 la UNICEF și locul 1 la calitate: un educator are în medie 5 copii, cel mai mic raport dintre țările bogate (media e 14). Acces locul 5.",
+   "whyEn": "Second at UNICEF and first for quality: an educator has 5 children on average, the lowest ratio among rich countries (the average is 14). 5th for access.",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "OCDE, Education at a Glance 2025: participarea în educația timpurie",
+     "https://www.oecd.org/en/publications/2025/09/education-at-a-glance-2025_c58fc9ae/full-report/how-does-the-provision-of-and-participation-in-early-childhood-education-and-care-vary-across-countries_86b8275d.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "OECD, Education at a Glance 2025: participation in early childhood education",
+     "https://www.oecd.org/en/publications/2025/09/education-at-a-glance-2025_c58fc9ae/full-report/how-does-the-provision-of-and-participation-in-early-childhood-education-and-care-vary-across-countries_86b8275d.html"
+    ]
+   ],
+   "vwhy": "Clasamentul UNICEF și datele OCDE concordă; Islanda nu are toate seriile Eurostat folosite aici.",
+   "vwhyEn": "The UNICEF ranking and the OECD data agree; Iceland lacks some of the Eurostat series used here."
+  },
+  {
+   "id": "se",
+   "name": "Suedia",
+   "nameEn": "Sweden",
+   "c": [
+    10,
+    9,
+    null,
+    9,
+    null,
+    8,
+    8,
+    7,
+    null,
+    9,
+    5,
+    6,
+    null,
+    6
+   ],
+   "v": [
+    9,
+    9,
+    9,
+    10,
+    10,
+    8,
+    null,
+    10
+   ],
+   "why": "Locul 3 la UNICEF (acces locul 4). Aproape toți copiii de la 3 ani merg la grădiniță (doar 1,1% nu merg), 60% dintre cei sub 3 ani au loc, iar 73% dintre cei mari stau 30 de ore sau mai mult.",
+   "whyEn": "Third at UNICEF (4th for access). Almost all children from age 3 attend kindergarten (only 1.1% do not), 60% of those under 3 have a place, and 73% of the older ones stay 30 hours or more.",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat și OCDE; clasamentul UNICEF (2021) e mai vechi de 3 ani, dar concordă cu datele noi.",
+   "vwhyEn": "Official Eurostat and OECD data; the UNICEF ranking (2021) is more than 3 years old, but it agrees with the newer data."
+  },
+  {
+   "id": "no",
+   "name": "Norvegia",
+   "nameEn": "Norway",
+   "c": [
+    10,
+    10,
+    null,
+    9,
+    null,
+    9,
+    null,
+    7,
+    null,
+    8,
+    5,
+    null,
+    null,
+    6
+   ],
+   "v": [
+    8,
+    8,
+    8,
+    9,
+    10,
+    8,
+    null,
+    10
+   ],
+   "why": "Locul 4 la UNICEF. Peste 60% dintre copiii sub 3 ani sunt înscriși (OCDE), iar Norvegia e una dintre cele cinci țări cu acces gratuit și sub 3 ani.",
+   "whyEn": "Fourth at UNICEF. Over 60% of children under 3 are enrolled (OECD), and Norway is one of five countries with free access under 3 as well.",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "OCDE, Education at a Glance 2025: participarea în educația timpurie",
+     "https://www.oecd.org/en/publications/2025/09/education-at-a-glance-2025_c58fc9ae/full-report/how-does-the-provision-of-and-participation-in-early-childhood-education-and-care-vary-across-countries_86b8275d.html"
+    ],
+    [
+     "Brussels Times: țările cu acces gratuit sub 3 ani, după UNICEF",
+     "https://brusselstimes.com/174351/belgium-ranked-18th-for-childcare-and-parental-leave"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "OECD, Education at a Glance 2025: participation in early childhood education",
+     "https://www.oecd.org/en/publications/2025/09/education-at-a-glance-2025_c58fc9ae/full-report/how-does-the-provision-of-and-participation-in-early-childhood-education-and-care-vary-across-countries_86b8275d.html"
+    ],
+    [
+     "Brussels Times: the countries with free access under 3, according to UNICEF",
+     "https://brusselstimes.com/174351/belgium-ranked-18th-for-childcare-and-parental-leave"
+    ]
+   ],
+   "vwhy": "OCDE și UNICEF concordă; Norvegia nu e în UE, deci lipsesc unele serii Eurostat.",
+   "vwhyEn": "The OECD and UNICEF agree; Norway is not in the EU, so some Eurostat series are missing."
+  },
+  {
+   "id": "dk",
+   "name": "Danemarca",
+   "nameEn": "Denmark",
+   "c": [
+    10,
+    10,
+    null,
+    8,
+    null,
+    8,
+    9,
+    9,
+    null,
+    10,
+    5,
+    7,
+    null,
+    6
+   ],
+   "v": [
+    9,
+    9,
+    9,
+    10,
+    8,
+    8,
+    null,
+    10
+   ],
+   "why": "Cea mai mare participare sub 3 ani din UE: 67% (2025). 87% dintre copiii de la 3 ani stau 30 de ore sau mai mult. Locul 8 la UNICEF, locul 2 la acces, cu acces gratuit și sub 3 ani.",
+   "whyEn": "The highest participation under 3 in the EU: 67% (2025). 87% of children from age 3 stay 30 hours or more. 8th at UNICEF, 2nd for access, with free access under 3 as well.",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat și OCDE; clasamentul UNICEF (2021) e mai vechi de 3 ani, dar concordă cu datele noi.",
+   "vwhyEn": "Official Eurostat and OECD data; the UNICEF ranking (2021) is more than 3 years old, but it agrees with the newer data."
+  },
+  {
+   "id": "de",
+   "name": "Germania",
+   "nameEn": "Germany",
+   "c": [
+    7,
+    4,
+    null,
+    null,
+    null,
+    9,
+    4,
+    8,
+    null,
+    6,
+    6,
+    6,
+    null,
+    5
+   ],
+   "v": [
+    9,
+    9,
+    8,
+    10,
+    10,
+    7,
+    null,
+    10
+   ],
+   "why": "Locul 5 la UNICEF și locul 4 la cât de accesibil e ca preț. Dar doar 25% dintre copiii sub 3 ani au loc, 15% dintre cei de la 3 ani nu merg la grădiniță și doar 38% stau 30 de ore sau mai mult.",
+   "whyEn": "Fifth at UNICEF and 4th for affordability. But only 25% of children under 3 have a place, 15% of those from age 3 attend no kindergarten and only 38% stay 30 hours or more.",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat și OCDE; clasamentul UNICEF (2021) e mai vechi de 3 ani, dar concordă cu datele noi.",
+   "vwhyEn": "Official Eurostat and OECD data; the UNICEF ranking (2021) is more than 3 years old, but it agrees with the newer data."
+  },
+  {
+   "id": "pt",
+   "name": "Portugalia",
+   "nameEn": "Portugal",
+   "c": [
+    9,
+    9,
+    null,
+    null,
+    null,
+    7,
+    10,
+    8,
+    null,
+    7,
+    6,
+    5,
+    null,
+    6
+   ],
+   "v": [
+    9,
+    9,
+    9,
+    10,
+    8,
+    8,
+    null,
+    10
+   ],
+   "why": "Locul 6 la UNICEF. 58% dintre copiii sub 3 ani au loc, iar 91% dintre cei de la 3 ani stau 30 de ore sau mai mult pe săptămână, un record (2024).",
+   "whyEn": "Sixth at UNICEF. 58% of children under 3 have a place, and 91% of those from age 3 stay 30 hours a week or more, a record (2024).",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat și OCDE; clasamentul UNICEF (2021) e mai vechi de 3 ani, dar concordă cu datele noi.",
+   "vwhyEn": "Official Eurostat and OECD data; the UNICEF ranking (2021) is more than 3 years old, but it agrees with the newer data."
+  },
+  {
+   "id": "lv",
+   "name": "Letonia",
+   "nameEn": "Latvia",
+   "c": [
+    9,
+    4,
+    null,
+    null,
+    null,
+    8,
+    10,
+    9,
+    null,
+    6,
+    6,
+    3,
+    null,
+    6
+   ],
+   "v": [
+    9,
+    9,
+    8,
+    10,
+    8,
+    8,
+    null,
+    10
+   ],
+   "why": "Locul 7 la UNICEF și locul 2 la calitate. Cea mai mare parte de program lung din UE: 92,5% dintre copiii de la 3 ani stau 30 de ore sau mai mult. Locurile sub 3 ani au scăzut, de la 35% la 25%.",
+   "whyEn": "Seventh at UNICEF and 2nd for quality. The largest share of long days in the EU: 92.5% of children from age 3 stay 30 hours or more. Places under 3 fell from 35% to 25%.",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat și OCDE; clasamentul UNICEF (2021) e mai vechi de 3 ani, dar concordă cu datele noi.",
+   "vwhyEn": "Official Eurostat and OECD data; the UNICEF ranking (2021) is more than 3 years old, but it agrees with the newer data."
+  },
+  {
+   "id": "ee",
+   "name": "Estonia",
+   "nameEn": "Estonia",
+   "c": [
+    9,
+    6,
+    null,
+    null,
+    null,
+    8,
+    8,
+    7,
+    null,
+    4,
+    6,
+    5,
+    null,
+    6
+   ],
+   "v": [
+    9,
+    9,
+    8,
+    10,
+    8,
+    8,
+    null,
+    10
+   ],
+   "why": "Locul 10 la UNICEF, cu prețuri accesibile (locul 8). 76% dintre copiii de la 3 ani stau 30 de ore sau mai mult, dar accesul e slab (locul 32), iar doar 37% dintre copiii sub 3 ani au loc.",
+   "whyEn": "Tenth at UNICEF, with affordable prices (8th). 76% of children from age 3 stay 30 hours or more, but access is weak (32nd), and only 37% of children under 3 have a place.",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat și OCDE; clasamentul UNICEF (2021) e mai vechi de 3 ani, dar concordă cu datele noi.",
+   "vwhyEn": "Official Eurostat and OECD data; the UNICEF ranking (2021) is more than 3 years old, but it agrees with the newer data."
+  },
+  {
+   "id": "fi",
+   "name": "Finlanda",
+   "nameEn": "Finland",
+   "c": [
+    8,
+    7,
+    null,
+    null,
+    null,
+    6,
+    null,
+    9,
+    null,
+    7,
+    5,
+    4,
+    null,
+    6
+   ],
+   "v": [
+    9,
+    9,
+    8,
+    10,
+    8,
+    8,
+    null,
+    10
+   ],
+   "why": "Locul 11 la UNICEF și locul 4 la calitate. 43% dintre copiii sub 3 ani au loc, în scădere față de anul anterior; prețul e mai puțin accesibil decât în restul nordului (locul 24).",
+   "whyEn": "11th at UNICEF and 4th for quality. 43% of children under 3 have a place, down on the previous year; the price is less affordable than in the rest of the north (24th).",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat și OCDE; clasamentul UNICEF (2021) e mai vechi de 3 ani, dar concordă cu datele noi.",
+   "vwhyEn": "Official Eurostat and OECD data; the UNICEF ranking (2021) is more than 3 years old, but it agrees with the newer data."
+  },
+  {
+   "id": "lt",
+   "name": "Lituania",
+   "nameEn": "Lithuania",
+   "c": [
+    10,
+    null,
+    null,
+    null,
+    null,
+    7,
+    9,
+    8,
+    null,
+    6,
+    6,
+    null,
+    null,
+    6
+   ],
+   "v": [
+    9,
+    9,
+    8,
+    10,
+    8,
+    8,
+    null,
+    10
+   ],
+   "why": "Locul 12 la UNICEF, cu acces gratuit și sub 3 ani. 84,5% dintre copiii de la 3 ani stau 30 de ore sau mai mult (2025), una dintre cele mai mari părți din UE.",
+   "whyEn": "12th at UNICEF, with free access under 3 as well. 84.5% of children from age 3 stay 30 hours or more (2025), one of the largest shares in the EU.",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat și OCDE; clasamentul UNICEF (2021) e mai vechi de 3 ani, dar concordă cu datele noi.",
+   "vwhyEn": "Official Eurostat and OECD data; the UNICEF ranking (2021) is more than 3 years old, but it agrees with the newer data."
+  },
+  {
+   "id": "si",
+   "name": "Slovenia",
+   "nameEn": "Slovenia",
+   "c": [
+    9,
+    9,
+    null,
+    null,
+    null,
+    8,
+    9,
+    null,
+    null,
+    null,
+    6,
+    null,
+    null,
+    6
+   ],
+   "v": [
+    8,
+    9,
+    8,
+    10,
+    null,
+    8,
+    null,
+    10
+   ],
+   "why": "Una dintre cele cinci țări cu acces gratuit sub 3 ani (UNICEF). 89,5% dintre copiii de la 3 ani stau 30 de ore sau mai mult, iar 58% dintre cei sub 3 ani au loc (2024).",
+   "whyEn": "One of the five countries with free access under 3 (UNICEF). 89.5% of children from age 3 stay 30 hours or more, and 58% of those under 3 have a place (2024).",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat; poziția Sloveniei în clasamentul general UNICEF nu apare în sursele consultate.",
+   "vwhyEn": "Official Eurostat data; Slovenia’s position in the overall UNICEF ranking does not appear in the sources consulted."
+  },
+  {
+   "id": "be",
+   "name": "Belgia",
+   "nameEn": "Belgium",
+   "c": [
+    10,
+    8,
+    null,
+    null,
+    null,
+    7,
+    8,
+    6,
+    null,
+    8,
+    6,
+    4,
+    null,
+    6
+   ],
+   "v": [
+    9,
+    9,
+    8,
+    10,
+    6,
+    8,
+    null,
+    10
+   ],
+   "why": "Locul 18 la UNICEF: acces bun (locul 8) și acces gratuit sub 3 ani, dar calitate și preț doar medii. Doar 1,2% dintre copiii de la 3 ani nu merg la grădiniță; 80% stau 30 de ore sau mai mult.",
+   "whyEn": "18th at UNICEF: good access (8th) and free access under 3, but only average quality and price. Only 1.2% of children from age 3 attend no kindergarten; 80% stay 30 hours or more.",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Brussels Times: Belgia, locul 18 din 41",
+     "https://brusselstimes.com/174351/belgium-ranked-18th-for-childcare-and-parental-leave"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Brussels Times: Belgium, 18th of 41",
+     "https://brusselstimes.com/174351/belgium-ranked-18th-for-childcare-and-parental-leave"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat și OCDE; clasamentul UNICEF (2021) e mai vechi de 3 ani, dar concordă cu datele noi.",
+   "vwhyEn": "Official Eurostat and OECD data; the UNICEF ranking (2021) is more than 3 years old, but it agrees with the newer data."
+  },
+  {
+   "id": "fr",
+   "name": "Franța",
+   "nameEn": "France",
+   "c": [
+    10,
+    null,
+    null,
+    null,
+    null,
+    null,
+    7,
+    null,
+    null,
+    null,
+    6,
+    null,
+    null,
+    6
+   ],
+   "v": [
+    9,
+    9,
+    8,
+    10,
+    6,
+    8,
+    null,
+    10
+   ],
+   "why": "Grădinița e practic universală: doar 4,5% dintre copiii de la 3 ani nu merg (2024), iar 70% stau 30 de ore sau mai mult. Locul 19 la UNICEF, puțin sub medie.",
+   "whyEn": "Kindergarten is practically universal: only 4.5% of children from age 3 do not attend (2024), and 70% stay 30 hours or more. 19th at UNICEF, slightly below average.",
+   "sources": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "The Vibes: Franța locul 19, Canada 22, Regatul Unit 35 (UNICEF)",
+     "https://www.thevibes.com/articles/lifestyles/31889/luxembourg-iceland-rank-highest-on-childcare-provisions-unicef"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "The Vibes: France 19th, Canada 22nd, UK 35th (UNICEF)",
+     "https://www.thevibes.com/articles/lifestyles/31889/luxembourg-iceland-rank-highest-on-childcare-provisions-unicef"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat și OCDE; clasamentul UNICEF (2021) e mai vechi de 3 ani, dar concordă cu datele noi.",
+   "vwhyEn": "Official Eurostat and OECD data; the UNICEF ranking (2021) is more than 3 years old, but it agrees with the newer data."
+  },
+  {
+   "id": "nl",
+   "name": "Țările de Jos",
+   "nameEn": "Netherlands",
+   "c": [
+    9,
+    10,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    6,
+    4,
+    null,
+    6
+   ],
+   "v": [
+    8,
+    9,
+    8,
+    10,
+    null,
+    7,
+    null,
+    10
+   ],
+   "why": "Peste 60% dintre copiii sub 3 ani sunt înscriși (OCDE), dar mai ales cu program scurt: 66% dintre ei stau sub 30 de ore. Participarea sub 3 ani a scăzut de la 79% la 66,5% (2025).",
+   "whyEn": "More than 60% of children under 3 are enrolled (OECD), but mostly part-time: 66% of them stay under 30 hours. Participation under 3 fell from 79% to 66.5% (2025).",
+   "sources": [
+    [
+     "OCDE, Education at a Glance 2025: participarea în educația timpurie",
+     "https://www.oecd.org/en/publications/2025/09/education-at-a-glance-2025_c58fc9ae/full-report/how-does-the-provision-of-and-participation-in-early-childhood-education-and-care-vary-across-countries_86b8275d.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, Education at a Glance 2025: participation in early childhood education",
+     "https://www.oecd.org/en/publications/2025/09/education-at-a-glance-2025_c58fc9ae/full-report/how-does-the-provision-of-and-participation-in-early-childhood-education-and-care-vary-across-countries_86b8275d.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat și OCDE; poziția în clasamentul general UNICEF nu apare în sursele consultate.",
+   "vwhyEn": "Official Eurostat and OECD data; the position in the overall UNICEF ranking does not appear in the sources consulted."
+  },
+  {
+   "id": "es",
+   "name": "Spania",
+   "nameEn": "Spain",
+   "c": [
+    10,
+    9,
+    null,
+    null,
+    null,
+    null,
+    5,
+    null,
+    null,
+    null,
+    6,
+    5,
+    null,
+    6
+   ],
+   "v": [
+    8,
+    9,
+    8,
+    10,
+    null,
+    8,
+    null,
+    10
+   ],
+   "why": "57% dintre copiii sub 3 ani au loc (2025), printre cele mai mari părți din UE, și aproape toți cei de la 3 ani merg la grădiniță. Doar 53% stau 30 de ore sau mai mult.",
+   "whyEn": "57% of children under 3 have a place (2025), among the largest shares in the EU, and almost all of those from age 3 attend kindergarten. Only 53% stay 30 hours or more.",
+   "sources": [
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat; poziția în clasamentul general UNICEF nu apare în sursele consultate.",
+   "vwhyEn": "Official Eurostat data; the position in the overall UNICEF ranking does not appear in the sources consulted."
+  },
+  {
+   "id": "it",
+   "name": "Italia",
+   "nameEn": "Italy",
+   "c": [
+    9,
+    7,
+    null,
+    null,
+    null,
+    null,
+    8,
+    null,
+    null,
+    null,
+    6,
+    7,
+    null,
+    5
+   ],
+   "v": [
+    8,
+    9,
+    8,
+    10,
+    null,
+    8,
+    null,
+    10
+   ],
+   "why": "39% dintre copiii sub 3 ani au loc, un record (2024); 73% dintre cei de la 3 ani stau 30 de ore sau mai mult, iar 7,6% nu merg deloc la grădiniță.",
+   "whyEn": "39% of children under 3 have a place, a record (2024); 73% of those from age 3 stay 30 hours or more, and 7.6% attend no kindergarten at all.",
+   "sources": [
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat; poziția în clasamentul general UNICEF nu apare în sursele consultate.",
+   "vwhyEn": "Official Eurostat data; the position in the overall UNICEF ranking does not appear in the sources consulted."
+  },
+  {
+   "id": "at",
+   "name": "Austria",
+   "nameEn": "Austria",
+   "c": [
+    8,
+    null,
+    null,
+    null,
+    null,
+    null,
+    4,
+    null,
+    null,
+    null,
+    6,
+    null,
+    null,
+    6
+   ],
+   "v": [
+    8,
+    9,
+    8,
+    10,
+    null,
+    8,
+    null,
+    10
+   ],
+   "why": "10% dintre copiii de la 3 ani nu merg la grădiniță, iar doar 37% stau 30 de ore sau mai mult: programul scurt domină.",
+   "whyEn": "10% of children from age 3 attend no kindergarten, and only 37% stay 30 hours or more: the short day dominates.",
+   "sources": [
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat; poziția în clasamentul general UNICEF nu apare în sursele consultate.",
+   "vwhyEn": "Official Eurostat data; the position in the overall UNICEF ranking does not appear in the sources consulted."
+  },
+  {
+   "id": "ie",
+   "name": "Irlanda",
+   "nameEn": "Ireland",
+   "c": [
+    9,
+    4,
+    null,
+    null,
+    null,
+    2,
+    2,
+    null,
+    null,
+    null,
+    6,
+    7,
+    null,
+    5
+   ],
+   "v": [
+    8,
+    9,
+    8,
+    10,
+    4,
+    7,
+    null,
+    10
+   ],
+   "why": "Printre cele mai scumpe țări pentru îngrijirea copiilor, după UNICEF: o familie cu venit mediu dă între o treime și jumătate dintr-un salariu. Doar 14% dintre copiii de la 3 ani stau 30 de ore sau mai mult, iar 27% dintre cei sub 3 ani au loc (2025, în creștere).",
+   "whyEn": "Among the most expensive countries for childcare, according to UNICEF: an average-income family pays between a third and half of one salary. Only 14% of children from age 3 stay 30 hours or more, and 27% of those under 3 have a place (2025, rising).",
+   "sources": [
+    [
+     "HerFamily: UNICEF, Irlanda printre cele mai scumpe țări",
+     "https://herfamily.ie/news/new-unicef-report-finds-ireland-one-expensive-countries-world-childcare-391907"
+    ],
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 de țări, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "HerFamily: UNICEF, Ireland among the most expensive countries",
+     "https://herfamily.ie/news/new-unicef-report-finds-ireland-one-expensive-countries-world-childcare-391907"
+    ],
+    [
+     "UNICEF Innocenti: Where Do Rich Countries Stand on Childcare? (41 countries, 2021)",
+     "https://www.unicef.org/innocenti/reports/where-do-rich-countries-stand-childcare"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat, actualizate anual, și un clasament independent UNICEF care confirmă poziția.",
+   "vwhyEn": "Official Eurostat data, updated yearly, and an independent UNICEF ranking that confirms the position."
+  },
+  {
+   "id": "pl",
+   "name": "Polonia",
+   "nameEn": "Poland",
+   "c": [
+    6,
+    3,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    6,
+    7,
+    null,
+    6
+   ],
+   "v": [
+    8,
+    9,
+    8,
+    10,
+    null,
+    8,
+    null,
+    10
+   ],
+   "why": "21% dintre copiii de la 3 ani nu merg la grădiniță și doar 15% dintre cei sub 3 ani au loc (2024), deși în creștere. OCDE notează că Polonia e printre țările cu cea mai mare creștere a participării în ultimul deceniu.",
+   "whyEn": "21% of children from age 3 attend no kindergarten and only 15% of those under 3 have a place (2024), though rising. The OECD notes that Poland is among the countries with the biggest rise in participation over the past decade.",
+   "sources": [
+    [
+     "OCDE, Education at a Glance 2025: participarea în educația timpurie",
+     "https://www.oecd.org/en/publications/2025/09/education-at-a-glance-2025_c58fc9ae/full-report/how-does-the-provision-of-and-participation-in-early-childhood-education-and-care-vary-across-countries_86b8275d.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "OECD, Education at a Glance 2025: participation in early childhood education",
+     "https://www.oecd.org/en/publications/2025/09/education-at-a-glance-2025_c58fc9ae/full-report/how-does-the-provision-of-and-participation-in-early-childhood-education-and-care-vary-across-countries_86b8275d.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat și OCDE; poziția în clasamentul general UNICEF nu apare în sursele consultate.",
+   "vwhyEn": "Official Eurostat and OECD data; the position in the overall UNICEF ranking does not appear in the sources consulted."
+  },
+  {
+   "id": "hu",
+   "name": "Ungaria",
+   "nameEn": "Hungary",
+   "c": [
+    10,
+    3,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    6,
+    3,
+    null,
+    6
+   ],
+   "v": [
+    8,
+    9,
+    8,
+    10,
+    null,
+    8,
+    null,
+    10
+   ],
+   "why": "Grădinița e aproape universală de la 3 ani, dar doar 17% dintre copiii sub 3 ani au loc, în scădere de la 20,5% (2024).",
+   "whyEn": "Kindergarten is almost universal from age 3, but only 17% of children under 3 have a place, down from 20.5% (2024).",
+   "sources": [
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat; poziția în clasamentul general UNICEF nu apare în sursele consultate.",
+   "vwhyEn": "Official Eurostat data; the position in the overall UNICEF ranking does not appear in the sources consulted."
+  },
+  {
+   "id": "ro",
+   "name": "România",
+   "nameEn": "Romania",
+   "c": [
+    4,
+    2,
+    3,
+    null,
+    null,
+    7,
+    3,
+    null,
+    null,
+    null,
+    6,
+    6,
+    3,
+    4
+   ],
+   "v": [
+    8,
+    9,
+    8,
+    10,
+    null,
+    7,
+    null,
+    10
+   ],
+   "why": "27% dintre copiii de la 3 ani nu merg la grădiniță, cea mai mare parte din UE (2024), și doar 11% dintre cei sub 3 ani au loc. Grădinița de stat e gratuită, dar în cartierele noi grupele ajung la 30 de copii, iar ARACIP spune că în București și în marile orașe lipsesc locuri.",
+   "whyEn": "27% of children from age 3 attend no kindergarten, the largest share in the EU (2024), and only 11% of those under 3 have a place. State kindergarten is free, but in new neighbourhoods groups reach 30 children, and ARACIP says places are short in Bucharest and the big cities.",
+   "sources": [
+    [
+     "Eurostat (prin Trading Economics): copiii sub 3 ani în îngrijire formală, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani cu 30 de ore sau mai mult pe săptămână, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (prin Trading Economics): copiii de la 3 ani fără nicio formă de grădiniță, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Agerpres: grupe de până la 30 de copii în Brașov (2024)",
+     "https://agerpres.ro/educatie-stiinta/2024/04/15/brasov-primarul-coliban-a-inaugurat-prima-gradinita-nou-construita-in-municipiu-dupa-1989--1281105"
+    ],
+    [
+     "Edupedu: președintele ARACIP despre lipsa de locuri",
+     "https://www.edupedu.ro/avertisment-pentru-parintii-care-isi-duc-copiii-la-gradinite-private-din-partea-agentiei-care-le-acrediteaza-se-inregistreaza-continuu-sesizari-privind-legalitatea-informatiile-pe-care-trebuie-sa-l/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Eurostat (via Trading Economics): children under 3 in formal childcare, 2024–2025",
+     "https://tradingeconomics.com/spain/children-aged-less-than-3-years-in-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with 30 hours a week or more, 2024–2025",
+     "https://tradingeconomics.com/portugal/formal-child-care-between-3-years-compulsory-school-age-childcare-30-hours-or-more-weekly-eurostat-data.html"
+    ],
+    [
+     "Eurostat (via Trading Economics): children from age 3 with no formal childcare, 2024",
+     "https://tradingeconomics.com/euro-area/formal-child-care-between-3-years-compulsory-school-age-no-formal-childcare-eurostat-data.html"
+    ],
+    [
+     "Agerpres: groups of up to 30 children in Brașov (2024)",
+     "https://agerpres.ro/educatie-stiinta/2024/04/15/brasov-primarul-coliban-a-inaugurat-prima-gradinita-nou-construita-in-municipiu-dupa-1989--1281105"
+    ],
+    [
+     "Edupedu: the ARACIP president on the shortage of places",
+     "https://www.edupedu.ro/avertisment-pentru-parintii-care-isi-duc-copiii-la-gradinite-private-din-partea-agentiei-care-le-acrediteaza-se-inregistreaza-continuu-sesizari-privind-legalitatea-informatiile-pe-care-trebuie-sa-l/"
+    ]
+   ],
+   "vwhy": "Date oficiale Eurostat, confirmate de declarațiile ARACIP și de inspectoratele școlare; ARACIP avertizează și asupra unor grădinițe private nelegale.",
+   "vwhyEn": "Official Eurostat data, confirmed by ARACIP and school-inspectorate statements; ARACIP also warns about some illegal private kindergartens."
+  }
+ ]
+}
