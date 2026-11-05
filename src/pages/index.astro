@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 import PhotoHeader from '../components/PhotoHeader.astro';
 import { photo } from '../data/photos';
 import { OVERVIEW, ALL, UPDATED } from '../data/overview';
-import { CRITERIA, WEIGHTS } from '../data/criteria';
+import { CRITERIA, WEIGHTS80, WEIGHTS_V } from '../data/criteria';
 import '../styles/home.css';
 
 const base = import.meta.env.BASE_URL;
@@ -21,6 +21,7 @@ const snapshots = Object.values(shaFiles).map((txt) => {
 }).sort((a, b) => b.date.localeCompare(a.date) || a.label.localeCompare(b.label));
 
 const general = CRITERIA.general;
+const verif = CRITERIA.verificare;
 ---
 
 <Base title="Toate domeniile" alt="en/" description="Un singur radar pentru cripto, start-ups, mărfuri, Forex, economii emergente și S&P 500: activele care adună cele mai multe din cele 14 condiții pentru o creștere puternică.">
@@ -46,20 +47,26 @@ const general = CRITERIA.general;
     <p class="eyebrow">Metoda</p>
     <h2>Cum citești radarul</h2>
     <div class="sgrid">
-      <div><b>1</b><h3>Aceleași 14 condiții</h3><p>Fiecare activ primește o notă de la 0 la 10 la fiecare condiție, adaptată domeniului: cerere reală, finanțe sănătoase, evaluare, aglomerație, riscuri. O condiție e îndeplinită de la nota 7.</p></div>
+      <div><b>1</b><h3>22 de condiții</h3><p>Fiecare activ primește o notă de la 0 la 10 la fiecare condiție. Primele 14 sunt adaptate domeniului (cerere reală, finanțe sănătoase, evaluare, aglomerație, riscuri) și cântăresc 80% din scor; ultimele 8 verifică dovezile cu surse externe și cântăresc 20%. O condiție e îndeplinită de la nota 7.</p></div>
       <div><b>2</b><h3>Date, nu impresii</h3><p>Unde există date oficiale (FMI, BIS, Banca Mondială, rapoarte anuale, prețuri publice), notele se calculează după formule publicate. Restul sunt judecată, cu justificare și surse.</p></div>
       <div><b>3</b><h3>Fond, nu formă</h3><p>Căutăm ce susține prețul (utilizare, clienți, finanțe), nu doar ce se vede (listare, evaluare, presă). Activele cu fond solid, încă neumflate de piață, sunt cele mai interesante. <a href={`${base}fond/`}>De ce căutăm fondul, nu forma →</a></p></div>
       <div><b>4</b><h3>Înghețat și verificat</h3><p>Notele se îngheață într-un fișier datat, cu amprentă digitală. Prețurile se actualizează automat în fiecare vineri, iar rezultatul se măsoară public, inclusiv greșelile.</p></div>
     </div>
     <div class="zones">
-      <div class="zn z-strong"><b>10+ din 14</b><span>Candidat puternic. Rar. Se urmărește săptămânal.</span></div>
-      <div class="zn z-watch"><b>6 – 9</b><span>În observație. Urmărim dacă se adaugă condiții.</span></div>
-      <div class="zn z-weak"><b>Sub 6</b><span>Lipsesc prea multe condiții, oricât de bună ar fi povestea.</span></div>
+      <div class="zn z-strong"><b>16+ din 22</b><span>Candidat puternic. Rar. Se urmărește săptămânal.</span></div>
+      <div class="zn z-watch"><b>10 – 15</b><span>În observație. Urmărim dacă se adaugă condiții.</span></div>
+      <div class="zn z-weak"><b>Sub 10</b><span>Lipsesc prea multe condiții, oricât de bună ar fi povestea.</span></div>
     </div>
-    <h3 class="crit-h">Cele 14 condiții și ponderea lor</h3>
-    <p class="muted">Aceleași ponderi în toate domeniile; ce măsurăm concret se adaptează: la Forex contează dobânda reală și contul curent, la S&P 500 fluxul de numerar, la economiile emergente datoria și instituțiile. Fiecare pagină de domeniu are tabelul ei.</p>
+    <p class="muted">Radarul principal înghețat pe 29 octombrie 2026 (cripto, mărfuri și companiile urmărite săptămânal) e încă notat pe primele 14 condiții, cu pragurile 10+ din 14 și 6–9; trece pe 22 de condiții la următorul instantaneu, iar cel vechi rămâne publicat.</p>
+    <h3 class="crit-h">Cele 22 de condiții și ponderea lor</h3>
+    <p class="muted">Aceleași ponderi în toate topurile; ce măsurăm concret la primele 14 se adaptează: la Forex contează dobânda reală și contul curent, la S&P 500 fluxul de numerar, la economiile emergente datoria și instituțiile. Fiecare pagină de domeniu are tabelul ei.</p>
     <div class="crit">
-      {general.map(([name, what], i) => <div><span class="w">{WEIGHTS[i]}%</span><b>{name}</b><small>{what}</small></div>)}
+      {general.map(([name, what], i) => <div><span class="w">{WEIGHTS80[i]}%</span><b>C{i + 1}. {name}</b><small>{what}</small></div>)}
+    </div>
+    <h3 class="crit-h">Verificarea dovezilor (C15–C22), 20% din scor</h3>
+    <p class="muted">Aceleași 8 condiții în toate topurile. O legătură nedeclarată cu noi (C22) înseamnă excludere din top.</p>
+    <div class="crit">
+      {verif.map(([name, what], i) => <div><span class="w">{WEIGHTS_V[i]}%</span><b>C{i + 15}. {name}</b><small>{what}</small></div>)}
     </div>
   </section>
 

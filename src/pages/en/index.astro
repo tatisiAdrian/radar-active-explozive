@@ -4,7 +4,7 @@ import Base from '../../layouts/Base.astro';
 import PhotoHeader from '../../components/PhotoHeader.astro';
 import { photo } from '../../data/photos';
 import { overviewFor, ALL, UPDATED } from '../../data/overview';
-import { WEIGHTS } from '../../data/criteria';
+import { WEIGHTS80, WEIGHTS_V } from '../../data/criteria';
 import { CRITERIA_EN } from '../../data/i18n';
 import '../../styles/home.css';
 
@@ -22,6 +22,7 @@ const snapshots = Object.values(shaFiles).map((txt) => {
 }).sort((a, b) => b.date.localeCompare(a.date) || a.label.localeCompare(b.label));
 
 const general = CRITERIA_EN.general;
+const verif = CRITERIA_EN.verificare;
 ---
 
 <Base lang="en" alt="" title="All domains" description="One radar for crypto, start-ups, commodities, forex, emerging economies and the S&P 500: the assets that meet the most of the 14 conditions for strong growth.">
@@ -47,20 +48,26 @@ const general = CRITERIA_EN.general;
     <p class="eyebrow">Method</p>
     <h2>How to read the radar</h2>
     <div class="sgrid">
-      <div><b>1</b><h3>The same 14 conditions</h3><p>Each asset gets a score from 0 to 10 on each condition, adapted to its domain: real demand, healthy finances, valuation, crowding, risks. A condition counts as met from a score of 7.</p></div>
+      <div><b>1</b><h3>22 conditions</h3><p>Each asset gets a score from 0 to 10 on each condition. The first 14 are adapted to the domain (real demand, healthy finances, valuation, crowding, risks) and weigh 80% of the score; the last 8 verify the evidence with outside sources and weigh 20%. A condition counts as met from a score of 7.</p></div>
       <div><b>2</b><h3>Data, not impressions</h3><p>Where official data exists (IMF, BIS, World Bank, annual reports, public prices), scores are computed with published formulas. The rest is judgement, with a written rationale and sources.</p></div>
       <div><b>3</b><h3>Substance, not form</h3><p>We look for what supports the price (usage, customers, finances), not only what is visible (listing, valuation, press). Assets with solid substance that the market has not yet inflated are the most interesting.</p></div>
       <div><b>4</b><h3>Frozen and verified</h3><p>Scores are frozen in a dated file with a digital fingerprint. Prices update automatically every Friday, and the outcome is measured in public, mistakes included.</p></div>
     </div>
     <div class="zones">
-      <div class="zn z-strong"><b>10+ of 14</b><span>Strong candidate. Rare. Tracked weekly.</span></div>
-      <div class="zn z-watch"><b>6 – 9</b><span>On watch. We track whether conditions get added.</span></div>
-      <div class="zn z-weak"><b>Under 6</b><span>Too many conditions missing, however good the story.</span></div>
+      <div class="zn z-strong"><b>16+ of 22</b><span>Strong candidate. Rare. Tracked weekly.</span></div>
+      <div class="zn z-watch"><b>10 – 15</b><span>On watch. We track whether conditions get added.</span></div>
+      <div class="zn z-weak"><b>Under 10</b><span>Too many conditions missing, however good the story.</span></div>
     </div>
-    <h3 class="crit-h">The 14 conditions and their weights</h3>
-    <p class="muted">The same weights in every domain; what we measure is adapted: in forex the real interest rate and the current account matter, in the S&P 500 cash flow, in emerging economies debt and institutions. Each domain page has its own table.</p>
+    <p class="muted">The main radar frozen on 29 October 2026 (crypto, commodities and the companies tracked weekly) is still scored on the first 14 conditions, with the thresholds 10+ of 14 and 6–9; it moves to 22 conditions at the next snapshot, and the old one stays published.</p>
+    <h3 class="crit-h">The 22 conditions and their weights</h3>
+    <p class="muted">The same weights in every ranking; what we measure in the first 14 is adapted: in forex the real interest rate and the current account matter, in the S&P 500 cash flow, in emerging economies debt and institutions. Each domain page has its own table.</p>
     <div class="crit">
-      {general.map(([name, what], i) => <div><span class="w">{WEIGHTS[i]}%</span><b>{name}</b><small>{what}</small></div>)}
+      {general.map(([name, what], i) => <div><span class="w">{WEIGHTS80[i]}%</span><b>C{i + 1}. {name}</b><small>{what}</small></div>)}
+    </div>
+    <h3 class="crit-h">Verifying the evidence (C15–C22), 20% of the score</h3>
+    <p class="muted">The same 8 conditions in every ranking. An undeclared relationship with us (C22) means exclusion from the ranking.</p>
+    <div class="crit">
+      {verif.map(([name, what], i) => <div><span class="w">{WEIGHTS_V[i]}%</span><b>C{i + 15}. {name}</b><small>{what}</small></div>)}
     </div>
   </section>
 
