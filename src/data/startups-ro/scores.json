@@ -1,5 +1,7 @@
 {
  "date": "2026-11-05",
+ "snapshot": "startups-ro-r2-2026-11-05",
+ "previousSnapshot": "startups-ro-2026-11-05",
  "updatedAt": "2026-11-05",
  "rows": [
   {
@@ -30,113 +32,23 @@
      "https://financiarul.ro/companii/bitdefender-a-avut-venituri-de-480-de-milioane-de-dolari-in-2025-si-amana-l/index.html.md"
     ]
    ],
-   "inputs": {},
-   "score": 7.62,
-   "met": 11
-  },
-  {
-   "id": "pentest-tools",
-   "name": "Pentest-Tools.com",
-   "stage": "Privată, fără investitori externi",
-   "sector": "Securitate cibernetică (testare automată)",
-   "c": [
-    7,
+   "v": [
+    9,
+    8,
+    8,
+    10,
     8,
     9,
-    6,
-    8,
-    7,
-    8,
-    6,
-    8,
-    null,
-    8,
-    null,
-    8,
-    7
-   ],
-   "why": "Dezvoltată fără investitori externi, profitabilă, cu clienți plătitori în peste 100 de țări. Fără runde de finanțare, nimeni nu poate vinde masiv; în schimb nu există nicio cale publică de a investi.",
-   "sources": [
-    [
-     "Pîrvănescu: start-up-uri tech românești de urmărit în 2026",
-     "https://pirvanescu.com/blog/2026-03-16-romanian-tech-startups-watch-2026/"
-    ]
-   ],
-   "inputs": {},
-   "score": 7.14,
-   "met": 10
-  },
-  {
-   "id": "digitail",
-   "name": "Digitail",
-   "stage": "Privată (Serie B, 2025)",
-   "sector": "Software cu AI pentru clinici veterinare",
-   "c": [
-    8,
-    7,
-    8,
-    7,
-    8,
-    8,
-    6,
-    6,
     9,
-    null,
-    7,
-    null,
-    7,
-    7
+    10
    ],
-   "why": "Fondată în 2018 la Iași. Serie B de 23 mil. USD în noiembrie 2025, condusă de Five Elms Capital, cu Atomico, Partech și Gradient revenind; finanțarea totală depășește 37 mil. USD. Înlocuiește programe vechi din clinicile veterinare, mai ales în America de Nord, unde activitatea s-a dublat într-un an. Piața are concurenți mari și consolidați.",
-   "sources": [
-    [
-     "Digitail: Serie B de 23 mil. USD (comunicat oficial)",
-     "https://digitail.com/?p=7911"
-    ],
-    [
-     "BetaKit: Digitail își extinde centrul din Toronto",
-     "https://betakit.com/digitail-grows-toronto-hub-as-it-fetches-23-million-usd-series-b-round/"
-    ]
-   ],
+   "vwhy": "Produsele sunt testate constant de laboratoare independente (AV-Test, AV-Comparatives); bilanțuri depuse în România și peste 20 de ani de istoric, cu creștere și în anii grei.",
+   "vwhyEn": "Its products are tested constantly by independent labs (AV-Test, AV-Comparatives); accounts filed in Romania and more than 20 years of record, with growth even in hard years.",
    "inputs": {},
-   "score": 7.12,
-   "met": 10
-  },
-  {
-   "id": "veridion",
-   "name": "Veridion",
-   "stage": "Privată (Serie A, 2026)",
-   "sector": "Date despre companii din toată lumea, construite cu AI",
-   "c": [
-    8,
-    7,
-    8,
-    8,
-    8,
-    7,
-    6,
-    6,
-    8,
-    null,
-    7,
-    null,
-    7,
-    7
-   ],
-   "why": "Fondată la București (fostul Soleadify). Serie A de 20 mil. USD în septembrie 2026, condusă de Hoxton Ventures, cu toți investitorii vechi revenind (Underline, OTB, GapMinder, Day One, LAUNCHub). Clienții care îi folosesc datele au o capitalizare cumulată de peste 1.700 mld. USD, potrivit companiei. Concurează cu furnizori mari de date despre companii.",
-   "sources": [
-    [
-     "Romania Insider: Veridion strânge 20 mil. USD (sept. 2026)",
-     "https://www.romania-insider.com/news/romanian-ai-startup-veridion-raises-usd-20-mln"
-    ],
-    [
-     "Vestbee: Veridion, Serie A de 20 mil. USD",
-     "https://vestbee.com/insights/articles/veridion-raises-20-m"
-    ]
-   ],
-   "inputs": {},
-   "score": 7.06,
-   "met": 10
+   "score": 7.86,
+   "met": 19,
+   "met14": 11,
+   "trust": 8
   },
   {
    "id": "uipath",
@@ -171,11 +83,25 @@
      "https://www.sec.gov/Archives/edgar/data/1734722/000173472226000012/path-20260131.htm"
     ]
    ],
+   "v": [
+    10,
+    10,
+    10,
+    9,
+    9,
+    6,
+    7,
+    10
+   ],
+   "vwhy": "Listată la NYSE, cu rapoarte anuale auditate depuse la SEC din 2021 și clienți mari cu nume. O acțiune colectivă a acționarilor după scăderea prețului e un semnal de urmărit.",
+   "vwhyEn": "Listed on the NYSE, with audited annual reports filed with the SEC since 2021 and large named clients. A shareholder class action after the share-price fall is a signal to watch.",
    "inputs": {
     "C12": "acțiunea -9,6% în două luni (Yahoo Finance, PATH)"
    },
-   "score": 6.96,
-   "met": 10,
+   "score": 7.41,
+   "met": 17,
+   "met14": 10,
+   "trust": 7,
    "price": {
     "symbol": "PATH",
     "url": "https://finance.yahoo.com/quote/PATH",
@@ -220,40 +146,104 @@
    }
   },
   {
-   "id": "bible-chat",
-   "name": "Bible Chat",
-   "stage": "Privată (Serie A, 2025)",
-   "sector": "Aplicație mobilă cu AI pentru comunitatea creștină",
+   "id": "digitail",
+   "name": "Digitail",
+   "stage": "Privată (Serie B, 2025)",
+   "sector": "Software cu AI pentru clinici veterinare",
    "c": [
+    8,
+    7,
+    8,
+    7,
+    8,
+    8,
+    6,
+    6,
     9,
-    7,
-    8,
-    6,
-    8,
-    7,
-    6,
-    8,
-    7,
-    null,
-    5,
     null,
     7,
-    6
+    null,
+    7,
+    7
    ],
-   "why": "Serie A de 14 mil. USD în februarie 2025, condusă de True Ventures din Silicon Valley. Compania românească din spatele aplicației a raportat pentru 2025 o cifră de afaceri de 72 mil. lei, de trei ori mai mare decât în 2024, cu peste 10 milioane de utilizatori. Veniturile vin din abonamente (în jur de 5% din utilizatori), iar dependența de magazinele de aplicații și de reclamă este riscul.",
+   "why": "Fondată în 2018 la Iași. Serie B de 23 mil. USD în noiembrie 2025, condusă de Five Elms Capital, cu Atomico, Partech și Gradient revenind; finanțarea totală depășește 37 mil. USD. Înlocuiește programe vechi din clinicile veterinare, mai ales în America de Nord, unde activitatea s-a dublat într-un an. Piața are concurenți mari și consolidați.",
    "sources": [
     [
-     "Romania Insider: Bible Chat strânge 14 mil. USD (feb. 2025)",
-     "https://www.romania-insider.com/bible-chat-investment-round-faith-app-romania-feb-2025"
+     "Digitail: Serie B de 23 mil. USD (comunicat oficial)",
+     "https://digitail.com/?p=7911"
     ],
     [
-     "StartupCafe: afacerile din 2025 s-au triplat",
-     "https://startupcafe.ro/?p=102861"
+     "BetaKit: Digitail își extinde centrul din Toronto",
+     "https://betakit.com/digitail-grows-toronto-hub-as-it-fetches-23-million-usd-series-b-round/"
     ]
    ],
+   "v": [
+    5,
+    7,
+    9,
+    8,
+    9,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Runde din 2019 până în 2025 cu investitori de top (Atomico, Five Elms) și o creștere confirmată de mai multe surse; fără audit public.",
+   "vwhyEn": "Rounds from 2019 to 2025 with top investors (Atomico, Five Elms) and growth confirmed by several sources; no public audit.",
    "inputs": {},
-   "score": 6.88,
-   "met": 8
+   "score": 7.23,
+   "met": 17,
+   "met14": 10,
+   "trust": 7
+  },
+  {
+   "id": "veridion",
+   "name": "Veridion",
+   "stage": "Privată (Serie A, 2026)",
+   "sector": "Date despre companii din toată lumea, construite cu AI",
+   "c": [
+    8,
+    7,
+    8,
+    8,
+    8,
+    7,
+    6,
+    6,
+    8,
+    null,
+    7,
+    null,
+    7,
+    7
+   ],
+   "why": "Fondată la București (fostul Soleadify). Serie A de 20 mil. USD în septembrie 2026, condusă de Hoxton Ventures, cu toți investitorii vechi revenind (Underline, OTB, GapMinder, Day One, LAUNCHub). Clienții care îi folosesc datele au o capitalizare cumulată de peste 1.700 mld. USD, potrivit companiei. Concurează cu furnizori mari de date despre companii.",
+   "sources": [
+    [
+     "Romania Insider: Veridion strânge 20 mil. USD (sept. 2026)",
+     "https://www.romania-insider.com/news/romanian-ai-startup-veridion-raises-usd-20-mln"
+    ],
+    [
+     "Vestbee: Veridion, Serie A de 20 mil. USD",
+     "https://vestbee.com/insights/articles/veridion-raises-20-m"
+    ]
+   ],
+   "v": [
+    5,
+    7,
+    9,
+    8,
+    9,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Runde în 2020, 2023 și 2026, cu toți investitorii vechi revenind, confirmate de multe surse; veniturile recurente s-au triplat în 2023, un an greu pentru start-up-uri.",
+   "vwhyEn": "Rounds in 2020, 2023 and 2026, with all earlier investors coming back, confirmed by many sources; recurring revenue tripled in 2023, a hard year for start-ups.",
+   "inputs": {},
+   "score": 7.18,
+   "met": 17,
+   "met14": 10,
+   "trust": 7
   },
   {
    "id": "instant-factoring",
@@ -287,45 +277,69 @@
      "https://www.romania-insider.com/instant-factoring-financing-structure-smes-nov-2025"
     ]
    ],
+   "v": [
+    9,
+    9,
+    8,
+    9,
+    9,
+    9,
+    7,
+    10
+   ],
+   "vwhy": "Instituție financiară înregistrată și supravegheată de BNR, cu finanțare de la Fondul European de Investiții și un fond de securitizare supravegheat în Spania; peste 7 ani de istoric.",
+   "vwhyEn": "A financial institution registered and supervised by the National Bank of Romania, with funding from the European Investment Fund and a securitisation fund supervised in Spain; more than 7 years of record.",
    "inputs": {},
-   "score": 6.7,
-   "met": 8
+   "score": 7.13,
+   "met": 16,
+   "met14": 8,
+   "trust": 8
   },
   {
-   "id": "seedblink",
-   "name": "SeedBlink",
-   "stage": "Privată (Serie A)",
-   "sector": "Platformă de investiții în start-up-uri",
+   "id": "pentest-tools",
+   "name": "Pentest-Tools.com",
+   "stage": "Privată, fără investitori externi",
+   "sector": "Securitate cibernetică (testare automată)",
    "c": [
     7,
+    8,
+    9,
     6,
+    8,
+    7,
+    8,
     6,
-    7,
-    7,
-    7,
-    6,
-    7,
-    7,
+    8,
     null,
-    7,
+    8,
     null,
-    6,
-    6
+    8,
+    7
    ],
-   "why": "Platformă fondată la București care permite investitorilor mici să intre în runde de start-up-uri alături de fonduri, cu o piață secundară pentru vânzarea participațiilor. A găzduit runde pentru FlowX.AI, Pago și Kinderpedia. Veniturile depind de numărul de runde, care a scăzut în regiune în 2025, iar reglementarea europeană a crowdfundingului e strictă.",
+   "why": "Dezvoltată fără investitori externi, profitabilă, cu clienți plătitori în peste 100 de țări. Fără runde de finanțare, nimeni nu poate vinde masiv; în schimb nu există nicio cale publică de a investi.",
    "sources": [
     [
-     "The Recursive: SeedBlink, 38 mil. EUR în primii doi ani",
-     "https://therecursive.com/?p=13460"
-    ],
-    [
-     "FF News: piața secundară SeedBlink",
-     "https://ffnews.com/newsarticle/seedblink-launches-an-on-demand-secondary-market-offering-early-liquidity"
+     "Pîrvănescu: start-up-uri tech românești de urmărit în 2026",
+     "https://pirvanescu.com/blog/2026-03-16-romanian-tech-startups-watch-2026/"
     ]
    ],
+   "v": [
+    4,
+    7,
+    5,
+    8,
+    6,
+    9,
+    7,
+    10
+   ],
+   "vwhy": "Bilanțuri publice și aproape 10 ani de activitate profitabilă, fără investitori; aproape toate informațiile vin însă de la companie, fără verificare externă.",
+   "vwhyEn": "Public accounts and almost 10 years of profitable activity without investors; but almost all the information comes from the company itself, with no outside verification.",
    "inputs": {},
-   "score": 6.42,
-   "met": 7
+   "score": 7.02,
+   "met": 15,
+   "met14": 10,
+   "trust": 5
   },
   {
    "id": "fintechos",
@@ -359,41 +373,123 @@
      "https://pirvanescu.com/blog/2026-03-16-romanian-tech-startups-watch-2026/"
     ]
    ],
+   "v": [
+    6,
+    8,
+    8,
+    8,
+    8,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Bilanțuri depuse în România, investitori instituționali cu nume (IFC, Santander CIB, Molten) și runde din 2019 până în 2026; pragul de rentabilitate a venit mai târziu decât promisese.",
+   "vwhyEn": "Accounts filed in Romania, named institutional investors (IFC, Santander CIB, Molten) and rounds from 2019 to 2026; profitability came later than it had promised.",
    "inputs": {},
-   "score": 6.28,
-   "met": 7
+   "score": 6.57,
+   "met": 14,
+   "met14": 7,
+   "trust": 7
   },
   {
-   "id": "unfrosen",
-   "name": "Unfrosen",
-   "stage": "Privată",
-   "sector": "Vânzarea stocurilor în exces ale brandurilor de modă",
+   "id": "bible-chat",
+   "name": "Bible Chat",
+   "stage": "Privată (Serie A, 2025)",
+   "sector": "Aplicație mobilă cu AI pentru comunitatea creștină",
    "c": [
+    9,
     7,
-    7,
-    6,
-    5,
-    7,
-    6,
-    6,
-    5,
     8,
-    null,
+    6,
+    8,
     7,
+    6,
+    8,
+    7,
+    null,
+    5,
     null,
     7,
     6
    ],
-   "why": "Platformă B2B fondată de români, care ajută brandurile de modă să vândă controlat stocurile rămase. A anunțat vânzări de 6,5 mil. EUR în 2025, în 13 piețe europene. Afacerea crește din venituri, dar depinde de câteva branduri mari și de ciclul comerțului cu haine.",
+   "why": "Serie A de 14 mil. USD în februarie 2025, condusă de True Ventures din Silicon Valley. Compania românească din spatele aplicației a raportat pentru 2025 o cifră de afaceri de 72 mil. lei, de trei ori mai mare decât în 2024, cu peste 10 milioane de utilizatori. Veniturile vin din abonamente (în jur de 5% din utilizatori), iar dependența de magazinele de aplicații și de reclamă este riscul.",
    "sources": [
     [
-     "Romania Insider: Unfrosen, 13 piețe europene (ian. 2026)",
-     "https://www.romania-insider.com/romanian-founded-b2b-platform-unfrosen-plans-further-european-expansion"
+     "Romania Insider: Bible Chat strânge 14 mil. USD (feb. 2025)",
+     "https://www.romania-insider.com/bible-chat-investment-round-faith-app-romania-feb-2025"
+    ],
+    [
+     "StartupCafe: afacerile din 2025 s-au triplat",
+     "https://startupcafe.ro/?p=102861"
     ]
    ],
+   "v": [
+    6,
+    8,
+    9,
+    5,
+    8,
+    9,
+    5,
+    10
+   ],
+   "vwhy": "Cifra de afaceri pe 2025 e în bilanțul depus în România și confirmată de mai multe surse; aplicația e însă tânără și netestată într-o perioadă grea.",
+   "vwhyEn": "Its 2025 revenue is in the accounts filed in Romania and confirmed by several sources; but the app is young and untested in a hard period.",
    "inputs": {},
-   "score": 6.28,
-   "met": 6
+   "score": 6.98,
+   "met": 13,
+   "met14": 8,
+   "trust": 5
+  },
+  {
+   "id": "seedblink",
+   "name": "SeedBlink",
+   "stage": "Privată (Serie A)",
+   "sector": "Platformă de investiții în start-up-uri",
+   "c": [
+    7,
+    6,
+    6,
+    7,
+    7,
+    7,
+    6,
+    7,
+    7,
+    null,
+    7,
+    null,
+    6,
+    6
+   ],
+   "why": "Platformă fondată la București care permite investitorilor mici să intre în runde de start-up-uri alături de fonduri, cu o piață secundară pentru vânzarea participațiilor. A găzduit runde pentru FlowX.AI, Pago și Kinderpedia. Veniturile depind de numărul de runde, care a scăzut în regiune în 2025, iar reglementarea europeană a crowdfundingului e strictă.",
+   "sources": [
+    [
+     "The Recursive: SeedBlink, 38 mil. EUR în primii doi ani",
+     "https://therecursive.com/?p=13460"
+    ],
+    [
+     "FF News: piața secundară SeedBlink",
+     "https://ffnews.com/newsarticle/seedblink-launches-an-on-demand-secondary-market-offering-early-liquidity"
+    ]
+   ],
+   "v": [
+    6,
+    7,
+    7,
+    8,
+    7,
+    9,
+    6,
+    10
+   ],
+   "vwhy": "Platformă care lucrează sub regulile europene de crowdfunding, cu istoric din 2019 și parteneri VC cu nume; volumul rundelor depinde de piață.",
+   "vwhyEn": "A platform working under European crowdfunding rules, with a record since 2019 and named VC partners; the volume of rounds depends on the market.",
+   "inputs": {},
+   "score": 6.58,
+   "met": 13,
+   "met14": 7,
+   "trust": 6
   },
   {
    "id": "kinderpedia",
@@ -423,41 +519,69 @@
      "https://www.romania-insider.com/kinderpedia-funding-growth-february-2026"
     ]
    ],
+   "v": [
+    4,
+    7,
+    7,
+    8,
+    8,
+    9,
+    6,
+    10
+   ],
+   "vwhy": "Runde în 2020, 2021 și 2026, cu investitori cu nume (Simpact, Early Game); fără verificare externă a cifrelor.",
+   "vwhyEn": "Rounds in 2020, 2021 and 2026, with named investors (Simpact, Early Game); no outside verification of the figures.",
    "inputs": {},
-   "score": 6.26,
-   "met": 6
+   "score": 6.39,
+   "met": 12,
+   "met14": 6,
+   "trust": 6
   },
   {
-   "id": "flowx-ai",
-   "name": "FlowX.AI",
-   "stage": "Privată (Serie A)",
-   "sector": "Modernizarea aplicațiilor bancare cu AI",
+   "id": "druid-ai",
+   "name": "DRUID AI",
+   "stage": "Privată (Serie C, 2025)",
+   "sector": "Agenți AI conversaționali pentru companii",
    "c": [
+    7,
     6,
     6,
+    8,
     7,
-    7,
-    7,
-    7,
+    6,
     5,
-    5,
+    6,
     7,
     null,
-    7,
+    6,
     null,
-    5,
-    6
+    4,
+    5
    ],
-   "why": "Cea mai mare rundă Serie A din România (35 mil. USD, condusă de Dawn Capital), cu clienți ca Banca Transilvania și OTP. Veniturile publicate sunt încă mici (1,55 mil. USD în 2022, ultima cifră disponibilă), deci tracțiunea comercială trebuie confirmată.",
+   "why": "Serie C de 31 mil. USD în septembrie 2025, condusă de Cipio Partners; venitul recurent anual a crescut de 2,7 ori în 2024, cu peste 300 de clienți. A adus ca CEO un executiv cu experiență (fostul CEO Sumo Logic). Categoria agenților AI e foarte aglomerată, iar marile companii de AI concurează direct.",
    "sources": [
     [
-     "bne IntelliNews: FlowX.AI strânge 35 mil. USD, cea mai mare rundă Serie A din România",
-     "https://www.intellinews.com/flowx-ai-raises-35mn-in-romania-s-largest-series-a-funding-to-date-279453"
+     "DRUID AI, comunicat Serie C (BusinessWire, sept. 2025)",
+     "https://www.businesswire.com/news/home/20250916132368/en/DRUID-AI-Raises-%2431-Million-Series-C-to-Accelerate-Agentic-AI-Platform-Growth-Under-New-CEO-Joseph-Kim"
     ]
    ],
+   "v": [
+    8,
+    7,
+    8,
+    7,
+    7,
+    9,
+    7,
+    10
+   ],
+   "vwhy": "Inclusă de Gartner în Magic Quadrant 2026 pentru platforme AI conversaționale, cu investitori cu nume (Cipio Partners) și o creștere confirmată de mai multe surse.",
+   "vwhyEn": "Included by Gartner in the 2026 Magic Quadrant for conversational AI platforms, with named investors (Cipio Partners) and growth confirmed by several sources.",
    "inputs": {},
-   "score": 6.1,
-   "met": 6
+   "score": 6.37,
+   "met": 12,
+   "met14": 4,
+   "trust": 8
   },
   {
    "id": "dotlumen",
@@ -491,9 +615,23 @@
      "https://www.romania-insider.com/dot-lumen-funding-round-eur-5-mln-jul-2024"
     ]
    ],
+   "v": [
+    8,
+    7,
+    8,
+    6,
+    8,
+    9,
+    6,
+    10
+   ],
+   "vwhy": "Proiect evaluat și finanțat de Comisia Europeană (EIC) și premiat la CES 2026; încă înainte de vânzări mari, deci netestat comercial.",
+   "vwhyEn": "A project evaluated and funded by the European Commission (EIC) and awarded at CES 2026; still before large sales, so commercially untested.",
    "inputs": {},
-   "score": 5.98,
-   "met": 6
+   "score": 6.3,
+   "met": 12,
+   "met14": 6,
+   "trust": 6
   },
   {
    "id": "neurolabs",
@@ -523,9 +661,23 @@
      "https://tech.eu/2025/04/23/neurolabs-secures-7-8m-for-computer-vision-for-retail/"
     ]
    ],
+   "v": [
+    5,
+    8,
+    8,
+    8,
+    8,
+    9,
+    6,
+    10
+   ],
+   "vwhy": "Raportări depuse în Regatul Unit (Companies House), runde din 2020 până în 2025 cu investitori cu nume; veniturile sunt încă mici.",
+   "vwhyEn": "Filings in the UK (Companies House), rounds from 2020 to 2025 with named investors; revenue is still small.",
    "inputs": {},
-   "score": 6.18,
-   "met": 5
+   "score": 6.44,
+   "met": 11,
+   "met14": 5,
+   "trust": 6
   },
   {
    "id": "pago",
@@ -559,41 +711,69 @@
      "https://investesc.pago.ro/en"
     ]
    ],
+   "v": [
+    5,
+    8,
+    8,
+    9,
+    8,
+    9,
+    5,
+    10
+   ],
+   "vwhy": "Banca Transilvania a fost acționar, iar conversia împrumuturilor în capital apare în Monitorul Oficial; aproape 10 ani de activitate, dar afacerea încă depinde de bani de la acționari.",
+   "vwhyEn": "Banca Transilvania has been a shareholder, and the conversion of loans into equity appears in the Official Gazette; almost 10 years of activity, but the business still depends on money from shareholders.",
    "inputs": {},
-   "score": 6.12,
-   "met": 5
+   "score": 6.42,
+   "met": 11,
+   "met14": 5,
+   "trust": 6
   },
   {
-   "id": "druid-ai",
-   "name": "DRUID AI",
-   "stage": "Privată (Serie C, 2025)",
-   "sector": "Agenți AI conversaționali pentru companii",
+   "id": "flowx-ai",
+   "name": "FlowX.AI",
+   "stage": "Privată (Serie A)",
+   "sector": "Modernizarea aplicațiilor bancare cu AI",
    "c": [
+    6,
+    6,
     7,
-    6,
-    6,
-    8,
     7,
-    6,
+    7,
+    7,
     5,
-    6,
+    5,
     7,
     null,
-    6,
+    7,
     null,
-    4,
-    5
+    5,
+    6
    ],
-   "why": "Serie C de 31 mil. USD în septembrie 2025, condusă de Cipio Partners; venitul recurent anual a crescut de 2,7 ori în 2024, cu peste 300 de clienți. A adus ca CEO un executiv cu experiență (fostul CEO Sumo Logic). Categoria agenților AI e foarte aglomerată, iar marile companii de AI concurează direct.",
+   "why": "Cea mai mare rundă Serie A din România (35 mil. USD, condusă de Dawn Capital), cu clienți ca Banca Transilvania și OTP. Veniturile publicate sunt încă mici (1,55 mil. USD în 2022, ultima cifră disponibilă), deci tracțiunea comercială trebuie confirmată.",
    "sources": [
     [
-     "DRUID AI, comunicat Serie C (BusinessWire, sept. 2025)",
-     "https://www.businesswire.com/news/home/20250916132368/en/DRUID-AI-Raises-%2431-Million-Series-C-to-Accelerate-Agentic-AI-Platform-Growth-Under-New-CEO-Joseph-Kim"
+     "bne IntelliNews: FlowX.AI strânge 35 mil. USD, cea mai mare rundă Serie A din România",
+     "https://www.intellinews.com/flowx-ai-raises-35mn-in-romania-s-largest-series-a-funding-to-date-279453"
     ]
    ],
+   "v": [
+    5,
+    7,
+    7,
+    6,
+    7,
+    9,
+    6,
+    10
+   ],
+   "vwhy": "Bilanțuri depuse și investitori cu nume, dar istoric scurt (din 2021) și puține cifre de venituri publicate.",
+   "vwhyEn": "Filed accounts and named investors, but a short record (since 2021) and few published revenue figures.",
    "inputs": {},
-   "score": 6.04,
-   "met": 4
+   "score": 6.23,
+   "met": 11,
+   "met14": 6,
+   "trust": 5
   },
   {
    "id": "typingdna",
@@ -623,9 +803,69 @@
      "https://www.romania-insider.com/business/romanian-typingdna-financing-google-venture-fund"
     ]
    ],
+   "v": [
+    5,
+    7,
+    7,
+    6,
+    7,
+    9,
+    5,
+    10
+   ],
+   "vwhy": "Bilanțuri depuse și investitori cu nume (Gradient Ventures), dar nicio veste importantă în ultimii ani, deci istoricul recent e greu de verificat.",
+   "vwhyEn": "Filed accounts and named investors (Gradient Ventures), but no important news in recent years, so the recent record is hard to verify.",
    "inputs": {},
-   "score": 6,
-   "met": 4
+   "score": 6.14,
+   "met": 9,
+   "met14": 4,
+   "trust": 5
+  },
+  {
+   "id": "unfrosen",
+   "name": "Unfrosen",
+   "stage": "Privată",
+   "sector": "Vânzarea stocurilor în exces ale brandurilor de modă",
+   "c": [
+    7,
+    7,
+    6,
+    5,
+    7,
+    6,
+    6,
+    5,
+    8,
+    null,
+    7,
+    null,
+    7,
+    6
+   ],
+   "why": "Platformă B2B fondată de români, care ajută brandurile de modă să vândă controlat stocurile rămase. A anunțat vânzări de 6,5 mil. EUR în 2025, în 13 piețe europene. Afacerea crește din venituri, dar depinde de câteva branduri mari și de ciclul comerțului cu haine.",
+   "sources": [
+    [
+     "Romania Insider: Unfrosen, 13 piețe europene (ian. 2026)",
+     "https://www.romania-insider.com/romanian-founded-b2b-platform-unfrosen-plans-further-european-expansion"
+    ]
+   ],
+   "v": [
+    3,
+    7,
+    3,
+    4,
+    4,
+    9,
+    5,
+    10
+   ],
+   "vwhy": "Cifrele de vânzări vin dintr-un singur comunicat preluat de presă; bilanțurile se pot consulta, dar nu există confirmări independente.",
+   "vwhyEn": "The sales figures come from a single press release picked up by the media; the accounts can be consulted, but there are no independent confirmations.",
+   "inputs": {},
+   "score": 6.06,
+   "met": 9,
+   "met14": 6,
+   "trust": 3
   },
   {
    "id": "questo",
@@ -659,9 +899,23 @@
      "https://blog.mean.ceo/startups-romania-news-october-2026/"
     ]
    ],
+   "v": [
+    4,
+    7,
+    6,
+    8,
+    5,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Bilanțuri publice și mai mulți ani de activitate, inclusiv trecerea prin pandemie, un test dur pentru turism; puține confirmări externe.",
+   "vwhyEn": "Public accounts and several years of activity, including getting through the pandemic, a hard test for tourism; few outside confirmations.",
    "inputs": {},
-   "score": 5.9,
-   "met": 3
+   "score": 6.04,
+   "met": 8,
+   "met14": 3,
+   "trust": 5
   },
   {
    "id": "frisbo",
@@ -695,9 +949,23 @@
      "https://apps.shopify.com/frisbo-e-fulfillment-services"
     ]
    ],
+   "v": [
+    3,
+    8,
+    5,
+    8,
+    6,
+    9,
+    6,
+    10
+   ],
+   "vwhy": "Bilanțuri depuse și mulți ani de activitate, cu un investitor cu nume (Neogen); puține surse recente și fără verificare externă.",
+   "vwhyEn": "Filed accounts and many years of activity, with a named investor (Neogen); few recent sources and no outside verification.",
    "inputs": {},
-   "score": 5.88,
-   "met": 3
+   "score": 6,
+   "met": 7,
+   "met14": 3,
+   "trust": 4
   },
   {
    "id": "genezio",
@@ -731,9 +999,23 @@
      "https://www.zf.ro/autor/adrian-seceleanu?p=5"
     ]
    ],
+   "v": [
+    3,
+    7,
+    6,
+    3,
+    7,
+    9,
+    3,
+    10
+   ],
+   "vwhy": "Investitori cu nume (GapMinder, Underline), dar produsul s-a schimbat complet în 2025, deci nu există istoric pentru afacerea de acum.",
+   "vwhyEn": "Named investors (GapMinder, Underline), but the product changed completely in 2025, so there is no record for the current business.",
    "inputs": {},
-   "score": 5.42,
-   "met": 3
+   "score": 5.44,
+   "met": 7,
+   "met14": 3,
+   "trust": 4
   },
   {
    "id": "qognifly",
@@ -767,9 +1049,23 @@
      "https://www.romania-insider.com/qognifly-counter-drone-system-march-2026"
     ]
    ],
+   "v": [
+    3,
+    5,
+    5,
+    2,
+    5,
+    9,
+    3,
+    10
+   ],
+   "vwhy": "Companie fondată în 2025: istoric aproape inexistent, investitorul nu e numit public, iar testarea „în Ucraina” e o afirmație proprie, neverificată independent.",
+   "vwhyEn": "A company founded in 2025: almost no record, the investor is not publicly named, and the testing “in Ukraine” is its own claim, not independently verified.",
    "inputs": {},
-   "score": 5.76,
-   "met": 2
+   "score": 5.55,
+   "met": 4,
+   "met14": 2,
+   "trust": 2
   },
   {
    "id": "multiversx",
@@ -804,11 +1100,25 @@
      "https://yellow.com/asset/egld"
     ]
    ],
+   "v": [
+    4,
+    2,
+    7,
+    7,
+    5,
+    4,
+    1,
+    10
+   ],
+   "vwhy": "Un token nu depune bilanțuri; datele de pe lanț (DefiLlama) și de pe burse se confirmă între ele, dar arată activitate mică, scoateri de pe burse și o scădere de peste 80% într-un an.",
+   "vwhyEn": "A token files no accounts; on-chain data (DefiLlama) and exchange data agree with each other, but show little activity, delistings and a fall of more than 80% in a year.",
    "inputs": {
     "C12": "acțiunea -31,9% în două luni (CoinGecko, elrond-erd-2)"
    },
-   "score": 3.84,
-   "met": 1,
+   "score": 4.02,
+   "met": 4,
+   "met14": 1,
+   "trust": 3,
    "price": {
     "symbol": "elrond-erd-2",
     "url": "https://www.coingecko.com/en/coins/elrond-erd-2",

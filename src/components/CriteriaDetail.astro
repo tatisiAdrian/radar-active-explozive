@@ -11,8 +11,10 @@ interface Props {
   /** cifrele din spatele notelor calculate, pe chei C1..C14 */
   inputs?: Record<string, string>;
   lang?: 'ro' | 'en';
+  /** numerotarea începe de la C(offset+1); folosit pentru condițiile de verificare C15–C22 */
+  offset?: number;
 }
-const { set, values, inputs = {}, lang = 'ro' } = Astro.props;
+const { set, values, inputs = {}, lang = 'ro', offset = 0 } = Astro.props;
 const en = lang === 'en';
 const crit = en ? CRITERIA_EN[set] : CRITERIA[set];
 const say = (i: number, v: number | null | undefined) => {
@@ -28,7 +30,7 @@ const cls = (v: number | null | undefined) => (v == null ? 'slab' : v >= 7 ? 'pu
     <thead><tr><th>#</th><th>{en ? 'Condition' : 'Condiție'}</th><th>{en ? 'Score' : 'Notă'}</th><th>{en ? 'In plain words' : 'Pe înțeles'}</th></tr></thead>
     <tbody>
       {crit.map(([name], i) => {
-        const k = `C${i + 1}`;
+        const k = `C${i + 1 + offset}`;
         const v = values[i];
         return (
           <tr>

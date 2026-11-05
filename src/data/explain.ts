@@ -125,6 +125,17 @@ const proiecte: Three[] = [
   ['Riscuri mari: întârzieri, procese sau geopolitică.', 'Câteva riscuri de urmărit.', 'Riscuri mici.'],
 ];
 
+const verificare: Three[] = [
+  ['Nicio verificare făcută de un terț.', 'Evaluare externă veche sau parțială.', 'Verificat independent: audit, certificare sau clasament extern recent.'],
+  ['Aproape nimic în registrele publice.', 'Date de bază în registre, puține cifre.', 'Bilanțuri sau raportări oficiale depuse și consultabile.'],
+  ['Cifrele vin mai ales din comunicatele proprii.', 'O sursă independentă confirmă o parte din cifre.', 'Mai multe surse independente spun același lucru.'],
+  ['Prea nou sau fără istoric verificabil.', 'Câțiva ani de istoric.', 'Rezultate confirmate pe mai mulți ani.'],
+  ['Doar afirmații proprii despre clienți și parteneri.', 'Câțiva terți confirmă, dar fără detalii.', 'Clienți, parteneri sau investitori cu nume confirmă public.'],
+  ['Litigii grave, sancțiuni sau semne de insolvență.', 'Câteva semnale de urmărit.', 'Nimic îngrijorător în registrele publice.'],
+  ['A căzut în ultima criză și nu și-a revenit.', 'A suferit, dar și-a revenit sau încă nu a fost testat.', 'A rezistat sau a crescut în ultima perioadă grea.'],
+  ['Relație nedeclarată cu 22Radar: exclus din top.', 'Relație declarată, fără influență asupra notei.', 'Nicio relație cu 22Radar.'],
+];
+
 const investitori: Three[] = [
   ['Nicio investiție nouă anunțată recent.', 'Investește, dar într-un ritm lent sau neclar.', 'Investește activ: tranzacții noi în ultimele 12 luni.'],
   ['Fond vechi, în mare parte investit.', 'Fond încă în investire, fără capital proaspăt.', 'Fond închis recent, cu bani de investit.'],
@@ -142,7 +153,7 @@ const investitori: Three[] = [
   ['Riscuri mari: schimbare de control, restructurare sau fond pe final.', 'Câteva riscuri de urmărit.', 'Riscuri mici.'],
 ];
 
-export const SETS: Record<string, Three[]> = { investitori, general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare, 'proiecte-imobiliare': proiecte, ...Object.fromEntries(Object.entries(SOCIAL_SETS).map(([k, v]) => [k, v.exRo])) };
+export const SETS: Record<string, Three[]> = { verificare, investitori, general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare, 'proiecte-imobiliare': proiecte, ...Object.fromEntries(Object.entries(SOCIAL_SETS).map(([k, v]) => [k, v.exRo])) };
 
 /** Propoziția pe înțeles pentru nota v la condiția i (0-13) din setul dat. */
 export function explain(set: string, i: number, v: number | null | undefined): string {

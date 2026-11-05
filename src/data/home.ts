@@ -53,7 +53,7 @@ export const ITEMS: HomeItem[] = [
     set: a.m === 'comm' ? 'marfuri' : 'general', launched: LAUNCHED[a.g] ?? null, nameEn: a.n.en, gkey: a.g,
   })),
   ...(ro.rows as unknown as Row[]).map((r) => mk('startups/europa/romania', {
-    name: r.name, group: r.stage ?? 'Start-up', access: r.priceId ? 'Cumpărabil' : 'Acces restrâns', met: r.met, score: r.score, c: r.c ?? [], set: 'general', launched: null, gkey: r.stage,
+    name: r.name, group: r.stage ?? 'Start-up', access: r.priceId ? 'Cumpărabil' : 'Acces restrâns', met: (r as { met14?: number }).met14 ?? r.met, score: r.score, c: r.c ?? [], set: 'general', launched: null, gkey: r.stage,
   })),
   ...(sp500.rows as unknown as Row[]).map((r) => mk('sp500', {
     name: `${r.name} (${r.id})`, group: 'Listată în S&P 500', access: 'Cumpărabil', met: r.met, score: r.score, c: r.criteria ?? [], set: 'sp500', launched: null, gkey: 'sp',

@@ -27,7 +27,7 @@ export const DOMAIN_EN: Record<string, { title: string; short: string; what: str
   'localitati-romania': { title: "The best places in Romania for a good life", short: "Places", what: "the best places in romania for a good life", summary: "22 cities, scored on 14 conditions: income, jobs, attractiveness, education, healthcare, nature, connectivity, housing cost and risks." },
   crypto: { title: 'Crypto assets', short: 'Crypto', what: 'launched and unlaunched tokens', summary: 'Market cap, volatility, adoption and regulation in the crypto market.' },
   startups: { title: 'Start-ups worldwide', short: 'Global start-ups', what: 'recently listed companies, pre-IPO and start-ups', summary: 'Funding, valuations and the dynamics of start-up ecosystems worldwide.' },
-  'startups/europa/romania': { title: 'Start-ups in Romania', short: 'Romanian start-ups', what: 'tech companies founded in Romania', summary: '22 tech companies founded in Romania, from UiPath and Bitdefender to seed-stage start-ups, scored on the same 14 conditions.' },
+  'startups/europa/romania': { title: 'Start-ups in Romania', short: 'Romanian start-ups', what: 'tech companies founded in Romania', summary: '22 tech companies founded in Romania, from UiPath and Bitdefender to seed-stage start-ups, scored on 22 conditions: the radar’s 14 and 8 that verify the evidence.' },
   sp500: { title: 'S&P 500', short: 'S&P 500', what: 'the largest US companies', summary: '22 of the largest companies in the S&P 500, scored on the same 14 conditions, with figures from annual reports and weekly prices.' },
   marfuri: { title: 'Commodities', short: 'Commodities', what: 'mature and emerging commodities', summary: 'Energy, metals and agricultural products: prices, demand and supply.' },
   forex: { title: 'Forex', short: 'Forex', what: 'major and emerging currencies', summary: '22 currencies scored on the same 14 conditions, with IMF and BIS data and weekly exchange rates.' },
@@ -190,6 +190,16 @@ export const CRITERIA_EN: Record<string, [string, string][]> = {
     ['Price trend', 'Annual change in real house prices.'],
     ['Crowding (inverse)', 'Few foreign investors or funds betting on the same market.'],
     ['Risk', 'No credit bubble, political crises or sudden property taxes.'],
+  ],
+  verificare: [
+    ['Independent verification', 'An audit, certification or ranking by a recognised third party.'],
+    ['Data in official registers', 'Filed accounts, stock-exchange or regulatory filings.'],
+    ['Agreement of sources', 'At least two independent sources confirm the same figures.'],
+    ['Track record over time', 'Results are confirmed over several years.'],
+    ['Third-party confirmation', 'Clients, partners or investors who confirm the relationship publicly.'],
+    ['No warning signs', 'No serious litigation, sanctions or insolvency.'],
+    ['Resilience under stress', 'How it came through the last crisis or weak year.'],
+    ['Independence from us', 'No commercial relationship with 22Radar.'],
   ],
   investitori: [
     ['Really invests', 'New investments announced in the last 12 months, not just a fund on paper.'],
@@ -370,6 +380,16 @@ const proiecteEn: Three[] = [
   ['Many investors on the same bet.', 'Moderate positioning.', 'Few investors on the same bet.'],
   ['High risks: delays, lawsuits or geopolitics.', 'A few risks to watch.', 'Low risks.'],
 ];
+const verificareEn: Three[] = [
+  ['No verification by a third party.', 'An old or partial outside assessment.', 'Independently verified: a recent audit, certification or outside ranking.'],
+  ['Almost nothing in public registers.', 'Basic register data, few figures.', 'Official accounts or filings available for anyone to check.'],
+  ['The figures come mainly from its own press releases.', 'One independent source confirms part of the figures.', 'Several independent sources say the same.'],
+  ['Too new, or no verifiable record.', 'A few years of record.', 'Results confirmed over several years.'],
+  ['Only its own claims about clients and partners.', 'A few third parties confirm, without detail.', 'Named clients, partners or investors confirm publicly.'],
+  ['Serious litigation, sanctions or signs of insolvency.', 'A few signals to watch.', 'Nothing worrying in public registers.'],
+  ['It fell in the last crisis and did not recover.', 'It suffered but recovered, or has not yet been tested.', 'It held up or grew through the last hard period.'],
+  ['Undeclared relationship with 22Radar: excluded from the ranking.', 'Declared relationship, with no influence on the score.', 'No relationship with 22Radar.'],
+];
 const investitoriEn: Three[] = [
   ['No new investments announced recently.', 'Invests, but at a slow or unclear pace.', 'Invests actively: new deals in the last 12 months.'],
   ['Old fund, mostly invested.', 'A fund still deploying, without fresh capital.', 'A recently closed fund with money to invest.'],
@@ -386,5 +406,5 @@ const investitoriEn: Three[] = [
   ['Very selective: acceptance below 1-2%.', 'Moderate competition.', 'Few founders competing for the same attention.'],
   ['High risks: change of control, restructuring or a fund near its end.', 'A few risks to watch.', 'Low risks.'],
 ];
-export const SETS_EN: Record<string, Three[]> = { investitori: investitoriEn, general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare: imobiliareEn, 'proiecte-imobiliare': proiecteEn, ...Object.fromEntries(Object.entries(SOCIAL_SETS).map(([k, v]) => [k, v.exEn])) };
+export const SETS_EN: Record<string, Three[]> = { verificare: verificareEn, investitori: investitoriEn, general, marfuri, forex, 'economii-emergente': emergente, sp500, imobiliare: imobiliareEn, 'proiecte-imobiliare': proiecteEn, ...Object.fromEntries(Object.entries(SOCIAL_SETS).map(([k, v]) => [k, v.exEn])) };
 export const NA_EN = 'Cannot be assessed yet (for example, the asset is not publicly traded).';

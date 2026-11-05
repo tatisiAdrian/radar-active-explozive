@@ -39,7 +39,7 @@ export const domains: Domain[] = [
     radarMarket: 'comp',
     criteria: 'general',
     countries: ['RO'],
-    summary: '22 de companii tech fondate în România, de la UiPath și Bitdefender la start-up-uri seed, notate pe aceleași 14 condiții.',
+    summary: '22 de companii tech fondate în România, de la UiPath și Bitdefender la start-up-uri seed, notate pe 22 de condiții: cele 14 ale radarului și 8 de verificare a dovezilor.',
     status: 'activ',
     questions: [
       'Cum se compară România cu regiunea (Europa Centrală și de Est)?',

@@ -123,6 +123,16 @@ export const CRITERIA: Record<string, CriteriaSet> = {
     ['Aglomerație (invers)', 'Puțini investitori pe același pariu.'],
     ['Riscuri mici', 'Fără întârzieri mari, procese sau risc geopolitic.'],
   ],
+  verificare: [
+    ['Verificare independentă', 'Audit, certificare sau clasament făcut de un terț recunoscut.'],
+    ['Date în registre oficiale', 'Bilanțuri depuse, raportări la bursă sau la autorități.'],
+    ['Concordanța surselor', 'Cel puțin două surse independente confirmă aceleași cifre.'],
+    ['Istoric în timp', 'Rezultatele se confirmă pe mai mulți ani.'],
+    ['Confirmare de la terți', 'Clienți, parteneri sau investitori care confirmă public relația.'],
+    ['Fără semnale de alarmă', 'Fără litigii grave, sancțiuni sau insolvență.'],
+    ['Rezistență la stres', 'Cum a trecut prin ultima criză sau ultimul an slab.'],
+    ['Independență față de noi', 'Nicio relație comercială cu 22Radar.'],
+  ],
   investitori: [
     ['Investește cu adevărat', 'Investiții noi anunțate în ultimele 12 luni, nu doar un fond pe hârtie.'],
     ['Fond nou disponibil', 'Un fond închis recent, cu bani încă neinvestiți.'],
