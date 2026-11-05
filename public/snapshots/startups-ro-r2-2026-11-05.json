@@ -1,0 +1,1041 @@
+{
+ "domain": "startups/europa/romania",
+ "date": "2026-11-05",
+ "weights": [
+  13,
+  5,
+  5,
+  6,
+  5,
+  6,
+  6,
+  3,
+  5,
+  5,
+  5,
+  5,
+  5,
+  6
+ ],
+ "verification_weights": [
+  4,
+  4,
+  3,
+  3,
+  2,
+  2,
+  1,
+  1
+ ],
+ "met_threshold": 7,
+ "rows": [
+  {
+   "id": "bitdefender",
+   "name": "Bitdefender",
+   "stage": "Privată, listare amânată",
+   "sector": "Securitate cibernetică",
+   "c": [
+    9,
+    10,
+    9,
+    7,
+    9,
+    8,
+    6,
+    7,
+    9,
+    null,
+    7,
+    null,
+    7,
+    7
+   ],
+   "sources": [
+    [
+     "Financiarul: venituri 2025 și amânarea listării (6 iulie 2026)",
+     "https://financiarul.ro/companii/bitdefender-a-avut-venituri-de-480-de-milioane-de-dolari-in-2025-si-amana-l/index.html.md"
+    ]
+   ],
+   "v": [
+    9,
+    8,
+    8,
+    10,
+    8,
+    9,
+    9,
+    10
+   ],
+   "inputs": {},
+   "score": 7.86,
+   "met": 19,
+   "met14": 11,
+   "trust": 8
+  },
+  {
+   "id": "uipath",
+   "name": "UiPath",
+   "stage": "Listată (NYSE: PATH)",
+   "sector": "Automatizare software și agenți AI",
+   "priceId": "ro-uipath",
+   "c": [
+    9,
+    4,
+    9,
+    7,
+    9,
+    7,
+    7,
+    6,
+    8,
+    8,
+    7,
+    0,
+    7,
+    6
+   ],
+   "sources": [
+    [
+     "UiPath, rezultate fiscal 2026 (comunicat oficial)",
+     "https://ir.uipath.com/news/detail/431/mailto:PR@uipath.com"
+    ],
+    [
+     "UiPath, raport anual 10-K (SEC)",
+     "https://www.sec.gov/Archives/edgar/data/1734722/000173472226000012/path-20260131.htm"
+    ]
+   ],
+   "v": [
+    10,
+    10,
+    10,
+    9,
+    9,
+    6,
+    7,
+    10
+   ],
+   "inputs": {
+    "C12": "acțiunea -9,6% în două luni (Yahoo Finance, PATH)"
+   },
+   "score": 7.41,
+   "met": 17,
+   "met14": 10,
+   "trust": 7
+  },
+  {
+   "id": "digitail",
+   "name": "Digitail",
+   "stage": "Privată (Serie B, 2025)",
+   "sector": "Software cu AI pentru clinici veterinare",
+   "c": [
+    8,
+    7,
+    8,
+    7,
+    8,
+    8,
+    6,
+    6,
+    9,
+    null,
+    7,
+    null,
+    7,
+    7
+   ],
+   "sources": [
+    [
+     "Digitail: Serie B de 23 mil. USD (comunicat oficial)",
+     "https://digitail.com/?p=7911"
+    ],
+    [
+     "BetaKit: Digitail își extinde centrul din Toronto",
+     "https://betakit.com/digitail-grows-toronto-hub-as-it-fetches-23-million-usd-series-b-round/"
+    ]
+   ],
+   "v": [
+    5,
+    7,
+    9,
+    8,
+    9,
+    9,
+    8,
+    10
+   ],
+   "inputs": {},
+   "score": 7.23,
+   "met": 17,
+   "met14": 10,
+   "trust": 7
+  },
+  {
+   "id": "veridion",
+   "name": "Veridion",
+   "stage": "Privată (Serie A, 2026)",
+   "sector": "Date despre companii din toată lumea, construite cu AI",
+   "c": [
+    8,
+    7,
+    8,
+    8,
+    8,
+    7,
+    6,
+    6,
+    8,
+    null,
+    7,
+    null,
+    7,
+    7
+   ],
+   "sources": [
+    [
+     "Romania Insider: Veridion strânge 20 mil. USD (sept. 2026)",
+     "https://www.romania-insider.com/news/romanian-ai-startup-veridion-raises-usd-20-mln"
+    ],
+    [
+     "Vestbee: Veridion, Serie A de 20 mil. USD",
+     "https://vestbee.com/insights/articles/veridion-raises-20-m"
+    ]
+   ],
+   "v": [
+    5,
+    7,
+    9,
+    8,
+    9,
+    9,
+    8,
+    10
+   ],
+   "inputs": {},
+   "score": 7.18,
+   "met": 17,
+   "met14": 10,
+   "trust": 7
+  },
+  {
+   "id": "instant-factoring",
+   "name": "Instant Factoring",
+   "stage": "Privată (capital + securitizare)",
+   "sector": "Factoring digital pentru firme mici",
+   "c": [
+    8,
+    7,
+    6,
+    6,
+    8,
+    7,
+    7,
+    6,
+    8,
+    null,
+    7,
+    null,
+    7,
+    5
+   ],
+   "sources": [
+    [
+     "Outsourcing Today: 104 mil. EUR finanțați în 2025",
+     "https://outsourcing-today.ro/?p=14767"
+    ],
+    [
+     "Romania Insider: structura de finanțare de 30 mil. EUR (nov. 2025)",
+     "https://www.romania-insider.com/instant-factoring-financing-structure-smes-nov-2025"
+    ]
+   ],
+   "v": [
+    9,
+    9,
+    8,
+    9,
+    9,
+    9,
+    7,
+    10
+   ],
+   "inputs": {},
+   "score": 7.13,
+   "met": 16,
+   "met14": 8,
+   "trust": 8
+  },
+  {
+   "id": "pentest-tools",
+   "name": "Pentest-Tools.com",
+   "stage": "Privată, fără investitori externi",
+   "sector": "Securitate cibernetică (testare automată)",
+   "c": [
+    7,
+    8,
+    9,
+    6,
+    8,
+    7,
+    8,
+    6,
+    8,
+    null,
+    8,
+    null,
+    8,
+    7
+   ],
+   "sources": [
+    [
+     "Pîrvănescu: start-up-uri tech românești de urmărit în 2026",
+     "https://pirvanescu.com/blog/2026-03-16-romanian-tech-startups-watch-2026/"
+    ]
+   ],
+   "v": [
+    4,
+    7,
+    5,
+    8,
+    6,
+    9,
+    7,
+    10
+   ],
+   "inputs": {},
+   "score": 7.02,
+   "met": 15,
+   "met14": 10,
+   "trust": 5
+  },
+  {
+   "id": "fintechos",
+   "name": "FintechOS",
+   "stage": "Privată (Serie B + finanțare 2026)",
+   "sector": "Software pentru bănci și asigurători",
+   "c": [
+    7,
+    7,
+    7,
+    6,
+    7,
+    6,
+    5,
+    5,
+    7,
+    null,
+    7,
+    null,
+    7,
+    6
+   ],
+   "sources": [
+    [
+     "The Next Web: FintechOS strânge 28 mil. USD după ce a devenit profitabilă (22 sept. 2026)",
+     "https://thenextweb.com/news/fintechos-raises-28m-equity-debt-profitability"
+    ],
+    [
+     "Pîrvănescu: start-up-uri tech românești de urmărit în 2026",
+     "https://pirvanescu.com/blog/2026-03-16-romanian-tech-startups-watch-2026/"
+    ]
+   ],
+   "v": [
+    6,
+    8,
+    8,
+    8,
+    8,
+    8,
+    7,
+    10
+   ],
+   "inputs": {},
+   "score": 6.57,
+   "met": 14,
+   "met14": 7,
+   "trust": 7
+  },
+  {
+   "id": "bible-chat",
+   "name": "Bible Chat",
+   "stage": "Privată (Serie A, 2025)",
+   "sector": "Aplicație mobilă cu AI pentru comunitatea creștină",
+   "c": [
+    9,
+    7,
+    8,
+    6,
+    8,
+    7,
+    6,
+    8,
+    7,
+    null,
+    5,
+    null,
+    7,
+    6
+   ],
+   "sources": [
+    [
+     "Romania Insider: Bible Chat strânge 14 mil. USD (feb. 2025)",
+     "https://www.romania-insider.com/bible-chat-investment-round-faith-app-romania-feb-2025"
+    ],
+    [
+     "StartupCafe: afacerile din 2025 s-au triplat",
+     "https://startupcafe.ro/?p=102861"
+    ]
+   ],
+   "v": [
+    6,
+    8,
+    9,
+    5,
+    8,
+    9,
+    5,
+    10
+   ],
+   "inputs": {},
+   "score": 6.98,
+   "met": 13,
+   "met14": 8,
+   "trust": 5
+  },
+  {
+   "id": "seedblink",
+   "name": "SeedBlink",
+   "stage": "Privată (Serie A)",
+   "sector": "Platformă de investiții în start-up-uri",
+   "c": [
+    7,
+    6,
+    6,
+    7,
+    7,
+    7,
+    6,
+    7,
+    7,
+    null,
+    7,
+    null,
+    6,
+    6
+   ],
+   "sources": [
+    [
+     "The Recursive: SeedBlink, 38 mil. EUR în primii doi ani",
+     "https://therecursive.com/?p=13460"
+    ],
+    [
+     "FF News: piața secundară SeedBlink",
+     "https://ffnews.com/newsarticle/seedblink-launches-an-on-demand-secondary-market-offering-early-liquidity"
+    ]
+   ],
+   "v": [
+    6,
+    7,
+    7,
+    8,
+    7,
+    9,
+    6,
+    10
+   ],
+   "inputs": {},
+   "score": 6.58,
+   "met": 13,
+   "met14": 7,
+   "trust": 6
+  },
+  {
+   "id": "kinderpedia",
+   "name": "Kinderpedia",
+   "stage": "Privată (rundă de creștere, 2026)",
+   "sector": "Platformă cu AI pentru gestiunea școlilor și grădinițelor",
+   "c": [
+    6,
+    6,
+    6,
+    6,
+    7,
+    7,
+    6,
+    7,
+    7,
+    null,
+    7,
+    null,
+    6,
+    7
+   ],
+   "sources": [
+    [
+     "Romania Insider: Kinderpedia strânge 2,2 mil. EUR (feb. 2026)",
+     "https://www.romania-insider.com/kinderpedia-funding-growth-february-2026"
+    ]
+   ],
+   "v": [
+    4,
+    7,
+    7,
+    8,
+    8,
+    9,
+    6,
+    10
+   ],
+   "inputs": {},
+   "score": 6.39,
+   "met": 12,
+   "met14": 6,
+   "trust": 6
+  },
+  {
+   "id": "druid-ai",
+   "name": "DRUID AI",
+   "stage": "Privată (Serie C, 2025)",
+   "sector": "Agenți AI conversaționali pentru companii",
+   "c": [
+    7,
+    6,
+    6,
+    8,
+    7,
+    6,
+    5,
+    6,
+    7,
+    null,
+    6,
+    null,
+    4,
+    5
+   ],
+   "sources": [
+    [
+     "DRUID AI, comunicat Serie C (BusinessWire, sept. 2025)",
+     "https://www.businesswire.com/news/home/20250916132368/en/DRUID-AI-Raises-%2431-Million-Series-C-to-Accelerate-Agentic-AI-Platform-Growth-Under-New-CEO-Joseph-Kim"
+    ]
+   ],
+   "v": [
+    8,
+    7,
+    8,
+    7,
+    7,
+    9,
+    7,
+    10
+   ],
+   "inputs": {},
+   "score": 6.37,
+   "met": 12,
+   "met14": 4,
+   "trust": 8
+  },
+  {
+   "id": "dotlumen",
+   "name": "dotLumen (.lumen)",
+   "stage": "Privată (granturi UE + rundă seed)",
+   "sector": "Ochelari de mobilitate pentru nevăzători",
+   "c": [
+    4,
+    6,
+    6,
+    7,
+    4,
+    7,
+    5,
+    7,
+    10,
+    null,
+    7,
+    null,
+    8,
+    6
+   ],
+   "sources": [
+    [
+     "Comisia Europeană, EIC: proiectul .lumen",
+     "https://eic.ec.europa.eu/impact/lumen_en"
+    ],
+    [
+     "Romania Insider: rundă de 5 mil. EUR (iulie 2024)",
+     "https://www.romania-insider.com/dot-lumen-funding-round-eur-5-mln-jul-2024"
+    ]
+   ],
+   "v": [
+    8,
+    7,
+    8,
+    6,
+    8,
+    9,
+    6,
+    10
+   ],
+   "inputs": {},
+   "score": 6.3,
+   "met": 12,
+   "met14": 6,
+   "trust": 6
+  },
+  {
+   "id": "neurolabs",
+   "name": "Neurolabs",
+   "stage": "Privată (Serie A, 2025)",
+   "sector": "Recunoaștere vizuală cu AI pentru rafturile din magazine",
+   "c": [
+    6,
+    6,
+    7,
+    7,
+    6,
+    7,
+    6,
+    5,
+    7,
+    null,
+    7,
+    null,
+    6,
+    6
+   ],
+   "sources": [
+    [
+     "Tech.eu: Neurolabs strânge 7,8 mil. USD (apr. 2025)",
+     "https://tech.eu/2025/04/23/neurolabs-secures-7-8m-for-computer-vision-for-retail/"
+    ]
+   ],
+   "v": [
+    5,
+    8,
+    8,
+    8,
+    8,
+    9,
+    6,
+    10
+   ],
+   "inputs": {},
+   "score": 6.44,
+   "met": 11,
+   "met14": 5,
+   "trust": 6
+  },
+  {
+   "id": "pago",
+   "name": "Pago",
+   "stage": "Privată (Serie A, 2024)",
+   "sector": "Plata facturilor de utilități într-o singură aplicație",
+   "c": [
+    7,
+    5,
+    5,
+    5,
+    7,
+    6,
+    6,
+    7,
+    8,
+    null,
+    7,
+    null,
+    6,
+    6
+   ],
+   "sources": [
+    [
+     "Romania Insider: Pago strânge 2,3 mil. EUR (oct. 2024)",
+     "https://www.romania-insider.com/pago-series-a-round-oct-2024"
+    ],
+    [
+     "Pago: pagina rundei pentru investitori",
+     "https://investesc.pago.ro/en"
+    ]
+   ],
+   "v": [
+    5,
+    8,
+    8,
+    9,
+    8,
+    9,
+    5,
+    10
+   ],
+   "inputs": {},
+   "score": 6.42,
+   "met": 11,
+   "met14": 5,
+   "trust": 6
+  },
+  {
+   "id": "flowx-ai",
+   "name": "FlowX.AI",
+   "stage": "Privată (Serie A)",
+   "sector": "Modernizarea aplicațiilor bancare cu AI",
+   "c": [
+    6,
+    6,
+    7,
+    7,
+    7,
+    7,
+    5,
+    5,
+    7,
+    null,
+    7,
+    null,
+    5,
+    6
+   ],
+   "sources": [
+    [
+     "bne IntelliNews: FlowX.AI strânge 35 mil. USD, cea mai mare rundă Serie A din România",
+     "https://www.intellinews.com/flowx-ai-raises-35mn-in-romania-s-largest-series-a-funding-to-date-279453"
+    ]
+   ],
+   "v": [
+    5,
+    7,
+    7,
+    6,
+    7,
+    9,
+    6,
+    10
+   ],
+   "inputs": {},
+   "score": 6.23,
+   "met": 11,
+   "met14": 6,
+   "trust": 5
+  },
+  {
+   "id": "typingdna",
+   "name": "TypingDNA",
+   "stage": "Privată (Serie A)",
+   "sector": "Autentificare după modul de tastare",
+   "c": [
+    5,
+    6,
+    6,
+    6,
+    6,
+    7,
+    6,
+    5,
+    8,
+    null,
+    7,
+    null,
+    7,
+    6
+   ],
+   "sources": [
+    [
+     "Romania Insider: fondul de AI al Google conduce runda TypingDNA",
+     "https://www.romania-insider.com/business/romanian-typingdna-financing-google-venture-fund"
+    ]
+   ],
+   "v": [
+    5,
+    7,
+    7,
+    6,
+    7,
+    9,
+    5,
+    10
+   ],
+   "inputs": {},
+   "score": 6.14,
+   "met": 9,
+   "met14": 4,
+   "trust": 5
+  },
+  {
+   "id": "unfrosen",
+   "name": "Unfrosen",
+   "stage": "Privată",
+   "sector": "Vânzarea stocurilor în exces ale brandurilor de modă",
+   "c": [
+    7,
+    7,
+    6,
+    5,
+    7,
+    6,
+    6,
+    5,
+    8,
+    null,
+    7,
+    null,
+    7,
+    6
+   ],
+   "sources": [
+    [
+     "Romania Insider: Unfrosen, 13 piețe europene (ian. 2026)",
+     "https://www.romania-insider.com/romanian-founded-b2b-platform-unfrosen-plans-further-european-expansion"
+    ]
+   ],
+   "v": [
+    3,
+    7,
+    3,
+    4,
+    4,
+    9,
+    5,
+    10
+   ],
+   "inputs": {},
+   "score": 6.06,
+   "met": 9,
+   "met14": 6,
+   "trust": 3
+  },
+  {
+   "id": "questo",
+   "name": "Questo",
+   "stage": "Privată (seed)",
+   "sector": "Turism și jocuri bazate pe locație",
+   "c": [
+    5,
+    6,
+    6,
+    5,
+    6,
+    6,
+    6,
+    6,
+    6,
+    null,
+    7,
+    null,
+    8,
+    7
+   ],
+   "sources": [
+    [
+     "Pîrvănescu: start-up-uri tech românești de urmărit în 2026",
+     "https://pirvanescu.com/blog/2026-03-16-romanian-tech-startups-watch-2026/"
+    ],
+    [
+     "Mean CEO: știri despre start-up-urile din România, octombrie 2026",
+     "https://blog.mean.ceo/startups-romania-news-october-2026/"
+    ]
+   ],
+   "v": [
+    4,
+    7,
+    6,
+    8,
+    5,
+    9,
+    8,
+    10
+   ],
+   "inputs": {},
+   "score": 6.04,
+   "met": 8,
+   "met14": 3,
+   "trust": 5
+  },
+  {
+   "id": "frisbo",
+   "name": "Frisbo",
+   "stage": "Privată",
+   "sector": "Depozitare și livrare pentru magazinele online",
+   "c": [
+    6,
+    5,
+    5,
+    5,
+    7,
+    6,
+    6,
+    5,
+    8,
+    null,
+    7,
+    null,
+    6,
+    6
+   ],
+   "sources": [
+    [
+     "Spotmedia: Frisbo se extinde în cinci țări",
+     "https://spotmedia.ro/stiri/economie/un-startup-romanesc-isi-extinde-operatiunile-in-cinci-noi-tari-devenind-cea-mai-mare-retea-europeana-de-e-fulfillment-cu-livrare-a-doua-zi"
+    ],
+    [
+     "Shopify: aplicația Frisbo European Fulfillment",
+     "https://apps.shopify.com/frisbo-e-fulfillment-services"
+    ]
+   ],
+   "v": [
+    3,
+    8,
+    5,
+    8,
+    6,
+    9,
+    6,
+    10
+   ],
+   "inputs": {},
+   "score": 6,
+   "met": 7,
+   "met14": 3,
+   "trust": 4
+  },
+  {
+   "id": "genezio",
+   "name": "Genezio",
+   "stage": "Privată (pre-seed)",
+   "sector": "Vizibilitatea brandurilor în asistenții AI",
+   "c": [
+    4,
+    5,
+    6,
+    7,
+    4,
+    7,
+    6,
+    5,
+    6,
+    null,
+    7,
+    null,
+    5,
+    5
+   ],
+   "sources": [
+    [
+     "Romania Insider: Genezio, pre-seed de 2 mil. USD",
+     "https://romania-insider.com/romanian-startup-genezio-preseed-round-gapminder-ventures"
+    ],
+    [
+     "Ziarul Financiar: Genezio, 575.000 EUR după pivot (iun. 2026)",
+     "https://www.zf.ro/autor/adrian-seceleanu?p=5"
+    ]
+   ],
+   "v": [
+    3,
+    7,
+    6,
+    3,
+    7,
+    9,
+    3,
+    10
+   ],
+   "inputs": {},
+   "score": 5.44,
+   "met": 7,
+   "met14": 3,
+   "trust": 4
+  },
+  {
+   "id": "qognifly",
+   "name": "Qognifly",
+   "stage": "Privată (prima rundă, 2026)",
+   "sector": "Drone și sisteme anti-dronă",
+   "c": [
+    6,
+    6,
+    5,
+    7,
+    5,
+    6,
+    6,
+    5,
+    9,
+    null,
+    6,
+    null,
+    5,
+    4
+   ],
+   "sources": [
+    [
+     "Romania Insider: Qognifly, 2 mil. EUR pentru fabrica din București (mar. 2026)",
+     "https://www.romania-insider.com/qognifly-bucharest-factory-drones-march-2026"
+    ],
+    [
+     "Romania Insider: lansarea Drone Wall (mar. 2026)",
+     "https://www.romania-insider.com/qognifly-counter-drone-system-march-2026"
+    ]
+   ],
+   "v": [
+    3,
+    5,
+    5,
+    2,
+    5,
+    9,
+    3,
+    10
+   ],
+   "inputs": {},
+   "score": 5.55,
+   "met": 4,
+   "met14": 2,
+   "trust": 2
+  },
+  {
+   "id": "multiversx",
+   "name": "MultiversX (EGLD)",
+   "stage": "Token listat (EGLD)",
+   "sector": "Blockchain (fostul Elrond)",
+   "priceId": "ro-multiversx",
+   "c": [
+    3,
+    4,
+    4,
+    5,
+    3,
+    5,
+    3,
+    4,
+    4,
+    null,
+    5,
+    0,
+    7,
+    3
+   ],
+   "sources": [
+    [
+     "Bitfinex: anunțul de delistare EGLD",
+     "https://support.bitfinex.com/hc/en-us/articles/900001978166-MultiversX-EGLD"
+    ],
+    [
+     "Yellow: MultiversX, activitate și riscuri (2026)",
+     "https://yellow.com/asset/egld"
+    ]
+   ],
+   "v": [
+    4,
+    2,
+    7,
+    7,
+    5,
+    4,
+    1,
+    10
+   ],
+   "inputs": {
+    "C12": "acțiunea -31,9% în două luni (CoinGecko, elrond-erd-2)"
+   },
+   "score": 4.02,
+   "met": 4,
+   "met14": 1,
+   "trust": 3
+  }
+ ]
+}
