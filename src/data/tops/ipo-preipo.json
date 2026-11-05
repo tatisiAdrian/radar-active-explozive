@@ -1,0 +1,1435 @@
+{
+ "slug": "ipo-preipo",
+ "set": "general",
+ "region": "lume",
+ "date": "2026-11-05",
+ "snapshot": "ipo-preipo-2026-11-05",
+ "revisionNote": "Topul are 22 de companii: 11 listate recent la bursă și 11 pre-IPO, notate pe 22 de condiții: cele 14 din radar (80% din scor) și 8 de verificare a dovezilor (20%). Start-up-urile nelistate au un top separat. Lista de 44 rămâne publicată în instantaneul radarului din 29 octombrie 2026.",
+ "revisionNoteEn": "The ranking has 22 companies: 11 recently listed on the stock market and 11 pre-IPO, scored on 22 conditions: the 14 of the radar (80% of the score) and 8 that verify the evidence (20%). Unlisted start-ups have a separate ranking. The list of 44 stays published in the radar snapshot of 29 October 2026.",
+ "verified": true,
+ "formulas": {},
+ "rows": [
+  {
+   "id": "stripe",
+   "name": "Stripe",
+   "nameEn": "Stripe",
+   "c": [
+    9,
+    10,
+    9,
+    9,
+    9,
+    9,
+    7,
+    8,
+    9,
+    6,
+    8,
+    8,
+    4,
+    9
+   ],
+   "why": "Plăți online pentru milioane de firme: 1,9 trilioane USD procesate în 2025. Oferta pentru angajați din februarie 2026 a evaluat compania la circa 159 mld. USD; profitabilă din 2024 și fără grabă de listare.",
+   "whyEn": "Online payments for millions of businesses: USD 1.9tn processed in 2025. The February 2026 employee tender offer valued the company at about USD 159bn; profitable since 2024 and in no rush to list.",
+   "sources": [
+    [
+     "Pie Capital: cele mai valoroase companii private (februarie 2026)",
+     "https://pie-capital-partners.pages.dev/research/the-top-10.html"
+    ],
+    [
+     "GO Markets: Stripe, candidat la listare",
+     "https://www.gomarkets.com/en-int/articles/top-5-ipo-candidates-in-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Pie Capital: the most valuable private companies (February 2026)",
+     "https://pie-capital-partners.pages.dev/research/the-top-10.html"
+    ],
+    [
+     "GO Markets: Stripe as a listing candidate",
+     "https://www.gomarkets.com/en-int/articles/top-5-ipo-candidates-in-2026"
+    ]
+   ],
+   "v": [
+    8,
+    5,
+    8,
+    10,
+    9,
+    8,
+    8,
+    10
+   ],
+   "vwhy": "Volumul procesat și ofertele către angajați sunt publicate de companie în scrisoarea anuală; 16 ani de istoric, cu o corecție de evaluare în 2023 recuperată. Conturile auditate nu sunt publice.",
+   "vwhyEn": "The processed volume and the employee offers are published by the company in its annual letter; 16 years of history, with a 2023 valuation correction since recovered. Audited accounts are not public.",
+   "stage": "preipo",
+   "inputs": {},
+   "score": 8.18,
+   "met": 19,
+   "met14": 12,
+   "trust": 7
+  },
+  {
+   "id": "databricks",
+   "name": "Databricks",
+   "nameEn": "Databricks",
+   "c": [
+    9,
+    9,
+    7,
+    9,
+    9,
+    9,
+    6,
+    7,
+    8,
+    5,
+    7,
+    8,
+    4,
+    8
+   ],
+   "why": "Platformă de date și AI pentru companii. Venituri anualizate de 5,4 mld. USD în februarie 2026 (+65%), rundă de 5 mld. USD la 134 mld. USD, apoi o rundă la circa 190 mld. USD condusă de Coatue, cu peste 7 mld. USD venituri anualizate. Directorul general a amânat listarea pentru 2027.",
+   "whyEn": "A data and AI platform for companies. Annualised revenue of USD 5.4bn in February 2026 (+65%), a USD 5bn round at USD 134bn, then a round at about USD 190bn led by Coatue, with over USD 7bn in annualised revenue. The CEO pushed the listing back to 2027.",
+   "sources": [
+    [
+     "The Next Web: runda Databricks la 190 mld. USD",
+     "https://thenextweb.com/news/databricks-closes-5-billion-round-at-190-billion-valuation"
+    ],
+    [
+     "iAmsterdam: venituri de 5,4 mld. USD (februarie 2026)",
+     "https://startupmap.iamsterdam.com/news/note/databricks-eyes-175b-valuation-four-months-after-raising-at-134b"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "The Next Web: Databricks’ round at USD 190bn",
+     "https://thenextweb.com/news/databricks-closes-5-billion-round-at-190-billion-valuation"
+    ],
+    [
+     "iAmsterdam: USD 5.4bn in revenue (February 2026)",
+     "https://startupmap.iamsterdam.com/news/note/databricks-eyes-175b-valuation-four-months-after-raising-at-134b"
+    ]
+   ],
+   "v": [
+    8,
+    4,
+    9,
+    9,
+    9,
+    8,
+    8,
+    10
+   ],
+   "vwhy": "Rundele și veniturile sunt anunțate de companie și confirmate de investitori; 13 ani de istoric, cu creștere și în anii slabi pentru software, 2022–2023. Conturile auditate nu sunt publice până la listare.",
+   "vwhyEn": "The rounds and revenue are announced by the company and confirmed by investors; 13 years of history, with growth even in the weak software years of 2022–2023. Audited accounts are not public until the listing.",
+   "stage": "preipo",
+   "inputs": {},
+   "score": 7.69,
+   "met": 18,
+   "met14": 11,
+   "trust": 7
+  },
+  {
+   "id": "canva",
+   "name": "Canva",
+   "nameEn": "Canva",
+   "c": [
+    9,
+    8,
+    8,
+    7,
+    8,
+    8,
+    6,
+    9,
+    8,
+    7,
+    7,
+    6,
+    6,
+    8
+   ],
+   "why": "Design online pentru oricine, din Australia. Evaluată la circa 42 mld. USD; investitorii (Blackbird) vorbesc de o listare pe Nasdaq. Profitabilă de mai mulți ani, după datele companiei.",
+   "whyEn": "Online design for anyone, from Australia. Valued at about USD 42bn; its investors (Blackbird) talk of a Nasdaq listing. Profitable for several years, according to the company.",
+   "sources": [
+    [
+     "t3n: candidații la listare din 2026 (Canva)",
+     "https://t3n.de/news/boersenjahr-2026-tech%E2%80%91ipo%E2%80%91kandidaten-1724650/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "t3n: the 2026 listing candidates (Canva)",
+     "https://t3n.de/news/boersenjahr-2026-tech%E2%80%91ipo%E2%80%91kandidaten-1724650/"
+    ]
+   ],
+   "v": [
+    7,
+    6,
+    7,
+    9,
+    7,
+    8,
+    8,
+    10
+   ],
+   "vwhy": "Conturile anuale sunt depuse la autoritatea australiană (ASIC); 13 ani de istoric, cu creștere și după corecția din 2022–2023. Cifrele de venit vin în mare parte de la companie.",
+   "vwhyEn": "Annual accounts are filed with the Australian regulator (ASIC); 13 years of history, with growth after the 2022–2023 correction. The revenue figures come largely from the company.",
+   "stage": "preipo",
+   "inputs": {},
+   "score": 7.56,
+   "met": 18,
+   "met14": 11,
+   "trust": 7
+  },
+  {
+   "id": "figma-fig",
+   "name": "Figma (FIG)",
+   "nameEn": "Figma (FIG)",
+   "c": [
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    5,
+    8,
+    8,
+    6,
+    5,
+    3,
+    7,
+    7
+   ],
+   "why": "Software de design colaborativ. Listată în iulie 2025 la 33 USD; acțiunea a urcat peste 140 USD, apoi a scăzut cu peste 80%. Afacerea a accelerat totuși: venituri de 333 mil. USD în primul trimestru din 2026 (+46%), reținere netă de 139% și prognoză anuală ridicată la 1,42 mld. USD.",
+   "whyEn": "Collaborative design software. Listed in July 2025 at USD 33; the share rose above USD 140, then fell by more than 80%. The business nonetheless accelerated: revenue of USD 333m in Q1 2026 (+46%), net retention of 139% and the annual forecast raised to USD 1.42bn.",
+   "sources": [
+    [
+     "Business Wire: rezultatele Figma din T1 2026",
+     "https://www.businesswire.com/news/home/20260514730702/en/"
+    ],
+    [
+     "Barchart: evoluția acțiunii Figma după listare",
+     "https://www.barchart.com/story/news/2539585/citi-initiates-bullish-coverage-on-figma-stock-as-the-ai-monetization-story-takes-shape"
+    ],
+    [
+     "Yahoo Finance: cotația FIG",
+     "https://finance.yahoo.com/quote/FIG"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Business Wire: Figma’s Q1 2026 results",
+     "https://www.businesswire.com/news/home/20260514730702/en/"
+    ],
+    [
+     "Barchart: Figma’s share after the listing",
+     "https://www.barchart.com/story/news/2539585/citi-initiates-bullish-coverage-on-figma-stock-as-the-ai-monetization-story-takes-shape"
+    ],
+    [
+     "Yahoo Finance: the FIG quote",
+     "https://finance.yahoo.com/quote/FIG"
+    ]
+   ],
+   "v": [
+    9,
+    10,
+    9,
+    8,
+    9,
+    8,
+    8,
+    10
+   ],
+   "vwhy": "Rapoarte trimestriale auditate, depuse la autoritatea bursieră; 14 ani de istoric. În vânzarea masivă a acțiunilor de software din 2026, veniturile au accelerat: un test de rezistență trecut de afacere, chiar dacă nu și de acțiune.",
+   "vwhyEn": "Audited reports filed with the regulator; 14 years of history. In the 2026 software sell-off, revenue accelerated: a stress test passed by the business, if not by the share.",
+   "stage": "ipo",
+   "inputs": {},
+   "score": 7.17,
+   "met": 18,
+   "met14": 10,
+   "trust": 8
+  },
+  {
+   "id": "revolut",
+   "name": "Revolut",
+   "nameEn": "Revolut",
+   "c": [
+    9,
+    8,
+    8,
+    8,
+    8,
+    7,
+    6,
+    8,
+    8,
+    5,
+    6,
+    9,
+    4,
+    6
+   ],
+   "why": "Bancă digitală globală, cu peste 65 de milioane de clienți. Venituri de 6 mld. USD în 2025 (+46%) și profit înainte de taxe de 2,3 mld. USD; licență bancară completă în Regatul Unit în martie 2026; evaluată la 75 mld. USD, apoi 115 mld. USD într-o vânzare secundară.",
+   "whyEn": "A global digital bank with over 65 million customers. Revenue of USD 6bn in 2025 (+46%) and pre-tax profit of USD 2.3bn; a full UK banking licence in March 2026; valued at USD 75bn, then USD 115bn in a secondary sale.",
+   "sources": [
+    [
+     "European Business Magazine: licența bancară Revolut",
+     "https://europeanbusinessmagazine.com/finance-revolut-uk-banking-licence-ipo-valuation-2026/"
+    ],
+    [
+     "Ground News: Revolut confirmă evaluarea de 115 mld. USD",
+     "https://ground.news/article/revolut-confirms-115-billion-valuation-in-secondary-share-sale"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "European Business Magazine: Revolut’s banking licence",
+     "https://europeanbusinessmagazine.com/finance-revolut-uk-banking-licence-ipo-valuation-2026/"
+    ],
+    [
+     "Ground News: Revolut confirms the USD 115bn valuation",
+     "https://ground.news/article/revolut-confirms-115-billion-valuation-in-secondary-share-sale"
+    ]
+   ],
+   "v": [
+    9,
+    9,
+    8,
+    9,
+    8,
+    7,
+    8,
+    10
+   ],
+   "vwhy": "Conturile anuale auditate sunt depuse la registrul britanic (Companies House), iar licența bancară completă a fost acordată de PRA în martie 2026, după un proces început în 2021; 11 ani de istoric. Durata neobișnuit de lungă a procesului de licențiere rămâne de urmărit.",
+   "vwhyEn": "Audited annual accounts are filed with the UK register (Companies House), and the full banking licence was granted by the PRA in March 2026, after a process begun in 2021; 11 years of history. The unusually long licensing process remains worth watching.",
+   "stage": "preipo",
+   "inputs": {},
+   "score": 7.54,
+   "met": 17,
+   "met14": 9,
+   "trust": 8
+  },
+  {
+   "id": "anduril",
+   "name": "Anduril",
+   "nameEn": "Anduril",
+   "c": [
+    8,
+    9,
+    7,
+    9,
+    8,
+    8,
+    6,
+    7,
+    8,
+    4,
+    6,
+    9,
+    4,
+    7
+   ],
+   "why": "Tehnologie de apărare: drone, sisteme autonome și software. Venituri de 2,2 mld. USD în 2025 (dublate), Series H de 5 mld. USD la 61 mld. USD (mai 2026), ofertă pentru angajați la circa 90 mld. USD (octombrie 2026) și un contract cu armata SUA de până la 20 mld. USD.",
+   "whyEn": "Defence technology: drones, autonomous systems and software. Revenue of USD 2.2bn in 2025 (doubled), a USD 5bn Series H at USD 61bn (May 2026), an employee tender offer at about USD 90bn (October 2026) and a US Army contract worth up to USD 20bn.",
+   "sources": [
+    [
+     "Teahose: evaluarea Anduril în 2026",
+     "https://www.teahose.com/guides/anduril-valuation"
+    ],
+    [
+     "FourWeekMBA: discuții la 120 mld. USD",
+     "https://fourweekmba.com/ai-anduril-mulls-raising-at-120b-nearly-2x-its-may-valuation/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Teahose: Anduril’s 2026 valuation",
+     "https://www.teahose.com/guides/anduril-valuation"
+    ],
+    [
+     "FourWeekMBA: talks at USD 120bn",
+     "https://fourweekmba.com/ai-anduril-mulls-raising-at-120b-nearly-2x-its-may-valuation/"
+    ]
+   ],
+   "v": [
+    8,
+    6,
+    9,
+    8,
+    9,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Rundele sunt anunțate de companie și confirmate de investitori, iar contractele cu Pentagonul apar în registrele publice ale achizițiilor guvernamentale; nouă ani de istoric. Un client aproape unic (statul american) e un risc de concentrare.",
+   "vwhyEn": "The rounds are announced by the company and confirmed by investors, and the Pentagon contracts appear in public government procurement records; nine years of history. An almost single client (the US government) is a concentration risk.",
+   "stage": "preipo",
+   "inputs": {},
+   "score": 7.36,
+   "met": 16,
+   "met14": 10,
+   "trust": 6
+  },
+  {
+   "id": "spacex-spcx",
+   "name": "SpaceX (SPCX)",
+   "nameEn": "SpaceX (SPCX)",
+   "c": [
+    9,
+    7,
+    7,
+    9,
+    8,
+    7,
+    4,
+    9,
+    8,
+    2,
+    4,
+    5,
+    2,
+    6
+   ],
+   "why": "Cea mai mare listare din istorie: 12 iunie 2026 pe Nasdaq, la 135 USD pe acțiune, 75 mld. USD strânși și o evaluare de 1,77 trilioane USD. Acțiunea a urcat până la 225 USD, apoi a revenit spre prețul de IPO în iulie. Musk spune că firma are cash-flow pozitiv din circa 2015.",
+   "whyEn": "The largest listing in history: 12 June 2026 on Nasdaq, at USD 135 a share, USD 75bn raised and a valuation of USD 1.77tn. The share rose as high as USD 225, then fell back towards the IPO price in July. Musk says the company has been cash-flow positive since about 2015.",
+   "sources": [
+    [
+     "Capital.com: debutul SpaceX pe Nasdaq",
+     "https://capital.com/en-int/market-updates/spacex-ipo-news-15-06-2026"
+    ],
+    [
+     "StartupHub: SPCX revine la prețul de IPO (iulie 2026)",
+     "https://www.startuphub.ai/news/spcx-stock-nears-135-ipo-price-all-time-low-2026-07-14"
+    ],
+    [
+     "Yahoo Finance: cotația SPCX",
+     "https://finance.yahoo.com/quote/SPCX"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Capital.com: SpaceX’s Nasdaq debut",
+     "https://capital.com/en-int/market-updates/spacex-ipo-news-15-06-2026"
+    ],
+    [
+     "StartupHub: SPCX tests its IPO price (July 2026)",
+     "https://www.startuphub.ai/news/spcx-stock-nears-135-ipo-price-all-time-low-2026-07-14"
+    ],
+    [
+     "Yahoo Finance: the SPCX quote",
+     "https://finance.yahoo.com/quote/SPCX"
+    ]
+   ],
+   "v": [
+    9,
+    10,
+    9,
+    10,
+    9,
+    7,
+    8,
+    10
+   ],
+   "vwhy": "Rapoarte trimestriale auditate, depuse la autoritatea bursieră (prospect S-1 public din mai 2026); 24 de ani de istoric, clienți publici (NASA, Pentagonul) și o afacere care a trecut prin crize. Volatilitatea mare după listare și dependența de un singur fondator rămân de urmărit.",
+   "vwhyEn": "Audited reports filed with the regulator (public S-1 prospectus since May 2026); 24 years of history, public clients (NASA, the Pentagon) and a business that has come through crises. The high volatility after listing and the dependence on a single founder remain worth watching.",
+   "stage": "ipo",
+   "inputs": {},
+   "score": 6.98,
+   "met": 16,
+   "met14": 8,
+   "trust": 8
+  },
+  {
+   "id": "ramp",
+   "name": "Ramp",
+   "nameEn": "Ramp",
+   "c": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    6,
+    6,
+    7,
+    4,
+    7,
+    9,
+    5,
+    8
+   ],
+   "why": "Carduri corporative și software de cheltuieli pentru firme. Peste 1 mld. USD venituri anualizate și cash-flow liber pozitiv (noiembrie 2025), peste 50.000 de clienți; evaluarea a urcat de la 13 mld. USD (martie 2025) la 32 mld. (noiembrie 2025) și 44 mld. USD (Series F, iunie 2026).",
+   "whyEn": "Corporate cards and spend software for companies. Over USD 1bn in annualised revenue and positive free cash flow (November 2025), more than 50,000 customers; the valuation rose from USD 13bn (March 2025) to 32bn (November 2025) and USD 44bn (Series F, June 2026).",
+   "sources": [
+    [
+     "SiliconANGLE: Ramp la 32 mld. USD (noiembrie 2025)",
+     "https://siliconangle.com/?p=721586"
+    ],
+    [
+     "Komo: rundele Ramp până la Series F (iunie 2026)",
+     "https://komo.ai/directory/ramp-funding"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "SiliconANGLE: Ramp at USD 32bn (November 2025)",
+     "https://siliconangle.com/?p=721586"
+    ],
+    [
+     "Komo: Ramp’s rounds to the Series F (June 2026)",
+     "https://komo.ai/directory/ramp-funding"
+    ]
+   ],
+   "v": [
+    7,
+    4,
+    8,
+    6,
+    8,
+    8,
+    6,
+    10
+   ],
+   "vwhy": "Rundele și veniturile sunt anunțate de companie și raportate concordant de TechCrunch, Financial Times și Reuters; șapte ani de istoric. A trecut prin corecția din 2023 (evaluarea a scăzut de la 8,1 la 5,8 mld. USD) și a revenit. Conturile auditate nu sunt publice.",
+   "vwhyEn": "The rounds and revenue are announced by the company and reported consistently by TechCrunch, the Financial Times and Reuters; seven years of history. It came through the 2023 correction (the valuation fell from USD 8.1bn to 5.8bn) and recovered. Audited accounts are not public.",
+   "stage": "preipo",
+   "inputs": {},
+   "score": 7.16,
+   "met": 15,
+   "met14": 10,
+   "trust": 5
+  },
+  {
+   "id": "catl-3750-hk",
+   "name": "CATL (3750.HK)",
+   "nameEn": "CATL (3750.HK)",
+   "c": [
+    9,
+    7,
+    8,
+    8,
+    8,
+    8,
+    6,
+    6,
+    9,
+    6,
+    5,
+    4,
+    6,
+    6
+   ],
+   "why": "Cel mai mare producător de baterii pentru mașini electrice din lume. Listată și la Hong Kong în mai 2025, cea mai mare listare a anului (circa 5 mld. USD). Pe lista Pentagonului a companiilor legate de armata chineză (ianuarie 2025), ceea ce limitează afacerile în SUA.",
+   "whyEn": "The world’s largest maker of electric-car batteries. Also listed in Hong Kong in May 2025, the year’s largest listing (about USD 5bn). On the Pentagon’s list of companies linked to the Chinese military (January 2025), which limits business in the US.",
+   "sources": [
+    [
+     "Fortune: CATL pe lista Pentagonului (ianuarie 2025)",
+     "https://fortune.com/2025/01/07/catl-pentagon-blacklist-china-tesla-ev-battery-supplier"
+    ],
+    [
+     "Reuters (prin Yahoo): CATL, cea mai mare listare a anului",
+     "https://finance.yahoo.com/news/exclusive-shein-working-towards-hong-071348663.html"
+    ],
+    [
+     "Yahoo Finance: cotația 3750.HK",
+     "https://finance.yahoo.com/quote/3750.HK"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Fortune: CATL on the Pentagon list (January 2025)",
+     "https://fortune.com/2025/01/07/catl-pentagon-blacklist-china-tesla-ev-battery-supplier"
+    ],
+    [
+     "Reuters (via Yahoo): CATL, the year’s largest listing",
+     "https://finance.yahoo.com/news/exclusive-shein-working-towards-hong-071348663.html"
+    ],
+    [
+     "Yahoo Finance: the 3750.HK quote",
+     "https://finance.yahoo.com/quote/3750.HK"
+    ]
+   ],
+   "v": [
+    9,
+    10,
+    9,
+    9,
+    9,
+    5,
+    8,
+    10
+   ],
+   "vwhy": "Rapoarte auditate, listată de ani buni la Shenzhen și din 2025 la Hong Kong; clienți publici (Tesla, BMW, Volkswagen). A crescut în ultimii ani chiar și când piața mașinilor electrice a încetinit. Includerea pe lista Pentagonului e un semnal geopolitic de urmărit.",
+   "vwhyEn": "Audited reports, listed for years in Shenzhen and since 2025 in Hong Kong; public clients (Tesla, BMW, Volkswagen). It grew in recent years even as the electric-car market slowed. Inclusion on the Pentagon list is a geopolitical signal worth watching.",
+   "stage": "ipo",
+   "inputs": {},
+   "score": 7.44,
+   "met": 14,
+   "met14": 7,
+   "trust": 7
+  },
+  {
+   "id": "bytedance",
+   "name": "ByteDance",
+   "nameEn": "ByteDance",
+   "c": [
+    10,
+    6,
+    9,
+    9,
+    8,
+    7,
+    4,
+    8,
+    7,
+    8,
+    4,
+    8,
+    5,
+    4
+   ],
+   "why": "TikTok și Douyin. Venituri de 120 mld. USD în prima jumătate a lui 2026 (+30%), dar profit în scădere la 20 mld. USD din cauza investițiilor în AI. Evaluată la 550–600 mld. USD în vânzări secundare; afacerea TikTok din SUA a trecut într-o societate controlată de investitori americani (ianuarie 2026).",
+   "whyEn": "TikTok and Douyin. Revenue of USD 120bn in the first half of 2026 (+30%), but profit falling to USD 20bn because of AI investment. Valued at USD 550–600bn in secondary sales; the US TikTok business moved into a company controlled by US investors (January 2026).",
+   "sources": [
+    [
+     "SCMP: evaluarea ByteDance peste 600 mld. USD",
+     "https://www.scmp.com/tech/big-tech/article/3349337/bytedance-valuation-surges-record-high-over-us600b-proposed-equity-sale-sources"
+    ],
+    [
+     "Technobezz: societatea TikTok din SUA",
+     "https://www.technobezz.com/news/bytedance-finalizes-tiktok-us-joint-venture-deal-in-january-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "SCMP: ByteDance’s valuation above USD 600bn",
+     "https://www.scmp.com/tech/big-tech/article/3349337/bytedance-valuation-surges-record-high-over-us600b-proposed-equity-sale-sources"
+    ],
+    [
+     "Technobezz: the US TikTok joint venture",
+     "https://www.technobezz.com/news/bytedance-finalizes-tiktok-us-joint-venture-deal-in-january-2026"
+    ]
+   ],
+   "v": [
+    6,
+    4,
+    7,
+    9,
+    7,
+    5,
+    8,
+    10
+   ],
+   "vwhy": "Cifrele vin din surse anonime și din vânzări secundare, nu din conturi publice; compania a trecut prin interdicții și presiuni politice și a crescut în continuare. Riscul geopolitic SUA–China rămâne principalul semnal de alarmă.",
+   "vwhyEn": "The figures come from anonymous sources and secondary sales, not from public accounts; the company has come through bans and political pressure and kept growing. US–China geopolitical risk remains the main warning sign.",
+   "stage": "preipo",
+   "inputs": {},
+   "score": 7.03,
+   "met": 14,
+   "met14": 9,
+   "trust": 5
+  },
+  {
+   "id": "circle-crcl",
+   "name": "Circle (CRCL)",
+   "nameEn": "Circle (CRCL)",
+   "c": [
+    8,
+    6,
+    7,
+    6,
+    7,
+    7,
+    6,
+    6,
+    8,
+    5,
+    5,
+    5,
+    5,
+    7
+   ],
+   "why": "Emitentul stablecoin-ului USDC (77 mld. USD în circulație). Venituri de 694 mil. USD în primul trimestru din 2026 (+20%) și EBITDA ajustată de 151 mil. USD; volumul tranzacțiilor cu USDC a crescut de 3,6 ori într-un an. Veniturile depind mult de dobânzile la rezerve.",
+   "whyEn": "The issuer of the USDC stablecoin (USD 77bn in circulation). Revenue of USD 694m in Q1 2026 (+20%) and adjusted EBITDA of USD 151m; USDC transaction volume grew 3.6 times in a year. Revenue depends heavily on interest earned on reserves.",
+   "sources": [
+    [
+     "MarketBeat: rezultatele Circle din T1 2026",
+     "https://www.marketbeat.com/instant-alerts/circle-internet-group-q1-earnings-call-highlights-2026-05-11/"
+    ],
+    [
+     "Barchart: comunicatul Circle pentru T1 2026",
+     "https://www.barchart.com/story/news/1844647/circle-reports-first-quarter-2026-results"
+    ],
+    [
+     "Yahoo Finance: cotația CRCL",
+     "https://finance.yahoo.com/quote/CRCL"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "MarketBeat: Circle’s Q1 2026 results",
+     "https://www.marketbeat.com/instant-alerts/circle-internet-group-q1-earnings-call-highlights-2026-05-11/"
+    ],
+    [
+     "Barchart: Circle’s Q1 2026 release",
+     "https://www.barchart.com/story/news/1844647/circle-reports-first-quarter-2026-results"
+    ],
+    [
+     "Yahoo Finance: the CRCL quote",
+     "https://finance.yahoo.com/quote/CRCL"
+    ]
+   ],
+   "v": [
+    9,
+    10,
+    9,
+    8,
+    9,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Rapoarte trimestriale auditate, depuse la autoritatea bursieră, iar rezervele USDC sunt atestate lunar de o firmă de audit; peste zece ani de istoric, cu trecerea prin prăbușirea pieței cripto din 2022. Scăderea dobânzilor e principalul risc.",
+   "vwhyEn": "Audited reports filed with the regulator, and the USDC reserves are attested monthly by an audit firm; over ten years of history, including the 2022 crypto crash. Falling interest rates are the main risk.",
+   "stage": "ipo",
+   "inputs": {},
+   "score": 6.96,
+   "met": 14,
+   "met14": 6,
+   "trust": 8
+  },
+  {
+   "id": "plaid",
+   "name": "Plaid",
+   "nameEn": "Plaid",
+   "c": [
+    7,
+    6,
+    7,
+    7,
+    8,
+    7,
+    6,
+    6,
+    8,
+    7,
+    6,
+    4,
+    6,
+    7
+   ],
+   "why": "Infrastructură care leagă aplicațiile financiare de conturile bancare. Evaluarea a scăzut de la 13,4 mld. USD (2021) la circa 6 mld. USD într-o vânzare secundară din 2025.",
+   "whyEn": "Infrastructure that connects financial apps to bank accounts. The valuation fell from USD 13.4bn (2021) to about USD 6bn in a 2025 secondary sale.",
+   "sources": [
+    [
+     "Fintech Futures: acordul Plaid de 58 mil. USD",
+     "https://fintechfutures.com/?p=15234803"
+    ],
+    [
+     "Dealroom: Plaid printre listările din 2026",
+     "https://dealroom.net/blog/upcoming-recent-ipos"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Fintech Futures: Plaid’s USD 58m settlement",
+     "https://fintechfutures.com/?p=15234803"
+    ],
+    [
+     "Dealroom: Plaid among the 2026 listings",
+     "https://dealroom.net/blog/upcoming-recent-ipos"
+    ]
+   ],
+   "v": [
+    7,
+    4,
+    7,
+    9,
+    8,
+    6,
+    6,
+    10
+   ],
+   "vwhy": "Evaluările sunt confirmate de companie; 13 ani de istoric. Preluarea de către Visa a fost abandonată în 2021, după ce Departamentul de Justiție american a contestat-o, iar Plaid a plătit 58 mil. USD într-un proces colectiv privind datele bancare folosite fără consimțământ. A rezistat corecției din 2022, dar la o evaluare mai mică.",
+   "vwhyEn": "The valuations are confirmed by the company; 13 years of history. Visa’s acquisition was abandoned in 2021 after the US Justice Department challenged it, and Plaid paid USD 58m in a class action over bank data used without consent. It survived the 2022 correction, but at a lower valuation.",
+   "stage": "preipo",
+   "inputs": {},
+   "score": 6.67,
+   "met": 13,
+   "met14": 8,
+   "trust": 5
+  },
+  {
+   "id": "chime-chym",
+   "name": "Chime (CHYM)",
+   "nameEn": "Chime (CHYM)",
+   "c": [
+    7,
+    5,
+    6,
+    5,
+    7,
+    6,
+    5,
+    6,
+    7,
+    7,
+    5,
+    5,
+    7,
+    6
+   ],
+   "why": "Bancă digitală americană fără comisioane. Listată pe Nasdaq în iunie 2025 la 27 USD; acțiunea a ajuns la 26 USD în ianuarie 2026, sub prețul de IPO.",
+   "whyEn": "A fee-free US digital bank. Listed on Nasdaq in June 2025 at USD 27; the share stood at USD 26 in January 2026, below the IPO price.",
+   "sources": [
+    [
+     "CFPB: ordinul împotriva Chime (mai 2024)",
+     "https://www.consumerfinance.gov/about-us/newsroom/cfpb-takes-action-against-chime-financial-for-illegally-delaying-consumer-refunds"
+    ],
+    [
+     "This Week in Fintech: listările fintech din 2025",
+     "https://www.thisweekinfintech.com/p/a-look-back-and-a-look-ahead-at-fintech-ipos"
+    ],
+    [
+     "Yahoo Finance: cotația CHYM",
+     "https://finance.yahoo.com/quote/CHYM"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "CFPB: the order against Chime (May 2024)",
+     "https://www.consumerfinance.gov/about-us/newsroom/cfpb-takes-action-against-chime-financial-for-illegally-delaying-consumer-refunds"
+    ],
+    [
+     "This Week in Fintech: the 2025 fintech listings",
+     "https://www.thisweekinfintech.com/p/a-look-back-and-a-look-ahead-at-fintech-ipos"
+    ],
+    [
+     "Yahoo Finance: the CHYM quote",
+     "https://finance.yahoo.com/quote/CHYM"
+    ]
+   ],
+   "v": [
+    8,
+    10,
+    7,
+    8,
+    7,
+    7,
+    null,
+    10
+   ],
+   "vwhy": "Rapoarte trimestriale auditate, depuse la autoritatea bursieră; peste zece ani de istoric. În 2024 a plătit 3,25 mil. USD autorității americane de protecție a consumatorilor (CFPB) pentru rambursări întârziate.",
+   "vwhyEn": "Audited reports filed with the regulator; over ten years of history. In 2024 it paid USD 3.25m to the US consumer protection authority (CFPB) over delayed refunds.",
+   "stage": "ipo",
+   "inputs": {},
+   "score": 6.46,
+   "met": 12,
+   "met14": 5,
+   "trust": 7
+  },
+  {
+   "id": "kraken-payward",
+   "name": "Kraken (Payward)",
+   "nameEn": "Kraken (Payward)",
+   "c": [
+    7,
+    5,
+    7,
+    6,
+    7,
+    6,
+    6,
+    7,
+    7,
+    6,
+    6,
+    5,
+    6,
+    6
+   ],
+   "why": "Una dintre cele mai vechi burse cripto. A strâns 800 mil. USD la 20 mld. USD (noiembrie 2025) și a depus confidențial documentele de listare, dar a pus listarea pe pauză în piața în scădere; evaluarea estimată a coborât la circa 13 mld. USD.",
+   "whyEn": "One of the oldest crypto exchanges. It raised USD 800m at USD 20bn (November 2025) and filed its listing documents confidentially, but paused the listing in the falling market; its estimated valuation dropped to about USD 13bn.",
+   "sources": [
+    [
+     "The Block: SEC renunță la procesul cu Kraken (martie 2025)",
+     "https://www.theblock.co/post/344260/sec-agrees-to-drop-case-against-crypto-exchange-kraken-firm-says"
+    ],
+    [
+     "Money: Kraken și Discord, listări posibile în 2026",
+     "https://money.com/companies-most-likely-ipos-2026/?xid=moneyrss"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "The Block: the SEC drops its case against Kraken (March 2025)",
+     "https://www.theblock.co/post/344260/sec-agrees-to-drop-case-against-crypto-exchange-kraken-firm-says"
+    ],
+    [
+     "Money: Kraken and Discord, possible 2026 listings",
+     "https://money.com/companies-most-likely-ipos-2026/?xid=moneyrss"
+    ]
+   ],
+   "v": [
+    7,
+    6,
+    7,
+    9,
+    7,
+    7,
+    7,
+    10
+   ],
+   "vwhy": "Rundele sunt confirmate de companie; 15 ani de istoric, cu trecerea prin toate crizele cripto. Procesul SEC împotriva Kraken a fost abandonat în martie 2025, fără amenzi, dar dependența de prețul cripto rămâne.",
+   "vwhyEn": "The rounds are confirmed by the company; 15 years of history, through every crypto crash. The SEC lawsuit against Kraken was dropped in March 2025, with no penalties, but dependence on crypto prices remains.",
+   "stage": "preipo",
+   "inputs": {},
+   "score": 6.46,
+   "met": 12,
+   "met14": 5,
+   "trust": 7
+  },
+  {
+   "id": "openai",
+   "name": "OpenAI",
+   "nameEn": "OpenAI",
+   "c": [
+    10,
+    6,
+    3,
+    9,
+    8,
+    6,
+    3,
+    9,
+    9,
+    3,
+    5,
+    7,
+    2,
+    5
+   ],
+   "why": "ChatGPT. Evaluare de 852 mld. USD după cea mai mare rundă din istorie (122 mld. USD, martie 2026); a depus confidențial documentele de listare la SEC în 2026. Procese de drepturi de autor (The New York Times și alții) și litigiul cu Elon Musk.",
+   "whyEn": "ChatGPT. Valued at USD 852bn after the largest round in history (USD 122bn, March 2026); it filed its listing documents confidentially with the SEC in 2026. Copyright lawsuits (The New York Times and others) and the litigation with Elon Musk.",
+   "sources": [
+    [
+     "Gradually.ai: OpenAI, S-1 confidențial și evaluarea",
+     "https://www.gradually.ai/en/openai-ipo/"
+    ],
+    [
+     "Dealroom: listările așteptate în 2026",
+     "https://dealroom.net/blog/the-biggest-ipos"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Gradually.ai: OpenAI, the confidential S-1 and the valuation",
+     "https://www.gradually.ai/en/openai-ipo/"
+    ],
+    [
+     "Dealroom: the listings expected in 2026",
+     "https://dealroom.net/blog/the-biggest-ipos"
+    ]
+   ],
+   "v": [
+    8,
+    5,
+    8,
+    8,
+    9,
+    4,
+    null,
+    10
+   ],
+   "vwhy": "Rundele sunt confirmate de investitori (SoftBank, Microsoft), iar documentele de listare sunt depuse, dar încă nepublice. Semnale de alarmă: procesele de drepturi de autor, litigiul cu Musk și pierderile mari din investițiile în calcul.",
+   "vwhyEn": "The rounds are confirmed by investors (SoftBank, Microsoft), and the listing documents are filed but not yet public. Warning signs: the copyright lawsuits, the Musk litigation and the heavy losses from compute investment.",
+   "stage": "preipo",
+   "inputs": {},
+   "score": 6.51,
+   "met": 11,
+   "met14": 6,
+   "trust": 5
+  },
+  {
+   "id": "cerebras-cbrs",
+   "name": "Cerebras (CBRS)",
+   "nameEn": "Cerebras (CBRS)",
+   "c": [
+    7,
+    4,
+    5,
+    7,
+    4,
+    7,
+    5,
+    5,
+    7,
+    5,
+    5,
+    3,
+    6,
+    6
+   ],
+   "why": "Cipuri de mărimea unei plăci de siliciu, pentru inferență AI. Listată pe Nasdaq pe 14 mai 2026, la 185 USD, cea mai mare listare tehnologică a anului (5,55 mld. USD). Venituri de 510 mil. USD în 2025, cu 62% de la un singur client din Emirate, și un contract OpenAI de peste 20 mld. USD.",
+   "whyEn": "Wafer-sized chips for AI inference. Listed on Nasdaq on 14 May 2026, at USD 185, the year’s largest tech listing (USD 5.55bn). Revenue of USD 510m in 2025, 62% from a single client in the Emirates, and an OpenAI contract worth over USD 20bn.",
+   "sources": [
+    [
+     "Fortune: debutul Cerebras (mai 2026)",
+     "https://fortune.com/2026/05/14/cerebras-one-of-the-biggest-ipos-of-the-year/"
+    ],
+    [
+     "SiliconANGLE: prețul IPO și concentrarea clienților",
+     "https://siliconangle.com/2026/05/13/cerebras-prices-shares-185-ahead-biggest-tech-ipo-years/"
+    ],
+    [
+     "Yahoo Finance: cotația CBRS",
+     "https://finance.yahoo.com/quote/CBRS"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Fortune: Cerebras’ debut (May 2026)",
+     "https://fortune.com/2026/05/14/cerebras-one-of-the-biggest-ipos-of-the-year/"
+    ],
+    [
+     "SiliconANGLE: the IPO price and client concentration",
+     "https://siliconangle.com/2026/05/13/cerebras-prices-shares-185-ahead-biggest-tech-ipo-years/"
+    ],
+    [
+     "Yahoo Finance: the CBRS quote",
+     "https://finance.yahoo.com/quote/CBRS"
+    ]
+   ],
+   "v": [
+    8,
+    10,
+    9,
+    8,
+    8,
+    5,
+    null,
+    10
+   ],
+   "vwhy": "Rapoarte trimestriale auditate, depuse la autoritatea bursieră; zece ani de istoric. Prima încercare de listare a fost retrasă după o investigație CFIUS legată de G42, iar profitul din 2025 vine în mare parte dintr-un câștig contabil de 363 mil. USD.",
+   "vwhyEn": "Audited reports filed with the regulator; ten years of history. The first listing attempt was withdrawn after a CFIUS review related to G42, and the 2025 profit comes largely from a USD 363m accounting gain.",
+   "stage": "ipo",
+   "inputs": {},
+   "score": 6.15,
+   "met": 10,
+   "met14": 4,
+   "trust": 6
+  },
+  {
+   "id": "klarna-klar",
+   "name": "Klarna (KLAR)",
+   "nameEn": "Klarna (KLAR)",
+   "c": [
+    6,
+    4,
+    4,
+    5,
+    6,
+    5,
+    5,
+    7,
+    6,
+    7,
+    4,
+    2,
+    7,
+    5
+   ],
+   "why": "Cumpără acum, plătește mai târziu, transformată în bancă digitală. Listată în septembrie 2025 la 40 USD; acțiunea a pierdut peste jumătate din valoare după pierderea din T4 2025 și provizioanele pentru credite neperformante (+59%). Venituri de 1,01 mld. USD în T1 2026 (+44%); acționarii au deschis un proces colectiv.",
+   "whyEn": "Buy now, pay later, turned into a digital bank. Listed in September 2025 at USD 40; the share lost more than half its value after the Q4 2025 loss and credit-loss provisions (+59%). Revenue of USD 1.01bn in Q1 2026 (+44%); shareholders have filed a class action.",
+   "sources": [
+    [
+     "IG: Klarna după listare",
+     "https://www.ig.com/uk/trading-strategies/klarna-ipo-what-you-need-to-know-and-how-to-buy-shares-260621"
+    ],
+    [
+     "Stocktwits: scăderea după pierderea din T4",
+     "https://stocktwits.com/news-articles/markets/equity/klar-stock-gets-whacked-after-q4-loss-weak-forecast-retail-investors-are-shrugging-it-off/cZRZ8RQR4Dj"
+    ],
+    [
+     "Yahoo Finance: cotația KLAR",
+     "https://finance.yahoo.com/quote/KLAR"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "IG: Klarna after the listing",
+     "https://www.ig.com/uk/trading-strategies/klarna-ipo-what-you-need-to-know-and-how-to-buy-shares-260621"
+    ],
+    [
+     "Stocktwits: the fall after the Q4 loss",
+     "https://stocktwits.com/news-articles/markets/equity/klar-stock-gets-whacked-after-q4-loss-weak-forecast-retail-investors-are-shrugging-it-off/cZRZ8RQR4Dj"
+    ],
+    [
+     "Yahoo Finance: the KLAR quote",
+     "https://finance.yahoo.com/quote/KLAR"
+    ]
+   ],
+   "v": [
+    9,
+    10,
+    8,
+    9,
+    8,
+    4,
+    4,
+    10
+   ],
+   "vwhy": "Rapoarte trimestriale auditate, depuse la autoritatea bursieră; peste 20 de ani de istoric. Semnale de alarmă: procesul colectiv al acționarilor, creșterea pierderilor din credite și plecarea anunțată a directorului financiar.",
+   "vwhyEn": "Audited reports filed with the regulator; over 20 years of history. Warning signs: the shareholders’ class action, rising credit losses and the announced departure of the CFO.",
+   "stage": "ipo",
+   "inputs": {},
+   "score": 5.84,
+   "met": 9,
+   "met14": 3,
+   "trust": 6
+  },
+  {
+   "id": "shein",
+   "name": "Shein",
+   "nameEn": "Shein",
+   "c": [
+    8,
+    3,
+    6,
+    5,
+    6,
+    5,
+    5,
+    6,
+    6,
+    7,
+    3,
+    3,
+    7,
+    3
+   ],
+   "why": "Comerț online cu modă ieftină. După încercări eșuate la New York și Londra, listată la Hong Kong pe 1 septembrie 2026 (cod 00625). Venituri de 41,8 mld. USD în 2025, dar creștere aproape oprită în T1 2026 (+1%); evaluarea a scăzut de la 100 mld. USD (2022) la câteva zeci de miliarde.",
+   "whyEn": "Online cheap fashion. After failed attempts in New York and London, listed in Hong Kong on 1 September 2026 (code 00625). Revenue of USD 41.8bn in 2025, but growth almost stalled in Q1 2026 (+1%); the valuation fell from USD 100bn (2022) to a few tens of billions.",
+   "sources": [
+    [
+     "Allmind: Shein după listare (prospect și cifre)",
+     "https://allmind.ai/research/shein-ipo-preview"
+    ],
+    [
+     "Reuters (prin HL): aprobarea bursei din Hong Kong",
+     "https://www.hl.co.uk/news/shein-secures-nod-from-hong-kong-listing-committee-for-ipo-sources-say"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Allmind: Shein after the listing (prospectus and figures)",
+     "https://allmind.ai/research/shein-ipo-preview"
+    ],
+    [
+     "Reuters (via HL): the Hong Kong exchange’s approval",
+     "https://www.hl.co.uk/news/shein-secures-nod-from-hong-kong-listing-committee-for-ipo-sources-say"
+    ]
+   ],
+   "v": [
+    7,
+    9,
+    8,
+    7,
+    7,
+    3,
+    null,
+    10
+   ],
+   "vwhy": "Prospect public la Hong Kong, aprobat de autoritatea chineză. Semnale de alarmă: comisia parlamentară britanică s-a declarat „îngrozită” de lipsa dovezilor despre lanțul de aprovizionare, iar cazurile europene privind piața online sunt deschise.",
+   "vwhyEn": "A public prospectus in Hong Kong, approved by the Chinese regulator. Warning signs: the UK parliamentary committee said it was “horrified” by the lack of evidence about the supply chain, and European cases about the marketplace are open.",
+   "stage": "ipo",
+   "inputs": {},
+   "score": 5.79,
+   "met": 9,
+   "met14": 3,
+   "trust": 6
+  },
+  {
+   "id": "coreweave-crwv",
+   "name": "CoreWeave (CRWV)",
+   "nameEn": "CoreWeave (CRWV)",
+   "c": [
+    8,
+    4,
+    2,
+    6,
+    5,
+    6,
+    5,
+    4,
+    7,
+    6,
+    5,
+    5,
+    5,
+    5
+   ],
+   "why": "Nor de calcul pentru AI, cu un portofoliu de contracte de circa 99 mld. USD. Venituri de 2,08 mld. USD în primul trimestru din 2026, dar datorii de zeci de miliarde, iar dobânzile din trimestrul al doilea au fost de cinci ori profitul operațional ajustat. Pe 14 octombrie 2026 acțiunea a scăzut cu 15,5% într-o zi.",
+   "whyEn": "An AI compute cloud with a contract backlog of about USD 99bn. Revenue of USD 2.08bn in Q1 2026, but tens of billions in debt, and Q2 interest was five times adjusted operating profit. On 14 October 2026 the share fell 15.5% in one day.",
+   "sources": [
+    [
+     "Admiral Markets: datoria CoreWeave și scăderea din 14 octombrie",
+     "https://admiralmarkets.com/education/articles/shares/coreweave-stock-drop-ai-debt"
+    ],
+    [
+     "Kavout: rezultatele din T1 2026 și acoperirea datoriei",
+     "https://www.kavout.com/market-lens/coreweave-s-debt-spiral-a-2-6-billion-lifeline-not-a-growth-catalyst"
+    ],
+    [
+     "Yahoo Finance: cotația CRWV",
+     "https://finance.yahoo.com/quote/CRWV"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Admiral Markets: CoreWeave’s debt and the 14 October fall",
+     "https://admiralmarkets.com/education/articles/shares/coreweave-stock-drop-ai-debt"
+    ],
+    [
+     "Kavout: Q1 2026 results and debt coverage",
+     "https://www.kavout.com/market-lens/coreweave-s-debt-spiral-a-2-6-billion-lifeline-not-a-growth-catalyst"
+    ],
+    [
+     "Yahoo Finance: the CRWV quote",
+     "https://finance.yahoo.com/quote/CRWV"
+    ]
+   ],
+   "v": [
+    8,
+    10,
+    8,
+    7,
+    8,
+    3,
+    null,
+    10
+   ],
+   "vwhy": "Rapoarte trimestriale auditate, depuse la autoritatea bursieră. Semnale de alarmă: o datorie foarte mare față de profit, dependența de câțiva clienți (Microsoft, OpenAI) și finanțarea circulară cu Nvidia, care e și investitor, și furnizor.",
+   "vwhyEn": "Audited reports filed with the regulator. Warning signs: very high debt relative to profit, dependence on a few clients (Microsoft, OpenAI) and circular financing with Nvidia, which is both investor and supplier.",
+   "stage": "ipo",
+   "inputs": {},
+   "score": 5.97,
+   "met": 8,
+   "met14": 2,
+   "trust": 6
+  },
+  {
+   "id": "stubhub-stub",
+   "name": "StubHub (STUB)",
+   "nameEn": "StubHub (STUB)",
+   "c": [
+    5,
+    2,
+    2,
+    4,
+    5,
+    4,
+    4,
+    6,
+    5,
+    6,
+    3,
+    1,
+    8,
+    3
+   ],
+   "why": "Piață de revânzare a biletelor. Listată pe NYSE în septembrie 2025 la 23,50 USD, după ce IPO-ul a fost amânat de mai multe ori; după primul raport trimestrial acțiunea a scăzut până la 10,31 USD (−56%). Datorii moștenite din preluarea de către viagogo și un proces intentat de procurorul general din Washington DC pentru comisioane ascunse.",
+   "whyEn": "A ticket resale marketplace. Listed on the NYSE in September 2025 at USD 23.50, after the IPO was postponed several times; after its first quarterly report the share fell to USD 10.31 (−56%). Debt inherited from the merger with viagogo and a lawsuit by the Washington DC attorney general over hidden fees.",
+   "sources": [
+    [
+     "Bloomberg (prin BNN): procesul din Washington DC",
+     "https://www.bnnbloomberg.ca/business/company-news/2024/07/31/stubhub-drip-pricing-hides-ticket-costs-dc-prosecutor-says/"
+    ],
+    [
+     "MarketMinute: procesul colectiv și scăderea acțiunii StubHub",
+     "https://stocks.observer-reporter.com/observerreporter/article/marketminute-2026-1-8-stubhub-faces-legal-storm-securities-lawsuit-alleges-misleading-disclosures-in-landmark-ipo"
+    ],
+    [
+     "Yahoo Finance: cotația STUB",
+     "https://finance.yahoo.com/quote/STUB"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Bloomberg (via BNN): the Washington DC lawsuit",
+     "https://www.bnnbloomberg.ca/business/company-news/2024/07/31/stubhub-drip-pricing-hides-ticket-costs-dc-prosecutor-says/"
+    ],
+    [
+     "MarketMinute: StubHub’s class action and share fall",
+     "https://stocks.observer-reporter.com/observerreporter/article/marketminute-2026-1-8-stubhub-faces-legal-storm-securities-lawsuit-alleges-misleading-disclosures-in-landmark-ipo"
+    ],
+    [
+     "Yahoo Finance: the STUB quote",
+     "https://finance.yahoo.com/quote/STUB"
+    ]
+   ],
+   "v": [
+    7,
+    10,
+    7,
+    9,
+    6,
+    3,
+    5,
+    10
+   ],
+   "vwhy": "Rapoarte trimestriale auditate, depuse la autoritatea bursieră; peste 20 de ani de istoric, inclusiv trecerea prin pandemie, când vânzările de bilete au dispărut. Semnale de alarmă: procesul colectiv al acționarilor pentru prospectul de listare, procesul din Washington DC pentru comisioane ascunse și datoriile mari.",
+   "vwhyEn": "Audited quarterly reports filed with the market regulator; over 20 years of history, including the pandemic, when ticket sales vanished. Warning signs: the shareholders’ class action over the listing prospectus, the Washington DC lawsuit over hidden fees and the heavy debt.",
+   "stage": "ipo",
+   "inputs": {},
+   "score": 4.82,
+   "met": 6,
+   "met14": 1,
+   "trust": 5
+  },
+  {
+   "id": "gemini-gemi",
+   "name": "Gemini (GEMI)",
+   "nameEn": "Gemini (GEMI)",
+   "c": [
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    3,
+    1,
+    8,
+    4
+   ],
+   "why": "Bursa cripto a fraților Winklevoss. Listată în septembrie 2025 la 28 USD; acțiunea a scăzut cu peste 80%. Pierdere de 585 mil. USD în 2025, 30% din angajați concediați, ieșire din UE, Regatul Unit și Australia, plecarea directorilor de operațiuni, financiar și juridic și un proces colectiv al acționarilor.",
+   "whyEn": "The Winklevoss brothers’ crypto exchange. Listed in September 2025 at USD 28; the share fell by more than 80%. A USD 585m loss in 2025, 30% of staff laid off, an exit from the EU, the UK and Australia, the departure of the COO, CFO and chief legal officer, and a shareholder class action.",
+   "sources": [
+    [
+     "The Block: procesul colectiv și pierderile Gemini",
+     "https://www.theblock.co/post/394477/gemini-faces-investor-lawsuit-earnings-layoffs"
+    ],
+    [
+     "Glancy: procesul colectiv Gemini",
+     "https://www.glancylaw.com/cases/gemini-space-station-inc/"
+    ],
+    [
+     "Yahoo Finance: cotația GEMI",
+     "https://finance.yahoo.com/quote/GEMI"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "The Block: Gemini’s class action and losses",
+     "https://www.theblock.co/post/394477/gemini-faces-investor-lawsuit-earnings-layoffs"
+    ],
+    [
+     "Glancy: the Gemini class action",
+     "https://www.glancylaw.com/cases/gemini-space-station-inc/"
+    ],
+    [
+     "Yahoo Finance: the GEMI quote",
+     "https://finance.yahoo.com/quote/GEMI"
+    ]
+   ],
+   "v": [
+    8,
+    10,
+    8,
+    7,
+    6,
+    2,
+    3,
+    10
+   ],
+   "vwhy": "Rapoarte trimestriale auditate, depuse la autoritatea bursieră. Semnale de alarmă grave: proces colectiv pentru declarații înșelătoare la listare, plecarea a trei directori și retragerea din piețe întregi.",
+   "vwhyEn": "Audited reports filed with the regulator. Serious warning signs: a class action over misleading statements at listing, the departure of three executives and withdrawal from whole markets.",
+   "stage": "ipo",
+   "inputs": {},
+   "score": 4.56,
+   "met": 6,
+   "met14": 1,
+   "trust": 5
+  },
+  {
+   "id": "discord",
+   "name": "Discord",
+   "nameEn": "Discord",
+   "c": [
+    7,
+    5,
+    6,
+    6,
+    7,
+    6,
+    6,
+    9,
+    6,
+    6,
+    5,
+    5,
+    6,
+    6
+   ],
+   "why": "Platformă de comunicare pentru comunități, peste 200 de milioane de utilizatori lunari. A depus confidențial documentele de listare în ianuarie 2026; ultima rundă a evaluat-o la circa 15 mld. USD (2021), iar estimările recente sunt mai mici.",
+   "whyEn": "A communication platform for communities, over 200 million monthly users. It filed its listing documents confidentially in January 2026; the last round valued it at about USD 15bn (2021), and recent estimates are lower.",
+   "sources": [
+    [
+     "Rankiteo: breșa de date Discord prin furnizorul 5CA",
+     "https://blog.rankiteo.com/5ca4692346101025-discord-breach-september-2025"
+    ],
+    [
+     "Dealroom: Discord și listările din 2026",
+     "https://dealroom.net/blog/upcoming-recent-ipos"
+    ],
+    [
+     "Money: evaluarea Discord înainte de listare",
+     "https://money.com/companies-most-likely-ipos-2026/?amp=true"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Rankiteo: Discord’s data breach via the vendor 5CA",
+     "https://blog.rankiteo.com/5ca4692346101025-discord-breach-september-2025"
+    ],
+    [
+     "Dealroom: Discord and the 2026 listings",
+     "https://dealroom.net/blog/upcoming-recent-ipos"
+    ],
+    [
+     "Money: Discord’s valuation before the listing",
+     "https://money.com/companies-most-likely-ipos-2026/?amp=true"
+    ]
+   ],
+   "v": [
+    6,
+    5,
+    6,
+    9,
+    6,
+    5,
+    null,
+    10
+   ],
+   "vwhy": "Ultima rundă confirmată e din 2021, iar evaluările de acum sunt estimări; 11 ani de istoric. Breșa de date de la un furnizor (septembrie 2025, circa 70.000 de imagini de documente de identitate expuse) e un semnal de alarmă.",
+   "vwhyEn": "The last confirmed round is from 2021, and today’s valuations are estimates; 11 years of history. The data breach at a vendor (September 2025, about 70,000 ID document images exposed) is a warning sign.",
+   "stage": "preipo",
+   "inputs": {},
+   "score": 6.18,
+   "met": 5,
+   "met14": 3,
+   "trust": 2
+  }
+ ]
+}

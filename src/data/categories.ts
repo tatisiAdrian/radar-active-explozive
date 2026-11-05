@@ -16,7 +16,7 @@ export interface Category {
 export const CATEGORIES: Record<CatKey, Category> = {
   investitii: {
     key: 'investitii',
-    slugs: ['crypto', 'startups', 'startups/europa/romania', 'sp500', 'proiecte-imobiliare'],
+    slugs: ['crypto', 'startups', 'ipo-preipo', 'startups/europa/romania', 'sp500', 'proiecte-imobiliare'],
     path: { ro: 'investitii/', en: 'en/investments/' },
     color: '#2b59ff',
     t: {

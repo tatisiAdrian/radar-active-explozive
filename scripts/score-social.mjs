@@ -34,11 +34,15 @@ export const FORMULAS = {
   },
 };
 
-const files = (await readdir(new URL('./social/', import.meta.url))).filter((f) => f.endsWith('.json'));
-await mkdir(new URL('../src/data/social/', import.meta.url), { recursive: true });
-for (const f of files) {
+// Topurile din categoria Social (scripts/social) și topurile pe 22 de condiții din radarul de investiții (scripts/tops).
+const jobs = [];
+for (const dir of ['social', 'tops']) {
+  await mkdir(new URL(`../src/data/${dir}/`, import.meta.url), { recursive: true });
+  for (const f of (await readdir(new URL(`./${dir}/`, import.meta.url))).filter((x) => x.endsWith('.json'))) jobs.push([dir, f]);
+}
+for (const [dir, f] of jobs) {
   const slug = f.replace('.json', '');
-  const cfg = JSON.parse(await readFile(new URL(`./social/${f}`, import.meta.url), 'utf8'));
+  const cfg = JSON.parse(await readFile(new URL(`./${dir}/${f}`, import.meta.url), 'utf8'));
   const rows = cfg.items.map((it) => {
     const c = [...it.c];
     const inputs = {};
@@ -77,10 +81,11 @@ for (const f of files) {
     const score = +(c.map((v) => v ?? 5).reduce((s, v, i) => s + v * W[i], 0) / 100).toFixed(2);
     return { ...it, c, inputs, score, met: met14, met14 };
   }).sort((a, b) => b.met - a.met || b.score - a.score);
-  const snapName = `social-${slug}${cfg.revision ? `-r${cfg.revision}` : ''}-${cfg.date}`;
-  const prevSnap = cfg.revision ? `social-${slug}${cfg.revision > 2 ? `-r${cfg.revision - 1}` : ''}-${cfg.date}` : undefined;
+  const pre = dir === 'social' ? 'social-' : '';
+  const snapName = `${pre}${slug}${cfg.revision ? `-r${cfg.revision}` : ''}-${cfg.date}`;
+  const prevSnap = cfg.revision ? `${pre}${slug}${cfg.revision > 2 ? `-r${cfg.revision - 1}` : ''}-${cfg.date}` : undefined;
   const out = { slug, set: cfg.set, region: cfg.region ?? 'romania', date: cfg.date, snapshot: snapName, previousSnapshot: prevSnap, revisionNote: cfg.revisionNote, revisionNoteEn: cfg.revisionNoteEn, verified: !!cfg.verified, formulas: FORMULAS[cfg.set] ?? {}, rows };
-  await writeFile(new URL(`../src/data/social/${slug}.json`, import.meta.url), JSON.stringify(out, null, 1) + '\n');
+  await writeFile(new URL(`../src/data/${dir}/${slug}.json`, import.meta.url), JSON.stringify(out, null, 1) + '\n');
   console.log(slug, rows.map((r) => `${r.id} ${r.met}/${cfg.verified ? 22 : 14} ${r.score}`).join(' | '));
   if (process.argv.includes('--snapshot')) {
     const name = snapName;

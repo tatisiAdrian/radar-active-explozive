@@ -12,12 +12,24 @@ export const domains: Domain[] = [
     title: 'Start-ups la nivel mondial',
     radarMarket: 'comp',
     criteria: 'general',
-    summary: 'Finanțare, evaluări și dinamica ecosistemelor de start-up la nivel global.',
+    summary: '22 de start-up-uri nelistate din lume, 11 cu produs pe piață și 11 laboratoare fără produs încă, notate pe 22 de condiții (14 și 8 de verificare a dovezilor): venituri reale, finanțare, echipă, evaluare și semnalele de alarmă.',
     status: 'activ',
     questions: [
+      'Care start-up-uri nelistate au venituri reale, confirmate de investitori?',
+      'Ce laboratoare noi, fără produs, au cele mai solide dovezi în spate?',
       'Cât capital de risc s-a investit, pe ani și pe regiuni?',
-      'Ce sectoare atrag cea mai mare parte a finanțării?',
-      'Cum evoluează numărul de companii „unicorn”?',
+    ],
+  },
+  {
+    slug: 'ipo-preipo',
+    title: 'Companii listate recent și pre-IPO',
+    criteria: 'general',
+    summary: '22 de companii: 11 listate la bursă în 2025–2026 (SpaceX, Cerebras, Figma, Circle…) și 11 pre-IPO (OpenAI, Databricks, Stripe, Revolut…), notate pe 22 de condiții (14 și 8 de verificare a dovezilor): rapoarte auditate, procese, datorii și cum s-au descurcat după listare.',
+    status: 'activ',
+    questions: [
+      'Care listări recente au o afacere care crește, nu doar o acțiune care a sărit la debut?',
+      'Ce companii pre-IPO au cifre confirmate și care doar estimări?',
+      'Unde sunt semnalele de alarmă: procese, datorii, plecări de directori?',
     ],
   },
   {

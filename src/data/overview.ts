@@ -6,6 +6,7 @@ import ro from './startups-ro/scores.json';
 import imob from './imobiliare/scores.json';
 import proj from './proiecte-imobiliare/scores.json';
 import { SOCIAL } from './social';
+import { TOPS } from './tops';
 import { type Lang, DOMAIN_EN, NAME_EN, COUNTRY_EN } from './i18n';
 
 /** Un punct pe radarul de pe Home: un activ dintr-un domeniu, cu numărul de condiții îndeplinite. */
@@ -28,7 +29,8 @@ const fromRadar = (m: 'crypto' | 'comp' | 'comm'): Dot[] =>
 
 export const OVERVIEW: DomainOverview[] = [
   { slug: 'crypto', title: 'Criptoactive', short: 'Cripto', what: 'tokenuri lansate și nelansate', color: '#2b59ff', snapshot: '2026-10-29.json', items: fromRadar('crypto') },
-  { slug: 'startups', title: 'Start-ups la nivel mondial', short: 'Start-ups lume', what: 'companii listate recent, pre-IPO și start-up-uri', color: '#0e8a8a', snapshot: '2026-10-29.json', items: fromRadar('comp') },
+  { slug: 'startups', title: 'Start-ups la nivel mondial', short: 'Start-ups lume', what: 'start-up-uri nelistate din lume', color: '#0e8a8a', snapshot: `${TOPS['startups'].snapshot}.json`, items: TOPS['startups'].rows.map((r) => ({ name: r.name, met: r.met14 ?? r.met, score: r.score, c: r.c })) },
+  { slug: 'ipo-preipo', title: 'Companii listate recent și pre-IPO', short: 'IPO și pre-IPO', what: 'companii listate recent și pre-IPO', color: '#3b7dd8', snapshot: `${TOPS['ipo-preipo'].snapshot}.json`, items: TOPS['ipo-preipo'].rows.map((r) => ({ name: r.name, met: r.met14 ?? r.met, score: r.score, c: r.c })) },
   { slug: 'startups/europa/romania', title: 'Start-ups în România', short: 'Start-ups România', what: 'companii tech fondate în România', color: '#1d6fa5', snapshot: `${(ro as { snapshot?: string }).snapshot ?? 'startups-ro-2026-11-01'}.json`, items: (ro.rows as unknown as { name: string; met14?: number; met: number; score: number; c: (number | null)[] }[]).map((r) => ({ name: r.name, met: r.met14 ?? r.met, score: r.score, c: r.c })) },
   { slug: 'sp500', title: 'S&P 500', short: 'S&P 500', what: 'cele mai mari companii americane', color: '#b0397a', snapshot: 'sp500-2026-11-01.json', items: fromScores(sp500 as unknown as Scored, (r) => `${r.id} · ${r.name}`) },
   { slug: 'marfuri', title: 'Mărfuri', short: 'Mărfuri', what: 'mărfuri mature și emergente', color: '#c2761a', snapshot: '2026-10-29.json', items: fromRadar('comm') },

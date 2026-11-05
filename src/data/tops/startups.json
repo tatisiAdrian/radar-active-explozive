@@ -1,0 +1,1339 @@
+{
+ "slug": "startups",
+ "set": "general",
+ "region": "lume",
+ "date": "2026-11-05",
+ "snapshot": "startups-2026-11-05",
+ "revisionNote": "Topul are acum 22 de start-up-uri nelistate (11 cu produs, 11 fără produs), notate pe 22 de condiții: cele 14 din radar (80% din scor) și 8 de verificare a dovezilor (20%). Companiile listate recent și cele pre-IPO au un top separat. Lista de 44 rămâne publicată în instantaneul radarului din 29 octombrie 2026.",
+ "revisionNoteEn": "The ranking now has 22 unlisted start-ups (11 with a product, 11 without one yet), scored on 22 conditions: the 14 of the radar (80% of the score) and 8 that verify the evidence (20%). Recently listed and pre-IPO companies have a separate ranking. The list of 44 stays published in the radar snapshot of 29 October 2026.",
+ "verified": true,
+ "formulas": {},
+ "rows": [
+  {
+   "id": "elevenlabs",
+   "name": "ElevenLabs",
+   "nameEn": "ElevenLabs",
+   "c": [
+    8,
+    7,
+    7,
+    7,
+    8,
+    8,
+    6,
+    7,
+    8,
+    5,
+    7,
+    8,
+    5,
+    8
+   ],
+   "why": "Voce sintetică și agenți vocali pentru firme. Venituri recurente de 350 mil. USD la finalul lui 2025 și peste 500 mil. USD în mai 2026; Series D de 500 mil. USD la 11 mld. USD (februarie 2026), condusă de Sequoia. Clienți mari (Deutsche Telekom, Santander, Salesforce) au devenit și acționari.",
+   "whyEn": "Synthetic voice and voice agents for companies. Recurring revenue of USD 350m at the end of 2025 and more than USD 500m in May 2026; a USD 500m Series D at USD 11bn (February 2026), led by Sequoia. Large clients (Deutsche Telekom, Santander, Salesforce) also became shareholders.",
+   "sources": [
+    [
+     "Darkroom: cum a crescut ElevenLabs (runde și venituri)",
+     "https://www.darkroomagency.com/observatory/how-elevenlabs-grew-to-a-22b-valuation"
+    ],
+    [
+     "Komo: rundele ElevenLabs până în mai 2026",
+     "https://komo.ai/directory/elevenlabs-funding"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Darkroom: how ElevenLabs grew (rounds and revenue)",
+     "https://www.darkroomagency.com/observatory/how-elevenlabs-grew-to-a-22b-valuation"
+    ],
+    [
+     "Komo: ElevenLabs’ rounds to May 2026",
+     "https://komo.ai/directory/elevenlabs-funding"
+    ]
+   ],
+   "v": [
+    8,
+    5,
+    8,
+    6,
+    9,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Runde confirmate de Sequoia și a16z, venituri anunțate de companie și preluate concordant de presă; clienți numiți care au investit și ei. Compania are aproape patru ani de istoric.",
+   "vwhyEn": "Rounds confirmed by Sequoia and a16z, revenue announced by the company and reported consistently by the press; named clients that also invested. The company has almost four years of history.",
+   "stage": "startup",
+   "inputs": {},
+   "score": 7.17,
+   "met": 16,
+   "met14": 11,
+   "trust": 5
+  },
+  {
+   "id": "lovable",
+   "name": "Lovable",
+   "nameEn": "Lovable",
+   "c": [
+    8,
+    6,
+    7,
+    7,
+    6,
+    7,
+    6,
+    8,
+    8,
+    4,
+    7,
+    8,
+    4,
+    7
+   ],
+   "why": "Platformă suedeză care construiește aplicații din text. Venituri anualizate de la 17 mil. USD (februarie 2025) la peste 500 mil. USD (iunie 2026); Series C de 400 mil. USD la 13,3 mld. USD în august 2026, condusă de Menlo Ventures.",
+   "whyEn": "A Swedish platform that builds apps from text. Annualised revenue from USD 17m (February 2025) to more than USD 500m (June 2026); a USD 400m Series C at USD 13.3bn in August 2026, led by Menlo Ventures.",
+   "sources": [
+    [
+     "Let’s Data Science: Series C de 400 mil. USD la 13,3 mld. USD",
+     "https://letsdatascience.com/news/lovable-raises-400-million-at-133-billion-valuation-974a9327"
+    ],
+    [
+     "Multiples: istoricul rundelor și veniturilor Lovable",
+     "https://multiples.vc/private-comps/lovable"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Let’s Data Science: USD 400m Series C at USD 13.3bn",
+     "https://letsdatascience.com/news/lovable-raises-400-million-at-133-billion-valuation-974a9327"
+    ],
+    [
+     "Multiples: Lovable’s rounds and revenue history",
+     "https://multiples.vc/private-comps/lovable"
+    ]
+   ],
+   "v": [
+    8,
+    6,
+    8,
+    4,
+    8,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Rundele și veniturile sunt confirmate de investitorul principal (Menlo) și de presă, iar runda apare într-o declarație Form D la SEC; compania are însă sub trei ani de istoric și n-a trecut printr-o criză.",
+   "vwhyEn": "The rounds and revenue are confirmed by the lead investor (Menlo) and the press, and the round appears in a Form D filing with the SEC; but the company has under three years of history and has not been through a downturn.",
+   "stage": "startup",
+   "inputs": {},
+   "score": 6.79,
+   "met": 14,
+   "met14": 9,
+   "trust": 5
+  },
+  {
+   "id": "sierra",
+   "name": "Sierra",
+   "nameEn": "Sierra",
+   "c": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    9,
+    6,
+    4,
+    7,
+    4,
+    6,
+    8,
+    6,
+    8
+   ],
+   "why": "Agenți AI pentru relația cu clienții, fondată de Bret Taylor (președintele consiliului OpenAI) și Clay Bavor. 150 mil. USD venituri recurente în opt trimestre; Series E de 950 mil. USD la 15,8 mld. USD (mai 2026), condusă de Tiger Global și GV.",
+   "whyEn": "AI agents for customer service, founded by Bret Taylor (OpenAI board chair) and Clay Bavor. USD 150m in recurring revenue within eight quarters; a USD 950m Series E at USD 15.8bn (May 2026), led by Tiger Global and GV.",
+   "sources": [
+    [
+     "SiliconANGLE: Sierra, evaluare de 15 mld. USD (mai 2026)",
+     "https://siliconangle.com/?p=746652"
+    ],
+    [
+     "Multiples: rundele Sierra",
+     "https://multiples.vc/private-comps/sierra"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "SiliconANGLE: Sierra valued at USD 15bn (May 2026)",
+     "https://siliconangle.com/?p=746652"
+    ],
+    [
+     "Multiples: Sierra’s rounds",
+     "https://multiples.vc/private-comps/sierra"
+    ]
+   ],
+   "v": [
+    7,
+    4,
+    8,
+    4,
+    8,
+    7,
+    null,
+    10
+   ],
+   "vwhy": "Runda e confirmată de companie, de investitori și de CNBC și TechCrunch; venitul de 150 mil. USD e anunțat de companie. Fondatorul conduce și consiliul OpenAI, o legătură de urmărit.",
+   "vwhyEn": "The round is confirmed by the company, the investors and CNBC and TechCrunch; the USD 150m revenue is announced by the company. The founder also chairs the OpenAI board, a link worth watching.",
+   "stage": "startup",
+   "inputs": {},
+   "score": 6.68,
+   "met": 14,
+   "met14": 9,
+   "trust": 5
+  },
+  {
+   "id": "mistral-ai",
+   "name": "Mistral AI",
+   "nameEn": "Mistral AI",
+   "c": [
+    6,
+    7,
+    6,
+    8,
+    6,
+    8,
+    6,
+    7,
+    7,
+    5,
+    7,
+    7,
+    6,
+    7
+   ],
+   "why": "Cel mai valoros laborator de AI din Europa, la Paris. Series C de 1,7 mld. EUR la 11,7 mld. EUR (septembrie 2025), condusă de ASML, care a devenit principalul acționar (circa 11%); în 2026 a discutat o rundă la circa 20 mld. EUR și a luat datorie pentru centre de date.",
+   "whyEn": "Europe’s most valuable AI lab, in Paris. A EUR 1.7bn Series C at EUR 11.7bn (September 2025), led by ASML, which became the main shareholder (about 11%); in 2026 it discussed a round at about EUR 20bn and took on debt for data centres.",
+   "sources": [
+    [
+     "Sifted: Mistral confirmă Series C cu ASML",
+     "https://sifted.eu/articles/mistral-confirms-series-c-asml"
+    ],
+    [
+     "Komo: rundele Mistral până în 2026",
+     "https://komo.ai/directory/mistral-ai-funding"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Sifted: Mistral confirms the Series C with ASML",
+     "https://sifted.eu/articles/mistral-confirms-series-c-asml"
+    ],
+    [
+     "Komo: Mistral’s rounds to 2026",
+     "https://komo.ai/directory/mistral-ai-funding"
+    ]
+   ],
+   "v": [
+    8,
+    5,
+    8,
+    6,
+    9,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Runda e confirmată de Mistral și de ASML, o companie listată care își raportează investiția; trei ani de istoric fără rundă în scădere. Venitul nu e publicat oficial.",
+   "vwhyEn": "The round is confirmed by Mistral and by ASML, a listed company that reports its investment; three years of history with no down round. Revenue is not published officially.",
+   "stage": "startup",
+   "inputs": {},
+   "score": 6.71,
+   "met": 13,
+   "met14": 8,
+   "trust": 5
+  },
+  {
+   "id": "replit",
+   "name": "Replit",
+   "nameEn": "Replit",
+   "c": [
+    7,
+    6,
+    6,
+    8,
+    6,
+    7,
+    6,
+    8,
+    7,
+    5,
+    6,
+    7,
+    5,
+    7
+   ],
+   "why": "Platformă de programare în browser, cu peste 50 de milioane de utilizatori. Venituri de 240 mil. USD în 2025; Series D de 400 mil. USD la 9 mld. USD (martie 2026), condusă de Georgian, de trei ori evaluarea din septembrie 2025.",
+   "whyEn": "A browser-based coding platform with more than 50 million users. Revenue of USD 240m in 2025; a USD 400m Series D at USD 9bn (March 2026), led by Georgian, three times the September 2025 valuation.",
+   "sources": [
+    [
+     "TechCrunch: Replit la 9 mld. USD (martie 2026)",
+     "https://techcrunch.com/2026/03/11/replit-snags-9b-valuation-6-months-after-hitting-3b"
+    ],
+    [
+     "Built In: Series D Replit",
+     "https://builtin.com/articles/replit-rasies-400m-series-d-9b-valuation-20260313"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "TechCrunch: Replit at USD 9bn (March 2026)",
+     "https://techcrunch.com/2026/03/11/replit-snags-9b-valuation-6-months-after-hitting-3b"
+    ],
+    [
+     "Built In: Replit’s Series D",
+     "https://builtin.com/articles/replit-rasies-400m-series-d-9b-valuation-20260313"
+    ]
+   ],
+   "v": [
+    7,
+    4,
+    8,
+    9,
+    8,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Runda e confirmată de companie și de Georgian; peste zece ani de istoric și o pivotare reușită spre agenți AI.",
+   "vwhyEn": "The round is confirmed by the company and Georgian; more than ten years of history and a successful pivot to AI agents.",
+   "stage": "startup",
+   "inputs": {},
+   "score": 6.65,
+   "met": 13,
+   "met14": 7,
+   "trust": 6
+  },
+  {
+   "id": "glean",
+   "name": "Glean",
+   "nameEn": "Glean",
+   "c": [
+    7,
+    7,
+    6,
+    6,
+    7,
+    7,
+    6,
+    4,
+    7,
+    6,
+    6,
+    5,
+    6,
+    7
+   ],
+   "why": "Căutare și asistent AI pentru companii, fondată în 2019 de foști ingineri Google. Venituri recurente de 100 mil. USD (începutul lui 2025), 208 mil. (finalul lui 2025) și 300 mil. USD (mai 2026); evaluare de 7,2 mld. USD (Series F, iunie 2025).",
+   "whyEn": "Search and an AI assistant for companies, founded in 2019 by former Google engineers. Recurring revenue of USD 100m (early 2025), 208m (end of 2025) and USD 300m (May 2026); valued at USD 7.2bn (Series F, June 2025).",
+   "sources": [
+    [
+     "Business Wire: Glean, Series F la 7,2 mld. USD",
+     "https://www.businesswire.com/news/home/20250610090029/en/Glean-Raises-%24150M-Series-F-at-%247.2B-Valuation-to-Accelerate-Enterprise-AI-Agent-Innovation-Globally"
+    ],
+    [
+     "TechCrunch: Glean la 7,2 mld. USD",
+     "https://techcrunch.com/2025/06/10/enterprise-ai-startup-glean-lands-a-7-2b-valuation"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Business Wire: Glean, Series F at USD 7.2bn",
+     "https://www.businesswire.com/news/home/20250610090029/en/Glean-Raises-%24150M-Series-F-at-%247.2B-Valuation-to-Accelerate-Enterprise-AI-Agent-Innovation-Globally"
+    ],
+    [
+     "TechCrunch: Glean lands a USD 7.2bn valuation",
+     "https://techcrunch.com/2025/06/10/enterprise-ai-startup-glean-lands-a-7-2b-valuation"
+    ]
+   ],
+   "v": [
+    8,
+    4,
+    8,
+    8,
+    8,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Comunicate oficiale (Business Wire) și presă concordă; șapte ani de istoric. A crescut în 2026 tocmai când firmele și-au tăiat bugetele de AI, un test de rezistență trecut. O parte din venit e consum anualizat, nu abonament.",
+   "vwhyEn": "Official releases (Business Wire) and the press agree; seven years of history. It grew in 2026 just as companies cut their AI budgets, a stress test passed. Part of the revenue is annualised consumption, not subscription.",
+   "stage": "startup",
+   "inputs": {},
+   "score": 6.54,
+   "met": 13,
+   "met14": 6,
+   "trust": 7
+  },
+  {
+   "id": "cognition",
+   "name": "Cognition",
+   "nameEn": "Cognition",
+   "c": [
+    8,
+    6,
+    6,
+    8,
+    7,
+    8,
+    6,
+    5,
+    8,
+    3,
+    6,
+    8,
+    4,
+    7
+   ],
+   "why": "Agentul de programare Devin și editorul Windsurf. Venituri anualizate de la 73 mil. USD (iunie 2025) la 492 mil. USD (mai 2026) și peste 1 mld. USD (septembrie 2026); Series D de peste 1 mld. USD la 26 mld. USD. Plănuiește să ardă circa 800 mil. USD în 2026.",
+   "whyEn": "The Devin coding agent and the Windsurf editor. Annualised revenue from USD 73m (June 2025) to USD 492m (May 2026) and over USD 1bn (September 2026); a Series D of over USD 1bn at USD 26bn. It plans to burn about USD 800m in 2026.",
+   "sources": [
+    [
+     "SiliconANGLE: Cognition își dublează evaluarea (mai 2026)",
+     "https://siliconangle.com/2026/05/27/vibe-coding-startup-cognition-doubles-valuation-new-1b-round/"
+    ],
+    [
+     "VentureBeat: veniturile Devin înainte de Windsurf",
+     "https://venturebeat.com/programming-development/cognition-follows-windsurf-acquisition-with-usd400m-fundraise-showing-strong"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "SiliconANGLE: Cognition more than doubles its valuation (May 2026)",
+     "https://siliconangle.com/2026/05/27/vibe-coding-startup-cognition-doubles-valuation-new-1b-round/"
+    ],
+    [
+     "VentureBeat: Devin’s revenue before Windsurf",
+     "https://venturebeat.com/programming-development/cognition-follows-windsurf-acquisition-with-usd400m-fundraise-showing-strong"
+    ]
+   ],
+   "v": [
+    7,
+    4,
+    8,
+    4,
+    8,
+    6,
+    null,
+    10
+   ],
+   "vwhy": "Rundele sunt confirmate de companie și de investitori (Lux, General Catalyst, 8VC); veniturile sunt anunțate de companie. Arderea mare de numerar și achiziția Windsurf, făcută în grabă, sunt de urmărit.",
+   "vwhyEn": "The rounds are confirmed by the company and the investors (Lux, General Catalyst, 8VC); revenue is announced by the company. The heavy cash burn and the hurried Windsurf acquisition are worth watching.",
+   "stage": "startup",
+   "inputs": {},
+   "score": 6.56,
+   "met": 11,
+   "met14": 7,
+   "trust": 4
+  },
+  {
+   "id": "harvey",
+   "name": "Harvey",
+   "nameEn": "Harvey",
+   "c": [
+    7,
+    6,
+    6,
+    6,
+    7,
+    7,
+    6,
+    5,
+    8,
+    4,
+    6,
+    8,
+    5,
+    7
+   ],
+   "why": "AI pentru avocați, folosit de peste 100.000 de juriști la 1.300 de organizații. Evaluarea a urcat de la 8 mld. USD (decembrie 2025) la 11 mld. (martie 2026) și 15,5 mld. USD (runda de 550 mil. USD din 2026).",
+   "whyEn": "AI for lawyers, used by more than 100,000 lawyers at 1,300 organisations. The valuation rose from USD 8bn (December 2025) to USD 11bn (March 2026) and USD 15.5bn (the USD 550m round of 2026).",
+   "sources": [
+    [
+     "Bloomberg Law: Harvey, finanțare la 11 mld. USD (martie 2026)",
+     "https://news.bgov.com/us-law-week/legal-ai-startup-harvey-raises-funds-at-11-billion-valuation"
+    ],
+    [
+     "Entrepreneur Loop: runda la 15,5 mld. USD",
+     "https://entrepreneurloop.com/?p=5982"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Bloomberg Law: Harvey raises at USD 11bn (March 2026)",
+     "https://news.bgov.com/us-law-week/legal-ai-startup-harvey-raises-funds-at-11-billion-valuation"
+    ],
+    [
+     "Entrepreneur Loop: the round at USD 15.5bn",
+     "https://entrepreneurloop.com/?p=5982"
+    ]
+   ],
+   "v": [
+    7,
+    4,
+    8,
+    6,
+    8,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Runde confirmate de Sequoia și GIC și raportate de Bloomberg; numărul de utilizatori vine de la companie. Venitul nu e raportat constant în surse independente.",
+   "vwhyEn": "Rounds confirmed by Sequoia and GIC and reported by Bloomberg; the user numbers come from the company. Revenue is not reported consistently in independent sources.",
+   "stage": "startup",
+   "inputs": {},
+   "score": 6.45,
+   "met": 11,
+   "met14": 6,
+   "trust": 5
+  },
+  {
+   "id": "ami-labs",
+   "name": "AMI Labs",
+   "nameEn": "AMI Labs",
+   "c": [
+    2,
+    7,
+    7,
+    8,
+    1,
+    9,
+    5,
+    6,
+    7,
+    3,
+    7,
+    6,
+    6,
+    7
+   ],
+   "why": "Laboratorul lui Yann LeCun pentru „modele ale lumii”, cu sediul la Paris. Rundă seed de 1,03 mld. USD la 3,5 mld. USD înainte de investiție (martie 2026), condusă de Cathay Innovation, Greycroft și Bezos Expeditions; parteneriat cu Nabla pentru AI medical.",
+   "whyEn": "Yann LeCun’s lab for “world models”, based in Paris. A USD 1.03bn seed round at a USD 3.5bn pre-money valuation (March 2026), led by Cathay Innovation, Greycroft and Bezos Expeditions; a partnership with Nabla for medical AI.",
+   "sources": [
+    [
+     "TechBriefly: AMI Labs strânge 1,03 mld. USD",
+     "https://techbriefly.com/2026/03/10/yann-lecuns-ami-labs-raises-1-03b-in-massive-seed-round/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "TechBriefly: AMI Labs raises USD 1.03bn",
+     "https://techbriefly.com/2026/03/10/yann-lecuns-ami-labs-raises-1-03b-in-massive-seed-round/"
+    ]
+   ],
+   "v": [
+    6,
+    4,
+    7,
+    3,
+    7,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Runda e anunțată de companie, cu investitori numiți; laboratorul are sub un an și niciun produs.",
+   "vwhyEn": "The round is announced by the company, with named investors; the lab is under a year old and has no product.",
+   "stage": "seed",
+   "inputs": {},
+   "score": 5.53,
+   "met": 11,
+   "met14": 7,
+   "trust": 4
+  },
+  {
+   "id": "physical-intelligence",
+   "name": "Physical Intelligence",
+   "nameEn": "Physical Intelligence",
+   "c": [
+    3,
+    7,
+    6,
+    8,
+    2,
+    8,
+    5,
+    6,
+    8,
+    3,
+    6,
+    7,
+    5,
+    7
+   ],
+   "why": "Modele de AI care controlează orice robot (π0). Rundă de 600 mil. USD la 5,6 mld. USD, apoi Series C de circa 1 mld. USD la 11 mld. USD (2026); în octombrie 2026 a deschis accesul la modele printr-un API și discută o rundă la circa 20 mld. USD.",
+   "whyEn": "AI models that control any robot (π0). A USD 600m round at USD 5.6bn, then a Series C of about USD 1bn at USD 11bn (2026); in October 2026 it opened access to its models through an API and is in talks for a round at about USD 20bn.",
+   "sources": [
+    [
+     "Bloomberg Law: Physical Intelligence, rundă la 11 mld. USD",
+     "https://news.bloomberglaw.com/artificial-intelligence/ai-robotics-lab-in-talks-to-nab-1-billion-at-11-billion-value"
+    ],
+    [
+     "The Next Web: discuții la 20 mld. USD",
+     "https://thenextweb.com/news/physical-intelligence-20bn-valuation-talks-bloomberg"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Bloomberg Law: Physical Intelligence, a round at USD 11bn",
+     "https://news.bloomberglaw.com/artificial-intelligence/ai-robotics-lab-in-talks-to-nab-1-billion-at-11-billion-value"
+    ],
+    [
+     "The Next Web: talks at USD 20bn",
+     "https://thenextweb.com/news/physical-intelligence-20bn-valuation-talks-bloomberg"
+    ]
+   ],
+   "v": [
+    6,
+    4,
+    7,
+    5,
+    8,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Rundele sunt raportate concordant de Bloomberg; modelele sunt publicate și testate de cercetători externi. Nu există venituri publice.",
+   "vwhyEn": "The rounds are reported consistently by Bloomberg; the models are published and tested by outside researchers. There is no public revenue.",
+   "stage": "seed",
+   "inputs": {},
+   "score": 5.68,
+   "met": 10,
+   "met14": 6,
+   "trust": 4
+  },
+  {
+   "id": "periodic-labs",
+   "name": "Periodic Labs",
+   "nameEn": "Periodic Labs",
+   "c": [
+    2,
+    7,
+    7,
+    8,
+    2,
+    8,
+    5,
+    5,
+    8,
+    4,
+    7,
+    6,
+    7,
+    7
+   ],
+   "why": "„Oameni de știință AI” cu laboratoare robotizate pentru știința materialelor, fondată de Liam Fedus (co-creator ChatGPT) și Ekin Dogus Cubuk (DeepMind). Rundă seed de 300 mil. USD.",
+   "whyEn": "“AI scientists” with robotic labs for materials science, founded by Liam Fedus (ChatGPT co-creator) and Ekin Dogus Cubuk (DeepMind). A USD 300m seed round.",
+   "sources": [
+    [
+     "Electe: Periodic Labs și Project Prometheus",
+     "https://newsletter.electe.net/project-prometheus-jeff-bezos-6-2-billion-bet-on-industrial-ai/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Electe: Periodic Labs and Project Prometheus",
+     "https://newsletter.electe.net/project-prometheus-jeff-bezos-6-2-billion-bet-on-industrial-ai/"
+    ]
+   ],
+   "v": [
+    5,
+    3,
+    6,
+    3,
+    6,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Runda e raportată de presă; evaluarea nu e publică, iar compania n-are produs sau rezultate publicate.",
+   "vwhyEn": "The round is reported by the press; the valuation is not public, and the company has no product or published results.",
+   "stage": "seed",
+   "inputs": {},
+   "score": 5.51,
+   "met": 10,
+   "met14": 8,
+   "trust": 2
+  },
+  {
+   "id": "ineffable-intelligence",
+   "name": "Ineffable Intelligence",
+   "nameEn": "Ineffable Intelligence",
+   "c": [
+    2,
+    7,
+    7,
+    8,
+    1,
+    9,
+    5,
+    4,
+    6,
+    3,
+    6,
+    6,
+    7,
+    7
+   ],
+   "why": "Laboratorul lui David Silver (creatorul AlphaGo) la Londra, care pariază pe învățarea prin întărire, nu pe modelele de limbaj. Rundă seed de 1,1 mld. USD la 5,1 mld. USD (aprilie 2026), condusă de Sequoia și Lightspeed, cea mai mare din Europa.",
+   "whyEn": "David Silver’s lab (the creator of AlphaGo) in London, betting on reinforcement learning rather than language models. A USD 1.1bn seed round at USD 5.1bn (April 2026), led by Sequoia and Lightspeed, the largest in Europe.",
+   "sources": [
+    [
+     "The Next Web: Sequoia și Nvidia investesc în Ineffable",
+     "https://thenextweb.com/news/ineffable-intelligence-david-silver-sequoia-nvidia-5-billion"
+    ],
+    [
+     "Unite.AI: runda seed de 1,1 mld. USD",
+     "https://www.unite.ai/?p=414889"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "The Next Web: Sequoia and Nvidia back Ineffable",
+     "https://thenextweb.com/news/ineffable-intelligence-david-silver-sequoia-nvidia-5-billion"
+    ],
+    [
+     "Unite.AI: the USD 1.1bn seed round",
+     "https://www.unite.ai/?p=414889"
+    ]
+   ],
+   "v": [
+    6,
+    5,
+    7,
+    3,
+    7,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Runda e confirmată de investitori; compania e înregistrată în Regatul Unit (noiembrie 2025), cu directorii vizibili în registrul public. Nu are produs sau rezultate publicate.",
+   "vwhyEn": "The round is confirmed by the investors; the company is registered in the UK (November 2025), with its directors visible in the public register. It has no product or published results.",
+   "stage": "seed",
+   "inputs": {},
+   "score": 5.46,
+   "met": 10,
+   "met14": 6,
+   "trust": 4
+  },
+  {
+   "id": "unconventional-ai",
+   "name": "Unconventional AI",
+   "nameEn": "Unconventional AI",
+   "c": [
+    2,
+    6,
+    7,
+    7,
+    1,
+    8,
+    5,
+    4,
+    7,
+    3,
+    6,
+    6,
+    7,
+    7
+   ],
+   "why": "Calculatoare noi, eficiente energetic, pentru AI, inspirate din biologie; fondată de Naveen Rao (fost șef AI la Databricks, care a vândut MosaicML cu 1,3 mld. USD). Rundă seed de 475 mil. USD la 4,5 mld. USD (decembrie 2025), condusă de a16z și Lightspeed.",
+   "whyEn": "New, energy-efficient computers for AI, inspired by biology; founded by Naveen Rao (former head of AI at Databricks, who sold MosaicML for USD 1.3bn). A USD 475m seed round at USD 4.5bn (December 2025), led by a16z and Lightspeed.",
+   "sources": [
+    [
+     "TechCrunch: Unconventional AI confirmă runda de 475 mil. USD",
+     "https://techcrunch.com/2025/12/09/unconventional-ai-confirms-its-massive-475m-seed-round"
+    ],
+    [
+     "Bloomberg: evaluare de 4,5 mld. USD",
+     "https://www.bloomberg.com/news/articles/2025-12-08/ai-computer-startup-hits-4-5-billion-valuation-in-seed-round"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "TechCrunch: Unconventional AI confirms its USD 475m seed",
+     "https://techcrunch.com/2025/12/09/unconventional-ai-confirms-its-massive-475m-seed-round"
+    ],
+    [
+     "Bloomberg: a USD 4.5bn valuation",
+     "https://www.bloomberg.com/news/articles/2025-12-08/ai-computer-startup-hits-4-5-billion-valuation-in-seed-round"
+    ]
+   ],
+   "v": [
+    6,
+    3,
+    8,
+    3,
+    8,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Runda e confirmată de fondator și de investitori și raportată concordant de Bloomberg și TechCrunch; fondatorul are două exituri reușite. Hardware-ul e încă în prototip.",
+   "vwhyEn": "The round is confirmed by the founder and the investors and reported consistently by Bloomberg and TechCrunch; the founder has two successful exits. The hardware is still at prototype stage.",
+   "stage": "seed",
+   "inputs": {},
+   "score": 5.31,
+   "met": 10,
+   "met14": 6,
+   "trust": 4
+  },
+  {
+   "id": "project-prometheus",
+   "name": "Project Prometheus",
+   "nameEn": "Project Prometheus",
+   "c": [
+    2,
+    6,
+    9,
+    8,
+    1,
+    8,
+    5,
+    4,
+    7,
+    1,
+    5,
+    7,
+    4,
+    7
+   ],
+   "why": "Laboratorul de AI pentru industrie condus de Jeff Bezos și Vik Bajaj. A pornit cu 6,2 mld. USD (noiembrie 2025) și a închis o rundă de 10 mld. USD la circa 38 mld. USD în aprilie 2026, cu JPMorgan și BlackRock. Circa 120 de angajați, fără produs public.",
+   "whyEn": "The industrial AI lab led by Jeff Bezos and Vik Bajaj. It started with USD 6.2bn (November 2025) and closed a USD 10bn round at about USD 38bn in April 2026, with JPMorgan and BlackRock. About 120 employees, no public product.",
+   "sources": [
+    [
+     "Bloomberg: Project Prometheus închide runda la 38 mld. USD",
+     "https://www.bloomberg.com/news/articles/2026-04-23/bezos-s-physical-ai-lab-has-closed-round-at-38-billion-value"
+    ],
+    [
+     "Built In: ce este Project Prometheus",
+     "https://builtin.com/articles/what-is-project-prometheus"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Bloomberg: Project Prometheus closes its round at USD 38bn",
+     "https://www.bloomberg.com/news/articles/2026-04-23/bezos-s-physical-ai-lab-has-closed-round-at-38-billion-value"
+    ],
+    [
+     "Built In: what Project Prometheus is",
+     "https://builtin.com/articles/what-is-project-prometheus"
+    ]
+   ],
+   "v": [
+    5,
+    3,
+    7,
+    3,
+    7,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Rundele apar concordant în Bloomberg și Financial Times, din surse anonime; compania n-a publicat cifre proprii și nu are produs.",
+   "vwhyEn": "The rounds appear consistently in Bloomberg and the Financial Times, from anonymous sources; the company has published no figures of its own and has no product.",
+   "stage": "seed",
+   "inputs": {},
+   "score": 5.13,
+   "met": 10,
+   "met14": 6,
+   "trust": 4
+  },
+  {
+   "id": "mercor",
+   "name": "Mercor",
+   "nameEn": "Mercor",
+   "c": [
+    9,
+    6,
+    8,
+    6,
+    6,
+    7,
+    6,
+    4,
+    7,
+    4,
+    6,
+    9,
+    6,
+    6
+   ],
+   "why": "Piață care pune experți la dispoziția laboratoarelor de AI. Venituri brute de 614 mil. USD în prima jumătate a lui 2026 și un ritm anualizat de peste 2 mld. USD; din venitul brut, 60–70% merg la colaboratori. Discută o rundă la 20 mld. USD, după Series C la 10 mld. USD.",
+   "whyEn": "A marketplace supplying experts to AI labs. Gross revenue of USD 614m in the first half of 2026 and an annualised pace above USD 2bn; 60–70% of gross revenue goes to contractors. In talks for a round at USD 20bn, after a Series C at USD 10bn.",
+   "sources": [
+    [
+     "TechCrunch: Mercor discută o evaluare de 20 mld. USD (iulie 2026)",
+     "https://techcrunch.com/?p=3140621"
+    ],
+    [
+     "Sacra: veniturile brute și nete ale Mercor",
+     "https://sacra.com/c/mercor/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "TechCrunch: Mercor in talks for a USD 20bn valuation (July 2026)",
+     "https://techcrunch.com/?p=3140621"
+    ],
+    [
+     "Sacra: Mercor’s gross and net revenue",
+     "https://sacra.com/c/mercor/"
+    ]
+   ],
+   "v": [
+    7,
+    4,
+    7,
+    4,
+    8,
+    5,
+    null,
+    10
+   ],
+   "vwhy": "Cifrele vin din declarațiile companiei și din presă (TechCrunch, The Information), iar clienții (OpenAI, Google DeepMind, Anthropic) sunt numiți public; la începutul lui 2026 compania a avut o breșă de date și dispute legale, iar venitul raportat e brut, nu net.",
+   "vwhyEn": "The figures come from the company’s statements and the press (TechCrunch, The Information), and the clients (OpenAI, Google DeepMind, Anthropic) are named publicly; in early 2026 the company had a data breach and legal disputes, and the reported revenue is gross, not net.",
+   "stage": "startup",
+   "inputs": {},
+   "score": 6.57,
+   "met": 9,
+   "met14": 5,
+   "trust": 4
+  },
+  {
+   "id": "safe-superintelligence-ssi",
+   "name": "Safe Superintelligence (SSI)",
+   "nameEn": "Safe Superintelligence (SSI)",
+   "c": [
+    2,
+    9,
+    6,
+    9,
+    1,
+    9,
+    5,
+    5,
+    6,
+    2,
+    7,
+    7,
+    4,
+    6
+   ],
+   "why": "Laboratorul lui Ilya Sutskever, fost cercetător-șef OpenAI. Evaluat la 32 mld. USD (aprilie 2025), fără niciun produs lansat până în noiembrie 2026; politica declarată e să nu lanseze nimic până la o superinteligență sigură.",
+   "whyEn": "Ilya Sutskever’s lab, formerly OpenAI’s chief scientist. Valued at USD 32bn (April 2025), with no product launched as of November 2026; its stated policy is to release nothing until safe superintelligence.",
+   "sources": [
+    [
+     "The Decoder: SSI strânge 2 mld. USD la 32 mld. USD",
+     "https://the-decoder.com/openai-co-founder-sutskever-raises-2-billion-for-ai-startup-with-no-product/"
+    ],
+    [
+     "Value Add VC: SSI, fără venituri în 2026",
+     "https://valueaddvc.com/blog/safe-superintelligence-valuation-2026-32-billion-zero-revenue-and-ilya-sutskevers-7-billion-bet"
+    ],
+    [
+     "QbitAI: plecarea lui Daniel Gross de la SSI la Meta",
+     "https://hub.baai.ac.cn/view/49516"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "The Decoder: SSI raises USD 2bn at USD 32bn",
+     "https://the-decoder.com/openai-co-founder-sutskever-raises-2-billion-for-ai-startup-with-no-product/"
+    ],
+    [
+     "Value Add VC: SSI, no revenue in 2026",
+     "https://valueaddvc.com/blog/safe-superintelligence-valuation-2026-32-billion-zero-revenue-and-ilya-sutskevers-7-billion-bet"
+    ],
+    [
+     "QbitAI: Daniel Gross leaving SSI for Meta",
+     "https://hub.baai.ac.cn/view/49516"
+    ]
+   ],
+   "v": [
+    5,
+    3,
+    7,
+    4,
+    7,
+    7,
+    null,
+    10
+   ],
+   "vwhy": "Rundele sunt confirmate de investitori (Greenoaks, a16z) și de presă, dar nu există produs, venit sau rezultat publicat de verificat; plecarea cofondatorului Daniel Gross la Meta în 2025 e de urmărit.",
+   "vwhyEn": "The rounds are confirmed by investors (Greenoaks, a16z) and the press, but there is no product, revenue or published result to check; co-founder Daniel Gross’s departure to Meta in 2025 is worth watching.",
+   "stage": "seed",
+   "inputs": {},
+   "score": 5.33,
+   "met": 9,
+   "met14": 5,
+   "trust": 4
+  },
+  {
+   "id": "perplexity",
+   "name": "Perplexity",
+   "nameEn": "Perplexity",
+   "c": [
+    7,
+    5,
+    5,
+    7,
+    6,
+    7,
+    6,
+    7,
+    7,
+    3,
+    4,
+    6,
+    4,
+    5
+   ],
+   "why": "Motor de căutare cu AI. Evaluare de circa 20 mld. USD (2025) și venituri anualizate apropiate de 200 mil. USD la finalul lui 2025. E dat în judecată de News Corp, The New York Times, Britannica, Reddit și CNN pentru drepturi de autor, iar Amazon îl contestă în instanță pentru agentul Comet.",
+   "whyEn": "An AI search engine. Valued at about USD 20bn (2025), with annualised revenue close to USD 200m at the end of 2025. It is being sued by News Corp, The New York Times, Britannica, Reddit and CNN over copyright, and Amazon is challenging its Comet agent in court.",
+   "sources": [
+    [
+     "Penchan: procesele Perplexity în 2026",
+     "https://penchan.co/en/market/ai/perplexity/perplexity-copyright-war/"
+    ],
+    [
+     "American Bazaar: runda la 20 mld. USD",
+     "https://americanbazaaronline.com/?p=467527"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Penchan: Perplexity’s lawsuits in 2026",
+     "https://penchan.co/en/market/ai/perplexity/perplexity-copyright-war/"
+    ],
+    [
+     "American Bazaar: the round at USD 20bn",
+     "https://americanbazaaronline.com/?p=467527"
+    ]
+   ],
+   "v": [
+    6,
+    4,
+    6,
+    6,
+    7,
+    3,
+    null,
+    10
+   ],
+   "vwhy": "Evaluările vin din presă, nu din anunțuri ale companiei; mai multe procese de drepturi de autor și litigiul cu Amazon sunt semnale de alarmă serioase.",
+   "vwhyEn": "The valuations come from the press, not from company announcements; several copyright lawsuits and the Amazon litigation are serious warning signs.",
+   "stage": "startup",
+   "inputs": {},
+   "score": 5.73,
+   "met": 7,
+   "met14": 5,
+   "trust": 2
+  },
+  {
+   "id": "merge-labs",
+   "name": "Merge Labs",
+   "nameEn": "Merge Labs",
+   "c": [
+    1,
+    6,
+    6,
+    7,
+    1,
+    7,
+    5,
+    5,
+    7,
+    4,
+    6,
+    6,
+    7,
+    5
+   ],
+   "why": "Interfețe creier–calculator fără operație (ultrasunete și molecule), cofondată de Sam Altman. Rundă seed de 252 mil. USD la 850 mil. USD (ianuarie 2026), cu OpenAI ca investitor principal; încă în faza preclinică.",
+   "whyEn": "Brain–computer interfaces without surgery (ultrasound and molecules), co-founded by Sam Altman. A USD 252m seed round at USD 850m (January 2026), with OpenAI as the lead investor; still pre-clinical.",
+   "sources": [
+    [
+     "Fintool: OpenAI investește 252 mil. USD în Merge Labs",
+     "https://fintool.com/news/openai-merge-labs-brain-computer-interface"
+    ],
+    [
+     "BioWorld: OpenAI investește în Merge Labs",
+     "https://www.bioworld.com/articles/727843-openai-invests-in-merge-labs-to-advance-bci-tech"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Fintool: OpenAI bets USD 252m on Merge Labs",
+     "https://fintool.com/news/openai-merge-labs-brain-computer-interface"
+    ],
+    [
+     "BioWorld: OpenAI invests in Merge Labs",
+     "https://www.bioworld.com/articles/727843-openai-invests-in-merge-labs-to-advance-bci-tech"
+    ]
+   ],
+   "v": [
+    6,
+    3,
+    7,
+    3,
+    7,
+    6,
+    null,
+    10
+   ],
+   "vwhy": "Runda e confirmată de OpenAI; investiția vine însă de la compania condusă de cofondatorul Merge, o relație de interese de urmărit. Fără date clinice.",
+   "vwhyEn": "The round is confirmed by OpenAI; but the investment comes from the company run by Merge’s co-founder, a conflict of interest worth watching. No clinical data.",
+   "stage": "seed",
+   "inputs": {},
+   "score": 4.94,
+   "met": 7,
+   "met14": 4,
+   "trust": 3
+  },
+  {
+   "id": "thinking-machines-lab",
+   "name": "Thinking Machines Lab",
+   "nameEn": "Thinking Machines Lab",
+   "c": [
+    3,
+    7,
+    6,
+    7,
+    3,
+    8,
+    5,
+    6,
+    6,
+    2,
+    6,
+    7,
+    3,
+    5
+   ],
+   "why": "Laboratorul lui Mira Murati, fostă CTO OpenAI. Rundă de 2 mld. USD la 12 mld. USD (iulie 2025), primul produs (Tinker) în octombrie 2025 și primul model propriu (Inkling) în iulie 2026; o rundă la 50 mld. USD a fost raportată, dar sursele nu concordă.",
+   "whyEn": "Mira Murati’s lab, formerly OpenAI’s CTO. A USD 2bn round at USD 12bn (July 2025), the first product (Tinker) in October 2025 and the first in-house model (Inkling) in July 2026; a round at USD 50bn has been reported, but the sources disagree.",
+   "sources": [
+    [
+     "Stocktwits: runda de 2 mld. USD condusă de a16z",
+     "https://stocktwits.com/news-articles/markets/equity/former-openai-cto-mira-murati-s-ai-startup-raises-2-b-seed-funding-round/ch8WzpbR58f"
+    ],
+    [
+     "andrew.ooo: Thinking Machines, SSI și Anthropic (iulie 2026)",
+     "https://andrew.ooo/answers/thinking-machines-vs-ssi-vs-anthropic-post-openai-founders-july-2026/"
+    ],
+    [
+     "Reuters (prin TradingView): cofondatorul Andrew Tulloch pleacă la Meta",
+     "https://in.tradingview.com/news/reuters.com,2025:newsml_L2N3VS042:0-thinking-machines-lab-co-founder-tulloch-departs-for-meta-wsj-reports"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Stocktwits: the USD 2bn round led by a16z",
+     "https://stocktwits.com/news-articles/markets/equity/former-openai-cto-mira-murati-s-ai-startup-raises-2-b-seed-funding-round/ch8WzpbR58f"
+    ],
+    [
+     "andrew.ooo: Thinking Machines, SSI and Anthropic (July 2026)",
+     "https://andrew.ooo/answers/thinking-machines-vs-ssi-vs-anthropic-post-openai-founders-july-2026/"
+    ],
+    [
+     "Reuters (via TradingView): co-founder Andrew Tulloch leaves for Meta",
+     "https://in.tradingview.com/news/reuters.com,2025:newsml_L2N3VS042:0-thinking-machines-lab-co-founder-tulloch-departs-for-meta-wsj-reports"
+    ]
+   ],
+   "v": [
+    6,
+    3,
+    5,
+    4,
+    7,
+    6,
+    null,
+    10
+   ],
+   "vwhy": "Prima rundă e confirmată, iar produsele sunt publice; runda următoare apare în surse cu cifre diferite (închisă la 50 mld. sau blocată), iar plecările unor cofondatori sunt de urmărit.",
+   "vwhyEn": "The first round is confirmed and the products are public; the next round appears in sources with different figures (closed at 50bn or stalled), and the departures of some co-founders are worth watching.",
+   "stage": "seed",
+   "inputs": {},
+   "score": 5.11,
+   "met": 6,
+   "met14": 4,
+   "trust": 2
+  },
+  {
+   "id": "figure-ai",
+   "name": "Figure AI",
+   "nameEn": "Figure AI",
+   "c": [
+    4,
+    5,
+    5,
+    7,
+    3,
+    6,
+    5,
+    6,
+    7,
+    2,
+    3,
+    7,
+    4,
+    5
+   ],
+   "why": "Roboți umanoizi, cu investitori ca Nvidia, Microsoft și Jeff Bezos. Series C de peste 1 mld. USD la 39 mld. USD (septembrie 2025). Fostul șef al siguranței produselor a dat compania în judecată, susținând că a fost concediat după ce a avertizat asupra forței periculoase a roboților; compania neagă.",
+   "whyEn": "Humanoid robots, with investors such as Nvidia, Microsoft and Jeff Bezos. A Series C of over USD 1bn at USD 39bn (September 2025). The former head of product safety sued the company, alleging he was fired after warning about the robots’ dangerous force; the company denies it.",
+   "sources": [
+    [
+     "Seeking Alpha: Series C Figure la 39 mld. USD",
+     "https://seekingalpha.com/news/4495255-figure-raises-1b-in-series-c-hits-39b-valuation-to-scale-humanoid-robot-deployment"
+    ],
+    [
+     "VnExpress: procesul fostului șef al siguranței",
+     "https://e.vnexpress.net/news/tech/enterprises/engineer-says-he-was-fired-after-warning-figure-ai-s-robot-could-fracture-a-human-skull-4985547.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Seeking Alpha: Figure’s Series C at USD 39bn",
+     "https://seekingalpha.com/news/4495255-figure-raises-1b-in-series-c-hits-39b-valuation-to-scale-humanoid-robot-deployment"
+    ],
+    [
+     "VnExpress: the former safety chief’s lawsuit",
+     "https://e.vnexpress.net/news/tech/enterprises/engineer-says-he-was-fired-after-warning-figure-ai-s-robot-could-fracture-a-human-skull-4985547.html"
+    ]
+   ],
+   "v": [
+    6,
+    4,
+    7,
+    5,
+    7,
+    4,
+    null,
+    10
+   ],
+   "vwhy": "Runda e confirmată de companie și de investitori, dar nu există venituri publice; procesul de avertizor în interes public privind siguranța e un semnal de alarmă.",
+   "vwhyEn": "The round is confirmed by the company and the investors, but there is no public revenue; the whistleblower lawsuit about safety is a warning sign.",
+   "stage": "startup",
+   "inputs": {},
+   "score": 5.01,
+   "met": 6,
+   "met14": 3,
+   "trust": 3
+  },
+  {
+   "id": "reflection-ai",
+   "name": "Reflection AI",
+   "nameEn": "Reflection AI",
+   "c": [
+    3,
+    6,
+    6,
+    7,
+    3,
+    7,
+    5,
+    6,
+    6,
+    4,
+    6,
+    6,
+    5,
+    6
+   ],
+   "why": "Laborator de modele deschise și „AI suverană”, fondat în 2024 de foști cercetători DeepMind. Rundă de 2 mld. USD la 8 mld. USD (octombrie 2025), cu 800 mil. USD de la Nvidia; în 2026 a discutat o rundă la 20–25 mld. USD.",
+   "whyEn": "A lab for open models and “sovereign AI”, founded in 2024 by former DeepMind researchers. A USD 2bn round at USD 8bn (October 2025), with USD 800m from Nvidia; in 2026 it discussed a round at USD 20–25bn.",
+   "sources": [
+    [
+     "ROIC: Reflection AI caută investitori la peste 20 mld. USD",
+     "https://roic.ai/news/reflection-ai-seeks-investors-at-over-20-billion-valuation-amid-rapid-growth-03-02-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "ROIC: Reflection AI courts investors above USD 20bn",
+     "https://roic.ai/news/reflection-ai-seeks-investors-at-over-20-billion-valuation-amid-rapid-growth-03-02-2026"
+    ]
+   ],
+   "v": [
+    6,
+    3,
+    6,
+    4,
+    7,
+    7,
+    null,
+    10
+   ],
+   "vwhy": "Runda din 2025 e confirmată (cu Nvidia); runda din 2026 e raportată doar din surse anonime, iar primele modele mari promise nu au fost încă evaluate independent.",
+   "vwhyEn": "The 2025 round is confirmed (with Nvidia); the 2026 round is reported only from anonymous sources, and the large models promised have not yet been evaluated independently.",
+   "stage": "seed",
+   "inputs": {},
+   "score": 5.26,
+   "met": 5,
+   "met14": 2,
+   "trust": 3
+  },
+  {
+   "id": "humans",
+   "name": "Humans&",
+   "nameEn": "Humans&",
+   "c": [
+    2,
+    6,
+    6,
+    7,
+    1,
+    7,
+    5,
+    4,
+    5,
+    3,
+    6,
+    6,
+    6,
+    6
+   ],
+   "why": "Laborator de modele de AI pentru relațiile dintre oameni, fondat de foști cercetători din marile laboratoare. Rundă seed de 480 mil. USD la 4,5 mld. USD (2026).",
+   "whyEn": "A lab building AI models for relationships between people, founded by former researchers from the big labs. A USD 480m seed round at USD 4.5bn (2026).",
+   "sources": [
+    [
+     "NBot: rundele seed Humans&, Periodic și Merge (2026)",
+     "https://nbot.ai/curator/paw50avb/highlights/h_phys_20260415"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "NBot: the Humans&, Periodic and Merge seed rounds (2026)",
+     "https://nbot.ai/curator/paw50avb/highlights/h_phys_20260415"
+    ]
+   ],
+   "v": [
+    4,
+    3,
+    5,
+    3,
+    5,
+    8,
+    null,
+    10
+   ],
+   "vwhy": "Runda apare doar în agregatoare, nu am găsit anunțul companiei sau al investitorilor; nu are produs.",
+   "vwhyEn": "The round appears only in aggregators; we did not find the company’s or the investors’ announcement; it has no product.",
+   "stage": "seed",
+   "inputs": {},
+   "score": 4.76,
+   "met": 4,
+   "met14": 2,
+   "trust": 2
+  }
+ ]
+}

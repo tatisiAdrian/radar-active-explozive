@@ -5,6 +5,7 @@ import FondBadge from './FondBadge.astro';
 import type { Dataset } from '../data/types';
 import type { Lang } from '../data/i18n';
 import { SOCIAL } from '../data/social';
+import { TOPS } from '../data/tops';
 import { FORMULAS_EN, inputEn } from '../data/en-content';
 import { fmtDate as fd, num as nm } from '../data/lang';
 
@@ -13,7 +14,8 @@ const { slug, lang = 'ro' } = Astro.props;
 const en = lang === 'en';
 const L = (ro: string, e: string) => (en ? e : ro);
 const base = import.meta.env.BASE_URL;
-const d = SOCIAL[slug];
+const d = SOCIAL[slug] ?? TOPS[slug];
+const dir = SOCIAL[slug] ? 'social' : 'tops';
 const rows = d.rows.map((r) => (en ? { ...r, name: r.nameEn, why: r.whyEn, vwhy: r.vwhyEn ?? r.vwhy, sources: r.sourcesEn, inputs: Object.fromEntries(Object.entries(r.inputs).map(([k, v]) => [k, inputEn(v)])) } : r));
 const formulas = en ? FORMULAS_EN[d.set] ?? {} : d.formulas;
 const fmtDate = (x: string) => fd(x, lang);
@@ -27,7 +29,7 @@ const short = (s: string) => s.replace(/,.*$/, '').replace(/ \(.*\)$/, '');
 const metChart: Dataset = {
   id: `${slug}-conditii`, domain: slug, title: L(`Condiții îndeplinite din ${N}`, `Conditions met out of ${N}`), unit: L('condiții', 'conditions'), chart: 'bar',
   series: [{ name: L('Condiții îndeplinite', 'Conditions met'), points: rows.map((r) => [short(r.name), r.met]) }],
-  source: { name: L(`Radar Active Explozive, instantaneul din ${fmtDate(d.date)}`, `Explosive Assets Radar, snapshot of ${fmtDate(d.date)}`), url: `https://github.com/TatisiAdrian/radar-active-explozive/blob/main/scripts/social/${slug}.json`, retrievedAt: d.date },
+  source: { name: L(`Radar Active Explozive, instantaneul din ${fmtDate(d.date)}`, `Explosive Assets Radar, snapshot of ${fmtDate(d.date)}`), url: `https://github.com/TatisiAdrian/radar-active-explozive/blob/main/scripts/${dir}/${slug}.json`, retrievedAt: d.date },
   notes: L('Notele și sursele fiecărei poziții sunt în detaliile de mai sus.', 'The scores and sources for each position are in the details above.'),
 };
 const top = rows[0];
