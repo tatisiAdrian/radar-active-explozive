@@ -13,7 +13,7 @@ const inbox = process.argv[2] ?? 'inbox';
 function serviceAccount(raw = '') {
   const diag = (how, email, key) => console.log(`cheie: ${how}; cont: ${email}; lungime cheie: ${key.replace(/-----[A-Z ]+-----|\\n|\s/g, '').length} (normal ~1620)`);
   try { const j = JSON.parse(raw); diag('JSON valid', j.client_email, j.private_key ?? ''); return j; } catch { /* format stricat la copiere */ }
-  const field = (k) => raw.match(new RegExp(`"${k}"\\s*:\\s*"([^"]*)"`))?.[1];
+  const field = (k) => raw.match(new RegExp(`"${k}"\\s*:\\s*"([^"]*)"`))?.[1]?.replace(/\s+/g, '');
   const pem = raw.match(/-----BEGIN PRIVATE KEY-----[\s\S]*?-----END PRIVATE KEY-----/)?.[0];
   if (!pem || !field('client_email') || !field('project_id')) throw new Error('FIREBASE_SERVICE_ACCOUNT lipsește sau nu e o cheie de cont de serviciu');
   const body = pem.replace(/\\n/g, '\n').replace(/-----(BEGIN|END) PRIVATE KEY-----/g, '').replace(/\s+/g, '');
