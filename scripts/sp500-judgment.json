@@ -1,5 +1,5 @@
 {
- "_doc": "Notele de judecată pentru companiile din S&P 500. Scara 0-10; 7+ = îndeplinită. C4 Piețe noi, C5 Clienți recurenți, C6 Management credibil, C8 Diversitate, C9 Avantaj competitiv, C11 Media (neliniar: atenție echilibrată = notă mare), C13 Aglomerație (invers: 10 = puțini pe același pariu), C14 Riscuri mici (procese, reglementare).",
+ "_doc": "Notele de judecată pentru companiile din S&P 500. Scara 0-10; 7+ = îndeplinită. C4 Piețe noi, C5 Clienți recurenți, C6 Management credibil, C8 Diversitate, C9 Avantaj competitiv, C11 Media (neliniar: atenție echilibrată = notă mare), C13 Aglomerație (invers: 10 = puțini pe același pariu), C14 Riscuri mici (procese, reglementare). Din 5 noiembrie 2026, fiecare companie are și 8 condiții de verificare (C15–C22) în câmpul v; scorul: primele 14 condiții 80%, verificarea 20%.",
  "date": "2026-11-01",
  "companies": {
   "AAPL": {
@@ -11,7 +11,19 @@
    "C11": 5,
    "C13": 4,
    "C14": 5,
-   "why": "Ecosistem greu de părăsit și venituri recurente din servicii, dar dependență mare de iPhone, de producția din China și procese antitrust (App Store)."
+   "why": "Ecosistem greu de părăsit și venituri recurente din servicii, dar dependență mare de iPhone, de producția din China și procese antitrust (App Store).",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    6,
+    9,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; procesul antitrust al Departamentului de Justiție al SUA (2024) și amenzile din UE sunt semnale de urmărit.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; the US Department of Justice antitrust suit (2024) and EU fines are signals to watch."
   },
   "MSFT": {
    "C4": 9,
@@ -22,7 +34,19 @@
    "C11": 4,
    "C13": 3,
    "C14": 6,
-   "why": "Cloud (Azure), software de birou și AI cu clienți corporativi pe abonament; poziție dominantă, dar una dintre cele mai aglomerate acțiuni din lume."
+   "why": "Cloud (Azure), software de birou și AI cu clienți corporativi pe abonament; poziție dominantă, dar una dintre cele mai aglomerate acțiuni din lume.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    7,
+    9,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; anchetele antitrust din UE și SUA sunt de urmărit; a trecut fără probleme prin crize.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; antitrust inquiries in the EU and US are to watch; it has come through crises without trouble."
   },
   "NVDA": {
    "C4": 10,
@@ -33,7 +57,19 @@
    "C11": 2,
    "C13": 2,
    "C14": 5,
-   "why": "Lider absolut în cipurile pentru AI, dar veniturile vin de la câțiva clienți foarte mari, iar controalele de export spre China și euforia mediatică sunt riscuri."
+   "why": "Lider absolut în cipurile pentru AI, dar veniturile vin de la câțiva clienți foarte mari, iar controalele de export spre China și euforia mediatică sunt riscuri.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    7,
+    7,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; anchete antitrust în SUA și China; acțiunea a pierdut circa jumătate din valoare în 2022, apoi și-a revenit.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; antitrust inquiries in the US and China; the share lost about half its value in 2022, then recovered."
   },
   "AMZN": {
    "C4": 8,
@@ -44,7 +80,19 @@
    "C11": 5,
    "C13": 4,
    "C14": 5,
-   "why": "Comerț online, cloud (AWS) și publicitate; afaceri diversificate cu efecte de rețea. Investițiile foarte mari în centre de date apasă fluxul de numerar."
+   "why": "Comerț online, cloud (AWS) și publicitate; afaceri diversificate cu efecte de rețea. Investițiile foarte mari în centre de date apasă fluxul de numerar.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    5,
+    7,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; autoritatea americană de concurență (FTC) a dat-o în judecată pentru monopol în 2023; a avut pierdere în 2022.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; the US Federal Trade Commission sued it for monopolisation in 2023; it made a loss in 2022."
   },
   "GOOGL": {
    "C4": 8,
@@ -55,7 +103,19 @@
    "C11": 5,
    "C13": 4,
    "C14": 3,
-   "why": "Căutare, YouTube și cloud, cu modele AI proprii. Procesele antitrust din SUA și UE sunt cel mai mare risc din listă pentru afacerea principală."
+   "why": "Căutare, YouTube și cloud, cu modele AI proprii. Procesele antitrust din SUA și UE sunt cel mai mare risc din listă pentru afacerea principală.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    4,
+    9,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; instanțele americane au decis în 2024 și 2025 că a abuzat de poziția dominantă, iar UE i-a dat amenzi mari.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; US courts ruled in 2024 and 2025 that it abused its dominant position, and the EU has fined it heavily."
   },
   "META": {
    "C4": 7,
@@ -66,7 +126,19 @@
    "C11": 5,
    "C13": 4,
    "C14": 4,
-   "why": "Peste trei miliarde de utilizatori și publicitate foarte profitabilă; cheltuielile mari pentru AI și realitate virtuală și presiunea de reglementare sunt riscurile."
+   "why": "Peste trei miliarde de utilizatori și publicitate foarte profitabilă; cheltuielile mari pentru AI și realitate virtuală și presiunea de reglementare sunt riscurile.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    4,
+    6,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; procesul antitrust al FTC și amenzile mari din UE; acțiunea a scăzut cu peste 60% în 2022, apoi și-a revenit.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; the FTC antitrust case and large EU fines; the share fell more than 60% in 2022, then recovered."
   },
   "AVGO": {
    "C4": 9,
@@ -77,7 +149,19 @@
    "C11": 4,
    "C13": 3,
    "C14": 6,
-   "why": "Cipuri personalizate pentru AI și software de infrastructură (VMware); creștere puternică, dar concentrată pe câțiva clienți mari din cloud."
+   "why": "Cipuri personalizate pentru AI și software de infrastructură (VMware); creștere puternică, dar concentrată pe câțiva clienți mari din cloud.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    7,
+    9,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; Comisia Europeană a analizat condițiile de licențiere după preluarea VMware.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; the European Commission has examined licensing terms after the VMware takeover."
   },
   "TSLA": {
    "C4": 7,
@@ -88,7 +172,19 @@
    "C11": 2,
    "C13": 3,
    "C14": 4,
-   "why": "Evaluare legată mai ales de promisiuni (robotaxi, roboți), în timp ce veniturile au scăzut în 2025. Numărul de acțiuni a crescut puternic, în principal prin pachetul de acțiuni acordat CEO-ului; guvernanța și atenția mediatică extremă reduc nota."
+   "why": "Evaluare legată mai ales de promisiuni (robotaxi, roboți), în timp ce veniturile au scăzut în 2025. Numărul de acțiuni a crescut puternic, în principal prin pachetul de acțiuni acordat CEO-ului; guvernanța și atenția mediatică extremă reduc nota.",
+   "v": [
+    10,
+    10,
+    9,
+    9,
+    9,
+    4,
+    6,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; anchetele autorității americane pentru siguranța rutieră privind pilotul automat și procesele cu acționarii sunt semnale de alarmă.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; US road-safety regulator investigations into Autopilot and shareholder lawsuits are warning signs."
   },
   "LLY": {
    "C4": 9,
@@ -99,7 +195,19 @@
    "C11": 4,
    "C13": 4,
    "C14": 6,
-   "why": "Lider în tratamentele pentru obezitate și diabet; creștere foarte rapidă, dar dependentă de o singură familie de medicamente și de prețurile negociate cu statul."
+   "why": "Lider în tratamentele pentru obezitate și diabet; creștere foarte rapidă, dar dependentă de o singură familie de medicamente și de prețurile negociate cu statul.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    8,
+    9,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; fără probleme juridice majore recente.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; no major recent legal problems."
   },
   "V": {
    "C4": 6,
@@ -110,7 +218,19 @@
    "C11": 7,
    "C13": 6,
    "C14": 6,
-   "why": "Rețea globală de plăți cu marje foarte mari și venituri din fiecare tranzacție; riscurile sunt reglementarea comisioanelor și plățile instant concurente."
+   "why": "Rețea globală de plăți cu marje foarte mari și venituri din fiecare tranzacție; riscurile sunt reglementarea comisioanelor și plățile instant concurente.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    5,
+    9,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; Departamentul de Justiție al SUA a dat-o în judecată în 2024 pentru monopol pe plățile cu cardul de debit.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; the US Department of Justice sued it in 2024 for monopolising debit-card payments."
   },
   "XOM": {
    "C4": 4,
@@ -121,7 +241,19 @@
    "C11": 7,
    "C13": 6,
    "C14": 6,
-   "why": "Cel mai mare producător privat de petrol din SUA; câștigă din prețul ridicat al petrolului din 2026, dar rezultatele urmează ciclul materiei prime."
+   "why": "Cel mai mare producător privat de petrol din SUA; câștigă din prețul ridicat al petrolului din 2026, dar rezultatele urmează ciclul materiei prime.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    6,
+    6,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; procese legate de clima și de informarea publicului; a avut pierdere în 2020.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; lawsuits related to climate and public disclosure; it made a loss in 2020."
   },
   "WMT": {
    "C4": 6,
@@ -132,7 +264,19 @@
    "C11": 6,
    "C13": 4,
    "C14": 7,
-   "why": "Cel mai mare comerciant din lume, cu publicitate și comerț online în creștere; marje mici, dar stabile, și evaluare ridicată pentru un retailer."
+   "why": "Cel mai mare comerciant din lume, cu publicitate și comerț online în creștere; marje mici, dar stabile, și evaluare ridicată pentru un retailer.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    7,
+    9,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; a plătit în 2022 circa 3,1 miliarde de dolari pentru a închide procesele privind opioidele.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; in 2022 it paid about USD 3.1 billion to settle opioid lawsuits."
   },
   "UNH": {
    "C4": 4,
@@ -143,7 +287,19 @@
    "C11": 4,
    "C13": 6,
    "C14": 2,
-   "why": "Cea mai mare companie de asigurări de sănătate din SUA, lovită de costuri medicale în creștere, anchete federale și schimbări de conducere."
+   "why": "Cea mai mare companie de asigurări de sănătate din SUA, lovită de costuri medicale în creștere, anchete federale și schimbări de conducere.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    3,
+    4,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; anchete federale privind facturarea din programul Medicare, suspendarea estimărilor în 2025 și o prăbușire a acțiunii.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; federal investigations into Medicare billing, suspended guidance in 2025 and a collapse in the share price."
   },
   "JNJ": {
    "C4": 5,
@@ -154,7 +310,19 @@
    "C11": 7,
    "C13": 7,
    "C14": 4,
-   "why": "Medicamente și dispozitive medicale diversificate, bilanț solid; procesele legate de talc și expirarea unor brevete sunt riscurile."
+   "why": "Medicamente și dispozitive medicale diversificate, bilanț solid; procesele legate de talc și expirarea unor brevete sunt riscurile.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    4,
+    8,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; mii de procese privind talcul pentru bebeluși, încă nerezolvate complet.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; thousands of baby-powder talc lawsuits, still not fully resolved."
   },
   "PG": {
    "C4": 3,
@@ -165,7 +333,19 @@
    "C11": 7,
    "C13": 7,
    "C14": 7,
-   "why": "Produse de consum de bază cumpărate repetat (Pampers, Gillette, Tide); stabilitate mare, creștere mică."
+   "why": "Produse de consum de bază cumpărate repetat (Pampers, Gillette, Tide); stabilitate mare, creștere mică.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    9,
+    9,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; fără probleme juridice majore; a rezistat bine în toate crizele.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; no major legal problems; it has held up well in every crisis."
   },
   "ORCL": {
    "C4": 9,
@@ -176,7 +356,19 @@
    "C11": 3,
    "C13": 3,
    "C14": 6,
-   "why": "Contracte uriașe de cloud pentru AI, dar finanțate cu datorie în creștere rapidă; investiția în centre de date face fluxul de numerar liber negativ."
+   "why": "Contracte uriașe de cloud pentru AI, dar finanțate cu datorie în creștere rapidă; investiția în centre de date face fluxul de numerar liber negativ.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    8,
+    8,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; fără probleme juridice majore recente; datoria a crescut rapid.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; no major recent legal problems; debt has risen fast."
   },
   "COST": {
    "C4": 4,
@@ -187,7 +379,19 @@
    "C11": 6,
    "C13": 3,
    "C14": 8,
-   "why": "Model pe abonament cu reînnoire de peste 90%; una dintre cele mai bine conduse companii, dar și una dintre cele mai scumpe raportat la profit."
+   "why": "Model pe abonament cu reînnoire de peste 90%; una dintre cele mai bine conduse companii, dar și una dintre cele mai scumpe raportat la profit.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    9,
+    9,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; fără probleme juridice majore; a crescut și în crize.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; no major legal problems; it grew even in crises."
   },
   "NFLX": {
    "C4": 6,
@@ -198,7 +402,19 @@
    "C11": 5,
    "C13": 4,
    "C14": 7,
-   "why": "Lider în streaming, cu abonamente și publicitate în creștere; concurența pentru timpul utilizatorilor rămâne intensă."
+   "why": "Lider în streaming, cu abonamente și publicitate în creștere; concurența pentru timpul utilizatorilor rămâne intensă.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    9,
+    6,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; fără probleme juridice majore; a pierdut abonați în 2022 și și-a revenit.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; no major legal problems; it lost subscribers in 2022 and recovered."
   },
   "AMD": {
    "C4": 9,
@@ -209,7 +425,19 @@
    "C11": 4,
    "C13": 4,
    "C14": 6,
-   "why": "Principalul concurent al Nvidia în cipurile AI și lider în procesoare pentru servere; trebuie încă să dovedească vânzări mari de acceleratoare AI."
+   "why": "Principalul concurent al Nvidia în cipurile AI și lider în procesoare pentru servere; trebuie încă să dovedească vânzări mari de acceleratoare AI.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; fără probleme juridice majore; afacerea e ciclică.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; no major legal problems; the business is cyclical."
   },
   "PLTR": {
    "C4": 9,
@@ -220,7 +448,19 @@
    "C11": 2,
    "C13": 2,
    "C14": 6,
-   "why": "Software de analiză pentru guverne și companii, cu creștere rapidă din AI; evaluarea e printre cele mai mari din indice, iar atenția mediatică e foarte mare."
+   "why": "Software de analiză pentru guverne și companii, cu creștere rapidă din AI; evaluarea e printre cele mai mari din indice, iar atenția mediatică e foarte mare.",
+   "v": [
+    10,
+    10,
+    9,
+    7,
+    9,
+    7,
+    6,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; listată abia din 2020 și profitabilă doar din 2023, deci istoric public mai scurt.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; listed only since 2020 and profitable only since 2023, so a shorter public record."
   },
   "JPM": {
    "C4": 6,
@@ -231,7 +471,19 @@
    "C11": 6,
    "C13": 5,
    "C14": 7,
-   "why": "Cea mai mare bancă americană, cu activități diversificate (retail, investiții, administrare de active) și management apreciat; sensibilă la ciclul economic și la reglementare."
+   "why": "Cea mai mare bancă americană, cu activități diversificate (retail, investiții, administrare de active) și management apreciat; sensibilă la ciclul economic și la reglementare.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    6,
+    9,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; amenzi repetate de la autorități și înțelegeri în procese mari; a trecut bine prin crize.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; repeated regulatory fines and settlements in large lawsuits; it has come through crises well."
   },
   "MA": {
    "C4": 6,
@@ -242,7 +494,20 @@
    "C11": 6,
    "C13": 4,
    "C14": 6,
-   "why": "Rețea globală de plăți cu marje foarte mari și efect de rețea greu de copiat; riscurile sunt procesele antitrust privind comisioanele și concurența plăților instant."
+   "why": "Rețea globală de plăți cu marje foarte mari și efect de rețea greu de copiat; riscurile sunt procesele antitrust privind comisioanele și concurența plăților instant.",
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    6,
+    9,
+    10
+   ],
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; procese antitrust privind comisioanele interbancare, încheiate parțial prin înțelegeri.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; antitrust cases over interchange fees, partly settled."
   }
- }
+ },
+ "revision": 2
 }

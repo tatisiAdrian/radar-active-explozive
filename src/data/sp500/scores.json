@@ -1,6 +1,8 @@
 {
  "date": "2026-11-05",
  "judgmentDate": "2026-11-01",
+ "snapshot": "sp500-r2-2026-11-01",
+ "previousSnapshot": "sp500-2026-11-01",
  "formulas": {
   "C1": "Creșterea veniturilor în ultimul an fiscal (raport 10-K): nota = 5 + creșterea în % / 3. O creștere de 15% dă 10.",
   "C2": "Variația numărului de acțiuni în ultimul an (SEC): nota = 6 − 1,5 × variația în %. Răscumpărările care reduc numărul de acțiuni cresc nota; emisiunile o scad.",
@@ -25,8 +27,10 @@
   {
    "id": "PG",
    "name": "Procter & Gamble",
-   "score": 7.1,
-   "met": 11,
+   "score": 7.63,
+   "met": 19,
+   "met14": 11,
+   "trust": 8,
    "criteria": [
     6,
     7,
@@ -42,6 +46,16 @@
     10,
     7,
     7
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    9,
+    9,
+    10
    ],
    "inputs": {
     "C1": "venituri 87,0 mld. USD (an fiscal încheiat 2026-06-30), +3,3% față de anul anterior",
@@ -53,13 +67,17 @@
    },
    "gaps": [],
    "why": "Produse de consum de bază cumpărate repetat (Pampers, Gillette, Tide); stabilitate mare, creștere mică.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; fără probleme juridice majore; a rezistat bine în toate crizele.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; no major legal problems; it has held up well in every crisis.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000080424&type=10-K"
   },
   {
    "id": "V",
    "name": "Visa",
-   "score": 8.2,
-   "met": 10,
+   "score": 8.41,
+   "met": 17,
+   "met14": 10,
+   "trust": 7,
    "criteria": [
     9,
     10,
@@ -75,6 +93,16 @@
     10,
     6,
     6
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    5,
+    9,
+    10
    ],
    "inputs": {
     "C1": "venituri 40,0 mld. USD (an fiscal încheiat 2025-09-30), +11,3% față de anul anterior",
@@ -86,46 +114,17 @@
    },
    "gaps": [],
    "why": "Rețea globală de plăți cu marje foarte mari și venituri din fiecare tranzacție; riscurile sunt reglementarea comisioanelor și plățile instant concurente.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; Departamentul de Justiție al SUA a dat-o în judecată în 2024 pentru monopol pe plățile cu cardul de debit.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; the US Department of Justice sued it in 2024 for monopolising debit-card payments.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001403161&type=10-K"
-  },
-  {
-   "id": "MA",
-   "name": "Mastercard",
-   "score": 8.08,
-   "met": 9,
-   "criteria": [
-    10,
-    9,
-    9,
-    6,
-    9,
-    9,
-    10,
-    7,
-    9,
-    6,
-    6,
-    10,
-    4,
-    6
-   ],
-   "inputs": {
-    "C1": "venituri 32,8 mld. USD (an fiscal încheiat 2025-12-31), +16,4% față de anul anterior",
-    "C2": "acțiuni în circulație -2,1% într-un an",
-    "C3": "datorie 18,3 mld. USD, numerar 10,6 mld. USD, flux din exploatare 17,6 mld. USD",
-    "C7": "flux de numerar liber 16,4 mld. USD, marjă 50,1%",
-    "C10": "capitalizare 0,59 trilioane USD, randament al fluxului liber 2,8%",
-    "C12": "acțiunea +10,2% în două luni"
-   },
-   "gaps": [],
-   "why": "Rețea globală de plăți cu marje foarte mari și efect de rețea greu de copiat; riscurile sunt procesele antitrust privind comisioanele și concurența plăților instant.",
-   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001141391&type=10-K"
   },
   {
    "id": "MSFT",
    "name": "Microsoft",
-   "score": 7.5,
-   "met": 9,
+   "score": 7.86,
+   "met": 17,
+   "met14": 9,
+   "trust": 8,
    "criteria": [
     10,
     6,
@@ -141,6 +140,16 @@
     7,
     3,
     6
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    7,
+    9,
+    10
    ],
    "inputs": {
     "C1": "venituri 331,8 mld. USD (an fiscal încheiat 2026-06-30), +17,8% față de anul anterior",
@@ -152,46 +161,17 @@
    },
    "gaps": [],
    "why": "Cloud (Azure), software de birou și AI cu clienți corporativi pe abonament; poziție dominantă, dar una dintre cele mai aglomerate acțiuni din lume.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; anchetele antitrust din UE și SUA sunt de urmărit; a trecut fără probleme prin crize.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; antitrust inquiries in the EU and US are to watch; it has come through crises without trouble.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=10-K"
-  },
-  {
-   "id": "NFLX",
-   "name": "Netflix",
-   "score": 6.92,
-   "met": 9,
-   "criteria": [
-    10,
-    8,
-    9,
-    6,
-    8,
-    8,
-    7,
-    5,
-    7,
-    7,
-    5,
-    0,
-    4,
-    7
-   ],
-   "inputs": {
-    "C1": "venituri 45,2 mld. USD (an fiscal încheiat 2025-12-31), +15,9% față de anul anterior",
-    "C2": "acțiuni în circulație -1,3% într-un an",
-    "C3": "datorie 13,5 mld. USD, numerar 9,0 mld. USD, flux din exploatare 10,1 mld. USD",
-    "C7": "flux de numerar liber 9,5 mld. USD, marjă 20,9%",
-    "C10": "capitalizare 0,28 trilioane USD, randament al fluxului liber 3,4%",
-    "C12": "acțiunea -20,7% în două luni"
-   },
-   "gaps": [],
-   "why": "Lider în streaming, cu abonamente și publicitate în creștere; concurența pentru timpul utilizatorilor rămâne intensă.",
-   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001065280&type=10-K"
   },
   {
    "id": "WMT",
    "name": "Walmart",
-   "score": 6.56,
-   "met": 9,
+   "score": 7.15,
+   "met": 17,
+   "met14": 9,
+   "trust": 8,
    "criteria": [
     7,
     7,
@@ -208,6 +188,16 @@
     4,
     7
    ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    7,
+    9,
+    10
+   ],
    "inputs": {
     "C1": "venituri 713,2 mld. USD (an fiscal încheiat 2026-01-31), +4,7% față de anul anterior",
     "C2": "acțiuni în circulație -0,7% într-un an",
@@ -218,79 +208,111 @@
    },
    "gaps": [],
    "why": "Cel mai mare comerciant din lume, cu publicitate și comerț online în creștere; marje mici, dar stabile, și evaluare ridicată pentru un retailer.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; a plătit în 2022 circa 3,1 miliarde de dolari pentru a închide procesele privind opioidele.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; in 2022 it paid about USD 3.1 billion to settle opioid lawsuits.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000104169&type=10-K"
   },
   {
-   "id": "JNJ",
-   "name": "Johnson & Johnson",
-   "score": 6.52,
-   "met": 9,
+   "id": "MA",
+   "name": "Mastercard",
+   "score": 8.33,
+   "met": 16,
+   "met14": 9,
+   "trust": 7,
    "criteria": [
-    7,
+    10,
+    9,
+    9,
     6,
-    8,
-    5,
-    8,
+    9,
+    9,
+    10,
     7,
-    7,
-    8,
-    7,
+    9,
     6,
-    7,
-    5,
-    7,
-    4
+    6,
+    10,
+    4,
+    6
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    6,
+    9,
+    10
    ],
    "inputs": {
-    "C1": "venituri 94,2 mld. USD (an fiscal încheiat 2025-12-31), +6,0% față de anul anterior",
-    "C2": "acțiuni în circulație +0,0% într-un an",
-    "C3": "datorie 39,4 mld. USD, numerar 19,7 mld. USD, flux din exploatare 24,5 mld. USD",
-    "C7": "flux de numerar liber 19,3 mld. USD, marjă 20,5%",
-    "C10": "capitalizare 0,66 trilioane USD, randament al fluxului liber 2,9%",
-    "C12": "acțiunea -0,7% în două luni"
+    "C1": "venituri 32,8 mld. USD (an fiscal încheiat 2025-12-31), +16,4% față de anul anterior",
+    "C2": "acțiuni în circulație -2,1% într-un an",
+    "C3": "datorie 18,3 mld. USD, numerar 10,6 mld. USD, flux din exploatare 17,6 mld. USD",
+    "C7": "flux de numerar liber 16,4 mld. USD, marjă 50,1%",
+    "C10": "capitalizare 0,59 trilioane USD, randament al fluxului liber 2,8%",
+    "C12": "acțiunea +10,2% în două luni"
    },
    "gaps": [],
-   "why": "Medicamente și dispozitive medicale diversificate, bilanț solid; procesele legate de talc și expirarea unor brevete sunt riscurile.",
-   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000200406&type=10-K"
+   "why": "Rețea globală de plăți cu marje foarte mari și efect de rețea greu de copiat; riscurile sunt procesele antitrust privind comisioanele și concurența plăților instant.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; procese antitrust privind comisioanele interbancare, încheiate parțial prin înțelegeri.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; antitrust cases over interchange fees, partly settled.",
+   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001141391&type=10-K"
   },
   {
-   "id": "AAPL",
-   "name": "Apple",
-   "score": 7.48,
-   "met": 8,
+   "id": "NFLX",
+   "name": "Netflix",
+   "score": 7.42,
+   "met": 16,
+   "met14": 9,
+   "trust": 7,
    "criteria": [
     10,
     8,
-    10,
-    5,
-    8,
-    8,
     9,
     6,
-    9,
+    8,
+    8,
+    7,
     5,
+    7,
+    7,
     5,
-    9,
+    0,
     4,
-    5
+    7
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    9,
+    6,
+    10
    ],
    "inputs": {
-    "C1": "venituri 478,8 mld. USD (an fiscal încheiat 2026-09-30), +15,1% față de anul anterior",
-    "C2": "acțiuni în circulație -1,6% într-un an",
-    "C3": "datorie 68,2 mld. USD, numerar 36,3 mld. USD, flux din exploatare 145,1 mld. USD",
-    "C7": "flux de numerar liber 136,1 mld. USD, marjă 28,4%",
-    "C10": "capitalizare 4,99 trilioane USD, randament al fluxului liber 2,7%",
-    "C12": "acțiunea +7,7% în două luni"
+    "C1": "venituri 45,2 mld. USD (an fiscal încheiat 2025-12-31), +15,9% față de anul anterior",
+    "C2": "acțiuni în circulație -1,3% într-un an",
+    "C3": "datorie 13,5 mld. USD, numerar 9,0 mld. USD, flux din exploatare 10,1 mld. USD",
+    "C7": "flux de numerar liber 9,5 mld. USD, marjă 20,9%",
+    "C10": "capitalizare 0,28 trilioane USD, randament al fluxului liber 3,4%",
+    "C12": "acțiunea -20,7% în două luni"
    },
    "gaps": [],
-   "why": "Ecosistem greu de părăsit și venituri recurente din servicii, dar dependență mare de iPhone, de producția din China și procese antitrust (App Store).",
-   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=10-K"
+   "why": "Lider în streaming, cu abonamente și publicitate în creștere; concurența pentru timpul utilizatorilor rămâne intensă.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; fără probleme juridice majore; a pierdut abonați în 2022 și și-a revenit.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; no major legal problems; it lost subscribers in 2022 and recovered.",
+   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001065280&type=10-K"
   },
   {
    "id": "COST",
    "name": "Costco",
-   "score": 6.74,
-   "met": 8,
+   "score": 7.34,
+   "met": 16,
+   "met14": 8,
+   "trust": 8,
    "criteria": [
     8,
     6,
@@ -307,6 +329,16 @@
     3,
     8
    ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    9,
+    9,
+    10
+   ],
    "inputs": {
     "C1": "venituri 303,2 mld. USD (an fiscal încheiat 2026-08-31), +10,1% față de anul anterior",
     "C2": "acțiuni în circulație +0,0% într-un an",
@@ -317,13 +349,158 @@
    },
    "gaps": [],
    "why": "Model pe abonament cu reînnoire de peste 90%; una dintre cele mai bine conduse companii, dar și una dintre cele mai scumpe raportat la profit.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; fără probleme juridice majore; a crescut și în crize.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; no major legal problems; it grew even in crises.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000909832&type=10-K"
+  },
+  {
+   "id": "JNJ",
+   "name": "Johnson & Johnson",
+   "score": 7.04,
+   "met": 16,
+   "met14": 9,
+   "trust": 7,
+   "criteria": [
+    7,
+    6,
+    8,
+    5,
+    8,
+    7,
+    7,
+    8,
+    7,
+    6,
+    7,
+    5,
+    7,
+    4
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    4,
+    8,
+    10
+   ],
+   "inputs": {
+    "C1": "venituri 94,2 mld. USD (an fiscal încheiat 2025-12-31), +6,0% față de anul anterior",
+    "C2": "acțiuni în circulație +0,0% într-un an",
+    "C3": "datorie 39,4 mld. USD, numerar 19,7 mld. USD, flux din exploatare 24,5 mld. USD",
+    "C7": "flux de numerar liber 19,3 mld. USD, marjă 20,5%",
+    "C10": "capitalizare 0,66 trilioane USD, randament al fluxului liber 2,9%",
+    "C12": "acțiunea -0,7% în două luni"
+   },
+   "gaps": [],
+   "why": "Medicamente și dispozitive medicale diversificate, bilanț solid; procesele legate de talc și expirarea unor brevete sunt riscurile.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; mii de procese privind talcul pentru bebeluși, încă nerezolvate complet.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; thousands of baby-powder talc lawsuits, still not fully resolved.",
+   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000200406&type=10-K"
+  },
+  {
+   "id": "AAPL",
+   "name": "Apple",
+   "score": 7.86,
+   "met": 15,
+   "met14": 8,
+   "trust": 7,
+   "criteria": [
+    10,
+    8,
+    10,
+    5,
+    8,
+    8,
+    9,
+    6,
+    9,
+    5,
+    5,
+    9,
+    4,
+    5
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    6,
+    9,
+    10
+   ],
+   "inputs": {
+    "C1": "venituri 478,8 mld. USD (an fiscal încheiat 2026-09-30), +15,1% față de anul anterior",
+    "C2": "acțiuni în circulație -1,6% într-un an",
+    "C3": "datorie 68,2 mld. USD, numerar 36,3 mld. USD, flux din exploatare 145,1 mld. USD",
+    "C7": "flux de numerar liber 136,1 mld. USD, marjă 28,4%",
+    "C10": "capitalizare 4,99 trilioane USD, randament al fluxului liber 2,7%",
+    "C12": "acțiunea +7,7% în două luni"
+   },
+   "gaps": [],
+   "why": "Ecosistem greu de părăsit și venituri recurente din servicii, dar dependență mare de iPhone, de producția din China și procese antitrust (App Store).",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; procesul antitrust al Departamentului de Justiție al SUA (2024) și amenzile din UE sunt semnale de urmărit.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; the US Department of Justice antitrust suit (2024) and EU fines are signals to watch.",
+   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=10-K"
+  },
+  {
+   "id": "NVDA",
+   "name": "Nvidia",
+   "score": 7.21,
+   "met": 15,
+   "met14": 7,
+   "trust": 8,
+   "criteria": [
+    10,
+    7,
+    10,
+    10,
+    5,
+    8,
+    10,
+    4,
+    9,
+    4,
+    2,
+    0,
+    2,
+    5
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    7,
+    7,
+    10
+   ],
+   "inputs": {
+    "C1": "venituri 215,9 mld. USD (an fiscal încheiat 2026-01-31), +65,5% față de anul anterior",
+    "C2": "acțiuni în circulație -0,7% într-un an",
+    "C3": "datorie 7,5 mld. USD, numerar 10,6 mld. USD, flux din exploatare 102,7 mld. USD",
+    "C7": "flux de numerar liber 96,7 mld. USD, marjă 44,8%",
+    "C10": "capitalizare 4,42 trilioane USD, randament al fluxului liber 2,2%",
+    "C12": "acțiunea -11,2% în două luni"
+   },
+   "gaps": [],
+   "why": "Lider absolut în cipurile pentru AI, dar veniturile vin de la câțiva clienți foarte mari, iar controalele de export spre China și euforia mediatică sunt riscuri.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; anchete antitrust în SUA și China; acțiunea a pierdut circa jumătate din valoare în 2022, apoi și-a revenit.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; antitrust inquiries in the US and China; the share lost about half its value in 2022, then recovered.",
+   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=10-K"
   },
   {
    "id": "GOOGL",
    "name": "Alphabet",
-   "score": 6.56,
-   "met": 8,
+   "score": 7.07,
+   "met": 15,
+   "met14": 8,
+   "trust": 7,
    "criteria": [
     10,
     8,
@@ -340,6 +517,16 @@
     4,
     3
    ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    4,
+    9,
+    10
+   ],
    "inputs": {
     "C1": "venituri 402,8 mld. USD (an fiscal încheiat 2025-12-31), +15,1% față de anul anterior",
     "C2": "acțiuni în circulație -1,0% într-un an",
@@ -350,46 +537,111 @@
    },
    "gaps": [],
    "why": "Căutare, YouTube și cloud, cu modele AI proprii. Procesele antitrust din SUA și UE sunt cel mai mare risc din listă pentru afacerea principală.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; instanțele americane au decis în 2024 și 2025 că a abuzat de poziția dominantă, iar UE i-a dat amenzi mari.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; US courts ruled in 2024 and 2025 that it abused its dominant position, and the EU has fined it heavily.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-K"
   },
   {
-   "id": "NVDA",
-   "name": "Nvidia",
-   "score": 6.74,
-   "met": 7,
+   "id": "LLY",
+   "name": "Eli Lilly",
+   "score": 7.24,
+   "met": 14,
+   "met14": 6,
+   "trust": 8,
    "criteria": [
     10,
-    7,
-    10,
-    10,
-    5,
-    8,
-    10,
-    4,
+    6,
+    6,
     9,
+    7,
+    8,
+    3,
+    6,
+    8,
+    1,
     4,
-    2,
-    0,
-    2,
-    5
+    10,
+    4,
+    6
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    8,
+    9,
+    10
    ],
    "inputs": {
-    "C1": "venituri 215,9 mld. USD (an fiscal încheiat 2026-01-31), +65,5% față de anul anterior",
-    "C2": "acțiuni în circulație -0,7% într-un an",
-    "C3": "datorie 7,5 mld. USD, numerar 10,6 mld. USD, flux din exploatare 102,7 mld. USD",
-    "C7": "flux de numerar liber 96,7 mld. USD, marjă 44,8%",
-    "C10": "capitalizare 4,42 trilioane USD, randament al fluxului liber 2,2%",
-    "C12": "acțiunea -11,2% în două luni"
+    "C1": "venituri 65,2 mld. USD (an fiscal încheiat 2025-12-31), +44,7% față de anul anterior",
+    "C2": "acțiuni în circulație -0,3% într-un an",
+    "C3": "datorie 40,9 mld. USD, numerar 7,3 mld. USD, flux din exploatare 16,8 mld. USD",
+    "C7": "flux de numerar liber 6,0 mld. USD, marjă 9,2%",
+    "C10": "capitalizare 1,24 trilioane USD, randament al fluxului liber 0,5%",
+    "C12": "acțiunea +23,3% în două luni"
    },
    "gaps": [],
-   "why": "Lider absolut în cipurile pentru AI, dar veniturile vin de la câțiva clienți foarte mari, iar controalele de export spre China și euforia mediatică sunt riscuri.",
-   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=10-K"
+   "why": "Lider în tratamentele pentru obezitate și diabet; creștere foarte rapidă, dar dependentă de o singură familie de medicamente și de prețurile negociate cu statul.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; fără probleme juridice majore recente.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; no major recent legal problems.",
+   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000059478&type=10-K"
+  },
+  {
+   "id": "AVGO",
+   "name": "Broadcom",
+   "score": 7.19,
+   "met": 14,
+   "met14": 6,
+   "trust": 8,
+   "criteria": [
+    10,
+    4,
+    7,
+    9,
+    6,
+    8,
+    10,
+    6,
+    8,
+    4,
+    4,
+    1,
+    3,
+    6
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    7,
+    9,
+    10
+   ],
+   "inputs": {
+    "C1": "venituri 63,9 mld. USD (an fiscal încheiat 2025-10-31), +23,9% față de anul anterior",
+    "C2": "acțiuni în circulație +1,2% într-un an",
+    "C3": "datorie 62,0 mld. USD, numerar 16,2 mld. USD, flux din exploatare 27,5 mld. USD",
+    "C7": "flux de numerar liber 26,9 mld. USD, marjă 42,1%",
+    "C10": "capitalizare 1,41 trilioane USD, randament al fluxului liber 1,9%",
+    "C12": "acțiunea -8,9% în două luni"
+   },
+   "gaps": [],
+   "why": "Cipuri personalizate pentru AI și software de infrastructură (VMware); creștere puternică, dar concentrată pe câțiva clienți mari din cloud.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; Comisia Europeană a analizat condițiile de licențiere după preluarea VMware.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; the European Commission has examined licensing terms after the VMware takeover.",
+   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001730168&type=10-K"
   },
   {
    "id": "PLTR",
    "name": "Palantir",
-   "score": 6.68,
-   "met": 7,
+   "score": 7.07,
+   "met": 14,
+   "met14": 7,
+   "trust": 7,
    "criteria": [
     10,
     3,
@@ -405,6 +657,16 @@
     8,
     2,
     6
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    7,
+    9,
+    7,
+    6,
+    10
    ],
    "inputs": {
     "C1": "venituri 4,5 mld. USD (an fiscal încheiat 2025-12-31), +56,2% față de anul anterior",
@@ -416,13 +678,17 @@
    },
    "gaps": [],
    "why": "Software de analiză pentru guverne și companii, cu creștere rapidă din AI; evaluarea e printre cele mai mari din indice, iar atenția mediatică e foarte mare.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; listată abia din 2020 și profitabilă doar din 2023, deci istoric public mai scurt.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; listed only since 2020 and profitable only since 2023, so a shorter public record.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655&type=10-K"
   },
   {
    "id": "AMZN",
    "name": "Amazon",
-   "score": 6,
-   "met": 7,
+   "score": 6.62,
+   "met": 14,
+   "met14": 7,
+   "trust": 7,
    "criteria": [
     9,
     4,
@@ -439,6 +705,16 @@
     4,
     5
    ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    5,
+    7,
+    10
+   ],
    "inputs": {
     "C1": "venituri 716,9 mld. USD (an fiscal încheiat 2025-12-31), +12,4% față de anul anterior",
     "C2": "acțiuni în circulație +1,3% într-un an",
@@ -449,46 +725,17 @@
    },
    "gaps": [],
    "why": "Comerț online, cloud (AWS) și publicitate; afaceri diversificate cu efecte de rețea. Investițiile foarte mari în centre de date apasă fluxul de numerar.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; autoritatea americană de concurență (FTC) a dat-o în judecată pentru monopol în 2023; a avut pierdere în 2022.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; the US Federal Trade Commission sued it for monopolisation in 2023; it made a loss in 2022.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724&type=10-K"
-  },
-  {
-   "id": "XOM",
-   "name": "Exxon Mobil",
-   "score": 5.96,
-   "met": 7,
-   "criteria": [
-    3,
-    10,
-    9,
-    4,
-    7,
-    7,
-    2,
-    6,
-    6,
-    7,
-    7,
-    10,
-    6,
-    6
-   ],
-   "inputs": {
-    "C1": "venituri 323,9 mld. USD (an fiscal încheiat 2025-12-31), -4,5% față de anul anterior",
-    "C2": "acțiuni în circulație -4,0% într-un an",
-    "C3": "datorie 27,9 mld. USD, numerar 10,7 mld. USD, flux din exploatare 52,0 mld. USD",
-    "C7": "flux de numerar liber 23,6 mld. USD, marjă 7,3%",
-    "C10": "capitalizare 0,71 trilioane USD, randament al fluxului liber 3,3%",
-    "C12": "acțiunea +17,4% în două luni"
-   },
-   "gaps": [],
-   "why": "Cel mai mare producător privat de petrol din SUA; câștigă din prețul ridicat al petrolului din 2026, dar rezultatele urmează ciclul materiei prime.",
-   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000034088&type=10-K"
   },
   {
    "id": "JPM",
    "name": "JPMorgan Chase",
-   "score": 5.54,
-   "met": 7,
+   "score": 6.28,
+   "met": 14,
+   "met14": 7,
+   "trust": 7,
    "criteria": [
     7,
     10,
@@ -505,6 +752,16 @@
     5,
     7
    ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    6,
+    9,
+    10
+   ],
    "inputs": {
     "C1": "venituri 181,8 mld. USD (an fiscal încheiat 2025-12-31), +7,3% față de anul anterior",
     "C2": "acțiuni în circulație -3,6% într-un an",
@@ -515,13 +772,111 @@
    },
    "gaps": [],
    "why": "Cea mai mare bancă americană, cu activități diversificate (retail, investiții, administrare de active) și management apreciat; sensibilă la ciclul economic și la reglementare.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; amenzi repetate de la autorități și înțelegeri în procese mari; a trecut bine prin crize.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; repeated regulatory fines and settlements in large lawsuits; it has come through crises well.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=10-K"
+  },
+  {
+   "id": "AMD",
+   "name": "AMD",
+   "score": 7.35,
+   "met": 13,
+   "met14": 5,
+   "trust": 8,
+   "criteria": [
+    10,
+    5,
+    10,
+    9,
+    6,
+    8,
+    6,
+    6,
+    6,
+    2,
+    4,
+    8,
+    4,
+    6
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    8,
+    7,
+    10
+   ],
+   "inputs": {
+    "C1": "venituri 34,6 mld. USD (an fiscal încheiat 2025-12-31), +34,3% față de anul anterior",
+    "C2": "acțiuni în circulație +0,5% într-un an",
+    "C3": "datorie 2,3 mld. USD, numerar 5,5 mld. USD, flux din exploatare 7,7 mld. USD",
+    "C7": "flux de numerar liber 6,7 mld. USD, marjă 19,4%",
+    "C10": "capitalizare 0,67 trilioane USD, randament al fluxului liber 1,0%",
+    "C12": "acțiunea +5,7% în două luni"
+   },
+   "gaps": [],
+   "why": "Principalul concurent al Nvidia în cipurile AI și lider în procesoare pentru servere; trebuie încă să dovedească vânzări mari de acceleratoare AI.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; fără probleme juridice majore; afacerea e ciclică.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; no major legal problems; the business is cyclical.",
+   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=10-K"
+  },
+  {
+   "id": "XOM",
+   "name": "Exxon Mobil",
+   "score": 6.64,
+   "met": 13,
+   "met14": 7,
+   "trust": 6,
+   "criteria": [
+    3,
+    10,
+    9,
+    4,
+    7,
+    7,
+    2,
+    6,
+    6,
+    7,
+    7,
+    10,
+    6,
+    6
+   ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    6,
+    6,
+    10
+   ],
+   "inputs": {
+    "C1": "venituri 323,9 mld. USD (an fiscal încheiat 2025-12-31), -4,5% față de anul anterior",
+    "C2": "acțiuni în circulație -4,0% într-un an",
+    "C3": "datorie 27,9 mld. USD, numerar 10,7 mld. USD, flux din exploatare 52,0 mld. USD",
+    "C7": "flux de numerar liber 23,6 mld. USD, marjă 7,3%",
+    "C10": "capitalizare 0,71 trilioane USD, randament al fluxului liber 3,3%",
+    "C12": "acțiunea +17,4% în două luni"
+   },
+   "gaps": [],
+   "why": "Cel mai mare producător privat de petrol din SUA; câștigă din prețul ridicat al petrolului din 2026, dar rezultatele urmează ciclul materiei prime.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; procese legate de clima și de informarea publicului; a avut pierdere în 2020.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; lawsuits related to climate and public disclosure; it made a loss in 2020.",
+   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000034088&type=10-K"
   },
   {
    "id": "META",
    "name": "Meta Platforms",
-   "score": 6.86,
-   "met": 6,
+   "score": 7.29,
+   "met": 12,
+   "met14": 6,
+   "trust": 6,
    "criteria": [
     10,
     6,
@@ -538,6 +893,16 @@
     4,
     4
    ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    4,
+    6,
+    10
+   ],
    "inputs": {
     "C1": "venituri 201,0 mld. USD (an fiscal încheiat 2025-12-31), +22,2% față de anul anterior",
     "C2": "acțiuni în circulație -0,2% într-un an",
@@ -548,79 +913,17 @@
    },
    "gaps": [],
    "why": "Peste trei miliarde de utilizatori și publicitate foarte profitabilă; cheltuielile mari pentru AI și realitate virtuală și presiunea de reglementare sunt riscurile.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; procesul antitrust al FTC și amenzile mari din UE; acțiunea a scăzut cu peste 60% în 2022, apoi și-a revenit.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; the FTC antitrust case and large EU fines; the share fell more than 60% in 2022, then recovered.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=10-K"
-  },
-  {
-   "id": "AVGO",
-   "name": "Broadcom",
-   "score": 6.7,
-   "met": 6,
-   "criteria": [
-    10,
-    4,
-    7,
-    9,
-    6,
-    8,
-    10,
-    6,
-    8,
-    4,
-    4,
-    1,
-    3,
-    6
-   ],
-   "inputs": {
-    "C1": "venituri 63,9 mld. USD (an fiscal încheiat 2025-10-31), +23,9% față de anul anterior",
-    "C2": "acțiuni în circulație +1,2% într-un an",
-    "C3": "datorie 62,0 mld. USD, numerar 16,2 mld. USD, flux din exploatare 27,5 mld. USD",
-    "C7": "flux de numerar liber 26,9 mld. USD, marjă 42,1%",
-    "C10": "capitalizare 1,41 trilioane USD, randament al fluxului liber 1,9%",
-    "C12": "acțiunea -8,9% în două luni"
-   },
-   "gaps": [],
-   "why": "Cipuri personalizate pentru AI și software de infrastructură (VMware); creștere puternică, dar concentrată pe câțiva clienți mari din cloud.",
-   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001730168&type=10-K"
-  },
-  {
-   "id": "LLY",
-   "name": "Eli Lilly",
-   "score": 6.68,
-   "met": 6,
-   "criteria": [
-    10,
-    6,
-    6,
-    9,
-    7,
-    8,
-    3,
-    6,
-    8,
-    1,
-    4,
-    10,
-    4,
-    6
-   ],
-   "inputs": {
-    "C1": "venituri 65,2 mld. USD (an fiscal încheiat 2025-12-31), +44,7% față de anul anterior",
-    "C2": "acțiuni în circulație -0,3% într-un an",
-    "C3": "datorie 40,9 mld. USD, numerar 7,3 mld. USD, flux din exploatare 16,8 mld. USD",
-    "C7": "flux de numerar liber 6,0 mld. USD, marjă 9,2%",
-    "C10": "capitalizare 1,24 trilioane USD, randament al fluxului liber 0,5%",
-    "C12": "acțiunea +23,3% în două luni"
-   },
-   "gaps": [],
-   "why": "Lider în tratamentele pentru obezitate și diabet; creștere foarte rapidă, dar dependentă de o singură familie de medicamente și de prețurile negociate cu statul.",
-   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000059478&type=10-K"
   },
   {
    "id": "UNH",
    "name": "UnitedHealth",
-   "score": 5.78,
-   "met": 6,
+   "score": 6.44,
+   "met": 12,
+   "met14": 6,
+   "trust": 6,
    "criteria": [
     9,
     8,
@@ -637,6 +940,16 @@
     6,
     2
    ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    3,
+    4,
+    10
+   ],
    "inputs": {
     "C1": "venituri 447,6 mld. USD (an fiscal încheiat 2025-12-31), +11,8% față de anul anterior",
     "C2": "acțiuni în circulație -1,0% într-un an",
@@ -647,46 +960,17 @@
    },
    "gaps": [],
    "why": "Cea mai mare companie de asigurări de sănătate din SUA, lovită de costuri medicale în creștere, anchete federale și schimbări de conducere.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; anchete federale privind facturarea din programul Medicare, suspendarea estimărilor în 2025 și o prăbușire a acțiunii.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; federal investigations into Medicare billing, suspended guidance in 2025 and a collapse in the share price.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000731766&type=10-K"
-  },
-  {
-   "id": "AMD",
-   "name": "AMD",
-   "score": 6.86,
-   "met": 5,
-   "criteria": [
-    10,
-    5,
-    10,
-    9,
-    6,
-    8,
-    6,
-    6,
-    6,
-    2,
-    4,
-    8,
-    4,
-    6
-   ],
-   "inputs": {
-    "C1": "venituri 34,6 mld. USD (an fiscal încheiat 2025-12-31), +34,3% față de anul anterior",
-    "C2": "acțiuni în circulație +0,5% într-un an",
-    "C3": "datorie 2,3 mld. USD, numerar 5,5 mld. USD, flux din exploatare 7,7 mld. USD",
-    "C7": "flux de numerar liber 6,7 mld. USD, marjă 19,4%",
-    "C10": "capitalizare 0,67 trilioane USD, randament al fluxului liber 1,0%",
-    "C12": "acțiunea +5,7% în două luni"
-   },
-   "gaps": [],
-   "why": "Principalul concurent al Nvidia în cipurile AI și lider în procesoare pentru servere; trebuie încă să dovedească vânzări mari de acceleratoare AI.",
-   "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=10-K"
   },
   {
    "id": "ORCL",
    "name": "Oracle",
-   "score": 5.14,
-   "met": 4,
+   "score": 5.98,
+   "met": 12,
+   "met14": 4,
+   "trust": 8,
    "criteria": [
     10,
     2,
@@ -703,6 +987,16 @@
     3,
     6
    ],
+   "v": [
+    10,
+    10,
+    9,
+    10,
+    9,
+    8,
+    8,
+    10
+   ],
    "inputs": {
     "C1": "venituri 67,4 mld. USD (an fiscal încheiat 2026-05-31), +17,3% față de anul anterior",
     "C2": "acțiuni în circulație +2,6% într-un an",
@@ -713,13 +1007,17 @@
    },
    "gaps": [],
    "why": "Contracte uriașe de cloud pentru AI, dar finanțate cu datorie în creștere rapidă; investiția în centre de date face fluxul de numerar liber negativ.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; fără probleme juridice majore recente; datoria a crescut rapid.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; no major recent legal problems; debt has risen fast.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001341439&type=10-K"
   },
   {
    "id": "TSLA",
    "name": "Tesla",
-   "score": 4.24,
-   "met": 3,
+   "score": 5.16,
+   "met": 9,
+   "met14": 3,
+   "trust": 6,
    "criteria": [
     4,
     0,
@@ -736,6 +1034,16 @@
     3,
     4
    ],
+   "v": [
+    10,
+    10,
+    9,
+    9,
+    9,
+    4,
+    6,
+    10
+   ],
    "inputs": {
     "C1": "venituri 94,8 mld. USD (an fiscal încheiat 2025-12-31), -2,9% față de anul anterior",
     "C2": "acțiuni în circulație +16,6% într-un an",
@@ -746,6 +1054,8 @@
    },
    "gaps": [],
    "why": "Evaluare legată mai ales de promisiuni (robotaxi, roboți), în timp ce veniturile au scăzut în 2025. Numărul de acțiuni a crescut puternic, în principal prin pachetul de acțiuni acordat CEO-ului; guvernanța și atenția mediatică extremă reduc nota.",
+   "vwhy": "Rapoarte anuale auditate depuse la SEC de mulți ani, cu cifre confirmate de multe surse independente; anchetele autorității americane pentru siguranța rutieră privind pilotul automat și procesele cu acționarii sunt semnale de alarmă.",
+   "vwhyEn": "Annual audited reports filed with the SEC for many years, with figures confirmed by many independent sources; US road-safety regulator investigations into Autopilot and shareholder lawsuits are warning signs.",
    "filing": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001318605&type=10-K"
   }
  ]

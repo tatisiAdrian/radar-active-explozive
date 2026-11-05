@@ -272,7 +272,7 @@ export const domains: Domain[] = [
     slug: 'sp500',
     criteria: 'sp500',
     title: 'S&P 500',
-    summary: '22 dintre cele mai mari companii din indicele S&P 500, notate pe aceleași 14 condiții, cu cifre din rapoartele anuale și prețuri săptămânale.',
+    summary: '22 dintre cele mai mari companii din indicele S&P 500, notate pe 22 de condiții (14 și 8 de verificare a dovezilor), cu cifre din rapoartele anuale și prețuri săptămânale.',
     status: 'activ',
     questions: [
       'Care dintre cele mai mari companii americane au cele mai solide fundamente: creștere, flux de numerar, bilanț?',

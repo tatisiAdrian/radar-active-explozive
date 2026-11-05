@@ -7,7 +7,9 @@ import { createHash } from 'node:crypto';
 
 const macro = JSON.parse(await readFile(new URL('../src/data/sp500/macro.json', import.meta.url), 'utf8'));
 const judg = JSON.parse(await readFile(new URL('./sp500-judgment.json', import.meta.url), 'utf8'));
-const W = [16, 6, 6, 8, 6, 8, 8, 4, 6, 6, 6, 6, 6, 8];
+// 22 de condiții: primele 14 cântăresc 80%, cele 8 de verificare (C15–C22) 20% (aprobat pe 5 noiembrie 2026).
+const W = [13, 5, 5, 6, 5, 6, 6, 3, 5, 5, 5, 5, 5, 6];
+const WV = [4, 4, 3, 3, 2, 2, 1, 1];
 const clamp = (x) => Math.max(0, Math.min(10, Math.round(x)));
 const BASELINE = '2026-10-30';
 const bn = (x) => `${(x / 1e9).toFixed(1)} mld. USD`;
@@ -66,25 +68,30 @@ for (const [tk, j] of Object.entries(judg.companies)) {
   for (const k of Object.keys(inputs)) inputs[k] = inputs[k].replace(/(\d)\.(\d)/g, '$1,$2');
   const vec = Array.from({ length: 14 }, (_, i) => c[`C${i + 1}`]);
   const gaps = vec.map((v, i) => (v === undefined ? `C${i + 1}` : null)).filter(Boolean);
-  const score = +(vec.map((v) => v ?? 5).reduce((s, v, i) => s + v * W[i], 0) / 100).toFixed(2);
-  const met = vec.filter((v) => v !== undefined && v >= 7).length;
-  rows.push({ id: tk, name: co?.name ?? tk, score, met, criteria: vec, inputs, gaps, why: j.why, filing: co?.url });
+  const v = j.v ?? Array(8).fill(null);
+  const raw = vec.map((x) => x ?? 5).reduce((s, x, i) => s + x * W[i], 0) + v.map((x) => x ?? 5).reduce((s, x, i) => s + x * WV[i], 0);
+  const score = +(raw / 100).toFixed(2);
+  const met14 = vec.filter((x) => x !== undefined && x >= 7).length;
+  const trust = v.filter((x) => x != null && x >= 7).length;
+  const met = met14 + trust;
+  rows.push({ id: tk, name: co?.name ?? tk, score, met, met14, trust, criteria: vec, v, inputs, gaps, why: j.why, vwhy: j.vwhy, vwhyEn: j.vwhyEn, filing: co?.url });
 }
 rows.sort((a, b) => b.met - a.met || b.score - a.score);
 
-const out = { date: macro.updatedAt, judgmentDate: judg.date, formulas: FORMULAS, sources: macro.sources, rows };
+const SNAP = `sp500${judg.revision ? `-r${judg.revision}` : ''}-${judg.date}`;
+const out = { date: macro.updatedAt, judgmentDate: judg.date, snapshot: SNAP, previousSnapshot: judg.revision ? `sp500-${judg.date}` : undefined, formulas: FORMULAS, sources: macro.sources, rows };
 await writeFile(new URL('../src/data/sp500/scores.json', import.meta.url), JSON.stringify(out, null, 1) + '\n');
-console.log(rows.map((r) => `${r.id} ${r.met}/14 ${r.score}${r.gaps.length ? ' lipsă ' + r.gaps : ''}`).join('\n'));
+console.log(rows.map((r) => `${r.id} ${r.met}/22 (verificare ${r.trust}/8) ${r.score}${r.gaps.length ? ' lipsă ' + r.gaps : ''}`).join('\n'));
 
 if (process.argv.includes('--snapshot')) {
   const date = judg.date;
-  const file = new URL(`../public/snapshots/sp500-${date}.json`, import.meta.url);
+  const file = new URL(`../public/snapshots/${SNAP}.json`, import.meta.url);
   try { await access(file); console.log('Instantaneul există deja; nu îl modific.'); }
   catch {
-    const snap = Buffer.from(JSON.stringify({ domain: 'sp500', date, weights: W, met_threshold: 7, formulas: FORMULAS, sources: macro.sources, rows: rows.map(({ why, ...r }) => r) }, null, 1));
+    const snap = Buffer.from(JSON.stringify({ domain: 'sp500', date, weights: W, verification_weights: WV, met_threshold: 7, formulas: FORMULAS, sources: macro.sources, rows: rows.map(({ why, vwhy, vwhyEn, ...r }) => r) }, null, 1));
     await writeFile(file, snap);
     const h = createHash('sha256').update(snap).digest('hex');
-    await writeFile(new URL(`../public/snapshots/sp500-${date}.sha256`, import.meta.url), `${h}  sp500-${date}.json\n`);
+    await writeFile(new URL(`../public/snapshots/${SNAP}.sha256`, import.meta.url), `${h}  ${SNAP}.json\n`);
     console.log('Instantaneu înghețat:', h);
   }
 }
