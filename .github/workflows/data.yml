@@ -51,7 +51,7 @@ jobs:
           git add src/data/prices/weekly.json src/data/forex/ src/data/emerging/ src/data/sp500/ src/data/startups-ro/ src/data/imobiliare/ src/data/proiecte-imobiliare/ 2>/dev/null || git add src/data/prices/weekly.json
           if git diff --cached --quiet; then echo "Nicio modificare."; exit 0; fi
           git commit -qm "Date săptămânale $(date -u +%F)"
-          git push
+          git pull --rebase && git push
           echo "changed=1" >> "$GITHUB_ENV"
       - name: Republică site-ul
         if: env.changed == '1'
