@@ -396,6 +396,402 @@
      "https://www.romania-insider.com/regional/cluj-napoca-tenth-most-livable-cities-europe-2024"
     ]
    ]
+  },
+  {
+   "id": "helsinki-eu",
+   "name": "Helsinki",
+   "nameEn": "Helsinki",
+   "c": [
+    8,
+    6,
+    7,
+    9,
+    9,
+    8,
+    9,
+    8,
+    10,
+    6,
+    8,
+    6,
+    8,
+    8
+   ],
+   "why": "Locul 2 în Happy City Index 2026 și printre orașele cu cei mai mulțumiți locuitori din raportul UE; educație de vârf și natură aproape. Iernile sunt lungi și economia crește lent.",
+   "whyEn": "Second in the Happy City Index 2026 and among the cities with the most satisfied residents in the EU report; top education and nature close by. Winters are long and the economy is growing slowly.",
+   "sources": [
+    [
+     "Wikipedia: indicii de calitate a vieții în orașe (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ],
+    [
+     "Comisia Europeană: raportul privind calitatea vieții în orașele europene (71.153 de interviuri, 83 de orașe)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Wikipedia: city quality-of-life indices (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ],
+    [
+     "European Commission: the report on the quality of life in European cities (71,153 interviews, 83 cities)",
+     "https://ec.europa.eu/regional_policy/whats-new/newsroom/12-12-2023-9-out-of-10-people-satisfied-with-city-living-across-europe-according-to-new-commission-report_en"
+    ]
+   ]
+  },
+  {
+   "id": "munchen-eu",
+   "name": "München",
+   "nameEn": "Munich",
+   "c": [
+    9,
+    9,
+    7,
+    9,
+    9,
+    8,
+    9,
+    9,
+    9,
+    3,
+    9,
+    6,
+    6,
+    9
+   ],
+   "why": "Locul 11 la Mercer și 9 în Happy City Index 2026; salarii mari, industrie puternică și Alpii aproape. Cel mai scump oraș din Germania pentru locuințe.",
+   "whyEn": "Eleventh at Mercer and 9th in the Happy City Index 2026; high wages, strong industry and the Alps nearby. Germany’s most expensive city for housing.",
+   "sources": [
+    [
+     "Wikipedia: indicii de calitate a vieții în orașe (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Wikipedia: city quality-of-life indices (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ]
+  },
+  {
+   "id": "amsterdam-eu",
+   "name": "Amsterdam",
+   "nameEn": "Amsterdam",
+   "c": [
+    9,
+    9,
+    7,
+    9,
+    9,
+    8,
+    6,
+    10,
+    8,
+    2,
+    10,
+    6,
+    4,
+    7
+   ],
+   "why": "Locul 6 la Mercer; foarte internațional, cu multe sedii de companii și aeroport mare. Criza locuințelor e printre cele mai grave din Europa.",
+   "whyEn": "Sixth at Mercer; very international, with many company headquarters and a large airport. Its housing crisis is among the worst in Europe.",
+   "sources": [
+    [
+     "Wikipedia: indicii de calitate a vieții în orașe (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Wikipedia: city quality-of-life indices (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ]
+  },
+  {
+   "id": "stockholm-eu",
+   "name": "Stockholm",
+   "nameEn": "Stockholm",
+   "c": [
+    9,
+    8,
+    7,
+    9,
+    9,
+    8,
+    9,
+    8,
+    7,
+    4,
+    9,
+    6,
+    6,
+    8
+   ],
+   "why": "Locul 18 la Mercer; ecosistem tehnologic puternic, oraș pe ape. Așteptarea pentru o chirie de lungă durată durează ani, iar criminalitatea violentă a crescut.",
+   "whyEn": "Eighteenth at Mercer; a strong tech ecosystem, a city on the water. Waiting for a long-term rental takes years, and violent crime has risen.",
+   "sources": [
+    [
+     "Wikipedia: indicii de calitate a vieții în orașe (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Wikipedia: city quality-of-life indices (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ]
+  },
+  {
+   "id": "oslo-eu",
+   "name": "Oslo",
+   "nameEn": "Oslo",
+   "c": [
+    10,
+    6,
+    7,
+    9,
+    9,
+    8,
+    10,
+    7,
+    9,
+    4,
+    8,
+    6,
+    8,
+    9
+   ],
+   "why": "Locul 22 la Mercer și 14 în Happy City Index 2026; salarii foarte mari și natură la marginea orașului, dar costul vieții e printre cele mai mari din Europa.",
+   "whyEn": "Twenty-second at Mercer and 14th in the Happy City Index 2026; very high wages and nature at the edge of the city, but the cost of living is among Europe’s highest.",
+   "sources": [
+    [
+     "Wikipedia: indicii de calitate a vieții în orașe (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Wikipedia: city quality-of-life indices (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ]
+  },
+  {
+   "id": "luxemburg-eu",
+   "name": "Luxemburg",
+   "nameEn": "Luxembourg",
+   "c": [
+    10,
+    9,
+    7,
+    8,
+    8,
+    8,
+    8,
+    7,
+    9,
+    3,
+    7,
+    6,
+    7,
+    10
+   ],
+   "why": "Locul 17 la Mercer; cele mai mari salarii din Europa și transport public gratuit. Locuințele sunt foarte scumpe, iar orașul e mic.",
+   "whyEn": "Seventeenth at Mercer; Europe’s highest wages and free public transport. Housing is very expensive and the city is small.",
+   "sources": [
+    [
+     "Wikipedia: indicii de calitate a vieții în orașe (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Wikipedia: city quality-of-life indices (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ]
+  },
+  {
+   "id": "haga-eu",
+   "name": "Haga",
+   "nameEn": "The Hague",
+   "c": [
+    8,
+    8,
+    7,
+    8,
+    9,
+    8,
+    8,
+    8,
+    9,
+    5,
+    7,
+    6,
+    7,
+    8
+   ],
+   "why": "Locul 14 la Mercer și 15 în Happy City Index 2026; instituții internaționale, mare și un ritm mai liniștit decât în Amsterdam.",
+   "whyEn": "Fourteenth at Mercer and 15th in the Happy City Index 2026; international institutions, the sea and a calmer pace than Amsterdam.",
+   "sources": [
+    [
+     "Wikipedia: indicii de calitate a vieții în orașe (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Wikipedia: city quality-of-life indices (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ]
+  },
+  {
+   "id": "paris-eu",
+   "name": "Paris",
+   "nameEn": "Paris",
+   "c": [
+    9,
+    10,
+    7,
+    9,
+    9,
+    8,
+    5,
+    10,
+    6,
+    2,
+    10,
+    6,
+    2,
+    6
+   ],
+   "why": "Primul loc în clasamentul Monocle 2025; cea mai bogată ofertă culturală și cel mai bun transport din Europa. Locuințe mici și scumpe, aglomerație și siguranță mai slabă.",
+   "whyEn": "First in Monocle’s 2025 ranking; Europe’s richest cultural offer and best transport. Small, expensive homes, crowding and weaker safety.",
+   "sources": [
+    [
+     "Wikipedia: indicii de calitate a vieții în orașe (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Wikipedia: city quality-of-life indices (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ]
+  },
+  {
+   "id": "madrid",
+   "name": "Madrid",
+   "nameEn": "Madrid",
+   "c": [
+    7,
+    8,
+    7,
+    9,
+    9,
+    8,
+    6,
+    9,
+    8,
+    4,
+    10,
+    6,
+    4,
+    8
+   ],
+   "why": "Locul 2 în clasamentul Monocle 2025; viață stradală și culturală foarte bogată și o economie care crește peste media zonei euro. Chiriile au crescut rapid, iar verile sunt foarte calde.",
+   "whyEn": "Second in Monocle’s 2025 ranking; very rich street and cultural life and an economy growing above the euro-area average. Rents have risen fast and summers are very hot.",
+   "sources": [
+    [
+     "Wikipedia: indicii de calitate a vieții în orașe (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Wikipedia: city quality-of-life indices (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ]
+  },
+  {
+   "id": "lisabona",
+   "name": "Lisabona",
+   "nameEn": "Lisbon",
+   "c": [
+    6,
+    7,
+    7,
+    8,
+    8,
+    7,
+    8,
+    8,
+    8,
+    3,
+    9,
+    6,
+    5,
+    6
+   ],
+   "why": "Locul 8 în clasamentul Monocle 2025; climă blândă, ocean și mulți străini care se mută aici. Locuințele s-au scumpit mult față de salariile locale, iar riscul de cutremur există.",
+   "whyEn": "Eighth in Monocle’s 2025 ranking; a mild climate, the ocean and many foreigners moving in. Housing has become much dearer relative to local wages, and there is earthquake risk.",
+   "sources": [
+    [
+     "Wikipedia: indicii de calitate a vieții în orașe (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Wikipedia: city quality-of-life indices (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ]
+  },
+  {
+   "id": "tallinn",
+   "name": "Tallinn",
+   "nameEn": "Tallinn",
+   "c": [
+    6,
+    7,
+    7,
+    9,
+    7,
+    8,
+    8,
+    6,
+    9,
+    6,
+    7,
+    6,
+    8,
+    6
+   ],
+   "why": "Locul 10 în clasamentul Monocle 2025; cel mai digitalizat stat din Europa, cu multe start-up-uri și educație bună. Salariile sunt mai mici decât în vest, iar granița cu Rusia e un risc.",
+   "whyEn": "Tenth in Monocle’s 2025 ranking; Europe’s most digital state, with many start-ups and good education. Wages are lower than in the west, and the border with Russia is a risk.",
+   "sources": [
+    [
+     "Wikipedia: indicii de calitate a vieții în orașe (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Wikipedia: city quality-of-life indices (Mercer 2024, Happy City Index 2026, Monocle 2025)",
+     "https://en.wikipedia.org/wiki/City_quality_of_life_indices"
+    ]
+   ]
   }
- ]
+ ],
+ "revision": 2,
+ "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
+ "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources."
 }

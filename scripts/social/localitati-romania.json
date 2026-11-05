@@ -435,9 +435,418 @@
      "https://www.romania-insider.com/regional/cluj-napoca-tenth-most-livable-cities-europe-2024"
     ]
    ]
+  },
+  {
+   "id": "craiova",
+   "name": "Craiova",
+   "nameEn": "Craiova",
+   "c": [
+    5,
+    6,
+    6,
+    7,
+    7,
+    7,
+    5,
+    6,
+    7,
+    7,
+    7,
+    7,
+    6,
+    7
+   ],
+   "why": "Locul 5 în țară la scorul obiectiv al indexului Storia și în top 15 la prosperitate în CITY INDEX 2025 (inovare și competitivitate); fabrica Ford și autostrada în construcție, dar salarii sub media țării.",
+   "whyEn": "Fifth in Romania on the objective score of the Storia index and in the top 15 for prosperity in CITY INDEX 2025 (innovation and competitiveness); the Ford plant and a motorway under construction, but wages below the national average.",
+   "sources": [
+    [
+     "Actual de Cluj: indexul Storia, scorurile obiective ale orașelor",
+     "https://actualdecluj.ro/analiza-urbana-unde-se-traieste-cel-mai-bine-in-romania-clujul-conduce-la-scorul-obiectiv-iar-sibiu-la-evaluarea-subiectiva-a-locuitorilor/"
+    ],
+    [
+     "Revista Biz: CITY INDEX 2025, performanța urbană",
+     "https://www.revistabiz.ro/city-index-2025-cluj-napoca-ramane-cel-mai-performant-oras-din-romania-si-in-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Actual de Cluj: the Storia index, cities’ objective scores",
+     "https://actualdecluj.ro/analiza-urbana-unde-se-traieste-cel-mai-bine-in-romania-clujul-conduce-la-scorul-obiectiv-iar-sibiu-la-evaluarea-subiectiva-a-locuitorilor/"
+    ],
+    [
+     "Revista Biz: CITY INDEX 2025, urban performance",
+     "https://www.revistabiz.ro/city-index-2025-cluj-napoca-ramane-cel-mai-performant-oras-din-romania-si-in-2025/"
+    ]
+   ]
+  },
+  {
+   "id": "targu-mures",
+   "name": "Târgu Mureș",
+   "nameEn": "Târgu Mureș",
+   "c": [
+    5,
+    5,
+    7,
+    7,
+    9,
+    7,
+    7,
+    6,
+    8,
+    7,
+    7,
+    6,
+    7,
+    8
+   ],
+   "why": "Locul 12 în Indexul de Atractivitate Urbană 2024 și în top 10 la performanța urbană în CITY INDEX 2025; centru medical și universitar puternic, oraș multicultural. Salariile sunt medii.",
+   "whyEn": "Twelfth in the Urban Attractiveness Index 2024 and in the top 10 for urban performance in CITY INDEX 2025; a strong medical and university centre, a multicultural city. Wages are average.",
+   "sources": [
+    [
+     "StartupCafe: Indexul de Atractivitate Urbană 2024, primele 15 orașe",
+     "https://startupcafe.ro/orase-romania-oameni-locuire-bucuresti-loc-studiu-htm-28704"
+    ],
+    [
+     "Revista Biz: CITY INDEX 2025, performanța urbană",
+     "https://www.revistabiz.ro/city-index-2025-cluj-napoca-ramane-cel-mai-performant-oras-din-romania-si-in-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "StartupCafe: the Urban Attractiveness Index 2024, top 15 cities",
+     "https://startupcafe.ro/orase-romania-oameni-locuire-bucuresti-loc-studiu-htm-28704"
+    ],
+    [
+     "Revista Biz: CITY INDEX 2025, urban performance",
+     "https://www.revistabiz.ro/city-index-2025-cluj-napoca-ramane-cel-mai-performant-oras-din-romania-si-in-2025/"
+    ]
+   ]
+  },
+  {
+   "id": "suceava",
+   "name": "Suceava",
+   "nameEn": "Suceava",
+   "c": [
+    3,
+    5,
+    6,
+    6,
+    6,
+    6,
+    8,
+    6,
+    8,
+    7,
+    6,
+    6,
+    8,
+    7
+   ],
+   "why": "Locul 13 în Indexul de Atractivitate Urbană 2024; aeroport și natura Bucovinei aproape, locuințe accesibile. Salariile din județ sunt printre cele mai mici din țară.",
+   "whyEn": "Thirteenth in the Urban Attractiveness Index 2024; an airport and the nature of Bucovina nearby, affordable housing. Wages in the county are among the lowest in Romania.",
+   "sources": [
+    [
+     "StartupCafe: Indexul de Atractivitate Urbană 2024, primele 15 orașe",
+     "https://startupcafe.ro/orase-romania-oameni-locuire-bucuresti-loc-studiu-htm-28704"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "StartupCafe: the Urban Attractiveness Index 2024, top 15 cities",
+     "https://startupcafe.ro/orase-romania-oameni-locuire-bucuresti-loc-studiu-htm-28704"
+    ]
+   ]
+  },
+  {
+   "id": "satu-mare",
+   "name": "Satu Mare",
+   "nameEn": "Satu Mare",
+   "c": [
+    4,
+    5,
+    6,
+    5,
+    5,
+    6,
+    6,
+    6,
+    8,
+    8,
+    5,
+    6,
+    8,
+    7
+   ],
+   "why": "Locul 14 în Indexul de Atractivitate Urbană 2024; aproape de granițele cu Ungaria și Ucraina, cu industrie și locuințe ieftine, dar oferta culturală și universitară e mică.",
+   "whyEn": "Fourteenth in the Urban Attractiveness Index 2024; close to the borders with Hungary and Ukraine, with industry and cheap housing, but a small cultural and university offer.",
+   "sources": [
+    [
+     "StartupCafe: Indexul de Atractivitate Urbană 2024, primele 15 orașe",
+     "https://startupcafe.ro/orase-romania-oameni-locuire-bucuresti-loc-studiu-htm-28704"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "StartupCafe: the Urban Attractiveness Index 2024, top 15 cities",
+     "https://startupcafe.ro/orase-romania-oameni-locuire-bucuresti-loc-studiu-htm-28704"
+    ]
+   ]
+  },
+  {
+   "id": "deva",
+   "name": "Deva",
+   "nameEn": "Deva",
+   "c": [
+    4,
+    4,
+    6,
+    5,
+    5,
+    6,
+    8,
+    7,
+    8,
+    8,
+    5,
+    5,
+    9,
+    7
+   ],
+   "why": "Locul 15 în Indexul de Atractivitate Urbană 2024; pe autostrada A1, cu cetatea și munții aproape și locuințe ieftine. Industria din județ s-a redus, iar populația scade.",
+   "whyEn": "Fifteenth in the Urban Attractiveness Index 2024; on the A1 motorway, with the fortress and mountains nearby and cheap housing. Industry in the county has shrunk and the population is falling.",
+   "sources": [
+    [
+     "StartupCafe: Indexul de Atractivitate Urbană 2024, primele 15 orașe",
+     "https://startupcafe.ro/orase-romania-oameni-locuire-bucuresti-loc-studiu-htm-28704"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "StartupCafe: the Urban Attractiveness Index 2024, top 15 cities",
+     "https://startupcafe.ro/orase-romania-oameni-locuire-bucuresti-loc-studiu-htm-28704"
+    ]
+   ]
+  },
+  {
+   "id": "baia-mare",
+   "name": "Baia Mare",
+   "nameEn": "Baia Mare",
+   "c": [
+    4,
+    5,
+    6,
+    5,
+    6,
+    6,
+    8,
+    5,
+    8,
+    8,
+    6,
+    8,
+    8,
+    6
+   ],
+   "why": "Una dintre cele mai mari creșteri de scor în Indexul de Atractivitate Urbană 2026; munți aproape și locuințe ieftine. Moștenirea mineritului (poluarea solului) și conexiunile slabe sunt minusurile.",
+   "whyEn": "One of the biggest score increases in the Urban Attractiveness Index 2026; mountains nearby and cheap housing. The mining legacy (soil pollution) and weak connections are the downsides.",
+   "sources": [
+    [
+     "Mediafax: Indexul de Atractivitate Urbană 2026",
+     "https://www.mediafax.ro/social/bucurestiul-pierde-teren-unde-si-ar-dori-romanii-sa-se-mute-in-2026-23757011/amp"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Mediafax: the Urban Attractiveness Index 2026",
+     "https://www.mediafax.ro/social/bucurestiul-pierde-teren-unde-si-ar-dori-romanii-sa-se-mute-in-2026-23757011/amp"
+    ]
+   ]
+  },
+  {
+   "id": "pitesti",
+   "name": "Pitești",
+   "nameEn": "Pitești",
+   "c": [
+    7,
+    7,
+    5,
+    6,
+    6,
+    6,
+    6,
+    8,
+    8,
+    7,
+    5,
+    6,
+    6,
+    7
+   ],
+   "why": "Județul Argeș are unul dintre cele mai mari salarii din țară (peste 6.100 lei net în iulie 2026), datorită uzinei Dacia; pe autostrada A1. Orașul e mai puțin atractiv ca loc de trai.",
+   "whyEn": "Argeș county has one of the highest wages in Romania (above RON 6,100 net in July 2026), thanks to the Dacia plant; on the A1 motorway. The city is less attractive as a place to live.",
+   "sources": [
+    [
+     "Infocons: salariul mediu net pe județe, iulie 2026 (INS)",
+     "https://infocons.ro/infocons-protectia-consumatorilor-te-informeaza-barometrul-societatii-romanesti-in-date-statistice-2026-institutul-national-de-statistica-ins/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Infocons: average net wage by county, July 2026 (INS)",
+     "https://infocons.ro/infocons-protectia-consumatorilor-te-informeaza-barometrul-societatii-romanesti-in-date-statistice-2026-institutul-national-de-statistica-ins/"
+    ]
+   ]
+  },
+  {
+   "id": "ploiesti",
+   "name": "Ploiești",
+   "nameEn": "Ploiești",
+   "c": [
+    6,
+    7,
+    4,
+    6,
+    6,
+    5,
+    5,
+    9,
+    7,
+    7,
+    5,
+    5,
+    5,
+    5
+   ],
+   "why": "Județul Prahova are salarii peste media multor județe (în jur de 5.300 lei net în iulie 2026), cu industrie și aproape de București și de munte. Rafinăriile afectează calitatea aerului.",
+   "whyEn": "Prahova county has wages above many counties (around RON 5,300 net in July 2026), with industry and close to Bucharest and the mountains. The refineries affect air quality.",
+   "sources": [
+    [
+     "Infocons: salariul mediu net pe județe, iulie 2026 (INS)",
+     "https://infocons.ro/infocons-protectia-consumatorilor-te-informeaza-barometrul-societatii-romanesti-in-date-statistice-2026-institutul-national-de-statistica-ins/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Infocons: average net wage by county, July 2026 (INS)",
+     "https://infocons.ro/infocons-protectia-consumatorilor-te-informeaza-barometrul-societatii-romanesti-in-date-statistice-2026-institutul-national-de-statistica-ins/"
+    ]
+   ]
+  },
+  {
+   "id": "bistrita",
+   "name": "Bistrița",
+   "nameEn": "Bistrița",
+   "c": [
+    5,
+    5,
+    6,
+    5,
+    5,
+    7,
+    8,
+    4,
+    9,
+    7,
+    5,
+    7,
+    8,
+    8
+   ],
+   "why": "Oraș mediu cu poziție în urcare în CITY INDEX 2025; natură aproape, siguranță și industrie. Lipsa autostrăzii și a aeroportului îl izolează.",
+   "whyEn": "A mid-sized city moving up in CITY INDEX 2025; nature nearby, safety and industry. The lack of a motorway and an airport isolates it.",
+   "sources": [
+    [
+     "Revista Biz: CITY INDEX 2025, performanța urbană",
+     "https://www.revistabiz.ro/city-index-2025-cluj-napoca-ramane-cel-mai-performant-oras-din-romania-si-in-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Revista Biz: CITY INDEX 2025, urban performance",
+     "https://www.revistabiz.ro/city-index-2025-cluj-napoca-ramane-cel-mai-performant-oras-din-romania-si-in-2025/"
+    ]
+   ]
+  },
+  {
+   "id": "ramnicu-valcea",
+   "name": "Râmnicu Vâlcea",
+   "nameEn": "Râmnicu Vâlcea",
+   "c": [
+    4,
+    4,
+    6,
+    5,
+    6,
+    7,
+    9,
+    5,
+    9,
+    8,
+    5,
+    6,
+    8,
+    7
+   ],
+   "why": "În top 10 la calitatea locului în CITY INDEX 2025 și orașul cu cea mai mare speranță de viață; munții și stațiunile balneare aproape. Salariile sunt mici, iar drumul spre Sibiu e aglomerat.",
+   "whyEn": "In the top 10 for quality of place in CITY INDEX 2025 and the city with the highest life expectancy; mountains and spa resorts nearby. Wages are low, and the road to Sibiu is congested.",
+   "sources": [
+    [
+     "Revista Biz: CITY INDEX 2025, performanța urbană",
+     "https://www.revistabiz.ro/city-index-2025-cluj-napoca-ramane-cel-mai-performant-oras-din-romania-si-in-2025/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Revista Biz: CITY INDEX 2025, urban performance",
+     "https://www.revistabiz.ro/city-index-2025-cluj-napoca-ramane-cel-mai-performant-oras-din-romania-si-in-2025/"
+    ]
+   ]
+  },
+  {
+   "id": "targu-jiu",
+   "name": "Târgu Jiu",
+   "nameEn": "Târgu Jiu",
+   "c": [
+    4,
+    4,
+    6,
+    5,
+    5,
+    7,
+    8,
+    4,
+    9,
+    8,
+    7,
+    8,
+    9,
+    6
+   ],
+   "why": "În top 10 la calitatea locului în CITY INDEX 2025 și una dintre cele mai mari creșteri în Indexul de Atractivitate Urbană 2026; ansamblul Brâncuși și locuințe ieftine. Economia depinde încă de energia pe cărbune, în declin.",
+   "whyEn": "In the top 10 for quality of place in CITY INDEX 2025 and one of the biggest gains in the Urban Attractiveness Index 2026; the Brâncuși ensemble and cheap housing. The economy still depends on declining coal power.",
+   "sources": [
+    [
+     "Revista Biz: CITY INDEX 2025, performanța urbană",
+     "https://www.revistabiz.ro/city-index-2025-cluj-napoca-ramane-cel-mai-performant-oras-din-romania-si-in-2025/"
+    ],
+    [
+     "Mediafax: Indexul de Atractivitate Urbană 2026",
+     "https://www.mediafax.ro/social/bucurestiul-pierde-teren-unde-si-ar-dori-romanii-sa-se-mute-in-2026-23757011/amp"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Revista Biz: CITY INDEX 2025, urban performance",
+     "https://www.revistabiz.ro/city-index-2025-cluj-napoca-ramane-cel-mai-performant-oras-din-romania-si-in-2025/"
+    ],
+    [
+     "Mediafax: the Urban Attractiveness Index 2026",
+     "https://www.mediafax.ro/social/bucurestiul-pierde-teren-unde-si-ar-dori-romanii-sa-se-mute-in-2026-23757011/amp"
+    ]
+   ]
   }
  ],
- "revision": 2,
- "revisionNote": "Revizia 2 (3 noiembrie 2026): condiția C11 „Media” a fost înlocuită cu „Cultură și timp liber”, iar costul locuinței (C10) și administrația (C6) au fost reevaluate pentru toate orașele, raportând prețul locuinței la venitul local.",
- "revisionNoteEn": "Revision 2 (3 November 2026): condition C11 “Media” was replaced with “Culture and leisure”, and housing cost (C10) and administration (C6) were reassessed for every city, relating house prices to local income."
+ "revision": 3,
+ "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
+ "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources."
 }
