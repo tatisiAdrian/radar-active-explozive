@@ -7,6 +7,7 @@
  "previousSnapshot": "social-localitati-lume-2026-11-03",
  "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
  "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
+ "verified": false,
  "formulas": {},
  "rows": [
   {
@@ -61,7 +62,8 @@
    ],
    "inputs": {},
    "score": 8.4,
-   "met": 13
+   "met": 13,
+   "met14": 13
   },
   {
    "id": "copenhaga",
@@ -115,7 +117,8 @@
    ],
    "inputs": {},
    "score": 8.38,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "geneva",
@@ -169,7 +172,8 @@
    ],
    "inputs": {},
    "score": 8.32,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "sydney",
@@ -223,7 +227,8 @@
    ],
    "inputs": {},
    "score": 8.1,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "melbourne",
@@ -277,7 +282,8 @@
    ],
    "inputs": {},
    "score": 8,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "luxemburg",
@@ -315,7 +321,8 @@
    ],
    "inputs": {},
    "score": 7.96,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "osaka",
@@ -369,7 +376,8 @@
    ],
    "inputs": {},
    "score": 7.72,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "haga",
@@ -407,7 +415,8 @@
    ],
    "inputs": {},
    "score": 7.64,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "zurich",
@@ -461,7 +470,8 @@
    ],
    "inputs": {},
    "score": 8.34,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "oslo",
@@ -499,7 +509,8 @@
    ],
    "inputs": {},
    "score": 8.18,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "munchen",
@@ -537,7 +548,8 @@
    ],
    "inputs": {},
    "score": 8.08,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "helsinki",
@@ -575,7 +587,8 @@
    ],
    "inputs": {},
    "score": 7.92,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "stockholm",
@@ -613,7 +626,8 @@
    ],
    "inputs": {},
    "score": 7.84,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "adelaide",
@@ -667,7 +681,8 @@
    ],
    "inputs": {},
    "score": 7.72,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "vancouver",
@@ -721,7 +736,8 @@
    ],
    "inputs": {},
    "score": 7.6,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "singapore",
@@ -767,7 +783,8 @@
    ],
    "inputs": {},
    "score": 7.96,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "tokyo",
@@ -821,7 +838,8 @@
    ],
    "inputs": {},
    "score": 7.94,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "amsterdam",
@@ -859,7 +877,8 @@
    ],
    "inputs": {},
    "score": 7.54,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "toronto",
@@ -897,7 +916,8 @@
    ],
    "inputs": {},
    "score": 7.16,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "auckland",
@@ -943,7 +963,8 @@
    ],
    "inputs": {},
    "score": 7.02,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "wellington",
@@ -981,7 +1002,8 @@
    ],
    "inputs": {},
    "score": 7,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "paris",
@@ -1019,7 +1041,8 @@
    ],
    "inputs": {},
    "score": 7.2,
-   "met": 8
+   "met": 8,
+   "met14": 8
   }
  ]
 }

@@ -7,6 +7,7 @@
  "previousSnapshot": "social-localitati-europa-2026-11-03",
  "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
  "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
+ "verified": false,
  "formulas": {},
  "rows": [
   {
@@ -45,7 +46,8 @@
    ],
    "inputs": {},
    "score": 8.4,
-   "met": 13
+   "met": 13,
+   "met14": 13
   },
   {
    "id": "copenhaga",
@@ -91,7 +93,8 @@
    ],
    "inputs": {},
    "score": 8.38,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "geneva",
@@ -129,7 +132,8 @@
    ],
    "inputs": {},
    "score": 8.32,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "luxemburg-eu",
@@ -167,7 +171,8 @@
    ],
    "inputs": {},
    "score": 7.96,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "haga-eu",
@@ -205,7 +210,8 @@
    ],
    "inputs": {},
    "score": 7.64,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "groningen",
@@ -243,7 +249,8 @@
    ],
    "inputs": {},
    "score": 7.58,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "gdansk",
@@ -281,7 +288,8 @@
    ],
    "inputs": {},
    "score": 7.4,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "zurich",
@@ -319,7 +327,8 @@
    ],
    "inputs": {},
    "score": 8.34,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "oslo-eu",
@@ -357,7 +366,8 @@
    ],
    "inputs": {},
    "score": 8.18,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "munchen-eu",
@@ -395,7 +405,8 @@
    ],
    "inputs": {},
    "score": 8.08,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "helsinki-eu",
@@ -441,7 +452,8 @@
    ],
    "inputs": {},
    "score": 7.92,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "stockholm-eu",
@@ -479,7 +491,8 @@
    ],
    "inputs": {},
    "score": 7.84,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "cluj-eu",
@@ -517,7 +530,8 @@
    ],
    "inputs": {},
    "score": 7.32,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "braga",
@@ -555,7 +569,8 @@
    ],
    "inputs": {},
    "score": 7.12,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "amsterdam-eu",
@@ -593,7 +608,8 @@
    ],
    "inputs": {},
    "score": 7.54,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "antwerp",
@@ -631,7 +647,8 @@
    ],
    "inputs": {},
    "score": 7.36,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "madrid",
@@ -669,7 +686,8 @@
    ],
    "inputs": {},
    "score": 7.32,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "rostock",
@@ -707,7 +725,8 @@
    ],
    "inputs": {},
    "score": 7.22,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "tallinn",
@@ -745,7 +764,8 @@
    ],
    "inputs": {},
    "score": 7.1,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "lisabona",
@@ -783,7 +803,8 @@
    ],
    "inputs": {},
    "score": 6.78,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "budapesta",
@@ -821,7 +842,8 @@
    ],
    "inputs": {},
    "score": 6.76,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "paris-eu",
@@ -859,7 +881,8 @@
    ],
    "inputs": {},
    "score": 7.2,
-   "met": 8
+   "met": 8,
+   "met14": 8
   }
  ]
 }

@@ -3,10 +3,11 @@
  "set": "angajatori",
  "region": "europa",
  "date": "2026-11-03",
- "snapshot": "social-angajatori-europa-r2-2026-11-03",
- "previousSnapshot": "social-angajatori-europa-2026-11-03",
- "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
- "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
+ "snapshot": "social-angajatori-europa-r3-2026-11-03",
+ "previousSnapshot": "social-angajatori-europa-r2-2026-11-03",
+ "revisionNote": "Pe 5 noiembrie 2026 topul a trecut la 22 de condiții: cele 14 de până acum (80% din scor) și 8 condiții de verificare a dovezilor (20%), notate la fiecare angajator cu justificare.",
+ "revisionNoteEn": "On 5 November 2026 the ranking moved to 22 conditions: the existing 14 (80% of the score) and 8 conditions that verify the evidence (20%), scored for each employer with a justification.",
+ "verified": true,
  "formulas": {},
  "rows": [
   {
@@ -43,47 +44,23 @@
      "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
     ]
    ],
-   "inputs": {},
-   "score": 7.14,
-   "met": 11
-  },
-  {
-   "id": "airbus",
-   "name": "Airbus",
-   "nameEn": "Airbus",
-   "c": [
-    7,
-    null,
-    8,
-    8,
-    9,
-    7,
-    8,
+   "v": [
     9,
     8,
-    6,
-    7,
-    6,
-    5,
-    7
+    9,
+    10,
+    8,
+    8,
+    8,
+    10
    ],
-   "why": "Locul 7 la Forbes în 2024; fabrici în Franța, Germania, Spania și Regatul Unit și comenzi pentru mulți ani înainte. Angajează constant ingineri.",
-   "whyEn": "Seventh at Forbes in 2024; factories in France, Germany, Spain and the UK and orders for many years ahead. It hires engineers steadily.",
-   "sources": [
-    [
-     "Katadata: primii 10 angajatori Forbes World’s Best Employers 2024",
-     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
-    ]
-   ],
-   "sourcesEn": [
-    [
-     "Katadata: the top 10 in Forbes World’s Best Employers 2024",
-     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
-    ]
-   ],
+   "vwhy": "Grupul publică un raport anual auditat și apare constant în clasamente.",
+   "vwhyEn": "The group publishes an audited annual report and appears consistently in rankings.",
    "inputs": {},
-   "score": 7.12,
-   "met": 10
+   "score": 7.45,
+   "met": 19,
+   "met14": 11,
+   "trust": 8
   },
   {
    "id": "lego",
@@ -119,9 +96,23 @@
      "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
     ]
    ],
+   "v": [
+    9,
+    8,
+    9,
+    10,
+    8,
+    9,
+    9,
+    10
+   ],
+   "vwhy": "Companie de familie care publică un raport anual auditat; prezentă constant în clasamentele de angajatori.",
+   "vwhyEn": "A family company that publishes an audited annual report; consistently present in employer rankings.",
    "inputs": {},
-   "score": 6.98,
-   "met": 10
+   "score": 7.36,
+   "met": 18,
+   "met14": 10,
+   "trust": 8
   },
   {
    "id": "jysk",
@@ -157,9 +148,23 @@
      "https://www.interiordaily.com/article/9802388/jysk-earns-top-employer-europe-2026-certification-across-14-countries/"
     ]
    ],
+   "v": [
+    9,
+    8,
+    7,
+    9,
+    7,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Certificare Top Employers în 14 țări și rezultate anuale publicate.",
+   "vwhyEn": "Top Employers certification in 14 countries and published annual results.",
    "inputs": {},
-   "score": 6.84,
-   "met": 10
+   "score": 7.12,
+   "met": 18,
+   "met14": 10,
+   "trust": 8
   },
   {
    "id": "decathlon-eu",
@@ -195,47 +200,231 @@
      "https://marketingmind.in/reliance-industries-is-the-20th-best-employer-samsung-group-tops-the-list/"
     ]
    ],
+   "v": [
+    7,
+    8,
+    7,
+    8,
+    7,
+    9,
+    7,
+    10
+   ],
+   "vwhy": "Grup privat care publică rezultatele anuale; poziția la Forbes e din 2022.",
+   "vwhyEn": "A private group that publishes annual results; its Forbes position dates from 2022.",
    "inputs": {},
-   "score": 6.76,
-   "met": 10
+   "score": 6.93,
+   "met": 18,
+   "met14": 10,
+   "trust": 8
   },
   {
-   "id": "verisure",
-   "name": "Verisure",
-   "nameEn": "Verisure",
+   "id": "airbus",
+   "name": "Airbus",
+   "nameEn": "Airbus",
    "c": [
-    5,
+    7,
+    null,
+    8,
+    8,
     9,
-    6,
     7,
-    7,
-    6,
+    8,
+    9,
     8,
     6,
     7,
-    8,
-    7,
-    7,
-    7,
+    6,
+    5,
     7
    ],
-   "why": "Certificată Top Employer Europe 2026; sisteme de alarmă în multe țări europene, cu multe posturi în vânzări și instalare.",
-   "whyEn": "Certified Top Employer Europe 2026; alarm systems in many European countries, with many jobs in sales and installation.",
+   "why": "Locul 7 la Forbes în 2024; fabrici în Franța, Germania, Spania și Regatul Unit și comenzi pentru mulți ani înainte. Angajează constant ingineri.",
+   "whyEn": "Seventh at Forbes in 2024; factories in France, Germany, Spain and the UK and orders for many years ahead. It hires engineers steadily.",
    "sources": [
     [
-     "Money.it: companiile Top Employers Italia și Europa 2026",
-     "https://www.money.it/aziende-dove-lavora-meglio-italia-classifica-2026"
+     "Katadata: primii 10 angajatori Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
     ]
    ],
    "sourcesEn": [
     [
-     "Money.it: Top Employers Italy and Europe 2026 companies",
-     "https://www.money.it/aziende-dove-lavora-meglio-italia-classifica-2026"
+     "Katadata: the top 10 in Forbes World’s Best Employers 2024",
+     "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
     ]
    ],
+   "v": [
+    9,
+    10,
+    9,
+    10,
+    8,
+    6,
+    7,
+    10
+   ],
+   "vwhy": "Raportări auditate și prezență constantă în clasamente; în 2020 a plătit 3,6 miliarde de euro pentru a închide anchetele de corupție.",
+   "vwhyEn": "Audited filings and a steady presence in rankings; in 2020 it paid EUR 3.6 billion to settle corruption investigations.",
    "inputs": {},
-   "score": 6.76,
-   "met": 10
+   "score": 7.46,
+   "met": 17,
+   "met14": 10,
+   "trust": 7
+  },
+  {
+   "id": "bmw",
+   "name": "BMW Group",
+   "nameEn": "BMW Group",
+   "c": [
+    9,
+    null,
+    8,
+    8,
+    8,
+    7,
+    7,
+    8,
+    8,
+    6,
+    7,
+    5,
+    4,
+    5
+   ],
+   "why": "Cel mai bine clasat angajator european la Forbes 2025 (locul 5); industria auto europeană e însă sub presiune.",
+   "whyEn": "The highest-ranked European employer at Forbes 2025 (5th); the European car industry is, however, under pressure.",
+   "sources": [
+    [
+     "Forbes Italia: cei mai buni angajatori din lume 2025 (Forbes și Statista, circa 300.000 de angajați)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes Italia: World’s Best Employers 2025 (Forbes and Statista, about 300,000 employees)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ],
+   "v": [
+    9,
+    10,
+    9,
+    10,
+    8,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Raportări auditate și prezență constantă în primele locuri la Forbes; industria auto e sub presiune.",
+   "vwhyEn": "Audited filings and a steady presence near the top at Forbes; the car industry is under pressure.",
+   "inputs": {},
+   "score": 7.4,
+   "met": 17,
+   "met14": 9,
+   "trust": 8
+  },
+  {
+   "id": "generali",
+   "name": "Generali",
+   "nameEn": "Generali",
+   "c": [
+    6,
+    9,
+    7,
+    7,
+    8,
+    6,
+    8,
+    6,
+    6,
+    7,
+    7,
+    6,
+    7,
+    8
+   ],
+   "why": "Top Employer Europe 2026, cu 14 companii din grup certificate în 10 țări și scoruri peste media sectorului de asigurări.",
+   "whyEn": "Top Employer Europe 2026, with 14 group companies certified in 10 countries and scores above the insurance-sector average.",
+   "sources": [
+    [
+     "Generali: Top Employer Europe 2026",
+     "https://www.generali.com/media/News/2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Generali: Top Employer Europe 2026",
+     "https://www.generali.com/media/News/2026"
+    ]
+   ],
+   "v": [
+    9,
+    10,
+    8,
+    9,
+    8,
+    9,
+    8,
+    10
+   ],
+   "vwhy": "Certificare Top Employers Europe și rapoarte auditate; scoruri peste media sectorului.",
+   "vwhyEn": "Top Employers Europe certification and audited reports; scores above the sector average.",
+   "inputs": {},
+   "score": 7.34,
+   "met": 17,
+   "met14": 9,
+   "trust": 8
+  },
+  {
+   "id": "unicredit",
+   "name": "UniCredit",
+   "nameEn": "UniCredit",
+   "c": [
+    6,
+    9,
+    7,
+    7,
+    8,
+    6,
+    8,
+    6,
+    6,
+    7,
+    7,
+    6,
+    7,
+    7
+   ],
+   "why": "Top Employer Europe 2026, cu certificări locale în Austria, Germania, Italia, România și alte țări.",
+   "whyEn": "Top Employer Europe 2026, with local certifications in Austria, Germany, Italy, Romania and other countries.",
+   "sources": [
+    [
+     "UniCredit: Top Employer Europe 2026",
+     "https://www.unicreditgroup.eu/en/press-media/press-releases/2026/january/unicredit-recognised-as-a-top-employer-2026-in-europe.html"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "UniCredit: Top Employer Europe 2026",
+     "https://www.unicreditgroup.eu/en/press-media/press-releases/2026/january/unicredit-recognised-as-a-top-employer-2026-in-europe.html"
+    ]
+   ],
+   "v": [
+    9,
+    10,
+    8,
+    9,
+    8,
+    7,
+    7,
+    10
+   ],
+   "vwhy": "Certificare Top Employers Europe (audit extern al practicilor HR) și rapoarte auditate la bursă.",
+   "vwhyEn": "Top Employers Europe certification (an external audit of HR practices) and audited stock-exchange reports.",
+   "inputs": {},
+   "score": 7.23,
+   "met": 17,
+   "met14": 9,
+   "trust": 8
   },
   {
    "id": "holcim",
@@ -271,9 +460,127 @@
      "https://www.undelucram.ro/en/news-holcim-romania-all-about-the-working-environment-349/holcim-romania-certificata-top-employer-romania-si-top-employer-europa-4674"
     ]
    ],
+   "v": [
+    9,
+    10,
+    7,
+    10,
+    7,
+    6,
+    7,
+    10
+   ],
+   "vwhy": "Certificare Top Employers și rapoarte auditate; procesul din Franța privind plățile Lafarge către grupări armate din Siria e un semnal de alarmă.",
+   "vwhyEn": "Top Employers certification and audited reports; the French trial over Lafarge payments to armed groups in Syria is a warning sign.",
    "inputs": {},
-   "score": 6.72,
-   "met": 10
+   "score": 7.08,
+   "met": 17,
+   "met14": 10,
+   "trust": 7
+  },
+  {
+   "id": "verisure",
+   "name": "Verisure",
+   "nameEn": "Verisure",
+   "c": [
+    5,
+    9,
+    6,
+    7,
+    7,
+    6,
+    8,
+    6,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7
+   ],
+   "why": "Certificată Top Employer Europe 2026; sisteme de alarmă în multe țări europene, cu multe posturi în vânzări și instalare.",
+   "whyEn": "Certified Top Employer Europe 2026; alarm systems in many European countries, with many jobs in sales and installation.",
+   "sources": [
+    [
+     "Money.it: companiile Top Employers Italia și Europa 2026",
+     "https://www.money.it/aziende-dove-lavora-meglio-italia-classifica-2026"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Money.it: Top Employers Italy and Europe 2026 companies",
+     "https://www.money.it/aziende-dove-lavora-meglio-italia-classifica-2026"
+    ]
+   ],
+   "v": [
+    9,
+    10,
+    6,
+    8,
+    7,
+    8,
+    8,
+    10
+   ],
+   "vwhy": "Certificare Top Employers Europe și rapoarte auditate după listarea din 2025.",
+   "vwhyEn": "Top Employers Europe certification and audited reports since its 2025 listing.",
+   "inputs": {},
+   "score": 7.07,
+   "met": 17,
+   "met14": 10,
+   "trust": 7
+  },
+  {
+   "id": "microsoft",
+   "name": "Microsoft",
+   "nameEn": "Microsoft",
+   "c": [
+    10,
+    null,
+    10,
+    8,
+    10,
+    7,
+    7,
+    7,
+    8,
+    3,
+    5,
+    5,
+    2,
+    6
+   ],
+   "why": "Locul 1 în Forbes World’s Best Employers 2025, pe baza recomandărilor a circa 300.000 de angajați. Salarii de top, dar concurență foarte mare la angajare.",
+   "whyEn": "First in Forbes World’s Best Employers 2025, based on recommendations from about 300,000 employees. Top pay, but very strong competition for jobs.",
+   "sources": [
+    [
+     "Forbes Italia: cei mai buni angajatori din lume 2025 (Forbes și Statista, circa 300.000 de angajați)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes Italia: World’s Best Employers 2025 (Forbes and Statista, about 300,000 employees)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ],
+   "v": [
+    9,
+    10,
+    10,
+    10,
+    9,
+    7,
+    8,
+    10
+   ],
+   "vwhy": "Locul 1 la Forbes trei ani la rând, pe baza unui sondaj independent (Statista), și rapoarte auditate la SEC; concedierile din 2023–2025 și amenzile antitrust din UE sunt semnale de urmărit.",
+   "vwhyEn": "First at Forbes three years in a row, based on an independent survey (Statista), and audited SEC reports; the 2023–2025 layoffs and EU antitrust fines are signals to watch.",
+   "inputs": {},
+   "score": 7.45,
+   "met": 16,
+   "met14": 8,
+   "trust": 8
   },
   {
    "id": "bnp",
@@ -317,123 +624,23 @@
      "https://www.top-employers.com/blog/announcing-the-2026-top-employers/"
     ]
    ],
-   "inputs": {},
-   "score": 7.1,
-   "met": 9
-  },
-  {
-   "id": "bmw",
-   "name": "BMW Group",
-   "nameEn": "BMW Group",
-   "c": [
+   "v": [
     9,
-    null,
+    10,
     8,
+    10,
     8,
-    8,
-    7,
-    7,
-    8,
-    8,
-    6,
-    7,
     5,
-    4,
-    5
+    8,
+    10
    ],
-   "why": "Cel mai bine clasat angajator european la Forbes 2025 (locul 5); industria auto europeană e însă sub presiune.",
-   "whyEn": "The highest-ranked European employer at Forbes 2025 (5th); the European car industry is, however, under pressure.",
-   "sources": [
-    [
-     "Forbes Italia: cei mai buni angajatori din lume 2025 (Forbes și Statista, circa 300.000 de angajați)",
-     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
-    ]
-   ],
-   "sourcesEn": [
-    [
-     "Forbes Italia: World’s Best Employers 2025 (Forbes and Statista, about 300,000 employees)",
-     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
-    ]
-   ],
+   "vwhy": "Certificare Top Employers Europe și rapoarte auditate; în 2014 a plătit 8,9 miliarde de dolari în SUA pentru încălcarea sancțiunilor.",
+   "vwhyEn": "Top Employers Europe certification and audited reports; in 2014 it paid USD 8.9 billion in the US for sanctions violations.",
    "inputs": {},
-   "score": 6.98,
-   "met": 9
-  },
-  {
-   "id": "generali",
-   "name": "Generali",
-   "nameEn": "Generali",
-   "c": [
-    6,
-    9,
-    7,
-    7,
-    8,
-    6,
-    8,
-    6,
-    6,
-    7,
-    7,
-    6,
-    7,
-    8
-   ],
-   "why": "Top Employer Europe 2026, cu 14 companii din grup certificate în 10 țări și scoruri peste media sectorului de asigurări.",
-   "whyEn": "Top Employer Europe 2026, with 14 group companies certified in 10 countries and scores above the insurance-sector average.",
-   "sources": [
-    [
-     "Generali: Top Employer Europe 2026",
-     "https://www.generali.com/media/News/2026"
-    ]
-   ],
-   "sourcesEn": [
-    [
-     "Generali: Top Employer Europe 2026",
-     "https://www.generali.com/media/News/2026"
-    ]
-   ],
-   "inputs": {},
-   "score": 6.94,
-   "met": 9
-  },
-  {
-   "id": "unicredit",
-   "name": "UniCredit",
-   "nameEn": "UniCredit",
-   "c": [
-    6,
-    9,
-    7,
-    7,
-    8,
-    6,
-    8,
-    6,
-    6,
-    7,
-    7,
-    6,
-    7,
-    7
-   ],
-   "why": "Top Employer Europe 2026, cu certificări locale în Austria, Germania, Italia, România și alte țări.",
-   "whyEn": "Top Employer Europe 2026, with local certifications in Austria, Germany, Italy, Romania and other countries.",
-   "sources": [
-    [
-     "UniCredit: Top Employer Europe 2026",
-     "https://www.unicreditgroup.eu/en/press-media/press-releases/2026/january/unicredit-recognised-as-a-top-employer-2026-in-europe.html"
-    ]
-   ],
-   "sourcesEn": [
-    [
-     "UniCredit: Top Employer Europe 2026",
-     "https://www.unicreditgroup.eu/en/press-media/press-releases/2026/january/unicredit-recognised-as-a-top-employer-2026-in-europe.html"
-    ]
-   ],
-   "inputs": {},
-   "score": 6.86,
-   "met": 9
+   "score": 7.41,
+   "met": 16,
+   "met14": 9,
+   "trust": 7
   },
   {
    "id": "edp",
@@ -469,85 +676,23 @@
      "https://www.pv-magazine-australia.com/?p=14833"
     ]
    ],
-   "inputs": {},
-   "score": 6.82,
-   "met": 9
-  },
-  {
-   "id": "microsoft",
-   "name": "Microsoft",
-   "nameEn": "Microsoft",
-   "c": [
-    10,
-    null,
-    10,
-    8,
+   "v": [
+    9,
     10,
     7,
-    7,
-    7,
     8,
-    3,
-    5,
-    5,
-    2,
-    6
-   ],
-   "why": "Locul 1 în Forbes World’s Best Employers 2025, pe baza recomandărilor a circa 300.000 de angajați. Salarii de top, dar concurență foarte mare la angajare.",
-   "whyEn": "First in Forbes World’s Best Employers 2025, based on recommendations from about 300,000 employees. Top pay, but very strong competition for jobs.",
-   "sources": [
-    [
-     "Forbes Italia: cei mai buni angajatori din lume 2025 (Forbes și Statista, circa 300.000 de angajați)",
-     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
-    ]
-   ],
-   "sourcesEn": [
-    [
-     "Forbes Italia: World’s Best Employers 2025 (Forbes and Statista, about 300,000 employees)",
-     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
-    ]
-   ],
-   "inputs": {},
-   "score": 7,
-   "met": 8
-  },
-  {
-   "id": "ibm",
-   "name": "IBM",
-   "nameEn": "IBM",
-   "c": [
-    8,
-    null,
-    8,
-    7,
-    8,
-    7,
-    8,
-    7,
     7,
     6,
-    6,
-    5,
-    5,
-    6
+    7,
+    10
    ],
-   "why": "Locul 8 la Forbes 2025, cu centre în majoritatea țărilor europene.",
-   "whyEn": "Eighth at Forbes 2025, with centres in most European countries.",
-   "sources": [
-    [
-     "Forbes Italia: cei mai buni angajatori din lume 2025 (Forbes și Statista, circa 300.000 de angajați)",
-     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
-    ]
-   ],
-   "sourcesEn": [
-    [
-     "Forbes Italia: World’s Best Employers 2025 (Forbes and Statista, about 300,000 employees)",
-     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
-    ]
-   ],
+   "vwhy": "Certificare Top Employers și rapoarte auditate; o anchetă de corupție în Portugalia l-a vizat pe fostul director general.",
+   "vwhyEn": "Top Employers certification and audited reports; a corruption investigation in Portugal targeted the former chief executive.",
    "inputs": {},
-   "score": 6.8,
-   "met": 8
+   "score": 7.11,
+   "met": 16,
+   "met14": 9,
+   "trust": 7
   },
   {
    "id": "metro",
@@ -583,47 +728,179 @@
      "https://newsroom.metroag.de/en/news/metro-named-top-employer-in-europe-and-ten-countries-for-the-twelfth-consecutive-year"
     ]
    ],
+   "v": [
+    9,
+    10,
+    8,
+    10,
+    8,
+    8,
+    6,
+    10
+   ],
+   "vwhy": "Certificare Top Employers Europe 12 ani la rând și rapoarte auditate; comerțul cu ridicata a trecut prin restructurări.",
+   "vwhyEn": "Top Employers Europe certification 12 years in a row and audited reports; wholesale has gone through restructuring.",
    "inputs": {},
-   "score": 6.78,
-   "met": 8
+   "score": 7.2,
+   "met": 15,
+   "met14": 8,
+   "trust": 7
   },
   {
-   "id": "fresenius",
-   "name": "Fresenius Kabi",
-   "nameEn": "Fresenius Kabi",
+   "id": "ibm",
+   "name": "IBM",
+   "nameEn": "IBM",
+   "c": [
+    8,
+    null,
+    8,
+    7,
+    8,
+    7,
+    8,
+    7,
+    7,
+    6,
+    6,
+    5,
+    5,
+    6
+   ],
+   "why": "Locul 8 la Forbes 2025, cu centre în majoritatea țărilor europene.",
+   "whyEn": "Eighth at Forbes 2025, with centres in most European countries.",
+   "sources": [
+    [
+     "Forbes Italia: cei mai buni angajatori din lume 2025 (Forbes și Statista, circa 300.000 de angajați)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Forbes Italia: World’s Best Employers 2025 (Forbes and Statista, about 300,000 employees)",
+     "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
+    ]
+   ],
+   "v": [
+    9,
+    10,
+    8,
+    10,
+    8,
+    7,
+    6,
+    10
+   ],
+   "vwhy": "Rapoarte auditate la SEC și istoric lung în clasamente; concedieri repetate în ultimii ani.",
+   "vwhyEn": "Audited SEC reports and a long record in rankings; repeated layoffs in recent years.",
+   "inputs": {},
+   "score": 7.19,
+   "met": 15,
+   "met14": 8,
+   "trust": 7
+  },
+  {
+   "id": "sulzer",
+   "name": "Sulzer",
+   "nameEn": "Sulzer",
    "c": [
     5,
     9,
     7,
     6,
-    8,
+    7,
     6,
+    5,
     6,
-    6,
-    8,
+    7,
     6,
     7,
     6,
     8,
     7
    ],
-   "why": "Certificată Top Employer în 13 țări; medicamente și tehnologie medicală, un sector stabil.",
-   "whyEn": "Certified Top Employer in 13 countries; medicines and medical technology, a stable sector.",
+   "why": "Top Employer 2026 cu statut regional pentru Europa; companie industrială elvețiană cu cerere constantă de ingineri.",
+   "whyEn": "Top Employer 2026 with regional status for Europe; a Swiss industrial company with steady demand for engineers.",
    "sources": [
     [
-     "Fresenius Kabi: Top Employer în 13 țări",
-     "https://www.fresenius-kabi.com/news/top-employer-certification-in-thirteen-countries"
+     "Sulzer: Top Employer 2026, inclusiv statutul regional pentru Europa",
+     "https://www.sulzer.com/en/-/media/files/news/2026/260115_topemployer_en.pdf"
     ]
    ],
    "sourcesEn": [
     [
-     "Fresenius Kabi: Top Employer in 13 countries",
-     "https://www.fresenius-kabi.com/news/top-employer-certification-in-thirteen-countries"
+     "Sulzer: Top Employer 2026, including regional status for Europe",
+     "https://www.sulzer.com/en/-/media/files/news/2026/260115_topemployer_en.pdf"
     ]
    ],
+   "v": [
+    9,
+    10,
+    7,
+    8,
+    7,
+    8,
+    7,
+    10
+   ],
+   "vwhy": "Certificare Top Employers și rapoarte auditate la bursa elvețiană.",
+   "vwhyEn": "Top Employers certification and audited reports on the Swiss exchange.",
    "inputs": {},
-   "score": 6.58,
-   "met": 7
+   "score": 6.8,
+   "met": 15,
+   "met14": 7,
+   "trust": 8
+  },
+  {
+   "id": "ferrari-eu",
+   "name": "Ferrari",
+   "nameEn": "Ferrari",
+   "c": [
+    6,
+    null,
+    8,
+    7,
+    10,
+    7,
+    2,
+    5,
+    7,
+    3,
+    7,
+    6,
+    3,
+    8
+   ],
+   "why": "Locul 5 la Forbes în 2023; foarte profitabilă și dorită, dar cu puține posturi, aproape toate în Italia.",
+   "whyEn": "Fifth at Forbes in 2023; very profitable and desired, but with few openings, almost all in Italy.",
+   "sources": [
+    [
+     "SamMobile: primii angajatori Forbes World’s Best Employers 2023",
+     "https://www.sammobile.com/?p=15046903"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "SamMobile: the top employers in Forbes World’s Best Employers 2023",
+     "https://www.sammobile.com/?p=15046903"
+    ]
+   ],
+   "v": [
+    8,
+    10,
+    7,
+    8,
+    7,
+    9,
+    9,
+    10
+   ],
+   "vwhy": "Raportări auditate la bursă; mai puține surse independente, compania fiind mică.",
+   "vwhyEn": "Audited stock-exchange filings; fewer independent sources, as the company is small.",
+   "inputs": {},
+   "score": 6.5,
+   "met": 15,
+   "met14": 7,
+   "trust": 8
   },
   {
    "id": "samsung-eu",
@@ -667,47 +944,23 @@
      "https://databoks.katadata.co.id/index.php/en/economics-macro/statistics/6721e31a411d8/forbes-2024-10-of-the-worlds-best-employers"
     ]
    ],
-   "inputs": {},
-   "score": 6.58,
-   "met": 7
-  },
-  {
-   "id": "sulzer",
-   "name": "Sulzer",
-   "nameEn": "Sulzer",
-   "c": [
-    5,
+   "v": [
     9,
-    7,
-    6,
-    7,
-    6,
-    5,
-    6,
-    7,
-    6,
-    7,
-    6,
+    10,
+    9,
+    10,
     8,
-    7
+    5,
+    7,
+    10
    ],
-   "why": "Top Employer 2026 cu statut regional pentru Europa; companie industrială elvețiană cu cerere constantă de ingineri.",
-   "whyEn": "Top Employer 2026 with regional status for Europe; a Swiss industrial company with steady demand for engineers.",
-   "sources": [
-    [
-     "Sulzer: Top Employer 2026, inclusiv statutul regional pentru Europa",
-     "https://www.sulzer.com/en/-/media/files/news/2026/260115_topemployer_en.pdf"
-    ]
-   ],
-   "sourcesEn": [
-    [
-     "Sulzer: Top Employer 2026, including regional status for Europe",
-     "https://www.sulzer.com/en/-/media/files/news/2026/260115_topemployer_en.pdf"
-    ]
-   ],
+   "vwhy": "Raportări auditate și primul loc la Forbes în 2020–2023; condamnarea penală a fostului președinte și grevele sindicale din 2024 sunt semnale de alarmă.",
+   "vwhyEn": "Audited filings and first at Forbes in 2020–2023; the former chairman’s criminal conviction and the 2024 union strikes are warning signs.",
    "inputs": {},
-   "score": 6.38,
-   "met": 7
+   "score": 7.02,
+   "met": 14,
+   "met14": 7,
+   "trust": 7
   },
   {
    "id": "adidas-eu",
@@ -743,85 +996,23 @@
      "https://marketingmind.in/reliance-industries-is-the-20th-best-employer-samsung-group-tops-the-list/"
     ]
    ],
-   "inputs": {},
-   "score": 6.36,
-   "met": 7
-  },
-  {
-   "id": "beko",
-   "name": "Beko Europe",
-   "nameEn": "Beko Europe",
-   "c": [
-    5,
-    9,
-    6,
-    7,
-    6,
-    6,
-    8,
-    7,
-    6,
-    7,
-    7,
-    5,
-    7,
-    5
-   ],
-   "why": "Top Employer Europe 2026 pentru al nouălea an la rând, cu un scor de 85%, inclusiv în România; electrocasnicele europene sunt însă sub presiunea concurenței asiatice.",
-   "whyEn": "Top Employer Europe 2026 for the ninth year in a row, with a score of 85%, including in Romania; but European appliance makers are under pressure from Asian competition.",
-   "sources": [
-    [
-     "Beko Europe: Top Employer Europe 2026, al nouălea an la rând",
-     "https://persportaal.anp.nl/artikel/CSN-230126367/beko-europe-certified-top-employer-europe-2026-for-the-ninth-consecutive-year-and-top-employer-in-italy-france-germany-poland-uk-romania-sl"
-    ]
-   ],
-   "sourcesEn": [
-    [
-     "Beko Europe: Top Employer Europe 2026, ninth year in a row",
-     "https://persportaal.anp.nl/artikel/CSN-230126367/beko-europe-certified-top-employer-europe-2026-for-the-ninth-consecutive-year-and-top-employer-in-italy-france-germany-poland-uk-romania-sl"
-    ]
-   ],
-   "inputs": {},
-   "score": 6.34,
-   "met": 7
-  },
-  {
-   "id": "ferrari-eu",
-   "name": "Ferrari",
-   "nameEn": "Ferrari",
-   "c": [
-    6,
-    null,
-    8,
+   "v": [
     7,
     10,
     7,
-    2,
+    9,
+    7,
+    7,
     5,
-    7,
-    3,
-    7,
-    6,
-    3,
-    8
+    10
    ],
-   "why": "Locul 5 la Forbes în 2023; foarte profitabilă și dorită, dar cu puține posturi, aproape toate în Italia.",
-   "whyEn": "Fifth at Forbes in 2023; very profitable and desired, but with few openings, almost all in Italy.",
-   "sources": [
-    [
-     "SamMobile: primii angajatori Forbes World’s Best Employers 2023",
-     "https://www.sammobile.com/?p=15046903"
-    ]
-   ],
-   "sourcesEn": [
-    [
-     "SamMobile: the top employers in Forbes World’s Best Employers 2023",
-     "https://www.sammobile.com/?p=15046903"
-    ]
-   ],
+   "vwhy": "Raportări auditate la bursă; ruptura cu Yeezy din 2022 a adus pierderi și restructurări.",
+   "vwhyEn": "Audited stock-exchange filings; the 2022 break with Yeezy brought losses and restructuring.",
    "inputs": {},
-   "score": 6.02,
-   "met": 7
+   "score": 6.66,
+   "met": 14,
+   "met14": 7,
+   "trust": 7
   },
   {
    "id": "alphabet",
@@ -857,9 +1048,127 @@
      "https://forbes.it/2025/10/13/migliori-datori-lavoro-mondo-prima-microsoft/"
     ]
    ],
+   "v": [
+    9,
+    10,
+    9,
+    10,
+    8,
+    4,
+    8,
+    10
+   ],
+   "vwhy": "Rapoarte auditate și prezență constantă în clasamente, dar instanțele americane au decis în 2024 și 2025 că a abuzat de poziția dominantă, iar UE i-a dat amenzi mari.",
+   "vwhyEn": "Audited reports and a steady presence in rankings, but US courts ruled in 2024 and 2025 that it abused its dominant position, and the EU has fined it heavily.",
    "inputs": {},
-   "score": 6.9,
-   "met": 6
+   "score": 7.26,
+   "met": 13,
+   "met14": 6,
+   "trust": 7
+  },
+  {
+   "id": "fresenius",
+   "name": "Fresenius Kabi",
+   "nameEn": "Fresenius Kabi",
+   "c": [
+    5,
+    9,
+    7,
+    6,
+    8,
+    6,
+    6,
+    6,
+    8,
+    6,
+    7,
+    6,
+    8,
+    7
+   ],
+   "why": "Certificată Top Employer în 13 țări; medicamente și tehnologie medicală, un sector stabil.",
+   "whyEn": "Certified Top Employer in 13 countries; medicines and medical technology, a stable sector.",
+   "sources": [
+    [
+     "Fresenius Kabi: Top Employer în 13 țări",
+     "https://www.fresenius-kabi.com/news/top-employer-certification-in-thirteen-countries"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Fresenius Kabi: Top Employer in 13 countries",
+     "https://www.fresenius-kabi.com/news/top-employer-certification-in-thirteen-countries"
+    ]
+   ],
+   "v": [
+    9,
+    10,
+    7,
+    8,
+    7,
+    6,
+    6,
+    10
+   ],
+   "vwhy": "Certificare Top Employers și rapoarte auditate; în 2019 a plătit peste 230 de milioane de dolari în SUA pentru acuzații de mită.",
+   "vwhyEn": "Top Employers certification and audited reports; in 2019 it paid more than USD 230 million in the US over bribery charges.",
+   "inputs": {},
+   "score": 6.91,
+   "met": 13,
+   "met14": 7,
+   "trust": 6
+  },
+  {
+   "id": "beko",
+   "name": "Beko Europe",
+   "nameEn": "Beko Europe",
+   "c": [
+    5,
+    9,
+    6,
+    7,
+    6,
+    6,
+    8,
+    7,
+    6,
+    7,
+    7,
+    5,
+    7,
+    5
+   ],
+   "why": "Top Employer Europe 2026 pentru al nouălea an la rând, cu un scor de 85%, inclusiv în România; electrocasnicele europene sunt însă sub presiunea concurenței asiatice.",
+   "whyEn": "Top Employer Europe 2026 for the ninth year in a row, with a score of 85%, including in Romania; but European appliance makers are under pressure from Asian competition.",
+   "sources": [
+    [
+     "Beko Europe: Top Employer Europe 2026, al nouălea an la rând",
+     "https://persportaal.anp.nl/artikel/CSN-230126367/beko-europe-certified-top-employer-europe-2026-for-the-ninth-consecutive-year-and-top-employer-in-italy-france-germany-poland-uk-romania-sl"
+    ]
+   ],
+   "sourcesEn": [
+    [
+     "Beko Europe: Top Employer Europe 2026, ninth year in a row",
+     "https://persportaal.anp.nl/artikel/CSN-230126367/beko-europe-certified-top-employer-europe-2026-for-the-ninth-consecutive-year-and-top-employer-in-italy-france-germany-poland-uk-romania-sl"
+    ]
+   ],
+   "v": [
+    9,
+    7,
+    6,
+    9,
+    7,
+    7,
+    5,
+    10
+   ],
+   "vwhy": "Top Employer Europe nouă ani la rând; în 2024–2025 a anunțat închideri de fabrici în Europa.",
+   "vwhyEn": "Top Employer Europe nine years in a row; in 2024–2025 it announced factory closures in Europe.",
+   "inputs": {},
+   "score": 6.59,
+   "met": 13,
+   "met14": 7,
+   "trust": 6
   }
  ]
 }

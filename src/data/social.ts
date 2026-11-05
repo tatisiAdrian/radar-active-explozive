@@ -18,8 +18,9 @@ import localitatiW from './social/localitati-lume.json';
 export interface SocialRow {
   id: string; name: string; nameEn: string; c: (number | null)[]; why: string; whyEn: string;
   sources: [string, string][]; sourcesEn: [string, string][]; inputs: Record<string, string>; score: number; met: number;
+  met14?: number; trust?: number; v?: (number | null)[]; vwhy?: string; vwhyEn?: string;
 }
-export interface SocialData { slug: string; set: string; region: string; date: string; snapshot: string; previousSnapshot?: string; revisionNote?: string; revisionNoteEn?: string; formulas: Record<string, string>; rows: SocialRow[] }
+export interface SocialData { slug: string; set: string; region: string; date: string; snapshot: string; previousSnapshot?: string; revisionNote?: string; revisionNoteEn?: string; verified?: boolean; formulas: Record<string, string>; rows: SocialRow[] }
 export const SOCIAL: Record<string, SocialData> = Object.fromEntries(
   [licee, facultati, meserii, angajatori, localitati, liceeEu, facultatiEu, meseriiEu, angajatoriEu, localitatiEu, liceeW, facultatiW, meseriiW, angajatoriW, localitatiW].map((d) => [d.slug, d as unknown as SocialData]),
 );

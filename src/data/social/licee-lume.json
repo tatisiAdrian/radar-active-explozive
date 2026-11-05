@@ -7,6 +7,7 @@
  "previousSnapshot": "social-licee-lume-2026-11-03",
  "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
  "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
+ "verified": false,
  "formulas": {
   "C1": "Matematică, PISA 2022: nota = (scorul − 450) / 10 (520 dă 7, 550 sau mai mult dă 10).",
   "C2": "Citire, PISA 2022: nota = (scorul − 450) / 10.",
@@ -66,7 +67,8 @@
     "C3": "științe: 561 puncte"
    },
    "score": 7.72,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "irlanda",
@@ -121,7 +123,8 @@
     "C3": "științe: 504 puncte"
    },
    "score": 6.76,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "taiwan",
@@ -176,7 +179,8 @@
     "C3": "științe: 537 puncte"
    },
    "score": 7.16,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "estonia",
@@ -231,7 +235,8 @@
     "C3": "științe: 526 puncte"
    },
    "score": 7.16,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "japonia",
@@ -286,7 +291,8 @@
     "C3": "științe: 547 puncte"
    },
    "score": 7.06,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "canada",
@@ -341,7 +347,8 @@
     "C3": "științe: 515 puncte"
    },
    "score": 6.8,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "macao",
@@ -396,7 +403,8 @@
     "C3": "științe: 543 puncte"
    },
    "score": 7.36,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "elvetia",
@@ -451,7 +459,8 @@
     "C3": "științe: 503 puncte"
    },
    "score": 6.64,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "coreea",
@@ -506,7 +515,8 @@
     "C3": "științe: 528 puncte"
    },
    "score": 6.6,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "finlanda",
@@ -561,7 +571,8 @@
     "C3": "științe: 511 puncte"
    },
    "score": 6.28,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "hong-kong",
@@ -616,7 +627,8 @@
     "C3": "științe: 520 puncte"
    },
    "score": 6.54,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "danemarca",
@@ -671,7 +683,8 @@
     "C3": "științe: 494 puncte"
    },
    "score": 6.28,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "polonia",
@@ -726,7 +739,8 @@
     "C3": "științe: 499 puncte"
    },
    "score": 6.06,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "olanda",
@@ -781,7 +795,8 @@
     "C3": "științe: 488 puncte"
    },
    "score": 5.88,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "cehia",
@@ -836,7 +851,8 @@
     "C3": "științe: 498 puncte"
    },
    "score": 5.88,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "belgia",
@@ -891,7 +907,8 @@
     "C3": "științe: 491 puncte"
    },
    "score": 5.8,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "slovenia",
@@ -946,7 +963,8 @@
     "C3": "științe: 500 puncte"
    },
    "score": 5.8,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "austria",
@@ -1001,7 +1019,8 @@
     "C3": "științe: 491 puncte"
    },
    "score": 5.8,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "suedia",
@@ -1056,7 +1075,8 @@
     "C3": "științe: 494 puncte"
    },
    "score": 5.72,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "noua-zeelanda",
@@ -1103,7 +1123,8 @@
     "C3": "științe: 504 puncte"
    },
    "score": 5.72,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "regatul-unit",
@@ -1158,7 +1179,8 @@
     "C3": "științe: 500 puncte"
    },
    "score": 6.08,
-   "met": 4
+   "met": 4,
+   "met14": 4
   },
   {
    "id": "australia",
@@ -1213,7 +1235,8 @@
     "C3": "științe: 507 puncte"
    },
    "score": 5.58,
-   "met": 4
+   "met": 4,
+   "met14": 4
   }
  ]
 }

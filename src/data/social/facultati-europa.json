@@ -7,6 +7,7 @@
  "previousSnapshot": "social-facultati-europa-2026-11-03",
  "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
  "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
+ "verified": false,
  "formulas": {},
  "rows": [
   {
@@ -53,7 +54,8 @@
    ],
    "inputs": {},
    "score": 7.58,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "epfl",
@@ -99,7 +101,8 @@
    ],
    "inputs": {},
    "score": 7.78,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "ip-paris",
@@ -137,7 +140,8 @@
    ],
    "inputs": {},
    "score": 7.42,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "ku-leuven",
@@ -175,7 +179,8 @@
    ],
    "inputs": {},
    "score": 7.38,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "lmu",
@@ -213,7 +218,8 @@
    ],
    "inputs": {},
    "score": 7.34,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "psl",
@@ -259,7 +265,8 @@
    ],
    "inputs": {},
    "score": 7.3,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "kcl",
@@ -305,7 +312,8 @@
    ],
    "inputs": {},
    "score": 7.2,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "paris-saclay",
@@ -343,7 +351,8 @@
    ],
    "inputs": {},
    "score": 7.02,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "lund",
@@ -381,7 +390,8 @@
    ],
    "inputs": {},
    "score": 6.94,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "oxford",
@@ -427,7 +437,8 @@
    ],
    "inputs": {},
    "score": 7.66,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "ucl",
@@ -473,7 +484,8 @@
    ],
    "inputs": {},
    "score": 7.54,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "delft",
@@ -511,7 +523,8 @@
    ],
    "inputs": {},
    "score": 7.46,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "manchester",
@@ -557,7 +570,8 @@
    ],
    "inputs": {},
    "score": 7.34,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "lse",
@@ -595,7 +609,8 @@
    ],
    "inputs": {},
    "score": 7.3,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "edinburgh",
@@ -641,7 +656,8 @@
    ],
    "inputs": {},
    "score": 7.18,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "bristol",
@@ -679,7 +695,8 @@
    ],
    "inputs": {},
    "score": 7.14,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "amsterdam",
@@ -717,7 +734,8 @@
    ],
    "inputs": {},
    "score": 7.06,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "sorbonne",
@@ -755,7 +773,8 @@
    ],
    "inputs": {},
    "score": 6.84,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "eth",
@@ -801,7 +820,8 @@
    ],
    "inputs": {},
    "score": 8.1,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "imperial",
@@ -847,7 +867,8 @@
    ],
    "inputs": {},
    "score": 7.72,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "cambridge",
@@ -893,7 +914,8 @@
    ],
    "inputs": {},
    "score": 7.4,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "warwick",
@@ -931,7 +953,8 @@
    ],
    "inputs": {},
    "score": 6.9,
-   "met": 9
+   "met": 9,
+   "met14": 9
   }
  ]
 }

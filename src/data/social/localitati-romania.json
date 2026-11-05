@@ -7,6 +7,7 @@
  "previousSnapshot": "social-localitati-romania-r2-2026-11-03",
  "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
  "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
+ "verified": false,
  "formulas": {},
  "rows": [
   {
@@ -61,7 +62,8 @@
    ],
    "inputs": {},
    "score": 7.7,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "sibiu",
@@ -107,7 +109,8 @@
    ],
    "inputs": {},
    "score": 7.2,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "timisoara",
@@ -153,7 +156,8 @@
    ],
    "inputs": {},
    "score": 7.42,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "oradea",
@@ -191,7 +195,8 @@
    ],
    "inputs": {},
    "score": 7.22,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "brasov",
@@ -229,7 +234,8 @@
    ],
    "inputs": {},
    "score": 7.14,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "targu-mures",
@@ -275,7 +281,8 @@
    ],
    "inputs": {},
    "score": 6.72,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "alba",
@@ -313,7 +320,8 @@
    ],
    "inputs": {},
    "score": 6.64,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "craiova",
@@ -359,7 +367,8 @@
    ],
    "inputs": {},
    "score": 6.3,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "iasi",
@@ -397,7 +406,8 @@
    ],
    "inputs": {},
    "score": 6.62,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "bucuresti",
@@ -451,7 +461,8 @@
    ],
    "inputs": {},
    "score": 6.58,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "constanta",
@@ -489,7 +500,8 @@
    ],
    "inputs": {},
    "score": 6.44,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "bistrita",
@@ -527,7 +539,8 @@
    ],
    "inputs": {},
    "score": 6.32,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "targu-jiu",
@@ -573,7 +586,8 @@
    ],
    "inputs": {},
    "score": 6.24,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "arad",
@@ -611,7 +625,8 @@
    ],
    "inputs": {},
    "score": 6.46,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "pitesti",
@@ -649,7 +664,8 @@
    ],
    "inputs": {},
    "score": 6.44,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "ramnicu-valcea",
@@ -687,7 +703,8 @@
    ],
    "inputs": {},
    "score": 6.2,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "deva",
@@ -725,7 +742,8 @@
    ],
    "inputs": {},
    "score": 6,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "baia-mare",
@@ -763,7 +781,8 @@
    ],
    "inputs": {},
    "score": 6.14,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "suceava",
@@ -801,7 +820,8 @@
    ],
    "inputs": {},
    "score": 6,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "piatra-neamt",
@@ -839,7 +859,8 @@
    ],
    "inputs": {},
    "score": 5.84,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "satu-mare",
@@ -877,7 +898,8 @@
    ],
    "inputs": {},
    "score": 5.86,
-   "met": 4
+   "met": 4,
+   "met14": 4
   },
   {
    "id": "ploiesti",
@@ -915,7 +937,8 @@
    ],
    "inputs": {},
    "score": 5.76,
-   "met": 4
+   "met": 4,
+   "met14": 4
   }
  ]
 }

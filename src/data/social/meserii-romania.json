@@ -7,6 +7,7 @@
  "previousSnapshot": "social-meserii-romania-2026-11-03",
  "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
  "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
+ "verified": false,
  "formulas": {},
  "rows": [
   {
@@ -53,7 +54,8 @@
    ],
    "inputs": {},
    "score": 7.58,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "energie",
@@ -99,7 +101,8 @@
    ],
    "inputs": {},
    "score": 7.5,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "electrician",
@@ -145,7 +148,8 @@
    ],
    "inputs": {},
    "score": 7.4,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "asistent",
@@ -191,7 +195,8 @@
    ],
    "inputs": {},
    "score": 7.34,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "mecanic-auto-ro",
@@ -229,7 +234,8 @@
    ],
    "inputs": {},
    "score": 7.14,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "sudor-ro",
@@ -275,7 +281,8 @@
    ],
    "inputs": {},
    "score": 7.06,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "meserias",
@@ -321,7 +328,8 @@
    ],
    "inputs": {},
    "score": 7.04,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "ev-ro",
@@ -367,7 +375,8 @@
    ],
    "inputs": {},
    "score": 7.04,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "bucatar-ro",
@@ -405,7 +414,8 @@
    ],
    "inputs": {},
    "score": 6.86,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "ingrijitor-ro",
@@ -451,7 +461,8 @@
    ],
    "inputs": {},
    "score": 7.18,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "kinetoterapeut-ro",
@@ -489,7 +500,8 @@
    ],
    "inputs": {},
    "score": 7.08,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "farmacist",
@@ -527,7 +539,8 @@
    ],
    "inputs": {},
    "score": 7.04,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "medic",
@@ -565,7 +578,8 @@
    ],
    "inputs": {},
    "score": 7.4,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "fintech-ro",
@@ -603,7 +617,8 @@
    ],
    "inputs": {},
    "score": 7.16,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "manager-proiect-ro",
@@ -641,7 +656,8 @@
    ],
    "inputs": {},
    "score": 7.04,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "constructii",
@@ -679,7 +695,8 @@
    ],
    "inputs": {},
    "score": 6.84,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "profesor",
@@ -717,7 +734,8 @@
    ],
    "inputs": {},
    "score": 6.68,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "sofer",
@@ -763,7 +781,8 @@
    ],
    "inputs": {},
    "score": 6.48,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "date-ai",
@@ -801,7 +820,8 @@
    ],
    "inputs": {},
    "score": 6.86,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "ux-ro",
@@ -847,7 +867,8 @@
    ],
    "inputs": {},
    "score": 6.48,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "ospatar-ro",
@@ -893,7 +914,8 @@
    ],
    "inputs": {},
    "score": 6.28,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "programator",
@@ -939,7 +961,8 @@
    ],
    "inputs": {},
    "score": 6.8,
-   "met": 5
+   "met": 5,
+   "met14": 5
   }
  ]
 }

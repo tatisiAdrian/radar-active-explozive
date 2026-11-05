@@ -14,15 +14,18 @@ const en = lang === 'en';
 const L = (ro: string, e: string) => (en ? e : ro);
 const base = import.meta.env.BASE_URL;
 const d = SOCIAL[slug];
-const rows = d.rows.map((r) => (en ? { ...r, name: r.nameEn, why: r.whyEn, sources: r.sourcesEn, inputs: Object.fromEntries(Object.entries(r.inputs).map(([k, v]) => [k, inputEn(v)])) } : r));
+const rows = d.rows.map((r) => (en ? { ...r, name: r.nameEn, why: r.whyEn, vwhy: r.vwhyEn ?? r.vwhy, sources: r.sourcesEn, inputs: Object.fromEntries(Object.entries(r.inputs).map(([k, v]) => [k, inputEn(v)])) } : r));
 const formulas = en ? FORMULAS_EN[d.set] ?? {} : d.formulas;
 const fmtDate = (x: string) => fd(x, lang);
 const num = (x: number) => nm(x, 2, lang);
-const zone = (k: number) => (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab');
+const VER = !!d.verified;
+const N = VER ? 22 : 14;
+const zone = (k: number) => (VER ? (k >= 16 ? 'puternic' : k >= 10 ? 'observatie' : 'slab') : (k >= 10 ? 'puternic' : k >= 6 ? 'observatie' : 'slab'));
+const tzone = (k: number) => (k >= 6 ? 'puternic' : k >= 4 ? 'observatie' : 'slab');
 const snap = d.snapshot;
 const short = (s: string) => s.replace(/,.*$/, '').replace(/ \(.*\)$/, '');
 const metChart: Dataset = {
-  id: `${slug}-conditii`, domain: slug, title: L('Condiții îndeplinite din 14', 'Conditions met out of 14'), unit: L('condiții', 'conditions'), chart: 'bar',
+  id: `${slug}-conditii`, domain: slug, title: L(`Condiții îndeplinite din ${N}`, `Conditions met out of ${N}`), unit: L('condiții', 'conditions'), chart: 'bar',
   series: [{ name: L('Condiții îndeplinite', 'Conditions met'), points: rows.map((r) => [short(r.name), r.met]) }],
   source: { name: L(`Radar Active Explozive, instantaneul din ${fmtDate(d.date)}`, `Explosive Assets Radar, snapshot of ${fmtDate(d.date)}`), url: `https://github.com/TatisiAdrian/radar-active-explozive/blob/main/scripts/social/${slug}.json`, retrievedAt: d.date },
   notes: L('Notele și sursele fiecărei poziții sunt în detaliile de mai sus.', 'The scores and sources for each position are in the details above.'),
@@ -33,19 +36,20 @@ const allSources = [...new Map(rows.flatMap((r) => r.sources).map(([t, u]) => [u
 <section id="radar">
   <h2>{L('Clasamentul', 'The ranking')}</h2>
   <p>
-    {en ? <>{rows.length} positions scored on 14 conditions adapted to this topic. {Object.keys(formulas).length > 0 ? <>{Object.keys(formulas).length} conditions are computed from public data using published formulas; the rest are judgement, with a rationale and sources for each position.</> : <>The scores are judgement based on the cited sources, with a rationale for each position.</>} Conditions that cannot be assessed yet get 5 (neutral) in the score and do not count as met. The scores are frozen in the{' '}<a href={`${base}snapshots/${snap}.json`}>snapshot of {fmtDate(d.date)}</a>{' '}(fingerprint in the <a href={`${base}snapshots/${snap}.sha256`}>.sha256 file</a>).</>
-      : <>{rows.length} poziții notate pe 14 condiții adaptate acestei teme. {Object.keys(formulas).length > 0 ? <>{Object.keys(formulas).length} condiții se calculează din date publice, după formule publicate; restul sunt judecată, cu justificare și surse la fiecare poziție.</> : <>Notele sunt judecată pe baza surselor citate, cu justificare la fiecare poziție.</>} Condițiile care nu se pot evalua încă primesc 5 (neutru) în scor și nu sunt considerate îndeplinite. Notele sunt înghețate în{' '}<a href={`${base}snapshots/${snap}.json`}>instantaneul din {fmtDate(d.date)}</a>{' '}(amprenta în <a href={`${base}snapshots/${snap}.sha256`}>fișierul .sha256</a>).</>}
+    {en ? <>{rows.length} positions scored on {VER ? <>22 conditions: 14 adapted to this topic (80% of the score) and 8 that verify the evidence (20%): outside audit or certification, official registers, agreement of sources, track record, third-party confirmation, warning signs, resilience under stress and independence from 22Radar.</> : <>14 conditions adapted to this topic.</>} {Object.keys(formulas).length > 0 ? <>{Object.keys(formulas).length} conditions are computed from public data using published formulas; the rest are judgement, with a rationale and sources for each position.</> : <>The scores are judgement based on the cited sources, with a rationale for each position.</>} Conditions that cannot be assessed yet get 5 (neutral) in the score and do not count as met. The scores are frozen in the{' '}<a href={`${base}snapshots/${snap}.json`}>snapshot of {fmtDate(d.date)}</a>{' '}(fingerprint in the <a href={`${base}snapshots/${snap}.sha256`}>.sha256 file</a>).</>
+      : <>{rows.length} poziții notate pe {VER ? <>22 de condiții: 14 adaptate acestei teme (80% din scor) și 8 care verifică dovezile (20%): audit sau certificare externă, registre oficiale, concordanța surselor, istoric, confirmare de la terți, semnale de alarmă, rezistență la stres și independență față de 22Radar.</> : <>14 condiții adaptate acestei teme.</>} {Object.keys(formulas).length > 0 ? <>{Object.keys(formulas).length} condiții se calculează din date publice, după formule publicate; restul sunt judecată, cu justificare și surse la fiecare poziție.</> : <>Notele sunt judecată pe baza surselor citate, cu justificare la fiecare poziție.</>} Condițiile care nu se pot evalua încă primesc 5 (neutru) în scor și nu sunt considerate îndeplinite. Notele sunt înghețate în{' '}<a href={`${base}snapshots/${snap}.json`}>instantaneul din {fmtDate(d.date)}</a>{' '}(amprenta în <a href={`${base}snapshots/${snap}.sha256`}>fișierul .sha256</a>).</>}
   </p>
   {d.revisionNote && <p class="notice">{en ? d.revisionNoteEn : d.revisionNote} {d.previousSnapshot && <>{L('Instantaneul anterior rămâne publicat:', 'The previous snapshot stays published:')} <a href={`${base}snapshots/${d.previousSnapshot}.json`}>{d.previousSnapshot}.json</a>.</>}</p>}
   <div class="table-wrap">
     <table class="radar fx">
-      <thead><tr><th>#</th><th>{L('Nume', 'Name')}</th><th>{L('Condiții', 'Conditions')}</th><th>{L('Scor', 'Score')}</th><th>{L('Fond / formă', 'Substance / form')}</th></tr></thead>
+      <thead><tr><th>#</th><th>{L('Nume', 'Name')}</th><th>{L('Condiții', 'Conditions')}</th>{VER && <th>{L('Verificare', 'Verification')}</th>}<th>{L('Scor', 'Score')}</th><th>{L('Fond / formă', 'Substance / form')}</th></tr></thead>
       <tbody>
         {rows.map((r, i) => (
           <tr>
             <td class="muted">{i + 1}</td>
             <td><b>{r.name}</b></td>
-            <td><span class:list={['k', zone(r.met)]}>{r.met}/14</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / 14) * 100}%`} class={zone(r.met)}></i></span></td>
+            <td><span class:list={['k', zone(r.met)]}>{r.met}/{N}</span><span class="kbar" aria-hidden="true"><i style={`width:${(r.met / N) * 100}%`} class={zone(r.met)}></i></span></td>
+            {VER && <td><span class:list={['k', tzone(r.trust ?? 0)]}>{r.trust}/8</span></td>}
             <td>{num(r.score)}</td>
             <td><FondBadge values={r.c} lang={lang} /></td>
           </tr>
@@ -57,9 +61,10 @@ const allSources = [...new Map(rows.flatMap((r) => r.sources).map(([t, u]) => [u
   <h3>{L('Fiecare poziție, condiție cu condiție', 'Each position, condition by condition')}</h3>
   {rows.map((r) => (
     <details class="fxd">
-      <summary><b>{r.name}</b> · <span class:list={['k', zone(r.met)]}>{r.met}/14</span> · {L('scor', 'score')} {num(r.score)} · <FondBadge values={r.c} lang={lang} /></summary>
+      <summary><b>{r.name}</b> · <span class:list={['k', zone(r.met)]}>{r.met}/{N}</span>{VER && <> · {L('verificare', 'verification')} {r.trust}/8</>} · {L('scor', 'score')} {num(r.score)} · <FondBadge values={r.c} lang={lang} /></summary>
       <p>{r.why}</p>
       <CriteriaDetail set={d.set} values={r.c} inputs={r.inputs} lang={lang} />
+      {VER && <><h4>{L('Verificare (C15–C22)', 'Verification (C15–C22)')}</h4>{r.vwhy && <p>{r.vwhy}</p>}<CriteriaDetail set="verificare" values={r.v ?? []} lang={lang} offset={14} /></>}
       <p class="muted">{L('Surse', 'Sources')}: {r.sources.map(([t, u], i) => <>{i > 0 && '; '}<a href={u} target="_blank" rel="noopener">{t}</a></>)}</p>
     </details>
   ))}
@@ -81,6 +86,6 @@ const allSources = [...new Map(rows.flatMap((r) => r.sources).map(([t, u]) => [u
 
 <section>
   <h2>{L('Ce arată analiza', 'What the analysis shows')}</h2>
-  <p>{en ? <><b>{top.name}</b> meets the most conditions ({top.met} of 14). The ranking rewards substance: real results and real opportunities, weighed against how hard and how expensive they are to reach, not only fame.</> : <><b>{top.name}</b> îndeplinește cele mai multe condiții ({top.met} din 14). Clasamentul răsplătește fondul: rezultate și oportunități reale, puse în balanță cu cât de greu și cât de scump e să ajungi la ele, nu doar renumele.</>}</p>
+  <p>{en ? <><b>{top.name}</b> meets the most conditions ({top.met} of {N}). The ranking rewards substance: real results and real opportunities, weighed against how hard and how expensive they are to reach, not only fame.</> : <><b>{top.name}</b> îndeplinește cele mai multe condiții ({top.met} din {N}). Clasamentul răsplătește fondul: rezultate și oportunități reale, puse în balanță cu cât de greu și cât de scump e să ajungi la ele, nu doar renumele.</>}</p>
   <p class="notice">{L('Clasamentele sunt orientative și se bazează pe date publice la data instantaneului. Alegerea potrivită depinde de situația fiecăruia.', 'The rankings are indicative and rest on public data as of the snapshot date. The right choice depends on each person’s situation.')}</p>
 </section>

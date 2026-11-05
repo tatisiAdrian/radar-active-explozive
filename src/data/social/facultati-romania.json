@@ -7,6 +7,7 @@
  "previousSnapshot": "social-facultati-romania-2026-11-03",
  "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
  "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
+ "verified": false,
  "formulas": {},
  "rows": [
   {
@@ -53,7 +54,8 @@
    ],
    "inputs": {},
    "score": 7.12,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "ubb",
@@ -99,7 +101,8 @@
    ],
    "inputs": {},
    "score": 7.04,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "umf-cd",
@@ -145,7 +148,8 @@
    ],
    "inputs": {},
    "score": 6.52,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "umf-cv",
@@ -191,7 +195,8 @@
    ],
    "inputs": {},
    "score": 6.28,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "upb",
@@ -237,7 +242,8 @@
    ],
    "inputs": {},
    "score": 6.26,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "ase",
@@ -283,7 +289,8 @@
    ],
    "inputs": {},
    "score": 6.38,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "umf-cj",
@@ -329,7 +336,8 @@
    ],
    "inputs": {},
    "score": 6.32,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "uaic",
@@ -375,7 +383,8 @@
    ],
    "inputs": {},
    "score": 6.22,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "upt",
@@ -429,7 +438,8 @@
    ],
    "inputs": {},
    "score": 6.14,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "utcn",
@@ -475,7 +485,8 @@
    ],
    "inputs": {},
    "score": 6.12,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "umf-is",
@@ -513,7 +524,8 @@
    ],
    "inputs": {},
    "score": 6.04,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "uvt",
@@ -559,7 +571,8 @@
    ],
    "inputs": {},
    "score": 5.98,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "umfst-ms",
@@ -605,7 +618,8 @@
    ],
    "inputs": {},
    "score": 5.96,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "unitbv",
@@ -659,7 +673,8 @@
    ],
    "inputs": {},
    "score": 5.86,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "ulbs",
@@ -713,7 +728,8 @@
    ],
    "inputs": {},
    "score": 5.86,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "ucv",
@@ -767,7 +783,8 @@
    ],
    "inputs": {},
    "score": 5.78,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "ugal",
@@ -813,7 +830,8 @@
    ],
    "inputs": {},
    "score": 5.72,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "usamv-cj",
@@ -859,7 +877,8 @@
    ],
    "inputs": {},
    "score": 6.02,
-   "met": 4
+   "met": 4,
+   "met14": 4
   },
   {
    "id": "tuiasi",
@@ -905,7 +924,8 @@
    ],
    "inputs": {},
    "score": 6,
-   "met": 4
+   "met": 4,
+   "met14": 4
   },
   {
    "id": "ovidius",
@@ -951,7 +971,8 @@
    ],
    "inputs": {},
    "score": 5.72,
-   "met": 4
+   "met": 4,
+   "met14": 4
   },
   {
    "id": "uoradea",
@@ -1005,7 +1026,8 @@
    ],
    "inputs": {},
    "score": 5.58,
-   "met": 4
+   "met": 4,
+   "met14": 4
   },
   {
    "id": "usv",
@@ -1059,7 +1081,8 @@
    ],
    "inputs": {},
    "score": 5.36,
-   "met": 4
+   "met": 4,
+   "met14": 4
   }
  ]
 }

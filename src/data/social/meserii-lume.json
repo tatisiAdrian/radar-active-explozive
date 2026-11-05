@@ -7,6 +7,7 @@
  "previousSnapshot": "social-meserii-lume-2026-11-03",
  "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
  "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
+ "verified": false,
  "formulas": {},
  "rows": [
   {
@@ -61,7 +62,8 @@
    ],
    "inputs": {},
    "score": 7.8,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "energie",
@@ -115,7 +117,8 @@
    ],
    "inputs": {},
    "score": 7.38,
-   "met": 12
+   "met": 12,
+   "met14": 12
   },
   {
    "id": "mediu",
@@ -153,7 +156,8 @@
    ],
    "inputs": {},
    "score": 7.2,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "iot",
@@ -199,7 +203,8 @@
    ],
    "inputs": {},
    "score": 7.16,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "ev",
@@ -245,7 +250,8 @@
    ],
    "inputs": {},
    "score": 7.12,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "ingrijitor",
@@ -283,7 +289,8 @@
    ],
    "inputs": {},
    "score": 7.16,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "asistent",
@@ -337,7 +344,8 @@
    ],
    "inputs": {},
    "score": 7.44,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "fintech",
@@ -383,7 +391,8 @@
    ],
    "inputs": {},
    "score": 7.28,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "analist-date",
@@ -421,7 +430,8 @@
    ],
    "inputs": {},
    "score": 7.04,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "manager-proiect",
@@ -459,7 +469,8 @@
    ],
    "inputs": {},
    "score": 7.04,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "constructii",
@@ -513,7 +524,8 @@
    ],
    "inputs": {},
    "score": 6.68,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "ai",
@@ -567,7 +579,8 @@
    ],
    "inputs": {},
    "score": 7.18,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "profesor",
@@ -621,7 +634,8 @@
    ],
    "inputs": {},
    "score": 6.94,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "big-data",
@@ -675,7 +689,8 @@
    ],
    "inputs": {},
    "score": 7.2,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "devops",
@@ -713,7 +728,8 @@
    ],
    "inputs": {},
    "score": 7.04,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "social",
@@ -767,7 +783,8 @@
    ],
    "inputs": {},
    "score": 6.56,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "ux",
@@ -813,7 +830,8 @@
    ],
    "inputs": {},
    "score": 6.54,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "alimentar",
@@ -851,7 +869,8 @@
    ],
    "inputs": {},
    "score": 5.84,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "agricol",
@@ -905,7 +924,8 @@
    ],
    "inputs": {},
    "score": 5.62,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "livrari",
@@ -959,7 +979,8 @@
    ],
    "inputs": {},
    "score": 5.5,
-   "met": 6
+   "met": 6,
+   "met14": 6
   },
   {
    "id": "vanzator",
@@ -997,7 +1018,8 @@
    ],
    "inputs": {},
    "score": 5.7,
-   "met": 5
+   "met": 5,
+   "met14": 5
   },
   {
    "id": "software",
@@ -1051,7 +1073,8 @@
    ],
    "inputs": {},
    "score": 6.1,
-   "met": 4
+   "met": 4,
+   "met14": 4
   }
  ]
 }

@@ -7,6 +7,7 @@
  "previousSnapshot": "social-licee-romania-2026-11-03",
  "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
  "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
+ "verified": false,
  "formulas": {
   "C1": "Media la BAC 2025: nota = 10 − (9,6 − media) × 8 (o medie de 9,35 dă 8).",
   "C2": "Rata de promovare la BAC 2025: nota = 10 − (100 − rata) × 2 (99% dă 8).",
@@ -72,7 +73,8 @@
     "C5": "în topul la BAC și în cel la admitere"
    },
    "score": 7.34,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "negruzzi",
@@ -130,7 +132,8 @@
     "C5": "în topul la BAC și în cel la admitere"
    },
    "score": 7.24,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "racovita-cj",
@@ -188,7 +191,8 @@
     "C5": "în topul la BAC și în cel la admitere"
    },
    "score": 7.48,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "lazar",
@@ -246,7 +250,8 @@
     "C5": "în topul la BAC și în cel la admitere"
    },
    "score": 7.44,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "cn-iasi",
@@ -304,7 +309,8 @@
     "C5": "în topul la BAC și în cel la admitere"
    },
    "score": 7.42,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "cosbuc",
@@ -362,7 +368,8 @@
     "C5": "în topul la BAC și în cel la admitere"
    },
    "score": 7.24,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "avram-iancu",
@@ -420,7 +427,8 @@
     "C5": "în topul la BAC și în cel la admitere"
    },
    "score": 7.04,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "mircea",
@@ -478,7 +486,8 @@
     "C5": "în topul la BAC și în cel la admitere"
    },
    "score": 6.74,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "vianu",
@@ -536,7 +545,8 @@
     "C5": "în topul la BAC și în cel la admitere"
    },
    "score": 7.06,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "sava",
@@ -594,7 +604,8 @@
     "C5": "în topul la BAC și în cel la admitere"
    },
    "score": 7.02,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "spiru-haret",
@@ -652,7 +663,8 @@
     "C5": "în topul la BAC și în cel la admitere"
    },
    "score": 6.78,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "saguna",
@@ -699,7 +711,8 @@
     "C5": "doar în topul la BAC"
    },
    "score": 6.76,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "mihai-viteazul",
@@ -757,7 +770,8 @@
     "C5": "în topul la BAC și în cel la admitere"
    },
    "score": 6.74,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "matei-basarab",
@@ -815,7 +829,8 @@
     "C5": "în topul la BAC și în cel la admitere"
    },
    "score": 6.66,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "unirea-fs",
@@ -862,7 +877,8 @@
     "C5": "doar în topul la BAC"
    },
    "score": 6.64,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "balcescu-cj",
@@ -909,7 +925,8 @@
     "C5": "doar în topul la BAC"
    },
    "score": 6.6,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "sincai-cj",
@@ -956,7 +973,8 @@
     "C5": "doar în topul la BAC"
    },
    "score": 6.6,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "alecsandri-gl",
@@ -1003,7 +1021,8 @@
     "C5": "doar în topul la BAC"
    },
    "score": 6.54,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "scm-sv",
@@ -1050,7 +1069,8 @@
     "C5": "doar în topul la BAC"
    },
    "score": 6.54,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "murgoci-br",
@@ -1097,7 +1117,8 @@
     "C5": "doar în topul la BAC"
    },
    "score": 6.54,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "eminescu-is",
@@ -1144,7 +1165,8 @@
     "C5": "doar în topul la BAC"
    },
    "score": 6.54,
-   "met": 7
+   "met": 7,
+   "met14": 7
   },
   {
    "id": "bratianu-pt",
@@ -1191,7 +1213,8 @@
     "C5": "doar în topul la BAC"
    },
    "score": 6.42,
-   "met": 7
+   "met": 7,
+   "met14": 7
   }
  ]
 }

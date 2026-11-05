@@ -7,6 +7,7 @@
  "previousSnapshot": "social-facultati-lume-2026-11-03",
  "revisionNote": "Extins la 22 de poziții pe 5 noiembrie 2026: primele 11 au rămas cu aceleași note, iar 11 poziții noi au fost adăugate, cu surse.",
  "revisionNoteEn": "Extended to 22 entries on 5 November 2026: the first 11 keep the same scores, and 11 new entries were added, with sources.",
+ "verified": false,
  "formulas": {},
  "rows": [
   {
@@ -61,7 +62,8 @@
    ],
    "inputs": {},
    "score": 8.28,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "epfl-lume",
@@ -107,7 +109,8 @@
    ],
    "inputs": {},
    "score": 8.06,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "nus",
@@ -161,7 +164,8 @@
    ],
    "inputs": {},
    "score": 7.9,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "ntu",
@@ -207,7 +211,8 @@
    ],
    "inputs": {},
    "score": 7.88,
-   "met": 11
+   "met": 11,
+   "met14": 11
   },
   {
    "id": "tsinghua",
@@ -253,7 +258,8 @@
    ],
    "inputs": {},
    "score": 7.62,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "imperial",
@@ -307,7 +313,8 @@
    ],
    "inputs": {},
    "score": 7.54,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "hku",
@@ -361,7 +368,8 @@
    ],
    "inputs": {},
    "score": 7.52,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "ucl",
@@ -415,7 +423,8 @@
    ],
    "inputs": {},
    "score": 7.44,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "caltech",
@@ -469,7 +478,8 @@
    ],
    "inputs": {},
    "score": 7.3,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "peking",
@@ -515,7 +525,8 @@
    ],
    "inputs": {},
    "score": 7.26,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "chicago",
@@ -561,7 +572,8 @@
    ],
    "inputs": {},
    "score": 7.22,
-   "met": 10
+   "met": 10,
+   "met14": 10
   },
   {
    "id": "cambridge",
@@ -615,7 +627,8 @@
    ],
    "inputs": {},
    "score": 7.38,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "oxford",
@@ -669,7 +682,8 @@
    ],
    "inputs": {},
    "score": 7.36,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "mit",
@@ -723,7 +737,8 @@
    ],
    "inputs": {},
    "score": 7.3,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "melbourne",
@@ -769,7 +784,8 @@
    ],
    "inputs": {},
    "score": 7.3,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "unsw",
@@ -815,7 +831,8 @@
    ],
    "inputs": {},
    "score": 7.3,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "stanford",
@@ -869,7 +886,8 @@
    ],
    "inputs": {},
    "score": 7.24,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "berkeley",
@@ -915,7 +933,8 @@
    ],
    "inputs": {},
    "score": 7.16,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "penn",
@@ -961,7 +980,8 @@
    ],
    "inputs": {},
    "score": 6.9,
-   "met": 9
+   "met": 9,
+   "met14": 9
   },
   {
    "id": "cornell",
@@ -1007,7 +1027,8 @@
    ],
    "inputs": {},
    "score": 7.06,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "yale",
@@ -1053,7 +1074,8 @@
    ],
    "inputs": {},
    "score": 6.9,
-   "met": 8
+   "met": 8,
+   "met14": 8
   },
   {
    "id": "harvard",
@@ -1107,7 +1129,8 @@
    ],
    "inputs": {},
    "score": 6.76,
-   "met": 8
+   "met": 8,
+   "met14": 8
   }
  ]
 }

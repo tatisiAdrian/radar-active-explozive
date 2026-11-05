@@ -7,6 +7,9 @@ import { readFile, writeFile, readdir, mkdir, access } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 
 const W = [16, 6, 6, 8, 6, 8, 8, 4, 6, 6, 6, 6, 6, 8];
+// Topurile marcate „verified” au 22 de condiții: primele 14 cântăresc 80%, cele 8 de verificare (C15–C22) 20% (aprobat pe 5 noiembrie 2026).
+const W80 = [13, 5, 5, 6, 5, 6, 6, 3, 5, 5, 5, 5, 5, 6];
+const WV = [4, 4, 3, 3, 2, 2, 1, 1];
 const clamp = (x) => Math.max(0, Math.min(10, Math.round(x)));
 const comma = (s) => String(s).replace('.', ',');
 
@@ -62,20 +65,28 @@ for (const f of files) {
       c[1] = clamp((read - 450) / 10); inputs.C2 = `citire: ${read} puncte`;
       c[2] = clamp((sci - 450) / 10); inputs.C3 = `științe: ${sci} puncte`;
     }
+    const met14 = c.filter((v) => v != null && v >= 7).length;
+    if (cfg.verified) {
+      const v = it.v ?? Array(8).fill(null);
+      const raw = c.map((x) => x ?? 5).reduce((s, x, i) => s + x * W80[i], 0) + v.map((x) => x ?? 5).reduce((s, x, i) => s + x * WV[i], 0);
+      const score = +(raw / 100).toFixed(2);
+      const met = [...c, ...v].filter((x) => x != null && x >= 7).length;
+      const trust = v.filter((x) => x != null && x >= 7).length;
+      return { ...it, c, v, inputs, score, met, met14, trust };
+    }
     const score = +(c.map((v) => v ?? 5).reduce((s, v, i) => s + v * W[i], 0) / 100).toFixed(2);
-    const met = c.filter((v) => v != null && v >= 7).length;
-    return { ...it, c, inputs, score, met };
+    return { ...it, c, inputs, score, met: met14, met14 };
   }).sort((a, b) => b.met - a.met || b.score - a.score);
   const snapName = `social-${slug}${cfg.revision ? `-r${cfg.revision}` : ''}-${cfg.date}`;
   const prevSnap = cfg.revision ? `social-${slug}${cfg.revision > 2 ? `-r${cfg.revision - 1}` : ''}-${cfg.date}` : undefined;
-  const out = { slug, set: cfg.set, region: cfg.region ?? 'romania', date: cfg.date, snapshot: snapName, previousSnapshot: prevSnap, revisionNote: cfg.revisionNote, revisionNoteEn: cfg.revisionNoteEn, formulas: FORMULAS[cfg.set] ?? {}, rows };
+  const out = { slug, set: cfg.set, region: cfg.region ?? 'romania', date: cfg.date, snapshot: snapName, previousSnapshot: prevSnap, revisionNote: cfg.revisionNote, revisionNoteEn: cfg.revisionNoteEn, verified: !!cfg.verified, formulas: FORMULAS[cfg.set] ?? {}, rows };
   await writeFile(new URL(`../src/data/social/${slug}.json`, import.meta.url), JSON.stringify(out, null, 1) + '\n');
-  console.log(slug, rows.map((r) => `${r.id} ${r.met}/14 ${r.score}`).join(' | '));
+  console.log(slug, rows.map((r) => `${r.id} ${r.met}/${cfg.verified ? 22 : 14} ${r.score}`).join(' | '));
   if (process.argv.includes('--snapshot')) {
     const name = snapName;
     const file = new URL(`../public/snapshots/${name}.json`, import.meta.url);
     try { await access(file); console.log('  instantaneul există deja'); continue; } catch {}
-    const snap = Buffer.from(JSON.stringify({ domain: slug, date: cfg.date, weights: W, met_threshold: 7, formulas: out.formulas, rows: rows.map(({ why, whyEn, sources, sourcesEn, nameEn, ...r }) => r) }, null, 1));
+    const snap = Buffer.from(JSON.stringify({ domain: slug, date: cfg.date, weights: cfg.verified ? W80 : W, ...(cfg.verified ? { verification_weights: WV } : {}), met_threshold: 7, formulas: out.formulas, rows: rows.map(({ why, whyEn, vwhy, vwhyEn, sources, sourcesEn, nameEn, ...r }) => r) }, null, 1));
     await writeFile(file, snap);
     const h = createHash('sha256').update(snap).digest('hex');
     await writeFile(new URL(`../public/snapshots/${name}.sha256`, import.meta.url), `${h}  ${name}.json\n`);
