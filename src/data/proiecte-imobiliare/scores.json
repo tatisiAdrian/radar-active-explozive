@@ -1,5 +1,5 @@
 {
- "date": "2026-11-02",
+ "date": "2026-11-05",
  "updatedAt": "2026-11-05",
  "rows": [
   {
@@ -165,6 +165,43 @@
    }
   },
   {
+   "id": "nepi-rockcastle",
+   "name": "NEPI Rockcastle (mall-uri în Europa Centrală și de Est)",
+   "nameEn": "NEPI Rockcastle (malls in Central and Eastern Europe)",
+   "stage": "Listată (JSE, Euronext Amsterdam: NRP)",
+   "stageEn": "Listed (JSE, Euronext Amsterdam: NRP)",
+   "region": "Europa Centrală și de Est, inclusiv România",
+   "kind": "Centre comerciale",
+   "kindEn": "Shopping centres",
+   "priceId": "pi-nepi-rockcastle",
+   "c": [
+    8,
+    7,
+    7,
+    8,
+    8,
+    8,
+    6,
+    9,
+    7,
+    6,
+    7,
+    null,
+    7,
+    6
+   ],
+   "why": "Cel mai mare proprietar de centre comerciale din Europa Centrală și de Est, cu o pondere mare în România (de exemplu Promenada și Mega Mall din București). Gradul de ocupare este aproape complet, iar consumul din regiune crește; îndatorarea este moderată.",
+   "sources": [
+    [
+     "NEPI Rockcastle, relația cu investitorii",
+     "https://nepirockcastle.com/investors/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.12,
+   "met": 10
+  },
+  {
    "id": "equinix",
    "name": "Equinix (centre de date)",
    "nameEn": "Equinix (data centres)",
@@ -325,6 +362,80 @@
      ]
     ]
    }
+  },
+  {
+   "id": "segro",
+   "name": "Segro (depozite logistice și centre de date)",
+   "nameEn": "Segro (logistics warehouses and data centres)",
+   "stage": "Listată (LSE: SGRO)",
+   "stageEn": "Listed (LSE: SGRO)",
+   "region": "Regatul Unit și Europa continentală",
+   "kind": "Logistică și centre de date",
+   "kindEn": "Logistics and data centres",
+   "priceId": "pi-segro",
+   "c": [
+    8,
+    7,
+    7,
+    8,
+    9,
+    8,
+    6,
+    7,
+    8,
+    6,
+    6,
+    null,
+    6,
+    7
+   ],
+   "why": "Depozite urbane și parcuri logistice în Regatul Unit și Europa continentală, cu un grad de ocupare ridicat și un portofoliu de terenuri pentru centre de date lângă Londra. Îndatorarea este moderată; chiriile depind de comerțul online și de economia britanică.",
+   "sources": [
+    [
+     "Segro, relația cu investitorii",
+     "https://www.segro.com/investors"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.12,
+   "met": 9
+  },
+  {
+   "id": "goodman",
+   "name": "Goodman Group (logistică și centre de date)",
+   "nameEn": "Goodman Group (logistics and data centres)",
+   "stage": "Listată (ASX: GMG)",
+   "stageEn": "Listed (ASX: GMG)",
+   "region": "Global",
+   "kind": "Logistică și centre de date",
+   "kindEn": "Logistics and data centres",
+   "priceId": "pi-goodman",
+   "c": [
+    9,
+    8,
+    8,
+    9,
+    8,
+    8,
+    6,
+    6,
+    9,
+    4,
+    5,
+    null,
+    4,
+    7
+   ],
+   "why": "Dezvoltator australian de parcuri logistice care își transformă terenurile din marile orașe în centre de date, cu mult capital de la parteneri instituționali. Îndatorarea e mică, dar evaluarea e ridicată, iar mulți investitori pariază pe aceeași poveste a centrelor de date.",
+   "sources": [
+    [
+     "Goodman Group, relația cu investitorii",
+     "https://www.goodman.com/investor-centre"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.14,
+   "met": 8
   },
   {
    "id": "ctp",
@@ -491,6 +602,43 @@
      ]
     ]
    }
+  },
+  {
+   "id": "american-tower",
+   "name": "American Tower (turnuri de telecomunicații și centre de date)",
+   "nameEn": "American Tower (telecom towers and data centres)",
+   "stage": "Listată (NYSE: AMT)",
+   "stageEn": "Listed (NYSE: AMT)",
+   "region": "Global",
+   "kind": "Infrastructură digitală",
+   "kindEn": "Digital infrastructure",
+   "priceId": "pi-american-tower",
+   "c": [
+    8,
+    7,
+    5,
+    8,
+    9,
+    8,
+    7,
+    6,
+    9,
+    6,
+    6,
+    null,
+    6,
+    6
+   ],
+   "why": "Cel mai mare proprietar independent de turnuri de telecomunicații din lume, închiriate operatorilor mobili pe contracte lungi, plus centrele de date CoreSite din SUA. Datoria este mare, iar câțiva operatori americani aduc o parte importantă din venituri.",
+   "sources": [
+    [
+     "American Tower, relația cu investitorii",
+     "https://www.americantower.com/investor-relations/"
+    ]
+   ],
+   "inputs": {},
+   "score": 7.02,
+   "met": 7
   },
   {
    "id": "digital-realty",
@@ -692,6 +840,43 @@
    }
   },
   {
+   "id": "invitation-homes",
+   "name": "Invitation Homes (case de închiriat în SUA)",
+   "nameEn": "Invitation Homes (single-family rentals in the US)",
+   "stage": "Listată (NYSE: INVH)",
+   "stageEn": "Listed (NYSE: INVH)",
+   "region": "SUA",
+   "kind": "Locuințe de închiriat",
+   "kindEn": "Rental housing",
+   "priceId": "pi-invitation-homes",
+   "c": [
+    8,
+    7,
+    6,
+    6,
+    9,
+    8,
+    6,
+    9,
+    8,
+    6,
+    6,
+    null,
+    6,
+    5
+   ],
+   "why": "Cel mai mare proprietar de case unifamiliale de închiriat din SUA, cu zeci de mii de locuințe în orașele din sud și vest. Cererea e reală, dar presiunea politică asupra marilor proprietari instituționali de case este în creștere.",
+   "sources": [
+    [
+     "Invitation Homes, relația cu investitorii",
+     "https://www.invh.com/investors/"
+    ]
+   ],
+   "inputs": {},
+   "score": 6.82,
+   "met": 6
+  },
+  {
    "id": "one-united",
    "name": "One United Properties (București)",
    "nameEn": "One United Properties (Bucharest)",
@@ -858,6 +1043,43 @@
    }
   },
   {
+   "id": "urw",
+   "name": "Unibail-Rodamco-Westfield (mall-uri mari)",
+   "nameEn": "Unibail-Rodamco-Westfield (flagship malls)",
+   "stage": "Listată (Euronext Paris: URW)",
+   "stageEn": "Listed (Euronext Paris: URW)",
+   "region": "Europa, SUA",
+   "kind": "Centre comerciale",
+   "kindEn": "Shopping centres",
+   "priceId": "pi-urw",
+   "c": [
+    6,
+    4,
+    4,
+    6,
+    7,
+    6,
+    6,
+    8,
+    5,
+    8,
+    6,
+    null,
+    7,
+    5
+   ],
+   "why": "Proprietarul unora dintre cele mai mari mall-uri din Europa (Westfield). Vizitele și chiriile s-au refăcut după pandemie, dar compania încă își reduce datoria vânzând active, inclusiv din SUA. Acțiunea se tranzacționează sub valoarea activelor.",
+   "sources": [
+    [
+     "URW, relația cu investitorii",
+     "https://www.urw.com/en/investors"
+    ]
+   ],
+   "inputs": {},
+   "score": 5.88,
+   "met": 4
+  },
+  {
    "id": "jeddah-tower",
    "name": "Jeddah Tower (Arabia Saudită)",
    "nameEn": "Jeddah Tower (Saudi Arabia)",
@@ -892,6 +1114,43 @@
    ],
    "inputs": {},
    "score": 4.78,
+   "met": 0
+  },
+  {
+   "id": "diriyah",
+   "name": "Diriyah (Arabia Saudită)",
+   "nameEn": "Diriyah (Saudi Arabia)",
+   "stage": "Nelistat (Diriyah Company, PIF)",
+   "stageEn": "Not listed (Diriyah Company, PIF)",
+   "region": "Arabia Saudită",
+   "kind": "Oraș turistic și cultural",
+   "kindEn": "Tourism and culture district",
+   "priceId": null,
+   "c": [
+    4,
+    5,
+    4,
+    6,
+    3,
+    5,
+    null,
+    3,
+    5,
+    null,
+    5,
+    null,
+    null,
+    4
+   ],
+   "why": "Unul dintre megaproiectele Arabiei Saudite: un cartier istoric, turistic și de lux lângă Riad, finanțat de fondul suveran PIF. O parte a fost deschisă, dar majoritatea e în construcție, iar statul a redus bugetele megaproiectelor odată cu prețul mai mic al petrolului.",
+   "sources": [
+    [
+     "Diriyah Company, site oficial",
+     "https://www.diriyah.sa/"
+    ]
+   ],
+   "inputs": {},
+   "score": 4.58,
    "met": 0
   },
   {

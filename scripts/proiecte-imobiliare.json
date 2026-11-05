@@ -1,6 +1,6 @@
 {
  "_doc": "Proiecte imobiliare de interes mondial, notate pe cele 14 condiții adaptate (setul „proiecte-imobiliare” din src/data/criteria.ts). Scara 0-10; 7+ = îndeplinită. null = nu se poate evalua (de ex. preț pentru un proiect care nu se tranzacționează): primește 5 în scor și nu e considerată îndeplinită. C12 se calculează din prețul săptămânal pentru companiile listate. Fiecare proiect are sursele pe care se sprijină notele.",
- "date": "2026-11-02",
+ "date": "2026-11-05",
  "projects": [
   { "id": "equinix", "name": "Equinix (centre de date)", "nameEn": "Equinix (data centres)", "stage": "Listată (NASDAQ: EQIX)", "stageEn": "Listed (NASDAQ: EQIX)", "region": "Global", "kind": "Centre de date", "kindEn": "Data centres", "priceId": "pi-equinix",
    "c": [9, 8, 7, 9, 9, 8, 6, 7, 9, 5, 6, null, 5, 7],
@@ -61,6 +61,34 @@
   { "id": "neom-the-line", "name": "NEOM, The Line (Arabia Saudită)", "nameEn": "NEOM, The Line (Saudi Arabia)", "stage": "Proiect de stat (PIF), oprit", "stageEn": "State project (PIF), halted", "region": "Arabia Saudită", "kind": "Oraș liniar", "kindEn": "Linear city", "priceId": null,
    "c": [1, 1, 3, 3, 1, 3, null, 1, 3, null, 2, null, null, 2],
    "why": "Lucrările la The Line, estimat cândva la peste 1.000 mld. USD, au fost oprite cel puțin până după 2030, iar ținta de populație a NEOM pentru 2030 a fost redusă la cel mult 100.000 de oameni. Continuă doar zona industrială și portul Oxagon. Cel mai clar exemplu de formă fără fond de pe radar.",
-   "sources": [["Semafor: NEOM oprește lucrările la The Line până după 2030 (mai 2026)", "https://www.semafor.com/article/05/22/2026/saudis-neom-halts-work-on-the-line-until-after-2030"]] }
+   "sources": [["Semafor: NEOM oprește lucrările la The Line până după 2030 (mai 2026)", "https://www.semafor.com/article/05/22/2026/saudis-neom-halts-work-on-the-line-until-after-2030"]] },
+  { "id": "american-tower", "name": "American Tower (turnuri de telecomunicații și centre de date)", "nameEn": "American Tower (telecom towers and data centres)", "stage": "Listată (NYSE: AMT)", "stageEn": "Listed (NYSE: AMT)", "region": "Global", "kind": "Infrastructură digitală", "kindEn": "Digital infrastructure", "priceId": "pi-american-tower",
+   "c": [8, 7, 5, 8, 9, 8, 7, 6, 9, 6, 6, null, 6, 6],
+   "why": "Cel mai mare proprietar independent de turnuri de telecomunicații din lume, închiriate operatorilor mobili pe contracte lungi, plus centrele de date CoreSite din SUA. Datoria este mare, iar câțiva operatori americani aduc o parte importantă din venituri.",
+   "sources": [["American Tower, relația cu investitorii", "https://www.americantower.com/investor-relations/"]] },
+  { "id": "segro", "name": "Segro (depozite logistice și centre de date)", "nameEn": "Segro (logistics warehouses and data centres)", "stage": "Listată (LSE: SGRO)", "stageEn": "Listed (LSE: SGRO)", "region": "Regatul Unit și Europa continentală", "kind": "Logistică și centre de date", "kindEn": "Logistics and data centres", "priceId": "pi-segro",
+   "c": [8, 7, 7, 8, 9, 8, 6, 7, 8, 6, 6, null, 6, 7],
+   "why": "Depozite urbane și parcuri logistice în Regatul Unit și Europa continentală, cu un grad de ocupare ridicat și un portofoliu de terenuri pentru centre de date lângă Londra. Îndatorarea este moderată; chiriile depind de comerțul online și de economia britanică.",
+   "sources": [["Segro, relația cu investitorii", "https://www.segro.com/investors"]] },
+  { "id": "invitation-homes", "name": "Invitation Homes (case de închiriat în SUA)", "nameEn": "Invitation Homes (single-family rentals in the US)", "stage": "Listată (NYSE: INVH)", "stageEn": "Listed (NYSE: INVH)", "region": "SUA", "kind": "Locuințe de închiriat", "kindEn": "Rental housing", "priceId": "pi-invitation-homes",
+   "c": [8, 7, 6, 6, 9, 8, 6, 9, 8, 6, 6, null, 6, 5],
+   "why": "Cel mai mare proprietar de case unifamiliale de închiriat din SUA, cu zeci de mii de locuințe în orașele din sud și vest. Cererea e reală, dar presiunea politică asupra marilor proprietari instituționali de case este în creștere.",
+   "sources": [["Invitation Homes, relația cu investitorii", "https://www.invh.com/investors/"]] },
+  { "id": "urw", "name": "Unibail-Rodamco-Westfield (mall-uri mari)", "nameEn": "Unibail-Rodamco-Westfield (flagship malls)", "stage": "Listată (Euronext Paris: URW)", "stageEn": "Listed (Euronext Paris: URW)", "region": "Europa, SUA", "kind": "Centre comerciale", "kindEn": "Shopping centres", "priceId": "pi-urw",
+   "c": [6, 4, 4, 6, 7, 6, 6, 8, 5, 8, 6, null, 7, 5],
+   "why": "Proprietarul unora dintre cele mai mari mall-uri din Europa (Westfield). Vizitele și chiriile s-au refăcut după pandemie, dar compania încă își reduce datoria vânzând active, inclusiv din SUA. Acțiunea se tranzacționează sub valoarea activelor.",
+   "sources": [["URW, relația cu investitorii", "https://www.urw.com/en/investors"]] },
+  { "id": "nepi-rockcastle", "name": "NEPI Rockcastle (mall-uri în Europa Centrală și de Est)", "nameEn": "NEPI Rockcastle (malls in Central and Eastern Europe)", "stage": "Listată (JSE, Euronext Amsterdam: NRP)", "stageEn": "Listed (JSE, Euronext Amsterdam: NRP)", "region": "Europa Centrală și de Est, inclusiv România", "kind": "Centre comerciale", "kindEn": "Shopping centres", "priceId": "pi-nepi-rockcastle",
+   "c": [8, 7, 7, 8, 8, 8, 6, 9, 7, 6, 7, null, 7, 6],
+   "why": "Cel mai mare proprietar de centre comerciale din Europa Centrală și de Est, cu o pondere mare în România (de exemplu Promenada și Mega Mall din București). Gradul de ocupare este aproape complet, iar consumul din regiune crește; îndatorarea este moderată.",
+   "sources": [["NEPI Rockcastle, relația cu investitorii", "https://nepirockcastle.com/investors/"]] },
+  { "id": "goodman", "name": "Goodman Group (logistică și centre de date)", "nameEn": "Goodman Group (logistics and data centres)", "stage": "Listată (ASX: GMG)", "stageEn": "Listed (ASX: GMG)", "region": "Global", "kind": "Logistică și centre de date", "kindEn": "Logistics and data centres", "priceId": "pi-goodman",
+   "c": [9, 8, 8, 9, 8, 8, 6, 6, 9, 4, 5, null, 4, 7],
+   "why": "Dezvoltator australian de parcuri logistice care își transformă terenurile din marile orașe în centre de date, cu mult capital de la parteneri instituționali. Îndatorarea e mică, dar evaluarea e ridicată, iar mulți investitori pariază pe aceeași poveste a centrelor de date.",
+   "sources": [["Goodman Group, relația cu investitorii", "https://www.goodman.com/investor-centre"]] },
+  { "id": "diriyah", "name": "Diriyah (Arabia Saudită)", "nameEn": "Diriyah (Saudi Arabia)", "stage": "Nelistat (Diriyah Company, PIF)", "stageEn": "Not listed (Diriyah Company, PIF)", "region": "Arabia Saudită", "kind": "Oraș turistic și cultural", "kindEn": "Tourism and culture district", "priceId": null,
+   "c": [4, 5, 4, 6, 3, 5, null, 3, 5, null, 5, null, null, 4],
+   "why": "Unul dintre megaproiectele Arabiei Saudite: un cartier istoric, turistic și de lux lângă Riad, finanțat de fondul suveran PIF. O parte a fost deschisă, dar majoritatea e în construcție, iar statul a redus bugetele megaproiectelor odată cu prețul mai mic al petrolului.",
+   "sources": [["Diriyah Company, site oficial", "https://www.diriyah.sa/"]] }
  ]
 }

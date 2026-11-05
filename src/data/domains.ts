@@ -39,7 +39,7 @@ export const domains: Domain[] = [
     radarMarket: 'comp',
     criteria: 'general',
     countries: ['RO'],
-    summary: '8 companii tech fondate în România, de la UiPath și Bitdefender la start-up-uri seed, notate pe aceleași 14 condiții.',
+    summary: '22 de companii tech fondate în România, de la UiPath și Bitdefender la start-up-uri seed, notate pe aceleași 14 condiții.',
     status: 'activ',
     questions: [
       'Cum se compară România cu regiunea (Europa Centrală și de Est)?',
@@ -296,7 +296,7 @@ export const domains: Domain[] = [
     slug: 'proiecte-imobiliare',
     criteria: 'proiecte-imobiliare',
     title: 'Proiecte imobiliare de interes mondial',
-    summary: '15 proiecte imobiliare de interes mondial, de la centre de date și parcuri logistice la capitale noi, notate pe aceleași 14 condiții.',
+    summary: '22 de proiecte imobiliare de interes mondial, de la centre de date și parcuri logistice la capitale noi, notate pe aceleași 14 condiții.',
     status: 'activ',
     questions: [
       'Care proiecte imobiliare mari au cerere reală, chiriași și finanțare sănătoasă?',

@@ -27,12 +27,12 @@ export const DOMAIN_EN: Record<string, { title: string; short: string; what: str
   'localitati-romania': { title: "The best places in Romania for a good life", short: "Places", what: "the best places in romania for a good life", summary: "11 cities, scored on 14 conditions: income, jobs, attractiveness, education, healthcare, nature, connectivity, housing cost and risks." },
   crypto: { title: 'Crypto assets', short: 'Crypto', what: 'launched and unlaunched tokens', summary: 'Market cap, volatility, adoption and regulation in the crypto market.' },
   startups: { title: 'Start-ups worldwide', short: 'Global start-ups', what: 'recently listed companies, pre-IPO and start-ups', summary: 'Funding, valuations and the dynamics of start-up ecosystems worldwide.' },
-  'startups/europa/romania': { title: 'Start-ups in Romania', short: 'Romanian start-ups', what: 'tech companies founded in Romania', summary: '8 tech companies founded in Romania, from UiPath and Bitdefender to seed-stage start-ups, scored on the same 14 conditions.' },
+  'startups/europa/romania': { title: 'Start-ups in Romania', short: 'Romanian start-ups', what: 'tech companies founded in Romania', summary: '22 tech companies founded in Romania, from UiPath and Bitdefender to seed-stage start-ups, scored on the same 14 conditions.' },
   sp500: { title: 'S&P 500', short: 'S&P 500', what: 'the largest US companies', summary: '22 of the largest companies in the S&P 500, scored on the same 14 conditions, with figures from annual reports and weekly prices.' },
   marfuri: { title: 'Commodities', short: 'Commodities', what: 'mature and emerging commodities', summary: 'Energy, metals and agricultural products: prices, demand and supply.' },
   forex: { title: 'Forex', short: 'Forex', what: 'major and emerging currencies', summary: '22 currencies scored on the same 14 conditions, with IMF and BIS data and weekly exchange rates.' },
   imobiliare: { title: 'National housing markets', short: 'Housing', what: 'national housing markets, including Romania', summary: '22 national housing markets, including Romania, scored on the same 14 conditions, with BIS and IMF data: real house prices, household debt, real interest rates.' },
-  'proiecte-imobiliare': { title: 'World real-estate projects', short: 'Real-estate projects', what: 'landmark real-estate projects and the companies behind them', summary: '15 real-estate projects of worldwide interest, from data centres and logistics parks to new capitals, scored on the same 14 conditions.' },
+  'proiecte-imobiliare': { title: 'World real-estate projects', short: 'Real-estate projects', what: 'landmark real-estate projects and the companies behind them', summary: '22 real-estate projects of worldwide interest, from data centres and logistics parks to new capitals, scored on the same 14 conditions.' },
   'economii-emergente': { title: 'Emerging economies', short: 'Emerging economies', what: 'emerging economies, including Romania', summary: '22 emerging economies, including Romania, scored on the same 14 conditions, with IMF and BIS data and each country’s stock market.' },
 };
 
@@ -56,6 +56,16 @@ export const STAGE_EN: Record<string, string> = {
   'Privată, fără investitori externi': 'Private, no outside investors',
   'Listată (NYSE: PATH)': 'Listed (NYSE: PATH)',
   'Privată (granturi UE + rundă seed)': 'Private (EU grants + seed round)',
+  'Privată (Serie A, 2026)': 'Private (Series A, 2026)',
+  'Privată (Serie B, 2025)': 'Private (Series B, 2025)',
+  'Privată (Serie A, 2025)': 'Private (Series A, 2025)',
+  'Privată (capital + securitizare)': 'Private (equity + securitisation)',
+  'Privată (Serie A, 2024)': 'Private (Series A, 2024)',
+  'Privată (rundă de creștere, 2026)': 'Private (growth round, 2026)',
+  'Privată (prima rundă, 2026)': 'Private (first round, 2026)',
+  'Privată (pre-seed)': 'Private (pre-seed)',
+  'Token listat (EGLD)': 'Listed token (EGLD)',
+  'Privată': 'Private',
 };
 export const GROUP_EN: Record<string, string> = {
   pre: 'Crypto, not launched', post: 'Crypto, launched, below peak', ipo: 'Recently listed', preipo: 'Pre-IPO',

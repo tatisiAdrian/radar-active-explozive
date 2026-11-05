@@ -1,6 +1,6 @@
 {
  "_doc": "Start-ups și companii tech fondate în România, notate pe cele 14 condiții generale ale radarului (aceleași ca la companiile globale). Scara 0-10; 7+ = îndeplinită. null = nu se poate evalua (de ex. preț pentru o companie nelistată): primește 5 în scor și nu e considerată îndeplinită. Fiecare companie are sursele pe care se sprijină notele.",
- "date": "2026-11-01",
+ "date": "2026-11-05",
  "companies": [
   {
    "id": "uipath",
@@ -248,6 +248,453 @@
     [
      "Mean CEO: știri despre start-up-urile din România, octombrie 2026",
      "https://blog.mean.ceo/startups-romania-news-october-2026/"
+    ]
+   ]
+  },
+  {
+   "id": "veridion",
+   "name": "Veridion",
+   "stage": "Privată (Serie A, 2026)",
+   "sector": "Date despre companii din toată lumea, construite cu AI",
+   "c": [
+    8,
+    7,
+    8,
+    8,
+    8,
+    7,
+    6,
+    6,
+    8,
+    null,
+    7,
+    null,
+    7,
+    7
+   ],
+   "why": "Fondată la București (fostul Soleadify). Serie A de 20 mil. USD în septembrie 2026, condusă de Hoxton Ventures, cu toți investitorii vechi revenind (Underline, OTB, GapMinder, Day One, LAUNCHub). Clienții care îi folosesc datele au o capitalizare cumulată de peste 1.700 mld. USD, potrivit companiei. Concurează cu furnizori mari de date despre companii.",
+   "sources": [
+    [
+     "Romania Insider: Veridion strânge 20 mil. USD (sept. 2026)",
+     "https://www.romania-insider.com/news/romanian-ai-startup-veridion-raises-usd-20-mln"
+    ],
+    [
+     "Vestbee: Veridion, Serie A de 20 mil. USD",
+     "https://vestbee.com/insights/articles/veridion-raises-20-m"
+    ]
+   ]
+  },
+  {
+   "id": "digitail",
+   "name": "Digitail",
+   "stage": "Privată (Serie B, 2025)",
+   "sector": "Software cu AI pentru clinici veterinare",
+   "c": [
+    8,
+    7,
+    8,
+    7,
+    8,
+    8,
+    6,
+    6,
+    9,
+    null,
+    7,
+    null,
+    7,
+    7
+   ],
+   "why": "Fondată în 2018 la Iași. Serie B de 23 mil. USD în noiembrie 2025, condusă de Five Elms Capital, cu Atomico, Partech și Gradient revenind; finanțarea totală depășește 37 mil. USD. Înlocuiește programe vechi din clinicile veterinare, mai ales în America de Nord, unde activitatea s-a dublat într-un an. Piața are concurenți mari și consolidați.",
+   "sources": [
+    [
+     "Digitail: Serie B de 23 mil. USD (comunicat oficial)",
+     "https://digitail.com/?p=7911"
+    ],
+    [
+     "BetaKit: Digitail își extinde centrul din Toronto",
+     "https://betakit.com/digitail-grows-toronto-hub-as-it-fetches-23-million-usd-series-b-round/"
+    ]
+   ]
+  },
+  {
+   "id": "bible-chat",
+   "name": "Bible Chat",
+   "stage": "Privată (Serie A, 2025)",
+   "sector": "Aplicație mobilă cu AI pentru comunitatea creștină",
+   "c": [
+    9,
+    7,
+    8,
+    6,
+    8,
+    7,
+    6,
+    8,
+    7,
+    null,
+    5,
+    null,
+    7,
+    6
+   ],
+   "why": "Serie A de 14 mil. USD în februarie 2025, condusă de True Ventures din Silicon Valley. Compania românească din spatele aplicației a raportat pentru 2025 o cifră de afaceri de 72 mil. lei, de trei ori mai mare decât în 2024, cu peste 10 milioane de utilizatori. Veniturile vin din abonamente (în jur de 5% din utilizatori), iar dependența de magazinele de aplicații și de reclamă este riscul.",
+   "sources": [
+    [
+     "Romania Insider: Bible Chat strânge 14 mil. USD (feb. 2025)",
+     "https://www.romania-insider.com/bible-chat-investment-round-faith-app-romania-feb-2025"
+    ],
+    [
+     "StartupCafe: afacerile din 2025 s-au triplat",
+     "https://startupcafe.ro/?p=102861"
+    ]
+   ]
+  },
+  {
+   "id": "neurolabs",
+   "name": "Neurolabs",
+   "stage": "Privată (Serie A, 2025)",
+   "sector": "Recunoaștere vizuală cu AI pentru rafturile din magazine",
+   "c": [
+    6,
+    6,
+    7,
+    7,
+    6,
+    7,
+    6,
+    5,
+    7,
+    null,
+    7,
+    null,
+    6,
+    6
+   ],
+   "why": "Fondată de români la Edinburgh în 2018, cu birou la Cluj. Serie A de 7,8 mil. USD în aprilie 2025, condusă de Nauta Capital, cu investitorii vechi revenind; finanțare totală de peste 12 mil. USD. Tehnologia folosește date sintetice pentru a recunoaște produsele de pe raft. Veniturile sunt încă mici față de finanțare.",
+   "sources": [
+    [
+     "Tech.eu: Neurolabs strânge 7,8 mil. USD (apr. 2025)",
+     "https://tech.eu/2025/04/23/neurolabs-secures-7-8m-for-computer-vision-for-retail/"
+    ]
+   ]
+  },
+  {
+   "id": "instant-factoring",
+   "name": "Instant Factoring",
+   "stage": "Privată (capital + securitizare)",
+   "sector": "Factoring digital pentru firme mici",
+   "c": [
+    8,
+    7,
+    6,
+    6,
+    8,
+    7,
+    7,
+    6,
+    8,
+    null,
+    7,
+    null,
+    7,
+    5
+   ],
+   "why": "Instituție financiară nebancară înregistrată la BNR. A finanțat facturi de circa 104 mil. EUR în 2025, față de 84 mil. EUR în 2024, în România, Spania și Serbia, și a obținut o structură de finanțare de până la 30 mil. EUR printr-un fond de securitizare în Spania. Modelul depinde de costul banilor și de calitatea creditelor.",
+   "sources": [
+    [
+     "Outsourcing Today: 104 mil. EUR finanțați în 2025",
+     "https://outsourcing-today.ro/?p=14767"
+    ],
+    [
+     "Romania Insider: structura de finanțare de 30 mil. EUR (nov. 2025)",
+     "https://www.romania-insider.com/instant-factoring-financing-structure-smes-nov-2025"
+    ]
+   ]
+  },
+  {
+   "id": "pago",
+   "name": "Pago",
+   "stage": "Privată (Serie A, 2024)",
+   "sector": "Plata facturilor de utilități într-o singură aplicație",
+   "c": [
+    7,
+    5,
+    5,
+    5,
+    7,
+    6,
+    6,
+    7,
+    8,
+    null,
+    7,
+    null,
+    6,
+    6
+   ],
+   "why": "Aplicație folosită lunar de peste 500.000 de români pentru facturi la peste 430 de furnizori, cu parteneriate cu Banca Transilvania și BCR (George). Serie A de 2,3 mil. EUR în 2024, strânsă prin SeedBlink de la peste 220 de investitori. În 2025 acționarii au convertit în capital împrumuturi de circa 0,5 mil. EUR, semn că afacerea are nevoie de bani în continuare. Băncile pot oferi aceleași funcții.",
+   "sources": [
+    [
+     "Romania Insider: Pago strânge 2,3 mil. EUR (oct. 2024)",
+     "https://www.romania-insider.com/pago-series-a-round-oct-2024"
+    ],
+    [
+     "Pago: pagina rundei pentru investitori",
+     "https://investesc.pago.ro/en"
+    ]
+   ]
+  },
+  {
+   "id": "seedblink",
+   "name": "SeedBlink",
+   "stage": "Privată (Serie A)",
+   "sector": "Platformă de investiții în start-up-uri",
+   "c": [
+    7,
+    6,
+    6,
+    7,
+    7,
+    7,
+    6,
+    7,
+    7,
+    null,
+    7,
+    null,
+    6,
+    6
+   ],
+   "why": "Platformă fondată la București care permite investitorilor mici să intre în runde de start-up-uri alături de fonduri, cu o piață secundară pentru vânzarea participațiilor. A găzduit runde pentru FlowX.AI, Pago și Kinderpedia. Veniturile depind de numărul de runde, care a scăzut în regiune în 2025, iar reglementarea europeană a crowdfundingului e strictă.",
+   "sources": [
+    [
+     "The Recursive: SeedBlink, 38 mil. EUR în primii doi ani",
+     "https://therecursive.com/?p=13460"
+    ],
+    [
+     "FF News: piața secundară SeedBlink",
+     "https://ffnews.com/newsarticle/seedblink-launches-an-on-demand-secondary-market-offering-early-liquidity"
+    ]
+   ]
+  },
+  {
+   "id": "kinderpedia",
+   "name": "Kinderpedia",
+   "stage": "Privată (rundă de creștere, 2026)",
+   "sector": "Platformă cu AI pentru gestiunea școlilor și grădinițelor",
+   "c": [
+    6,
+    6,
+    6,
+    6,
+    7,
+    7,
+    6,
+    7,
+    7,
+    null,
+    7,
+    null,
+    6,
+    7
+   ],
+   "why": "Fondată în 2017. A strâns 2,2 mil. EUR în februarie 2026, dintr-o rundă de 3,5 mil. EUR condusă de fondul polonez Simpact Ventures, cu Early Game Ventures. Platforma leagă școlile, profesorii și părinții și e disponibilă în peste 15 limbi. Bugetele școlilor sunt mici, iar vânzarea către instituții e lentă.",
+   "sources": [
+    [
+     "Romania Insider: Kinderpedia strânge 2,2 mil. EUR (feb. 2026)",
+     "https://www.romania-insider.com/kinderpedia-funding-growth-february-2026"
+    ]
+   ]
+  },
+  {
+   "id": "qognifly",
+   "name": "Qognifly",
+   "stage": "Privată (prima rundă, 2026)",
+   "sector": "Drone și sisteme anti-dronă",
+   "c": [
+    6,
+    6,
+    5,
+    7,
+    5,
+    6,
+    6,
+    5,
+    9,
+    null,
+    6,
+    null,
+    5,
+    4
+   ],
+   "why": "Companie de apărare care a lansat în martie 2026 Drone Wall, un sistem autonom de detectare și interceptare a dronelor, testat în Ucraina, și o fabrică la București. Prima rundă externă, de 2 mil. EUR, a venit de la un partener strategic. Cererea pentru apărare antidronă e evidentă, dar contractele de stat sunt lente și concurența europeană crește rapid.",
+   "sources": [
+    [
+     "Romania Insider: Qognifly, 2 mil. EUR pentru fabrica din București (mar. 2026)",
+     "https://www.romania-insider.com/qognifly-bucharest-factory-drones-march-2026"
+    ],
+    [
+     "Romania Insider: lansarea Drone Wall (mar. 2026)",
+     "https://www.romania-insider.com/qognifly-counter-drone-system-march-2026"
+    ]
+   ]
+  },
+  {
+   "id": "typingdna",
+   "name": "TypingDNA",
+   "stage": "Privată (Serie A)",
+   "sector": "Autentificare după modul de tastare",
+   "c": [
+    5,
+    6,
+    6,
+    6,
+    6,
+    7,
+    6,
+    5,
+    8,
+    null,
+    7,
+    null,
+    7,
+    6
+   ],
+   "why": "Fondată la Oradea în 2016, cu sediul mutat la New York. Serie A de 7 mil. USD condusă de Gradient Ventures, fondul de AI al Google; clienții sunt mai ales universități și instituții financiare. Nu a mai anunțat runde mari de câțiva ani, iar autentificarea fără parolă (passkeys) schimbă piața.",
+   "sources": [
+    [
+     "Romania Insider: fondul de AI al Google conduce runda TypingDNA",
+     "https://www.romania-insider.com/business/romanian-typingdna-financing-google-venture-fund"
+    ]
+   ]
+  },
+  {
+   "id": "genezio",
+   "name": "Genezio",
+   "stage": "Privată (pre-seed)",
+   "sector": "Vizibilitatea brandurilor în asistenții AI",
+   "c": [
+    4,
+    5,
+    6,
+    7,
+    4,
+    7,
+    6,
+    5,
+    6,
+    null,
+    7,
+    null,
+    5,
+    5
+   ],
+   "why": "Fondată în 2023 de foști manageri de la Vector Watch, Fitbit și UiPath. A strâns 2 mil. USD pre-seed în 2024 de la GapMinder și Underline, apoi a pivotat spre monitorizarea modului în care asistenții AI menționează brandurile, cu încă 575.000 EUR în 2025. Pivotul e recent, iar categoria e nouă și aglomerată.",
+   "sources": [
+    [
+     "Romania Insider: Genezio, pre-seed de 2 mil. USD",
+     "https://romania-insider.com/romanian-startup-genezio-preseed-round-gapminder-ventures"
+    ],
+    [
+     "Ziarul Financiar: Genezio, 575.000 EUR după pivot (iun. 2026)",
+     "https://www.zf.ro/autor/adrian-seceleanu?p=5"
+    ]
+   ]
+  },
+  {
+   "id": "multiversx",
+   "name": "MultiversX (EGLD)",
+   "stage": "Token listat (EGLD)",
+   "sector": "Blockchain (fostul Elrond)",
+   "priceId": "ro-multiversx",
+   "c": [
+    3,
+    4,
+    4,
+    5,
+    3,
+    5,
+    3,
+    4,
+    4,
+    null,
+    5,
+    null,
+    7,
+    3
+   ],
+   "why": "Blockchain fondat de români (fostul Elrond). În 2026 a anunțat integrări cu protocoale de plăți pentru agenți AI (Google, OpenAI, Stripe), dar activitatea reală e mică: valoarea blocată în aplicații era de doar câteva zeci de milioane USD la începutul lui 2026. Tokenul a atins minimul istoric în iunie 2026, are inflație de circa 9% pe an și a fost scos de pe unele burse (Bitfinex).",
+   "sources": [
+    [
+     "Bitfinex: anunțul de delistare EGLD",
+     "https://support.bitfinex.com/hc/en-us/articles/900001978166-MultiversX-EGLD"
+    ],
+    [
+     "Yellow: MultiversX, activitate și riscuri (2026)",
+     "https://yellow.com/asset/egld"
+    ]
+   ]
+  },
+  {
+   "id": "unfrosen",
+   "name": "Unfrosen",
+   "stage": "Privată",
+   "sector": "Vânzarea stocurilor în exces ale brandurilor de modă",
+   "c": [
+    7,
+    7,
+    6,
+    5,
+    7,
+    6,
+    6,
+    5,
+    8,
+    null,
+    7,
+    null,
+    7,
+    6
+   ],
+   "why": "Platformă B2B fondată de români, care ajută brandurile de modă să vândă controlat stocurile rămase. A anunțat vânzări de 6,5 mil. EUR în 2025, în 13 piețe europene. Afacerea crește din venituri, dar depinde de câteva branduri mari și de ciclul comerțului cu haine.",
+   "sources": [
+    [
+     "Romania Insider: Unfrosen, 13 piețe europene (ian. 2026)",
+     "https://www.romania-insider.com/romanian-founded-b2b-platform-unfrosen-plans-further-european-expansion"
+    ]
+   ]
+  },
+  {
+   "id": "frisbo",
+   "name": "Frisbo",
+   "stage": "Privată",
+   "sector": "Depozitare și livrare pentru magazinele online",
+   "c": [
+    6,
+    5,
+    5,
+    5,
+    7,
+    6,
+    6,
+    5,
+    8,
+    null,
+    7,
+    null,
+    6,
+    6
+   ],
+   "why": "Fondată la Brașov, primul furnizor complet de e-fulfillment din România: preia stocarea, ambalarea și livrarea comenzilor magazinelor online, cu livrare a doua zi și extindere în Bulgaria și Republica Moldova. Marjele sunt mici, iar marii jucători de logistică și platformele (eMAG) oferă servicii similare.",
+   "sources": [
+    [
+     "Spotmedia: Frisbo se extinde în cinci țări",
+     "https://spotmedia.ro/stiri/economie/un-startup-romanesc-isi-extinde-operatiunile-in-cinci-noi-tari-devenind-cea-mai-mare-retea-europeana-de-e-fulfillment-cu-livrare-a-doua-zi"
+    ],
+    [
+     "Shopify: aplicația Frisbo European Fulfillment",
+     "https://apps.shopify.com/frisbo-e-fulfillment-services"
     ]
    ]
   }

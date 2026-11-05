@@ -28,6 +28,7 @@ const CRYPTO = {
   'bio-protocol-bio': ['Bio Protocol', 'BIO'],
   'movement-move': ['Movement', 'MOVE'],
   'lighter-lit': ['Lighter', 'LIT'],
+  'ro-multiversx': ['MultiversX', 'EGLD', 'elrond-erd-2'],
 };
 const YAHOO = {
   'spacex-spcx': ['SPCX'],
@@ -52,6 +53,12 @@ const YAHOO = {
   'pi-mitsui-fudosan': ['8801.T'],
   'pi-shkp': ['0016.HK'],
   'pi-one-united': ['ONE.RO'],
+  'pi-american-tower': ['AMT'],
+  'pi-segro': ['SGRO.L'],
+  'pi-invitation-homes': ['INVH'],
+  'pi-urw': ['URW.AS'],
+  'pi-nepi-rockcastle': ['NRP.JO'],
+  'pi-goodman': ['GMG.AX'],
   'litiu-carbonat': ['LIT', 'ETF pe companii de litiu (aproximare)'],
   'paladiu': ['PALL', 'ETF fizic'],
   'portocale-suc-de-portocale': ['OJ=F', 'futures ICE'],
