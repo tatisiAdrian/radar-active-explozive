@@ -883,5 +883,60 @@
    "score": 4.7,
    "met": 1
   }
- ]
+ ],
+ "self": {
+  "name": "Radar Active Explozive",
+  "nameEn": "Radar Active Explozive",
+  "c": [
+   3,
+   6,
+   8,
+   4,
+   null,
+   7,
+   9,
+   null,
+   8,
+   9,
+   7,
+   null,
+   8,
+   6
+  ],
+  "notes": [
+   "Site lansat, gratuit, fără venituri încă.",
+   "Lansat cu produs funcțional, din resurse proprii, fără presiunea unui investitor.",
+   "Fără investitori și fără datorii.",
+   "Echipă mică; căutăm parteneri și constructori.",
+   "Prea devreme: utilizatorii nu sunt încă măsurați public, deci nu ne dăm notă.",
+   "Fondator cu peste 22 de ani în livrarea de proiecte IT (PMP, PRINCE2).",
+   "100% fondatori: nimeni nu poate vinde masiv.",
+   "Prea devreme: comunitatea abia se formează, deci nu ne dăm notă.",
+   "Se explică într-o propoziție: fondul din spatele prețului, cu sursă la fiecare cifră.",
+   "Etapă pre-seed: cel mai bun preț de intrare.",
+   "Atenție mică și echilibrată.",
+   "Nu se tranzacționează: nu se poate evalua.",
+   "Puține platforme notează public, cu sursă, toate clasele de active.",
+   "Regulile pieței (nu dăm recomandări personale) și dependența de un fondator."
+  ],
+  "notesEn": [
+   "Site live, free, no revenue yet.",
+   "Launched with a working product, self-funded, without investor pressure.",
+   "No investors and no debt.",
+   "Small team; we are looking for partners and builders.",
+   "Too early: users are not yet publicly measured, so we give ourselves no score.",
+   "Founder with 22+ years of IT project delivery (PMP, PRINCE2).",
+   "100% founders: nobody can sell massively.",
+   "Too early: the community is just forming, so we give ourselves no score.",
+   "Explained in one sentence: the substance behind the price, with a source for every figure.",
+   "Pre-seed stage: the best entry price.",
+   "Small, balanced attention.",
+   "Not traded: cannot be assessed.",
+   "Few platforms publicly score every asset class, with sources.",
+   "Market rules (we give no personal advice) and dependence on one founder."
+  ],
+  "score": 6.12,
+  "met": 7
+ },
+ "replies": []
 }

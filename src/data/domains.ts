@@ -314,6 +314,7 @@ export const domains: Domain[] = [
       'Ce investitori internaționali finanțează start-ups de fintech, date financiare și educație financiară, și au mai făcut-o?',
       'Care au capital proaspăt și o primă investiție potrivită pentru un start-up la pre-seed sau seed?',
       'Care investesc cu adevărat în România și în Europa Centrală și de Est?',
+      'Ar evalua vreunul o colaborare directă cu noi? Invitația e deschisă tuturor celor 22.',
     ],
   },
   {

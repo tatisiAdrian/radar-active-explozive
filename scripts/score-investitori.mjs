@@ -14,8 +14,11 @@ const rows = cfg.investors.map((p) => {
   return { ...p, score, met };
 }).sort((a, b) => b.met - a.met || b.score - a.score);
 
+const sc = (c) => ({ score: +(c.map((v) => v ?? 5).reduce((t, v, i) => t + v * W[i], 0) / 100).toFixed(2), met: c.filter((v) => v != null && v >= 7).length });
+const self = { ...cfg.self, ...sc(cfg.self.c) };
 await mkdir(new URL('../src/data/investitori/', import.meta.url), { recursive: true });
-await writeFile(new URL('../src/data/investitori/scores.json', import.meta.url), JSON.stringify({ date: cfg.date, rows }, null, 1) + '\n');
+await writeFile(new URL('../src/data/investitori/scores.json', import.meta.url), JSON.stringify({ date: cfg.date, rows, self, replies: cfg.replies ?? [] }, null, 1) + '\n');
+console.log('Noi:', self.met, self.score);
 console.log(rows.map((r, i) => `${i + 1}. ${r.name} ${r.met}/14 ${r.score}`).join('\n'));
 
 if (process.argv.includes('--snapshot')) {

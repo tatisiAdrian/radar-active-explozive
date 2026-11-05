@@ -29,7 +29,42 @@ const metChart: Dataset = {
 const fit = rows.filter((r) => (r.c[6] ?? 0) >= 7 && (r.c[9] ?? 0) >= 7).map((r) => short(r.name));
 const thesis = rows.filter((r) => (r.c[8] ?? 0) >= 8).map((r) => short(r.name));
 const top = rows[0];
+type Self = { name: string; c: (number | null)[]; notes: string[]; notesEn: string[]; score: number; met: number };
+type Reply = { investor: string; date: string; text: string; textEn?: string };
+const self = (data as unknown as { self: Self }).self;
+const replies = ((data as unknown as { replies?: Reply[] }).replies ?? []);
+const selfInputs = Object.fromEntries((en ? self.notesEn : self.notes).map((t, i) => [`C${i + 1}`, t]));
+const mail = 'nitadanielcristian@gmail.com';
+const replyEn = (name: string) => `mailto:${mail}?subject=${encodeURIComponent(`Open invitation, reply from ${name}`)}&body=${encodeURIComponent(`Hello,\n\nWe are writing on behalf of ${name}.\n\n[ ] We correct our score (condition, correct value, source):\n[ ] We score Radar Active Explozive on the 14 conditions:\n[ ] We would like a 20-minute call about a direct collaboration.\n[ ] You may / may not publish this reply on the page.\n\nName, role:\n`)}`;
+const reply = (name: string) => `mailto:${mail}?subject=${encodeURIComponent(en ? `Open invitation, reply from ${name}` : `Invitație deschisă, răspuns de la ${name}`)}&body=${encodeURIComponent(en
+  ? `Hello,\n\nWe are writing on behalf of ${name}.\n\n[ ] We correct our score (condition, correct value, source):\n[ ] We score Radar Active Explozive on the 14 conditions:\n[ ] We would like a 20-minute call about a direct collaboration.\n[ ] You may / may not publish this reply on the page.\n\nName, role:\n`
+  : `Bună ziua,\n\nVă scriem din partea ${name}.\n\n[ ] Corectăm nota noastră (condiția, valoarea corectă, sursa):\n[ ] Notăm Radar Active Explozive pe cele 14 condiții:\n[ ] Am dori o discuție de 20 de minute despre o colaborare directă.\n[ ] Puteți / nu puteți publica acest răspuns pe pagină.\n\nNume, funcție:\n`)}`;
 ---
+<section id="invitatie" class="invite">
+  <h2>An open invitation to all 22</h2>
+  <div lang="en">
+      <p>Dear investors, we have done for you what we do for every asset: we looked for the substance behind the reputation, condition by condition, with a source for every score. We did it because a start-up like ours depends most on exactly the people on this list.</p>
+      <p>So we invite you, publicly and with respect, to do the same for us. Three things, any of them is welcome:</p>
+      <ol>
+        <li><b>Check your score.</b> If a score is wrong, send us the correct value with a source. We publish the correction within 7 days and say who asked for it.</li>
+        <li><b>Score us on the same 14 conditions.</b> Our own assessment is below, without embellishment. Yours would be worth more than ours.</li>
+        <li><b>Evaluate a direct collaboration.</b> An investment, a programme, a data partnership or simply a 20-minute call. We publish the outcome only with your consent.</li>
+      </ol>
+      <p class="muted">One rule protects both sides: a reply, a collaboration or an investment does not change any score. Only factual corrections with a source change scores, and every change is visible in the snapshots.</p>
+    </div>
+  <a class="cta" href={replyEn('[fund name]')}>Reply to the invitation</a>
+  <p class="score-line"><b>Open since {fd(data.date, 'en')} to all {rows.length} investors.</b> Replies, corrections and the scores you give us are published below as they arrive.</p>
+</section>
+
+<section id="noi">
+  <h2>{L('Noi, pe aceleași 14 condiții', 'Us, on the same 14 conditions')}</h2>
+  <p>{en ? <>Our self-assessment on the radar’s general set: <b>{self.met} of 14 conditions met</b>, score {num(self.score)}. Honestly: the substance is in the method and the structure, the form we still owe is revenue, users and a team. That is precisely where an investor makes the difference.</> : <>Autoevaluarea noastră pe setul general al radarului: <b>{self.met} din 14 condiții îndeplinite</b>, scor {num(self.score)}. Sincer: fondul e în metodă și în structură; ce mai datorăm sunt veniturile, utilizatorii și echipa. Exact acolo face diferența un investitor.</>} <FondBadge values={self.c} lang={lang} /></p>
+  <details class="fxd">
+    <summary><b>Radar Active Explozive</b> · <span class:list={['k', zone(self.met)]}>{self.met}/14</span> · {L('scor', 'score')} {num(self.score)}</summary>
+    <CriteriaDetail set="general" values={self.c} inputs={selfInputs} lang={lang} />
+  </details>
+</section>
+
 <section id="radar">
   <h2>{L('Investitorii de pe radar', 'The investors on the radar')}</h2>
   <p>
@@ -63,8 +98,16 @@ const top = rows[0];
       <p>{r.why}</p>
       <CriteriaDetail set="investitori" values={r.c} lang={lang} />
       <p class="muted">{L('Surse', 'Sources')}: {r.sources.map(([t, u], i) => <>{i > 0 && '; '}<a href={u} target="_blank" rel="noopener">{t}</a></>)}</p>
+      <p lang="en"><a href={replyEn(short(r.name))}>{short(r.name)}: correct your score, score us or propose a call →</a></p>
     </details>
   ))}
+</section>
+
+<section id="raspunsuri">
+  <h2>{L('Răspunsurile investitorilor', 'The investors’ replies')}</h2>
+  {replies.length ? replies.map((r) => <blockquote><p>{en ? r.textEn ?? r.text : r.text}</p><footer>— {r.investor}, {fmtDate(r.date)}</footer></blockquote>) : (
+    <p class="muted">{L('Publicăm aici răspunsurile primite, cu acordul celor care le trimit, și corecturile făcute la cererea lor. Invitația e deschisă din ', 'We publish the replies we receive here, with the senders’ consent, together with the corrections made at their request. The invitation has been open since ')}{fmtDate(data.date)}.</p>
+  )}
 </section>
 
 <section>
@@ -94,3 +137,12 @@ const top = rows[0];
       'The list shows fit on public sources, not an agreement: none of these investors has assessed us or promised to invest. This is not investment advice.')}
   </p>
 </section>
+
+<style>
+  .invite { border: 2px solid var(--accent, #2b59ff); border-radius: 14px; padding: 1.25rem 1.5rem; background: var(--surface); }
+  .invite ol { padding-left: 1.2rem; }
+  .invite li { margin: .45rem 0; }
+  .cta { display: inline-block; background: var(--accent, #2b59ff); color: #fff; padding: .7rem 1.15rem; border-radius: 10px; font-weight: 600; text-decoration: none; margin: .4rem 0 .6rem; }
+  .score-line { margin: .2rem 0 0; }
+  blockquote { border-left: 4px solid var(--accent, #2b59ff); margin: 1rem 0; padding: .4rem 1rem; background: var(--surface); }
+</style>
