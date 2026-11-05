@@ -56,7 +56,7 @@ const trend: Dataset = {
     return { name: nameOf[c] ?? c, points: pts.map(([p, v]) => [p, +((v / b) * 100).toFixed(1)] as [string, number]) };
   }),
   source: src(macro.sources.bis),
-  notes: L('Opt piețe, pentru lizibilitate; datele pentru toate cele 16 sunt în fișierul macro.json din GitHub.', 'Eight markets, for readability; the data for all 16 are in the macro.json file on GitHub.'),
+  notes: L('Opt piețe, pentru lizibilitate; datele pentru toate cele 22 sunt în fișierul macro.json din GitHub.', 'Eight markets, for readability; the data for all 22 are in the macro.json file on GitHub.'),
 };
 const debt: Dataset = {
   id: 'imob-datorie', domain: 'imobiliare', title: L('Datoria gospodăriilor (ultimul an disponibil)', 'Household debt (latest year available)'), unit: L('% din PIB', '% of GDP'), chart: 'bar',

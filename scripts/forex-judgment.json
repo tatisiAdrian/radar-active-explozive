@@ -31,6 +31,20 @@
   "TRY": { "name": "Liră turcească", "C4": 2, "C5": 2, "C6": 3, "C8": 6, "C9": 0, "C11": 4, "C13": 5, "C14": 3,
    "why": "Inflație de aproape 30% și istoric de politici monetare schimbătoare. Dobânda reală pozitivă de acum atrage capital speculativ, nu încredere pe termen lung." },
   "ZAR": { "name": "Rand sud-african", "C4": 3, "C5": 4, "C6": 5, "C8": 4, "C9": 1, "C11": 6, "C13": 5, "C14": 5,
-   "why": "Dobândă reală ridicată și bancă centrală respectată, dar creștere slabă, probleme de infrastructură și dependență de minerit." }
+   "why": "Dobândă reală ridicată și bancă centrală respectată, dar creștere slabă, probleme de infrastructură și dependență de minerit." },
+  "SEK": { "name": "Coroana suedeză", "C4": 6, "C5": 6, "C6": 9, "C8": 8, "C9": 4, "C11": 6, "C13": 6, "C14": 8,
+   "why": "Instituții foarte solide și finanțe publice disciplinate; o monedă mică, sensibilă la ciclul european și la prețul locuințelor din Suedia." },
+  "NOK": { "name": "Coroana norvegiană", "C4": 4, "C5": 6, "C6": 9, "C8": 5, "C9": 5, "C11": 6, "C13": 6, "C14": 9,
+   "why": "Susținută de fondul suveran și de surplusuri mari, dar legată strâns de prețul petrolului și al gazelor." },
+  "KRW": { "name": "Wonul sud-coreean", "C4": 8, "C5": 7, "C6": 7, "C8": 7, "C9": 4, "C11": 6, "C13": 5, "C14": 6,
+   "why": "Economie exportatoare de cip-uri și tehnologie, cu cerere legată de inteligența artificială; tensiunile din peninsulă și dependența de China sunt riscurile." },
+  "SGD": { "name": "Dolarul singaporez", "C4": 7, "C5": 8, "C6": 10, "C8": 7, "C9": 7, "C11": 6, "C13": 5, "C14": 9,
+   "why": "Banca centrală gestionează cursul printr-o bandă față de un coș de monede; centru financiar stabil, una dintre cele mai credibile instituții din lume." },
+  "HUF": { "name": "Forintul maghiar", "C4": 5, "C5": 5, "C6": 4, "C8": 6, "C9": 2, "C11": 6, "C13": 5, "C14": 4,
+   "why": "Dobânzi reale mari care atrag capital, dar inflație persistentă, deficit bugetar și tensiuni cu Uniunea Europeană privind fondurile." },
+  "CZK": { "name": "Coroana cehă", "C4": 5, "C5": 6, "C6": 8, "C8": 7, "C9": 3, "C11": 6, "C13": 6, "C14": 8,
+   "why": "Banca centrală credibilă, datorie publică moderată și industrie integrată în lanțurile germane; depinde de ciclul industriei auto europene." },
+  "NZD": { "name": "Dolarul neozeelandez", "C4": 4, "C5": 6, "C6": 9, "C8": 5, "C9": 3, "C11": 6, "C13": 5, "C14": 9,
+   "why": "Instituții solide, dar deficit de cont curent cronic și dependență de exporturile agricole și de cererea din China." }
  }
 }

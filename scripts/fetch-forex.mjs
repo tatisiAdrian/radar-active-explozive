@@ -29,6 +29,13 @@ export const CURRENCIES = {
   MXN: ['MEX', 'MX', 'MXN=X', true],
   TRY: ['TUR', 'TR', 'TRY=X', true],
   ZAR: ['ZAF', 'ZA', 'ZAR=X', true],
+  SEK: ['SWE', 'SE', 'SEK=X', true],
+  NOK: ['NOR', 'NO', 'NOK=X', true],
+  KRW: ['KOR', 'KR', 'KRW=X', true],
+  SGD: ['SGP', 'SG', 'SGD=X', true],
+  HUF: ['HUN', 'HU', 'HUF=X', true],
+  CZK: ['CZE', 'CZ', 'CZK=X', true],
+  NZD: ['NZL', 'NZ', 'NZDUSD=X', false],
 };
 const IMF_IND = {
   NGDP_RPCH: 'Creștere PIB real (%)',

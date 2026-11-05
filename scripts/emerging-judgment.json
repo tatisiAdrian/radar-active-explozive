@@ -31,6 +31,20 @@
   "PH": { "name": "Filipine", "C4": 5, "C5": 6, "C6": 5, "C8": 5, "C9": 4, "C11": 7, "C13": 5, "C14": 6,
    "why": "Populație tânără, consum intern și servicii externalizate (BPO) puternice; industria e mai puțin dezvoltată decât în regiune." },
   "CL": { "name": "Chile", "C4": 7, "C5": 7, "C6": 8, "C8": 4, "C9": 8, "C11": 7, "C13": 5, "C14": 7,
-   "why": "Cele mai solide instituții din America Latină și rol cheie în cupru și litiu, dar exporturile depind de aceste două metale." }
+   "why": "Cele mai solide instituții din America Latină și rol cheie în cupru și litiu, dar exporturile depind de aceste două metale." },
+  "KR": { "name": "Coreea de Sud", "C4": 8, "C5": 7, "C6": 7, "C8": 8, "C9": 6, "C11": 7, "C13": 5, "C14": 6,
+   "why": "Lider mondial la cip-uri de memorie și construcții navale, cu exporturi sofisticate. Îmbătrânirea rapidă a populației și tensiunile cu Coreea de Nord sunt riscurile." },
+  "TW": { "name": "Taiwan", "C4": 9, "C5": 8, "C6": 8, "C8": 6, "C9": 7, "C11": 6, "C13": 3, "C14": 4,
+   "why": "Centrul mondial al producției de cip-uri avansate, cu investiții uriașe legate de inteligența artificială. Concentrarea pe semiconductori și tensiunile cu China continentală sunt riscurile majore." },
+  "MY": { "name": "Malaezia", "C4": 7, "C5": 7, "C6": 6, "C8": 7, "C9": 7, "C11": 6, "C13": 6, "C14": 6,
+   "why": "Beneficiază de mutarea lanțurilor de producție din China: centre de date, ambalare de cip-uri, electronice. Datoria publică ridicată și dependența de materii prime sunt punctele slabe." },
+  "TH": { "name": "Thailanda", "C4": 4, "C5": 6, "C6": 5, "C8": 7, "C9": 6, "C11": 6, "C13": 6, "C14": 4,
+   "why": "Industrie auto și turism puternice, dar creștere lentă, datorii mari ale gospodăriilor și instabilitate politică recurentă." },
+  "CO": { "name": "Columbia", "C4": 5, "C5": 5, "C6": 6, "C8": 4, "C9": 5, "C11": 6, "C13": 6, "C14": 4,
+   "why": "Economie mai diversificată decât pare, dar dependentă de petrol, cu deficit bugetar în creștere și incertitudine politică înaintea alegerilor din 2026." },
+  "PE": { "name": "Peru", "C4": 5, "C5": 6, "C6": 7, "C8": 4, "C9": 6, "C11": 5, "C13": 6, "C14": 3,
+   "why": "Banca centrală foarte credibilă și datorie publică mică; cupru și aur ca motor, dar instabilitate politică cronică, cu președinți schimbați des." },
+  "AE": { "name": "Emiratele Arabe Unite", "C4": 8, "C5": 8, "C6": 7, "C8": 7, "C9": 8, "C11": 6, "C13": 5, "C14": 7,
+   "why": "Diversificare reală dinspre petrol spre finanțe, logistică, turism și inteligență artificială, cu migrație puternică de capital și oameni. Dependența de prețul petrolului și riscurile regionale rămân." }
  }
 }

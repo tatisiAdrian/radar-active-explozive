@@ -28,22 +28,24 @@ export const DOMAIN_EN: Record<string, { title: string; short: string; what: str
   crypto: { title: 'Crypto assets', short: 'Crypto', what: 'launched and unlaunched tokens', summary: 'Market cap, volatility, adoption and regulation in the crypto market.' },
   startups: { title: 'Start-ups worldwide', short: 'Global start-ups', what: 'recently listed companies, pre-IPO and start-ups', summary: 'Funding, valuations and the dynamics of start-up ecosystems worldwide.' },
   'startups/europa/romania': { title: 'Start-ups in Romania', short: 'Romanian start-ups', what: 'tech companies founded in Romania', summary: '8 tech companies founded in Romania, from UiPath and Bitdefender to seed-stage start-ups, scored on the same 14 conditions.' },
-  sp500: { title: 'S&P 500', short: 'S&P 500', what: 'the largest US companies', summary: '20 of the largest companies in the S&P 500, scored on the same 14 conditions, with figures from annual reports and weekly prices.' },
+  sp500: { title: 'S&P 500', short: 'S&P 500', what: 'the largest US companies', summary: '22 of the largest companies in the S&P 500, scored on the same 14 conditions, with figures from annual reports and weekly prices.' },
   marfuri: { title: 'Commodities', short: 'Commodities', what: 'mature and emerging commodities', summary: 'Energy, metals and agricultural products: prices, demand and supply.' },
-  forex: { title: 'Forex', short: 'Forex', what: 'major and emerging currencies', summary: '15 currencies scored on the same 14 conditions, with IMF and BIS data and weekly exchange rates.' },
-  imobiliare: { title: 'National housing markets', short: 'Housing', what: 'national housing markets, including Romania', summary: '16 national housing markets, including Romania, scored on the same 14 conditions, with BIS and IMF data: real house prices, household debt, real interest rates.' },
+  forex: { title: 'Forex', short: 'Forex', what: 'major and emerging currencies', summary: '22 currencies scored on the same 14 conditions, with IMF and BIS data and weekly exchange rates.' },
+  imobiliare: { title: 'National housing markets', short: 'Housing', what: 'national housing markets, including Romania', summary: '22 national housing markets, including Romania, scored on the same 14 conditions, with BIS and IMF data: real house prices, household debt, real interest rates.' },
   'proiecte-imobiliare': { title: 'World real-estate projects', short: 'Real-estate projects', what: 'landmark real-estate projects and the companies behind them', summary: '15 real-estate projects of worldwide interest, from data centres and logistics parks to new capitals, scored on the same 14 conditions.' },
-  'economii-emergente': { title: 'Emerging economies', short: 'Emerging economies', what: 'emerging economies, including Romania', summary: '15 emerging economies, including Romania, scored on the same 14 conditions, with IMF and BIS data and each country’s stock market.' },
+  'economii-emergente': { title: 'Emerging economies', short: 'Emerging economies', what: 'emerging economies, including Romania', summary: '22 emerging economies, including Romania, scored on the same 14 conditions, with IMF and BIS data and each country’s stock market.' },
 };
 
 export const NAME_EN: Record<string, string> = {
   // Forex (după cod)
   CHF: 'Swiss franc', EUR: 'Euro', JPY: 'Japanese yen', CNY: 'Chinese yuan', CAD: 'Canadian dollar', PLN: 'Polish zloty', USD: 'US dollar', AUD: 'Australian dollar',
   GBP: 'Pound sterling', MXN: 'Mexican peso', INR: 'Indian rupee', TRY: 'Turkish lira', BRL: 'Brazilian real', RON: 'Romanian leu', ZAR: 'South African rand',
+  SEK: 'Swedish krona', NOK: 'Norwegian krone', KRW: 'South Korean won', SGD: 'Singapore dollar', HUF: 'Hungarian forint', CZK: 'Czech koruna', NZD: 'New Zealand dollar',
 };
 export const COUNTRY_EN: Record<string, string> = {
   CL: 'Chile', VN: 'Vietnam', ID: 'Indonesia', IN: 'India', CN: 'China', MX: 'Mexico', PL: 'Poland', BR: 'Brazil', TR: 'Turkey', SA: 'Saudi Arabia',
   PH: 'Philippines', ZA: 'South Africa', AR: 'Argentina', RO: 'Romania', EG: 'Egypt',
+  KR: 'South Korea', TW: 'Taiwan', MY: 'Malaysia', TH: 'Thailand', CO: 'Colombia', PE: 'Peru', AE: 'United Arab Emirates',
 };
 export const STAGE_EN: Record<string, string> = {
   'Privată (seed)': 'Private (seed)',

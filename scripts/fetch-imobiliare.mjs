@@ -16,6 +16,8 @@ export const COUNTRIES = {
   DE: ['DEU', 'DE', 'XM'], ES: ['ESP', 'ES', 'XM'], PT: ['PRT', 'PT', 'XM'], FR: ['FRA', 'FR', 'XM'],
   IT: ['ITA', 'IT', 'XM'], NL: ['NLD', 'NL', 'XM'], GB: ['GBR', 'GB', 'GB'], US: ['USA', 'US', 'US'],
   CA: ['CAN', 'CA', 'CA'], AU: ['AUS', 'AU', 'AU'], CN: ['CHN', 'CN', 'CN'], AE: ['ARE', 'AE', 'AE'],
+  SE: ['SWE', 'SE', 'SE'], DK: ['DNK', 'DK', 'DK'], IE: ['IRL', 'IE', 'XM'], AT: ['AUT', 'AT', 'XM'],
+  NZ: ['NZL', 'NZ', 'NZ'], JP: ['JPN', 'JP', 'JP'],
 };
 const IMF_IND = {
   NGDP_RPCH: 'Creștere PIB real (%)',

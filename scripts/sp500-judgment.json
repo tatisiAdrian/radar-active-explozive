@@ -221,6 +221,28 @@
    "C13": 2,
    "C14": 6,
    "why": "Software de analiză pentru guverne și companii, cu creștere rapidă din AI; evaluarea e printre cele mai mari din indice, iar atenția mediatică e foarte mare."
+  },
+  "JPM": {
+   "C4": 6,
+   "C5": 8,
+   "C6": 9,
+   "C8": 8,
+   "C9": 8,
+   "C11": 6,
+   "C13": 5,
+   "C14": 7,
+   "why": "Cea mai mare bancă americană, cu activități diversificate (retail, investiții, administrare de active) și management apreciat; sensibilă la ciclul economic și la reglementare."
+  },
+  "MA": {
+   "C4": 6,
+   "C5": 9,
+   "C6": 9,
+   "C8": 7,
+   "C9": 9,
+   "C11": 6,
+   "C13": 4,
+   "C14": 6,
+   "why": "Rețea globală de plăți cu marje foarte mari și efect de rețea greu de copiat; riscurile sunt procesele antitrust privind comisioanele și concurența plăților instant."
   }
  }
 }

@@ -248,7 +248,7 @@ export const domains: Domain[] = [
     slug: 'forex',
     criteria: 'forex',
     title: 'Forex',
-    summary: '15 monede notate pe aceleași 14 condiții, cu date de la FMI, BIS și cursuri săptămânale.',
+    summary: '22 de monede notate pe aceleași 14 condiții, cu date de la FMI, BIS și cursuri săptămânale.',
     status: 'activ',
     questions: [
       'Ce monede au cele mai solide fundamente: cont curent, inflație, datorie, dobândă reală?',
@@ -260,7 +260,7 @@ export const domains: Domain[] = [
     slug: 'economii-emergente',
     criteria: 'economii-emergente',
     title: 'Economii emergente',
-    summary: '15 economii emergente, inclusiv România, notate pe aceleași 14 condiții, cu date FMI, BIS și bursa fiecărei țări.',
+    summary: '22 de economii emergente, inclusiv România, notate pe aceleași 14 condiții, cu date FMI, BIS și bursa fiecărei țări.',
     status: 'activ',
     questions: [
       'Care economii emergente au cele mai solide fundamente macro?',
@@ -272,7 +272,7 @@ export const domains: Domain[] = [
     slug: 'sp500',
     criteria: 'sp500',
     title: 'S&P 500',
-    summary: '20 dintre cele mai mari companii din indicele S&P 500, notate pe aceleași 14 condiții, cu cifre din rapoartele anuale și prețuri săptămânale.',
+    summary: '22 dintre cele mai mari companii din indicele S&P 500, notate pe aceleași 14 condiții, cu cifre din rapoartele anuale și prețuri săptămânale.',
     status: 'activ',
     questions: [
       'Care dintre cele mai mari companii americane au cele mai solide fundamente: creștere, flux de numerar, bilanț?',
@@ -284,7 +284,7 @@ export const domains: Domain[] = [
     slug: 'imobiliare',
     criteria: 'imobiliare',
     title: 'Piața imobiliară națională',
-    summary: '16 piețe imobiliare naționale, inclusiv România, notate pe aceleași 14 condiții, cu date BIS și FMI: prețul real al locuințelor, datoria gospodăriilor, dobânda reală.',
+    summary: '22 de piețe imobiliare naționale, inclusiv România, notate pe aceleași 14 condiții, cu date BIS și FMI: prețul real al locuințelor, datoria gospodăriilor, dobânda reală.',
     status: 'activ',
     questions: [
       'În ce țări sunt locuințele scumpe sau ieftine față de propriul istoric, în termeni reali?',

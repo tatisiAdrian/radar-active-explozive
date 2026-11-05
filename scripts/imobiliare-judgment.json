@@ -49,6 +49,24 @@
    "sources": [["Asia Times: piața imobiliară chineză în 2026", "https://asiatimes.com/2026/07/chinas-housing-market-free-falls-as-buyers-wait-for-floor-prices/"]] },
   "AE": { "name": "Emiratele Arabe Unite", "nameEn": "United Arab Emirates", "C2": 3, "C4": 8, "C5": 4, "C6": 6, "C8": 4, "C9": 3, "C11": 4, "C13": 3, "C14": 4,
    "why": "BIS nu publică încă un indice al prețurilor locuințelor pentru Emiratele Arabe Unite, deci trei condiții calculate lipsesc. Dubai a avut o creștere excepțională după 2021, dar în al doilea trimestru din 2026 prețurile au scăzut cu 4% și chiriile cu 6% față de trimestrul anterior, pe fondul unui val de livrări (peste 13.000 de locuințe în T2 și circa 32.000 așteptate în a doua jumătate a anului). Cererea vine mult din partea investitorilor străini, iar războiul din regiune a crescut riscul.",
-   "sources": [["Khaleej Times (Cushman & Wakefield): prețuri și chirii în scădere, august 2026", "https://www.khaleejtimes.com/business/dubai-home-prices-rents-decline-as-supply-rises-32000-more-units-due-this-year"]] }
+   "sources": [["Khaleej Times (Cushman & Wakefield): prețuri și chirii în scădere, august 2026", "https://www.khaleejtimes.com/business/dubai-home-prices-rents-decline-as-supply-rises-32000-more-units-due-this-year"]] },
+  "SE": { "name": "Suedia", "nameEn": "Sweden", "C2": 5, "C4": 6, "C5": 6, "C6": 9, "C8": 6, "C9": 6, "C11": 6, "C13": 6, "C14": 6,
+   "why": "Prețurile au corectat puternic în 2022-2023, iar acum se stabilizează odată cu scăderea dobânzilor. Datoria gospodăriilor este printre cele mai mari din Europa, iar construcțiile noi au scăzut mult, ceea ce poate readuce deficitul.",
+   "sources": [["BIS, prețurile locuințelor", "https://data.bis.org/topics/RPP"]] },
+  "DK": { "name": "Danemarca", "nameEn": "Denmark", "C2": 6, "C4": 5, "C5": 7, "C6": 9, "C8": 6, "C9": 5, "C11": 6, "C13": 6, "C14": 8,
+   "why": "Sistem de credit ipotecar prin obligațiuni, unic și foarte stabil; prețurile cresc moderat, susținute de o economie puternică. Datoria brută a gospodăriilor este foarte mare, dar acoperită de active.",
+   "sources": [["BIS, prețurile locuințelor", "https://data.bis.org/topics/RPP"]] },
+  "IE": { "name": "Irlanda", "nameEn": "Ireland", "C2": 3, "C4": 8, "C5": 8, "C6": 7, "C8": 5, "C9": 9, "C11": 6, "C13": 5, "C14": 7,
+   "why": "Deficit acut de locuințe, cerere puternică din partea angajaților multinaționalelor și imigrație ridicată. Prețurile au depășit vârful din 2007; oferta nouă rămâne mult sub nevoi.",
+   "sources": [["BIS, prețurile locuințelor", "https://data.bis.org/topics/RPP"]] },
+  "AT": { "name": "Austria", "nameEn": "Austria", "C2": 6, "C4": 5, "C5": 8, "C6": 8, "C8": 5, "C9": 5, "C11": 7, "C13": 6, "C14": 8,
+   "why": "Piață dominată de chirii și locuințe sociale (mai ales Viena), ceea ce temperează speculația. Regulile mai stricte de creditare din 2022 au răcit prețurile; acum se stabilizează.",
+   "sources": [["BIS, prețurile locuințelor", "https://data.bis.org/topics/RPP"]] },
+  "NZ": { "name": "Noua Zeelandă", "nameEn": "New Zealand", "C2": 6, "C4": 4, "C5": 6, "C6": 8, "C8": 5, "C9": 5, "C11": 6, "C13": 7, "C14": 6,
+   "why": "Prețurile au scăzut considerabil după vârful din 2021, iar interdicția pentru cumpărătorii străini și regulile fiscale au redus speculația. Economia slabă și emigrarea spre Australia apasă cererea.",
+   "sources": [["BIS, prețurile locuințelor", "https://data.bis.org/topics/RPP"]] },
+  "JP": { "name": "Japonia", "nameEn": "Japan", "C2": 7, "C4": 6, "C5": 6, "C6": 8, "C8": 7, "C9": 4, "C11": 6, "C13": 6, "C14": 8,
+   "why": "Locuințele din Tokio și alte mari orașe se scumpesc, cu cerere din partea investitorilor străini atrași de yenul slab, în timp ce în restul țării populația în scădere ține prețurile jos. Banca Japoniei crește treptat dobânzile.",
+   "sources": [["BIS, prețurile locuințelor", "https://data.bis.org/topics/RPP"]] }
  }
 }

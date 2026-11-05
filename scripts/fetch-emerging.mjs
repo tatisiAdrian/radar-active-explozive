@@ -30,6 +30,13 @@ export const CURRENCIES = {
   EG: ['EGY', 'EG', ['EGPT', '^CASE30', 'EGX30.CA'], false],
   PH: ['PHL', 'PH', 'EPHE', false],
   CL: ['CHL', 'CL', 'ECH', false],
+  KR: ['KOR', 'KR', 'EWY', false],
+  TW: ['TWN', 'TW', 'EWT', false],
+  MY: ['MYS', 'MY', 'EWM', false],
+  TH: ['THA', 'TH', 'THD', false],
+  CO: ['COL', 'CO', 'COLO', false],
+  PE: ['PER', 'PE', 'EPU', false],
+  AE: ['ARE', 'AE', 'UAE', false],
   EM: [null, null, 'EEM', false],
 };
 const IMF_IND = {

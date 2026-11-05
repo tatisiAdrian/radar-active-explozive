@@ -17,7 +17,7 @@ export const COMPANIES = {
   AAPL: 'Apple', MSFT: 'Microsoft', NVDA: 'Nvidia', AMZN: 'Amazon', GOOGL: 'Alphabet', META: 'Meta Platforms',
   AVGO: 'Broadcom', TSLA: 'Tesla', LLY: 'Eli Lilly', V: 'Visa', XOM: 'Exxon Mobil', WMT: 'Walmart',
   UNH: 'UnitedHealth', JNJ: 'Johnson & Johnson', PG: 'Procter & Gamble', ORCL: 'Oracle', COST: 'Costco',
-  NFLX: 'Netflix', AMD: 'AMD', PLTR: 'Palantir',
+  NFLX: 'Netflix', AMD: 'AMD', PLTR: 'Palantir', JPM: 'JPMorgan Chase', MA: 'Mastercard',
 };
 const TAGS = {
   revenue: ['RevenueFromContractWithCustomerExcludingAssessedTax', 'Revenues', 'SalesRevenueNet', 'RevenueFromContractWithCustomerIncludingAssessedTax'],
@@ -108,6 +108,7 @@ const cikOf = {
   META: '0001326801', AVGO: '0001730168', TSLA: '0001318605', LLY: '0000059478', V: '0001403161',
   XOM: '0000034088', WMT: '0000104169', UNH: '0000731766', JNJ: '0000200406', PG: '0000080424',
   ORCL: '0001341439', COST: '0000909832', NFLX: '0001065280', AMD: '0000002488', PLTR: '0001321655',
+  JPM: '0000019617', MA: '0001141391',
 };
 
 for (const [tk, name] of Object.entries(COMPANIES)) {
