@@ -1,0 +1,45 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PhotoHeader from '../../../components/PhotoHeader.astro';
+import { photo } from '../../../data/photos';
+const base = import.meta.env.BASE_URL;
+---
+<Base lang="en" alt="servicii/" title="For companies" description="Weekly data licensing, custom reports, team workshops and declared partnerships, with the scores protected from any influence.">
+<PhotoHeader photo={photo('finantare')!} lang="en" title="For companies" eyebrow="Services" summary="The same 14 conditions and the same verifiable data, put to work for your team’s decision." />
+  <p class="lede-f">Every week we analyse 342 assets in 24 domains on the same 14 conditions, with a source, a link and a retrieval date for every figure. Companies can use the data, the method and the analysis in their own decisions.</p>
+
+  <section>
+    <h2>What we offer</h2>
+    <div class="table-wrap">
+      <table class="radar">
+        <thead><tr><th>Service</th><th>What you get</th><th>For whom</th></tr></thead>
+        <tbody>
+          <tr><td><b>Weekly data licence</b></td><td>All scores, input data and sources, updated every Friday, as CSV or JSON.</td><td>fintechs, financial publications, family offices</td></tr>
+          <tr><td><b>Custom report</b></td><td>An analysis of a domain or region you choose (for example, real estate in Central and Eastern Europe), with the same method.</td><td>funds, developers, consultants</td></tr>
+          <tr><td><b>Team workshop</b></td><td>A day on the 14-condition method and how to look for the substance behind the form, using your domain’s examples.</td><td>banks, strategy teams, HR and L&amp;D</td></tr>
+          <tr><td><b>Declared partnership</b></td><td>A presence clearly marked “Partner” on a domain or in the newsletter, with no influence on the scores.</td><td>EU-authorised brokers, regulated platforms</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Pricing depends on the domain and volume. We reply with a written quote within 48 hours.</p>
+    <a class="cta" href="mailto:nitadanielcristian@gmail.com?subject=Request%20for%20a%20quote&body=Company%3A%0AContact%20person%3A%0AWhat%20you%20are%20interested%20in%20%28data%20licence%2C%20report%2C%20workshop%2C%20partnership%29%3A%0ADomain%20or%20topic%3A%0AWhen%20you%20would%20need%20it%3A%0A">Request a quote</a>
+  </section>
+
+  <section>
+    <h2>What is not for sale</h2>
+    <p class="notice">Nobody sees the scores before publication and nobody can influence them, however much they pay. The rule is written into every contract. All the rules are on the <a href={`${base}en/funding/`}>How we are funded</a> page.</p>
+  </section>
+
+  <section>
+    <h2>Know a company that could use this?</h2>
+    <p>Through our <a href={`${base}en/partners/`}>referral programme</a> you receive 10–20% of what we collect in the first year from any client you bring.</p>
+    <p class="muted">Invoicing: EtiQ Events SRL · VAT ID RO 30586107 · <a href="mailto:nitadanielcristian@gmail.com">nitadanielcristian@gmail.com</a></p>
+  </section>
+</Base>
+
+<style>
+  .lede-f { font-size: 1.12rem; color: var(--muted); max-width: 760px; }
+  ol li, ul li { margin: .45rem 0; }
+  .cta { display: inline-block; background: var(--accent, #2b59ff); color: #fff; padding: .7rem 1.15rem; border-radius: 10px; font-weight: 600; text-decoration: none; margin: .4rem 0 1rem; }
+  .cta:hover { filter: brightness(1.08); }
+</style>

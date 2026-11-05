@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import PhotoHeader from '../../components/PhotoHeader.astro';
+import { photo } from '../../data/photos';
+const base = import.meta.env.BASE_URL;
+---
+<Base title="Pentru companii" alt="en/services/" description="Licența datelor săptămânale, rapoarte la comandă, workshop-uri pentru echipe și parteneriate declarate, cu notele protejate de orice influență.">
+<PhotoHeader photo={photo('finantare')!} title="Pentru companii" eyebrow="Servicii" summary="Aceleași 14 condiții și aceleași date verificabile, puse la lucru pentru decizia echipei tale." />
+  <p class="lede-f">Analizăm săptămânal 342 de active din 24 de domenii pe aceleași 14 condiții, cu sursă, link și dată de preluare pentru fiecare cifră. Companiile pot folosi datele, metoda și analiza în propriile decizii.</p>
+
+  <section>
+    <h2>Ce oferim</h2>
+    <div class="table-wrap">
+      <table class="radar">
+        <thead><tr><th>Serviciu</th><th>Ce primești</th><th>Pentru cine</th></tr></thead>
+        <tbody>
+          <tr><td><b>Licența datelor săptămânale</b></td><td>Toate notele, datele de intrare și sursele, actualizate în fiecare vineri, în format CSV sau JSON.</td><td>fintech-uri, publicații financiare, family office-uri</td></tr>
+          <tr><td><b>Raport la comandă</b></td><td>O analiză pe un domeniu sau o regiune aleasă de tine (de exemplu, imobiliarele din Europa Centrală și de Est), cu aceeași metodă.</td><td>fonduri, dezvoltatori, consultanți</td></tr>
+          <tr><td><b>Workshop pentru echipe</b></td><td>O zi despre metoda celor 14 condiții și cum cauți fondul din spatele formei, pe exemplele domeniului vostru.</td><td>bănci, departamente de strategie, HR și L&amp;D</td></tr>
+          <tr><td><b>Parteneriat declarat</b></td><td>Prezență marcată clar „Partener” pe un domeniu sau în newsletter, fără nicio influență asupra notelor.</td><td>brokeri autorizați în UE, platforme reglementate</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Prețul depinde de domeniu și de volum. Răspundem cu o ofertă scrisă în 48 de ore.</p>
+    <a class="cta" href="mailto:nitadanielcristian@gmail.com?subject=Cerere%20de%20ofert%C4%83&body=Firma%3A%0APersoana%20de%20contact%3A%0ACe%20v%C4%83%20intereseaz%C4%83%20%28licen%C8%9B%C4%83%20date%2C%20raport%2C%20workshop%2C%20parteneriat%29%3A%0ADomeniul%20sau%20tema%3A%0AC%C3%A2nd%20a%C8%9Bi%20avea%20nevoie%3A%0A">Cere o ofertă</a>
+  </section>
+
+  <section>
+    <h2>Ce nu se vinde</h2>
+    <p class="notice">Nimeni nu vede notele înainte de publicare și nimeni nu le poate influența, indiferent cât plătește. Regula e scrisă în fiecare contract. Toate regulile sunt pe pagina <a href={`${base}finantare/`}>Cum ne finanțăm</a>.</p>
+  </section>
+
+  <section>
+    <h2>Cunoști o firmă căreia i-ar folosi?</h2>
+    <p>Prin <a href={`${base}parteneri/`}>programul de recomandări</a> primești 10–20% din banii încasați în primul an de la orice client adus.</p>
+    <p class="muted">Facturare: EtiQ Events SRL · CUI RO 30586107 · <a href="mailto:nitadanielcristian@gmail.com">nitadanielcristian@gmail.com</a></p>
+  </section>
+</Base>
+
+<style>
+  .lede-f { font-size: 1.12rem; color: var(--muted); max-width: 760px; }
+  ol li, ul li { margin: .45rem 0; }
+  .cta { display: inline-block; background: var(--accent, #2b59ff); color: #fff; padding: .7rem 1.15rem; border-radius: 10px; font-weight: 600; text-decoration: none; margin: .4rem 0 1rem; }
+  .cta:hover { filter: brightness(1.08); }
+</style>

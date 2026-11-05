@@ -1,0 +1,65 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PhotoHeader from '../../../components/PhotoHeader.astro';
+import { photo } from '../../../data/photos';
+const base = import.meta.env.BASE_URL;
+---
+<Base lang="en" alt="parteneri/" title="Become a partner" description="Bring a client who signs and pays and receive 10–20% of what we collect in the first year. Simple, written, transparent rules.">
+<PhotoHeader photo={photo('finantare')!} lang="en" title="Become a partner" eyebrow="Referral programme" summary="Bring a client who signs and pays, receive 10–20% of what we collect in the first year." />
+  <p class="lede-f">Anyone can recommend the Explosive Assets Radar to a company: readers, consultants, former colleagues, people in the industry. If the company signs a contract and pays, you receive a commission on the money actually collected in the first year. The more you help close the deal, the higher the commission.</p>
+
+  <section>
+    <h2>What you receive</h2>
+    <div class="table-wrap">
+      <table class="radar">
+        <thead><tr><th>Level</th><th>What you do</th><th>Commission</th><th>Example: data licence, EUR 4,800/year</th></tr></thead>
+        <tbody>
+          <tr><td><b>1. Referral</b></td><td>You give us the company’s name and introduce us by e-mail.</td><td>10% of first-year receipts</td><td>EUR 480</td></tr>
+          <tr><td><b>2. Referral and close</b></td><td>You join the conversation and help with the offer and the negotiation.</td><td>15% of first-year receipts</td><td>EUR 720</td></tr>
+          <tr><td><b>3. Sales partner</b></td><td>You bring the client, negotiate and keep the relationship. You receive materials and prices.</td><td>20% in the first year + 5% on the second-year renewal</td><td>EUR 960 + EUR 240</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li><b>Individual courses:</b> 20% of the price for every participant who joins with your referral code.</li>
+      <li><b>Large contracts, above EUR 20,000/year:</b> the commission applies in full up to EUR 20,000 and at half rate above it.</li>
+      <li><b>Bonus:</b> from the third contract you bring in a year, you get +5 percentage points on every later contract that year.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <ol>
+      <li><b>Register the referral</b> with the button below. You receive a confirmation within 2 working days.</li>
+      <li><b>The referral is protected for 6 months.</b> If the company signs in that period, the commission is yours. The first confirmed registration wins.</li>
+      <li><b>The commission is paid within 30 days of each payment we receive</b>, in proportion to the amount collected. If the client does not pay, no commission is due.</li>
+      <li><b>We sign a short referral agreement</b>, two pages, before the first payment.</li>
+    </ol>
+    <a class="cta" href="mailto:nitadanielcristian@gmail.com?subject=Referral%20registration&body=My%20name%3A%0APhone%3A%0AIndividual%20/%20sole%20trader%20/%20company%3A%0A%0AReferred%20company%3A%0AContact%20person%20%28name%2C%20role%29%3A%0AWhat%20they%20might%20buy%20%28data%2C%20report%2C%20workshop%2C%20partnership%29%3A%0ALevel%20I%20want%20to%20take%20part%20at%20%281%2C%202%20or%203%29%3A%0A%0AI%20confirm%20I%20do%20not%20work%20at%20this%20company%20in%20the%20role%20that%20decides%20the%20purchase%20%28or%20I%20have%20its%20written%20consent%29.">Register a referral</a>
+  </section>
+
+  <section>
+    <h2>Programme rules</h2>
+    <ol>
+      <li><b>No commission for anyone who works at the client and makes the buying decision</b>, unless the client agrees in writing.</li>
+      <li><b>The client is told that a referral commission exists.</b> Transparency is part of our method.</li>
+      <li><b>You do not promise scores, ranking positions or gains</b> and you do not present yourself as staff of the site. Scores are not negotiable, whoever brings the client.</li>
+      <li><b>When you talk about the site in public</b>, you say that you receive a commission and you give no investment advice, as European rules on online promotion require.</li>
+      <li><b>Commission is paid only for contracts with companies</b> (data, reports, workshops, partnerships, courses), never for accounts opened with a broker.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Taxes</h2>
+    <p><b>Individuals resident in Romania:</b> the commission is “income from other sources”. We withhold and pay the 10% income tax and you receive the net amount. Above 6 minimum wages a year from such sources, you also owe the health contribution (CASS), which you declare yourself.</p>
+    <p><b>Sole traders and companies:</b> you send us an invoice and handle your own taxes. If you bring contracts regularly, we recommend invoicing as a sole trader or company.</p>
+    <p class="muted">Payments are made by EtiQ Events SRL · VAT ID RO 30586107. See also <a href={`${base}en/services/`}>what we offer companies</a> and <a href={`${base}en/funding/`}>how we are funded</a>.</p>
+  </section>
+</Base>
+
+<style>
+  .lede-f { font-size: 1.12rem; color: var(--muted); max-width: 760px; }
+  ol li, ul li { margin: .45rem 0; }
+  .cta { display: inline-block; background: var(--accent, #2b59ff); color: #fff; padding: .7rem 1.15rem; border-radius: 10px; font-weight: 600; text-decoration: none; margin: .4rem 0 1rem; }
+  .cta:hover { filter: brightness(1.08); }
+</style>

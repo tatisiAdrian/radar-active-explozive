@@ -1,0 +1,65 @@
+---
+import Base from '../../layouts/Base.astro';
+import PhotoHeader from '../../components/PhotoHeader.astro';
+import { photo } from '../../data/photos';
+const base = import.meta.env.BASE_URL;
+---
+<Base title="Devino partener" alt="en/partners/" description="Aduci un client care semnează și plătește? Primești 10–20% din banii încasați în primul an. Reguli simple, scrise, transparente.">
+<PhotoHeader photo={photo('finantare')!} title="Devino partener" eyebrow="Program de recomandări" summary="Aduci un client care semnează și plătește, primești 10–20% din banii încasați în primul an." />
+  <p class="lede-f">Oricine poate recomanda Radar Active Explozive unei companii: cititori, consultanți, foști colegi, oameni din industrie. Dacă firma semnează un contract și plătește, primești un comision din banii efectiv încasați în primul an. Comisionul crește cu cât ajuți mai mult la închiderea contractului.</p>
+
+  <section>
+    <h2>Cât primești</h2>
+    <div class="table-wrap">
+      <table class="radar">
+        <thead><tr><th>Nivel</th><th>Ce faci</th><th>Comision</th><th>Exemplu: licență de date, 4.800 EUR/an</th></tr></thead>
+        <tbody>
+          <tr><td><b>1. Recomandare</b></td><td>Ne dai numele firmei și faci prezentarea prin e-mail.</td><td>10% din încasările primului an</td><td>480 EUR</td></tr>
+          <tr><td><b>2. Recomandare și închidere</b></td><td>Participi la discuție și ajuți la ofertă și negociere.</td><td>15% din încasările primului an</td><td>720 EUR</td></tr>
+          <tr><td><b>3. Partener de vânzare</b></td><td>Aduci clientul, negociezi și ții relația. Primești materiale și prețuri.</td><td>20% în primul an + 5% la reînnoirea din anul doi</td><td>960 EUR + 240 EUR</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li><b>Cursuri individuale:</b> 20% din preț pentru fiecare participant adus cu codul tău de recomandare.</li>
+      <li><b>Contracte mari, peste 20.000 EUR/an:</b> comisionul se calculează integral până la 20.000 EUR și la jumătate peste această sumă.</li>
+      <li><b>Bonus:</b> de la al treilea contract adus într-un an, primești +5 puncte procentuale la toate contractele următoare din acel an.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Cum funcționează</h2>
+    <ol>
+      <li><b>Înregistrezi recomandarea</b> cu butonul de mai jos. Primești confirmarea în 2 zile lucrătoare.</li>
+      <li><b>Recomandarea e protejată 6 luni.</b> Dacă firma semnează în acest interval, comisionul e al tău. Prima înregistrare confirmată câștigă.</li>
+      <li><b>Comisionul se plătește în 30 de zile de la fiecare încasare</b>, proporțional cu suma încasată. Dacă clientul nu plătește, nu se datorează comision.</li>
+      <li><b>Semnăm un contract scurt de recomandare</b>, de 2 pagini, înainte de prima plată.</li>
+    </ol>
+    <a class="cta" href="mailto:nitadanielcristian@gmail.com?subject=%C3%8Enregistrare%20recomandare&body=Numele%20meu%3A%0ATelefon%3A%0APersoan%C4%83%20fizic%C4%83%20/%20PFA%20/%20firm%C4%83%3A%0A%0AFirma%20recomandat%C4%83%3A%0APersoana%20de%20contact%20%28nume%2C%20func%C8%9Bie%29%3A%0ACe%20ar%20putea%20cump%C4%83ra%20%28date%2C%20raport%2C%20workshop%2C%20parteneriat%29%3A%0ANivelul%20la%20care%20vreau%20s%C4%83%20particip%20%281%2C%202%20sau%203%29%3A%0A%0AConfirm%20c%C4%83%20nu%20lucrez%20la%20aceast%C4%83%20firm%C4%83%20%C3%AEn%20pozi%C8%9Bia%20care%20decide%20achizi%C8%9Bia%20%28sau%20am%20acordul%20ei%20scris%29.">Înregistrează o recomandare</a>
+  </section>
+
+  <section>
+    <h2>Regulile programului</h2>
+    <ol>
+      <li><b>Nu primește comision cine lucrează la client și ia decizia de cumpărare</b>, decât cu acordul scris al clientului.</li>
+      <li><b>Clientul află că există un comision de recomandare.</b> Transparența face parte din metoda noastră.</li>
+      <li><b>Nu promiți note, poziții în clasament sau câștiguri</b> și nu te prezinți drept angajat al site-ului. Notele nu se negociază, indiferent cine aduce clientul.</li>
+      <li><b>Când vorbești public despre site</b>, spui că primești comision și nu dai sfaturi de investiții, așa cum cer regulile europene pentru promovarea online.</li>
+      <li><b>Comisionul se plătește doar pentru contracte cu firme</b> (date, rapoarte, workshop-uri, parteneriate, cursuri), niciodată pentru conturi deschise la un broker.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Taxe</h2>
+    <p><b>Persoană fizică:</b> comisionul e „venit din alte surse”. Reținem și virăm impozitul de 10%, iar tu primești suma netă. Dacă veniturile tale anuale din astfel de surse trec de 6 salarii minime, datorezi și contribuția de sănătate (CASS), pe care o declari singur în Declarația unică.</p>
+    <p><b>PFA sau firmă:</b> ne trimiți factură, iar taxele sunt ale tale. Dacă aduci contracte în mod regulat, recomandăm să facturezi ca PFA sau firmă.</p>
+    <p class="muted">Plățile se fac de EtiQ Events SRL · CUI RO 30586107. Vezi și <a href={`${base}servicii/`}>ce oferim companiilor</a> și <a href={`${base}finantare/`}>cum ne finanțăm</a>.</p>
+  </section>
+</Base>
+
+<style>
+  .lede-f { font-size: 1.12rem; color: var(--muted); max-width: 760px; }
+  ol li, ul li { margin: .45rem 0; }
+  .cta { display: inline-block; background: var(--accent, #2b59ff); color: #fff; padding: .7rem 1.15rem; border-radius: 10px; font-weight: 600; text-decoration: none; margin: .4rem 0 1rem; }
+  .cta:hover { filter: brightness(1.08); }
+</style>

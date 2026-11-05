@@ -4,9 +4,9 @@ import PhotoHeader from '../components/PhotoHeader.astro';
 import { photo } from '../data/photos';
 const base = import.meta.env.BASE_URL;
 ---
-<Base title="Cum ne finanțăm" alt="en/funding/" description="Radarul rămâne gratuit. Ne finanțăm din cursuri, servicii pentru companii și sponsorizări declarate, cu reguli scrise care protejează independența notelor.">
+<Base title="Cum ne finanțăm" alt="en/funding/" description="Radarul rămâne gratuit. Ne finanțăm din cursuri, servicii pentru companii și parteneriate declarate, cu reguli scrise care protejează independența notelor.">
 <PhotoHeader photo={photo('finantare')!} title="Cum ne finanțăm" eyebrow="Independență" summary="Radarul rămâne gratuit. Regulile de mai jos protejează notele de orice influență a celor care plătesc." />
-  <p class="lede-f">Radarul rămâne gratuit, pentru toată lumea. Ne finanțăm din cursuri, servicii pentru companii și sponsorizări declarate. Nu vindem semnale și nu facem recomandări personale.</p>
+  <p class="lede-f">Radarul rămâne gratuit, pentru toată lumea. Ne finanțăm din cursuri, servicii pentru companii și parteneriate declarate. Nu vindem semnale și nu facem recomandări personale.</p>
 
   <section>
     <h2>De unde vin banii</h2>
@@ -15,8 +15,8 @@ const base = import.meta.env.BASE_URL;
         <thead><tr><th>Sursă</th><th>Ce înseamnă</th></tr></thead>
         <tbody>
           <tr><td><b>Cursuri și workshop-uri</b></td><td>Învățăm metoda celor 14 condiții și cum cauți fondul din spatele formei. Nu dăm ponturi și nu spunem ce să cumperi.</td></tr>
-          <tr><td><b>Servicii pentru companii</b></td><td>Licența datelor săptămânale, rapoarte la comandă pe un domeniu și workshop-uri pentru echipe.</td></tr>
-          <tr><td><b>Sponsorizări declarate</b></td><td>Firme, inclusiv brokeri autorizați în UE, pot sponsoriza un domeniu sau newsletter-ul. Apar marcate clar cu „Sponsor”.</td></tr>
+          <tr><td><b>Servicii pentru companii</b></td><td>Licența datelor săptămânale, rapoarte la comandă pe un domeniu și workshop-uri pentru echipe. <a href={`${base}servicii/`}>Vezi oferta</a>.</td></tr>
+          <tr><td><b>Parteneriate declarate</b></td><td>Firme, inclusiv brokeri autorizați în UE, pot fi parteneri ai unui domeniu sau ai newsletter-ului, prin contract de publicitate. Apar marcate clar cu „Partener”.</td></tr>
         </tbody>
       </table>
     </div>
@@ -26,17 +26,17 @@ const base = import.meta.env.BASE_URL;
     <h2>Regulile care protejează notele</h2>
     <ol>
       <li><b>Notele apar întâi public și gratuit.</b> Nimeni nu plătește pentru informații ascunse.</li>
-      <li><b>Sponsorii nu văd notele înainte de publicare și nu le pot influența.</b> O notă proastă pentru un activ legat de un sponsor rămâne publică.</li>
-      <li><b>Acceptăm ca sponsori doar brokeri autorizați în UE</b>, verificați în registrul public al regulatorului.</li>
+      <li><b>Partenerii și clienții nu văd notele înainte de publicare și nu le pot influența.</b> O notă proastă pentru un activ legat de un partener rămâne publică.</li>
+      <li><b>Acceptăm ca parteneri din zona financiară doar brokeri autorizați în UE</b>, verificați în registrul public al regulatorului.</li>
       <li><b>Lângă orice material al unui broker care oferă CFD-uri</b> apare avertismentul de risc cerut de autoritatea europeană (ESMA).</li>
-      <li><b>Fiecare sponsor activ e listat pe această pagină</b>, cu perioada sponsorizării.</li>
+      <li><b>Fiecare partener activ e listat pe această pagină</b>, cu perioada parteneriatului.</li><li><b>Cine ne recomandă unei firme poate primi un comision</b>, iar clientul află asta. Regulile sunt pe pagina <a href={`${base}parteneri/`}>Devino partener</a>.</li>
       <li><b>Notele rămân înghețate în instantanee cu amprentă SHA-256</b>, deci nu pot fi schimbate retroactiv, indiferent cine plătește.</li>
     </ol>
   </section>
 
   <section>
-    <h2>Sponsori activi</h2>
-    <p class="notice">Niciunul deocamdată. Când semnăm primul contract, sponsorul apare aici, cu perioada și domeniul sponsorizat.</p>
+    <h2>Parteneri activi</h2>
+    <p class="notice">Niciunul deocamdată. Când semnăm primul contract, partenerul apare aici, cu perioada și domeniul.</p>
   </section>
 
   <section>

@@ -4,9 +4,9 @@ import PhotoHeader from '../../../components/PhotoHeader.astro';
 import { photo } from '../../../data/photos';
 const base = import.meta.env.BASE_URL;
 ---
-<Base lang="en" alt="finantare/" title="How we are funded" description="The radar stays free. We are funded by courses, services for companies and declared sponsorships, with written rules that protect the independence of the scores.">
+<Base lang="en" alt="finantare/" title="How we are funded" description="The radar stays free. We are funded by courses, services for companies and declared partnerships, with written rules that protect the independence of the scores.">
 <PhotoHeader photo={photo('finantare')!} lang="en" title="How we are funded" eyebrow="Independence" summary="The radar stays free. The rules below protect the scores from any influence by those who pay." />
-  <p class="lede-f">The radar stays free, for everyone. We are funded by courses, services for companies and declared sponsorships. We do not sell signals and we do not give personal recommendations.</p>
+  <p class="lede-f">The radar stays free, for everyone. We are funded by courses, services for companies and declared partnerships. We do not sell signals and we do not give personal recommendations.</p>
 
   <section>
     <h2>Where the money comes from</h2>
@@ -15,8 +15,8 @@ const base = import.meta.env.BASE_URL;
         <thead><tr><th>Source</th><th>What it means</th></tr></thead>
         <tbody>
           <tr><td><b>Courses and workshops</b></td><td>We teach the 14-condition method and how to look for the substance behind the form. We give no tips and do not say what to buy.</td></tr>
-          <tr><td><b>Services for companies</b></td><td>Licensing of the weekly data, custom reports on a domain and workshops for teams.</td></tr>
-          <tr><td><b>Declared sponsorships</b></td><td>Companies, including EU-authorised brokers, can sponsor a domain or the newsletter. They are clearly marked “Sponsor”.</td></tr>
+          <tr><td><b>Services for companies</b></td><td>Licensing of the weekly data, custom reports on a domain and workshops for teams. <a href={`${base}en/services/`}>See the offer</a>.</td></tr>
+          <tr><td><b>Declared partnerships</b></td><td>Companies, including EU-authorised brokers, can partner on a domain or the newsletter, under an advertising contract. They are clearly marked “Partner”.</td></tr>
         </tbody>
       </table>
     </div>
@@ -26,17 +26,17 @@ const base = import.meta.env.BASE_URL;
     <h2>The rules that protect the scores</h2>
     <ol>
       <li><b>Scores are published first, publicly and for free.</b> Nobody pays for hidden information.</li>
-      <li><b>Sponsors do not see scores before publication and cannot influence them.</b> A poor score for an asset linked to a sponsor stays public.</li>
-      <li><b>We only accept EU-authorised brokers as sponsors</b>, checked in the regulator’s public register.</li>
+      <li><b>Partners and clients do not see scores before publication and cannot influence them.</b> A poor score for an asset linked to a partner stays public.</li>
+      <li><b>As financial partners we only accept EU-authorised brokers</b>, checked in the regulator’s public register.</li>
       <li><b>Next to any material from a broker offering CFDs</b> we show the risk warning required by the European authority (ESMA).</li>
-      <li><b>Every active sponsor is listed on this page</b>, with the sponsorship period.</li>
+      <li><b>Every active partner is listed on this page</b>, with the partnership period.</li><li><b>Anyone who refers a company to us may receive a commission</b>, and the client is told. The rules are on the <a href={`${base}en/partners/`}>Become a partner</a> page.</li>
       <li><b>Scores stay frozen in snapshots with a SHA-256 fingerprint</b>, so they cannot be changed retroactively, whoever pays.</li>
     </ol>
   </section>
 
   <section>
-    <h2>Active sponsors</h2>
-    <p class="notice">None yet. When we sign the first contract, the sponsor appears here, with the period and the sponsored domain.</p>
+    <h2>Active partners</h2>
+    <p class="notice">None yet. When we sign the first contract, the partner appears here, with the period and the domain.</p>
   </section>
 
   <section>
